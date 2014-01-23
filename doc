@@ -1,0 +1,18 @@
+http://localhost:8080/message/send?sessionId=1385696429079&toSessionId=1385696430202&c=aaaa
+http://localhost:8080/message/receive?sessionId=1385696430202&toSessionId=1385696429079
+
+
+
+http://localhost:8080/session/create
+
+
+s1: 1385696429079
+s2: 1385696430202
+
+
+http://localhost:8080/session/close?sessionId=1385578086818&toSessionId=1385646249535
+
+
+
+
+

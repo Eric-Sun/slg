@@ -1,0 +1,89 @@
+body {
+	font: normal 12px 'Helvetica Neue',Tahoma,Arial,'Microsoft YaHei',微软雅黑e\8f6f\96c5\9ed1;
+    background-color: white;
+    margin:0; padding:0;
+}
+
+
+.title {
+	font-size: 14px;
+	font-weight: bold;
+}
+.div_list {
+	overflow: auto;
+}
+
+
+
+.page_index {
+	float: right;
+	margin-top: 10px;
+}
+
+.page_index > a {
+	text-decoration: none;
+	border: 1px solid #BBB;
+	margin: 5px;
+	padding: 2px 2px;
+}
+.page_index > a:hover {
+	background-color: #234F32;
+	color: #FFF;
+}
+
+.page_index .current_page_index {
+	background-color: #234F32;
+	color: #FFF;
+}
+
+
+
+.list {
+    border-collapse: collapse;
+    float: left;
+}
+.list .header {
+    color: #FFF;
+    background-color: #287696;
+    /*background-color: #929292;*/
+}
+.list tr {
+    font-weight: normal;
+}
+.list th {
+    border: 1px solid #EEE;
+    padding: 5px 2px;
+    white-space: nowrap;
+    font-weight: normal;;
+}
+.list td {
+    border: 1px solid #EEE;
+    padding: 5px 2px;
+}
+
+.select {
+    width: 110px;
+}
+
+.filter {
+    /*background-color: #234F32;*/
+    border: 1px solid #EEE;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.filter label {
+    padding-left: 3px;
+    padding-right: 3px;
+    color: #494949;
+    font-weight: bold;
+}
+
+.tb_tr_onmouseover {
+    background-color: #287696;
+    color: #FFF;
+}
+
+.tb_tr_onmouseout {
+    background-color: #FFF;
+    color: #000;
+}
