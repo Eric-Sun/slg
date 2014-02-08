@@ -15,7 +15,7 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="jdbcUrl">
-			  <value>jdbc:mysql://42.62.29.102:3306/che</value>
+			  <value>jdbc:mysql://42.62.29.102:3306/</value>
 		</property>
 		<property name="user">
 			<value>h13</value>

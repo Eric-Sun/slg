@@ -17,15 +17,4 @@
           class="com.h13.slg.cache.service.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="java.lang.Long"/>
     </bean>
-
-    <!-- waitingEvent -->
-    <bean id="waitingEventSerializer"
-          class="com.h13.slg.cache.service.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.core.cache.co.WaitingEventCO"/>
-    </bean>
-    <bean id="waitingEventTemplate" class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="waitingEventSerializer">
-    </bean>
-
 </beans>
