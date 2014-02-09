@@ -14,6 +14,4 @@ public interface UserService {
      */
     public ResponseDTO login(long uid, int seq, String args);
 
-
-
 }
