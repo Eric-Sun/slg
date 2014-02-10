@@ -1,6 +1,6 @@
 package com.h13.slg.user.helper;
 
-import com.h13.slg.core.config.exception.ObjectLoadErrorException;
+import com.h13.slg.core.ObjectLoadErrorException;
 import com.h13.slg.user.cache.UserLevelCache;
 import com.h13.slg.user.co.UserLevelCO;
 import com.h13.slg.user.dao.UserLevelDAO;
