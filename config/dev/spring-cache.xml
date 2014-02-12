@@ -31,23 +31,14 @@
 
 
    <!-- userLevelTemplate -->
-    <bean id="userLevelSerializer"
+    <bean id="levelSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.user.co.UserLevelCO"/>
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.LevelXMLCO"/>
     </bean>
-    <bean id="userLevelTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+    <bean id="levelTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="userLevelSerializer">
+          p:valueSerializer-ref="levelSerializer">
     </bean>
 
 
-    <!-- userStatusTemplate -->
-    <bean id="userStatusSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.user.co.UserStatusCO"/>
-    </bean>
-    <bean id="userStatusTemplate" class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="userLevelSerializer">
-    </bean>
 </beans>

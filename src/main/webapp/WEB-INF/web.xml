@@ -24,6 +24,9 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener
         </listener-class>
     </listener>
+    <listener>
+        <listener-class>com.h13.slg.web.BaseListener</listener-class>
+    </listener>
     <filter>
         <filter-name>SpringCharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
