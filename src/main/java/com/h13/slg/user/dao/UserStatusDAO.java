@@ -27,21 +27,25 @@ public class UserStatusDAO {
     @Autowired
     JdbcTemplate j;
 
-    public long insert(final String name, final int gold, final int food, final int cash, final int honor) {
+
+    public long insert(final long id, final String name,
+                       final int gold, final int food, final int cash, final int honor, final int level) {
         final KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_status " +
-                "(name,gold,food,cash,honor,createtime) " +
+                "(id,name,gold,food,cash,honor,level,createtime) " +
                 "values " +
                 "(?,?,?,?,?,now())";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
                 PreparedStatement pstmt = connection.prepareStatement(sql);
-                pstmt.setString(1, name);
-                pstmt.setInt(2, gold);
-                pstmt.setInt(3, food);
-                pstmt.setInt(4, cash);
-                pstmt.setInt(5, honor);
+                pstmt.setLong(1, id);
+                pstmt.setString(2, name);
+                pstmt.setInt(3, gold);
+                pstmt.setInt(4, food);
+                pstmt.setInt(5, cash);
+                pstmt.setInt(6, honor);
+                pstmt.setInt(7, level);
                 return pstmt;
             }
         }, holder);
@@ -49,21 +53,19 @@ public class UserStatusDAO {
     }
 
 
-    public UserStatusCO get(final long userId) {
-        final String sql = "select id,name,gold_coin,food,gold_ingot,medal,createtime where id=?";
-        List<UserStatusCO> userList = j.query(sql, new Object[]{userId}, new BeanPropertyRowMapper<UserStatusCO>(UserStatusCO.class));
-        if (userList.size() == 0)
-            return null;
-        else
-            return userList.get(0);
+    public UserStatusCO get(long id) {
+        String sql = "select id,name,gold,food,cash,honor,level,createtime where id=?";
+        return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserStatusCO>());
     }
 
-
-    public UserStatusCO login(String loginName, String pwd) {
-        final String sql = "select id,name,user_level_id,gold_coin,food,gold_ingot,medal " +
-                "from user where login_name=? and pwd=?";
-        UserStatusCO userStatusCO = j.queryForObject(sql, new Object[]{loginName, pwd},
-                new BeanPropertyRowMapper<UserStatusCO>(UserStatusCO.class));
-        return userStatusCO;
+    public void update(UserStatusCO userStatusCO) {
+        final String sql = "update user_status set " +
+                "food=?," +
+                "gold=?," +
+                "cash=?," +
+                "honor=?," +
+                "level=? where id=?";
+        j.update(sql, new Object[]{userStatusCO.getFood(), userStatusCO.getGold(), userStatusCO.getCash(),
+                userStatusCO.getHonor(), userStatusCO.getLevel(), userStatusCO.getId()});
     }
 }

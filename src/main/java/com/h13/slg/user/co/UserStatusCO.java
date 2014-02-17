@@ -1,5 +1,7 @@
 package com.h13.slg.user.co;
 
+import java.util.Date;
+
 /**
  * 用户状态信息
  */
@@ -9,7 +11,25 @@ public class UserStatusCO {
     private int food;
     private int cash;
     private int honor;
-    private int userLevelId;
+    private int level;
+    private String name ;
+    private Date createtime;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
 
     public long getId() {
         return id;
@@ -51,11 +71,11 @@ public class UserStatusCO {
         this.honor = honor;
     }
 
-    public int getUserLevelId() {
-        return userLevelId;
+    public int getLevel() {
+        return level;
     }
 
-    public void setUserLevelId(int userLevelId) {
-        this.userLevelId = userLevelId;
+    public void setLevel(int level) {
+        this.level = level;
     }
 }
