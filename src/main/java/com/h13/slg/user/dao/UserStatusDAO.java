@@ -28,17 +28,16 @@ public class UserStatusDAO {
     JdbcTemplate j;
 
 
-    public long insert(final long id, final String name,
+    public void insert(final long id, final String name,
                        final int gold, final int food, final int cash, final int honor, final int level) {
-        final KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_status " +
                 "(id,name,gold,food,cash,honor,level,createtime) " +
                 "values " +
-                "(?,?,?,?,?,now())";
+                "(?,?,?,?,?,?,?,now())";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-                PreparedStatement pstmt = connection.prepareStatement(sql);
+                PreparedStatement pstmt = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
                 pstmt.setLong(1, id);
                 pstmt.setString(2, name);
                 pstmt.setInt(3, gold);
@@ -48,14 +47,13 @@ public class UserStatusDAO {
                 pstmt.setInt(7, level);
                 return pstmt;
             }
-        }, holder);
-        return holder.getKey().longValue();
+        });
     }
 
 
     public UserStatusCO get(long id) {
-        String sql = "select id,name,gold,food,cash,honor,level,createtime where id=?";
-        return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserStatusCO>());
+        String sql = "select id,name,gold,food,cash,honor,level,createtime from user_status where id=?";
+        return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserStatusCO>(UserStatusCO.class));
     }
 
     public void update(UserStatusCO userStatusCO) {
