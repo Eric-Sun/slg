@@ -1,0 +1,211 @@
+编号	名称	类别	显示颜色	出售价格	是否可购买	是否可使用	使用类型	使用效果	使用需求	截止时间	使用间隔(天数)	图标	描述
+Id	Name	Category	Color	Sell	Buyable	CanUse	UseType	UseEffect	UseNeed	EndTime	UseInterval	Url	Desc
+1	黑铁	material	green	10	1	0		0	0	0		item/item1.png	打造一阶，二阶武器所需的材料，可用军功兑换
+2	松木	material	blue	50	1	0		0	0	0		item/item2.png	打造三阶，四阶武器所需的材料，可用军功兑换
+3	寒铁	material	purple	100	1	0		0	0	0		item/item3.png	打造五阶，六阶武器所需的材料，可用军功兑换
+4	紫檀	material	orange	200	1	0		0	0	0		item/item4.png	打造七阶武器所需的材料，可用军功兑换
+5	玄铁	material	orange	400	1	0		0	0	0		item/item5.png	打造八阶武器所需的材料，可用军功兑换
+6	降龙木	material	orange	800	1	0		0	0	0		item/item6.png	打造九阶武器所需的材料，可用军功兑换
+7	软皮	material	green	10	1	0		0	0	0		item/item7.png	打造一阶，二阶防具所需的材料，可用军功兑换
+8	麻线	material	blue	50	1	0		0	0	0		item/item8.png	打造三阶，四阶防具所需的材料，可用军功兑换
+9	钨钢	material	purple	100	1	0		0	0	0		item/item9.png	打造五阶，六阶防具所需的材料，可用军功兑换
+10	银丝	material	orange	200	1	0		0	0	0		item/item10.png	打造七阶防具所需的材料，可用军功兑换
+11	龙鳞	material	orange	400	1	0		0	0	0		item/item11.png	打造八阶防具所需的材料，可用军功兑换
+12	天蚕丝	material	orange	800	1	0		0	0	0		item/item12.png	打造九阶防具所需的材料，可用军功兑换
+13	玛瑙	material	green	10	1	0		0	0	0		item/item13.png	打造一阶，二阶饰品所需的材料，可用军功兑换
+14	大理石	material	blue	50	1	0		0	0	0		item/item14.png	打造三阶，四阶饰品所需的材料，可用军功兑换
+15	翡翠	material	purple	100	1	0		0	0	0		item/item15.png	打造五阶，六阶饰品所需的材料，可用军功兑换
+16	五彩石	material	orange	200	1	0		0	0	0		item/item16.png	打造七阶饰品所需的材料，可用军功兑换
+17	凤凰珠	material	orange	400	1	0		0	0	0		item/item17.png	打造八阶饰品所需的材料，可用军功兑换
+18	九天神石	material	orange	800	1	0		0	0	0		item/item18.png	打造九阶饰品所需的材料，可用军功兑换
+19	技能书	other	purple	10	1	0		0	0	0		item/item19.png	武将升级技能所需物品，可用军功兑换
+20	洗髓丹	other	purple	10	1	0		0	0	0		item/item20.png	提高武将基础属性，勇闯重楼、古墓宝藏可获得(39级开启洗髓功能)
+21	一级培养丹	other	purple	10	1	0		0	0	0		item/item21.png	提高武将成长值所需的物品，过关斩将可获得
+22	二级培养丹	other	purple	10	1	0		0	0	0		item/item22.png	提高武将成长值所需的物品，过关斩将可获得
+23	三级培养丹	other	purple	10	1	0		0	0	0		item/item23.png	提高武将成长值所需的物品，过关斩将可获得
+24	四级培养丹	other	purple	10	1	0		0	0	0		item/item24.png	提高武将成长值所需的物品，过关斩将可获得
+25	五级培养丹	other	purple	10	1	0		0	0	0		item/item25.png	提高武将成长值所需的物品，过关斩将可获得
+26	兵符	other	purple	10	1	0		0	0	0		item/item26.png	兵种转职所需物品，可用军功兑换
+27	一级图纸	other	green	5000		0		0	0	0		item/item27.png	打造一阶装备所需的图纸，黄巾之乱精英副本掉落
+28	二级图纸	other	green	10000		0		0	0	0		item/item28.png	打造二阶装备所需的图纸，袁绍挥师精英副本掉落
+29	三级图纸	other	blue	15000		0		0	0	0		item/item29.png	打造三阶装备所需的图纸，董卓之乱精英副本掉落
+30	四级图纸	other	blue	20000		0		0	0	0		item/item30.png	打造四阶装备所需的图纸，袁术称帝精英副本掉落
+31	五级图纸	other	purple	25000		0		0	0	0		item/item31.png	打造五阶装备所需的图纸，东吴霸主精英副本掉落
+32	六级图纸	other	purple	30000		0		0	0	0		item/item32.png	打造六阶装备所需的图纸，荆州夺主精英副本掉落
+33	七级图纸	other	orange	35000		0		0	0	0		item/item33.png	打造七阶装备所需的图纸，南蛮入侵精英副本掉落
+34	八级图纸	other	orange	40000		0		0	0	0		item/item34.png	打造八阶装备所需的图纸，蜀中之王精英副本掉落
+35	九级图纸	other	orange	45000		0		0	0	0		item/item35.png	打造九阶装备所需的图纸，西凉铁骑精英副本掉落
+37	幸运宝石	other	orange	10	1	0		0	0	0		item/item37.png	提高装备打造成功率10%的物品，可用军功兑换
+38	小喇叭	other	purple	10	1	0		0	0	0		item/item38.png	用于世界频道的聊天道具，每次消耗1个
+39	大喇叭	other	orange	10	1	0		0	0	0		item/item39.png	用于世界公告喊话的道具，每次消耗1个
+40	王者勋章	other	orange	10000000		0		0	0	0		item/item40.png	王者象征，拥有“世界聊天”永久免费特权！
+41	星辰玉	material	orange	1000	1	0		0	0	0		item/item41.png	打造十到十二阶装备所需的材料，可用军功兑换
+42	十级图纸	other	orange	50000		0		0	0	0		item/item42.png	打造十阶装备所需的图纸，宛城之战精英副本掉落
+43	十一级图纸	other	orange	60000		0		0	0	0		item/item43.png	打造十一阶装备所需的图纸，官渡之战精英副本掉落
+44	十二级图纸	other	orange	70000		0		0	0	0		item/item44.png	打造十二阶装备所需的图纸，东吴之战精英副本掉落
+45	经验丹	glory	purple	10		1	xp	0	0	0		item/item45.png	点击使用给任意武将服用可获得大量经验
+46	将魂包	glory	purple	10		1	soul	1000	0	0		item/item46.png	使用获得1000将魂，可通过活动获得
+47	神将碎片	glory	orange	10		0		0	0	0		item/item47.png	武将觉醒所需物品，可通过军团战、军团BOSS、或荣誉兑换获得
+48	黄金令	other	purple	10	1	0		0	0	0		item/item48.png	黑市手动刷新所需物品，可通过军团BOSS、古墓宝藏、商店获得
+49	天玉	other	purple	10		0		0	0	0		item/item49.png	装备洗炼所需物品，可通过古墓宝藏获得
+50	秘籍残页	other	orange	10		0		0	0	0		item/item50.png	合成武将新技能的唯一道具，可通过活动获得
+51	神秘礼包	other	orange	10		1	box	0	0	0		item/item51.png	疯狂擂台鲜花榜冠军奖励，有几率获得高级宝石、神将碎片
+52	蛋疼礼包	other	orange	10		1	box	0	0	0		item/item52.png	疯狂擂台鸡蛋榜冠军奖励，有几率获得高级宝石、神将碎片
+53	左慈召唤令	other	orange	10	0	1	merge	279	0	0		item/item53.png	凑齐10枚可合成一张左慈武将卡，可通过活动获得
+54	幸运宝箱	other	orange	10	0	1	slot	0	0	0		item/item54.png	活动获得奖励，有几率获得稀有武将召唤令、高级宝石、神将碎片等物品
+55	超级将魂包	other	orange	10	0	1	soul	10000	0	0		item/item55.png	使用获得10000将魂，可通过活动获得
+56	至尊宝箱	other	orange	10	0	1	slot	0	0	0		item/item56.png	活动获得奖励，有几率获得神将碎片、超级将魂包、稀有宝石等物品
+57	七级材料包	other	orange	10	1	1	box	0	0	0		item/item57.png	使用可获得紫檀x10、银丝x10、五彩石x10
+58	八级材料包	other	orange	10	1	1	box	0	0	0		item/item58.png	使用可获得玄铁x10、龙鳞x10、凤凰珠x10
+59	九级材料包	other	orange	10	1	1	box	0	0	0		item/item59.png	使用可获得降龙木x10、天蚕丝x10、九天神石x10
+60	十级材料包	other	orange	10	1	1	box	0	0	0		item/item60.png	使用可获得星辰玉x10
+61	三级培养包	other	purple	10	1	1	box	0	0	0		item/item61.png	使用可获得三级培养丹x10
+62	四级培养包	other	purple	10	1	1	box	0	0	0		item/item62.png	使用可获得四级培养丹x10
+63	五级培养包	other	purple	10	1	1	box	0	0	0		item/item63.png	使用可获得五级培养丹x10
+64	洗髓包	other	purple	10	1	1	box	0	0	0		item/item64.png	使用可获得洗髓丹x10
+65	技能包	other	purple	10	1	1	box	0	0	0		item/item65.png	使用可获得技能书x100
+66	黄钻宝石	other	purple	10	0	0		0	0	0		item/item66.png	开通或续费黄钻所得，可以用于黄钻抽奖活动
+67	名将宝箱	other	orange	10	0	1	card	0	0	0		item/item67.png	使用可进行抽奖，有机会抽到各种极品武将等其他丰厚奖励
+68	神之宝箱	other	orange	10	0	1	box	0	0	0		item/item68.png	使用可获得5个神将碎片、5000粮食、300元宝
+69	名将宝箱	other	orange	10	0	1	card	0	0	0		item/item67.png	使用可进行抽奖，有机会抽到各种极品武将等其他丰厚奖励
+70	童渊召唤令	other	orange	10	0	1	merge	281	0	0		item/item70.png	凑齐10枚可合成一张童渊武将卡，可通过活动获得
+71	黄钻宝箱	other	orange	10	0	1	slot	0	0	0		item/item71.png	活动获得奖励，有几率获得童渊召唤令、高级宝石、神将碎片等物品
+72	荣耀礼包	other	purple	10	0	1	box	0	0	0		item/item72.png	群雄争霸三十二强专属礼包
+73	战皇礼包	other	purple	10	0	1	box	0	0	0		item/item73.png	群雄争霸四强专属礼包
+74	霸主礼包	other	orange	10	0	1	box	0	0	0		item/item74.png	群雄争霸冠军专属礼包
+75	战神宝箱	other	orange	10	0	1	box	0	0	0		item/item75.png	战神独享的宝箱，最多可开出100枚神将碎片
+76	土豪勋章	other	orange	10000000	0	0		0	0	0		item/item76.png	土豪象征，世界聊天、喊话永久免费！独享土豪金字体
+77	神秘宝箱	other	orange	10	0	1	box	0	0	0		item/item77.png	使用后随机获得1个奖励，惊喜程度全看人品
+78	神兽丹	other	purple	10	1	0		0	0	0		item/item78.png	神兽进阶所需物品，可参与世界boss战或在商城购买获得
+79	六级宝石箱	other	purple	10	0	1	box	0	0	0		item/item79.png	使用后获得5颗六级普通宝石，每种各1颗
+80	七级宝石箱	other	orange	10	0	1	box	0	0	0		item/item80.png	使用后获得5颗七级普通宝石，每种各1颗
+82	击杀宝箱	other	orange	10	0	1	box	0	0	0		item/item82.png	只有真正的幸运儿才能获得，打开随机获得惊喜奖励
+83	强者宝箱	other	orange	10	0	1	box	0	0	0		item/item83.png	只有真正的强者才能获得，打开随机获得丰厚奖励
+84	积分劵	other	blue	10	0	0		0	0	0		item/item84.png	团购积分券，数量越多，兑换的奖品越好
+85	幸运礼盒	other	orange	10	0	1	box	0	0	0		item/item85.png	有几率开出高级宝石、神将碎片、稀有武将碎片等
+86	锦囊	other	orange	10	0	1	box	0	0	0		item/item86.png	拜会诸葛亮时获得，使用可以随机获得奖励
+87	西域宝藏	other	orange	10	0	1	box	0	0	0		item/item87.png	使用后随机获得1个奖励，有几率开出神将碎片
+88	击杀幸运箱	other	orange	10	0	1	box	0	0	0		item/item88.png	终结恶魔的一刀是你赐予的，幸运奖励非你莫属！
+89	勇者黄金箱	other	orange	10	0	1	box	0	0	0		item/item89.png	只有战斗伤害的王者才可拥有此宝箱
+90	猛将黄金箱	other	orange	10	0	1	box	0	0	0		item/item89.png	只有战斗伤害的王者才可拥有此宝箱
+91	浴血黄金箱	other	orange	10	0	1	box	0	0	0		item/item89.png	只有战斗伤害的王者才可拥有此宝箱
+92	屠魔黄金箱	other	orange	10	0	1	box	0	0	0		item/item89.png	只有战斗伤害的王者才可拥有此宝箱
+93	勇者白银箱	other	orange	10	0	1	box	0	0	0		item/item93.png	一人之下万人之上的奖励总不会差到哪去
+94	猛将白银箱	other	orange	10	0	1	box	0	0	0		item/item93.png	一人之下万人之上的奖励总不会差到哪去
+95	浴血白银箱	other	orange	10	0	1	box	0	0	0		item/item93.png	一人之下万人之上的奖励总不会差到哪去
+96	屠魔白银箱	other	orange	10	0	1	box	0	0	0		item/item93.png	一人之下万人之上的奖励总不会差到哪去
+97	勇者青铜箱	other	orange	10	0	1	box	0	0	0		item/item97.png	拥有此宝箱者乃是这个世界的中坚力量
+98	猛将青铜箱	other	orange	10	0	1	box	0	0	0		item/item97.png	拥有此宝箱者乃是这个世界的中坚力量
+99	浴血青铜箱	other	orange	10	0	1	box	0	0	0		item/item97.png	拥有此宝箱者乃是这个世界的中坚力量
+100	屠魔青铜箱	other	orange	10	0	1	box	0	0	0		item/item97.png	拥有此宝箱者乃是这个世界的中坚力量
+101	勇者黑铁箱	other	orange	10	0	1	box	0	0	0		item/item101.png	奖励那些一直在奋斗、从未停歇的战士们
+102	猛将黑铁箱	other	orange	10	0	1	box	0	0	0		item/item101.png	奖励那些一直在奋斗、从未停歇的战士们
+103	浴血黑铁箱	other	orange	10	0	1	box	0	0	0		item/item101.png	奖励那些一直在奋斗、从未停歇的战士们
+104	屠魔黑铁箱	other	orange	10	0	1	box	0	0	0		item/item101.png	奖励那些一直在奋斗、从未停歇的战士们
+105	神龙宝箱	other	orange	10	0	1	box	0	0	0		item/item105.png	这是送给本服最强悍擂台霸主的额外小礼物
+106	神龙宝箱	other	orange	10	0	1	box	0	0	0		item/item105.png	这是送给本服最强悍擂台霸主的额外小礼物
+107	神龙宝箱	other	orange	10	0	1	box	0	0	0		item/item105.png	这是送给本服最强悍擂台霸主的额外小礼物
+108	金龙宝箱	other	orange	10	0	1	box	0	0	0		item/item106.png	第2名至第5名所获得的额外奖励
+109	金龙宝箱	other	orange	10	0	1	box	0	0	0		item/item106.png	第2名至第5名所获得的额外奖励
+110	金龙宝箱	other	orange	10	0	1	box	0	0	0		item/item106.png	第2名至第5名所获得的额外奖励
+111	银龙宝箱	other	purple	10	0	1	box	0	0	0		item/item107.png	第5名至第10名所获得的额外奖励
+112	银龙宝箱	other	purple	10	0	1	box	0	0	0		item/item107.png	第5名至第10名所获得的额外奖励
+113	银龙宝箱	other	purple	10	0	1	box	0	0	0		item/item107.png	第5名至第10名所获得的额外奖励
+114	玉龙宝箱	other	purple	10	0	1	box	0	0	0		item/item108.png	第11名至第50名所获得的额外奖励
+115	玉龙宝箱	other	purple	10	0	1	box	0	0	0		item/item108.png	第11名至第50名所获得的额外奖励
+116	玉龙宝箱	other	purple	10	0	1	box	0	0	0		item/item108.png	第11名至第50名所获得的额外奖励
+117	黑龙宝箱	other	blue	10	0	1	box	0	0	0		item/item109.png	第51名至第100名所获得的额外奖励
+118	黑龙宝箱	other	blue	10	0	1	box	0	0	0		item/item109.png	第51名至第100名所获得的额外奖励
+119	黑龙宝箱	other	blue	10	0	1	box	0	0	0		item/item109.png	第51名至第100名所获得的额外奖励
+120	猛将宝箱	other	blue	10	0	1	box	0	0	0		item/item110.png	第101名至第200名所获得的额外奖励
+121	猛将宝箱	other	blue	10	0	1	box	0	0	0		item/item110.png	第101名至第200名所获得的额外奖励
+122	猛将宝箱	other	blue	10	0	1	box	0	0	0		item/item110.png	第101名至第200名所获得的额外奖励
+123	勇士宝箱	other	green	10	0	1	box	0	0	0		item/item111.png	第201名至第300名所获得的额外奖励
+124	勇士宝箱	other	green	10	0	1	box	0	0	0		item/item111.png	第201名至第300名所获得的额外奖励
+125	勇士宝箱	other	green	10	0	1	box	0	0	0		item/item111.png	第201名至第300名所获得的额外奖励
+126	新兵宝箱	other	green	10	0	1	box	0	0	0		item/item112.png	300名及之后所有排名玩家所获得的额外奖励
+127	新兵宝箱	other	green	10	0	1	box	0	0	0		item/item112.png	300名及之后所有排名玩家所获得的额外奖励
+128	新兵宝箱	other	green	10	0	1	box	0	0	0		item/item112.png	300名及之后所有排名玩家所获得的额外奖励
+129	欢乐宝石箱	other	purple	10	0	1	box	0	0	0		item/item79.png	有几率获得7级统帅石和其他稀有宝石
+130	惊喜宝石箱	other	orange	10	0	1	box	0	0	0		item/item80.png	有几率获得8级统帅石和其他稀有宝石
+131	五级珍石袋	other	purple	10	0	1	box	0	0	0		item/item131.png	使用后随机获得1颗五级稀有宝石
+132	六级珍石袋	other	orange	10	0	1	box	0	0	0		item/item132.png	使用后随机获得1颗六级稀有宝石
+133	极品珍石袋	other	orange	10	0	1	box	0	0	0		item/item52.png	使用后随机获得1颗价值不菲的宝石
+134	神将宝箱	other	orange	10	0	1	slot	0	0	0		item/item68.png	使用后必定获得左慈召唤令、高级宝石、神将碎片等物品
+135	土豪宝箱	other	orange	10	0	1	box	0	0	0		item/item135.png	可随机获得神将碎片，九级宝石等奖励
+136	七级珍石袋	other	orange	10	0	1	box	0	0	0		item/item136.png	使用后随机获得1颗七级稀有宝石
+137	八级珍石袋	other	orange	10	0	1	box	0	0	0		item/item137.png	使用后随机获得1颗八级稀有宝石
+138	九级宝石袋	other	orange	10	0	1	box	0	0	0		item/item138.png	使用后随机获得1颗九级普通宝石
+139	三级宝石箱	other	blue	10	0	1	box	0	0	0		item/item139.png	使用后获得5颗三级普通宝石，每种各1颗。
+140	四级宝石箱	other	blue	10	0	1	box	0	0	0		item/item140.png	使用后获得5颗四级普通宝石，每种各1颗。
+141	五级宝石箱	other	purple	10	0	1	box	0	0	0		item/item141.png	使用后获得5颗五级普通宝石，每种各1颗。
+142	八级宝石箱	other	orange	10	0	1	box	0	0	0		item/item142.png	使用后获得5颗八级普通宝石，每种各1颗。
+143	三级珍石袋	other	blue	10	0	1	box	0	0	0		item/item143.png	使用后随机获得1颗三级稀有宝石
+144	四级珍石袋	other	blue	10	0	1	box	0	0	0		item/item144.png	使用后随机获得1颗四级稀有宝石
+145	四级宝石袋	other	blue	10	0	1	box	0	0	0		item/item145.png	使用后随机获得1颗四级普通宝石
+146	五级宝石袋	other	purple	10	0	1	box	0	0	0		item/item146.png	使用后随机获得1颗五级普通宝石
+147	六级宝石袋	other	purple	10	0	1	box	0	0	0		item/item147.png	使用后随机获得1颗六级普通宝石
+148	七级宝石袋	other	orange	10	0	1	box	0	0	0		item/item148.png	使用后随机获得1颗七级普通宝石
+149	八级宝石袋	other	orange	10	0	1	box	0	0	0		item/item149.png	使用后随机获得1颗八级普通宝石
+150	一级宝石袋	other	green	10	0	1	box	0	0	0		item/item150.png	使用后随机获得1颗一级普通宝石
+151	二级宝石袋	other	green	10	0	1	box	0	0	0		item/item151.png	使用后随机获得1颗二级普通宝石
+152	三级宝石袋	other	blue	10	0	1	box	0	0	0		item/item152.png	使用后随机获得1颗三级普通宝石
+153	十级宝石袋	other	orange	10	0	1	box	0	0	0		item/item153.png	使用后随机获得1颗十级普通宝石
+154	一级宝石箱	other	green	10	0	1	box	0	0	0		item/item154.png	使用后获得5颗一级普通宝石，每种各1颗。
+155	二级宝石箱	other	green	10	0	1	box	0	0	0		item/item155.png	使用后获得5颗二级普通宝石，每种各1颗。
+156	九级宝石箱	other	orange	10	0	1	box	0	0	0		item/item156.png	使用后获得5颗九级普通宝石，每种各1颗。
+157	十级宝石箱	other	orange	10	0	1	box	0	0	0		item/item157.png	使用后获得5颗十级普通宝石，每种各1颗。
+158	一级珍石袋	other	green	10	0	1	box	0	0	0		item/item158.png	使用后随机获得1颗一级稀有宝石
+159	二级珍石袋	other	green	10	0	1	box	0	0	0		item/item159.png	使用后随机获得1颗二级稀有宝石
+160	九级珍石袋	other	orange	10	0	1	box	0	0	0		item/item160.png	使用后随机获得1颗九级稀有宝石
+161	十级珍石袋	other	orange	10	0	1	box	0	0	0		item/item161.png	使用后随机获得1颗十级稀有宝石
+162	一级珍石箱	other	green	10	0	1	box	0	0	0		item/item162.png	使用后获得3颗一级稀有宝石，每种各1颗。
+163	二级珍石箱	other	green	10	0	1	box	0	0	0		item/item163.png	使用后获得3颗二级稀有宝石，每种各1颗。
+164	三级珍石箱	other	blue	10	0	1	box	0	0	0		item/item164.png	使用后获得3颗三级稀有宝石，每种各1颗。
+165	四级珍石箱	other	blue	10	0	1	box	0	0	0		item/item165.png	使用后获得3颗四级稀有宝石，每种各1颗。
+166	五级珍石箱	other	purple	10	0	1	box	0	0	0		item/item166.png	使用后获得3颗五级稀有宝石，每种各1颗。
+167	六级珍石箱	other	purple	10	0	1	box	0	0	0		item/item167.png	使用后获得3颗六级稀有宝石，每种各1颗。
+168	七级珍石箱	other	orange	10	0	1	box	0	0	0		item/item168.png	使用后获得3颗七级稀有宝石，每种各1颗。
+169	八级珍石箱	other	orange	10	0	1	box	0	0	0		item/item169.png	使用后获得3颗八级稀有宝石，每种各1颗。
+170	九级珍石箱	other	orange	10	0	1	box	0	0	0		item/item170.png	使用后获得3颗九级稀有宝石，每种各1颗。
+171	十级珍石箱	other	orange	10	0	1	box	0	0	0		item/item171.png	使用后获得3颗十级稀有宝石，每种各1颗。
+172	特惠宝箱	other	orange	10	0	1	slot	0	0	0		item/item77.png	充值特惠活动专属奖励，每期都有不同惊喜，还请在活动时间内使用。
+173	六级培养丹	other	purple	10	1	0		0	0	0		item/item173.png	提高武将成长值所需的物品，挑战乾天塔可获得
+174	十三级图纸	other	orange	80000	0	0		0	0	0		item/item44.png	打造十三阶装备所需的图纸，烽火之战精英副本掉落
+175	十四级图纸	other	orange	90000	0	0		0	0	0		item/item44.png	打造十四阶装备所需的图纸，决堤之战精英副本掉落
+176	十五级图纸	other	orange	100000	0	0		0	0	0		item/item44.png	打造十五阶装备所需的图纸，铜雀之战精英副本掉落
+177	魔玉	material	orange	1000	1	0		0	0	0		item/item177.png	打造十三阶及以上装备所需的材料，可用军功兑换
+178	神兽丹箱	other	orange	10	0	1	box	0	0	0		item/item135.png	使用后获得随机数量的神兽丹，最多可获得10个
+179	神将碎片箱	other	orange	10	0	1	box	0	0	0		item/item85.png	使用后获得随机数量的神将碎片，最多可获得10个
+180	将魂包箱	other	orange	10	0	1	box	0	0	0		item/item67.png	使用后获得随机数量的超级将魂包，最多可获得10个
+181	宝石特惠箱	other	orange	10	0	1	slot	0	0	0		item/item142.png	新服特惠专属奖励，开启可获得高级普通宝石
+182	珍石特惠箱	other	orange	10	0	1	slot	0	0	0		item/item168.png	新服特惠专属奖励，开启可获得高级稀有宝石
+183	神将结晶	other	orange	10	0	1	combine	47	100	0		item/item183.png	100个神将结晶可合成1个神将碎片
+184	神兽微粒	other	orange	10	0	1	combine	78	100	0		item/item184.png	100个神兽微粒可合成1个神兽丹
+185	一阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	一阶神兽进阶所需物品，过期自动消失
+186	二阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	二阶神兽进阶所需物品，过期自动消失
+187	三阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	三阶神兽进阶所需物品，过期自动消失
+188	四阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	四阶神兽进阶所需物品，过期自动消失
+189	五阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	五阶神兽进阶所需物品，过期自动消失
+190	六阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	六阶神兽进阶所需物品，过期自动消失
+191	七阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	七阶神兽进阶所需物品，过期自动消失
+192	八阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	八阶神兽进阶所需物品，过期自动消失
+193	九阶神兽丹	other	purple	10	1	0		0	0	2014:1:27:23:59:0		item/item78.png	九阶神兽进阶所需物品，过期自动消失
+194	神片宝箱	other	orange	10	0	1	slot	0	0	0		item/item142.png	新服特惠专属奖励，开启可获得不同数量的神将碎片
+195	冠军礼包	other	orange	10	0	1	box	0	0	0		item/item195.png	决战天下冠军专属礼包
+196	3强礼包	other	orange	10	0	1	box	0	0	0		item/item196.png	决战天下3强专属礼包
+197	9强礼包	other	purple	10	0	1	box	0	0	0		item/item197.png	决战天下9强专属礼包
+198	参赛礼包	other	blue	10	0	1	box	0	0	0		item/item198.png	决战天下27强专属礼包
+199	黑莲花	other	orange	10	0	0		0	0	0		item/item199.png	觉醒武将入魔所需材料，可通过战术大赛获得
+200	钻石	other	orange	10	0	0		0	0	2014:2:7:23:59:59		item/item200.png	可在钻石卡牌活动兑换奖励，过期自动消失
+201	11级材料包	other	orange	10	1	1	box	0	0	0		item/item201.png	使用可获得魔玉x10
+202	六级培养包	other	purple	10	1	1	box	0	0	0		item/item202.png	使用可获得六级培养丹x10
+203	4阶装备礼包	other	blue	10	0	1	box	0	0	0		item/item198.png	使用后获得3套打造4阶装备的图纸及材料
+204	5阶装备礼包	other	purple	10	0	1	box	0	0	0		item/item197.png	使用后获得3套打造5阶装备的图纸及材料
+205	6阶装备礼包	other	orange	10	0	1	box	0	0	0		item/item196.png	使用后获得3套打造6阶装备的图纸及材料
+206	7阶装备礼包	other	orange	10	0	1	box	0	0	0		item/item195.png	使用后获得3套打造7阶装备的图纸及材料
+207	爆竹	other	purple	10	0	0		0	0	2014:2:5:23:59:59		item/item207.png	驱逐年兽时点击鼓舞可使用爆竹增加威力
+208	新年红包	other	orange	10	0	1	box	0	0	0	1	item/item208.png	使用后可获得随机数量的元宝，每天只可开启1个
+209	神兽幻化丹	other	orange	10	0	1	pet	0	0	0		item/item209.png	使用后可永久增加神兽属性2%（不包含全军统帅），六阶及以上神兽才可使用
+210	新年福帖	other	purple	10	0	1	combine	211	3	0		item/item210.png	3个新年福帖可合成一个新年大礼包
+211	新年大礼包	other	orange	10	0	1	box	0	0	0		item/item211.png	梦貂蝉贺年大礼包，开启获得神秘奖励

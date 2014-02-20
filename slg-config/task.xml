@@ -1,0 +1,2876 @@
+<?xml version="1.0" encoding="GB2312"?>
+<taskList>
+      <task>
+            <id>1</id>
+            <title>穿戴装备</title>
+            <taskType1>WearEquip</taskType1>
+            <level>1</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>给刘乐乐穿戴1次装备</taskName1>
+            <taskName2 />
+            <xp>12</xp>
+            <gold>1000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“武将”&lt;/font&gt;按钮进入&lt;font color='#00ff00'&gt;“装备”&lt;/font&gt;界面，点击&lt;font color='#00ff00'&gt;“一键装备”&lt;/font&gt;进行穿戴装备。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>2</id>
+            <title>征收钱粮</title>
+            <taskType1>HarvestGold</taskType1>
+            <level>2</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>HarvestFood</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>收获1次金币</taskName1>
+            <taskName2>收获1次粮食</taskName2>
+            <xp>30</xp>
+            <gold>1100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;和&lt;font color='#00ff00'&gt;“磨坊”&lt;/font&gt;建筑进行收获金币和粮食。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>3</id>
+            <title>征讨裴元绍</title>
+            <taskType1>WinPVE</taskType1>
+            <level>3</level>
+            <taskArg1>1</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次裴元绍</taskName1>
+            <taskName2 />
+            <xp>49</xp>
+            <gold>1200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“曲阳”&lt;/font&gt;与裴元绍进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>4</id>
+            <title>招募武将</title>
+            <taskType1>EnrollRole</taskType1>
+            <level>4</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>招募1名武将</taskName1>
+            <taskName2 />
+            <xp>21</xp>
+            <gold>1300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，招募一名武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>5</id>
+            <title>排兵布阵</title>
+            <taskType1>ArrangeTeam</taskType1>
+            <level>4</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>新上阵一名武将</taskName1>
+            <taskName2 />
+            <xp>20</xp>
+            <gold>1400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“布阵”&lt;/font&gt;按钮进行布阵。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>6</id>
+            <title>征讨邓茂</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>2</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次邓茂</taskName1>
+            <taskName2 />
+            <xp>26</xp>
+            <gold>1500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“曲阳”&lt;/font&gt;与邓茂进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>7</id>
+            <title>强化装备</title>
+            <taskType1>StrengthEquip</taskType1>
+            <level>5</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>强化1次装备</taskName1>
+            <taskName2 />
+            <xp>93</xp>
+            <gold>1600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面进行1次强化。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>8</id>
+            <title>征讨周仓</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>5</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败周仓，通关曲阳</taskName1>
+            <taskName2 />
+            <xp>31</xp>
+            <gold>1700</gold>
+            <award1>equip.armor.1:1</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“曲阳”&lt;/font&gt;与周仓进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>9</id>
+            <title>全副武装</title>
+            <taskType1>WearEquip</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>给任意武将穿戴1次装备</taskName1>
+            <taskName2 />
+            <xp>35</xp>
+            <gold>1800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“武将”&lt;/font&gt;按钮，在&lt;font color='#00ff00'&gt;“信息”&lt;/font&gt;界面给任意武将穿戴一次装备。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>10</id>
+            <title>极限强化一</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level>5</level>
+            <taskArg1>5</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意1件装备强化到5级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>75</xp>
+            <gold>1900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意1件装备强化到5级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>11</id>
+            <title>金币多多</title>
+            <taskType1>HarvestGold</taskType1>
+            <level>2</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>HarvestFood</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>收获1次金币</taskName1>
+            <taskName2>收获1次粮食</taskName2>
+            <xp>29</xp>
+            <gold>2100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;和&lt;font color='#00ff00'&gt;“磨坊”&lt;/font&gt;建筑进行收获金币和粮食。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>12</id>
+            <title>征讨张梁</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>10</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次张梁</taskName1>
+            <taskName2 />
+            <xp>34</xp>
+            <gold>2200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“广宗”&lt;/font&gt;与张梁进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>13</id>
+            <title>武器材料</title>
+            <taskType1>ExchangeMaterial</taskType1>
+            <level>8</level>
+            <taskArg1>1</taskArg1>
+            <taskTarget1>10</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>在商店购买10个黑铁</taskName1>
+            <taskName2 />
+            <xp>36</xp>
+            <gold>2300</gold>
+            <award1>material.27:1</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;用军功或元宝获得10个黑铁。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>14</id>
+            <title>防具材料</title>
+            <taskType1>ExchangeMaterial</taskType1>
+            <level>8</level>
+            <taskArg1>7</taskArg1>
+            <taskTarget1>10</taskTarget1>
+            <taskType2>ExchangeMaterial</taskType2>
+            <taskArg2>13</taskArg2>
+            <taskTarget2>10</taskTarget2>
+            <taskName1>在商店购买10个软皮</taskName1>
+            <taskName2>在商店购买10个玛瑙</taskName2>
+            <xp>59</xp>
+            <gold>2400</gold>
+            <award1>material.27:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;用军功或元宝获得10个软皮和玛瑙。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>15</id>
+            <title>良才将相</title>
+            <taskType1>EnrollRole</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>招募1名武将</taskName1>
+            <taskName2 />
+            <xp>20</xp>
+            <gold>2500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，招募一名武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>16</id>
+            <title>天之阵法</title>
+            <taskType1>ArrangeTeam</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>新上阵一名武将</taskName1>
+            <taskName2 />
+            <xp>78</xp>
+            <gold>2600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“布阵”&lt;/font&gt;按钮进行一次布阵。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>17</id>
+            <title>双战猛将</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10001</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨1次黄巾之乱精英副本</taskName1>
+            <taskName2 />
+            <xp>30</xp>
+            <gold>2800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，在精英副本进行1次战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>18</id>
+            <title>征讨张宝</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>15</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次张宝</taskName1>
+            <taskName2 />
+            <xp>50</xp>
+            <gold>3200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“巨鹿”&lt;/font&gt;与张宝进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>19</id>
+            <title>寒铁甲</title>
+            <taskType1>MakeArmorTo</taskType1>
+            <level>10</level>
+            <taskArg1>2</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>打造1件寒铁战甲</taskName1>
+            <taskName2 />
+            <xp>30</xp>
+            <gold>2900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“打造”&lt;/font&gt;界面，由鹿皮铠衣打造1件寒铁战甲。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>20</id>
+            <title>郎将符</title>
+            <taskType1>MakeAccessoryTo</taskType1>
+            <level>10</level>
+            <taskArg1>2</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>打造1枚郎将符</taskName1>
+            <taskName2 />
+            <xp>30</xp>
+            <gold>3000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“打造”&lt;/font&gt;界面，由参将符打造1枚郎将符。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>21</id>
+            <title>极限强化二</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>10</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意1件装备强化到10级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>11</xp>
+            <gold>3300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意1件装备强化到10级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>22</id>
+            <title>征讨张角</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>20</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次张角</taskName1>
+            <taskName2 />
+            <xp>60</xp>
+            <gold>3400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“濮阳”&lt;/font&gt;与张角进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>23</id>
+            <title>家财万贯</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>收获1次金币</taskName1>
+            <taskName2 />
+            <xp>100</xp>
+            <gold>3600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;建筑，可收获金币。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>24</id>
+            <title>极限强化三</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>10</taskArg1>
+            <taskTarget1>3</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意3件装备强化到10级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>200</xp>
+            <gold>3800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将3件装备强化到10级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>25</id>
+            <title>征讨颜良</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>25</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次颜良</taskName1>
+            <taskName2 />
+            <xp>10</xp>
+            <gold>3900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“乌巢”&lt;/font&gt;与颜良进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>26</id>
+            <title>双战猛将</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10001</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨2次黄巾之乱精英副本</taskName1>
+            <taskName2 />
+            <xp>150</xp>
+            <gold>4000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，在精英副本进行2次战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>27</id>
+            <title>金矿争夺</title>
+            <taskType1>OccupyMine</taskType1>
+            <level>13</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>进入一次金矿</taskName1>
+            <taskName2 />
+            <xp>32</xp>
+            <gold>4400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“金矿”&lt;/font&gt;建筑，进入金矿可进行占领和掠夺。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>28</id>
+            <title>强化武装</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>10</taskArg1>
+            <taskTarget1>6</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意6件装备强化到10级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>34</xp>
+            <gold>4500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意6件装备强化到10级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>29</id>
+            <title>征讨文丑</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>30</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次文丑</taskName1>
+            <taskName2 />
+            <xp>46</xp>
+            <gold>4600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“官渡”&lt;/font&gt;与文丑进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>30</id>
+            <title>军功过万</title>
+            <taskType1>HaveHonor</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有军功1000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>112</xp>
+            <gold>4800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;征战副本、勇闯重楼与过关斩将可以获得军功。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>31</id>
+            <title>征讨许攸</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>35</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次许攸</taskName1>
+            <taskName2 />
+            <xp>240</xp>
+            <gold>4900</gold>
+            <award1>material.19:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“壶关”&lt;/font&gt;与许攸进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>32</id>
+            <title>技能飞跃</title>
+            <taskType1>UpgradeSkill</taskType1>
+            <level>15</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>提升1次武将的技能</taskName1>
+            <taskName2 />
+            <xp>60</xp>
+            <gold>5100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“武将”&lt;/font&gt;按钮，在&lt;font color='#00ff00'&gt;“技能”&lt;/font&gt;界面，进行技能升级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>33</id>
+            <title>极限强化四</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>15</taskArg1>
+            <taskTarget1>3</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意3件装备强化到15级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>210</xp>
+            <gold>5200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意3件装备强化到15级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>34</id>
+            <title>征讨袁绍</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>40</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次袁绍</taskName1>
+            <taskName2 />
+            <xp>90</xp>
+            <gold>5400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“邺城”&lt;/font&gt;与袁绍进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>35</id>
+            <title>丰收之年</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>HarvestFood</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>收获1次金币</taskName1>
+            <taskName2>收获1次粮食</taskName2>
+            <xp>206</xp>
+            <gold>5500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;和&lt;font color='#00ff00'&gt;“磨坊”&lt;/font&gt;建筑进行收获金币和粮食。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>36</id>
+            <title>挥师南下</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10002</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨2次袁绍挥师精英副本</taskName1>
+            <taskName2 />
+            <xp>400</xp>
+            <gold>5600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，选中袁绍挥师与精英副本进行战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>37</id>
+            <title>一堆黑铁</title>
+            <taskType1>ExchangeMaterial</taskType1>
+            <level />
+            <taskArg1>1</taskArg1>
+            <taskTarget1>15</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>在商店购买15个黑铁</taskName1>
+            <taskName2 />
+            <xp>400</xp>
+            <gold>5700</gold>
+            <award1>material.28:1</award1>
+            <desc>&lt;font FACE='YHFont'&gt;在&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;中购买获得15个黑铁。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>38</id>
+            <title>一堆软皮</title>
+            <taskType1>ExchangeMaterial</taskType1>
+            <level />
+            <taskArg1>7</taskArg1>
+            <taskTarget1>15</taskTarget1>
+            <taskType2>ExchangeMaterial</taskType2>
+            <taskArg2>13</taskArg2>
+            <taskTarget2>15</taskTarget2>
+            <taskName1>在商店购买15个软皮</taskName1>
+            <taskName2>在商店购买15个玛瑙</taskName2>
+            <xp>401</xp>
+            <gold>5800</gold>
+            <award1>material.28:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;在&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;中购买获得15个软皮和玛瑙。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>39</id>
+            <title>极限强化五</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>18</taskArg1>
+            <taskTarget1>3</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意3件装备强化到18级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>49</xp>
+            <gold>6200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意3件装备强化到18级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>40</id>
+            <title>征讨华雄</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>45</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次华雄</taskName1>
+            <taskName2 />
+            <xp>200</xp>
+            <gold>6400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“玉池关”&lt;/font&gt;与华雄进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>41</id>
+            <title>双连贯</title>
+            <taskType1>FightRank</taskType1>
+            <level>19</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>在擂台战斗2次</taskName1>
+            <taskName2 />
+            <xp>462</xp>
+            <gold>6600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“擂台”&lt;/font&gt;建筑，点击&lt;font color='#00ff00'&gt;“前往”&lt;/font&gt;进行打擂。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>42</id>
+            <title>万贯家财</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>收获1次金币</taskName1>
+            <taskName2 />
+            <xp>151</xp>
+            <gold>6800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;建筑，就可以收获金币。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>43</id>
+            <title>猛将如云</title>
+            <taskType1>EnrollRole</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>招募1名武将</taskName1>
+            <taskName2 />
+            <xp>478</xp>
+            <gold>6900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，招募一名武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>44</id>
+            <title>天之阵法</title>
+            <taskType1>ArrangeTeam</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>新上阵一名武将</taskName1>
+            <taskName2 />
+            <xp>205</xp>
+            <gold>6950</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“布阵”&lt;/font&gt;按钮进行一次布阵。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>45</id>
+            <title>征讨高顺</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>50</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次高顺</taskName1>
+            <taskName2 />
+            <xp>300</xp>
+            <gold>7000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“函谷关”&lt;/font&gt;与高顺进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>46</id>
+            <title>斩将杀敌</title>
+            <taskType1>KillGeneral</taskType1>
+            <level>21</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>在过关斩将战斗2次</taskName1>
+            <taskName2 />
+            <xp>700</xp>
+            <gold>7200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战战役。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>47</id>
+            <title>灵丹妙药</title>
+            <taskType1>HaveMaterial</taskType1>
+            <level />
+            <taskArg1>21</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>获得1颗一级培养丹</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>800</xp>
+            <gold>7300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;在&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;或&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;的&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;中获得1颗一级培养丹。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>48</id>
+            <title>天下霸主一</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>22</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到22级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>768</xp>
+            <gold>7400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到22级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>49</id>
+            <title>征讨吕布</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>55</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次吕布</taskName1>
+            <taskName2 />
+            <xp>359</xp>
+            <gold>7600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“新安关”&lt;/font&gt;与吕布进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>50</id>
+            <title>战无不胜</title>
+            <taskType1>UpgradeFightForceTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>2000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>总战斗力提升到2000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>415</xp>
+            <gold>7700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;上阵武将的总战斗力达到2000。使用橙色武将、兵种转职、强化装备、打造装备都可提升战斗力。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>51</id>
+            <title>富甲天下</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>收获1次金币</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>286</xp>
+            <gold>7800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;建筑，就可以收获金币。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>52</id>
+            <title>极限强化六</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>20</taskArg1>
+            <taskTarget1>3</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意3件装备强化到20级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>948</xp>
+            <gold>7900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意3件装备强化到20级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>53</id>
+            <title>天下霸主二</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>24</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到24级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>400</xp>
+            <gold>8100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到24级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>54</id>
+            <title>征讨董卓</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>60</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次董卓</taskName1>
+            <taskName2 />
+            <xp>1227</xp>
+            <gold>8200</gold>
+            <award1>material.21:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“虎牢关”&lt;/font&gt;与董卓进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>55</id>
+            <title>挑战精英</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10003</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨1次董卓之乱精英副本</taskName1>
+            <taskName2 />
+            <xp>1000</xp>
+            <gold>8300</gold>
+            <award1>material.27:3</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，选中董卓之乱与精英副本进行战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>56</id>
+            <title>军功无数</title>
+            <taskType1>HaveHonor</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>8000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有军功8000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>664</xp>
+            <gold>8500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;征战副本、勇闯重楼与过关斩将可以获得军功。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>57</id>
+            <title>仙丹妙药</title>
+            <taskType1>HaveMaterial</taskType1>
+            <level />
+            <taskArg1>21</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>获得1颗一级培养丹</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>1799</xp>
+            <gold>8600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;在&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;或&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;的&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;中获得1颗一级培养丹。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>58</id>
+            <title>天下霸主三</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>26</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到26级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>928</xp>
+            <gold>8800</gold>
+            <award1>material.28:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到26级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>59</id>
+            <title>征讨李丰</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>65</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次李丰</taskName1>
+            <taskName2 />
+            <xp>577</xp>
+            <gold>8900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“扬州”&lt;/font&gt;与李丰进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>60</id>
+            <title>极限强化七</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>25</taskArg1>
+            <taskTarget1>6</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意6件装备强化到25级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>200</xp>
+            <gold>9100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意6件装备强化到25级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>61</id>
+            <title>打擂王</title>
+            <taskType1>FightRank</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>在擂台战斗1次</taskName1>
+            <taskName2 />
+            <xp>766</xp>
+            <gold>9200</gold>
+            <award1>material.19:20</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“擂台”&lt;/font&gt;建筑，点击&lt;font color='#00ff00'&gt;“前往”&lt;/font&gt;进行打擂。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>62</id>
+            <title>神乎其技</title>
+            <taskType1>UpgradeSkill</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>提升2次武将的技能</taskName1>
+            <taskName2 />
+            <xp>456</xp>
+            <gold>9300</gold>
+            <award1>material.28:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“武将”&lt;/font&gt;按钮，在&lt;font color='#00ff00'&gt;“技能”&lt;/font&gt;界面，点击&lt;font color='#00ff00'&gt;“升级”&lt;/font&gt;进行技能升级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>63</id>
+            <title>征讨袁焕</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>70</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次袁焕</taskName1>
+            <taskName2 />
+            <xp>650</xp>
+            <gold>9000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“徐州”&lt;/font&gt;与袁焕进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>64</id>
+            <title>战力非凡</title>
+            <taskType1>UpgradeFightForceTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>3000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>总战斗力提升到3000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>553</xp>
+            <gold>9500</gold>
+            <award1>material.28:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;上阵武将的总战斗力达到3600。使用橙色武将、兵种转职、强化装备、打造装备都可提升战斗力。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>65</id>
+            <title>征讨纪灵</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>75</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次纪灵</taskName1>
+            <taskName2 />
+            <xp>50</xp>
+            <gold>9700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“兖州”&lt;/font&gt;与纪灵进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>66</id>
+            <title>五枚丹药</title>
+            <taskType1>HaveMaterial</taskType1>
+            <level />
+            <taskArg1>21</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>获得1颗一级培养丹</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>1626</xp>
+            <gold>9900</gold>
+            <award1>material.28:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;在&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;或&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;的&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;中获得1颗一级培养丹。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>67</id>
+            <title>天下霸主四</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>29</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到29级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>4220</xp>
+            <gold>10100</gold>
+            <award1>material.26:40</award1>
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到29级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>68</id>
+            <title>三万军功</title>
+            <taskType1>HaveHonor</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>5000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有军功5000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>4221</xp>
+            <gold>10400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;征战副本、勇闯重楼与过关斩将可以获得军功。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>69</id>
+            <title>取敌首级</title>
+            <taskType1>KillGeneral</taskType1>
+            <level>21</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>在过关斩将战斗2次</taskName1>
+            <taskName2 />
+            <xp>4222</xp>
+            <gold>10500</gold>
+            <award1>material.29:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战战役。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>70</id>
+            <title>富可敌国</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>收获1次金币</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>4223</xp>
+            <gold>10600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;建筑，就可以收获金币。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>71</id>
+            <title>极限强化八</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>30</taskArg1>
+            <taskTarget1>5</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意5件装备强化到30级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>4224</xp>
+            <gold>10700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意5件装备强化到30级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>72</id>
+            <title>征讨袁术</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>80</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次袁术</taskName1>
+            <taskName2 />
+            <xp>4225</xp>
+            <gold>10800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“汝南”&lt;/font&gt;与袁术进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>73</id>
+            <title>天下霸主五</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>31</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到31级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>4226</xp>
+            <gold>10900</gold>
+            <award1>material.29:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到31级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>74</id>
+            <title>决战袁术</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10004</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨1次袁术称帝精英副本</taskName1>
+            <taskName2 />
+            <xp>4227</xp>
+            <gold>11000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，选中袁术称帝与精英副本进行战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>75</id>
+            <title>天下霸主六</title>
+            <taskType1>RadePVE</taskType1>
+            <level />
+            <taskArg1>80</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>扫荡汝南关卡的袁术20轮</taskName1>
+            <taskName2 />
+            <xp>4228</xp>
+            <gold>11300</gold>
+            <award1>material.29:2</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“汝南”&lt;/font&gt;对袁术进行扫荡。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>76</id>
+            <title>战神传说一</title>
+            <taskType1>UpgradeFightForceTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>5000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>总战斗力提升到5000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>4229</xp>
+            <gold>11400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;上阵武将的总战斗力达到5000。使用橙色武将、兵种转职、强化装备、打造装备都可提升战斗力。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>77</id>
+            <title>天下霸主六</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>35</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到35级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>6513</xp>
+            <gold>11600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到35级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>78</id>
+            <title>征讨陆逊</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>85</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次陆逊</taskName1>
+            <taskName2 />
+            <xp>6512</xp>
+            <gold>11500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“庐陵郡”&lt;/font&gt;与陆逊进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>79</id>
+            <title>极限强化九</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>30</taskArg1>
+            <taskTarget1>6</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意6件装备强化到30级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>6514</xp>
+            <gold>11700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意6件装备强化到30级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>80</id>
+            <title>征讨孙权</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>90</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次孙权</taskName1>
+            <taskName2 />
+            <xp>13515</xp>
+            <gold>11800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“彭泽郡”&lt;/font&gt;与孙权进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>81</id>
+            <title>天下霸主七</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>38</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到38级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>5516</xp>
+            <gold>11900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到38级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>82</id>
+            <title>云霄重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level>38</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>20</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过20层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>5519</xp>
+            <gold>12300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>83</id>
+            <title>征讨鲁肃</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>95</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次鲁肃</taskName1>
+            <taskName2 />
+            <xp>5517</xp>
+            <gold>12100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“鄱阳郡”&lt;/font&gt;与鲁肃进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>84</id>
+            <title>天下霸主八</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>39</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到39级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>5518</xp>
+            <gold>12200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到39级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>85</id>
+            <title>征讨周瑜</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>100</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次周瑜</taskName1>
+            <taskName2 />
+            <xp>5520</xp>
+            <gold>12400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“建业”&lt;/font&gt;与周瑜进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>86</id>
+            <title>富甲天下</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>收获1次金币</taskName1>
+            <taskName2 />
+            <xp>5522</xp>
+            <gold>12600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;建筑，就可以收获金币。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>87</id>
+            <title>决战东吴</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10005</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨1次东吴霸主精英副本</taskName1>
+            <taskName2 />
+            <xp>5523</xp>
+            <gold>12700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，选中东吴霸主与精英副本进行战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>88</id>
+            <title>富甲天下</title>
+            <taskType1>HarvestGold</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>收获1次金币</taskName1>
+            <taskName2 />
+            <xp>8165</xp>
+            <gold>12900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“主城”&lt;/font&gt;建筑，就可以收获金币。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>89</id>
+            <title>橙色无双</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有2名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>8167</xp>
+            <gold>13200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;通过&lt;font color='#00ff00'&gt;“招贤”&lt;/font&gt;、&lt;font color='#00ff00'&gt;“购买”&lt;/font&gt;累积拥有两名橙色武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>90</id>
+            <title>战神之名一</title>
+            <taskType1>HaveHonor</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>50000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有军功50000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8169</xp>
+            <gold>13500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;征战副本、勇闯重楼与过关斩将可以获得军功。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>91</id>
+            <title>君临天下三</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>40</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到40级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8170</xp>
+            <gold>13700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到40级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>92</id>
+            <title>军机研发二</title>
+            <taskType1>UpgradeTechTo</taskType1>
+            <level />
+            <taskArg1>20</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2>UpgradeTech</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意2项科技提升到20级</taskName1>
+            <taskName2>提升1次科技</taskName2>
+            <xp>8173</xp>
+            <gold>14100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“军机处”&lt;/font&gt;建筑，选择任意兵种，点击&lt;font color='#00ff00'&gt;“升级”&lt;/font&gt;提升该兵种属性。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>93</id>
+            <title>军机研发三</title>
+            <taskType1>HaveStrengthEquip</taskType1>
+            <level />
+            <taskArg1>40</taskArg1>
+            <taskTarget1>3</taskTarget1>
+            <taskType2>StrengthEquip</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>任意3件装备强化到40级</taskName1>
+            <taskName2>进行1次强化</taskName2>
+            <xp>8175</xp>
+            <gold>14400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“铁匠铺”&lt;/font&gt;建筑，进入&lt;font color='#00ff00'&gt;“强化”&lt;/font&gt;界面，将任意3件装备强化到40级。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>94</id>
+            <title>征讨蒯越</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>105</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次蒯越</taskName1>
+            <taskName2 />
+            <xp>8176</xp>
+            <gold>14500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“江夏郡”&lt;/font&gt;与蒯越进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>95</id>
+            <title>君临天下六</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>41</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到41级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8177</xp>
+            <gold>14600</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到41级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>96</id>
+            <title>战神传说二</title>
+            <taskType1>UpgradeFightForceTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>12000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>总战斗力提升到12000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8178</xp>
+            <gold>14700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;上阵武将的总战斗力达到12000。使用橙色武将、兵种转职、强化装备、打造装备都可提升战斗力。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>97</id>
+            <title>征讨蔡瑁</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>110</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次蔡瑁</taskName1>
+            <taskName2 />
+            <xp>8179</xp>
+            <gold>14800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“武陵郡”&lt;/font&gt;与蔡瑁进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>98</id>
+            <title>君临天下七</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>42</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到42级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8180</xp>
+            <gold>14900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到42级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>99</id>
+            <title>战神之名二</title>
+            <taskType1>HaveHonor</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>50000</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有军功50000</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8181</xp>
+            <gold>15000</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;征战副本、勇闯重楼与过关斩将可以获得军功。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>100</id>
+            <title>征讨文聘</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>115</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次文聘</taskName1>
+            <taskName2 />
+            <xp>8182</xp>
+            <gold>15100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“南阳郡”&lt;/font&gt;与文聘进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>101</id>
+            <title>君临天下八</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>43</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到43级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>8183</xp>
+            <gold>15200</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到43级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>102</id>
+            <title>洗髓丹药</title>
+            <taskType1>HaveMaterial</taskType1>
+            <level />
+            <taskArg1>20</taskArg1>
+            <taskTarget1>9</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>获得9个洗髓丹</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>8184</xp>
+            <gold>15300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“商店”&lt;/font&gt;用元宝购买获得9个洗髓丹。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>103</id>
+            <title>征讨刘表</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>120</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次刘表</taskName1>
+            <taskName2 />
+            <xp>8185</xp>
+            <gold>15400</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“荆州”&lt;/font&gt;与刘表进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>104</id>
+            <title>决战刘表</title>
+            <taskType1>FightPVETo</taskType1>
+            <level />
+            <taskArg1>10006</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>征讨1次荆州夺主精英副本</taskName1>
+            <taskName2 />
+            <xp>8186</xp>
+            <gold>15700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“出征”&lt;/font&gt;建筑，选中荆州夺主与精英副本进行战斗。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>105</id>
+            <title>征讨兀突骨</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>125</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次兀突骨</taskName1>
+            <taskName2 />
+            <xp>8187</xp>
+            <gold>18100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“黑水”&lt;/font&gt;与兀突骨进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>106</id>
+            <title>征讨孟优</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>130</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次孟优</taskName1>
+            <taskName2 />
+            <xp>8188</xp>
+            <gold>18500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“青岗”&lt;/font&gt;与孟优进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>107</id>
+            <title>征讨沙摩柯</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>135</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次沙摩柯</taskName1>
+            <taskName2 />
+            <xp>8189</xp>
+            <gold>18700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“赤岭”&lt;/font&gt;与沙摩柯进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>108</id>
+            <title>征讨孟获</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>140</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次孟获</taskName1>
+            <taskName2 />
+            <xp>8190</xp>
+            <gold>18900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“云山”&lt;/font&gt;与孟获进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>109</id>
+            <title>征讨张松</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>145</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次张松</taskName1>
+            <taskName2 />
+            <xp>8191</xp>
+            <gold>20100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“蜀郡”&lt;/font&gt;与张松进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>110</id>
+            <title>征讨严颜</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>150</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次严颜</taskName1>
+            <taskName2 />
+            <xp>8192</xp>
+            <gold>20500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“巴郡”&lt;/font&gt;与严颜进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>111</id>
+            <title>征讨杨仪</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>155</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次杨仪</taskName1>
+            <taskName2 />
+            <xp>8193</xp>
+            <gold>20700</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“汉中”&lt;/font&gt;与杨仪进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>112</id>
+            <title>征讨刘璋</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>160</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次刘璋</taskName1>
+            <taskName2 />
+            <xp>8194</xp>
+            <gold>21100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“益州”&lt;/font&gt;与刘璋进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>113</id>
+            <title>征讨马腾</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>165</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次马腾</taskName1>
+            <taskName2 />
+            <xp>8195</xp>
+            <gold>22500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“神龙草场”&lt;/font&gt;与马腾进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>114</id>
+            <title>征讨韩遂</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>170</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次韩遂</taskName1>
+            <taskName2 />
+            <xp>8196</xp>
+            <gold>22900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“白马坡”&lt;/font&gt;与韩遂进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>115</id>
+            <title>征讨马岱</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>175</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次马岱</taskName1>
+            <taskName2 />
+            <xp>8197</xp>
+            <gold>23100</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“野猪岭”&lt;/font&gt;与马岱进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>116</id>
+            <title>征讨马超</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>180</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次马超</taskName1>
+            <taskName2 />
+            <xp>8198</xp>
+            <gold>23500</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“绝龙谷”&lt;/font&gt;与马超进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>117</id>
+            <title>征讨穆顺</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>185</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次穆顺</taskName1>
+            <taskName2 />
+            <xp>8199</xp>
+            <gold>23900</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“曲阳”&lt;/font&gt;与穆顺进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>118</id>
+            <title>征讨柴庆</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>190</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次柴庆</taskName1>
+            <taskName2 />
+            <xp>8200</xp>
+            <gold>24300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“广宗”&lt;/font&gt;与柴庆进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>119</id>
+            <title>征讨赵磊</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>195</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次赵磊</taskName1>
+            <taskName2 />
+            <xp>8201</xp>
+            <gold>24800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“巨鹿”&lt;/font&gt;与赵磊进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>120</id>
+            <title>征讨郭嘉</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>200</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次郭嘉</taskName1>
+            <taskName2 />
+            <xp>8202</xp>
+            <gold>25300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“濮阳”&lt;/font&gt;与郭嘉进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>121</id>
+            <title>征讨张宁</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>205</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次张宁</taskName1>
+            <taskName2 />
+            <xp>8203</xp>
+            <gold>25800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“乌巢”&lt;/font&gt;与张宁进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>122</id>
+            <title>征讨梁刚</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>210</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次梁刚</taskName1>
+            <taskName2 />
+            <xp>8204</xp>
+            <gold>26300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“官渡”&lt;/font&gt;与梁刚进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>123</id>
+            <title>征讨赵诚</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>215</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次赵诚</taskName1>
+            <taskName2 />
+            <xp>8205</xp>
+            <gold>26800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“壶关”&lt;/font&gt;与赵诚进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>124</id>
+            <title>征讨颜良</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>220</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次颜良</taskName1>
+            <taskName2 />
+            <xp>8206</xp>
+            <gold>27300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“邺城”&lt;/font&gt;与颜良进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>125</id>
+            <title>征讨孙凯</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>225</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次孙凯</taskName1>
+            <taskName2 />
+            <xp>8207</xp>
+            <gold>27800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“庐陵郡”&lt;/font&gt;与孙凯进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>126</id>
+            <title>征讨关靖</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>230</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次关靖</taskName1>
+            <taskName2 />
+            <xp>8208</xp>
+            <gold>28300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“彭泽郡”&lt;/font&gt;与关靖进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>127</id>
+            <title>征讨吕杰</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>235</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次吕杰</taskName1>
+            <taskName2 />
+            <xp>8209</xp>
+            <gold>28800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“潘阳郡”&lt;/font&gt;与吕杰进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>128</id>
+            <title>征讨太史慈</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>240</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次太史慈</taskName1>
+            <taskName2 />
+            <xp>8210</xp>
+            <gold>29300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“建业”&lt;/font&gt;与太史慈进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>129</id>
+            <title>征讨刘豹</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>245</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次刘豹</taskName1>
+            <taskName2 />
+            <xp>8211</xp>
+            <gold>29800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“天海”&lt;/font&gt;与刘豹进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>130</id>
+            <title>征讨张辽</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>250</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次张辽</taskName1>
+            <taskName2 />
+            <xp>8212</xp>
+            <gold>30300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“万川”&lt;/font&gt;与张辽进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>131</id>
+            <title>征讨刘淙</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>255</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次刘淙</taskName1>
+            <taskName2 />
+            <xp>8213</xp>
+            <gold>30800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“绝峰”&lt;/font&gt;与刘淙进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>132</id>
+            <title>征讨曹丕</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>260</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次曹丕</taskName1>
+            <taskName2 />
+            <xp>8214</xp>
+            <gold>31300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“大都”&lt;/font&gt;与曹丕进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>133</id>
+            <title>征讨华歆 　　</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>265</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次华歆 　　</taskName1>
+            <taskName2 />
+            <xp>8215</xp>
+            <gold>31800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“平岭”&lt;/font&gt;与华歆进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>134</id>
+            <title>征讨刘敏</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>270</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次刘敏</taskName1>
+            <taskName2 />
+            <xp>8216</xp>
+            <gold>32300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“奉天”&lt;/font&gt;与刘敏进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>135</id>
+            <title>征讨马忠</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>275</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次马忠</taskName1>
+            <taskName2 />
+            <xp>8217</xp>
+            <gold>32800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“黑泽”&lt;/font&gt;与马忠进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>136</id>
+            <title>征讨徐晃</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>280</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次徐晃</taskName1>
+            <taskName2 />
+            <xp>8218</xp>
+            <gold>33300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“临城”&lt;/font&gt;与徐晃进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>137</id>
+            <title>征讨李严</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>285</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次李严</taskName1>
+            <taskName2 />
+            <xp>8219</xp>
+            <gold>33800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“龙岭”&lt;/font&gt;与李严进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>138</id>
+            <title>征讨陆抗</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>290</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次陆抗</taskName1>
+            <taskName2 />
+            <xp>8220</xp>
+            <gold>34300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“千竹”&lt;/font&gt;与陆抗进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>139</id>
+            <title>征讨楼玄</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>295</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次楼玄</taskName1>
+            <taskName2 />
+            <xp>8221</xp>
+            <gold>34800</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“九凉”&lt;/font&gt;与楼玄进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>140</id>
+            <title>征讨典韦</title>
+            <taskType1>WinPVE</taskType1>
+            <level />
+            <taskArg1>300</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>击败1次典韦</taskName1>
+            <taskName2 />
+            <xp>8222</xp>
+            <gold>35300</gold>
+            <award1 />
+            <desc>&lt;font FACE='YHFont'&gt;点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;出城，在&lt;font color='#00ff00'&gt;“铜雀”&lt;/font&gt;与典韦进行战斗并获得胜利。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1000</id>
+            <title>紫色荣耀</title>
+            <taskType1>EnrollRole</taskType1>
+            <level />
+            <taskArg1>purple</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2 />
+            <taskArg2 />
+            <taskTarget2 />
+            <taskName1>招募1名紫色品质的武将</taskName1>
+            <taskName2 />
+            <xp>1</xp>
+            <gold>27000</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1001</id>
+            <title>提升等级</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>21</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到21级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>2</xp>
+            <gold>27100</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到21级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1002</id>
+            <title>斩张角</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level>21</level>
+            <taskArg1>3</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败张角军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>3</xp>
+            <gold>27200</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1003</id>
+            <title>橙色一品</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有1名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>4</xp>
+            <gold>27300</gold>
+            <award1>user.cash:40</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1004</id>
+            <title>斩袁术</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>7</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败袁术军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>5</xp>
+            <gold>27400</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1005</id>
+            <title>斩逢纪</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>10</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败逢纪军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>6</xp>
+            <gold>27500</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1006</id>
+            <title>斩马超</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>13</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败马超军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>7</xp>
+            <gold>27600</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1007</id>
+            <title>橙色双雄</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>2</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有2名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>8</xp>
+            <gold>27700</gold>
+            <award1>user.cash:50</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1008</id>
+            <title>快速升级</title>
+            <taskType1>LevelUp</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>38</taskTarget1>
+            <taskType2>FightPVE</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>君主等级达到38级</taskName1>
+            <taskName2>征讨1次副本</taskName2>
+            <xp>9</xp>
+            <gold>27800</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;君主等级达到35级，点击&lt;font color='#00ff00'&gt;“征战”&lt;/font&gt;，选择关卡进行攻击。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1009</id>
+            <title>十层重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level>38</level>
+            <taskArg1>all</taskArg1>
+            <taskTarget1>10</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过10层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>10</xp>
+            <gold>27900</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1010</id>
+            <title>斩刘表</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>17</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败刘表军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>11</xp>
+            <gold>28000</gold>
+            <award1>user.cash:10</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1011</id>
+            <title>二十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>20</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过20层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>12</xp>
+            <gold>28100</gold>
+            <award1>user.cash:20</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1012</id>
+            <title>橙色三雄</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>3</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有3名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>13</xp>
+            <gold>28200</gold>
+            <award1>user.cash:60</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1013</id>
+            <title>三十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>30</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过30层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>14</xp>
+            <gold>28300</gold>
+            <award1>user.cash:30</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1014</id>
+            <title>斩黄权</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>20</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败黄权军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>15</xp>
+            <gold>28400</gold>
+            <award1>user.cash:30</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1015</id>
+            <title>橙色四雄</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>4</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有4名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>16</xp>
+            <gold>28500</gold>
+            <award1>user.cash:70</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1016</id>
+            <title>四十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>40</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过40层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>17</xp>
+            <gold>28600</gold>
+            <award1>user.cash:40</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1017</id>
+            <title>斩黄忠</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>23</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败黄忠军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>18</xp>
+            <gold>28700</gold>
+            <award1>user.cash:40</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1018</id>
+            <title>五十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>50</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过50层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>19</xp>
+            <gold>28800</gold>
+            <award1>user.cash:50</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1019</id>
+            <title>橙色五雄</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>5</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有5名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>20</xp>
+            <gold>28900</gold>
+            <award1>user.cash:80</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1020</id>
+            <title>六十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>60</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过60层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>21</xp>
+            <gold>29000</gold>
+            <award1>user.cash:60</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1021</id>
+            <title>斩诸葛亮</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>27</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败诸葛亮军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>22</xp>
+            <gold>29100</gold>
+            <award1>user.cash:60</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1022</id>
+            <title>七十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>70</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过70层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>23</xp>
+            <gold>29200</gold>
+            <award1>user.cash:70</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1023</id>
+            <title>斩貂蝉</title>
+            <taskType1>KillGeneralTo</taskType1>
+            <level />
+            <taskArg1>30</taskArg1>
+            <taskTarget1>1</taskTarget1>
+            <taskType2>KillGeneral</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>过关斩将中击败貂蝉军团</taskName1>
+            <taskName2>在过关斩将战斗1次</taskName2>
+            <xp>24</xp>
+            <gold>29300</gold>
+            <award1>user.cash:70</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“过关斩将”&lt;/font&gt;挑战武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1024</id>
+            <title>八十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>80</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过80层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>25</xp>
+            <gold>29400</gold>
+            <award1>user.cash:80</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1025</id>
+            <title>橙色六雄</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>6</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有6名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>26</xp>
+            <gold>29500</gold>
+            <award1>user.cash:90</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1026</id>
+            <title>九十重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>90</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过90层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>27</xp>
+            <gold>29600</gold>
+            <award1>user.cash:90</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1027</id>
+            <title>橙色七雄</title>
+            <taskType1>HaveRole</taskType1>
+            <level />
+            <taskArg1>orange</taskArg1>
+            <taskTarget1>7</taskTarget1>
+            <taskType2>EnrollRole</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>拥有7名橙色武将</taskName1>
+            <taskName2>招募1名武将</taskName2>
+            <xp>28</xp>
+            <gold>29700</gold>
+            <award1>user.cash:100</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“招贤馆”&lt;/font&gt;建筑，可以进行招募武将。&lt;/font&gt;</desc>
+      </task>
+      <task>
+            <id>1028</id>
+            <title>百重楼</title>
+            <taskType1>FightTowerTo</taskType1>
+            <level />
+            <taskArg1>all</taskArg1>
+            <taskTarget1>100</taskTarget1>
+            <taskType2>FightTower</taskType2>
+            <taskArg2>all</taskArg2>
+            <taskTarget2>1</taskTarget2>
+            <taskName1>勇闯重楼过100层</taskName1>
+            <taskName2>在勇闯重楼战斗1次</taskName2>
+            <xp>29</xp>
+            <gold>10000</gold>
+            <award1>user.cash:100</award1>
+            <desc>&lt;font FACE='YHFont'&gt;点击家园中的&lt;font color='#00ff00'&gt;“千重楼”&lt;/font&gt;建筑，选择&lt;font color='#00ff00'&gt;“勇闯重楼”&lt;/font&gt;挑战层数。&lt;/font&gt;</desc>
+      </task>
+</taskList>
