@@ -45,9 +45,11 @@ public class FarmHelper {
         int curFood = userStatusCO.getFood();
         int finalFood = ResourceCalUtil.calResource(curFood, lastTimer, currentTimer, foodPerHour, maxFood);
 
-        userStatusCO.setFood(finalFood);
-        userStatusHelper.updateUserStatus(userStatusCO);
-        updateFarmInfo(uid, currentTimer);
+        if (finalFood != 0) {
+            userStatusCO.setFood(finalFood);
+            userStatusHelper.updateUserStatus(userStatusCO);
+            updateFarmInfo(uid, currentTimer);
+        }
     }
 
 

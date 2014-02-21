@@ -42,15 +42,12 @@ public class CastleHelper {
         int maxGold = level.getGoldMax();
         int curGold = userStatusCO.getGold();
         int finalGold = ResourceCalUtil.calResource(curGold, lastTimer, currentTimer, goldPerHour, maxGold);
-
-        userStatusCO.setGold(finalGold);
-        userStatusHelper.updateUserStatus(userStatusCO);
-        updateCastleInfo(uid, currentTimer);
+        if (finalGold != 0) {
+            userStatusCO.setGold(finalGold);
+            userStatusHelper.updateUserStatus(userStatusCO);
+            updateCastleInfo(uid, currentTimer);
+        }
     }
-
-
-
-
 
 
     /**
@@ -65,6 +62,7 @@ public class CastleHelper {
 
     /**
      * 创建user的城堡数据
+     *
      * @param uid
      */
     public void create(long uid) {
@@ -73,6 +71,7 @@ public class CastleHelper {
 
     /**
      * 更新用户的城堡数据
+     *
      * @param uid
      * @param timer
      */

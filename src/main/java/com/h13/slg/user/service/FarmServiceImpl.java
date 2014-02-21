@@ -28,9 +28,6 @@ public class FarmServiceImpl implements FarmService {
     public SlgData harvest(SlgRequestDTO request) {
         long uid = request.getUid();
 
-        // flush gold and farm
-        userStatusHelper.flushUserStatus(uid);
-
         farmHelper.harvest(uid);
         return SlgData.getData();
     }
