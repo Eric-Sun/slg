@@ -11,6 +11,10 @@ public class FarmVO {
 
     private long timer;
 
+    public FarmVO(long timer) {
+        this.timer = timer;
+    }
+
     public long getTimer() {
         return timer;
     }

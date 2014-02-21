@@ -23,12 +23,17 @@ public class CastleServiceImpl implements CastleService {
     @Autowired
     UserStatusHelper userStatusHelper;
 
+    /**
+     * 收获金币
+     * <P>
+     *     计算上一次收获的时间戳和这次时间戳之间的增量，然后把金币加入到user信息中，并且更新收获时间戳
+     * </P>
+     * @param request
+     * @return
+     */
     @Override
     public SlgData harvest(SlgRequestDTO request) {
         long uid = request.getUid();
-
-        // flush gold and farm
-        userStatusHelper.flushUserStatus(uid);
 
 
         castleHelper.harvest(uid);

@@ -21,18 +21,18 @@ public class CastleDAO {
     JdbcTemplate j;
 
 
-    public void add(long id, int curGold) {
-        final String sql = "insert into castle(id,cur_gold) values (?,?)";
-        j.update(sql, new Object[]{id, curGold});
+    public void add(long id, long castleTimer) {
+        final String sql = "insert into castle(id,timer) values (?,?)";
+        j.update(sql, new Object[]{id, castleTimer});
     }
 
-    public void update(long id, int curGold) {
-        final String sql = "update castle set cur_gold=? where id=?";
-        j.update(sql, new Object[]{curGold, id});
+    public void update(long id, long castleTimer) {
+        final String sql = "update castle set timer=? where id=?";
+        j.update(sql, new Object[]{castleTimer, id});
     }
 
     public CastleCO get(long id) {
-        final String sql = "select id,cur_gold from castle where id=?";
+        final String sql = "select id,timer from castle where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<CastleCO>(CastleCO.class));
     }
 

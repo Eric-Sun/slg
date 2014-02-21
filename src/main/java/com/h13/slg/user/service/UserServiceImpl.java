@@ -13,7 +13,8 @@ import com.h13.slg.user.dao.UserStatusDAO;
 import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.FarmHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
-import com.h13.slg.user.hepler.UserTimerHelper;
+import com.h13.slg.user.vo.CastleVO;
+import com.h13.slg.user.vo.FarmVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +53,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserStatusHelper userStatusHelper;
 
-    @Autowired
-    UserTimerHelper userTimerHelper;
-
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
         String name = request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
@@ -65,12 +63,21 @@ public class UserServiceImpl implements UserService {
         if (userId == -1) {
             // 登陆失败,用户密码错误
             throw new RequestErrorException(ErrorCodeConstants.User.NAME_OR_PASSWORD_ERROR, "");
-        } else {
-            UserStatusCO userStatusCO = userStatusDAO.get(userId);
-            SlgData slgData = SlgData.getData()
-                    .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userStatusCO);
-            return slgData;
         }
+
+        // 获得farm,castle 的上一次收获的时间
+        long farmTimer = farmHelper.getFarmInfo(userId).getTimer();
+        long castleTimer = castleHelper.getCastleInfo(userId).getTimer();
+        FarmVO farmVO = new FarmVO(farmTimer);
+        CastleVO castleVO = new CastleVO(castleTimer);
+
+        UserStatusCO userStatusCO = userStatusDAO.get(userId);
+        SlgData slgData = SlgData.getData()
+                .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userStatusCO)
+                .add(ResponseKeyConstants.RESPONSE_USER_FARM, farmVO)
+                .add(ResponseKeyConstants.RESPONSE_USER_CASTLE, castleVO);
+        return slgData;
+
     }
 
     @Override
@@ -97,7 +104,6 @@ public class UserServiceImpl implements UserService {
                 userStatusCO.getLevel());
 
         // init farm castle timer
-        userTimerHelper.createTimer(userId);
         farmHelper.create(userId);
         castleHelper.create(userId);
 

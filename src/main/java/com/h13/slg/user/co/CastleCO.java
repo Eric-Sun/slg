@@ -9,7 +9,7 @@ package com.h13.slg.user.co;
  */
 public class CastleCO {
     private long id;
-    private int curGold;
+    private long timer;
 
     public long getId() {
         return id;
@@ -19,11 +19,11 @@ public class CastleCO {
         this.id = id;
     }
 
-    public int getCurGold() {
-        return curGold;
+    public long getTimer() {
+        return timer;
     }
 
-    public void setCurGold(int curGold) {
-        this.curGold = curGold;
+    public void setTimer(long timer) {
+        this.timer = timer;
     }
 }

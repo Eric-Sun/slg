@@ -20,18 +20,18 @@ public class FarmDAO {
     JdbcTemplate j;
 
 
-    public void add(long id, int curFood) {
-        final String sql = "insert into farm(id,cur_food) values (?,?)";
-        j.update(sql, new Object[]{id, curFood});
+    public void add(long id, long farmTimer) {
+        final String sql = "insert into farm(id,timer) values (?,?)";
+        j.update(sql, new Object[]{id, farmTimer});
     }
 
-    public void update(long id, int curFood) {
-        final String sql = "update farm set cur_food=? where id=?";
-        j.update(sql, new Object[]{curFood, id});
+    public void update(long id, long farmTimer) {
+        final String sql = "update farm set timer=? where id=?";
+        j.update(sql, new Object[]{farmTimer, id});
     }
 
     public FarmCO get(long id) {
-        final String sql = "select id,cur_food from farm where id=?";
+        final String sql = "select id,timer from farm where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<FarmCO>(FarmCO.class));
     }
 

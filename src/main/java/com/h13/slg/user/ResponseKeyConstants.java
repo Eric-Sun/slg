@@ -10,4 +10,6 @@ package com.h13.slg.user;
 public class ResponseKeyConstants {
     public static String RESPONSE_ID = "id";
     public static String RESPONSE_USER_STATUS = "userStatus";
+    public static String RESPONSE_USER_FARM = "farm";
+    public static String RESPONSE_USER_CASTLE = "castle";
 }

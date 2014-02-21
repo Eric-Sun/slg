@@ -9,7 +9,7 @@ package com.h13.slg.user.co;
  */
 public class FarmCO {
     private long id;
-    private int curFood;
+    private long timer;
 
     public long getId() {
         return id;
@@ -19,11 +19,11 @@ public class FarmCO {
         this.id = id;
     }
 
-    public int getCurFood() {
-        return curFood;
+    public long getTimer() {
+        return timer;
     }
 
-    public void setCurFood(int curFood) {
-        this.curFood = curFood;
+    public void setTimer(long timer) {
+        this.timer = timer;
     }
 }
