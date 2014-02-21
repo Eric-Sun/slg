@@ -41,7 +41,7 @@ public class CastleHelper {
         int goldPerHour = level.getGoldPerHour();
         int maxGold = level.getGoldMax();
         int curGold = userStatusCO.getGold();
-        int finalGold = ResourceCalUtil.calResource(curGold, lastTimer, currentTimer, goldPerHour, maxGold);
+        int finalGold = ResourceCalUtil.calResource4Harvest(curGold, lastTimer, currentTimer, goldPerHour, maxGold);
         if (finalGold != 0) {
             userStatusCO.setGold(finalGold);
             userStatusHelper.updateUserStatus(userStatusCO);

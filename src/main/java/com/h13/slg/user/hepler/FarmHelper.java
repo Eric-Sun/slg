@@ -43,7 +43,7 @@ public class FarmHelper {
         int foodPerHour = level.getFoodPerHour();
         int maxFood = level.getFoodMax();
         int curFood = userStatusCO.getFood();
-        int finalFood = ResourceCalUtil.calResource(curFood, lastTimer, currentTimer, foodPerHour, maxFood);
+        int finalFood = ResourceCalUtil.calResource4Harvest(curFood, lastTimer, currentTimer, foodPerHour, maxFood);
 
         if (finalFood != 0) {
             userStatusCO.setFood(finalFood);

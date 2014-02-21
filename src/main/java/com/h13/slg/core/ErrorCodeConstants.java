@@ -14,6 +14,7 @@ public class ErrorCodeConstants {
     public static class User {
         public static int NAME_OR_PASSWORD_ERROR = 1002;
         public static int NAME_EXISTS = 1003;
-
+        public static int DONT_HAVE_ENOUGH_FOOD = 1004;
+        public static int DONT_HAVE_ENOUGH_GOLD = 1005;
     }
 }
