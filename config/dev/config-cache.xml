@@ -116,4 +116,34 @@
           p:valueSerializer-ref="levelSerializer">
     </bean>
 
+    <!-- weaponTemplate -->
+    <bean id="weaponSerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.WeaponCO"/>
+    </bean>
+    <bean id="weaponTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="weaponSerializer">
+    </bean>
+
+    <!-- accessoryTemplate -->
+    <bean id="accessorySerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.AccessoryCO"/>
+    </bean>
+    <bean id="accessoryTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="accessorySerializer">
+    </bean>
+
+    <!-- strengthenTemplate -->
+    <bean id="strengthenSerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.StrengthenCO"/>
+    </bean>
+    <bean id="strengthenTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="strengthenSerializer">
+    </bean>
+
 </beans>

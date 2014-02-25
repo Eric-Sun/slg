@@ -21,17 +21,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>100</accessorySuccess>
             <weaponUrl>equip/weapon1.png</weaponUrl>
-            <weaponName>&#x95c6;&#x5c84;&#x6cdf;&#x9359;&#x5c7d;&#x58a4;</weaponName>
-            <weaponDesc>&#x9429;镐&#x7d36;&#x93c4;&#xe21a;&#x57ac;澶&#x56e7;勾杞绘&#x6902;&#x934a;惧&#xe18d;&#x947d;′骇&#x93b5;&#x64bb;&#xfffd;&#x72b5;&#x6b91;锛&#x5c83;&#xfffd;&#x5c7c;&#x7b16;搴&#x6940;&#xe18d;褰&#x64b4;&#x6902;涓惧&#x59d9;浜&#x55d5;拱涓&#xfffd;璧&#x72b1;&#x7af4;&#x9428;&#x52ea;&#x7e3e;&#x95bf;&#xfffd;娲诲&#x59e9;&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>雌雄双剑</weaponName>
+            <weaponDesc>相传是刘备年轻时倾家荡产打造的，而且店家当时举办了买一赠一的促销活动。</weaponDesc>
             <magicUrl>equip/magic1.png</magicUrl>
-            <magicName>&#x95c5;&#x612c;＋&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x95c5;&#x612c;＋&#x9417;&#x5c80;窘&#x93b5;&#x56f7;&#x7d1d;&#x934f;ㄥ&#x6d57;&#x95bf;&#xfffd;&#x95b2;&#x5fdb;&#xe56b;&#x934f;&#x582c;&#x7d1d;&#x947d;ｈ&#x5e4f;涓&#x590a;&#x6d57;&#x93c8;&#xfffd;椹板&#x6095;&#x935f;&#x55d8;&#x7223;锛&#x5c80;&#x5133;&#x940f;&#xe0a2;&#x4edb;楗&#xe15f;&#x6902;&#x9359;&#xe21c;&#x6564;&#x93c9;ユ&#x5896;椋&#x5e9b;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>隐士扇</magicName>
+            <magicDesc>隐士牌羽扇，全国销量领先，荣获三国最驰名商标，烧火做饭时可用来扇风。</magicDesc>
             <armorUrl>equip/armor1.png</armorUrl>
-            <armorName>楣跨&#x6bca;&#x95be;&#x72ba;。</armorName>
-            <armorDesc>浣&#x6ec0;负&#x9365;藉&#xe18d;涓&#xfffd;绾т&#x7e5a;&#x93b6;ゅ&#x59e9;&#x9417;╋&#x7d1d;姊&#x5470;&#x59f3;楣挎&#x5285;瑙&#x590a;&#x5e07;&#x9354;&#x6d98;&#x7de2;澶э&#x7d1d;&#x9429;村&#x57cc;瀹&#x51a7;腑浜&#x55d5;&#x7af4;绠&#xe15c;&#xfffd;&#xfffd;</armorDesc>
+            <armorName>鹿皮铠衣</armorName>
+            <armorDesc>作为国家一级保护动物，梅花鹿感觉压力很大，直到它中了一箭。</armorDesc>
             <accessoryUrl>equip/accessory1.png</accessoryUrl>
-            <accessoryName>&#x9359;&#x509a;&#x76a2;绗&#xfffd;</accessoryName>
-            <accessoryDesc>&#x934f;跺&#x7584;璺&#xe21d;竟&#x9352;荤&#x73f7;&#x9428;&#x52eb;&#x76ac;璐╂&#x589c;&#x95b2;&#x5c7e;&#x6e41;寰&#x581d;&#xe64b;锛&#x5c83;&#x7982;&#x95bd;辫揣涓&#xfffd;涓&#xe048;&#x6450;&#x93c9;夸&#x7af4;涓&#xe042;&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>参将符</accessoryName>
+            <accessoryDesc>其实路边刻章的小贩手里有很多，赔钱货一个铜板一个。</accessoryDesc>
             <sell>10</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>5</equipAddSuccByFail>
@@ -58,17 +58,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>90</accessorySuccess>
             <weaponUrl>equip/weapon2.png</weaponUrl>
-            <weaponName>涓&#x51a9;&#x69e6;&#x9353;&#xfffd;</weaponName>
-            <weaponDesc>褰&#x64b3;勾璇歌&#x61b6;浜&#xe1bc;&#xfffd;&#x71b6;&#x7b22;椋&#x5eaf;&#x7d1d;&#x9427;诲&#x6f67;浣&#x6ec4;&#x7876;&#x93c3;舵&#x588d;&#x9422;ㄤ&#x7ba3;&#x9353;&#x622f;&#x7d1d;&#x93b9;&#xe1bf;&#xe1e9;涔&#x71b7;&#x5f72;浠ョ&#x6564;瀹&#x51a8;&#x5f6b;&#x935e;ゅ&#x56ad;绁&#x70ba;&#x7df3;&#x93c2;&#x6940;＋&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>七星剑</weaponName>
+            <weaponDesc>当年诸葛亮借东风，登坛作法时所用之剑，据说也可以用它召唤出神龙斗士。</weaponDesc>
             <magicUrl>equip/magic2.png</magicUrl>
-            <magicName>&#x941e;&#x590c;&#x62d1;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x942a;&#x5b29;&#x7b02;&#x9358;诲&#x511a;&#x941e;&#x590c;&#x62d1;涓&#xfffd;&#x9478;&#xe102;&#x5e49;&#x941d;&#x621d;&#x58a7;&#x95ab;&#x5fe5;&#x7d1d;&#x934b;&#x6c2c;伐&#x93cb;&#x4f77;负宸у&#xe71d;锛&#x5c83;&#xfffd;&#x5c7c;&#x7b16;浠锋&#x7278;&#x934f;&#xe104;&#x4ebe;锛&#x5c7e;&#x6660;&#x9470;&#x5c83;&#x5158;寮&#x66e2;&#xe56b;涓&#xfffd;浠ｆ疆娴&#x4f75;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>琉璃扇</magicName>
+            <magicDesc>看上去像琉璃一般玲珑剔透，做工极为巧妙，而且价格公道，故而能引领一代潮流。</magicDesc>
             <armorUrl>equip/armor2.png</armorUrl>
-            <armorName>瀵&#x6397;&#x6427;&#x93b4;&#x6a3c;&#x6573;</armorName>
-            <armorDesc>璇ユ&#x57ac;琛ｇ&#x6b91;&#x93b4;&#x612c;&#x59db;娴&#x4f7d;&#xe511;锛&#x5c7d;&#x53fe;瀹&#x70b2;&#x5f67;&#x93c4;&#xe219;&#x7e5a;&#x93c6;&#x6827;&#x5534;琛ｈ&#xfffd;&#x4f79;&#x6f98;&#x9428;&#x52ef;&#x69fe;璋&#x5b28;&#xfffd;&#xfffd;</armorDesc>
+            <armorName>寒铁战甲</armorName>
+            <armorDesc>该战衣的成功流行，其实只是保暖内衣老板的阴谋。</armorDesc>
             <accessoryUrl>equip/accessory2.png</accessoryUrl>
-            <accessoryName>&#x95ae;&#x5ea1;&#x76a2;绗&#xfffd;</accessoryName>
-            <accessoryDesc>涓&#x5a41;&#x7b05;&#x941d;&#xe15f;&#x58a6;&#x9357;″&#x7e40;澶&#x56f7;&#x7d1d;椤轰究&#x9359;&#xe219;互&#x9422;ㄦ&#x6f75;&#x9429;&#x682b;&#x73f7;&#x9286;&#xfffd;</accessoryDesc>
+            <accessoryName>郎将符</accessoryName>
+            <accessoryDesc>上下班打卡必备，顺便可以用来盖章。</accessoryDesc>
             <sell>20</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>5</equipAddSuccByFail>
@@ -95,17 +95,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>80</accessorySuccess>
             <weaponUrl>equip/weapon3.png</weaponUrl>
-            <weaponName>&#x9359;ら&#x656a;&#x9352;&#xfffd;</weaponName>
-            <weaponDesc>瀛&#x6b0f;&#xe18d;&#x9428;&#x52ed;&#xe6b2;浼&#x72ba;&#x5f4d;&#x9352;&#xfffd;锛&#x5c7e;&#x77c7;&#x95b2;&#x5d85;&#x7d13;甯革&#x7d1d;&#x9357;&#x4f78;&#x5691;骞存&#x6f75;锛&#x5c7d;&#x74e9;瀹跺&#x569f;姝ゅ&#x5781;涓&#xfffd;&#x9429;磋&#x6f50;&#x9471;&#x65be;&#x7b22;&#x935a;村&#x5e39;&#x941c;&#x5b2a;ぇ璧&#x6d98;&#x555d;&#x9350;&#x6d96;&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>古锭刀</weaponName>
+            <weaponDesc>孙家的祖传菜刀，沉重异常，十几年来，孙家凭此刀一直蝉联东吴厨王大赛冠军。</weaponDesc>
             <magicUrl>equip/magic3.png</magicUrl>
-            <magicName>&#x9351;ょ窘&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x93b9;&#xe1bb;&#x7d36;&#x93c4;&#xe21c;&#x6571;&#x9351;ゅ&#x56a2;缇芥&#x763a;&#x9352;舵&#x579a;锛&#x5c7e;&#x5c0c;&#x9354;ㄦ&#x6902;浠夸&#x7d93;&#x9473;藉&#x60c9;&#x9352;板&#x5696;&#x9351;伴福&#x935f;硷&#x7d1d;姝ゅ&#x59db;&#x9473;藉&#xe1ee;&#x9470;宠&#x4eb1;&#x9470;&#x546e;&#x68e4;&#x93c1;&#x581b;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>凤羽扇</magicName>
+            <magicDesc>据传是由凤凰羽毛制成，挥动时仿佛能听到凤凰鸣啼，此功能对耳聋者无效。</magicDesc>
             <armorUrl>equip/armor3.png</armorUrl>
-            <armorName>绮鹃&#x6317;&#x95be;&#x4f7a;&#x6573;</armorName>
-            <armorDesc>褰&#x64b3;勾&#x9428;&#x52ef;&#x567e;&#x9352;&#x6c2c;氨&#x93c4;&#xe21c;┛&#x942b;&#xfffd;杩&#x6b12;韩&#x95be;&#x4f7a;&#x6573;&#x93b5;&#x64bb;&#xe5ef;&#x93c8;虹&#x6b91;锛&#x5c7c;&#x7b09;淇′&#x7d98;&#x9359;&#xe219;互&#x942a;&#x5b2c;&#x6e45;&#x9473;稿&#x5f5b;涓&#x5a44;&#x6b91;&#x93b7;冲&#x5d43;&#x9286;&#xfffd;</armorDesc>
+            <armorName>精钢铁甲</armorName>
+            <armorDesc>当年的金刚就是穿着这身铁甲打飞机的，不信你可以看看胸口上的拳印。</armorDesc>
             <accessoryUrl>equip/accessory3.png</accessoryUrl>
-            <accessoryName>灏&#x55d7;&#x5557;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>&#x9422;ㄧ&#x7de8;&#x941c;&#x590a;&#x757e;&#x9352;剁&#x6b91;楂&#x6a3c;骇璐э&#x7d1d;&#x9225;&#x6ec3;&#x6093;&#x93b0;&#x5fca;&#xfffd;&#x6fc5;&#x7b13;&#x9422;ㄧ&#x73f7;&#x9286;&#xfffd;</accessoryDesc>
+            <accessoryName>将军印</accessoryName>
+            <accessoryDesc>用美玉定制的高级货，“同意”专用章。</accessoryDesc>
             <sell>30</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>5</equipAddSuccByFail>
@@ -132,17 +132,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>70</accessorySuccess>
             <weaponUrl>equip/weapon4.png</weaponUrl>
-            <weaponName>楹&#x6397;&#x7c3e;寮&#xfffd;</weaponName>
-            <weaponDesc>涓&#xfffd;&#x93b6;&#x5a42;&#x7de2;绁&#x70b2;&#xe6a3;&#x9428;&#x52eb;&#x7d26;锛&#x5c7e;&#x5d41;璇村&#x7d26;寮&#xfe3d;&#x69f8;&#x9422;ㄩ&#x7c30;楹&#x71bb;&#x512d;椤诲&#x57d7;&#x93b4;&#x6136;&#x7d1d;&#x9422;ㄥ&#x7560;寮规&#xe5da;&#x947a;辨&#x7278;澶&#x682d;『&#x93b5;&#x5b28;&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>麒麟弓</weaponName>
+            <weaponDesc>一把很神奇的弓，据说弓弦是用麒麟胡须制成，用它弹棉花格外顺手。</weaponDesc>
             <magicUrl>equip/magic4.png</magicUrl>
-            <magicName>浜&#x65bf;僵&#x93b5;&#xfffd;</magicName>
-            <magicDesc>杞荤&#x6ce9;灏&#x5fd3;阀锛&#x5c7d;苟甯&#xfe3d;&#x6e41;浜&#x65bf;僵&#x93c2;&#x621e;&#x6794;&#x934f;&#x590e;&#x59c3;锛&#x5c7d;&#xe64d;&#x93c5;&#x6c2b;娇&#x9422;ㄥ&#x5f72;浠ョ&#x53ce;&#x93c4;&#x5eaf;&#x7d1d;&#x935c;&#x5c7d;&#x539c;澶存&#x60cc;&#x95b0;&#x5d86;&#x6665;&#x93cb;&#x6ec4;&#x6d3f;浣炽&#xfffd;&#xfffd;</magicDesc>
+            <magicName>五彩扇</magicName>
+            <magicDesc>轻盈小巧，并带有五彩斑斓光芒，夜晚使用可以照明，和光头搭配效果更佳。</magicDesc>
             <armorUrl>equip/armor4.png</armorUrl>
-            <armorName>绁&#x70b4;&#xe11f;&#x95be;&#x4f7a;&#x6573;</armorName>
-            <armorDesc>&#x947b;辨&#x69d1;&#x935c;&#x5c80;&#xe6ba;姝&#xfe3e;己涓&#xfffd;涓&#x5d85;&#x5f72;锛&#x5c7e;&#x5142;瑕&#x4f7a;&#xe6ba;姝&#xfe42;&#x6f6c;琛ｈ&#xe5d6;锛&#x5c7e;&#x5142;瑕&#x4f7d;&#x5af3;&#x93c4;&#x5ea4;&#xe1ec;&#x9360;&#x6fca;&#x5273;榛&#x52ef;&#x567e;&#x9286;&#xfffd;</armorDesc>
+            <armorName>神武铁甲</armorName>
+            <armorDesc>英明和神武缺一不可，想要神武靠衣装，想要英明请喝脑黄金。</armorDesc>
             <accessoryUrl>equip/accessory4.png</accessoryUrl>
-            <accessoryName>&#x9350;&#x6d9a;&#xe6ba;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>&#x9350;&#x6d9a;&#xe6ba;&#x95c4;や&#x7c21;宸ㄨ&#x5158;&#x93b5;&#x64b2;互澶&#x6835;&#x7d1d;杩&#x6a3b;&#x6e41;涓&#xfffd;涓&#xe043;&#x7d2d;&#x9410;癸&#x7d1d;&#x95ad;ｅ氨&#x93c4;&#xe21a;法&#x9473;界&#x6d0a;锛&#xfffd;</accessoryDesc>
+            <accessoryName>军神印</accessoryName>
+            <accessoryDesc>军神除了巨能打以外，还有一个优点，那就是巨能盖！</accessoryDesc>
             <sell>40</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>4</equipAddSuccByFail>
@@ -169,17 +169,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>58</accessorySuccess>
             <weaponUrl>equip/weapon5.png</weaponUrl>
-            <weaponName>璐&#xe21c;&#x7176;&#x93c2;&#xfffd;</weaponName>
-            <weaponDesc>涓&#xfffd;&#x93b6;&#x5a43;&#x668e;&#x9359;&#x6220;&#x6f43;璇″&#x7d13;&#x934f;&#x590e;&#x59c3;&#x9428;&#x52ed;&#xe6ba;&#x93c2;э&#x7d1d;&#x9367;&#x6c31;‖&#x95c8;&#x70b2;父锛&#x5c83;冻浠ョ&#x7273;纰&#x5ea2;&#x588d;&#x93c8;&#x590c;&#x589d;瀛&#x612e;&#x6b91;璇哄&#x7180;浜&#x6c25;&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>贯石斧</weaponName>
+            <weaponDesc>一把散发着诡异光芒的神斧，坚硬非常，足以砸碎所有牌子的诺基亚。</weaponDesc>
             <magicUrl>equip/magic5.png</magicUrl>
-            <magicName>楝肩&#x5e07;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x93c1;ｅ&#x5f42;&#x942b;&#xfffd;璇″&#x7d13;榛&#x621e;&#x76b5;&#x9428;&#x52ec;&#x5896;瀛&#x6136;&#x7d1d;&#x935c;&#x5c84;&#xe0d7;&#x941c;&#x5b2b;&#x6e41;&#x947e;&#xe0a2;ぇ娓&#x5a43;&#x7c2e;锛&#x5c7e;&#x5c0c;&#x9354;ㄦ&#x6902;&#x95c3;村&#x558e;寮&#x509a;父锛&#x5c7d;&#x7de2;瀹规&#x69d7;寮&#x66de;&#x5f42;&#x93b0;&#x71b7;&#x554b;&#x9286;&#xfffd;</magicDesc>
+            <magicName>鬼王扇</magicName>
+            <magicDesc>散发着诡异黑气的扇子，和鬼王有莫大渊源，挥动时阴冷异常，很容易引发感冒。</magicDesc>
             <armorUrl>equip/armor5.png</armorUrl>
-            <armorName>浼&#x5fda;&#x6ab8;&#x93b4;&#x6a3c;&#x6573;</armorName>
-            <armorDesc>涓&#xfffd;灞变&#x7b09;瀹逛&#x7c29;&#x94cf;&#x5eaf;&#x7d1d;&#x95c4;ら&#x6f6a;涓&#xfffd;&#x934f;&#xe0ff;&#x7af4;姣&#x5d8f;&#x7d1d;浼&#x5fda;&#x6ab8;&#x93b4;&#x6a3c;&#x6573;&#x9359;&#xe219;互&#x93c7;夸&#x7d98;娑&#x5822;&#x4f03;&#x93b5;&#xfffd;&#x93c8;&#x590a;&#x53d5;&#x9470;&#x4f7d;&#x6ab8;&#x9286;&#xfffd;</armorDesc>
+            <armorName>伏虎战甲</armorName>
+            <armorDesc>一山不容二虎，除非一公一母，伏虎战甲可以替你消灭所有公老虎。</armorDesc>
             <accessoryUrl>equip/accessory5.png</accessoryUrl>
-            <accessoryName>缁&#x71b7;&#x7afb;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>缁&#x71b6;&#x7af4;&#x935c;&#x5c7d;悍甯&#x546d;&#x5015;涓ゅぇ&#x942d;ュ&#x6095;&#x935d;&#x4f7a;&#x589d;&#x935a;&#x581d;&#x59cf;&#x93b5;&#x64bb;&#xfffd;&#x72b5;&#x6b91;涓&#x64b6;&#x6564;&#x9357;扮&#x73f7;锛&#x5c7c;&#x7b09;&#x93c4;&#xe219;&#x7af4;&#x9478;&#xe0ff;汉&#x9359;&#xe219;互&#x93b7;ユ&#x6e41;&#x9428;&#x52e9;&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>统帅印</accessoryName>
+            <accessoryDesc>统一和康帅傅两大知名品牌合力打造的专用印章，不是一般人可以拥有的。</accessoryDesc>
             <sell>50</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>4</equipAddSuccByFail>
@@ -206,17 +206,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>46</accessorySuccess>
             <weaponUrl>equip/weapon6.png</weaponUrl>
-            <weaponName>涓&#x581d;&#x53d3;&#x94d4;&#x56e9;&#x7155;</weaponName>
-            <weaponDesc>姝ょ&#x7155;&#x95c8;&#x70b4;&#x762e;瀵诲父锛&#x5c7c;&#x7b96;&#x93c4;&#xe21a;&#x7d36;椋&#x70b0;&#x7b02;&#x95c3;垫&#x6f43;&#x93c1;&#x5c7e;&#x6902;&#x93c8;&#xfffd;&#x9418;&#xfffd;&#x9352;╃&#x6b91;&#x93c9;&#xfffd;&#x9363;&#xe7d2;&#x7d1d;涔&#x71b8;&#x69f8;骞插&#xe18d;&#x9354;℃&#x6902;&#x93c8;&#xfffd;椤烘&#x589c;&#x9428;&#x52ec;&#x62fa;琛ｆ&#x6f4c;&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>丈八蛇矛</weaponName>
+            <weaponDesc>此矛非比寻常，乃是张飞上阵杀敌时最犀利的杀器，也是干家务时最顺手的撑衣杆。</weaponDesc>
             <magicUrl>equip/magic6.png</magicUrl>
-            <magicName>绁&#x70b0;&#x7cb0;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>绁&#x70b0;&#x7cb0;璋&#xe044;&#x5692;&#x935a;&#x5ea2;&#x588d;&#x9422;ㄧ&#x6b91;缇芥&#x5896;锛&#x5c84;&#x567e;&#x934f;&#x5910;&#x68ef;&#x9470;&#xfffd;锛&#x5c7e;&#x5b01;&#x9352;板&#x7d8b;&#x95be;哄&#x5f72;浠ュ&#x7d8b;涓&#xfffd;涓&#xe044;ソ浠烽&#x6336;&#x9286;&#xfffd;</magicDesc>
+            <magicName>神仙扇</magicName>
+            <magicDesc>神仙谪凡后所用的羽扇，金光闪耀，拿到当铺可以当一个好价钱。</magicDesc>
             <armorUrl>equip/armor6.png</armorUrl>
-            <armorName>楝肩汗&#x93b4;&#x6a3c;&#x6573;</armorName>
-            <armorDesc>&#x93b4;&#x6a3c;&#x6573;涓&#x5a44;&#x6b91;楝肩汗锛&#x5c7d;&#x53fe;瀹&#x70b4;&#x69f8;姹&#x590b;&#xe11f;甯&#x6fc8;&#x7c8c;涔&#x72b1;翰绗&#x65c2;&#xe137;&#x935a;&#x5d87;&#x6680;涓&#x5b2c;&#x6b91;&#x942a;&#x71bb;抗&#x9286;&#xfffd;</armorDesc>
+            <armorName>鬼纹战甲</armorName>
+            <armorDesc>战甲上的鬼纹，其实是汉武帝练习亲笔签名留下的真迹。</armorDesc>
             <accessoryUrl>equip/accessory6.png</accessoryUrl>
-            <accessoryName>浜虹&#x5e07;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>&#x9417;瑰&#x57d7;&#x941d;&#x5d85;&#x6427;&#x9357;板&#x57e2;锛&#x5c84;&#x73ee;瀵&#x5c7d;&#x7afb;甯哥&#x6564;&#x9286;&#xfffd;</accessoryDesc>
+            <accessoryName>人王印</accessoryName>
+            <accessoryDesc>特制珍品印刻，高富帅常用。</accessoryDesc>
             <sell>60</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>4</equipAddSuccByFail>
@@ -243,17 +243,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>34</accessorySuccess>
             <weaponUrl>equip/weapon7.png</weaponUrl>
-            <weaponName>&#x9359;&#x5c84;&#x7df3;&#x93b4;&#xfffd;</weaponName>
-            <weaponDesc>&#x95bf;&#x5b2a;&#x57c4;&#x93c3;&#x72b2;&#x5c2e;锛&#x5c80;&#x7cb7;瀵规&#x69f8;&#x93c9;&#xfffd;&#x93c1;&#x5c7d;&#x57c4;&#x9363;&#xe7d2;&#x7d1d;&#x934a;&#x6395;&#x7e43;&#x93c9;ヨ&#x7e55;&#x9359;&#xe219;互褰&#x64bb;&#x73ee;璺风&#x6564;锛&#x5c7d;&#x5f72;浠ュ&#x6e6a;浣&#x6ec4;&#xe50d;&#x935a;&#x5e9d;&#x7b09;&#x9423;&#x6b11;&#x68d4;杩瑰&#x6e74;&#x95ab;&#x51aa;&#xe727;&#x941c;板&#x6e80;&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>双龙戟</weaponName>
+            <weaponDesc>锋利无匹，绝对是杀敌利器，倒过来还可以当高跷用，可以在作案后不留痕迹地逃离现场。</weaponDesc>
             <magicUrl>equip/magic7.png</magicUrl>
-            <magicName>&#x95ab;&#x5d89;&#x4ef4;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>娓&#x5474;&#xe5df;&#x95c3;甸&#x6a00;锛&#x5c84;&#xe5df;搴&#xfe3e;咯缈╋&#x7d1d;&#x93b5;&#x56ec;&#xfffd;&#x5d89;&#x4ef4;浜烘&#x6d3f;&#x95ab;&#x5d89;&#x4ef4;锛&#x5c7e;&#xe11c;&#x93c4;&#xe21e;&#x73ee;瀵&#x5c7d;&#x7afb;涓&#x64b6;&#x6564;&#x9428;&#x52ed;&#x7cb7;浣冲ソ&#x93b5;&#x56e5;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>逍遥扇</magicName>
+            <magicDesc>清风阵阵，风度翩翩，扇逍遥人更逍遥，正是高富帅专用的绝佳好扇。</magicDesc>
             <armorUrl>equip/armor7.png</armorUrl>
-            <armorName>&#x9411;界&#x4f00;&#x93b4;&#x6a3c;&#x6573;</armorName>
-            <armorDesc>璁╀&#x7d98;濡&#x509c;&#x5158;&#x940f;&#xe0a1;&#x7af4;&#x9478;&#xe104;&#xe5df;楠&#x6c2c;&#xe71a;濞&#x55ed;&#x7d1d;&#x9366;ㄤ氦&#x93b5;&#x5b29;&#x7af4;&#x942c;&#xe104;&#x68ff;灏卞&#x5f72;浠ユ&#x6aad;&#x942c;&#x5ea2;&#x666b;浜虹&#x6b91;&#x9419;&#x6943;&#x6e82;锛&#xfffd;</armorDesc>
+            <armorName>烽火战甲</armorName>
+            <armorDesc>让你如烽火一般风骚妖娆，在交手一瞬间就可以晃瞎敌人的狗眼！</armorDesc>
             <accessoryUrl>equip/accessory7.png</accessoryUrl>
-            <accessoryName>&#x935a;&#x6d97;富&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>&#x934f;ㄥ&#x6d57;&#x9419;&#xe0ff;&#x7af4;&#x93c3;&#x72b1;&#x7c29;&#x9428;&#x52eb;&#xe11d;&#x935d;&#x4f8a;&#x7d1d;濡&#x509b;&#x6e41;&#x95c6;峰&#x6093;锛&#x5c7e;弧&#x95c2;ㄦ&#x59b1;&#x93c2;┿&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>君主印</accessoryName>
+            <accessoryDesc>全国独一无二的孤品，如有雷同，满门抄斩。</accessoryDesc>
             <sell>70</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>3</equipAddSuccByFail>
@@ -280,17 +280,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>22</accessorySuccess>
             <weaponUrl>equip/weapon8.png</weaponUrl>
-            <weaponName>榫&#x6b12;&#x5110;&#x93cb;&#xfffd;</weaponName>
-            <weaponDesc>&#x93cb;&#xe047;韩涔&#x51a9;贩&#x95be;&#x4f7a;簿&#x95bd;㈤&#x6473;&#x93b4;&#x6136;&#x7d1d;寮规&#xfffd;ф&#x702c;濂斤&#x7d1d;杩&#x6b0f;氨&#x93c4;&#xe21d;档浜&#x621c;&#x7af4;&#x9429;磋&#x6f50;&#x9471;&#x65bf;ゥ杩&#x612d;&#x62fa;&#x93c9;&#x55da;烦&#x9350;&#x72b2;&#x5557;&#x9428;&#x52ed;&#x6e61;&#x9429;搞&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>龙胆枪</weaponName>
+            <weaponDesc>枪身乃混铁精钢铸成，弹性极好，这就是赵云一直蝉联奥运撑杆跳冠军的真相。</weaponDesc>
             <magicUrl>equip/magic8.png</magicUrl>
-            <magicName>骞藉&#x5563;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x93b7;ユ&#x6e41;&#x93c9;ヨ&#x569c;骞藉&#x5563;楝煎&#x7c3b;&#x9428;&#x52ed;&#xe6ba;濂&#x56e7;&#x59cf;&#x95b2;&#x5fe5;&#x7d1d;&#x941c;板凡&#x9366;ㄤ&#x7b01;&#x9365;藉&#x5d25;&#x9417;╅&#xe70a;&#x934f;&#xe100;&#x7d11;灞&#x66e1;&#xe787;锛&#x5c84;&#x68ec;绁ㄤ&#x7af4;涓ら&#x6471;瀛&#x6129;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>幽冥扇</magicName>
+            <magicDesc>拥有来自幽冥鬼府的神奇力量，现已在三国博物馆公开展览，门票一两银子。</magicDesc>
             <armorUrl>equip/armor8.png</armorUrl>
-            <armorName>&#x95b2;&#x6223;&#x59c3;&#x93b4;&#x6a3c;&#x6573;</armorName>
-            <armorDesc>&#x9410;&#x6397;&#x7c8d;&#x95b2;&#x621c;&#x7af4;&#x9429;撮&#x5158;&#x93c4;&#xe21d;&#x7e40;&#x95ab;&#x71bb;&#x56a7;瀵&#x5c80;&#x6b91;濂芥&#x67df;寮&#x5fe5;&#x7d1d;褰&#x64b6;&#x52a7;锛&#x5c7e;&#x579c;浠&#xe100;&#x756c;&#x934f;ㄥ&#x5f72;浠ュ&#x5540;缁&#x6b0e;&#x7c23;榛&#x52ef;&#x567e;涓&#xfffd;浜&#x6da2;&#x6aae;&#x9354;&#x72b1;环&#x934a;笺&#xfffd;&#xfffd;</armorDesc>
+            <armorName>金芒战甲</armorName>
+            <armorDesc>炒黄金一直都是迅速致富的好方式，当然，我们完全可以再给予黄金一些附加价值。</armorDesc>
             <accessoryUrl>equip/accessory8.png</accessoryUrl>
-            <accessoryName>&#x9366;ｇ&#x6b97;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>榛&#x52eb;&#x7b23;&#x93c7;剧&#x7ca1;浣跨&#x6564;杩&#x56e9;&#x6b91;&#x941d;&#x5d88;吹&#x93c2;&#x56e9;&#x58bf;锛&#x5c7d;&#x53fe;瀹&#x70b4;病浜虹&#x7161;&#x95ac;&#x64bb;&#x5045;&#x934f;跺&#x7584;灏辨&#x69f8;涓&#xfffd;涓&#xe046;Г&#x942e;ｃ&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>圣皇印</accessoryName>
+            <accessoryDesc>黄帝曾经使用过的珍贵文物，其实没人知道那其实就是一个秤砣。</accessoryDesc>
             <sell>80</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>3</equipAddSuccByFail>
@@ -317,17 +317,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon9.png</weaponUrl>
-            <weaponName>&#x95c8;&#x6397;&#x7df3;&#x934b;&#x51a9;&#x6e40;&#x9352;&#xfffd;</weaponName>
-            <weaponDesc>&#x934f;崇窘&#x93c8;&#xfffd;&#x95bd;&#x71ba;&#x57cd;&#x9428;&#x52ec;&#xe11f;&#x9363;&#xe7d2;&#x7d1d;&#x93b9;&#xe1bb;&#x7d36;&#x93c4;&#xe21a;&#x53e7;缇藉&#x6d1f;璐&#xe15f;&#x588d;寰&#x694b;&#x7d1d;&#x9366;ㄤ&#x7b09;&#x9356;&#x5474;&#x5056;&#x9428;&#x52ec;&#x510f;&#x9350;典&#x7b05;锛&#x5c84;&#x5056;璐规&#x762e;&#x9352;&#xfffd;&#x93c8;&#xe103;韩瑕&#x4f7d;吹&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>青龙偃月刀</weaponName>
+            <weaponDesc>关羽最钟爱的武器，据传是关羽团购所得，在不包邮的情况下，邮费比刀本身要贵。</weaponDesc>
             <magicUrl>equip/magic9.png</magicUrl>
-            <magicName>&#x940f;甸&#x6e3c;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x9351;&#x5c84;&#x6e3c;瀹&#x6fc7;&#xe196;&#x9359;&#x6223;&#xe511;&#x9428;&#x52ef;&#x6aba;&#x95b2;&#x5fd5;&#x5897;缇芥&#x5896;锛&#x5c7e;&#x702c;&#x934f;锋&#x6579;&#x9498;&#x5fce;环&#x934a;笺&#xfffd;&#xfffd;</magicDesc>
+            <magicName>灵霄扇</magicName>
+            <magicDesc>凌霄宝殿发行的限量版羽扇，极具收藏价值。</magicDesc>
             <armorUrl>equip/armor9.png</armorUrl>
-            <armorName>&#x93b4;&#x6a3c;&#xe6ba;&#x95be;&#x72b5;&#x6573;</armorName>
-            <armorDesc>绌夸&#x7b02;浠&#x6826;&#x7d98;灏辨&#x69f8;&#x93b4;&#x6a3c;&#xe6ba;锛&#x5c7d;&#x756c;&#x9416;&#x55d8;&#x588d;&#x93c8;&#x590a;&#x76ac;&#x93ac;&#xe044;&#x5414;锛&#x5c83;&#xfffd;&#x5c7c;&#x7b16;&#x93b4;&#x6a3b;&#x679f;杩&#x56e9;&#x25bc;涓&#xe15d;&#x7b09;浼&#x6c36;&#x68ef;绾㈢&#x4f05;锛&#xfffd;</armorDesc>
+            <armorName>战神铠甲</armorName>
+            <armorDesc>穿上他你就是战神，完爆所有小怪兽，而且战斗过程中不会闪红灯！</armorDesc>
             <accessoryUrl>equip/accessory9.png</accessoryUrl>
-            <accessoryName>绁&#x70ba;&#x7df3;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>褰&#x64bb;&#x6ce6;榻&#x612a;&#x7af7;棰&#x6945;&#x7df3;&#x941d;&#x72ba;&#x7e43;&#x935a;&#x5eaf;&#x7d1d;绁&#x70ba;&#x7df3;灏变&#x7d30;&#x9351;虹&#x5e47;锛&#x5c80;&#x52a7;&#x935a;&#x5ea8;&#xfffd;&#x4f7a;&#x7cb0;浣&#x72b1;&#x7af4;涓&#xe046;邯蹇靛&#x6427;&#x9286;&#xfffd;</accessoryDesc>
+            <accessoryName>神龙印</accessoryName>
+            <accessoryDesc>当集齐七颗龙珠过后，神龙就会出现，然后送给你一个纪念品。</accessoryDesc>
             <sell>90</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>3</equipAddSuccByFail>
@@ -354,17 +354,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon10.png</weaponUrl>
-            <weaponName>&#x93c2;瑰ぉ&#x9422;绘&#x57b7;</weaponName>
-            <weaponDesc>&#x935a;&#x66de;&#x7af7;&#x9428;&#x52ed;&#x7c93;韬&#xe0a3;&#xe11f;&#x9363;&#xe7d2;&#x7d1d;&#x935c;&#x5c7d;&#x6e3e;澶╃&#x657e;&#x93b4;&#x71b8;&#x762e;璧锋&#x6f75;锛&#x5c83;&#x6ae7;&#x9412;跺ご涓&#x5d85;&#xe650;&#x9366;&#x55ed;&#x7d1d;浣&#x55d5;&#x7bc3;&#x9351;&#x621d;&#x608e;&#x9473;界&#x6564;&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>方天画戟</weaponName>
+            <weaponDesc>吕布的终身武器，和圆天画戟比起来，虽然头不够圆，但也凑合能用。</weaponDesc>
             <magicUrl>equip/magic10.png</magicUrl>
-            <magicName>浠&#x6b0f;&#x7b23;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x93b9;&#xe1bb;&#x7d36;&#x93c7;炬&#x69f8;&#x941c;&#x590a;&#x7b23;涓&#x64b6;&#x6564;&#x9428;&#x52ed;窘&#x93b5;&#x56f7;&#x7d1d;&#x935a;&#x5ea2;&#x6f75;娴&#x4f7d;&#x60e4;浜洪&#x68ff;锛&#x5c7c;&#x7b02;&#x95c8;㈡&#x6e41;&#x941c;&#x590c;&#x6b97;澶у&#x7b23;&#x9428;&#x52ea;翰绗&#x65c2;&#xe137;&#x935a;&#x5d85;&#x62f0;QQ&#x9359;风&#x721c;&#x9286;&#xfffd;</magicDesc>
+            <magicName>仙帝扇</magicName>
+            <magicDesc>据传曾是玉帝专用的羽扇，后来流落人间，上面有玉皇大帝的亲笔签名和QQ号码。</magicDesc>
             <armorUrl>equip/armor10.png</armorUrl>
-            <armorName>涔&#x6fc8;&#x6b97;绁&#x70ba;&#x6456;</armorName>
-            <armorDesc>&#x95ca;&#xe162;&#x7c8d;&#x93c4;&#xe21d;&#x6569;&#x947f;&#x6ed0;&#x7d1d;涔&#x6fc8;&#x6b97;&#x93b5;&#x5d86;&#x69f8;绁&#x70ba;&#x6456;锛&#x5c83;&#xe1ec;娉ㄦ&#x5270;璁ょ&#x6e61;&#x9356;哄&#x578e;锛&#xfffd;</armorDesc>
+            <armorName>九皇神铠</armorName>
+            <armorDesc>韭黄是蔬菜，九皇才是神铠，请注意认真区分！</armorDesc>
             <accessoryUrl>equip/accessory10.png</accessoryUrl>
-            <accessoryName>&#x93c3;&#x72b2;&#x5f3b;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>&#x93b9;&#xe1bf;&#xe1e9;椋&#x71ba;&#x6564;姝ゅ&#x5d43;&#x935a;&#x5eaf;&#x7d1d;浼&#x6c2c;&#x5f42;&#x9351;哄&#x643b;&#x9428;&#x52ea;&#x7af4;澹帮&#x7d1d;&#x9412;跺&#x6097;椋&#x71ba;&#x6564;&#x9470;&#x546d;氨&#x9359;&#xe219;互&#x93b4;&#x612c;&#x59db;&#x93c0;惧&#x56ad;涓&#xfffd;涓&#xe045;&#x68e4;&#x9359;&#x5c7b;&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>无双印</accessoryName>
+            <accessoryDesc>据说食用此印后，会发出哐的一声，然后食用者就可以成功放出一个无双。</accessoryDesc>
             <sell>100</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>3</equipAddSuccByFail>
@@ -391,17 +391,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon11.png</weaponUrl>
-            <weaponName>澶&#x6ec8;&#x74df;涔&#x5b2a;&#x58a4;</weaponName>
-            <weaponDesc>澶&#x6ec4;&#x6ac4;&#x93c1;ｅ&#x5f42;&#x9351;&#x52eb;&#x558e;瀵&#x6391;&#x539c;&#x9286;&#x4f78;&#x2589;&#x9354;&#x6d99;&#x702c;澶э&#x7d1d;&#x93b5;&#xfffd;&#x9352;颁&#x7ba3;澶&#x52eb;&#x7628;椋&#x5ea1;&#x68d6;&#x9361;&#x6835;&#x7d1d;&#x9353;&#x6223;韩&#x9352;绘&#x6e41;&#x9225;&#x6ec6;&#x7e56;&#x93b6;&#x5a42;&#x7582;&#x9353;&#x621c;&#x7b09;澶&#xe044;&#x558e;&#x9225;&#x6fc4;&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>夜魔之剑</weaponName>
+            <weaponDesc>夜晚散发凄冷寒光、威力极大，所到之处寒风嗖嗖，剑身刻有“这把宝剑不太冷”。</weaponDesc>
             <magicUrl>equip/magic11.png</magicUrl>
-            <magicName>&#x95ab;&#x72b2;&#x5bf2;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x95ab;&#x72b2;&#x5bf2;&#x93b5;&#x56e8;&#x6e41;&#x942b;&#xfffd;&#x95ab;&#x72b2;氨涓&#x56e9;&#x58bf;杩&#x6d98;&#x5bf2;&#x9422;&#x71ba;&#x4f12;涔&#x5b2a;&#x59db;&#x93c1;&#x582c;&#x7d1d;骞堕&#x6f6a;&#x95ab;&#x72b2;&#x5bf2;寮&#x52ea;汉涔&#x5b2b;&#x5896;&#x9286;&#xfffd;</magicDesc>
+            <magicName>造化扇</magicName>
+            <magicDesc>造化扇有着造就万物进化生灵之功效，并非造化弄人之扇。</magicDesc>
             <armorUrl>equip/armor11.png</armorUrl>
-            <armorName>楝肩&#x5e07;&#x93b4;&#x6a3f;&#xe572;</armorName>
-            <armorDesc>&#x934f;ㄨ韩甯&#x51a9;弧绁&#x70b2;&#x5414;&#x941b;&#x72b5;&#x58ae;锛&#xfffd;80%浜哄&#x6d1c;绌挎&#x57d3;涓&#x5d86;&#x53a7;&#x9470;&#x5c7c;&#x7c21;姝や&#x7af4;韬&#xe0ac;&#x7d1d;&#x9422;&#x71b7;&#x61e1;璇&#x6c2c;&#x5f72;璐点&#xfffd;&#x4f7a;┛&#x93b4;撮&#x6e36;璋ㄦ&#x53a7;&#x9286;&#xfffd;</armorDesc>
+            <armorName>鬼王战袍</armorName>
+            <armorDesc>全身布满神兽獠牙，80%人因穿戴不慎而了此一身，生命诚可贵、穿戴需谨慎。</armorDesc>
             <accessoryUrl>equip/accessory11.png</accessoryUrl>
-            <accessoryName>&#x95c0;&#x56ec;&#x74ca;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>涓&#xfffd;&#x9359;&#x5c7d;&#x5f42;&#x934f;&#x590c;&#x6b91;&#x942a;肩&#x6f67;&#x9473;介&#x6e3f;&#x93b1;&#x621c;汉&#x9428;&#x52ed;&#x4f12;榄&#x50a6;&#x7d1d;浣&#x55d8;病&#x93c8;&#x5909;汉&#x942d;ラ&#x4ebe;瀹&#x51a9;&#xfffd;&#x5e9d;&#x7b9e;&#x9422;ㄣ&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>镇魂印</accessoryName>
+            <accessoryDesc>一双发光的眼睛能震慑人的灵魂，但没有人知道它怎么用。</accessoryDesc>
             <sell>110</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>2</equipAddSuccByFail>
@@ -428,17 +428,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon12.png</weaponUrl>
-            <weaponName>&#x941c;&#x52eb;&#x5563;绁&#x70b4;&#x67be;</weaponName>
-            <weaponDesc>&#x95ae;借&#xe1e9;瀹&#x51a8;&#x62f0;娌&#x5910;&#xe71d;&#x9428;&#x52eb;&#x7d11;灞辨&#x67be;&#x93c4;&#xe219;&#x7af4;瀵癸&#x7d1d;&#x934f;跺&#x7584;瀹&#x51a7;滑灏辨&#x69f8;涓&#xfffd;瀵广&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>玄冥神斧</weaponName>
+            <weaponDesc>都说它和沉香的开山斧是一对，其实它们就是一对。</weaponDesc>
             <magicUrl>equip/magic12.png</magicUrl>
-            <magicName>&#x9366;ｅ&#x56a2;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x9358;&#x71b7;&#x6095;&#x9353;╅&#x7c8d;&#x93b5;&#x56f7;&#x7d1d;&#x935a;&#x5ea1;&#x6d1c;&#x93bb;&#x638d;&#x7c21;&#x9351;&#x72b3;&#x7274;&#x9351;ゆ&#x763a;&#x935a;&#x5ea1;&#xe647;褰㈤】&#x93c3;跺ぇ&#x9359;&#x6a48;&#x7d1d;浠&#x5ea2;&#xe11d;&#x93c0;瑰ご&#x93b9;㈤&#x6f70;&#x9286;&#xfffd;</magicDesc>
+            <magicName>圣凰扇</magicName>
+            <magicDesc>原名剩黄扇，后因插了几根凤毛后外形顿时大变，从此改头换面。</magicDesc>
             <armorUrl>equip/armor12.png</armorUrl>
-            <armorName>杞╄&#x7def;&#x93b4;&#x6a3c;&#x6573;</armorName>
-            <armorDesc>&#x9365;&#x72b1;负杞╄&#x7def;澶&#x6c2d;&#xe0bc;&#x93b5;&#x64b4;&#x7066;&#x95ae;界┛&#x942b;&#xfffd;瀹&#x51bf;&#x7d1d;杞╄&#x7def;璧&#xe58d;&#x7c21;锛&#x5c7d;&#x7560;&#x935c;&#x5c7d;&#x58a4;涔&#x71b7;&#x56ad;&#x935a;&#x5d84;&#x7c21;&#x9286;&#xfffd;</armorDesc>
+            <armorName>轩辕战甲</armorName>
+            <armorDesc>因为轩辕多次打架都穿着它，轩辕赢了，它和剑也出名了。</armorDesc>
             <accessoryUrl>equip/accessory12.png</accessoryUrl>
-            <accessoryName>涔&#x6fc6;菇&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>涔&#x6fc6;菇&#x9357;版&#x69f8;涔&#x6fc6;菇&#x9357;&#x4f78;&#x53d3;&#x9419;辩&#x6b91;&#x93c8;&#xfffd;楂&#x6a3f;&#xe511;&#x93c0;块&#x66b1;瀹&#x6a3c;&#x6b91;韬&#xe0a1;唤璇&#x4f79;&#x69d1;锛&#x5c7d;&#x5396;&#x9352;&#x55d7;&#x5f3d;&#x93c4;&#x72b1;&#x7c21;浠&#x6827;菇&#x93c6;&#x6940;&#xe11d;&#x9419;&#xe102;&#x6b91;&#x9422;&#x71b8;椿&#x941c;扮&#x59f8;&#x9286;&#xfffd;</accessoryDesc>
+            <accessoryName>九幽印</accessoryName>
+            <accessoryDesc>九幽印是九幽十八狱的最高行政长官的身份证明，充分反映了他幽暗孤独的生活现状。</accessoryDesc>
             <sell>120</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>2</equipAddSuccByFail>
@@ -465,17 +465,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon13.png</weaponUrl>
-            <weaponName>缁&#x6fc7;&#x6f43;涔&#x5b2a;&#x5789;</weaponName>
-            <weaponDesc>&#x95b2;&#x5d85;&#x5781;&#x93c8;&#x5910;&#x6531;&#x9286;&#x4f78;ぇ宸т&#x7bc3;宸ャ&#xfffd;&#x4f79;&#x6f79;杩&#x56e9;&#x6e45;&#x9352;伴&#x5158;&#x93c4;&#xe21c;&#x7cab;&#x942b;&#xfffd;璧般&#xfffd;&#xfffd;</weaponDesc>
+            <weaponName>绝杀之刃</weaponName>
+            <weaponDesc>重刀有锋、大巧也工、杨过看到都是绕着走。</weaponDesc>
             <magicUrl>equip/magic13.png</magicUrl>
-            <magicName>&#x934f;&#x590e;疆缇芥&#x5896;</magicName>
-            <magicDesc>澶&#x6ec4;&#x6ac4;&#x9359;&#x621d;&#x56ad;&#x9470;&#xfffd;&#x942a;肩&#x6b91;&#x934f;&#x590e;疆锛&#x5c80;&#x53ce;&#x935d;&#xe044;&#x6462;浜&#xe1ba;&#xfffd;&#x4f7d;&#x5bd6;&#x9365;村&#x5f72;&#x93ba;э&#x7d1d;&#x947a;&#x509d;&#x5158;&#x9359;&#x5822;&#x5e46;淇&#x6fc4;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>光轮羽扇</magicName>
+            <magicDesc>夜晚发出耀眼的光轮，照哪哪亮、范围可控，节能又环保。</magicDesc>
             <armorUrl>equip/armor13.png</armorUrl>
-            <armorName>楹&#x6397;&#x7c3e;&#x93b4;&#x6a3f;。</armorName>
-            <armorDesc>娆茬┛姝よ。蹇&#x546d;&#x539b;&#x93b4;&#xe047;&#x5044;锛&#x5c7c;&#x7b09;淇″&#x5f72;浠ラ&#x68f6;&#x95c2;&#xe1bd;&#xe11e;&#x93af;&#x5a41;&#x7c2f;锛&#xfffd;</armorDesc>
+            <armorName>麒麟战衣</armorName>
+            <armorDesc>欲穿此衣必先截肢，不信可以问问步惊云！</armorDesc>
             <accessoryUrl>equip/accessory13.png</accessoryUrl>
-            <accessoryName>&#x9420;&#x51aa;&#x4f00;&#x9357;&#xfffd;</accessoryName>
-            <accessoryDesc>涓&#x5a45;&#xe519;&#x9350;伴&#x74cc;&#x941d;&#x72c5;&#x7d1d;涓&#x5b2c;&#x5667;&#x941e;&#x590c;&#x62d1;&#x940f;&#xe0ac;&#x7d1d;&#x93c8;&#xfffd;缁&#x581d;&#x6d1c;杩&#x6b0f;&#x6e80;&#x9350;颁&#x7b0c;&#x940f;&#xe0a1;&#x7ba3;姝&#x5c83;&#xfffd;&#x5c84;&#x6908;&#x935a;&#x5d83;&#xfffd;&#xfffd;</accessoryDesc>
+            <accessoryName>璃火印</accessoryName>
+            <accessoryDesc>上衔冰魄珠，下燃琉璃火，最终因这场冰与火之歌而闻名。</accessoryDesc>
             <sell>130</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>2</equipAddSuccByFail>
@@ -502,17 +502,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon14.png</weaponUrl>
-            <weaponName>杞╄&#x7def;榫&#x6b0f;&#x58a4;</weaponName>
-            <weaponDesc>&#x93c2;╀&#x7b05;&#x93b4;&#x6a3c;&#xe6ba;&#x94d3;╁挨&#x9428;&#x52eb;ご棰&#x546d;&#x60c2;锛&#xfffd;</weaponDesc>
+            <weaponName>轩辕龙剑</weaponName>
+            <weaponDesc>斩下战神蚩尤的头颅吧！</weaponDesc>
             <magicUrl>equip/magic14.png</magicUrl>
-            <magicName>&#x95c6;&#xfffd;&#x9428;&#x56e6;&#x7ba3;&#x93b5;&#xfffd;</magicName>
-            <magicDesc>&#x95c6;&#xfffd;&#x9428;&#x56ea;&#x61cd;&#x95ad;&#xe048;&#x7df3;锛&#x5c80;&#xe6ba;璇&#x6fc7;案涓&#x5d87;&#x4f03;&#x9286;&#xfffd;</magicDesc>
+            <magicName>雀皇之扇</magicName>
+            <magicDesc>雀皇葬邪龙，神话永不灭。</magicDesc>
             <armorUrl>equip/armor14.png</armorUrl>
-            <armorName>榛&#x52ef;&#x567e;澶╃&#x6573;</armorName>
-            <armorDesc>涓&#x56e7;&#x5557;涓&#xe168;&#x7d1d;&#x95ad;ｈ韩&#x942b;&#xfffd;&#x95b2;&#x6220;&#x6573;涔&#x5b29;汉蹇&#x546e;&#x69f8;&#x941c;&#x5b2d;&#xfffd;&#x546b;&#xfffd;&#xfffd;</armorDesc>
+            <armorName>黄金天甲</armorName>
+            <armorDesc>万军中，那身着金甲之人必是王者。</armorDesc>
             <accessoryUrl>equip/accessory14.png</accessoryUrl>
-            <accessoryName>澶╁&#x76a2;&#x934f;电&#xe0c1;</accessoryName>
-            <accessoryDesc>&#x9427;句&#x7afe;绮鹃&#x653c;锛&#x5c7c;&#x7b96;&#x941c;&#x5b2d;&#xfffd;&#x546d;&#x725a;&#x9473;介┍浣跨&#x6b91;&#x9354;&#x6da2;&#x567a;锛&#xfffd;</accessoryDesc>
+            <accessoryName>天将兵符</accessoryName>
+            <accessoryDesc>百万精锐，乃王者堪能驱使的力量！</accessoryDesc>
             <sell>140</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>2</equipAddSuccByFail>
@@ -539,17 +539,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon15.png</weaponUrl>
-            <weaponName>寮&#xfffd;澶╀&#x7ba3;&#x9352;&#xfffd;</weaponName>
-            <weaponDesc>&#x9429;&#x6a3a;&#x5f5c;&#x9366;ㄥ&#x7d11;澶╂&#x6902;锛&#x5c7d;&#x76a2;娣锋&#x77ca;涓&#xfffd;&#x9352;&#x55d5;负浜&#x5c80;&#x6b91;&#x9352;╁&#x6ad2;&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>开天之刃</weaponName>
+            <weaponDesc>盘古在开天时，将混沌一分为二的利器。</weaponDesc>
             <magicUrl>equip/magic15.png</magicUrl>
-            <magicName>&#x95c6;&#xe048;&#x7df3;涔&#x5b2b;&#x5896;</magicName>
-            <magicDesc>&#x95c6;&#xe044;嘲涔&#x5b2a;&#x7a6e;锛&#x5c84;&#x6d29;榫&#x6b0f;&#x5540;&#x941c;颁汉&#x95c2;淬&#xfffd;&#xfffd;</magicDesc>
+            <magicName>雪龙之扇</magicName>
+            <magicDesc>雪峰之巅，雪龙再现人间。</magicDesc>
             <armorUrl>equip/armor15.png</armorUrl>
-            <armorName>榄&#x65c2;&#x6b97;&#x95be;&#x72b5;&#x6573;</armorName>
-            <armorDesc>&#x93c9;ヨ&#x569c;骞藉&#x5563;榄&#x65c2;&#x666b;&#x9428;&#x52eb;&#x59cf;&#x95b2;&#x5fe5;&#x7d1d;&#x93ac;昏&#xe180;涓&#x6826;汉&#x93c3;&#x72b3;&#x7876;&#x93b6;&#x6944;　&#x9286;&#xfffd;</armorDesc>
+            <armorName>魔皇铠甲</armorName>
+            <armorDesc>来自幽冥魔界的力量，总让世人无法抗衡。</armorDesc>
             <accessoryUrl>equip/accessory15.png</accessoryUrl>
-            <accessoryName>榄&#x65c2;&#x6b97;&#x934f;电&#xe0c1;</accessoryName>
-            <accessoryDesc>榄&#x65c2;&#x6b97;&#x93c8;&#xfffd;涓哄&#x7e3e;&#x9416;辩&#x6b91;&#x935e;ゅ&#x53fa;瀹&#x6fc8;&#xe0c1;&#x9286;&#xfffd;</accessoryDesc>
+            <accessoryName>魔皇兵符</accessoryName>
+            <accessoryDesc>魔皇最为心爱的唤兵宝符。</accessoryDesc>
             <sell>150</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>2</equipAddSuccByFail>
@@ -576,17 +576,17 @@
             <accessoryGold>0</accessoryGold>
             <accessorySuccess>10</accessorySuccess>
             <weaponUrl>equip/weapon16.png</weaponUrl>
-            <weaponName>浼&#x5fd5;静澶у&#x58a4;</weaponName>
-            <weaponDesc>澶&#xe046;&#xe6b2;&#x93ba;&#x5c7e;&#x5f59;&#x9428;&#x52ea;咕&#x9367;ゅ&#x59cf;&#x95b2;&#x5fe5;&#x7d1d;灏藉&#x6e6a;姝ゅ&#x58a4;涔&#x5b29;腑&#x9286;&#xfffd;</weaponDesc>
+            <weaponName>伏羲大剑</weaponName>
+            <weaponDesc>太祖掌握的乾坤力量，尽在此剑之中。</weaponDesc>
             <magicUrl>equip/magic16.png</magicUrl>
-            <magicName>&#x95ab;&#x72b2;&#x5bf2;涔&#x5b2b;&#x5896;</magicName>
-            <magicDesc>&#x93b7;ユ&#x6e41;姝ゆ&#x5896;&#x9470;&#x5483;&#x7d1d;宸叉&#x69f8;&#x95ab;&#x72b2;&#x5bf2;绁&#x70aa;&#xfffd;&#xfffd;</magicDesc>
+            <magicName>造化之扇</magicName>
+            <magicDesc>拥有此扇者，已是造化神。</magicDesc>
             <armorUrl>equip/armor16.png</armorUrl>
-            <armorName>澶╃&#xe6ba;&#x95be;&#x72b5;&#x6573;</armorName>
-            <armorDesc>绁&#x70b4;案杩&#x6ec3;&#x7567;&#x93b6;ょ&#x6f43;&#x93b4;&#x622f;&#x7d12;</armorDesc>
+            <armorName>天神铠甲</armorName>
+            <armorDesc>神永远守护着我！</armorDesc>
             <accessoryUrl>equip/accessory16.png</accessoryUrl>
-            <accessoryName>澶╃&#xe6ba;&#x934f;电&#xe0c1;</accessoryName>
-            <accessoryDesc>绁&#x70b2;&#x53fa;澶╁&#x76a2;锛&#x5c7d;ぉ涓&#x5b2b;&#x68e4;&#x93c1;&#x5c8b;&#x7d12;</accessoryDesc>
+            <accessoryName>天神兵符</accessoryName>
+            <accessoryDesc>神兵天将，天下无敌！</accessoryDesc>
             <sell>160</sell>
             <buyable>0</buyable>
             <equipAddSuccByFail>2</equipAddSuccByFail>

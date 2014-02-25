@@ -15,7 +15,5 @@ public class GlobalKeyConstants {
     public static String DEFAULT_NEW_USER_GOLD = "DefaultNewUserGold";
     public static String DEFAULT_NEW_USER_LEVEL = "DefaultNewUserLevel";
 
-    public static String DEFAULT_NEW_USER_FARM_FOOD = "DefaultNewUserFarmFood";
-    public static String DEFAULT_NEW_USER_CASTLE_GOLD = "DefaultNewUserCastleGold";
 
 }
