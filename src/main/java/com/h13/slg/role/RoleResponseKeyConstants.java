@@ -10,4 +10,6 @@ package com.h13.slg.role;
 public class RoleResponseKeyConstants {
     public static String STRENGTH = "strength";
     public static String GOLD = "gold";
+    public static String LEVEL = "level";
+    public static String MATERIAL = "material";
 }

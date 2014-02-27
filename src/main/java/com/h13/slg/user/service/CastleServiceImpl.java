@@ -20,8 +20,6 @@ public class CastleServiceImpl implements CastleService {
 
     @Autowired
     CastleHelper castleHelper;
-    @Autowired
-    UserStatusHelper userStatusHelper;
 
     /**
      * 收获金币

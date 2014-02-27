@@ -17,4 +17,10 @@ public class ErrorCodeConstants {
         public static int DONT_HAVE_ENOUGH_FOOD = 1004;
         public static int DONT_HAVE_ENOUGH_GOLD = 1005;
     }
+
+    public static class Role {
+        public static int EQUIP_STRENGTH_LEVEL_TO_TOP = 2001;
+        public static int RESOURCE_IS_NOT_ENOUGH = 2002;
+    }
+
 }

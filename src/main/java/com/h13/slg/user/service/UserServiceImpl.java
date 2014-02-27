@@ -4,6 +4,7 @@ import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.core.*;
 import com.h13.slg.core.util.MD5Util;
+import com.h13.slg.role.helper.UserPackageHelper;
 import com.h13.slg.user.RequestKeyConstants;
 import com.h13.slg.user.ResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
@@ -49,6 +50,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     CastleHelper castleHelper;
+
+    @Autowired
+    UserPackageHelper userPackageHelper;
 
     @Autowired
     UserStatusHelper userStatusHelper;
@@ -106,6 +110,7 @@ public class UserServiceImpl implements UserService {
         // init farm castle timer
         farmHelper.create(userId);
         castleHelper.create(userId);
+        userPackageHelper.create(userId);
 
         userStatusCache.set(userStatusCO);
         LOG.info("register ok. name=" + name);

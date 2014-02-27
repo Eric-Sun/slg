@@ -1,5 +1,7 @@
 package com.h13.slg.role.co;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.Map;
 
 /**
@@ -13,7 +15,7 @@ public class UserEquipCO {
     private long id;
     private int type;
     private int level;
-    private Map<String,String> gems;
+    private String gems;
     private int strength;
     private int fail;
     private int refine;
@@ -44,10 +46,10 @@ public class UserEquipCO {
     }
 
     public Map<String, String> getGems() {
-        return gems;
+        return JSON.parseObject(gems, Map.class);
     }
 
-    public void setGems(Map<String, String> gems) {
+    public void setGems(String gems) {
         this.gems = gems;
     }
 
