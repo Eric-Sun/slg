@@ -9,11 +9,6 @@ package com.h13.slg.role;
  */
 public class RoleConstants {
 
-    public static class EquipType {
-        public static int WEAPON = 0;
-        public static int ARMOR = 1;
-        public static int ACCESSORY = 2;
-    }
 
 
 }

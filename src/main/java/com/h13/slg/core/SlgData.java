@@ -1,6 +1,8 @@
 package com.h13.slg.core;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +19,6 @@ public class SlgData extends HashMap<String, Object> {
     public static SlgData getData() {
         return new SlgData();
     }
-
 
     public SlgData add(String key, Object value) {
         put(key, value);

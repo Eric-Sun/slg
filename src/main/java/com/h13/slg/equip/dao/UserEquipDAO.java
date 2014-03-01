@@ -1,7 +1,7 @@
-package com.h13.slg.role.dao;
+package com.h13.slg.equip.dao;
 
 import com.alibaba.fastjson.JSON;
-import com.h13.slg.role.co.UserEquipCO;
+import com.h13.slg.equip.co.UserEquipCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -9,6 +9,8 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Method;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -41,6 +43,10 @@ public class SlgDispatcher implements ApplicationContextAware {
             Method m = clazz.getMethod(act, new Class[]{SlgRequestDTO.class});
             req = new SlgRequestDTO(mod, act, uid, seq, map);
             SlgData r = (SlgData) m.invoke(beanObj, new Object[]{req});
+            // 触发事件
+            triggerEvents(req, r);
+
+
             resp = new SlgResponseDTO(req, r);
         } catch (Exception e) {
             if (e instanceof RequestErrorException) {
@@ -50,6 +56,10 @@ public class SlgDispatcher implements ApplicationContextAware {
             LOG.error("error. act=" + act + " mod=" + mod, e);
         }
         return resp;
+    }
+
+    private void triggerEvents(SlgRequestDTO req, SlgData r) {
+//        applicationContext.getBean()
     }
 
     @Override

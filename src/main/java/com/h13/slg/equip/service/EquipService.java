@@ -1,4 +1,4 @@
-package com.h13.slg.role.service;
+package com.h13.slg.equip.service;
 
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;

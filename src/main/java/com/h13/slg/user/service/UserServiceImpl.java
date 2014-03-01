@@ -4,7 +4,7 @@ import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.core.*;
 import com.h13.slg.core.util.MD5Util;
-import com.h13.slg.role.helper.UserPackageHelper;
+import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.user.RequestKeyConstants;
 import com.h13.slg.user.ResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
@@ -22,8 +22,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,4 +1,4 @@
-package com.h13.slg.role.co;
+package com.h13.slg.equip.co;
 
 import com.alibaba.fastjson.JSON;
 
