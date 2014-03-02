@@ -1,5 +1,9 @@
 package com.h13.slg.event;
 
+import com.h13.slg.core.SlgData;
+import com.h13.slg.event.co.UserEventCO;
+import com.h13.slg.task.co.UserSmallTaskCO;
+
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
@@ -8,5 +12,8 @@ package com.h13.slg.event;
  * To change this template use File | Settings | File Templates.
  */
 public interface EventHandler {
-    public void handleEvent();
+
+     String TARGET = "target";
+
+    public void handleEvent(UserEventCO evtData, Object listenerData,SlgData slgData);
 }

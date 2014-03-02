@@ -3,8 +3,11 @@ package com.h13.slg.task.helper;
 import com.alibaba.fastjson.JSON;
 import com.h13.slg.config.co.TaskCO;
 import com.h13.slg.config.fetcher.TaskConfigFetcher;
+import com.h13.slg.core.SlgData;
+import com.h13.slg.event.EventHandler;
 import com.h13.slg.event.co.UserEventCO;
 import com.h13.slg.task.cache.UserTaskCache;
+import com.h13.slg.task.co.UserSmallTaskCO;
 import com.h13.slg.task.co.UserTaskCO;
 import com.h13.slg.task.dao.UserTaskDAO;
 import org.springframework.beans.BeansException;
@@ -80,9 +83,36 @@ public class UserTaskHelper implements ApplicationContextAware {
      *
      * @param evtList
      */
-    public void handleEvents(long uid, List<UserEventCO> evtList) {
+    public void handleEvents(long uid, List<UserEventCO> evtList, SlgData slgData) {
+
+
         UserTaskCO userTaskCO = getTask(uid);
         TaskCO taskCO = taskConfigFetcher.get(userTaskCO.getId() + "");
+        String serviceName = null;
+        // 需要把是任务的信息
+        UserSmallTaskCO t1 = new UserSmallTaskCO();
+        t1.setOrder(1);
+        t1.setTaskArgs(taskCO.getTaskArgs1());
+        t1.setTaskTarget(taskCO.getTaskTarget1());
+        t1.setTaskType(taskCO.getTaskType1());
+        serviceName = t1.getTaskType() + "Service";
+        EventHandler evtHandler = (EventHandler) applicationContext.getBean(serviceName);
+
+        for (UserEventCO evt : evtList) {
+            evtHandler.handleEvent(evt, t1, slgData);
+        }
+
+        UserSmallTaskCO t2 = new UserSmallTaskCO();
+        t2.setOrder(2);
+        t2.setTaskArgs(taskCO.getTaskArgs2());
+        t2.setTaskTarget(taskCO.getTaskTarget2());
+        t2.setTaskType(taskCO.getTaskType2());
+
+        for (UserEventCO evt : evtList) {
+            evtHandler.handleEvent(evt, t2, slgData);
+        }
+
+
     }
 
     @Override

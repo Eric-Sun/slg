@@ -1,6 +1,7 @@
 package com.h13.slg.core;
 
 import com.alibaba.fastjson.JSON;
+import com.h13.slg.event.service.EventService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -59,7 +60,9 @@ public class SlgDispatcher implements ApplicationContextAware {
     }
 
     private void triggerEvents(SlgRequestDTO req, SlgData r) {
-//        applicationContext.getBean()
+        EventService eventService = (EventService) applicationContext.getBean("EventService");
+        eventService.triggerTasks(req.getUid(),r);
+
     }
 
     @Override

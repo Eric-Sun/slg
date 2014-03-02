@@ -6,6 +6,7 @@ import com.h13.slg.event.co.UserEventCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -32,8 +33,13 @@ public class UserEventHelper {
     }
 
 
-    public List<UserEventCO> getAllEvnets(long uid) {
-        return userEventCache.get(uid);
+    public List<UserEventCO> getAllEvents(long uid) {
+        List<UserEventCO> list = new LinkedList<UserEventCO>();
+        UserEventCO userEventCO = null;
+        while ((userEventCO = userEventCache.get(uid)) != null) {
+            list.add(userEventCO);
+        }
+        return list;
     }
 
 

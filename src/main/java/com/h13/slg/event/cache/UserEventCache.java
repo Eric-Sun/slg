@@ -23,8 +23,8 @@ public class UserEventCache {
     private RedisTemplate<String, UserEventCO> userEventTemplate;
 
 
-    public List<UserEventCO> get(long uid) {
-        return userEventTemplate.opsForList().range(KEY + uid, 0, userEventTemplate.opsForList().size(KEY + uid));
+    public UserEventCO get(long uid) {
+        return userEventTemplate.opsForList().rightPop(KEY + uid);
     }
 
     public void set(UserEventCO userEventCO) {
