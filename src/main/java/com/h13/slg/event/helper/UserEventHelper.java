@@ -11,11 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-28
- * Time: 下午5:48
- * To change this template use File | Settings | File Templates.
+ * 用户事件相关操作
+ * <p>用户事件是在用户的某些操作之后会发送事件，然后所有的监听会对这个事件进行响应</p>
  */
 @Service
 public class UserEventHelper {
@@ -23,6 +20,12 @@ public class UserEventHelper {
     @Autowired
     UserEventCache userEventCache;
 
+    /**
+     * 添加用户事件，用户发送事件的时候调用此方法
+     * @param uid
+     * @param userEventType
+     * @param data
+     */
     public void addEvent(long uid, EventType userEventType, Map<String, Object> data) {
         UserEventCO userEventCO = new UserEventCO();
         userEventCO.setUid(uid);
@@ -33,6 +36,11 @@ public class UserEventHelper {
     }
 
 
+    /**
+     * 获得一个用户所有的时间，通过cache中的poppush方法，进行获取，获取结束之后cache是没有事件了
+     * @param uid
+     * @return
+     */
     public List<UserEventCO> getAllEvents(long uid) {
         List<UserEventCO> list = new LinkedList<UserEventCO>();
         UserEventCO userEventCO = null;

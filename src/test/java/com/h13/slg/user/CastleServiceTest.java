@@ -22,7 +22,7 @@ public class CastleServiceTest {
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod","castle");
         map.put("act","harvest");
-        map.put("uid","17");
+        map.put("uid","1");
         map.put("auth_key","fdsafdsa");
         map.put("auth_time","24321431") ;
         map.put("args","{name:'aaa',password:'bbb'}");

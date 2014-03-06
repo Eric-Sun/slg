@@ -26,19 +26,21 @@ public class UserRoleDAO {
     @Autowired
     JdbcTemplate j;
 
-    public long insert(final long roleId, final int weapon,
-                       final int armor, final int accessory) {
+    public long insert(final long roleId, final long uid,
+                       final long weapon,
+                       final long armor, final long accessory) {
         KeyHolder holder = new GeneratedKeyHolder();
-        final String sql = "insert into user_role (role_id,weapon,armor,accessory,createtime) " +
-                "values (?,?,?,?,now())";
+        final String sql = "insert into user_role (role_id,uid,weapon,armor,accessory,createtime) " +
+                "values (?,?,?,?,?,now())";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
                 PreparedStatement pstmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
                 pstmt.setLong(1, roleId);
-                pstmt.setInt(2, weapon);
-                pstmt.setInt(3, armor);
-                pstmt.setInt(4, accessory);
+                pstmt.setLong(2, uid);
+                pstmt.setLong(3, weapon);
+                pstmt.setLong(4, armor);
+                pstmt.setLong(5, accessory);
                 return pstmt;
             }
         }, holder);
@@ -46,7 +48,7 @@ public class UserRoleDAO {
     }
 
     public UserRoleCO get(long urId) {
-        String sql = "select id,role_id,weapon,armor,accessory from user_role where id=?";
+        String sql = "select id,role_id,uid,weapon,armor,accessory from user_role where id=?";
         return j.queryForObject(sql, new Object[]{urId}, new BeanPropertyRowMapper<UserRoleCO>(UserRoleCO.class));
     }
 

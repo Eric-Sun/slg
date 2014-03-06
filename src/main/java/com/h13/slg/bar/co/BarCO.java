@@ -3,15 +3,11 @@ package com.h13.slg.bar.co;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-27
- * Time: 下午8:17
- * To change this template use File | Settings | File Templates.
+ * 招贤馆
  */
 public class BarCO {
 
-    private long id;
+    private long id; //招贤馆对应的uid
     private List<BarRoleCO> roleList;
 
     public long getId() {

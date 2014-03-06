@@ -28,8 +28,8 @@ public class ResourceCalUtil {
     public static int calResource4Harvest(int curResource, long lastTimer, long curTimer, int perHour, int maxResource) {
         int finalResource = 0;
         int tmp = calFoodOrGold(lastTimer, curTimer, perHour);
-        if (curResource + tmp >= maxResource) {
-            finalResource = maxResource;
+        if (tmp >= maxResource) {
+            finalResource = curResource + maxResource;
         } else {
             finalResource = curResource + tmp;
         }

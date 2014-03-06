@@ -1,9 +1,11 @@
 package com.h13.slg.event.service;
 
+import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.event.co.UserEventCO;
 import com.h13.slg.event.helper.UserEventHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
+import com.h13.slg.task.vo.FinishedTaskVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service("EventService")
-public class EventServiceImpl {
+public class EventServiceImpl implements EventService {
 
     @Autowired
     UserEventHelper userEventHelper;
@@ -25,9 +27,15 @@ public class EventServiceImpl {
     UserTaskHelper userTaskHelper;
 
 
-    public void triggerTasks(long uid, SlgData slgData) {
+    public void triggerTasks(long uid, SlgData slgData) throws RequestErrorException {
         List<UserEventCO> evtList = userEventHelper.getAllEvents(uid);
-        userTaskHelper.handleEvents(uid, evtList, slgData);
+        if(evtList.size()==0)
+            return ;
+        FinishedTaskVO ftVO = new FinishedTaskVO();
+        boolean finished = false;
+        while ((finished = userTaskHelper.handleEvents(uid, evtList, slgData, ftVO)) == true) {
+
+        }
     }
 
 

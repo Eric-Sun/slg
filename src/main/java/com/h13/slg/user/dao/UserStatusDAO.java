@@ -29,15 +29,16 @@ public class UserStatusDAO {
 
 
     public void insert(final long id, final String name,
-                       final int gold, final int food, final int cash, final int honor, final int level) {
+                       final int gold, final int food, final int cash,
+                       final int honor, final int level, final int xp, final int soul) {
         final String sql = "insert into user_status " +
-                "(id,name,gold,food,cash,honor,level,createtime) " +
+                "(id,name,gold,food,cash,honor,level,xp,soul,createtime) " +
                 "values " +
-                "(?,?,?,?,?,?,?,now())";
+                "(?,?,?,?,?,?,?,?,?,now())";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-                PreparedStatement pstmt = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+                PreparedStatement pstmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
                 pstmt.setLong(1, id);
                 pstmt.setString(2, name);
                 pstmt.setInt(3, gold);
@@ -45,6 +46,8 @@ public class UserStatusDAO {
                 pstmt.setInt(5, cash);
                 pstmt.setInt(6, honor);
                 pstmt.setInt(7, level);
+                pstmt.setInt(8, xp);
+                pstmt.setInt(9, soul);
                 return pstmt;
             }
         });
@@ -52,7 +55,8 @@ public class UserStatusDAO {
 
 
     public UserStatusCO get(long id) {
-        String sql = "select id,name,gold,food,cash,honor,level,createtime from user_status where id=?";
+        String sql = "select id,name,gold,food," +
+                "cash,honor,level,createtime,xp,soul from user_status where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserStatusCO>(UserStatusCO.class));
     }
 
@@ -62,8 +66,11 @@ public class UserStatusDAO {
                 "gold=?," +
                 "cash=?," +
                 "honor=?," +
-                "level=? where id=?";
+                "level=?," +
+                "soul=?," +
+                "xp=? where id=?";
         j.update(sql, new Object[]{userStatusCO.getFood(), userStatusCO.getGold(), userStatusCO.getCash(),
-                userStatusCO.getHonor(), userStatusCO.getLevel(), userStatusCO.getId()});
+                userStatusCO.getHonor(), userStatusCO.getLevel(),
+                userStatusCO.getSoul(), userStatusCO.getXp(), userStatusCO.getId()});
     }
 }

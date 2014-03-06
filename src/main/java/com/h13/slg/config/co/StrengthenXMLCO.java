@@ -13,14 +13,14 @@ import java.util.Map;
  * Time: 上午11:54
  * To change this template use File | Settings | File Templates.
  */
-@ObjectCreate(pattern = "strengthList")
+@ObjectCreate(pattern = "strengthenList")
 public class StrengthenXMLCO {
 
 
     private Map<String, StrengthenCO> map = new HashMap<String, StrengthenCO>();
 
     @SetNext
-    public void addStrength(StrengthenCO obj) {
+    public void addStrengthen(StrengthenCO obj) {
         map.put(obj.getStrength() + "", obj);
     }
 

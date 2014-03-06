@@ -1,4 +1,4 @@
-package com.h13.slg.role.vo;
+package com.h13.slg.inventory.vo;
 
 import java.util.ArrayList;
 

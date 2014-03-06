@@ -12,11 +12,11 @@ import java.util.Map;
 public class SlgRequestDTO {
     private long uid;
     private int seq;
-    private Map<String, String> args;
+    private Map<String, Object> args;
     private String mod;
     private String act;
 
-    public SlgRequestDTO(String mod, String act, long uid, int seq, Map<String, String> args) {
+    public SlgRequestDTO(String mod, String act, long uid, int seq, Map<String, Object> args) {
         this.mod = mod;
         this.act = act;
         this.uid = uid;
@@ -56,11 +56,11 @@ public class SlgRequestDTO {
         this.seq = seq;
     }
 
-    public Map<String, String> getArgs() {
+    public Map<String, Object> getArgs() {
         return args;
     }
 
-    public void setArgs(Map<String, String> args) {
+    public void setArgs(Map<String, Object> args) {
         this.args = args;
     }
 }

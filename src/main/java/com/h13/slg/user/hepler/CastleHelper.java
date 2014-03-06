@@ -4,6 +4,8 @@ import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.cache.LevelCache;
 import com.h13.slg.config.co.LevelCO;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.ResourceCalUtil;
 import com.h13.slg.core.util.TimeUtil;
 import com.h13.slg.user.co.CastleCO;
@@ -13,11 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-17
- * Time: 下午5:06
- * To change this template use File | Settings | File Templates.
+ * 城堡
  */
 @Service
 public class CastleHelper {
@@ -30,6 +28,11 @@ public class CastleHelper {
     @Autowired
     CastleDAO castleDAO;
 
+    /**
+     * 收获城堡中的金币
+     *
+     * @param uid
+     */
     public void harvest(long uid) {
         CastleCO castleCO = getCastleInfo(uid);
         long lastTimer = castleCO.getTimer();
@@ -41,12 +44,15 @@ public class CastleHelper {
         int goldPerHour = level.getGoldPerHour();
         int maxGold = level.getGoldMax();
         int curGold = userStatusCO.getGold();
+        // 计算能收获的最大值
         int finalGold = ResourceCalUtil.calResource4Harvest(curGold, lastTimer, currentTimer, goldPerHour, maxGold);
         if (finalGold != 0) {
             userStatusCO.setGold(finalGold);
             userStatusHelper.updateUserStatus(userStatusCO);
             updateCastleInfo(uid, currentTimer);
         }
+        SlgLogger.info(SlgLoggerEntity.p("castle", "harvest", uid, "").addParam("finalGold", finalGold)
+                .addParam("curGold", curGold));
     }
 
 
@@ -67,6 +73,7 @@ public class CastleHelper {
      */
     public void create(long uid) {
         castleDAO.add(uid, TimeUtil.currentTimeStamp());
+        SlgLogger.info(SlgLoggerEntity.p("castle", "create", uid, "create a new castle."));
     }
 
     /**
@@ -77,6 +84,7 @@ public class CastleHelper {
      */
     public void updateCastleInfo(long uid, long timer) {
         castleDAO.update(uid, timer);
+        SlgLogger.info(SlgLoggerEntity.p("castle", "update", uid, "update castle.").addParam("timer", timer));
     }
 
 }

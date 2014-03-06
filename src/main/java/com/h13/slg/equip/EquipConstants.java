@@ -10,8 +10,8 @@ package com.h13.slg.equip;
 public class EquipConstants {
 
     public static class EquipType {
-        public static int WEAPON = 0;
-        public static int ARMOR = 1;
-        public static int ACCESSORY = 2;
+        public static String WEAPON = "weapon";
+        public static String ARMOR = "armor";
+        public static String ACCESSORY = "accessory";
     }
 }

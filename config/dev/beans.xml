@@ -12,7 +12,9 @@
     <import resource="dataSource.xml"/>
     <import resource="spring-cache.xml"/>
     <import resource="config-cache.xml"/>
+    <import resource="event-cache.xml"/>
     <import resource="user-cache.xml"/>
+    <import resource="task-cache.xml"/>
     <context:annotation-config/>
     <context:component-scan base-package="com.h13"/>
     <bean

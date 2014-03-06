@@ -1,6 +1,8 @@
 package com.h13.slg.core;
 
 import com.alibaba.fastjson.JSON;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.event.service.EventService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +11,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +39,7 @@ public class SlgDispatcher implements ApplicationContextAware {
         sb.append(mod.substring(1).toLowerCase());
         sb.append(SUFFIX);
 
-        Map<String, String> map = JSON.parseObject(args, Map.class);
+        Map<String, Object> map = JSON.parseObject(args, Map.class);
         Object beanObj = applicationContext.getBean(sb.toString());
         Class clazz = applicationContext.getBean(sb.toString()).getClass();
         SlgResponseDTO resp = null;
@@ -46,22 +50,22 @@ public class SlgDispatcher implements ApplicationContextAware {
             SlgData r = (SlgData) m.invoke(beanObj, new Object[]{req});
             // 触发事件
             triggerEvents(req, r);
-
-
             resp = new SlgResponseDTO(req, r);
         } catch (Exception e) {
-            if (e instanceof RequestErrorException) {
-                RequestErrorException reqError = (RequestErrorException) e;
-                return new SlgResponseDTO(req, reqError.getCode(), reqError.getDesc());
+            if (e instanceof InvocationTargetException) {
+                if (((InvocationTargetException) e).getTargetException() instanceof RequestErrorException) {
+                    RequestErrorException reqError = (RequestErrorException) ((InvocationTargetException) e).getTargetException();
+                    return new SlgResponseDTO(req, reqError.getCode(), reqError.getDesc());
+                }
             }
-            LOG.error("error. act=" + act + " mod=" + mod, e);
+            SlgLogger.error(SlgLoggerEntity.p(mod, act, uid, "error"), e);
         }
         return resp;
     }
 
-    private void triggerEvents(SlgRequestDTO req, SlgData r) {
+    private void triggerEvents(SlgRequestDTO req, SlgData r) throws RequestErrorException {
         EventService eventService = (EventService) applicationContext.getBean("EventService");
-        eventService.triggerTasks(req.getUid(),r);
+        eventService.triggerTasks(req.getUid(), r);
 
     }
 

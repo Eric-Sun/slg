@@ -149,12 +149,14 @@
     <!-- shopTemplate -->
     <bean id="shopSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.StrengthenCO"/>
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.ShopCO"/>
     </bean>
     <bean id="shopTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
           p:valueSerializer-ref="shopSerializer">
     </bean>
+
+
 
 
 </beans>

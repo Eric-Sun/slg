@@ -2,6 +2,7 @@ package com.h13.slg.pkg.co;
 
 import com.alibaba.fastjson.JSON;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,16 +19,40 @@ public class UserPackageCO {
     private String gem;
     private String material;
 
-    public Map<String, Integer> getGem() {
+    public String getRoleCard() {
+        return roleCard;
+    }
+
+    public String getEquip() {
+        return equip;
+    }
+
+    public String getGem() {
+        return gem;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public Map<String, Integer> getGemMap() {
         return (Map<String, Integer>) JSON.parseObject(gem, Map.class);
+    }
+
+    public void setGemMap(Map<String, Integer> map) {
+        this.gem = JSON.toJSONString(map);
     }
 
     public void setGem(String gem) {
         this.gem = gem;
     }
 
-    public Map<String, Integer> getMaterial() {
+    public Map<String, Integer> getMaterialMap() {
         return (Map<String, Integer>) JSON.parseObject(material, Map.class);
+    }
+
+    public void setMaterialMap(Map<String, Integer> map) {
+        this.material = JSON.toJSONString(map);
     }
 
     public void setMaterial(String material) {
@@ -42,16 +67,24 @@ public class UserPackageCO {
         this.id = id;
     }
 
-    public Map<String, Integer> getRoleCard() {
+    public Map<String, Integer> getRoleCardMap() {
         return (Map<String, Integer>) JSON.parseObject(roleCard, Map.class);
+    }
+
+    public void setRoleCardMap(Map<String, Integer> map) {
+        this.roleCard = JSON.toJSONString(map);
     }
 
     public void setRoleCard(String roleCard) {
         this.roleCard = roleCard;
     }
 
-    public Map<String, Integer> getEquip() {
-        return (Map<String, Integer>) JSON.parseObject(equip, Map.class);
+    public Map<String, List<Long>> getEquipMap() {
+        return (Map<String, List<Long>>) JSON.parseObject(equip, Map.class);
+    }
+
+    public void setEquipMap(Map<String, List<Long>> map) {
+        this.equip = JSON.toJSONString(map);
     }
 
     public void setEquip(String equip) {

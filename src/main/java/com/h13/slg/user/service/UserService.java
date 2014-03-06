@@ -10,15 +10,18 @@ import com.h13.slg.core.SlgResponseDTO;
  */
 public interface UserService {
 
+    String MOD = "user";
 
     /**
      * 登陆接口
+     *
      * @return
      */
     public SlgData login(SlgRequestDTO request) throws RequestErrorException;
 
     /**
      * 注册
+     *
      * @param request
      * @return
      */

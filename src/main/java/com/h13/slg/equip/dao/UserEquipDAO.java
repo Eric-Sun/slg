@@ -5,8 +5,14 @@ import com.h13.slg.equip.co.UserEquipCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Map;
 
 /**
@@ -22,11 +28,32 @@ public class UserEquipDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(long id,  int type, int level, String gems, int strength, int fail, int refine, int star) {
-        String sql = "insert into user_equip(id,e_id,type,level,gems,strength,fail,refine,star,createtime) " +
+    public long insert(final int eid, final long uid,
+                       final String type, final int level, final String gems,
+                       final int strength, final int fail, final int refine,
+                       final int star) {
+        KeyHolder holder = new GeneratedKeyHolder();
+        final String sql = "insert into user_equip(e_id,uid," +
+                "type,level,gems,strength,fail,refine,star,createtime) " +
                 "values " +
-                "(?,?,?,?,?,?,?,?,now())";
-        j.update(sql, new Object[]{id, type, level, gems, strength, fail, refine, star});
+                "(?,?,?,?,?,?,?,?,?,now())";
+        j.update(sql, new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+                PreparedStatement pstmt = connection.prepareStatement(sql);
+                pstmt.setInt(1, eid);
+                pstmt.setLong(2, uid);
+                pstmt.setString(3, type);
+                pstmt.setInt(4, level);
+                pstmt.setString(5, gems);
+                pstmt.setInt(6, strength);
+                pstmt.setInt(7, fail);
+                pstmt.setInt(8, refine);
+                pstmt.setInt(9, star);
+                return pstmt;
+            }
+        }, holder);
+        return holder.getKey().longValue();
     }
 
     public void update(long id, int level, Map<String, String> gems, int strength, int fail, int refine, int star) {

@@ -1,11 +1,8 @@
 package com.h13.slg.bar.co;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-27
- * Time: 下午8:21
- * To change this template use File | Settings | File Templates.
+ * 招贤馆中的武将的id和他的状态
+ * DEFAULT=0 GOT=1
  */
 public class BarRoleCO {
     private long id;

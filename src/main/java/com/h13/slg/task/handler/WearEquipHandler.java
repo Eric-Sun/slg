@@ -21,12 +21,12 @@ public class WearEquipHandler implements EventHandler {
     UserTaskHelper userTaskHelper;
 
     @Override
-    public void handleEvent(UserEventCO evtData, Object smallTask, SlgData slgData) {
+    public void handleEvent(UserEventCO evtData, Object smallTask) {
         UserSmallTaskCO smallTaskCO = (UserSmallTaskCO) smallTask;
         int target = new Integer(smallTaskCO.getTaskTarget());
         long uid = evtData.getUid();
         UserTaskCO userTaskCO = userTaskHelper.getTask(uid);
-        Map<String, Integer> progress = userTaskCO.getProgess();
+        Map<String, Integer> progress = userTaskCO.getProgessMap();
         int order = smallTaskCO.getOrder();
         int num = progress.get(order + "");
         if (target == num) {
@@ -34,7 +34,8 @@ public class WearEquipHandler implements EventHandler {
         } else {
             progress.put(order + "", target);
         }
+        userTaskCO.setProgessMap(progress);
+
         userTaskHelper.updateProgress(userTaskCO);
-        slgData.add("task_detail", progress);
     }
 }

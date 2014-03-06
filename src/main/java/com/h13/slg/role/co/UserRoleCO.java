@@ -10,10 +10,19 @@ package com.h13.slg.role.co;
 public class UserRoleCO {
     private long id;
     private long roleId;
-    private int weapon;
-    private int armor;
-    private int accessory;
+    private long uid;
+    private long weapon;
+    private long armor;
+    private long accessory;
     private int fightForce;
+
+    public long getUid() {
+        return uid;
+    }
+
+    public void setUid(long uid) {
+        this.uid = uid;
+    }
 
     public long getId() {
         return id;
@@ -31,27 +40,27 @@ public class UserRoleCO {
         this.roleId = roleId;
     }
 
-    public int getWeapon() {
+    public long getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(int weapon) {
+    public void setWeapon(long weapon) {
         this.weapon = weapon;
     }
 
-    public int getArmor() {
+    public long getArmor() {
         return armor;
     }
 
-    public void setArmor(int armor) {
+    public void setArmor(long armor) {
         this.armor = armor;
     }
 
-    public int getAccessory() {
+    public long getAccessory() {
         return accessory;
     }
 
-    public void setAccessory(int accessory) {
+    public void setAccessory(long accessory) {
         this.accessory = accessory;
     }
 

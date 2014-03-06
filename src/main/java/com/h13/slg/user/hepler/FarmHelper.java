@@ -4,8 +4,11 @@ import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.cache.LevelCache;
 import com.h13.slg.config.co.LevelCO;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.ResourceCalUtil;
 import com.h13.slg.core.util.TimeUtil;
+import com.h13.slg.event.helper.UserEventHelper;
 import com.h13.slg.user.co.CastleCO;
 import com.h13.slg.user.co.FarmCO;
 import com.h13.slg.user.co.UserStatusCO;
@@ -14,11 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-17
- * Time: 下午5:05
- * To change this template use File | Settings | File Templates.
+ * 农场资源
  */
 @Service
 public class FarmHelper {
@@ -27,11 +26,17 @@ public class FarmHelper {
     UserStatusHelper userStatusHelper;
     @Autowired
     LevelHelper levelHelper;
-
     @Autowired
     FarmDAO farmDAO;
+    @Autowired
+    UserEventHelper userEventHelper;
 
 
+    /**
+     * 收获资源
+     *
+     * @param uid
+     */
     public void harvest(long uid) {
         FarmCO farmCO = getFarmInfo(uid);
         long lastTimer = farmCO.getTimer();
@@ -45,11 +50,14 @@ public class FarmHelper {
         int curFood = userStatusCO.getFood();
         int finalFood = ResourceCalUtil.calResource4Harvest(curFood, lastTimer, currentTimer, foodPerHour, maxFood);
 
-        if (finalFood != 0) {
+        if (finalFood != curFood) {
             userStatusCO.setFood(finalFood);
             userStatusHelper.updateUserStatus(userStatusCO);
             updateFarmInfo(uid, currentTimer);
         }
+        SlgLogger.info(SlgLoggerEntity.p("farm", "harvest", uid, "do harvest")
+                .addParam("curFood", curFood)
+                .addParam("finalFood", finalFood));
     }
 
 
@@ -60,6 +68,7 @@ public class FarmHelper {
      */
     public void create(long uid) {
         farmDAO.add(uid, TimeUtil.currentTimeStamp());
+        SlgLogger.info(SlgLoggerEntity.p("farm", "create", uid, "create farm"));
     }
 
     /**
@@ -70,6 +79,8 @@ public class FarmHelper {
      */
     public void updateFarmInfo(long uid, long timer) {
         farmDAO.update(uid, timer);
+        SlgLogger.info(SlgLoggerEntity.p("farm", "update", uid, "update farm")
+                .addParam("timer", timer));
     }
 
     /**
@@ -79,6 +90,9 @@ public class FarmHelper {
      * @return
      */
     public FarmCO getFarmInfo(long uid) {
-        return farmDAO.get(uid);
+        FarmCO farmCO = farmDAO.get(uid);
+        SlgLogger.info(SlgLoggerEntity.p("farm", "get", uid, "get farm")
+                .addParam("farm", farmCO));
+        return farmCO;
     }
 }

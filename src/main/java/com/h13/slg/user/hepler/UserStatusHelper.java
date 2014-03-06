@@ -8,6 +8,8 @@ import com.h13.slg.user.cache.UserStatusCache;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.CastleDAO;
 import com.h13.slg.user.dao.UserStatusDAO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserStatusHelper {
+    private static Logger LOG = LoggerFactory.getLogger(UserStatusHelper.class);
 
     @Autowired
     UserStatusCache userStatusCache;
@@ -97,6 +100,7 @@ public class UserStatusHelper {
             userStatusCO.setGold(finalGold);
             updateUserStatus(userStatusCO);
         }
+        LOG.info("add cash. uid=" + uid + " cash= " + gold + " final=" + finalGold);
     }
 
     /**
@@ -120,6 +124,7 @@ public class UserStatusHelper {
 
     /**
      * 减少金币
+     *
      * @param uid
      * @param gold
      * @throws RequestErrorException
@@ -134,4 +139,38 @@ public class UserStatusHelper {
         userStatusCO.setGold(curGold - gold);
         updateUserStatus(userStatusCO);
     }
+
+
+    public void addXp(long uid, int xp) {
+        UserStatusCO userStatusCO = getUserStatus(uid);
+        int curLevel = userStatusCO.getLevel();
+        int maxXP = levelHelper.getLevelInfo(userStatusCO.getLevel()).getXp();
+        int curXp = userStatusCO.getXp();
+        int finalXp = 0;
+        if (maxXP > curXp + xp) {
+            finalXp = curXp + xp;
+            userStatusCO.setXp(finalXp);
+        } else {
+            finalXp = curXp + xp;
+            while ((finalXp = finalXp - maxXP) >= 0) {
+                curLevel++;
+                maxXP = levelHelper.getLevelInfo(userStatusCO.getLevel()).getXp();
+            }
+            finalXp = finalXp + maxXP;
+            userStatusCO.setXp(finalXp);
+            userStatusCO.setLevel(curLevel);
+        }
+        updateUserStatus(userStatusCO);
+        LOG.info("add xp. uid=" + uid + " xp= " + xp + " final=" + finalXp + " level=" + curLevel);
+    }
+
+    public void addCash(long uid, int cash) {
+        UserStatusCO userStatusCO = getUserStatus(uid);
+        int curCash = userStatusCO.getCash();
+        int finalCash = curCash + cash;
+        userStatusCO.setCash(finalCash);
+        updateUserStatus(userStatusCO);
+        LOG.info("add cash. uid=" + uid + " cash= " + cash + " final=" + finalCash);
+    }
+
 }

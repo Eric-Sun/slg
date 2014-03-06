@@ -13,7 +13,7 @@ import org.apache.commons.digester3.annotations.rules.ObjectCreate;
 @ObjectCreate(pattern = "taskList/task")
 public class TaskCO {
     @BeanPropertySetter(pattern = "taskList/task/id")
-    private long id;
+    private int id;
     @BeanPropertySetter(pattern = "taskList/task/title")
     private String title;
     @BeanPropertySetter(pattern = "taskList/task/taskType1")
@@ -39,15 +39,15 @@ public class TaskCO {
     @BeanPropertySetter(pattern = "taskList/task/gold")
     private int gold;
     @BeanPropertySetter(pattern = "taskList/task/award1")
-    private int award1;
+    private String award1;
     @BeanPropertySetter(pattern = "taskList/task/desc")
     private String desc;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -147,11 +147,11 @@ public class TaskCO {
         this.gold = gold;
     }
 
-    public int getAward1() {
+    public String getAward1() {
         return award1;
     }
 
-    public void setAward1(int award1) {
+    public void setAward1(String award1) {
         this.award1 = award1;
     }
 

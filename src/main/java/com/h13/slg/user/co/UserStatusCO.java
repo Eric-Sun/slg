@@ -12,8 +12,25 @@ public class UserStatusCO {
     private int cash;
     private int honor;
     private int level;
+    private int xp;
     private String name ;
-    private Date createtime;
+    private int soul;
+
+    public int getSoul() {
+        return soul;
+    }
+
+    public void setSoul(int soul) {
+        this.soul = soul;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
 
     public String getName() {
         return name;
@@ -21,14 +38,6 @@ public class UserStatusCO {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
     }
 
     public long getId() {

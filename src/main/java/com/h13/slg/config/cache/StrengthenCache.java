@@ -22,8 +22,8 @@ public class StrengthenCache extends BasicCache<StrengthenCO> {
 
     private static final String KEY = "slg:sys:accessory:";
 
-    @Resource(name = "strengthTemplate")
-    private RedisTemplate<String, StrengthenCO> strengthTemplate;
+    @Resource(name = "strengthenTemplate")
+    private RedisTemplate<String, StrengthenCO> strengthenTemplate;
 
     @Override
     public void doLoad(String filename) throws ConfigParseException {
@@ -31,13 +31,13 @@ public class StrengthenCache extends BasicCache<StrengthenCO> {
                 filename);
         StrengthenXMLCO obj = parser.parse();
         for (String id : obj.getMap().keySet()) {
-            strengthTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
+            strengthenTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
         }
     }
 
 
     @Override
     public StrengthenCO get(String id) {
-        return strengthTemplate.opsForValue().get(KEY + id);
+        return strengthenTemplate.opsForValue().get(KEY + id);
     }
 }

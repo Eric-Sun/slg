@@ -1,4 +1,4 @@
-package com.h13.slg.role.vo;
+package com.h13.slg.equip.vo;
 
 /**
  * Created with IntelliJ IDEA.

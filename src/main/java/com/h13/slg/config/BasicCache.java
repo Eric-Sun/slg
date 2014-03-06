@@ -1,6 +1,8 @@
 package com.h13.slg.config;
 
 import com.h13.slg.config.ConfigParseException;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +19,7 @@ public abstract class BasicCache<T> {
 
     public void load(String filename) throws ConfigParseException {
         doLoad(filename);
-        LOG.info("load config file success . filename = " + filename);
+        SlgLogger.info(SlgLoggerEntity.p("web", "config loader", -1, "load config.").addParam("filename", filename));
     }
 
     public abstract void doLoad(String filename) throws ConfigParseException;

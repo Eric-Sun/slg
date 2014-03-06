@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class SlgResponseDTO {
     private String act;
-    private Map<String, String> args;
+    private Map<String, Object> args;
     private int code = Constants.ResponseStatus.SUCCESS;
     private Map<String, Object> data;
     private String desc;
@@ -39,11 +39,11 @@ public class SlgResponseDTO {
         this.act = act;
     }
 
-    public Map<String, String> getArgs() {
+    public Map<String, Object> getArgs() {
         return args;
     }
 
-    public void setArgs(Map<String, String> args) {
+    public void setArgs(Map<String, Object> args) {
         this.args = args;
     }
 

@@ -1,5 +1,7 @@
 package com.h13.slg.core.util;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,6 +19,20 @@ public class MapUtil {
             map.put(id, 1);
         } else {
             map.put(id, cur + num);
+        }
+    }
+
+
+    public static void appendItem(Map<String, List<Long>> map, String id, long id2) {
+        List<Long> cur = map.get(id);
+        if (cur == null) {
+            List<Long> l = new LinkedList<Long>();
+            l.add(id2);
+            map.put(id, l);
+        } else {
+            List<Long> l = map.get(id);
+            l.add(id2);
+            map.put(id, l);
         }
     }
 }

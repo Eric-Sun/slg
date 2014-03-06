@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,7 +23,7 @@ public class UserPackageDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(long id, Map<String, Integer> roleCard, Map<String, Integer> equip,
+    public void insert(long id, Map<String, Integer> roleCard, Map<String, List<Long>> equip,
                        Map<String, Integer> gem,
                        Map<String, Integer> material) {
 
@@ -30,8 +31,10 @@ public class UserPackageDAO {
                 "(id,role_card,equip,gem,material,createtime) " +
                 "values" +
                 "(?,?,?,?,?,now())";
-        j.update(sql, new Object[]{id, JSON.toJSONString(roleCard), JSON.toJSONString(equip)
-                , JSON.toJSONString(gem),
+        j.update(sql, new Object[]{id,
+                JSON.toJSONString(roleCard),
+                JSON.toJSONString(equip),
+                JSON.toJSONString(gem),
                 JSON.toJSONString(material)});
     }
 
@@ -44,23 +47,23 @@ public class UserPackageDAO {
 
     public void updateRoleCard(long id, Map<String, Integer> roleCard) {
         String sql = "update user_package set role_card=? where id=?";
-        j.update(sql, new Object[]{id, roleCard});
+        j.update(sql, new Object[]{id, JSON.toJSONString(roleCard)});
     }
 
-    public void updateEquip(long id, Map<String, Integer> equip) {
+    public void updateEquip(long id, Map<String, List<Long>> equip) {
         String sql = "update user_package set equip=? where id=?";
-        j.update(sql, new Object[]{id, equip});
+        j.update(sql, new Object[]{id, JSON.toJSONString(equip)});
     }
 
     public void updateGem(long id, Map<String, Integer> gem) {
         String sql = "update user_package set gem=? where id=?";
-        j.update(sql, new Object[]{id, gem});
+        j.update(sql, new Object[]{id, JSON.toJSONString(gem)});
     }
 
 
     public void updateMaterial(long id, Map<String, Integer> material) {
         String sql = "update user_package set material=? where id=?";
-        j.update(sql, new Object[]{id, material});
+        j.update(sql, new Object[]{id, JSON.toJSONString(material)});
     }
 
 }

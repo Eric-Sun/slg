@@ -3,8 +3,8 @@ package com.h13.slg.inventory.service;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
-import com.h13.slg.role.helper.InventoryHelper;
-import com.h13.slg.role.vo.InventoryBuyVO;
+import com.h13.slg.inventory.helper.InventoryHelper;
+import com.h13.slg.inventory.vo.InventoryBuyVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,8 +25,8 @@ public class InventoryServiceImpl implements InventoryService {
     public SlgData buy(SlgRequestDTO request) throws RequestErrorException {
         // "num":10,"id":41
         long uid = request.getUid();
-        int num = new Integer(request.getArgs().get("num"));
-        int id = new Integer(request.getArgs().get("id"));
+        int num = new Integer(request.getArgs().get("num").toString());
+        int id = new Integer(request.getArgs().get("id").toString());
 
         InventoryBuyVO inventoryBuyVO = inventoryHelper.buy(uid, num, id);
         //{"cost_type":"honor","cost_num":-1000,"awards":[["material",13,10]]}

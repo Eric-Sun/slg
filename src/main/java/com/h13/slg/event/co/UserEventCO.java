@@ -3,11 +3,7 @@ package com.h13.slg.event.co;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-28
- * Time: 下午5:36
- * To change this template use File | Settings | File Templates.
+ * 用户事件对象
  */
 public class UserEventCO {
 

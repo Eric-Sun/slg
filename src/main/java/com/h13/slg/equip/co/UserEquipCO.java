@@ -5,21 +5,35 @@ import com.alibaba.fastjson.JSON;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-24
- * Time: 下午7:38
- * To change this template use File | Settings | File Templates.
+ * 用户装备
  */
 public class UserEquipCO {
     private long id;
-    private int type;
+    private int eid;
+    private long uid;
+    private String type;
     private int level;
     private String gems;
     private int strength;
     private int fail;
     private int refine;
     private int star;
+
+    public int getEid() {
+        return eid;
+    }
+
+    public void setEid(int eid) {
+        this.eid = eid;
+    }
+
+    public long getUid() {
+        return uid;
+    }
+
+    public void setUid(long uid) {
+        this.uid = uid;
+    }
 
     public long getId() {
         return id;
@@ -29,11 +43,11 @@ public class UserEquipCO {
         this.id = id;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -45,8 +59,16 @@ public class UserEquipCO {
         this.level = level;
     }
 
-    public Map<String, String> getGems() {
+    public Map<String, String> getGemsMap() {
         return JSON.parseObject(gems, Map.class);
+    }
+
+    public String getGems() {
+        return gems;
+    }
+
+    public void setGemsMap(Map<String, String> data) {
+        this.gems = JSON.toJSONString(data);
     }
 
     public void setGems(String gems) {

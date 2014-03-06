@@ -1319,6 +1319,6 @@
 
     <global>
         <key>DefaultNewUserLevel</key>
-        <value>0</value>
+        <value>1</value>
     </global>
 </globalList>

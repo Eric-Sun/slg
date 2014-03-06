@@ -3,6 +3,8 @@ package com.h13.slg.bar.helper;
 import com.h13.slg.bar.co.BarCO;
 import com.h13.slg.bar.co.BarRoleCO;
 import com.h13.slg.bar.dao.BarDAO;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,11 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-27
- * Time: 下午8:25
- * To change this template use File | Settings | File Templates.
+ * 招贤馆
  */
 @Service
 public class BarHelper {
@@ -30,6 +28,7 @@ public class BarHelper {
      */
     public void create(long uid) {
         barDAO.insert(uid, DEFAULT_ROLE_LIST);
+        SlgLogger.info(SlgLoggerEntity.p("bar","create",uid,"create a new bar."));
     }
 
     /**

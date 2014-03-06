@@ -57,7 +57,7 @@ public class UserModuleTest {
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod","user");
         map.put("act","login");
-        map.put("uid","432143214312");
+        map.put("uid","21");
         map.put("auth_key","fdsafdsa");
         map.put("auth_time","24321431") ;
         map.put("args","{name:'aaa',password:'bbb'}");

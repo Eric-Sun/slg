@@ -17,6 +17,10 @@ public class UserTaskCO {
     private int taskId;
     private String progess;
 
+    public String getProgess() {
+        return progess;
+    }
+
     public long getId() {
         return id;
     }
@@ -33,8 +37,12 @@ public class UserTaskCO {
         this.taskId = taskId;
     }
 
-    public Map<String, Integer> getProgess() {
+    public Map<String, Integer> getProgessMap() {
         return JSON.parseObject(progess, Map.class);
+    }
+
+    public void setProgessMap(Map<String, Integer> data) {
+        this.progess = JSON.toJSONString(data);
     }
 
     public void setProgess(String progess) {
