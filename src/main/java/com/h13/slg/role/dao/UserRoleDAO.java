@@ -53,7 +53,7 @@ public class UserRoleDAO {
     }
 
 
-    public void update(long urId, int weapon, int armor, int accessory) {
+    public void update(long urId, long weapon, long armor, long accessory) {
         String sql = "update user_role set weapon=?,armor=?,accessory=? " +
                 "where id=?";
         j.update(sql, new Object[]{weapon, armor, accessory, urId});

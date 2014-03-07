@@ -20,14 +20,14 @@ public class TaskCO {
     private String taskType1;
     @BeanPropertySetter(pattern = "taskList/task/level")
     private String level;
-    @BeanPropertySetter(pattern = "taskList/task/taskArgs1")
-    private String taskArgs1;
-    @BeanPropertySetter(pattern = "taskList/task/TaskTarget1")
-    private String TaskTarget1;
+    @BeanPropertySetter(pattern = "taskList/task/taskArg1")
+    private String taskArg1;
+    @BeanPropertySetter(pattern = "taskList/task/taskTarget1")
+    private String taskTarget1;
     @BeanPropertySetter(pattern = "taskList/task/taskType2")
     private String taskType2;
-    @BeanPropertySetter(pattern = "taskList/task/taskArgs2")
-    private String taskArgs2;
+    @BeanPropertySetter(pattern = "taskList/task/taskArg2")
+    private String taskArg2;
     @BeanPropertySetter(pattern = "taskList/task/taskTarget2")
     private String taskTarget2;
     @BeanPropertySetter(pattern = "taskList/task/taskName1")
@@ -75,20 +75,20 @@ public class TaskCO {
         this.level = level;
     }
 
-    public String getTaskArgs1() {
-        return taskArgs1;
+    public String getTaskArg1() {
+        return taskArg1;
     }
 
-    public void setTaskArgs1(String taskArgs1) {
-        this.taskArgs1 = taskArgs1;
+    public void setTaskArg1(String taskArg1) {
+        this.taskArg1 = taskArg1;
     }
 
     public String getTaskTarget1() {
-        return TaskTarget1;
+        return taskTarget1;
     }
 
     public void setTaskTarget1(String taskTarget1) {
-        TaskTarget1 = taskTarget1;
+        this.taskTarget1 = taskTarget1;
     }
 
     public String getTaskType2() {
@@ -99,12 +99,12 @@ public class TaskCO {
         this.taskType2 = taskType2;
     }
 
-    public String getTaskArgs2() {
-        return taskArgs2;
+    public String getTaskArg2() {
+        return taskArg2;
     }
 
-    public void setTaskArgs2(String taskArgs2) {
-        this.taskArgs2 = taskArgs2;
+    public void setTaskArg2(String taskArg2) {
+        this.taskArg2 = taskArg2;
     }
 
     public String getTaskTarget2() {

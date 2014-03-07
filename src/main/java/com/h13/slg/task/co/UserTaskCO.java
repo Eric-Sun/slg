@@ -13,19 +13,23 @@ import java.util.Map;
  */
 public class UserTaskCO {
 
-    private long id;
+    private int id;
     private int taskId;
-    private String progess;
+    private Map<String,Integer> progress;
 
-    public String getProgess() {
-        return progess;
+    public Map<String, Integer> getProgress() {
+        return progress;
     }
 
-    public long getId() {
+    public void setProgress(Map<String, Integer> progress) {
+        this.progress = progress;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -35,17 +39,5 @@ public class UserTaskCO {
 
     public void setTaskId(int taskId) {
         this.taskId = taskId;
-    }
-
-    public Map<String, Integer> getProgessMap() {
-        return JSON.parseObject(progess, Map.class);
-    }
-
-    public void setProgessMap(Map<String, Integer> data) {
-        this.progess = JSON.toJSONString(data);
-    }
-
-    public void setProgess(String progess) {
-        this.progess = progess;
     }
 }

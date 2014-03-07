@@ -77,7 +77,7 @@
     <!-- taskTemplate -->
     <bean id="taskSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.LevelCO"/>
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.TaskCO"/>
     </bean>
     <bean id="taskTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"

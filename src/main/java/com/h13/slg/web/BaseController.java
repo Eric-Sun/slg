@@ -33,7 +33,7 @@ public class BaseController {
         try {
             String mod = request.getParameter("mod");
             String act = request.getParameter("act");
-            long uid = new Long(request.getParameter("uid"));
+            int uid = new Integer(request.getParameter("uid"));
             String args = request.getParameter("args");
             String authKey = request.getParameter("auth_key");
             long authTime = new Long(request.getParameter("auth_time"));
@@ -43,7 +43,7 @@ public class BaseController {
             SlgResponseDTO resp = slg.handle(mod, act, uid, seq, args, authTime, authKey);
             return JSON.toJSONString(resp);
         } catch (Exception e) {
-            LOG.error("error.",e);
+            LOG.error("error.", e);
             return null;
         }
     }

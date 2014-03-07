@@ -1,5 +1,6 @@
 package com.h13.slg.role.service;
 
+import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
 
@@ -16,11 +17,11 @@ public interface RoleService {
     /**
      * {"code":0,"desc":"","mod":"role","act":"wear",
      * "args":{"rid":6,"isskill":0,"id":10},"data":{},"serverTime":1394009707}
-     *
+     *                r
      * @param requestDTO
      * @return
      */
-    public SlgData wear(SlgRequestDTO requestDTO);
+    public SlgData wear(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 
     /**
@@ -29,6 +30,6 @@ public interface RoleService {
      * @param requestDTO
      * @return
      */
-    public SlgData takeOff(SlgRequestDTO requestDTO);
+    public SlgData takeOff(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 }

@@ -13,82 +13,49 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class UserPackageCO {
-    private long id;
-    private String roleCard;
-    private String equip;
-    private String gem;
-    private String material;
+    private int id;
+    private Map<String, Integer> roleCard;
+    private Map<String, List<Long>> equip;
+    private Map<String, Integer> gem;
+    private Map<String, Integer> material;
 
-    public String getRoleCard() {
-        return roleCard;
-    }
-
-    public String getEquip() {
-        return equip;
-    }
-
-    public String getGem() {
-        return gem;
-    }
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public Map<String, Integer> getGemMap() {
-        return (Map<String, Integer>) JSON.parseObject(gem, Map.class);
-    }
-
-    public void setGemMap(Map<String, Integer> map) {
-        this.gem = JSON.toJSONString(map);
-    }
-
-    public void setGem(String gem) {
-        this.gem = gem;
-    }
-
-    public Map<String, Integer> getMaterialMap() {
-        return (Map<String, Integer>) JSON.parseObject(material, Map.class);
-    }
-
-    public void setMaterialMap(Map<String, Integer> map) {
-        this.material = JSON.toJSONString(map);
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Map<String, Integer> getRoleCardMap() {
-        return (Map<String, Integer>) JSON.parseObject(roleCard, Map.class);
+    public Map<String, Integer> getRoleCard() {
+        return roleCard;
     }
 
-    public void setRoleCardMap(Map<String, Integer> map) {
-        this.roleCard = JSON.toJSONString(map);
-    }
-
-    public void setRoleCard(String roleCard) {
+    public void setRoleCard(Map<String, Integer> roleCard) {
         this.roleCard = roleCard;
     }
 
-    public Map<String, List<Long>> getEquipMap() {
-        return (Map<String, List<Long>>) JSON.parseObject(equip, Map.class);
+    public Map<String, List<Long>> getEquip() {
+        return equip;
     }
 
-    public void setEquipMap(Map<String, List<Long>> map) {
-        this.equip = JSON.toJSONString(map);
-    }
-
-    public void setEquip(String equip) {
+    public void setEquip(Map<String, List<Long>> equip) {
         this.equip = equip;
     }
 
+    public Map<String, Integer> getGem() {
+        return gem;
+    }
+
+    public void setGem(Map<String, Integer> gem) {
+        this.gem = gem;
+    }
+
+    public Map<String, Integer> getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Map<String, Integer> material) {
+        this.material = material;
+    }
 }

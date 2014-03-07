@@ -15,5 +15,5 @@ public interface EventService {
      * @param slgData
      * @throws RequestErrorException
      */
-    public void triggerTasks(long uid,SlgData slgData)throws RequestErrorException;
+    public void triggerTasks(int uid,SlgData slgData)throws RequestErrorException;
 }

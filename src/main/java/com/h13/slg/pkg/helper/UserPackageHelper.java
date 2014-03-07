@@ -52,7 +52,7 @@ public class UserPackageHelper {
      * @param userPackageCO
      */
     public void updateGem(UserPackageCO userPackageCO) {
-        userPackageDAO.updateGem(userPackageCO.getId(), userPackageCO.getGemMap());
+        userPackageDAO.updateGem(userPackageCO.getId(), userPackageCO.getGem());
     }
 
     /**
@@ -61,7 +61,7 @@ public class UserPackageHelper {
      * @param userPackageCO
      */
     public void updateMaterial(UserPackageCO userPackageCO) {
-        userPackageDAO.updateMaterial(userPackageCO.getId(), userPackageCO.getMaterialMap());
+        userPackageDAO.updateMaterial(userPackageCO.getId(), userPackageCO.getMaterial());
     }
 
     /**
@@ -70,7 +70,7 @@ public class UserPackageHelper {
      * @param userPackageCO
      */
     public void updateRoleCard(UserPackageCO userPackageCO) {
-        userPackageDAO.updateRoleCard(userPackageCO.getId(), userPackageCO.getRoleCardMap());
+        userPackageDAO.updateRoleCard(userPackageCO.getId(), userPackageCO.getRoleCard());
     }
 
     /**
@@ -79,7 +79,7 @@ public class UserPackageHelper {
      * @param userPackageCO
      */
     public void updateEquip(UserPackageCO userPackageCO) {
-        userPackageDAO.updateEquip(userPackageCO.getId(), userPackageCO.getEquipMap());
+        userPackageDAO.updateEquip(userPackageCO.getId(), userPackageCO.getEquip());
     }
 
     /**
@@ -102,9 +102,8 @@ public class UserPackageHelper {
      */
     public void addMaterialItem(long uid, long itemId, int num) {
         UserPackageCO userPackageCO = get(uid);
-        Map<String, Integer> data = userPackageCO.getMaterialMap();
+        Map<String, Integer> data = userPackageCO.getMaterial();
         MapUtil.addItem(data, itemId + "", num);
-        userPackageCO.setMaterialMap(data);
         updateMaterial(userPackageCO);
     }
 
@@ -117,9 +116,8 @@ public class UserPackageHelper {
      */
     public void addGemItem(long uid, long itemId, int num) {
         UserPackageCO userPackageCO = get(uid);
-        Map data = userPackageCO.getGemMap();
+        Map data = userPackageCO.getGem();
         MapUtil.addItem(data, itemId + "", num);
-        userPackageCO.setGemMap(data);
         updateGem(userPackageCO);
     }
 
@@ -132,9 +130,8 @@ public class UserPackageHelper {
      */
     public void addRoleCodeItem(long uid, long itemId, int num) {
         UserPackageCO userPackageCO = get(uid);
-        Map data = userPackageCO.getRoleCardMap();
+        Map data = userPackageCO.getRoleCard();
         MapUtil.addItem(data, itemId + "", num);
-        userPackageCO.setRoleCardMap(data);
         updateRoleCard(userPackageCO);
     }
 
@@ -147,10 +144,9 @@ public class UserPackageHelper {
      */
     public void addEquipItem(long uid, long itemId, long id) {
         UserPackageCO userPackageCO = get(uid);
-        Map data = userPackageCO.getEquipMap();
+        Map data = userPackageCO.getEquip();
         MapUtil.appendItem(data, itemId + "", id);
-        userPackageCO.setEquipMap(data);
-        updateRoleCard(userPackageCO);
+        updateEquip(userPackageCO);
     }
 
 

@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
         String name = (String)request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
         String password = (String)request.getArgs().get(RequestKeyConstants.REQEUST_PASSWORD);
 
-        long userId = userDAO.login(name, MD5Util.getMD5String(password));
+        int userId = userDAO.login(name, MD5Util.getMD5String(password));
 
         if (userId == -1) {
             // 登陆失败,用户密码错误
@@ -103,7 +103,7 @@ public class UserServiceImpl implements UserService {
 
 
         // register user
-        long userId = userDAO.insert(name, MD5Util.getMD5String(password));
+        int userId = userDAO.insert(name, MD5Util.getMD5String(password));
         UserStatusCO userStatusCO = initUserStatus(userId, name);
         userStatusDAO.insert(
                 userStatusCO.getId(),

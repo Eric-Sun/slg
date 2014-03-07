@@ -28,28 +28,27 @@ public class UserEquipDAO {
     @Autowired
     JdbcTemplate j;
 
-    public long insert(final int eid, final long uid,
+    public long insert(final long uid,
                        final String type, final int level, final String gems,
                        final int strength, final int fail, final int refine,
                        final int star) {
         KeyHolder holder = new GeneratedKeyHolder();
-        final String sql = "insert into user_equip(e_id,uid," +
+        final String sql = "insert into user_equip(uid," +
                 "type,level,gems,strength,fail,refine,star,createtime) " +
                 "values " +
-                "(?,?,?,?,?,?,?,?,?,now())";
-        j.update(sql, new PreparedStatementCreator() {
+                "(?,?,?,?,?,?,?,?,now())";
+        j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-                PreparedStatement pstmt = connection.prepareStatement(sql);
-                pstmt.setInt(1, eid);
-                pstmt.setLong(2, uid);
-                pstmt.setString(3, type);
-                pstmt.setInt(4, level);
-                pstmt.setString(5, gems);
-                pstmt.setInt(6, strength);
-                pstmt.setInt(7, fail);
-                pstmt.setInt(8, refine);
-                pstmt.setInt(9, star);
+                PreparedStatement pstmt = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+                pstmt.setLong(1, uid);
+                pstmt.setString(2, type);
+                pstmt.setInt(3, level);
+                pstmt.setString(4, gems);
+                pstmt.setInt(5, strength);
+                pstmt.setInt(6, fail);
+                pstmt.setInt(7, refine);
+                pstmt.setInt(8, star);
                 return pstmt;
             }
         }, holder);
@@ -62,7 +61,7 @@ public class UserEquipDAO {
     }
 
     public UserEquipCO get(long id) {
-        String sql = "select id,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?";
+        String sql = "select id,uid,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 }

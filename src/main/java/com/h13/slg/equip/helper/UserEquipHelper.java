@@ -152,17 +152,16 @@ public class UserEquipHelper {
 
         // 查看背包中是否有这些资源
         UserPackageCO userPackageCO = userPackageHelper.get(uid);
-        int packageMCount1 = userPackageCO.getMaterialMap().get(materialId1 + "");
-        int packageMCount2 = userPackageCO.getMaterialMap().get(materialId2 + "");
+        int packageMCount1 = userPackageCO.getMaterial().get(materialId1 + "");
+        int packageMCount2 = userPackageCO.getMaterial().get(materialId2 + "");
 
         if (packageMCount1 < materialCount1 || packageMCount2 < materialCount2) {
             // 资源不够
             throw new RequestErrorException(ErrorCodeConstants.Role.RESOURCE_IS_NOT_ENOUGH, "");
         }
-        Map d1 = userPackageCO.getMaterialMap();
+        Map d1 = userPackageCO.getMaterial();
         d1.put(materialId1 + "", packageMCount1 - materialCount1);
         d1.put(materialId2 + "", packageMCount2 - materialCount2);
-        userPackageCO.setMaterialMap(d1);
         userPackageHelper.updateMaterial(userPackageCO);
 
         vo.setLevel(nextLevel);
@@ -191,7 +190,7 @@ public class UserEquipHelper {
                     .addParam("eid", eid).addParam("type", type));
             throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "type is error");
         }
-        long ueid = userEquipDAO.insert(eid, uid, type, 1, "{}", 1, 0, 0, 0);
+        long ueid = userEquipDAO.insert( uid, type, eid, "{}", 1, 0, 0, 0);
         userPackageHelper.addEquipItem(uid, eid, ueid);
         return ueid;
     }

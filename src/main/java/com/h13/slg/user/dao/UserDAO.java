@@ -26,7 +26,7 @@ public class UserDAO {
     @Autowired
     JdbcTemplate j;
 
-    public long insert(final String name, final String passwordAfterMd5) {
+    public int insert(final String name, final String passwordAfterMd5) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user (name,password,createtime) values (?,?,now())";
         j.update(new PreparedStatementCreator() {
@@ -38,7 +38,7 @@ public class UserDAO {
                 return pstmt;
             }
         }, holder);
-        return holder.getKey().longValue();
+        return holder.getKey().intValue();
     }
 
 
@@ -49,10 +49,10 @@ public class UserDAO {
      * @param passwordAfterMd5
      * @return
      */
-    public long login(final String name, final String passwordAfterMd5) {
+    public int login(final String name, final String passwordAfterMd5) {
         try {
             final String sql = "select id from user where name=? and password=?";
-            return j.queryForLong(sql, new Object[]{name, passwordAfterMd5});
+            return j.queryForInt(sql, new Object[]{name, passwordAfterMd5});
         } catch (Exception e) {
 
             return -1;

@@ -46,6 +46,11 @@ public class UserRoleHelper {
         return userRoleDAO.get(urid);
     }
 
+    public void updateUserRole(UserRoleCO userRoleCO) {
+        userRoleDAO.update(userRoleCO.getId(), userRoleCO.getWeapon(), userRoleCO.getArmor(),
+                userRoleCO.getAccessory());
+    }
+
     public void add(long uid, long rId) {
         // 检查是否在招贤馆中
 
@@ -70,12 +75,35 @@ public class UserRoleHelper {
             throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
         }
         if (ue.getType().equals(EquipConstants.EquipType.ACCESSORY)) {
+            if (ur.getAccessory() != RoleConstants.NO_EQUIP_ID) {
+                SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "accessory is have one")
+                        .addParam("ue-uid", ue.getUid())
+                        .addParam("uid", uid)
+                        .addParam("currentAccessory", ur.getAccessory()));
+                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            }
+
             ur.setAccessory(ue.getId());
         } else if (ue.getType().equals(EquipConstants.EquipType.ARMOR)) {
+            if (ur.getArmor() != RoleConstants.NO_EQUIP_ID) {
+                SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "armor is have one")
+                        .addParam("ue-uid", ue.getUid())
+                        .addParam("uid", uid)
+                        .addParam("currentArmor", ur.getArmor()));
+                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            }
             ur.setArmor(ue.getId());
         } else {
+            if (ur.getWeapon() != RoleConstants.NO_EQUIP_ID) {
+                SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "weapon is have one")
+                        .addParam("ue-uid", ue.getUid())
+                        .addParam("uid", uid)
+                        .addParam("currentWeapon", ur.getWeapon()));
+                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            }
             ur.setWeapon(ue.getId());
         }
+        updateUserRole(ur);
         SlgLogger.info(SlgLoggerEntity.p("role", "wear", uid, "ok")
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));
@@ -84,6 +112,7 @@ public class UserRoleHelper {
 
     /**
      * 脱下装备
+     *
      * @param uid
      * @param urid
      * @param ueid
@@ -99,12 +128,34 @@ public class UserRoleHelper {
             throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
         }
         if (ue.getType().equals(EquipConstants.EquipType.ACCESSORY)) {
+            if (ur.getAccessory() == RoleConstants.NO_EQUIP_ID) {
+                SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "accessory don't have one")
+                        .addParam("ue-uid", ue.getUid())
+                        .addParam("uid", uid)
+                        .addParam("currentAccessory", ur.getAccessory()));
+                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            }
             ur.setAccessory(RoleConstants.NO_EQUIP_ID);
         } else if (ue.getType().equals(EquipConstants.EquipType.ARMOR)) {
+            if (ur.getArmor() == RoleConstants.NO_EQUIP_ID) {
+                SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "armor don't have one")
+                        .addParam("ue-uid", ue.getUid())
+                        .addParam("uid", uid)
+                        .addParam("currentArmor", ur.getArmor()));
+                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            }
             ur.setArmor(RoleConstants.NO_EQUIP_ID);
         } else {
+            if (ur.getWeapon() == RoleConstants.NO_EQUIP_ID) {
+                SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "weapon don't have one")
+                        .addParam("ue-uid", ue.getUid())
+                        .addParam("uid", uid)
+                        .addParam("currentWeapon", ur.getWeapon()));
+                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            }
             ur.setWeapon(RoleConstants.NO_EQUIP_ID);
         }
+        updateUserRole(ur);
         SlgLogger.info(SlgLoggerEntity.p("role", "takeOff", uid, "ok")
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));

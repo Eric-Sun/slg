@@ -28,16 +28,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-27
- * Time: 下午4:26
- * To change this template use File | Settings | File Templates.
+ *
  */
 @Service
 public class UserTaskHelper implements ApplicationContextAware {
@@ -54,9 +51,9 @@ public class UserTaskHelper implements ApplicationContextAware {
     UserStatusHelper userStatusHelper;
     @Autowired
     UserPackageHelper userPackageHelper;
-
     @Autowired
     UserEquipHelper userEquipHelper;
+
     private ApplicationContext applicationContext;
 
     /**
@@ -64,26 +61,37 @@ public class UserTaskHelper implements ApplicationContextAware {
      *
      * @param uid
      */
-    public void create(long uid) {
-        userTaskDAO.insert(uid, 1, "{1:0,2:0}");
+    public void create(int uid) {
+        Map<String, Integer> newTaskObject = newTaskObject();
+        userTaskDAO.insert(uid, 1, newTaskObject);
         UserTaskCO userTaskCO = new UserTaskCO();
         userTaskCO.setId(uid);
-        userTaskCO.setProgess("{1:0,2:0}");
+        userTaskCO.setProgress(newTaskObject);
         userTaskCO.setTaskId(1);
         userTaskCache.set(userTaskCO);
-        SlgLogger.info(SlgLoggerEntity.p("task","create",uid,"add a new task."));
+        SlgLogger.info(SlgLoggerEntity.p("task", "create", uid, "add a new task."));
     }
 
+    private Map<String, Integer> newTaskObject() {
+        return new HashMap<String, Integer>() {{
+            put("1", 0);
+            put("2", 0);
+        }};
+    }
 
     public void updateProgress(UserTaskCO userTaskCO) {
         userTaskDAO.updateProgess(userTaskCO.getId(), userTaskCO.getTaskId(),
-                JSON.toJSONString(userTaskCO.getProgess()));
+                userTaskCO.getProgress());
         userTaskCache.set(userTaskCO);
     }
 
-    public void setNewTask(UserTaskCO userTaskCO) {
-        userTaskDAO.updateProgess(userTaskCO.getId(), userTaskCO.getTaskId(),
-                JSON.toJSONString(userTaskCO.getProgess()));
+    public void setNewTask(int uid, int taskId) {
+        UserTaskCO userTaskCO = new UserTaskCO();
+        userTaskCO.setId(uid);
+        userTaskCO.setTaskId(taskId);
+        userTaskCO.setProgress(newTaskObject());
+        userTaskDAO.updateTask(userTaskCO.getId(), userTaskCO.getTaskId(),
+                newTaskObject());
         userTaskCache.set(userTaskCO);
     }
 
@@ -93,7 +101,7 @@ public class UserTaskHelper implements ApplicationContextAware {
      * @param uid
      * @return
      */
-    public UserTaskCO getTask(long uid) {
+    public UserTaskCO getTask(int uid) {
         UserTaskCO userTaskCO = userTaskCache.get(uid);
         if (userTaskCO == null)
             userTaskCO = userTaskDAO.get(uid);
@@ -106,7 +114,7 @@ public class UserTaskHelper implements ApplicationContextAware {
      *
      * @param evtList
      */
-    public boolean handleEvents(long uid, List<UserEventCO> evtList, SlgData slgData, FinishedTaskVO ftVO) throws RequestErrorException {
+    public boolean handleEvents(int uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestErrorException {
 
 
         UserTaskCO userTaskCO = getTask(uid);
@@ -115,48 +123,52 @@ public class UserTaskHelper implements ApplicationContextAware {
         // 需要把是任务的信息
         UserSmallTaskCO t1 = new UserSmallTaskCO();
         t1.setOrder(1);
-        t1.setTaskArgs(taskCO.getTaskArgs1());
+        t1.setTaskArgs(taskCO.getTaskArg1());
         t1.setTaskTarget(taskCO.getTaskTarget1());
         t1.setTaskType(taskCO.getTaskType1());
-        serviceName = t1.getTaskType() + "Service";
+        serviceName = t1.getTaskType() + "Handler";
         EventHandler evtHandler = (EventHandler) applicationContext.getBean(serviceName);
 
         for (UserEventCO evt : evtList) {
             evtHandler.handleEvent(evt, t1);
         }
 
-        UserSmallTaskCO t2 = new UserSmallTaskCO();
-        t2.setOrder(2);
-        t2.setTaskArgs(taskCO.getTaskArgs2());
-        t2.setTaskTarget(taskCO.getTaskTarget2());
-        t2.setTaskType(taskCO.getTaskType2());
+        if (!taskCO.getTaskType2().equals("")) {
+            UserSmallTaskCO t2 = new UserSmallTaskCO();
+            t2.setOrder(2);
+            t2.setTaskArgs(taskCO.getTaskArg2());
+            t2.setTaskTarget(taskCO.getTaskTarget2());
+            t2.setTaskType(taskCO.getTaskType2());
 
-        for (UserEventCO evt : evtList) {
-            evtHandler.handleEvent(evt, t2);
+            for (UserEventCO evt : evtList) {
+                evtHandler.handleEvent(evt, t2);
+            }
         }
         // 多次完成任务的情况
         // 检查任务是否完成
-        Map<String, Integer> data = userTaskCO.getProgessMap();
+        userTaskCO = getTask(uid);
+        Map<String, Integer> data = userTaskCO.getProgress();
         boolean finished = false;
-        if (data.get("1").toString().equals(taskCO.getTaskTarget1())
-                &&
+        if (data.get("1").toString().equals(taskCO.getTaskTarget1()) && "".equals(taskCO.getTaskTarget2())) {
+            // 第一个任务完成，没有第二个任务
+            finished = true;
+        } else if (data.get("1").toString().equals(taskCO.getTaskTarget1()) &&
                 data.get("2").toString().equals(taskCO.getTaskTarget2())) {
+            // 两个任务全部完成
             finished = true;
         }
 
         if (finished == true) {
-
-            List<FinishedPerTaskVO> perList = ftVO.getList();
 
             FinishedPerTaskVO perVO = new FinishedPerTaskVO();
             perVO.setId(new Integer(taskCO.getId()));
             perVO.setLevel(new Integer(taskCO.getLevel()));
             perVO.setXp(new Integer(taskCO.getXp()));
             perVO.setGold(new Integer(taskCO.getGold()));
-
+            List<List<String>> awardList = new LinkedList<List<String>>();
             // 如果award存在的话，需要解析
-            if (taskCO.getAward1() != null) {
-                List<List<String>> awardList = new LinkedList<List<String>>();
+            if (!taskCO.getAward1().equals("")) {
+
                 List<String> awardPerList = new LinkedList<String>();
                 String awardInfo = taskCO.getAward1();
                 if (awardInfo.contains("equip")) {
@@ -176,11 +188,19 @@ public class UserTaskHelper implements ApplicationContextAware {
                     awardPerList.add(taskCO.getAward1().split(".")[1].split(".")[1]);
                     awardList.add(awardPerList);
                 }
+
+
             }
-            perList.add(perVO);
-            ftVO.setList(perList);
+            perVO.setAwards(awardList);
+            finishedTaskList.add(perVO);
             // handleAwards
             handleAwards(uid, perVO);
+
+            // 任务设置为下一个任务
+            int nextId = userTaskCO.getTaskId() + 1;
+            setNewTask(uid, nextId);
+
+            slgData.add("finished_task", finishedTaskList);
         }
         return finished;
     }
@@ -191,6 +211,8 @@ public class UserTaskHelper implements ApplicationContextAware {
         List<List<String>> awards = perVO.getAwards();
         userStatusHelper.addGold(uid, gold);
         userStatusHelper.addXp(uid, xp);
+        if (awards.size() == 0)
+            return;
 
         for (List<String> perAward : awards) {
             if (perAward.size() == 3) {

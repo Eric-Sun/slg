@@ -5,10 +5,12 @@ import com.h13.slg.core.SlgData;
 import com.h13.slg.event.co.UserEventCO;
 import com.h13.slg.event.helper.UserEventHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
+import com.h13.slg.task.vo.FinishedPerTaskVO;
 import com.h13.slg.task.vo.FinishedTaskVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -27,13 +29,13 @@ public class EventServiceImpl implements EventService {
     UserTaskHelper userTaskHelper;
 
 
-    public void triggerTasks(long uid, SlgData slgData) throws RequestErrorException {
+    public void triggerTasks(int uid, SlgData slgData) throws RequestErrorException {
         List<UserEventCO> evtList = userEventHelper.getAllEvents(uid);
-        if(evtList.size()==0)
-            return ;
-        FinishedTaskVO ftVO = new FinishedTaskVO();
+        if (evtList.size() == 0)
+            return;
+        List<FinishedPerTaskVO> list = new LinkedList<FinishedPerTaskVO>();
         boolean finished = false;
-        while ((finished = userTaskHelper.handleEvents(uid, evtList, slgData, ftVO)) == true) {
+        while ((finished = userTaskHelper.handleEvents(uid, evtList, slgData, list)) != true) {
 
         }
     }
