@@ -2,7 +2,7 @@
 <roleList>
       <role>
             <id>1</id>
-            <name>å•å¸ƒ</name>
+            <name>ÂÀ²¼</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -35,7 +35,7 @@
       </role>
       <role>
             <id>2</id>
-            <name>èµµäº‘</name>
+            <name>ÕÔÔÆ</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -68,7 +68,7 @@
       </role>
       <role>
             <id>3</id>
-            <name>å…³ç¾½</name>
+            <name>¹ØÓð</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -101,7 +101,7 @@
       </role>
       <role>
             <id>4</id>
-            <name>é©¬è¶…</name>
+            <name>Âí³¬</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -127,7 +127,7 @@
       </role>
       <role>
             <id>5</id>
-            <name>å¼ é£ž</name>
+            <name>ÕÅ·É</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -153,7 +153,7 @@
       </role>
       <role>
             <id>6</id>
-            <name>é»„å¿ </name>
+            <name>»ÆÖÒ</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -179,7 +179,7 @@
       </role>
       <role>
             <id>7</id>
-            <name>åºžå¾·</name>
+            <name>ÅÓµÂ</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -205,7 +205,7 @@
       </role>
       <role>
             <id>8</id>
-            <name>å¤ªå²æ…ˆ</name>
+            <name>Ì«Ê·´È</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -231,7 +231,7 @@
       </role>
       <role>
             <id>9</id>
-            <name>å¼ è¾½</name>
+            <name>ÕÅÁÉ</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -257,7 +257,7 @@
       </role>
       <role>
             <id>10</id>
-            <name>ç”˜å®</name>
+            <name>¸ÊÄþ</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -283,7 +283,7 @@
       </role>
       <role>
             <id>11</id>
-            <name>è®¸è¤š</name>
+            <name>ÐíñÒ</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -309,7 +309,7 @@
       </role>
       <role>
             <id>12</id>
-            <name>å…¸éŸ¦</name>
+            <name>µäÎ¤</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -342,7 +342,7 @@
       </role>
       <role>
             <id>13</id>
-            <name>è¯¸è‘›äº®</name>
+            <name>Öî¸ðÁÁ</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -375,7 +375,7 @@
       </role>
       <role>
             <id>14</id>
-            <name>éƒ­å˜‰</name>
+            <name>¹ù¼Î</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -401,7 +401,7 @@
       </role>
       <role>
             <id>15</id>
-            <name>åºžç»Ÿ</name>
+            <name>ÅÓÍ³</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -427,7 +427,7 @@
       </role>
       <role>
             <id>16</id>
-            <name>å‘¨ç‘œ</name>
+            <name>ÖÜè¤</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -453,7 +453,7 @@
       </role>
       <role>
             <id>17</id>
-            <name>æ›¹æ“</name>
+            <name>²Ü²Ù</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -479,7 +479,7 @@
       </role>
       <role>
             <id>18</id>
-            <name>å¸é©¬æ‡¿</name>
+            <name>Ë¾ÂíÜ²</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -505,7 +505,7 @@
       </role>
       <role>
             <id>23</id>
-            <name>è²‚è‰</name>
+            <name>õõ²õ</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -538,7 +538,7 @@
       </role>
       <role>
             <id>24</id>
-            <name>å°ä¹”</name>
+            <name>Ð¡ÇÇ</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -564,7 +564,7 @@
       </role>
       <role>
             <id>25</id>
-            <name>å¤§ä¹”</name>
+            <name>´óÇÇ</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -590,7 +590,7 @@
       </role>
       <role>
             <id>26</id>
-            <name>ç”„å§¬</name>
+            <name>Õç¼§</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -616,7 +616,7 @@
       </role>
       <role>
             <id>29</id>
-            <name>å­™åš</name>
+            <name>Ëï¼á</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -642,7 +642,7 @@
       </role>
       <role>
             <id>30</id>
-            <name>é¢œè‰¯</name>
+            <name>ÑÕÁ¼</name>
             <quantity>purple</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -668,7 +668,7 @@
       </role>
       <role>
             <id>32</id>
-            <name>é­å»¶</name>
+            <name>ÎºÑÓ</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -694,7 +694,7 @@
       </role>
       <role>
             <id>33</id>
-            <name>å¤ä¾¯&#x60c7;</name>
+            <name>ÏÄºî&#x60c7;</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -720,7 +720,7 @@
       </role>
       <role>
             <id>34</id>
-            <name>å¤ä¾¯æ¸Š</name>
+            <name>ÏÄºîÔ¨</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -746,7 +746,7 @@
       </role>
       <role>
             <id>35</id>
-            <name>å¾æ™ƒ</name>
+            <name>Ðì»Î</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -772,7 +772,7 @@
       </role>
       <role>
             <id>36</id>
-            <name>å‘¨æ³°</name>
+            <name>ÖÜÌ©</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -798,7 +798,7 @@
       </role>
       <role>
             <id>37</id>
-            <name>åŽé›„</name>
+            <name>»ªÐÛ</name>
             <quantity>purple</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -824,7 +824,7 @@
       </role>
       <role>
             <id>38</id>
-            <name>å¼ é¢Œ</name>
+            <name>ÕÅò¢</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -850,7 +850,7 @@
       </role>
       <role>
             <id>39</id>
-            <name>å§œç»´</name>
+            <name>½ªÎ¬</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -876,7 +876,7 @@
       </role>
       <role>
             <id>40</id>
-            <name>é‚“è‰¾</name>
+            <name>µË°¬</name>
             <quantity>purple</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -902,7 +902,7 @@
       </role>
       <role>
             <id>43</id>
-            <name>é»„ç›–</name>
+            <name>»Æ¸Ç</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -928,7 +928,7 @@
       </role>
       <role>
             <id>45</id>
-            <name>å‡Œç»Ÿ</name>
+            <name>ÁèÍ³</name>
             <quantity>purple</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -954,7 +954,7 @@
       </role>
       <role>
             <id>46</id>
-            <name>æ›¹ä¸•</name>
+            <name>²ÜØ§</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -980,7 +980,7 @@
       </role>
       <role>
             <id>47</id>
-            <name>å­™æƒ</name>
+            <name>ËïÈ¨</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1006,7 +1006,7 @@
       </role>
       <role>
             <id>48</id>
-            <name>åˆ˜ä¹ä¹</name>
+            <name>ÁõÀÖÀÖ</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1032,7 +1032,7 @@
       </role>
       <role>
             <id>52</id>
-            <name>è¢ç»</name>
+            <name>Ô¬ÉÜ</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1058,7 +1058,7 @@
       </role>
       <role>
             <id>53</id>
-            <name>åˆ˜å¤‡</name>
+            <name>Áõ±¸</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1084,7 +1084,7 @@
       </role>
       <role>
             <id>62</id>
-            <name>è€&#x5f67;</name>
+            <name>Ü÷&#x5f67;</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1110,7 +1110,7 @@
       </role>
       <role>
             <id>63</id>
-            <name>é™†é€Š</name>
+            <name>Â½Ñ·</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1136,7 +1136,7 @@
       </role>
       <role>
             <id>67</id>
-            <name>è¯¸è‘›è¯ž</name>
+            <name>Öî¸ðµ®</name>
             <quantity>purple</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1162,7 +1162,7 @@
       </role>
       <role>
             <id>68</id>
-            <name>è¢æœ¯</name>
+            <name>Ô¬Êõ</name>
             <quantity>purple</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1188,7 +1188,7 @@
       </role>
       <role>
             <id>69</id>
-            <name>å¼ è§’</name>
+            <name>ÕÅ½Ç</name>
             <quantity>purple</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1214,7 +1214,7 @@
       </role>
       <role>
             <id>70</id>
-            <name>åˆ˜ç¦…</name>
+            <name>Áõìø</name>
             <quantity>purple</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1240,7 +1240,7 @@
       </role>
       <role>
             <id>71</id>
-            <name>å­™å°šé¦™</name>
+            <name>ËïÉÐÏã</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1266,7 +1266,7 @@
       </role>
       <role>
             <id>72</id>
-            <name>ç¥èžå¤«äºº</name>
+            <name>×£ÈÚ·òÈË</name>
             <quantity>purple</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1292,7 +1292,7 @@
       </role>
       <role>
             <id>73</id>
-            <name>å¼ æ˜¥åŽ</name>
+            <name>ÕÅ´º»ª</name>
             <quantity>purple</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1318,7 +1318,7 @@
       </role>
       <role>
             <id>74</id>
-            <name>é»„æœˆè‹±</name>
+            <name>»ÆÔÂÓ¢</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1344,7 +1344,7 @@
       </role>
       <role>
             <id>76</id>
-            <name>è’‹å¹²</name>
+            <name>½¯¸É</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1370,7 +1370,7 @@
       </role>
       <role>
             <id>77</id>
-            <name>é€¢çºª</name>
+            <name>·ê¼Í</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1396,7 +1396,7 @@
       </role>
       <role>
             <id>85</id>
-            <name>å¢æ¤</name>
+            <name>Â¬Ö²</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1422,7 +1422,7 @@
       </role>
       <role>
             <id>101</id>
-            <name>æŽå„’</name>
+            <name>ÀîÈå</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1448,7 +1448,7 @@
       </role>
       <role>
             <id>103</id>
-            <name>é»„æƒ</name>
+            <name>»ÆÈ¨</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1474,7 +1474,7 @@
       </role>
       <role>
             <id>109</id>
-            <name>æ›¹æ¤</name>
+            <name>²ÜÖ²</name>
             <quantity>purple</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1500,7 +1500,7 @@
       </role>
       <role>
             <id>110</id>
-            <name>éƒ­æ±œ</name>
+            <name>¹ùãá</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -1526,7 +1526,7 @@
       </role>
       <role>
             <id>121</id>
-            <name>è¾›å®ªè‹±</name>
+            <name>ÐÁÏÜÓ¢</name>
             <quantity>blue</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1552,7 +1552,7 @@
       </role>
       <role>
             <id>122</id>
-            <name>ç”˜å¤«äºº</name>
+            <name>¸Ê·òÈË</name>
             <quantity>blue</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1578,7 +1578,7 @@
       </role>
       <role>
             <id>123</id>
-            <name>å…³ç´¢</name>
+            <name>¹ØË÷</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1604,7 +1604,7 @@
       </role>
       <role>
             <id>124</id>
-            <name>é«˜è§ˆ</name>
+            <name>¸ßÀÀ</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1630,7 +1630,7 @@
       </role>
       <role>
             <id>125</id>
-            <name>ç®¡äº¥</name>
+            <name>¹Üº¥</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1656,7 +1656,7 @@
       </role>
       <role>
             <id>126</id>
-            <name>å‡Œå½ª</name>
+            <name>Áè±ë</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1682,7 +1682,7 @@
       </role>
       <role>
             <id>127</id>
-            <name>ä¸¥é¢œ</name>
+            <name>ÑÏÑÕ</name>
             <quantity>purple</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1708,7 +1708,7 @@
       </role>
       <role>
             <id>128</id>
-            <name>é²ä¸‰å¨˜</name>
+            <name>±«ÈýÄï</name>
             <quantity>blue</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -1734,7 +1734,7 @@
       </role>
       <role>
             <id>129</id>
-            <name>æ²™æ‘©æŸ¯</name>
+            <name>É³Ä¦¿Â</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1760,7 +1760,7 @@
       </role>
       <role>
             <id>132</id>
-            <name>å¼ ç»£</name>
+            <name>ÕÅÐå</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1786,7 +1786,7 @@
       </role>
       <role>
             <id>134</id>
-            <name>æ½˜ç’‹</name>
+            <name>ÅËè°</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1812,7 +1812,7 @@
       </role>
       <role>
             <id>135</id>
-            <name>ç¥–èŒ‚</name>
+            <name>×æÃ¯</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1838,7 +1838,7 @@
       </role>
       <role>
             <id>137</id>
-            <name>ç”°äºˆ</name>
+            <name>ÌïÓè</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1864,7 +1864,7 @@
       </role>
       <role>
             <id>138</id>
-            <name>é©¬å¿ </name>
+            <name>ÂíÖÒ</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -1890,7 +1890,7 @@
       </role>
       <role>
             <id>144</id>
-            <name>å¾è£</name>
+            <name>ÐìÈÙ</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -1916,7 +1916,7 @@
       </role>
       <role>
             <id>147</id>
-            <name>æ–‡è˜</name>
+            <name>ÎÄÆ¸</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -1942,7 +1942,7 @@
       </role>
       <role>
             <id>148</id>
-            <name>æ½˜å‡¤</name>
+            <name>ÅË·ï</name>
             <quantity>purple</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -1968,7 +1968,7 @@
       </role>
       <role>
             <id>152</id>
-            <name>äºŽç¦</name>
+            <name>ÓÚ½û</name>
             <quantity>purple</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -1994,7 +1994,7 @@
       </role>
       <role>
             <id>155</id>
-            <name>å»–åŒ–</name>
+            <name>ÁÎ»¯</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -2020,7 +2020,7 @@
       </role>
       <role>
             <id>157</id>
-            <name>å¼ ä»»</name>
+            <name>ÕÅÈÎ</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -2046,7 +2046,7 @@
       </role>
       <role>
             <id>158</id>
-            <name>éŸ©é‚</name>
+            <name>º«Ëì</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -2072,7 +2072,7 @@
       </role>
       <role>
             <id>159</id>
-            <name>é©¬å²±</name>
+            <name>Âíá·</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -2098,7 +2098,7 @@
       </role>
       <role>
             <id>170</id>
-            <name>é«˜é¡º</name>
+            <name>¸ßË³</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -2124,7 +2124,7 @@
       </role>
       <role>
             <id>171</id>
-            <name>é‚¢é“è£</name>
+            <name>ÐÏµÀÈÙ</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -2150,7 +2150,7 @@
       </role>
       <role>
             <id>173</id>
-            <name>è®¸é–</name>
+            <name>Ðí¾¸</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2176,7 +2176,7 @@
       </role>
       <role>
             <id>174</id>
-            <name>çŸ³å¹¿å…ƒ</name>
+            <name>Ê¯¹ãÔª</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2202,7 +2202,7 @@
       </role>
       <role>
             <id>175</id>
-            <name>å´”å·žå¹³</name>
+            <name>´ÞÖÝÆ½</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2228,7 +2228,7 @@
       </role>
       <role>
             <id>176</id>
-            <name>å‘¨å°‘åŽ</name>
+            <name>ÖÜÉÙ»ª</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2254,7 +2254,7 @@
       </role>
       <role>
             <id>177</id>
-            <name>ä»»ä¸‰åº­</name>
+            <name>ÈÎÈýÍ¥</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2280,7 +2280,7 @@
       </role>
       <role>
             <id>178</id>
-            <name>å”éª</name>
+            <name>ÌÆ¿¥</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2306,7 +2306,7 @@
       </role>
       <role>
             <id>179</id>
-            <name>è€¿çºª</name>
+            <name>¹¢¼Í</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2332,7 +2332,7 @@
       </role>
       <role>
             <id>180</id>
-            <name>å¸é©¬ç‚Ž</name>
+            <name>Ë¾ÂíÑ×</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2358,7 +2358,7 @@
       </role>
       <role>
             <id>181</id>
-            <name>é™†ç»©</name>
+            <name>Â½¼¨</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2384,7 +2384,7 @@
       </role>
       <role>
             <id>182</id>
-            <name>çŽ‹ç”«</name>
+            <name>Íõ¸¦</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2410,7 +2410,7 @@
       </role>
       <role>
             <id>183</id>
-            <name>çŽ‹åŒ¡</name>
+            <name>Íõ¿ï</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2436,7 +2436,7 @@
       </role>
       <role>
             <id>184</id>
-            <name>ç”°ç•´</name>
+            <name>Ìï³ë</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2462,7 +2462,7 @@
       </role>
       <role>
             <id>185</id>
-            <name>çŽ‹ä¸‰æ˜Š</name>
+            <name>ÍõÈýê»</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2488,7 +2488,7 @@
       </role>
       <role>
             <id>186</id>
-            <name>åˆ˜å®</name>
+            <name>Áõºê</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2514,7 +2514,7 @@
       </role>
       <role>
             <id>187</id>
-            <name>æŽåŒè¶Š</name>
+            <name>ÀîË«Ô½</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2540,7 +2540,7 @@
       </role>
       <role>
             <id>188</id>
-            <name>å¼ å¤©ä½‘</name>
+            <name>ÕÅÌìÓÓ</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2566,7 +2566,7 @@
       </role>
       <role>
             <id>189</id>
-            <name>åˆ˜ä¼¯æž—</name>
+            <name>Áõ²®ÁÖ</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2592,7 +2592,7 @@
       </role>
       <role>
             <id>190</id>
-            <name>åˆ˜å®‰</name>
+            <name>Áõ°²</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2618,7 +2618,7 @@
       </role>
       <role>
             <id>191</id>
-            <name>å¼ æ¸…</name>
+            <name>ÕÅÇå</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2644,7 +2644,7 @@
       </role>
       <role>
             <id>192</id>
-            <name>å‘¨å…†ç¥¥</name>
+            <name>ÖÜÕ×Ïé</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2670,7 +2670,7 @@
       </role>
       <role>
             <id>193</id>
-            <name>ä¹”çŽ„</name>
+            <name>ÇÇÐþ</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2696,7 +2696,7 @@
       </role>
       <role>
             <id>194</id>
-            <name>åˆ˜ç®</name>
+            <name>Áõçý</name>
             <quantity>blue</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2722,7 +2722,7 @@
       </role>
       <role>
             <id>195</id>
-            <name>ä¹”ç‘</name>
+            <name>ÇÇè£</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2748,7 +2748,7 @@
       </role>
       <role>
             <id>196</id>
-            <name>åˆ˜ç†</name>
+            <name>ÁõÀí</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2774,7 +2774,7 @@
       </role>
       <role>
             <id>197</id>
-            <name>é™ˆ&#x73ea;</name>
+            <name>³Â&#x73ea;</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2800,7 +2800,7 @@
       </role>
       <role>
             <id>198</id>
-            <name>èµµå‰‘</name>
+            <name>ÕÔ½£</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2826,7 +2826,7 @@
       </role>
       <role>
             <id>199</id>
-            <name>è¯¸è‘›æª</name>
+            <name>Öî¸ðã¡</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2852,7 +2852,7 @@
       </role>
       <role>
             <id>200</id>
-            <name>çŽ‹æœ—</name>
+            <name>ÍõÀÊ</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2878,7 +2878,7 @@
       </role>
       <role>
             <id>201</id>
-            <name>åˆ˜å¾ª</name>
+            <name>ÁõÑ­</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2904,7 +2904,7 @@
       </role>
       <role>
             <id>202</id>
-            <name>æ¨æŸ</name>
+            <name>Ñî°Ø</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2930,7 +2930,7 @@
       </role>
       <role>
             <id>203</id>
-            <name>æ¨æ¾</name>
+            <name>ÑîËÉ</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2956,7 +2956,7 @@
       </role>
       <role>
             <id>204</id>
-            <name>çŽ‹æ¥·</name>
+            <name>Íõ¿¬</name>
             <quantity>white</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -2982,7 +2982,7 @@
       </role>
       <role>
             <id>205</id>
-            <name>æ­¥å¤«äºº</name>
+            <name>²½·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3008,7 +3008,7 @@
       </role>
       <role>
             <id>206</id>
-            <name>é©¬å¤«äºº</name>
+            <name>Âí·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3034,7 +3034,7 @@
       </role>
       <role>
             <id>207</id>
-            <name>å­™å¤«äºº</name>
+            <name>Ëï·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3060,7 +3060,7 @@
       </role>
       <role>
             <id>208</id>
-            <name>èµµå¤«äºº</name>
+            <name>ÕÔ·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3086,7 +3086,7 @@
       </role>
       <role>
             <id>209</id>
-            <name>çŽ‹å¤«äºº</name>
+            <name>Íõ·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3112,7 +3112,7 @@
       </role>
       <role>
             <id>210</id>
-            <name>æŽå¤«äºº</name>
+            <name>Àî·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3138,7 +3138,7 @@
       </role>
       <role>
             <id>211</id>
-            <name>éŸ©å¤«äºº</name>
+            <name>º«·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3164,7 +3164,7 @@
       </role>
       <role>
             <id>212</id>
-            <name>å¾å¤«äºº</name>
+            <name>Ðì·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3190,7 +3190,7 @@
       </role>
       <role>
             <id>213</id>
-            <name>è°­å¤«äºº</name>
+            <name>Ì··òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3216,7 +3216,7 @@
       </role>
       <role>
             <id>214</id>
-            <name>é™†å¤«äºº</name>
+            <name>Â½·òÈË</name>
             <quantity>white</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -3242,7 +3242,7 @@
       </role>
       <role>
             <id>215</id>
-            <name>ç¨‹ç§‰</name>
+            <name>³Ì±ü</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3268,7 +3268,7 @@
       </role>
       <role>
             <id>216</id>
-            <name>åˆ˜å‹‹</name>
+            <name>ÁõÑ«</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3294,7 +3294,7 @@
       </role>
       <role>
             <id>217</id>
-            <name>åˆ˜è¾Ÿ</name>
+            <name>Áõ±Ù</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3320,7 +3320,7 @@
       </role>
       <role>
             <id>218</id>
-            <name>å…¬å­™æ¸Š</name>
+            <name>¹«ËïÔ¨</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3346,7 +3346,7 @@
       </role>
       <role>
             <id>219</id>
-            <name>æŽé£žé¾™</name>
+            <name>Àî·ÉÁú</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3372,7 +3372,7 @@
       </role>
       <role>
             <id>220</id>
-            <name>å¼ è®©</name>
+            <name>ÕÅÈÃ</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3398,7 +3398,7 @@
       </role>
       <role>
             <id>221</id>
-            <name>å‘¨æ˜•</name>
+            <name>ÖÜê¿</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3424,7 +3424,7 @@
       </role>
       <role>
             <id>222</id>
-            <name>ä¼å®Œ</name>
+            <name>·üÍê</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3450,7 +3450,7 @@
       </role>
       <role>
             <id>223</id>
-            <name>é»„çš“</name>
+            <name>»Æð©</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3476,7 +3476,7 @@
       </role>
       <role>
             <id>224</id>
-            <name>ä¸¥çº²</name>
+            <name>ÑÏ¸Ù</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3502,7 +3502,7 @@
       </role>
       <role>
             <id>225</id>
-            <name>ä»»å³»</name>
+            <name>ÈÎ¾þ</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3528,7 +3528,7 @@
       </role>
       <role>
             <id>226</id>
-            <name>å¼ ç¿¼</name>
+            <name>ÕÅÒí</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3554,7 +3554,7 @@
       </role>
       <role>
             <id>227</id>
-            <name>è‡§éœ¸</name>
+            <name>ê°°Ô</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3580,7 +3580,7 @@
       </role>
       <role>
             <id>228</id>
-            <name>è”¡ç‘</name>
+            <name>²Ìè£</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3606,7 +3606,7 @@
       </role>
       <role>
             <id>229</id>
-            <name>ç™½ä¹</name>
+            <name>°×ÀÖ</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3632,7 +3632,7 @@
       </role>
       <role>
             <id>230</id>
-            <name>è”¡å’Œ</name>
+            <name>²ÌºÍ</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3658,7 +3658,7 @@
       </role>
       <role>
             <id>231</id>
-            <name>å‘æœ—</name>
+            <name>ÏòÀÊ</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3684,7 +3684,7 @@
       </role>
       <role>
             <id>232</id>
-            <name>å‘å® </name>
+            <name>Ïò³è</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3710,7 +3710,7 @@
       </role>
       <role>
             <id>233</id>
-            <name>æ›¹ä¼‘</name>
+            <name>²ÜÐÝ</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3736,7 +3736,7 @@
       </role>
       <role>
             <id>234</id>
-            <name>ä¹å°±</name>
+            <name>ÀÖ¾Í</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3762,7 +3762,7 @@
       </role>
       <role>
             <id>235</id>
-            <name>å†¯ä¸¹</name>
+            <name>·ëµ¤</name>
             <quantity>white</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3788,7 +3788,7 @@
       </role>
       <role>
             <id>236</id>
-            <name>è£´å…ƒç»</name>
+            <name>ÅáÔªÉÜ</name>
             <quantity>blue</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -3814,7 +3814,7 @@
       </role>
       <role>
             <id>237</id>
-            <name>å­ŸèŽ·</name>
+            <name>ÃÏ»ñ</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3840,7 +3840,7 @@
       </role>
       <role>
             <id>238</id>
-            <name>æœ±çµ</name>
+            <name>ÖìÁé</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3866,7 +3866,7 @@
       </role>
       <role>
             <id>239</id>
-            <name>é«˜å¹²</name>
+            <name>¸ß¸É</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3892,7 +3892,7 @@
       </role>
       <role>
             <id>240</id>
-            <name>é»„ç¥–</name>
+            <name>»Æ×æ</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3918,7 +3918,7 @@
       </role>
       <role>
             <id>241</id>
-            <name>æ›¹çº¯</name>
+            <name>²Ü´¿</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3944,7 +3944,7 @@
       </role>
       <role>
             <id>242</id>
-            <name>é™ˆå‡</name>
+            <name>³ÂÉý</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3970,7 +3970,7 @@
       </role>
       <role>
             <id>243</id>
-            <name>æŽé£žé¾™</name>
+            <name>Àî·ÉÁú</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -3996,7 +3996,7 @@
       </role>
       <role>
             <id>244</id>
-            <name>ä»˜é“æ˜Ž</name>
+            <name>¸¶ÌúÃ÷</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4022,7 +4022,7 @@
       </role>
       <role>
             <id>245</id>
-            <name>æœ±æ¡“</name>
+            <name>Öì»¸</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4048,7 +4048,7 @@
       </role>
       <role>
             <id>246</id>
-            <name>å´å‡¡</name>
+            <name>Îâ·²</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4074,7 +4074,7 @@
       </role>
       <role>
             <id>247</id>
-            <name>è‘£è¢­</name>
+            <name>¶­Ï®</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4100,7 +4100,7 @@
       </role>
       <role>
             <id>248</id>
-            <name>å¤ä¾¯éœ¸</name>
+            <name>ÏÄºî°Ô</name>
             <quantity>blue</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4126,7 +4126,7 @@
       </role>
       <role>
             <id>249</id>
-            <name>æŽä¸¥</name>
+            <name>ÀîÑÏ</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4152,7 +4152,7 @@
       </role>
       <role>
             <id>250</id>
-            <name>é™ˆæ­¦</name>
+            <name>³ÂÎä</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4178,7 +4178,7 @@
       </role>
       <role>
             <id>251</id>
-            <name>èµµç´¯</name>
+            <name>ÕÔÀÛ</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4204,7 +4204,7 @@
       </role>
       <role>
             <id>252</id>
-            <name>è¢è°­</name>
+            <name>Ô¬Ì·</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4230,7 +4230,7 @@
       </role>
       <role>
             <id>253</id>
-            <name>è¢ç†™</name>
+            <name>Ô¬Îõ</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4256,7 +4256,7 @@
       </role>
       <role>
             <id>254</id>
-            <name>è¢å°š</name>
+            <name>Ô¬ÉÐ</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4282,7 +4282,7 @@
       </role>
       <role>
             <id>255</id>
-            <name>å…¬å­™è¶Š</name>
+            <name>¹«ËïÔ½</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4308,7 +4308,7 @@
       </role>
       <role>
             <id>256</id>
-            <name>å…¬å­™åº·</name>
+            <name>¹«Ëï¿µ</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4334,7 +4334,7 @@
       </role>
       <role>
             <id>257</id>
-            <name>å´ç­</name>
+            <name>Îâ°à</name>
             <quantity>white</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -4360,7 +4360,7 @@
       </role>
       <role>
             <id>258</id>
-            <name>å­Ÿè¾¾</name>
+            <name>ÃÏ´ï</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4386,7 +4386,7 @@
       </role>
       <role>
             <id>259</id>
-            <name>æ­¦å®‰å›½</name>
+            <name>Îä°²¹ú</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4412,7 +4412,7 @@
       </role>
       <role>
             <id>260</id>
-            <name>ç¨‹è¿œå¿—</name>
+            <name>³ÌÔ¶Ö¾</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4438,7 +4438,7 @@
       </role>
       <role>
             <id>261</id>
-            <name>æœè¢­</name>
+            <name>¶ÅÏ®</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4464,7 +4464,7 @@
       </role>
       <role>
             <id>262</id>
-            <name>é˜¿ä¼šå–ƒ</name>
+            <name>°¢»áà«</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4490,7 +4490,7 @@
       </role>
       <role>
             <id>263</id>
-            <name>çŽ‹å¹³</name>
+            <name>ÍõÆ½</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4516,7 +4516,7 @@
       </role>
       <role>
             <id>264</id>
-            <name>å´çº²</name>
+            <name>Îâ¸Ù</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4542,7 +4542,7 @@
       </role>
       <role>
             <id>265</id>
-            <name>è½¦å‹‡</name>
+            <name>³µÓÂ</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4568,7 +4568,7 @@
       </role>
       <role>
             <id>266</id>
-            <name>æœ±ç„¶</name>
+            <name>ÖìÈ»</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4594,7 +4594,7 @@
       </role>
       <role>
             <id>267</id>
-            <name>å¼ ä¼Ÿ</name>
+            <name>ÕÅÎ°</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4620,7 +4620,7 @@
       </role>
       <role>
             <id>268</id>
-            <name>å•æ—·</name>
+            <name>ÂÀ¿õ</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4646,7 +4646,7 @@
       </role>
       <role>
             <id>269</id>
-            <name>éƒ­ç¡•</name>
+            <name>¹ùË¶</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4672,7 +4672,7 @@
       </role>
       <role>
             <id>270</id>
-            <name>é«˜ç¿”</name>
+            <name>¸ßÏè</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4698,7 +4698,7 @@
       </role>
       <role>
             <id>271</id>
-            <name>éŸ©å½“</name>
+            <name>º«µ±</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4724,7 +4724,7 @@
       </role>
       <role>
             <id>272</id>
-            <name>èµµèŒƒ</name>
+            <name>ÕÔ·¶</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4750,7 +4750,7 @@
       </role>
       <role>
             <id>273</id>
-            <name>é©¬å…ƒä¹‰</name>
+            <name>ÂíÔªÒå</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4776,7 +4776,7 @@
       </role>
       <role>
             <id>274</id>
-            <name>å®‹å®ª</name>
+            <name>ËÎÏÜ</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4802,7 +4802,7 @@
       </role>
       <role>
             <id>275</id>
-            <name>æŽå®‰é‚¦</name>
+            <name>Àî°²°î</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4828,7 +4828,7 @@
       </role>
       <role>
             <id>276</id>
-            <name>è’‹ä¹‰æ¸ </name>
+            <name>½¯ÒåÇþ</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4854,7 +4854,7 @@
       </role>
       <role>
             <id>277</id>
-            <name>çŽ‹ä¿Š</name>
+            <name>Íõ¿¡</name>
             <quantity>white</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4880,7 +4880,7 @@
       </role>
       <role>
             <id>278</id>
-            <name>å­Ÿä¼˜</name>
+            <name>ÃÏÓÅ</name>
             <quantity>blue</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -4906,7 +4906,7 @@
       </role>
       <role>
             <id>279</id>
-            <name>å·¦æ…ˆ</name>
+            <name>×ó´È</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -4939,7 +4939,7 @@
       </role>
       <role>
             <id>280</id>
-            <name>æ´›ç¥ž</name>
+            <name>ÂåÉñ</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -4972,7 +4972,7 @@
       </role>
       <role>
             <id>281</id>
-            <name>ç«¥æ¸Š</name>
+            <name>Í¯Ô¨</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -5005,7 +5005,7 @@
       </role>
       <role>
             <id>282</id>
-            <name>è‘£å“</name>
+            <name>¶­×¿</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -5038,7 +5038,7 @@
       </role>
       <role>
             <id>283</id>
-            <name>åœ°ä¸‹åŸŽå‹‡å£«</name>
+            <name>µØÏÂ³ÇÓÂÊ¿</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -5068,11 +5068,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>åœ¨é˜¿æ‹‰å¾·å¤§é™†ä¸Šï¼Œå†°é¾™çš„è‹é†’è®©å¾ˆå¤šåœ°ä¸‹åŸŽå‹‡å£«æ„Ÿåˆ°ç»æœ›ï¼Œæ— æ•°è§‰é†’çš„äººä»¬ä¾æ—§éš¾é€ƒæ­»äº¡ã€‚GSDä½œä¸ºå‰‘å®¢ä»¬çš„å®—å¸ˆï¼Œä¹‰æ— åé¡¾çš„æ‹¿èµ·äº†å°˜å°å·²ä¹…çš„â€œè™šç©ºä¹‹åˆƒâ€ï¼Œä»–å¸Œæœ›é€šè¿‡å‰‘å…‰çš„é€Ÿåº¦ï¼Œåˆ’å¼€è™šç©ºä¹‹é—¨ï¼Œè‘¬é€å†°é¾™çš„æ°¸ç”Ÿã€‚ç„¶è€Œï¼Œè¿™æ¬¡å†’é™©çš„ç»“æžœæ˜¯è‡ªå·±è¢«é€åˆ°äº†ä¸‰å›½æ—¶ä»£â€¦</desc>
+            <desc>ÔÚ°¢À­µÂ´óÂ½ÉÏ£¬±ùÁúµÄËÕÐÑÈÃºÜ¶àµØÏÂ³ÇÓÂÊ¿¸Ðµ½¾øÍû£¬ÎÞÊý¾õÐÑµÄÈËÃÇÒÀ¾ÉÄÑÌÓËÀÍö¡£GSD×÷Îª½£¿ÍÃÇµÄ×ÚÊ¦£¬ÒåÎÞ·´¹ËµÄÄÃÆðÁË³¾·âÒÑ¾ÃµÄ¡°Ðé¿ÕÖ®ÈÐ¡±£¬ËûÏ£ÍûÍ¨¹ý½£¹âµÄËÙ¶È£¬»®¿ªÐé¿ÕÖ®ÃÅ£¬ÔáËÍ±ùÁúµÄÓÀÉú¡£È»¶ø£¬Õâ´ÎÃ°ÏÕµÄ½á¹ûÊÇ×Ô¼º±»ËÍµ½ÁËÈý¹úÊ±´ú¡­</desc>
       </role>
       <role>
             <id>284</id>
-            <name>æ­»ç¥žé˜Ÿé•¿</name>
+            <name>ËÀÉñ¶Ó³¤</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -5102,11 +5102,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>åœ¨å°¸é­‚ç•Œä¸€ç›´ä»¥æ¥éƒ½å­˜åœ¨ç€ä¸€æ”¯ç¥žç§˜çš„ç§‘ç ”å¼€å‘éƒ¨é˜Ÿï¼Œå¤–ç•Œä»…ä»…çŸ¥é“ä»–ä»¬çš„ä»£å·ä¸ºâ€œK5â€ï¼Œå³ä¾¿æ˜¯çš‡å»·åŠå››å¤§è´µæ—ï¼Œå¯¹ä»–ä»¬çš„å­˜åœ¨ä¹Ÿæ˜¯ä¸‡åˆ†ä¾èµ–ã€‚å¯K5åœ¨é€šå¾€è™šç•Œçš„ç©ºé—´ç½®æ¢å®žéªŒä¸­ï¼Œé˜Ÿé•¿é›ªå½±ç¦»å¥‡å¤±è¸ªï¼Œå¤–ç•Œä¼ è¨€é‚£æ˜¯è“æŸ“ç›¸åŠ©ä¸‹çš„æ½œé€ƒï¼Œä½†äº‹å®žä¸Šï¼Œä»–æ¥åˆ°äº†ä¸€ä¸ªå«ä¸‰å›½çš„å¹´ä»£â€¦</desc>
+            <desc>ÔÚÊ¬»ê½çÒ»Ö±ÒÔÀ´¶¼´æÔÚ×ÅÒ»Ö§ÉñÃØµÄ¿ÆÑÐ¿ª·¢²¿¶Ó£¬Íâ½ç½ö½öÖªµÀËûÃÇµÄ´úºÅÎª¡°K5¡±£¬¼´±ãÊÇ»ÊÍ¢¼°ËÄ´ó¹ó×å£¬¶ÔËûÃÇµÄ´æÔÚÒ²ÊÇÍò·ÖÒÀÀµ¡£¿ÉK5ÔÚÍ¨ÍùÐé½çµÄ¿Õ¼äÖÃ»»ÊµÑéÖÐ£¬¶Ó³¤Ñ©Ó°ÀëÆæÊ§×Ù£¬Íâ½ç´«ÑÔÄÇÊÇÀ¶È¾ÏàÖúÏÂµÄÇ±ÌÓ£¬µ«ÊÂÊµÉÏ£¬ËûÀ´µ½ÁËÒ»¸ö½ÐÈý¹úµÄÄê´ú¡­</desc>
       </role>
       <role>
             <id>285</id>
-            <name>ç‰¹ç§ä¿å®‰</name>
+            <name>ÌØÖÖ±£°²</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -5136,11 +5136,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>é¡¹å°‘é¾™å¯¹å›žåˆ°æœªæ¥çš„ç»æœ›æ¥è‡ªäºŽâ€œä¼ é€å™¨â€çš„æ²¡ç”µï¼Œç´¢æ€§å°†å®ƒæ‚¬æŒ‚åœ¨çª—å‰ç•™ä½œå¿µæƒ³ï¼Œå¯åšå£«çš„ä¸€é¡¹éšè—æŠ€æœ¯å¹¶æœªå‘Šè¯‰é¡¹å°‘é¾™ï¼Œé‚£å°±æ˜¯â€œä¼ é€å™¨â€å¯ä»¥é€šè¿‡å¤ªé˜³èƒ½æ¢å¤è¿è½¬ï¼å°±åœ¨å„¿å­é¡¹ç¾½å‡ºç”Ÿçš„æ—©ä¸Šï¼Œé¡¹å°‘é¾™é¬¼ä½¿ç¥žå·®çš„å–ä¸‹â€œä¼ é€å™¨â€ç¥ˆæ±‚è€å¤©ä¿ä½‘ï¼Œå´è¢«æ— æƒ…çš„ä¼ é€åˆ°äº†å‘çˆ¹çš„ä¸‰å›½â€¦</desc>
+            <desc>ÏîÉÙÁú¶Ô»Øµ½Î´À´µÄ¾øÍûÀ´×ÔÓÚ¡°´«ËÍÆ÷¡±µÄÃ»µç£¬Ë÷ÐÔ½«ËüÐü¹ÒÔÚ´°Ç°Áô×÷ÄîÏë£¬¿É²©Ê¿µÄÒ»ÏîÒþ²Ø¼¼Êõ²¢Î´¸æËßÏîÉÙÁú£¬ÄÇ¾ÍÊÇ¡°´«ËÍÆ÷¡±¿ÉÒÔÍ¨¹ýÌ«ÑôÄÜ»Ö¸´ÔË×ª£¡¾ÍÔÚ¶ù×ÓÏîÓð³öÉúµÄÔçÉÏ£¬ÏîÉÙÁú¹íÊ¹Éñ²îµÄÈ¡ÏÂ¡°´«ËÍÆ÷¡±ÆíÇóÀÏÌì±£ÓÓ£¬È´±»ÎÞÇéµÄ´«ËÍµ½ÁË¿ÓµùµÄÈý¹ú¡­</desc>
       </role>
       <role>
             <id>286</id>
-            <name>è°ƒæŸ¥å…µå›¢</name>
+            <name>µ÷²é±øÍÅ</name>
             <quantity>orange</quantity>
             <soldier>1</soldier>
             <health>400</health>
@@ -5170,11 +5170,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>å·¨äººä»¬çš„è¿›æ”»è®©äººç±»å·²ç»ä¸å ªé‡è´Ÿï¼Œç„¶è€Œå˜å¼‚ç§çš„æ³›æ»¥ã€é˜´è°‹è€…çš„é‡Œåº”å¤–åˆï¼Œè®©åŽŸæœ¬å°±è„†å¼±çš„é˜²çº¿å˜å¾—ä¸å ªä¸€å‡»ã€‚å‡¯å¸æ˜¯çš‡å®¤çš„çŽ‹ç‰Œæˆ˜å£«ï¼Œä»–å…·æœ‰åˆ›é€ é»‘æ´žçš„ç‰¹æ„åŠŸèƒ½ï¼Œå¯è¿™è®©é˜´è°‹è€…å¦‚åé’ˆæ¯¡ï¼Œåœ¨å‡¯å¸æ“æŽ§é»‘æ´žçš„æ—¶å€™ï¼Œä»–è¢«åæŽ¨è¿›äº†è™šç©ºæ·±æ¸Šï¼Œæœ€ç»ˆæ¥åˆ°äº†ä¸‰å›½ã€‚</desc>
+            <desc>¾ÞÈËÃÇµÄ½ø¹¥ÈÃÈËÀàÒÑ¾­²»¿°ÖØ¸º£¬È»¶ø±äÒìÖÖµÄ·ºÀÄ¡¢ÒõÄ±ÕßµÄÀïÓ¦ÍâºÏ£¬ÈÃÔ­±¾¾Í´àÈõµÄ·ÀÏß±äµÃ²»¿°Ò»»÷¡£¿­µÛÊÇ»ÊÊÒµÄÍõÅÆÕ½Ê¿£¬Ëû¾ßÓÐ´´ÔìºÚ¶´µÄÌØÒâ¹¦ÄÜ£¬¿ÉÕâÈÃÒõÄ±ÕßÈç×øÕëÕ±£¬ÔÚ¿­µÛ²Ù¿ØºÚ¶´µÄÊ±ºò£¬Ëû±»·´ÍÆ½øÁËÐé¿ÕÉîÔ¨£¬×îÖÕÀ´µ½ÁËÈý¹ú¡£</desc>
       </role>
       <role>
             <id>287</id>
-            <name>ç¥žç›¾å±€</name>
+            <name>Éñ¶Ü¾Ö</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -5204,11 +5204,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>ç¥žç›¾å±€æ¯ä¸ªç‰¹å·¥çš„ç”Ÿæ´»éƒ½åœ¨ä¸Žä¸å¯æ€è®®çš„äº‹æƒ…æ‰“äº¤é“ï¼Œå‡¯æ–‡ä»Žç¥žç›¾å±€çš„æ¡£æ¡ˆé‡Œæ¶ˆå¤±äº†å¤šå¹´ï¼ŒåŽŸå› è¢«åˆ—ä¸ºSçº§æœºå¯†ã€‚åœ¨ä»–ç ´åâ€œå¤ªé˜³é£Žæš´æ”¶é›†å™¨â€çš„æ—¶å€™ï¼Œç«Ÿç„¶æ´»ç”Ÿç”Ÿçš„æ¶ˆå¤±äº†ï¼Œç”µè¯æœ€åŽä¸€æ¬¡æ‰“é€šæ—¶å‡¯æ–‡å‘Šè¯‰æ€»éƒ¨è‡ªå·±åœ¨å®˜æ¸¡ä¹‹æˆ˜çš„æ²™åœºä¸Šï¼Œæ›¹æ“å¾ˆå–œæ¬¢è‡ªå·±ï¼Œè¿˜ç»™äº†ä»–ä¸€ç¾¤è€å©†ã€‚</desc>
+            <desc>Éñ¶Ü¾ÖÃ¿¸öÌØ¹¤µÄÉú»î¶¼ÔÚÓë²»¿ÉË¼ÒéµÄÊÂÇé´ò½»µÀ£¬¿­ÎÄ´ÓÉñ¶Ü¾ÖµÄµµ°¸ÀïÏûÊ§ÁË¶àÄê£¬Ô­Òò±»ÁÐÎªS¼¶»úÃÜ¡£ÔÚËûÆÆ»µ¡°Ì«Ñô·ç±©ÊÕ¼¯Æ÷¡±µÄÊ±ºò£¬¾¹È»»îÉúÉúµÄÏûÊ§ÁË£¬µç»°×îºóÒ»´Î´òÍ¨Ê±¿­ÎÄ¸æËß×Ü²¿×Ô¼ºÔÚ¹Ù¶ÉÖ®Õ½µÄÉ³³¡ÉÏ£¬²Ü²ÙºÜÏ²»¶×Ô¼º£¬»¹¸øÁËËûÒ»ÈºÀÏÆÅ¡£</desc>
       </role>
       <role>
             <id>288</id>
-            <name>é‡‘åˆšç‹¼</name>
+            <name>½ð¸ÕÀÇ</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -5238,11 +5238,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>ç½—æ ¹çš„é’¢çˆªä¸ä½†æ’•è£‚äº†æ—¥æœ¬é«˜èƒ½äº§ä¸šæœ€é¡¶å°–çº§çš„æœºç”²å·¨äººï¼ŒåŒæ ·ä¹Ÿè‘¬é€äº†é˜´è°‹è€…â€œçŸ¢å¿—ç”°â€çš„æ°¸ç”Ÿä¹‹æ¢¦ï¼Œæœ¬ä»¥ä¸ºä¸€åˆ‡éƒ½å·²ç»“æŸçš„ç½—æ ¹ï¼Œå´åœ¨ç¦»å¼€å®žéªŒå®¤åŽè¯¯å…¥äº†ä¸€ä¸ªâ€œäººé€ é»‘æ´žâ€ï¼Œé‚£æ˜¯çŸ¢å¿—ç”°é—ç•™ä¸‹æ¥çš„Bè®¡åˆ’ï¼Œæ„å›¾ç©¿è¶Šè¿‡åŽ»èŽ·å¾—æ°¸ç”Ÿï¼Œç„¶è€Œè¿™ä¸ªè®¡åˆ’çš„æœ€ç»ˆäº«æœ‰è€…å´æ˜¯é‡‘åˆšç‹¼ã€‚</desc>
+            <desc>ÂÞ¸ùµÄ¸Ö×¦²»µ«ËºÁÑÁËÈÕ±¾¸ßÄÜ²úÒµ×î¶¥¼â¼¶µÄ»ú¼×¾ÞÈË£¬Í¬ÑùÒ²ÔáËÍÁËÒõÄ±Õß¡°Ê¸Ö¾Ìï¡±µÄÓÀÉúÖ®ÃÎ£¬±¾ÒÔÎªÒ»ÇÐ¶¼ÒÑ½áÊøµÄÂÞ¸ù£¬È´ÔÚÀë¿ªÊµÑéÊÒºóÎóÈëÁËÒ»¸ö¡°ÈËÔìºÚ¶´¡±£¬ÄÇÊÇÊ¸Ö¾ÌïÒÅÁôÏÂÀ´µÄB¼Æ»®£¬ÒâÍ¼´©Ô½¹ýÈ¥»ñµÃÓÀÉú£¬È»¶øÕâ¸ö¼Æ»®µÄ×îÖÕÏíÓÐÕßÈ´ÊÇ½ð¸ÕÀÇ¡£</desc>
       </role>
       <role>
             <id>289</id>
-            <name>æ£®æž—æ¸¸ä¾ </name>
+            <name>É­ÁÖÓÎÏÀ</name>
             <quantity>orange</quantity>
             <soldier>2</soldier>
             <health>320</health>
@@ -5272,11 +5272,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>ä¾ ç›—ç½—å®¾æ±‰çš„æœ€åŽä¸€æ¬¡æŠ¢æŽ ï¼Œæ˜¯ä¸€è¾†æ¥è‹±å›½çš‡å®¶çš„è¿›è´¡é©¬è½¦ï¼Œä»–ä¸ä½†èŽ·å¾—äº†æ•‘æµŽç©·äººçš„è¶³å¤Ÿè´¢å¯Œï¼Œè¿˜å¾—åˆ°äº†ä¸€ä¸ªé›•åˆ»ç€ä¹æ¡ç¥žé¾™çš„æœ¨åŒ£ï¼Œä½†å³ä¾¿ä»–ç»žå°½è„‘æ±ä¹Ÿæ— æ³•æ‰“å¼€æœ¨åŒ£çš„æœºå…³ï¼Œæƒ…æ€¥ä¹‹ä¸‹çš„ç½—å®¾æ±‰ä¸€ç®­å°„å‡ºï¼Œä¼å›¾å°†ä¹‹ç²‰ç¢Žï¼Œç„¶è€Œåœ¨ä»–ä»Žæ˜è¿·ä¸­é†’æ¥æ—¶ï¼Œå´å·²èº«åœ¨ä¸‰å›½â€¦</desc>
+            <desc>ÏÀµÁÂÞ±öººµÄ×îºóÒ»´ÎÇÀÂÓ£¬ÊÇÒ»Á¾À´Ó¢¹ú»Ê¼ÒµÄ½ø¹±Âí³µ£¬Ëû²»µ«»ñµÃÁË¾È¼ÃÇîÈËµÄ×ã¹»²Æ¸»£¬»¹µÃµ½ÁËÒ»¸öµñ¿Ì×Å¾ÅÌõÉñÁúµÄÄ¾Ï»£¬µ«¼´±ãËû½Ê¾¡ÄÔÖ­Ò²ÎÞ·¨´ò¿ªÄ¾Ï»µÄ»ú¹Ø£¬Çé¼±Ö®ÏÂµÄÂÞ±öººÒ»¼ýÉä³ö£¬ÆóÍ¼½«Ö®·ÛËé£¬È»¶øÔÚËû´Ó»èÃÔÖÐÐÑÀ´Ê±£¬È´ÒÑÉíÔÚÈý¹ú¡­</desc>
       </role>
       <role>
             <id>290</id>
-            <name>ç§å®¶ä¾¦æŽ¢</name>
+            <name>Ë½¼ÒÕìÌ½</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -5306,11 +5306,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>ç¦å°”æ‘©æ–¯ä½œä¸ºæŽ¨ç†å¤§å¸ˆï¼Œè™½ç„¶è§£å†³äº†æ— æ•°ç–‘éš¾æ¡ˆä»¶ï¼Œä½†åœ¨â€œä¼¦æ•¦ä¸‹æ°´é“äº‹ä»¶â€ä¸­å´æ˜¾å¾—ä¸€ç­¹èŽ«å±•ï¼Œæ— æ•°çš„æŽ¢é™©è€…ã€æ°´é“å·¥åœ¨è¿™é‡Œæ— æ•…æ¶ˆå¤±ï¼Œæ— å¯å¥ˆä½•ä¹‹ä¸‹ï¼Œç¦å°”æ‘©æ–¯å†³å®šæ·±å…¥è™Žç©´ä¸€æŽ¢ç©¶ç«Ÿã€‚å½“ä»–å‘çŽ°ä¸€ä¸ªå·¨å¤§çš„é»‘æš—æ¼©æ¶¡æ‰æ˜¯åžå™¬ç”Ÿå‘½çš„â€œå‡¶æ‰‹â€æ—¶ï¼Œè¿ŽæŽ¥ä»–çš„ä¸–ç•Œï¼Œæ˜¯ä¸€ä¸ªå……æ»¡è¡€è…¥çš„ä¸‰å›½ã€‚</desc>
+            <desc>¸£¶ûÄ¦Ë¹×÷ÎªÍÆÀí´óÊ¦£¬ËäÈ»½â¾öÁËÎÞÊýÒÉÄÑ°¸¼þ£¬µ«ÔÚ¡°Â×¶ØÏÂË®µÀÊÂ¼þ¡±ÖÐÈ´ÏÔµÃÒ»³ïÄªÕ¹£¬ÎÞÊýµÄÌ½ÏÕÕß¡¢Ë®µÀ¹¤ÔÚÕâÀïÎÞ¹ÊÏûÊ§£¬ÎÞ¿ÉÄÎºÎÖ®ÏÂ£¬¸£¶ûÄ¦Ë¹¾ö¶¨ÉîÈë»¢Ñ¨Ò»Ì½¾¿¾¹¡£µ±Ëû·¢ÏÖÒ»¸ö¾Þ´óµÄºÚ°µäöÎÐ²ÅÊÇÍÌÊÉÉúÃüµÄ¡°Ð×ÊÖ¡±Ê±£¬Ó­½ÓËûµÄÊÀ½ç£¬ÊÇÒ»¸ö³äÂúÑªÐÈµÄÈý¹ú¡£</desc>
       </role>
       <role>
             <id>291</id>
-            <name>æš—æœˆé©¬æˆå›¢</name>
+            <name>°µÔÂÂíÏ·ÍÅ</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -5340,11 +5340,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>æš—æœˆé©¬æˆå›¢åœ¨è‰¾æ³½æ‹‰æ–¯çš„å¤§åœ°ä¸Šï¼Œä»¥ç»ä¹…ä¸è¡°çš„æ¼”å‡ºåŠç¨€æœ‰é“å…·èµ¢å¾—äº†è¶³å¤Ÿçš„å°Šé‡ã€‚è‰¾é²ä½œä¸ºå›¢é•¿ï¼Œä¹Ÿæ˜¯ç¥žè¯èˆ¬çš„å­˜åœ¨ï¼Œä»–çš„æ—¶å…‰çž¬ç§»èŠ‚ç›®æ€»èƒ½è®©å¹´è½»çš„æ³•å¸ˆè§‚ä¼—ä»¬æŠ¥ä»¥çƒ­çƒˆçš„è¿½æ§ã€‚ç„¶è€Œè‰¾é²æœ€åŽä¸€æ¬¡å‰å¾€æ—¶å…‰ä¹‹ç©´æœé›†â€œæ—¶å…‰ç ‚â€æ—¶ï¼Œå´æ„å¤–çš„ç©¿è¶Šåˆ°äº†ä¸€ä¸ªå«åšä¸‰å›½çš„æ—¶ä»£ã€‚</desc>
+            <desc>°µÔÂÂíÏ·ÍÅÔÚ°¬ÔóÀ­Ë¹µÄ´óµØÉÏ£¬ÒÔ¾­¾Ã²»Ë¥µÄÑÝ³ö¼°Ï¡ÓÐµÀ¾ßÓ®µÃÁË×ã¹»µÄ×ðÖØ¡£°¬Â³×÷ÎªÍÅ³¤£¬Ò²ÊÇÉñ»°°ãµÄ´æÔÚ£¬ËûµÄÊ±¹âË²ÒÆ½ÚÄ¿×ÜÄÜÈÃÄêÇáµÄ·¨Ê¦¹ÛÖÚÃÇ±¨ÒÔÈÈÁÒµÄ×·Åõ¡£È»¶ø°¬Â³×îºóÒ»´ÎÇ°ÍùÊ±¹âÖ®Ñ¨ËÑ¼¯¡°Ê±¹âÉ°¡±Ê±£¬È´ÒâÍâµÄ´©Ô½µ½ÁËÒ»¸ö½Ð×öÈý¹úµÄÊ±´ú¡£</desc>
       </role>
       <role>
             <id>292</id>
-            <name>æ³¢æ–¯åˆ€å®¢</name>
+            <name>²¨Ë¹µ¶¿Í</name>
             <quantity>orange</quantity>
             <soldier>3</soldier>
             <health>320</health>
@@ -5374,11 +5374,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>å¸•å°”æ˜¯æ³¢æ–¯å¸å›½ä¼—çŽ‹å­ä¸­æœ€é’Ÿçˆ±å‰‘æœ¯çš„äººï¼Œä»–å‡ ä¹Žå°†çŽ‹å®¤é«˜æ‰‹ä»¬æŒ‘æˆ˜æ®†å°½ï¼Œä¸ºäº†è¿½æ±‚æ›´é«˜è¶…çš„å‰‘æœ¯ï¼Œä»–ç­–é©¬å‰å¾€äº†æ³¢æ–¯åœ£åœ°å¯»æ‰¾é¾™å‰‘å£«ã€‚ç„¶è€Œå®ˆæŠ¤åœ£åœ°çš„å·«å¸ˆå‘Šè¯‰ä»–é¾™å‰‘å£«å·²æ­»ã€‚å¸•å°”ç¥ˆæ±‚å·«å¸ˆå°†é¾™å‰‘å£«å¤æ´»ï¼Œå·«å¸ˆç­”åº”äº†ä»–ï¼ŒéšåŽå·«å¸ˆç”¨äº†åŒæ ·çš„é˜´è°‹ï¼Œå°†å¸•å°”ä¼ é€åˆ°äº†ä¸€ä¸ªæœªçŸ¥çš„æ—¶ä»£ã€‚</desc>
+            <desc>ÅÁ¶ûÊÇ²¨Ë¹µÛ¹úÖÚÍõ×ÓÖÐ×îÖÓ°®½£ÊõµÄÈË£¬Ëû¼¸ºõ½«ÍõÊÒ¸ßÊÖÃÇÌôÕ½´ù¾¡£¬ÎªÁË×·Çó¸ü¸ß³¬µÄ½£Êõ£¬Ëû²ßÂíÇ°ÍùÁË²¨Ë¹Ê¥µØÑ°ÕÒÁú½£Ê¿¡£È»¶øÊØ»¤Ê¥µØµÄÎ×Ê¦¸æËßËûÁú½£Ê¿ÒÑËÀ¡£ÅÁ¶ûÆíÇóÎ×Ê¦½«Áú½£Ê¿¸´»î£¬Î×Ê¦´ðÓ¦ÁËËû£¬ËæºóÎ×Ê¦ÓÃÁËÍ¬ÑùµÄÒõÄ±£¬½«ÅÁ¶û´«ËÍµ½ÁËÒ»¸öÎ´ÖªµÄÊ±´ú¡£</desc>
       </role>
       <role>
             <id>293</id>
-            <name>é»‘æš—ä¹‹å¥³</name>
+            <name>ºÚ°µÖ®Å®</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -5408,11 +5408,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>å®‰å¦®å¤©çœŸçƒ‚æ¼«çš„å¤–è¡¨ä¸‹ï¼Œæ°¸è¿œæ€€æ£ç€ä¸€é¢—é€†ç¥žçš„å¿ƒï¼Œåœ¨å¥¹çš„æ¢¦å¢ƒä¸­ï¼Œä¼—ç¥žéƒ½æ˜¯è¢«éž­ç¬žåœ¨ç«ç„°åœ£å°ä¸Šçš„çŒŽç‰©ã€‚åœ¨å¥¹ä»Žæ²™æ¼å’Œæƒæ–ä¸­æ‰¾åˆ°è¿›å…¥è™šç©ºçš„æ–¹æ³•ï¼Œç»§è€Œè¿›å…¥ç¥žå¢ƒæ„å›¾æ¯ç­ä¸€åˆ‡æ—¶ï¼Œç«Ÿå‘çŽ°è‡ªå·±æ¥åˆ°äº†ä¸€ä¸ªå«åšä¸‰å›½çš„æ—¶ä»£ï¼Œå¥¹å¸¦ç€è‡ªå·±çš„çŽ©å¶ï¼Œåˆå¼€å§‹äº†æ— å°½çš„æ€æˆ®ã€‚</desc>
+            <desc>°²ÄÝÌìÕæÀÃÂþµÄÍâ±íÏÂ£¬ÓÀÔ¶»³´§×ÅÒ»¿ÅÄæÉñµÄÐÄ£¬ÔÚËýµÄÃÎ¾³ÖÐ£¬ÖÚÉñ¶¼ÊÇ±»±Þó×ÔÚ»ðÑæÊ¥Ì¨ÉÏµÄÁÔÎï¡£ÔÚËý´ÓÉ³Â©ºÍÈ¨ÕÈÖÐÕÒµ½½øÈëÐé¿ÕµÄ·½·¨£¬¼Ì¶ø½øÈëÉñ¾³ÒâÍ¼»ÙÃðÒ»ÇÐÊ±£¬¾¹·¢ÏÖ×Ô¼ºÀ´µ½ÁËÒ»¸ö½Ð×öÈý¹úµÄÊ±´ú£¬Ëý´ø×Å×Ô¼ºµÄÍæÅ¼£¬ÓÖ¿ªÊ¼ÁËÎÞ¾¡µÄÉ±Â¾¡£</desc>
       </role>
       <role>
             <id>294</id>
-            <name>è¯—ä»™</name>
+            <name>Ê«ÏÉ</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -5442,11 +5442,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>è¯—ä»™æŽç™½æ°¸è¿œæ´»åœ¨è‡ªå·±çš„ä¸–ç•Œé‡Œï¼Œåœ¨ä»–æ¼«é•¿è€Œåˆéšæ€§çš„æ—…é€”ä¸­ï¼Œä¸ä½†æŽŒæ¡äº†é“å®¶çš„çŽ„æœ¯ï¼Œæ›´åœ¨åŽ†å²çš„æ–‘é©³ä¸­æ‰¾åˆ°äº†ç‰ç’ƒä»™å¢ƒçš„æ‰€åœ¨ã€‚å¯ä¸å¹¸çš„æ˜¯ï¼Œåœ¨è¸å…¥ä»™å¢ƒçš„æ—¶æ²¡èƒ½æŠµæŒ¡ä½ç‘¶æ± ç¾Žé…’çš„èŠ³é†‡ï¼Œç«Ÿç„¶ä¸€é†‰åƒå¤ï¼Œé†’æ¥æ—¶æ¥åˆ°äº†ä¸œæ±‰æœ«å¹´ï¼Œå¯å¯¹äºŽæŽç™½æ¥è¯´ï¼Œäººç”Ÿç»ˆäºŽå˜å¾—æœ‰è¶£äº†ã€‚</desc>
+            <desc>Ê«ÏÉÀî°×ÓÀÔ¶»îÔÚ×Ô¼ºµÄÊÀ½çÀï£¬ÔÚËûÂþ³¤¶øÓÖËæÐÔµÄÂÃÍ¾ÖÐ£¬²»µ«ÕÆÎÕÁËµÀ¼ÒµÄÐþÊõ£¬¸üÔÚÀúÊ·µÄ°ß²µÖÐÕÒµ½ÁËÁðÁ§ÏÉ¾³µÄËùÔÚ¡£¿É²»ÐÒµÄÊÇ£¬ÔÚÌ¤ÈëÏÉ¾³µÄÊ±Ã»ÄÜµÖµ²×¡Ñþ³ØÃÀ¾ÆµÄ·¼´¼£¬¾¹È»Ò»×íÇ§¹Å£¬ÐÑÀ´Ê±À´µ½ÁË¶«ººÄ©Äê£¬¿É¶ÔÓÚÀî°×À´Ëµ£¬ÈËÉúÖÕÓÚ±äµÃÓÐÈ¤ÁË¡£</desc>
       </role>
       <role>
             <id>295</id>
-            <name>é­”æœ¯å¸ˆ</name>
+            <name>Ä§ÊõÊ¦</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -5476,11 +5476,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>åˆ˜å°è°¦ä½œä¸ºé­”æœ¯ç•Œçš„å¥‡è‘©ï¼Œå¹¶éžä»…é é«˜æ˜Žçš„æŠ€æ³•å®Œæˆé‚£äº›åŒªå¤·æ‰€æ€çš„è¡¨æ¼”ï¼Œæ‹¥æœ‰ç‰¹å¼‚åŠŸèƒ½çš„ä»–ï¼Œå¯ä»¥è®©ä¸€åˆ‡ç”Ÿå‘½çŸ­æš‚åœæ­¢5ç§’ã€‚ä¸ºäº†è¿›ä¸€æ­¥è¿½æ±‚æ›´åŠ æƒŠä¸ºå¤©äººçš„é­”æœ¯å½¢å¼ï¼Œä»–å¸Œæœ›è‡ªèƒ½çªç ´æžé™ï¼Œè®©æ—¶é—´åœæ­¢10ç§’ï¼Œè¿™ç§å¼ºè¡Œæ”¹å˜æ—¶é—´è½¨è¿¹çš„ç»“æžœï¼Œç«Ÿè®©ä»–æ¥åˆ°äº†å¯æ€•çš„ä¸‰å›½â€¦</desc>
+            <desc>ÁõÐ¡Ç«×÷ÎªÄ§Êõ½çµÄÆæÝâ£¬²¢·Ç½ö¿¿¸ßÃ÷µÄ¼¼·¨Íê³ÉÄÇÐ©·ËÒÄËùË¼µÄ±íÑÝ£¬ÓµÓÐÌØÒì¹¦ÄÜµÄËû£¬¿ÉÒÔÈÃÒ»ÇÐÉúÃü¶ÌÔÝÍ£Ö¹5Ãë¡£ÎªÁË½øÒ»²½×·Çó¸ü¼Ó¾ªÎªÌìÈËµÄÄ§ÊõÐÎÊ½£¬ËûÏ£Íû×ÔÄÜÍ»ÆÆ¼«ÏÞ£¬ÈÃÊ±¼äÍ£Ö¹10Ãë£¬ÕâÖÖÇ¿ÐÐ¸Ä±äÊ±¼ä¹ì¼£µÄ½á¹û£¬¾¹ÈÃËûÀ´µ½ÁË¿ÉÅÂµÄÈý¹ú¡­</desc>
       </role>
       <role>
             <id>296</id>
-            <name>ä¸ƒä»£ç«å½±</name>
+            <name>Æß´ú»ðÓ°</name>
             <quantity>orange</quantity>
             <soldier>4</soldier>
             <health>240</health>
@@ -5510,11 +5510,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>é¾™çµä½œä¸ºç¬¬ä¸ƒä»£çš„å¤©æ‰ç«å½±ï¼Œå‡ ä¹Žåœ¨å°‘å¹´æ—¶ä»£ä¾¿æŽŒæ¡äº†å…ˆè¾ˆä»¬çš„æ‰€æœ‰ç§˜æœ¯ã€‚å¯å³ä¾¿å¦‚æ­¤ï¼Œä»–ä¹Ÿæ— æ³•èŽ·çŸ¥è‡ªå·±çš„èº«ä¸–ï¼ŒäºŽæ˜¯é¾™çµè€—å°½æ‰€æœ‰æŸ¥å…‹æ‹‰ï¼Œçˆ†å‘å‡ºè¿‘ä¹ŽäºŽç¥žçš„åŠ›é‡æ‰“å¼€äº†æ—¶ç©ºéš§é“çš„å…¥å£ï¼Œè¯¯å…¥äº†ä¸‰å›½å¹´ä»£ï¼Œåœ¨æŸ¥å…‹æ‹‰æ¼«é•¿çš„æ¢å¤å²æœˆé‡Œï¼Œç­‰å¾…ç€å›žå½’å®¶å›­ã€‚</desc>
+            <desc>ÁúÁé×÷ÎªµÚÆß´úµÄÌì²Å»ðÓ°£¬¼¸ºõÔÚÉÙÄêÊ±´ú±ãÕÆÎÕÁËÏÈ±²ÃÇµÄËùÓÐÃØÊõ¡£¿É¼´±ãÈç´Ë£¬ËûÒ²ÎÞ·¨»ñÖª×Ô¼ºµÄÉíÊÀ£¬ÓÚÊÇÁúÁéºÄ¾¡ËùÓÐ²é¿ËÀ­£¬±¬·¢³ö½üºõÓÚÉñµÄÁ¦Á¿´ò¿ªÁËÊ±¿ÕËíµÀµÄÈë¿Ú£¬ÎóÈëÁËÈý¹úÄê´ú£¬ÔÚ²é¿ËÀ­Âþ³¤µÄ»Ö¸´ËêÔÂÀï£¬µÈ´ý×Å»Ø¹é¼ÒÔ°¡£</desc>
       </role>
       <role>
             <id>297</id>
-            <name>çº¢è¡£ä¸»æ•™</name>
+            <name>ºìÒÂÖ÷½Ì</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -5544,11 +5544,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>åœ¨ç½—æ›¼åŸŽçš„é­”æ³•å¤§ä¼šä¸Šï¼Œèšé›†äº†æ— æ•°æ¥è‡ªå„åœ°çš„é­”æ³•å¸ˆä»£è¡¨ï¼ŒçŽ‹çˆµå­¦é™¢çš„æ˜Žæ˜Ÿäººç‰©â€œçº¢è¡£å°‘å¥³â€&#x2014;&#x2014;è’‚å¨œï¼Œå°†å‘å…¨ä¸–ç•Œçš„é­”æ³•å¸ˆå±•çŽ°æ—¶ç©ºç©¿æ¢­ï¼Œå¥¹å°†è¦å‰å¾€çŽ›é›…æ—¶ä»£çš„çŽ‹å®«ï¼Œæ‘˜å–è¨æ»¡çš„é¡¹åœˆï¼Œå†å›žåˆ°è¡¨æ¼”å°ä¸Šã€‚å¯æ˜¯ç”±äºŽå¥¹çš„é­”æ³•æ£’è¢«äººå¼„å‡ºäº†è£‚çº¹ï¼Œå¯¼è‡´å¥¹æ¥åˆ°äº†ä¸€ä¸ªé™Œç”Ÿçš„æ—¶ä»£&#x2014;&#x2014;ä¸‰å›½ã€‚</desc>
+            <desc>ÔÚÂÞÂü³ÇµÄÄ§·¨´ó»áÉÏ£¬¾Û¼¯ÁËÎÞÊýÀ´×Ô¸÷µØµÄÄ§·¨Ê¦´ú±í£¬Íõ¾ôÑ§ÔºµÄÃ÷ÐÇÈËÎï¡°ºìÒÂÉÙÅ®¡±&#x2014;&#x2014;µÙÄÈ£¬½«ÏòÈ«ÊÀ½çµÄÄ§·¨Ê¦Õ¹ÏÖÊ±¿Õ´©Ëó£¬Ëý½«ÒªÇ°ÍùÂêÑÅÊ±´úµÄÍõ¹¬£¬ÕªÈ¡ÈøÂúµÄÏîÈ¦£¬ÔÙ»Øµ½±íÑÝÌ¨ÉÏ¡£¿ÉÊÇÓÉÓÚËýµÄÄ§·¨°ô±»ÈËÅª³öÁËÁÑÎÆ£¬µ¼ÖÂËýÀ´µ½ÁËÒ»¸öÄ°ÉúµÄÊ±´ú&#x2014;&#x2014;Èý¹ú¡£</desc>
       </role>
       <role>
             <id>298</id>
-            <name>é“ƒå…°é«˜æ ¡</name>
+            <name>ÁåÀ¼¸ßÐ£</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -5578,11 +5578,11 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>å®‰çªå„¿æ˜¯é“ƒå…°é«˜æ ¡æœ€æ—©æœŸçš„ç¥žè¯ï¼Œè™½ç„¶è¿™æ‰€å­¦æ ¡åœ¨å½“ä»Šæ˜¯ç”·äººçš„å¤©ä¸‹ï¼Œä½†åœ¨å½“å¹´çš„é“ƒå…°ï¼Œå®‰çªå„¿è¢«èª‰ä¸ºâ€œå²ä¸Šæœ€å¼ºå•æŒ‘çŽ‹â€ã€‚ä½œä¸ºé“ƒå…°æœ€å¤§çš„å¯¹æ‰‹é«˜æ ¡â€œå‡¤ä»™â€ï¼Œä¸€ç›´è§†å®‰çªå„¿ä¸ºçœ¼ä¸­é’‰ï¼Œä»–ä»¬åœ¨é»‘é“é å±±çš„æ€‚æ¿ä¸‹ï¼Œå°†å®‰çªå„¿æ†åœ¨éº»è¢‹ä¸­ä¸¢è¿›äº†æ²³é‡Œï¼Œå¯å½“å®‰çªå„¿é†’æ¥æ—¶ï¼Œå´å‘çŽ°èº«åœ¨ä¸‰å›½ï¼</desc>
+            <desc>°²ç÷¶ùÊÇÁåÀ¼¸ßÐ£×îÔçÆÚµÄÉñ»°£¬ËäÈ»ÕâËùÑ§Ð£ÔÚµ±½ñÊÇÄÐÈËµÄÌìÏÂ£¬µ«ÔÚµ±ÄêµÄÁåÀ¼£¬°²ç÷¶ù±»ÓþÎª¡°Ê·ÉÏ×îÇ¿µ¥ÌôÍõ¡±¡£×÷ÎªÁåÀ¼×î´óµÄ¶ÔÊÖ¸ßÐ£¡°·ïÏÉ¡±£¬Ò»Ö±ÊÓ°²ç÷¶ùÎªÑÛÖÐ¶¤£¬ËûÃÇÔÚºÚµÀ¿¿É½µÄËËÓÁÏÂ£¬½«°²ç÷¶ùÀ¦ÔÚÂé´üÖÐ¶ª½øÁËºÓÀï£¬¿Éµ±°²ç÷¶ùÐÑÀ´Ê±£¬È´·¢ÏÖÉíÔÚÈý¹ú£¡</desc>
       </role>
       <role>
             <id>299</id>
-            <name>å¥³æµ·è´¼</name>
+            <name>Å®º£Ôô</name>
             <quantity>orange</quantity>
             <soldier>5</soldier>
             <health>240</health>
@@ -5612,6 +5612,6 @@
             <mergeId />
             <mergeNum />
             <specialSkill />
-            <desc>çˆ±ä¸½èŽŽæ˜¯â€œçŽ«ç‘°æµ·ç›—å›¢â€çš„èˆ¹åŒ»ï¼Œå¥¹åœ¨å¾ˆå°çš„æ—¶å€™åžé£Ÿäº†â€œæ²»æ„ˆæžœå®žâ€ï¼Œæ‹¥æœ‰é«˜è¶…çš„ä¼¤ç—›æ¢å¤èƒ½åŠ›ã€‚åœ¨ä¼Ÿå¤§çš„èˆªè·¯ä¸Šï¼Œå¾ˆå¤šæµ·è´¼&#x56e3;éƒ½å¸Œæœ›èƒ½å°†å¥¹æ‹‰å…¥è‡ªå·±çš„éº¾ä¸‹ï¼Œå¯çˆ±ä¸½èŽŽä¸å¸Œæœ›è‡ªå·±æˆä¸ºä¸€å—â€œç£¨åˆ€çŸ³â€ï¼Œæœ€ç»ˆè¢«æ‹¥æœ‰â€œæ—¶ç©ºæžœå®žâ€çš„å¯¹æ‰‹é€åˆ°äº†ä¸€ä¸ªæœªçŸ¥çš„æ—¶ä»£ç©ºé—´&#x2014;&#x2014;ä¸‰å›½ã€‚</desc>
+            <desc>°®ÀöÉ¯ÊÇ¡°Ãµ¹åº£µÁÍÅ¡±µÄ´¬Ò½£¬ËýÔÚºÜÐ¡µÄÊ±ºòÍÌÊ³ÁË¡°ÖÎÓú¹ûÊµ¡±£¬ÓµÓÐ¸ß³¬µÄÉËÍ´»Ö¸´ÄÜÁ¦¡£ÔÚÎ°´óµÄº½Â·ÉÏ£¬ºÜ¶àº£Ôô&#x56e3;¶¼Ï£ÍûÄÜ½«ËýÀ­Èë×Ô¼ºµÄ÷âÏÂ£¬¿É°®ÀöÉ¯²»Ï£Íû×Ô¼º³ÉÎªÒ»¿é¡°Ä¥µ¶Ê¯¡±£¬×îÖÕ±»ÓµÓÐ¡°Ê±¿Õ¹ûÊµ¡±µÄ¶ÔÊÖËÍµ½ÁËÒ»¸öÎ´ÖªµÄÊ±´ú¿Õ¼ä&#x2014;&#x2014;Èý¹ú¡£</desc>
       </role>
 </roleList>

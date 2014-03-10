@@ -46,11 +46,7 @@ public class UserTaskHelper implements ApplicationContextAware {
     @Autowired
     TaskConfigFetcher taskConfigFetcher;
     @Autowired
-    UserEventHelper userEventHelper;
-    @Autowired
     UserStatusHelper userStatusHelper;
-    @Autowired
-    UserPackageHelper userPackageHelper;
     @Autowired
     UserEquipHelper userEquipHelper;
 
