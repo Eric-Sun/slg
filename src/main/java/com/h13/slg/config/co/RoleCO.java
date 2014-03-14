@@ -58,8 +58,8 @@ public class RoleCO {
     private int camp;
     @BeanPropertySetter(pattern = "roleList/role/period")
     private int period;
-    @BeanPropertySetter(pattern = "roleList/role/receviedMode")
-    private int receviedMode;
+    @BeanPropertySetter(pattern = "roleList/role/receiveMode")
+    private int receiveMode;
     @BeanPropertySetter(pattern = "roleList/role/goldUrl1")
     private int goldUrl1;
     @BeanPropertySetter(pattern = "roleList/role/godUrl2")
@@ -261,12 +261,12 @@ public class RoleCO {
         this.period = period;
     }
 
-    public int getReceviedMode() {
-        return receviedMode;
+    public int getReceiveMode() {
+        return receiveMode;
     }
 
-    public void setReceviedMode(int receviedMode) {
-        this.receviedMode = receviedMode;
+    public void setReceiveMode(int receiveMode) {
+        this.receiveMode = receiveMode;
     }
 
     public int getGoldUrl1() {

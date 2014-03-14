@@ -1,14 +1,14 @@
-package com.h13.slg.bar.co;
+package com.h13.slg.tavern.co;
 
 import java.util.List;
 
 /**
  * 招贤馆
  */
-public class BarCO {
+public class TavernCO {
 
     private long id; //招贤馆对应的uid
-    private List<BarRoleCO> roleList;
+    private List<TavernRoleCO> roleList;
 
     public long getId() {
         return id;
@@ -18,11 +18,11 @@ public class BarCO {
         this.id = id;
     }
 
-    public List<BarRoleCO> getRoleList() {
+    public List<TavernRoleCO> getRoleList() {
         return roleList;
     }
 
-    public void setRoleList(List<BarRoleCO> roleList) {
+    public void setRoleList(List<TavernRoleCO> roleList) {
         this.roleList = roleList;
     }
 }

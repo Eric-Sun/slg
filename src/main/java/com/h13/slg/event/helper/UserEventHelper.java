@@ -26,7 +26,7 @@ public class UserEventHelper {
      * @param userEventType
      * @param data
      */
-    public void addEvent(int uid, EventType userEventType, Map<String, Object> data) {
+    public void addEvent(long uid, EventType userEventType, Map<String, Object> data) {
         UserEventCO userEventCO = new UserEventCO();
         userEventCO.setUid(uid);
         userEventCO.setData(data);

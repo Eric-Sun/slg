@@ -81,7 +81,7 @@ public class UserTaskHelper implements ApplicationContextAware {
         userTaskCache.set(userTaskCO);
     }
 
-    public void setNewTask(int uid, int taskId) {
+    public void setNewTask(long uid, int taskId) {
         UserTaskCO userTaskCO = new UserTaskCO();
         userTaskCO.setId(uid);
         userTaskCO.setTaskId(taskId);
@@ -97,7 +97,7 @@ public class UserTaskHelper implements ApplicationContextAware {
      * @param uid
      * @return
      */
-    public UserTaskCO getTask(int uid) {
+    public UserTaskCO getTask(long uid) {
         UserTaskCO userTaskCO = userTaskCache.get(uid);
         if (userTaskCO == null)
             userTaskCO = userTaskDAO.get(uid);
@@ -110,7 +110,7 @@ public class UserTaskHelper implements ApplicationContextAware {
      *
      * @param evtList
      */
-    public boolean handleEvents(int uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestErrorException {
+    public boolean handleEvents(long uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestErrorException {
 
 
         UserTaskCO userTaskCO = getTask(uid);

@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class UserTaskCO {
 
-    private int id;
+    private long id;
     private int taskId;
     private Map<String,Integer> progress;
 
@@ -25,11 +25,11 @@ public class UserTaskCO {
         this.progress = progress;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

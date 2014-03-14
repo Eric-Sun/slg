@@ -3,6 +3,8 @@ package com.h13.slg.web;
 import com.alibaba.fastjson.JSON;
 import com.h13.slg.core.SlgResponseDTO;
 import com.h13.slg.core.SlgDispatcher;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,17 +35,20 @@ public class BaseController {
         try {
             String mod = request.getParameter("mod");
             String act = request.getParameter("act");
-            int uid = new Integer(request.getParameter("uid"));
+            long uid = new Long(request.getParameter("uid"));
             String args = request.getParameter("args");
             String authKey = request.getParameter("auth_key");
             long authTime = new Long(request.getParameter("auth_time"));
             int seq = new Integer(request.getParameter("seq"));
-            LOG.info("request mod=" + mod + " act=" + act + " uid=" + uid + " seq=" + seq
-                    + " args=" + args + " authTime=" + authTime + " authKey=" + authKey);
+            SlgLogger.info(SlgLoggerEntity.r(mod, act, uid, "r")
+                    .addParam("seq", seq)
+                    .addParam("args", args)
+                    .addParam("authKey", authKey)
+                    .addParam("authTime", authTime));
             SlgResponseDTO resp = slg.handle(mod, act, uid, seq, args, authTime, authKey);
             return JSON.toJSONString(resp);
         } catch (Exception e) {
-            LOG.error("error.", e);
+            SlgLogger.error(SlgLoggerEntity.r("", "", -1, ""), e);
             return null;
         }
     }

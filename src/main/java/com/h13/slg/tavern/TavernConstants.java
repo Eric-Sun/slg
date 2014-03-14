@@ -1,4 +1,4 @@
-package com.h13.slg.bar;
+package com.h13.slg.tavern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +7,7 @@ package com.h13.slg.bar;
  * Time: 下午7:12
  * To change this template use File | Settings | File Templates.
  */
-public class BarConstants {
+public class TavernConstants {
         public static int DEFAULT = 0;
         public static int GOT = 1;
 }

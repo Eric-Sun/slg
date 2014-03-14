@@ -7,15 +7,15 @@ import java.util.Map;
  */
 public class UserEventCO {
 
-    private int uid;
+    private long uid;
     private com.h13.slg.event.EventType EventType;
     private Map<String,Object> data;
 
-    public int getUid() {
+    public long getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(long uid) {
         this.uid = uid;
     }
 

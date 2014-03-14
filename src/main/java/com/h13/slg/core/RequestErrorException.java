@@ -8,11 +8,15 @@ package com.h13.slg.core;
  * To change this template use File | Settings | File Templates.
  */
 public class RequestErrorException extends Exception {
-    private int code=1001;     // 1001 默认请求失败错误码
+    private int code = 1001;     // 1001 默认请求失败错误码
     private String desc;
+
 
     public RequestErrorException(int code, String desc) {
         super(code + ":" + desc);
+        this.code = code;
+        this.desc = desc;
+
     }
 
     public int getCode() {

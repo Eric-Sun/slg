@@ -3,6 +3,8 @@ package com.h13.slg.user.hepler;
 import com.h13.slg.config.co.LevelCO;
 import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.ResourceCalUtil;
 import com.h13.slg.user.cache.UserStatusCache;
 import com.h13.slg.user.co.UserStatusCO;
@@ -31,14 +33,6 @@ public class UserStatusHelper {
 
     @Autowired
     LevelHelper levelHelper;
-
-    @Autowired
-    CastleDAO castleDAO;
-    @Autowired
-    FarmHelper farmHelper;
-    @Autowired
-    CastleHelper castleHelper;
-
 
     /**
      * 获得用户状态数据
@@ -100,7 +94,10 @@ public class UserStatusHelper {
             userStatusCO.setGold(finalGold);
             updateUserStatus(userStatusCO);
         }
-        LOG.info("add cash. uid=" + uid + " cash= " + gold + " final=" + finalGold);
+        SlgLogger.info(SlgLoggerEntity.p("user", "addGold", uid, "")
+                .addParam("gold", gold)
+                .addParam("curGold", curGold)
+                .addParam("finalGold", finalGold));
     }
 
     /**
@@ -138,6 +135,10 @@ public class UserStatusHelper {
 
         userStatusCO.setGold(curGold - gold);
         updateUserStatus(userStatusCO);
+        SlgLogger.info(SlgLoggerEntity.p("user", "subtractGold", uid, "")
+                .addParam("gold", gold)
+                .addParam("curGold", curGold).addParam("finalGold", curGold - gold));
+
     }
 
 
@@ -161,7 +162,11 @@ public class UserStatusHelper {
             userStatusCO.setLevel(curLevel);
         }
         updateUserStatus(userStatusCO);
-        LOG.info("add xp. uid=" + uid + " xp= " + xp + " final=" + finalXp + " level=" + curLevel);
+        SlgLogger.info(SlgLoggerEntity.p("user", "addXp", uid, "")
+                .addParam("xp", xp)
+                .addParam("curXP", curXp)
+                .addParam("finalXp", finalXp)
+                .addParam("finalLevel", curLevel));
     }
 
     public void addCash(long uid, int cash) {
@@ -170,7 +175,21 @@ public class UserStatusHelper {
         int finalCash = curCash + cash;
         userStatusCO.setCash(finalCash);
         updateUserStatus(userStatusCO);
-        LOG.info("add cash. uid=" + uid + " cash= " + cash + " final=" + finalCash);
+        SlgLogger.info(SlgLoggerEntity.p("user", "addCash", uid, "")
+                .addParam("cash", cash)
+                .addParam("curCash", curCash)
+                .addParam("finalCash", finalCash));
     }
 
+
+    public void addSoul(long uid, int soul) {
+        UserStatusCO userStatusCO = getUserStatus(uid);
+        int curSoul = userStatusCO.getSoul();
+        int finalSoul = curSoul + soul;
+        userStatusCO.setSoul(finalSoul);
+        updateUserStatus(userStatusCO);
+        SlgLogger.info(SlgLoggerEntity.p("user", "addSoul", uid, "")
+                .addParam("curSoul", curSoul)
+                .addParam("soul", soul).addParam("finalSoul", finalSoul));
+    }
 }

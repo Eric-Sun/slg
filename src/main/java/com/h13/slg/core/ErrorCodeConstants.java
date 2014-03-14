@@ -9,18 +9,23 @@ package com.h13.slg.core;
  */
 public class ErrorCodeConstants {
 
-    public static int COMMON_ERROR = 1001;
+    public static int COMMON_ERROR = 0001;
 
     public static class User {
-        public static int NAME_OR_PASSWORD_ERROR = 1002;
-        public static int NAME_EXISTS = 1003;
-        public static int DONT_HAVE_ENOUGH_FOOD = 1004;
-        public static int DONT_HAVE_ENOUGH_GOLD = 1005;
+        public static int NAME_OR_PASSWORD_ERROR = 1001;
+        public static int NAME_EXISTS = 1002;
+        public static int DONT_HAVE_ENOUGH_FOOD = 1003;
+        public static int DONT_HAVE_ENOUGH_GOLD = 1004;
     }
 
     public static class Role {
         public static int EQUIP_STRENGTH_LEVEL_TO_TOP = 2001;
         public static int RESOURCE_IS_NOT_ENOUGH = 2002;
+    }
+
+    public static class Tavern {
+        public static int TAVERN_IS_FULL = 3001;
+        public static int TAVERN_IS_EMPTY = 3002;
     }
 
 }

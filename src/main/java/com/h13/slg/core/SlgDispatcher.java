@@ -27,13 +27,12 @@ import java.util.Map;
  */
 @Service
 public class SlgDispatcher implements ApplicationContextAware {
-    private final static Logger LOG = LoggerFactory.getLogger(SlgDispatcher.class);
 
 
     private ApplicationContext applicationContext;
     private final static String SUFFIX = "Service";
 
-    public SlgResponseDTO handle(String mod, String act, int uid, int seq, String args, long authTime, String authKey) {
+    public SlgResponseDTO handle(String mod, String act, long uid, int seq, String args, long authTime, String authKey) {
         StringBuilder sb = new StringBuilder();
         sb.append(mod.substring(0, 1).toUpperCase());
         sb.append(mod.substring(1).toLowerCase());
@@ -66,7 +65,6 @@ public class SlgDispatcher implements ApplicationContextAware {
     private void triggerEvents(SlgRequestDTO req, SlgData r) throws RequestErrorException {
         EventService eventService = (EventService) applicationContext.getBean("EventService");
         eventService.triggerTasks(req.getUid(), r);
-
     }
 
     @Override

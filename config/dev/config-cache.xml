@@ -14,6 +14,16 @@
           p:valueSerializer-ref="levelSerializer">
     </bean>
 
+    <!-- tavernConfigTemplate -->
+    <bean id="tavernConfigSerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.TavernConfigCO"/>
+    </bean>
+    <bean id="tavernConfigTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="tavernConfigSerializer">
+    </bean>
+
     <!-- battleTemplate -->
     <bean id="battleSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">
@@ -102,9 +112,14 @@
     </bean>
     <bean id="roleTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="levelSerializer">
+          p:valueSerializer-ref="roleSerializer">
     </bean>
 
+    <!-- rolePartitionTemplate -->
+    <bean id="rolePartitionTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="redisLongRedisSerializer">
+    </bean>
 
     <!-- roleTemplate -->
     <bean id="roleLevelSerializer"

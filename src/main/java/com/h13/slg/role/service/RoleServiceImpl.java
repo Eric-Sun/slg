@@ -25,7 +25,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public SlgData wear(SlgRequestDTO requestDTO) throws RequestErrorException {
-        int uid = requestDTO.getUid();
+        long uid = requestDTO.getUid();
         int ueid = new Integer(requestDTO.getArgs().get("ueid").toString());
         int urid = new Integer(requestDTO.getArgs().get("urid").toString());
 

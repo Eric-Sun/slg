@@ -24,7 +24,7 @@ public class WearEquipHandler implements EventHandler {
     public void handleEvent(UserEventCO evtData, Object smallTask) {
         UserSmallTaskCO smallTaskCO = (UserSmallTaskCO) smallTask;
         int target = new Integer(smallTaskCO.getTaskTarget());
-        int uid = evtData.getUid();
+        long uid = evtData.getUid();
         UserTaskCO userTaskCO = userTaskHelper.getTask(uid);
         Map<String, Integer> progress = userTaskCO.getProgress();
         int order = smallTaskCO.getOrder();

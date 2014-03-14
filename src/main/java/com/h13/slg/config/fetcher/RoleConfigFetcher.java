@@ -20,4 +20,26 @@ public class RoleConfigFetcher implements BasicFetcher<RoleCO> {
         return cache.get(key);
     }
 
+
+    public Long getFromZhaoxian(int index, String quality) {
+        return cache.getFromZhaoxian(index, quality);
+    }
+
+
+    public long getZhaoxianSize(String quality) {
+        return cache.getZhaoxianSize(quality);
+    }
+
+    public Long getFromFuben(int index, String quality) {
+        return cache.getFromFuben(index, quality);
+    }
+
+    public Long getFromHuodong(int index, String quality) {
+        return cache.getFromHuodong(index, quality);
+    }
+
+    public Long getFromDuihuan(int index, String quality) {
+        return cache.getFromDuihuan(index, quality);
+    }
+
 }

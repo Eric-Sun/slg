@@ -10,7 +10,7 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
        ">  
        
-	<bean id="db" class="com.mchange.v2.c3p0.ComboPooledDataSource"  >
+	<bean id="db" class="org.apache.tomcat.jdbc.pool.DataSourceFactory"  >
  		<property name="driverClass">
 			<value>com.mysql.jdbc.Driver</value>
 		</property>

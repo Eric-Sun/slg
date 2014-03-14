@@ -9,6 +9,7 @@ import com.h13.slg.core.util.MD5Util;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
+import com.h13.slg.tavern.helper.TavernHelper;
 import com.h13.slg.user.RequestKeyConstants;
 import com.h13.slg.user.ResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
@@ -47,6 +48,8 @@ public class UserServiceImpl implements UserService {
     private UserStatusCache userStatusCache;
     @Autowired
     private UserRoleHelper userRoleHelper;
+    @Autowired
+    private TavernHelper tavernHelper;
 
     @Autowired
     FarmHelper farmHelper;
@@ -64,8 +67,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
-        String name = (String)request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
-        String password = (String)request.getArgs().get(RequestKeyConstants.REQEUST_PASSWORD);
+        String name = (String) request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
+        String password = (String) request.getArgs().get(RequestKeyConstants.REQEUST_PASSWORD);
 
         int userId = userDAO.login(name, MD5Util.getMD5String(password));
 
@@ -126,6 +129,8 @@ public class UserServiceImpl implements UserService {
         userRoleHelper.addRoleForRegister(userId);
         // 在包裹中放入一些基础的物品
         userPackageHelper.addSomeEquipForRegister(userId);
+        // 创建tavern
+        tavernHelper.create(userId);
 
         userStatusCache.set(userStatusCO);
         SlgLogger.info(SlgLoggerEntity.p(MOD, "register", -1, "name not exists").addParam("name", name));

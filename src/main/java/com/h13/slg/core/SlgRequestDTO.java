@@ -10,13 +10,13 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class SlgRequestDTO {
-    private int uid;
+    private long uid;
     private int seq;
     private Map<String, Object> args;
     private String mod;
     private String act;
 
-    public SlgRequestDTO(String mod, String act, int uid, int seq, Map<String, Object> args) {
+    public SlgRequestDTO(String mod, String act, long uid, int seq, Map<String, Object> args) {
         this.mod = mod;
         this.act = act;
         this.uid = uid;
@@ -40,11 +40,11 @@ public class SlgRequestDTO {
         this.act = act;
     }
 
-    public int getUid() {
+    public long getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(long uid) {
         this.uid = uid;
     }
 
