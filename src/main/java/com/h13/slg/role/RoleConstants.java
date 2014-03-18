@@ -9,6 +9,6 @@ package com.h13.slg.role;
  */
 public class RoleConstants {
 
-    public static long NO_EQUIP_ID = -1;
+    public static long NO_EQUIP_ID = 0;
 
 }

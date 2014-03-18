@@ -9,6 +9,7 @@ import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.TavernConfigFetcher;
 import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.tavern.TavernConstants;
 import com.h13.slg.tavern.co.TavernCO;
 import com.h13.slg.tavern.co.TavernRoleCO;
@@ -44,6 +45,8 @@ public class TavernHelper {
     UserStatusHelper userStatusHelper;
     @Autowired
     TavernConfigFetcher tavernConfigFetcher;
+    @Autowired
+    UserRoleHelper userRoleHelper;
 
     /**
      * 创建一个人物的时候创建一个招贤馆对象
@@ -210,6 +213,16 @@ public class TavernHelper {
         return random.nextInt(new Integer(max + ""));
     }
 
+
+    public void enroll(long uid, int pos) {
+        // enroll
+        TavernCO tavernCO = get(uid);
+        TavernRoleCO tavernRoleCO = tavernCO.getRoleList().get(pos);
+        long roleId = tavernRoleCO.getId();
+        RoleCO roleCO = roleConfigFetcher.get(roleId + "");
+        userRoleHelper.add(uid,roleCO.getId());
+
+    }
 
 }
 

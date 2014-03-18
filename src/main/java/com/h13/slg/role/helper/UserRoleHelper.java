@@ -51,9 +51,14 @@ public class UserRoleHelper {
                 userRoleCO.getAccessory());
     }
 
-    public void add(long uid, long rId) {
+    public long add(long uid, long rId) {
         // 检查是否在招贤馆中
-
+        long urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID);
+        SlgLogger.info(SlgLoggerEntity.p("userRole", "add new Role", uid, "ok")
+                .addParam("rId", rId)
+                .addParam("urId", urid)
+        );
+        return urid;
     }
 
 
