@@ -11,6 +11,7 @@ public class UserEquipCO {
     private long id;
     private int eid;
     private long uid;
+    private long urid;
     private String type;
     private int level;
     private String gems;
@@ -18,6 +19,14 @@ public class UserEquipCO {
     private int fail;
     private int refine;
     private int star;
+
+    public long getUrid() {
+        return urid;
+    }
+
+    public void setUrid(long urid) {
+        this.urid = urid;
+    }
 
     public int getEid() {
         return eid;

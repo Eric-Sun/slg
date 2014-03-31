@@ -15,6 +15,15 @@ public class UserStatusCO {
     private int xp;
     private String name ;
     private int soul;
+    private int fightForce;
+
+    public int getFightForce() {
+        return fightForce;
+    }
+
+    public void setFightForce(int fightForce) {
+        this.fightForce = fightForce;
+    }
 
     public int getSoul() {
         return soul;

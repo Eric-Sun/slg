@@ -2,6 +2,9 @@ package com.h13.slg.battle.service;
 
 import com.alibaba.fastjson.JSON;
 import com.h13.slg.battle.co.UserTeamCO;
+import com.h13.slg.battle.fight.FightHandler;
+import com.h13.slg.battle.fight.FightResult;
+import com.h13.slg.battle.helper.FightHelper;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
@@ -22,6 +25,8 @@ import java.util.Map;
 public class BattleServiceImpl implements BattleService {
     @Autowired
     TeamHelper teamHelper;
+    @Autowired
+    FightHelper fightHelper;
 
     @Override
     public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestErrorException {
@@ -29,5 +34,14 @@ public class BattleServiceImpl implements BattleService {
         String team = JSON.toJSONString(requestDTO.getArgs().get("team"));
         teamHelper.saveTeam(uid, team);
         return SlgData.getData();
+    }
+
+
+    @Override
+    public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException {
+        long uid = requestDTO.getUid();
+        long battleId = new Long(requestDTO.getArgs().get("battleId") + "");
+        FightResult fightResult = fightHelper.pve(uid, battleId);
+        return SlgData.getData().add("battle", fightResult);
     }
 }

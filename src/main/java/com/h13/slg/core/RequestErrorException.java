@@ -19,6 +19,13 @@ public class RequestErrorException extends Exception {
 
     }
 
+    public RequestErrorException(int code, String desc, Throwable t) {
+        super(code + ":" + desc, t);
+        this.code = code;
+        this.desc = desc;
+
+    }
+
     public int getCode() {
         return code;
     }

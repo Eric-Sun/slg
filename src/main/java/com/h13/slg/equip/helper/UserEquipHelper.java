@@ -15,6 +15,7 @@ import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.equip.dao.UserEquipDAO;
 import com.h13.slg.equip.vo.EquipMakeVO;
 import com.h13.slg.equip.vo.EquipStrengthenVO;
+import com.h13.slg.role.helper.FightForceHelper;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,8 @@ public class UserEquipHelper {
 
     @Autowired
     UserPackageHelper userPackageHelper;
+    @Autowired
+    FightForceHelper fightForceHelper;
 
     /**
      * 获取用户装备
@@ -69,7 +72,7 @@ public class UserEquipHelper {
      */
     public void updateUserEquip(UserEquipCO ue) {
         userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getGemsMap(), ue.getStrength(),
-                ue.getFail(), ue.getRefine(), ue.getStar());
+                ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid());
     }
 
 
@@ -113,6 +116,10 @@ public class UserEquipHelper {
 
         vo.setGold(cost);
         vo.setStrength(nextStrength);
+
+        long urid = ue.getUrid();
+        // 更新fightforce
+        fightForceHelper.updateUserRoleFightForce(urid);
         return vo;
     }
 
@@ -169,6 +176,8 @@ public class UserEquipHelper {
         map.put(materialId1 + "", materialCount1 * -1);
         map.put(materialId2 + "", materialCount2 * -1);
         vo.setMap(map);
+
+        fightForceHelper.updateUserRoleFightForce(ue.getUrid());
         return vo;
     }
 
@@ -190,7 +199,7 @@ public class UserEquipHelper {
                     .addParam("eid", eid).addParam("type", type));
             throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "type is error");
         }
-        long ueid = userEquipDAO.insert( uid, type, eid, "{}", 1, 0, 0, 0);
+        long ueid = userEquipDAO.insert(uid, type, eid, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE);
         userPackageHelper.addEquipItem(uid, eid, ueid);
         return ueid;
     }

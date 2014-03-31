@@ -1,5 +1,7 @@
 package com.h13.slg.role.helper;
 
+import com.h13.slg.config.cache.RoleCache;
+import com.h13.slg.config.co.RoleCO;
 import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.log.SlgLogger;
@@ -27,6 +29,10 @@ public class UserRoleHelper {
     UserRoleDAO userRoleDAO;
     @Autowired
     UserEquipHelper userEquipHelper;
+    @Autowired
+    FightForceHelper fightForceHelper;
+    @Autowired
+    RoleCache roleCache;
 
     /**
      * 在创建一个账号的时候，有一个默认的人物
@@ -35,12 +41,37 @@ public class UserRoleHelper {
      */
     public long addRoleForRegister(long uid) {
         long rid = 48;
-        long urid = userRoleDAO.insert(rid, uid, RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID);
-        SlgLogger.info(SlgLoggerEntity.p("userRole", "addRoleForRegister", uid, "ok")
+        RoleCO roleCO = roleCache.get(rid + "");
+        int fightForce = roleCO.getFightForce();
+        int attack = roleCO.getAttack();
+        int defence = roleCO.getDefence();
+        int health = roleCO.getHealth();
+        long urid = userRoleDAO.insert(rid, uid,
+                RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID,
+                RoleConstants.NO_EQUIP_ID, 1, fightForce,
+                attack, defence, health);
+        SlgLogger.info(
+                SlgLoggerEntity.p("userRole", "addRoleForRegister", uid, "ok")
         );
         return urid;
     }
 
+
+    /**
+     * 更新数据库中战斗力
+     *
+     * @param urId
+     * @param fightForce
+     */
+    public void updateFightForce(long urId, int fightForce) {
+        UserRoleCO userRoleCO = getUserRole(urId);
+        userRoleCO.setFightForce(fightForce);
+        updateUserRole(userRoleCO);
+        SlgLogger.info(SlgLoggerEntity.p("userRole", "updateFightForce", userRoleCO.getUid(), "ok")
+                .addParam("urId", urId)
+                .addParam("fightForce", fightForce)
+        );
+    }
 
     public UserRoleCO getUserRole(long urid) {
         return userRoleDAO.get(urid);
@@ -48,12 +79,19 @@ public class UserRoleHelper {
 
     public void updateUserRole(UserRoleCO userRoleCO) {
         userRoleDAO.update(userRoleCO.getId(), userRoleCO.getWeapon(), userRoleCO.getArmor(),
-                userRoleCO.getAccessory());
+                userRoleCO.getAccessory(), userRoleCO.getFightForce(), userRoleCO.getLevel());
     }
 
     public long add(long uid, long rId) {
+        RoleCO roleCO = roleCache.get(rId + "");
+        int fightForce = roleCO.getFightForce();
+        int attack = roleCO.getAttack();
+        int defence = roleCO.getDefence();
+        int health = roleCO.getHealth();
         // 检查是否在招贤馆中
-        long urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID);
+        long urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID,
+                RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, 1, fightForce,
+                attack, defence, health);
         SlgLogger.info(SlgLoggerEntity.p("userRole", "add new Role", uid, "ok")
                 .addParam("rId", rId)
                 .addParam("urId", urid)
@@ -112,6 +150,8 @@ public class UserRoleHelper {
         SlgLogger.info(SlgLoggerEntity.p("role", "wear", uid, "ok")
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));
+
+        fightForceHelper.updateUserRoleFightForce(urid);
     }
 
 
@@ -161,8 +201,26 @@ public class UserRoleHelper {
             ur.setWeapon(RoleConstants.NO_EQUIP_ID);
         }
         updateUserRole(ur);
+
+        fightForceHelper.updateUserRoleFightForce(ue.getUrid());
         SlgLogger.info(SlgLoggerEntity.p("role", "takeOff", uid, "ok")
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));
+        fightForceHelper.updateUserRoleFightForce(urid);
+    }
+
+
+    public void updateAttackDefenceHealth(long urid, int finalAttack, int finalDefence, int finalHealth) {
+        UserRoleCO userRoleCO = getUserRole(urid);
+        userRoleCO.setAttack(finalAttack);
+        userRoleCO.setDefence(finalDefence);
+        userRoleCO.setHealth(finalHealth);
+        updateUserRole(userRoleCO);
+        SlgLogger.info(SlgLoggerEntity.p("userRole", "updateFightForce", userRoleCO.getUid(), "ok")
+                .addParam("urid", urid)
+                .addParam("finalAttack", finalAttack)
+                .addParam("finalDefence", finalDefence)
+                .addParam("finalHealth", finalHealth)
+        );
     }
 }

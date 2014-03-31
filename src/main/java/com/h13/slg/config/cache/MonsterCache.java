@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 @Service
 public class MonsterCache extends BasicCache<MonsterCO> {
 
-    private static final String KEY = "slg:sys:armor:";
+    private static final String KEY = "slg:sys:monster:";
 
     @Resource(name = "monsterTemplate")
     private RedisTemplate<String, MonsterCO> monsterTemplate;

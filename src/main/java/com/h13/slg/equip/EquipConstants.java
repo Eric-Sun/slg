@@ -14,4 +14,6 @@ public class EquipConstants {
         public static String ARMOR = "armor";
         public static String ACCESSORY = "accessory";
     }
+
+    public static long NO_USER_ROLE = 0;
 }

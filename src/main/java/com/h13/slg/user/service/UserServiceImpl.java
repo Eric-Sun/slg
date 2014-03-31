@@ -1,5 +1,6 @@
 package com.h13.slg.user.service;
 
+import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.core.*;
@@ -65,6 +66,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserStatusHelper userStatusHelper;
 
+    @Autowired
+    TeamHelper teamHelper;
+
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
         String name = (String) request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
@@ -117,7 +121,8 @@ public class UserServiceImpl implements UserService {
                 userStatusCO.getHonor(),
                 userStatusCO.getLevel(),
                 userStatusCO.getXp(),
-                userStatusCO.getSoul());
+                userStatusCO.getSoul(),
+                userStatusCO.getFightForce());
 
         // init farm castle timer
         farmHelper.create(userId);
@@ -131,6 +136,8 @@ public class UserServiceImpl implements UserService {
         userPackageHelper.addSomeEquipForRegister(userId);
         // 创建tavern
         tavernHelper.create(userId);
+        // 创建新的team
+        teamHelper.createANewTeam(userId);
 
         userStatusCache.set(userStatusCO);
         SlgLogger.info(SlgLoggerEntity.p(MOD, "register", -1, "name not exists").addParam("name", name));
@@ -158,6 +165,7 @@ public class UserServiceImpl implements UserService {
         userStatusCO.setId(userId);
         userStatusCO.setXp(0);
         userStatusCO.setSoul(0);
+        userStatusCO.setFightForce(0);
         return userStatusCO;
     }
 }

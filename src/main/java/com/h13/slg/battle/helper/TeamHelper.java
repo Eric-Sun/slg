@@ -1,5 +1,7 @@
 package com.h13.slg.battle.helper;
 
+import com.alibaba.fastjson.JSON;
+import com.h13.slg.battle.TeamConstants;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.dao.UserTeamDAO;
 import com.h13.slg.core.ErrorCodeConstants;
@@ -12,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +27,6 @@ import java.util.Map;
  */
 @Service
 public class TeamHelper {
-
 
     @Autowired
     UserTeamDAO userTeamDAO;
@@ -43,6 +45,14 @@ public class TeamHelper {
     }
 
 
+    public void createANewTeam(long uid) {
+        userTeamDAO.insert(uid, new LinkedList<Long>() {{
+            for (int i = 0; i < 9; i++) {
+                add(TeamConstants.NO_ROLE_IN_TEAM);
+            }
+        }});
+    }
+
     /**
      * 保存前端的team内容
      *
@@ -50,13 +60,18 @@ public class TeamHelper {
      * @param team
      */
     public void saveTeam(long uid, String team) throws RequestErrorException {
+
+        final Map teamDataMap = JSON.parseObject(team, Map.class);
+        List<Long> teamDataList = new LinkedList<Long>() {{
+            for (int i = 0; i < 9; i++) {
+                add(new Long(teamDataMap.get(i + "")+""));
+            }
+        }};
+
         UserTeamCO userTeamCO = new UserTeamCO();
-        userTeamCO.setData(team);
+        userTeamCO.setData(teamDataList);
         userTeamCO.setId(uid);
-        Map<String, Integer> data = userTeamCO.getDataMap();
-        Collection<Integer> uridList = data.values();
-        for (Integer uridInt : uridList) {
-            long urid = new Long(uridInt);
+        for (Long urid : teamDataList) {
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(urid);
@@ -69,7 +84,7 @@ public class TeamHelper {
         }
         updateTeam(userTeamCO);
         SlgLogger.info(SlgLoggerEntity.p("team", "saveTeam", uid, "ok")
-                .addParam("teamInfo", data));
+                .addParam("teamInfo", team));
     }
 
 

@@ -16,7 +16,7 @@ import java.util.Map;
 public class BattleServiceTest {
 
     @Test
-    public void a() {
+    public void saveTeam() {
         HttpClientUtil http = new HttpClientUtil();
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod", "battle");
@@ -30,5 +30,21 @@ public class BattleServiceTest {
         System.out.println(s);
 
 
+    }
+
+
+    @Test
+    public void pve(){
+        HttpClientUtil http = new HttpClientUtil();
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("mod", "battle");
+        map.put("act", "pve");
+        map.put("uid", "1");
+        map.put("auth_key", "fdsafdsa");
+        map.put("auth_time", "24321431");
+        map.put("args", "{\"battleId\":1}");
+        map.put("seq", "1");
+        String s = http.post("http://localhost:8080/", map);
+        System.out.println(s);
     }
 }

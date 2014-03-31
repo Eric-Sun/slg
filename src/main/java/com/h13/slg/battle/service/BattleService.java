@@ -14,4 +14,7 @@ import com.h13.slg.core.SlgRequestDTO;
 public interface BattleService {
 
     public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+
+    public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException;
 }

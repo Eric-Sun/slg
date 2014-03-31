@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 @Service
 public class BattleCache extends BasicCache<BattleCO> {
 
-    private static final String KEY = "slg:sys:armor:";
+    private static final String KEY = "slg:sys:battle:";
 
     @Resource(name = "battleTemplate")
     private RedisTemplate<String, BattleCO> battleTemplate;

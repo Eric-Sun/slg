@@ -34,4 +34,5 @@ public enum EventType {
     FightTower,
     HaveRole
 
+
 }

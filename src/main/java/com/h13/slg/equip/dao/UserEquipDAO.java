@@ -31,16 +31,16 @@ public class UserEquipDAO {
     public long insert(final long uid,
                        final String type, final int level, final String gems,
                        final int strength, final int fail, final int refine,
-                       final int star) {
+                       final int star,final long urid) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_equip(uid," +
-                "type,level,gems,strength,fail,refine,star,createtime) " +
+                "type,level,gems,strength,fail,refine,star,urid,createtime) " +
                 "values " +
-                "(?,?,?,?,?,?,?,?,now())";
+                "(?,?,?,?,?,?,?,?,?,now())";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-                PreparedStatement pstmt = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+                PreparedStatement pstmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
                 pstmt.setLong(1, uid);
                 pstmt.setString(2, type);
                 pstmt.setInt(3, level);
@@ -49,19 +49,20 @@ public class UserEquipDAO {
                 pstmt.setInt(6, fail);
                 pstmt.setInt(7, refine);
                 pstmt.setInt(8, star);
+                pstmt.setLong(9,urid);
                 return pstmt;
             }
         }, holder);
         return holder.getKey().longValue();
     }
 
-    public void update(long id, int level, Map<String, String> gems, int strength, int fail, int refine, int star) {
-        String sql = "update user_equip set type=?,level=?,gems=?,strength=?,fail=?,refine=?,star=?,e_id=? where id=?";
-        j.update(sql, new Object[]{level, JSON.toJSONString(gems), strength, fail, refine, star, id});
+    public void update(long id, int level, Map<String, String> gems, int strength, int fail, int refine, int star, long urid) {
+        String sql = "update user_equip set type=?,level=?,gems=?,strength=?,fail=?,refine=?,star=?,e_id=?,urid=? where id=?";
+        j.update(sql, new Object[]{level, JSON.toJSONString(gems), strength, fail, refine, star, urid, id});
     }
 
     public UserEquipCO get(long id) {
-        String sql = "select id,uid,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?";
+        String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 }

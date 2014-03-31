@@ -5,8 +5,12 @@ import com.h13.slg.battle.co.UserTeamCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,19 +26,27 @@ public class UserTeamDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(long id, String data) {
+    public void insert(long id, List<Long> data) {
         String sql = "insert into user_team (id,data,createtime) values (?,?,now())";
-        j.update(sql, new Object[]{id, data});
+        j.update(sql, new Object[]{id, JSON.toJSONString(data)});
     }
 
-    public void update(long id, String data) {
+    public void update(long id, List<Long> data) {
         String sql = "update user_team set data=? where id=?";
-        j.update(sql, new Object[]{data, id});
+        j.update(sql, new Object[]{JSON.toJSONString(data), id});
     }
 
 
     public UserTeamCO get(long id) {
         final String sql = "select id,data from user_team where id=?";
-        return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserTeamCO>(UserTeamCO.class));
+        return j.queryForObject(sql, new Object[]{id}, new RowMapper<UserTeamCO>() {
+            @Override
+            public UserTeamCO mapRow(ResultSet resultSet, int i) throws SQLException {
+                UserTeamCO userTeamCO = new UserTeamCO();
+                userTeamCO.setId(resultSet.getInt(1));
+                userTeamCO.setData(JSON.parseObject(resultSet.getString(2), List.class));
+                return userTeamCO;
+            }
+        });
     }
 }

@@ -192,4 +192,15 @@ public class UserStatusHelper {
                 .addParam("curSoul", curSoul)
                 .addParam("soul", soul).addParam("finalSoul", finalSoul));
     }
+
+    public void updateFightForce(long uid, int oldFightForce, int finalFightForce) {
+        UserStatusCO userStatusCO = getUserStatus(uid);
+        userStatusCO.setFightForce(userStatusCO.getFightForce()-oldFightForce+finalFightForce);
+        SlgLogger.info(SlgLoggerEntity.p("user", "updateFightForce", uid, "")
+                .addParam("oldFightForce", oldFightForce)
+                .addParam("finalFightForce", finalFightForce));
+    }
+
+
+
 }

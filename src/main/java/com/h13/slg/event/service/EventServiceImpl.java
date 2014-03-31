@@ -4,6 +4,7 @@ import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.event.co.UserEventCO;
 import com.h13.slg.event.helper.UserEventHelper;
+import com.h13.slg.role.helper.FightForceHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
 import com.h13.slg.task.vo.FinishedPerTaskVO;
 import com.h13.slg.task.vo.FinishedTaskVO;
@@ -27,6 +28,8 @@ public class EventServiceImpl implements EventService {
     UserEventHelper userEventHelper;
     @Autowired
     UserTaskHelper userTaskHelper;
+    @Autowired
+    FightForceHelper fightForceHelper;
 
 
     public void triggerTasks(long uid, SlgData slgData) throws RequestErrorException {

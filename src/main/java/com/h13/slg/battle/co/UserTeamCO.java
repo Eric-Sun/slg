@@ -2,6 +2,7 @@ package com.h13.slg.battle.co;
 
 import com.alibaba.fastjson.JSON;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Map;
  */
 public class UserTeamCO {
     private long id;
-    private String data;
+    private List<Long> data;
 
     public long getId() {
         return id;
@@ -23,20 +24,11 @@ public class UserTeamCO {
         this.id = id;
     }
 
-    public String getData() {
+    public List<Long> getData() {
         return data;
     }
 
-    public Map<String, Integer> getDataMap() {
-        return (Map<String, Integer>)JSON.parseObject(data, Map.class);
-    }
-
-    public void setDataMap(Map<Integer, Long> data) {
-        this.data = JSON.toJSONString(data);
-    }
-
-
-    public void setData(String data) {
+    public void setData(List<Long> data) {
         this.data = data;
     }
 }

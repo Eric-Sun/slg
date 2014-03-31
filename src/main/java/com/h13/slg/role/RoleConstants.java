@@ -11,4 +11,11 @@ public class RoleConstants {
 
     public static long NO_EQUIP_ID = 0;
 
+
+    static class Soldier {
+        public static int SPEARMAN = 0;
+        public static int CAVALRY = 1;
+        public static int BOWMAN = 2;
+    }
+
 }
