@@ -4,24 +4,19 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- message -->
-    <bean id="messageSerializer"
-          class="com.h13.slg.cache.service.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.cache.co.MessageCO"/>
-    </bean>
-    <bean id="messageCOTemplate" class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="messageSerializer">
+    <bean id="jedisConnectionFactory"
+          class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+          p:host-name="${redis.ip}" p:port="${redis.port}" p:use-pool="true"/>
+
+    <bean id="redisStringRedisSerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="java.lang.String"/>
     </bean>
 
-    <!-- comment -->
-    <bean id="commentSerializer"
-          class="com.h13.slg.cache.service.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.cache.co.CommentCO"/>
+    <bean id="redisLongRedisSerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="java.lang.Long"/>
     </bean>
-    <bean id="commentCOTemplate" class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="commentSerializer">
-    </bean>
+
 
 </beans>

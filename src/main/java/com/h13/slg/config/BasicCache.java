@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class BasicCache<T> {
-    private static final Logger LOG = LoggerFactory.getLogger(BasicCache.class);
     protected String name = null;
 
     public void load(String filename) throws ConfigParseException {

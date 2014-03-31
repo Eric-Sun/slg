@@ -44,9 +44,9 @@ public class UserModuleTest {
         map.put("uid","432143214312");
         map.put("auth_key","fdsafdsa");
         map.put("auth_time","24321431") ;
-        map.put("args","{name:'aaa',password:'bbb'}");
+        map.put("args","{name:'aaab',password:'bbbb'}");
         map.put("seq","1");
-        String s = http.post("http://localhost:8080/", map);
+        String s = http.post("http://42.62.29.102:8080/slg/", map);
         System.out.println(s);
     }
 
@@ -63,7 +63,7 @@ public class UserModuleTest {
         map.put("auth_time","24321431") ;
         map.put("args","{name:'aaa',password:'bbb'}");
         map.put("seq","1");
-        String s = http.post("http://localhost:8080/", map);
+        String s = http.post("http://42.62.29.102:8080/slg/", map);
         System.out.println(s);
     }
 }
