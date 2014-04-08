@@ -19,11 +19,6 @@ public class FightHandler {
     private List<Integer> l2 = Arrays.asList(1, 4, 7);
     private List<Integer> l3 = Arrays.asList(2, 5, 8);
 
-    private List<Integer> l4 = Arrays.asList(0, 1, 2);
-    private List<Integer> l5 = Arrays.asList(3, 4, 5);
-    private List<Integer> l6 = Arrays.asList(6, 7, 8);
-
-
     /**
      * 战斗方法
      *

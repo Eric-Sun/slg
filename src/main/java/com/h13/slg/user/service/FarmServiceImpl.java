@@ -5,6 +5,7 @@ import com.h13.slg.core.SlgRequestDTO;
 import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.FarmHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
+import com.h13.slg.user.vo.FarmVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,8 +29,8 @@ public class FarmServiceImpl implements FarmService {
     public SlgData harvest(SlgRequestDTO request) {
         long uid = request.getUid();
 
-        farmHelper.harvest(uid);
-        return SlgData.getData();
+        FarmVO farmVO = farmHelper.harvest(uid);
+        return SlgData.getData().add("food", farmVO.getFood()).add("timer", farmVO.getTimer());
     }
 
 }

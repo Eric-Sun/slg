@@ -5,6 +5,7 @@ import com.h13.slg.core.SlgRequestDTO;
 import com.h13.slg.core.SlgResponseDTO;
 import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
+import com.h13.slg.user.vo.CastleVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,9 +24,10 @@ public class CastleServiceImpl implements CastleService {
 
     /**
      * 收获金币
-     * <P>
-     *     计算上一次收获的时间戳和这次时间戳之间的增量，然后把金币加入到user信息中，并且更新收获时间戳
+     * <p/>
+     * 计算上一次收获的时间戳和这次时间戳之间的增量，然后把金币加入到user信息中，并且更新收获时间戳
      * </P>
+     *
      * @param request
      * @return
      */
@@ -33,8 +35,8 @@ public class CastleServiceImpl implements CastleService {
     public SlgData harvest(SlgRequestDTO request) {
         long uid = request.getUid();
 
-
-        castleHelper.harvest(uid);
-        return SlgData.getData();
+        CastleVO castleVO = castleHelper.harvest(uid);
+        return SlgData.getData().add("gold", castleVO.getGold())
+                .add("timer", castleVO.getTimer());
     }
 }

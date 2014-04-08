@@ -11,6 +11,7 @@ import com.h13.slg.core.util.TimeUtil;
 import com.h13.slg.user.co.CastleCO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.CastleDAO;
+import com.h13.slg.user.vo.CastleVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +34,8 @@ public class CastleHelper {
      *
      * @param uid
      */
-    public void harvest(long uid) {
+    public CastleVO harvest(long uid) {
+        CastleVO castleVO = new CastleVO();
         CastleCO castleCO = getCastleInfo(uid);
         long lastTimer = castleCO.getTimer();
         long currentTimer = TimeUtil.currentTimeStamp();
@@ -46,13 +48,16 @@ public class CastleHelper {
         int curGold = userStatusCO.getGold();
         // 计算能收获的最大值
         int finalGold = ResourceCalUtil.calResource4Harvest(curGold, lastTimer, currentTimer, goldPerHour, maxGold);
-        if (finalGold != 0) {
+        if (finalGold != curGold) {
             userStatusCO.setGold(finalGold);
             userStatusHelper.updateUserStatus(userStatusCO);
             updateCastleInfo(uid, currentTimer);
         }
         SlgLogger.info(SlgLoggerEntity.p("castle", "harvest", uid, "").addParam("finalGold", finalGold)
                 .addParam("curGold", curGold));
+        castleVO.setGold(finalGold - curGold);
+        castleVO.setTimer(currentTimer);
+        return castleVO;
     }
 
 

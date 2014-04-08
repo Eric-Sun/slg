@@ -13,6 +13,7 @@ import com.h13.slg.user.co.CastleCO;
 import com.h13.slg.user.co.FarmCO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.FarmDAO;
+import com.h13.slg.user.vo.FarmVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,7 +38,8 @@ public class FarmHelper {
      *
      * @param uid
      */
-    public void harvest(long uid) {
+    public FarmVO harvest(long uid) {
+        FarmVO farmVO = new FarmVO();
         FarmCO farmCO = getFarmInfo(uid);
         long lastTimer = farmCO.getTimer();
         long currentTimer = TimeUtil.currentTimeStamp();
@@ -58,6 +60,9 @@ public class FarmHelper {
         SlgLogger.info(SlgLoggerEntity.p("farm", "harvest", uid, "do harvest")
                 .addParam("curFood", curFood)
                 .addParam("finalFood", finalFood));
+        farmVO.setTimer(currentTimer);
+        farmVO.setFood(finalFood - curFood);
+        return farmVO;
     }
 
 

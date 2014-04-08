@@ -20,7 +20,9 @@ import com.h13.slg.user.dao.UserStatusDAO;
 import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.FarmHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
+import com.h13.slg.user.vo.CastleForLoginVO;
 import com.h13.slg.user.vo.CastleVO;
+import com.h13.slg.user.vo.FarmForLoginVO;
 import com.h13.slg.user.vo.FarmVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -84,8 +86,8 @@ public class UserServiceImpl implements UserService {
         // 获得farm,castle 的上一次收获的时间
         long farmTimer = farmHelper.getFarmInfo(userId).getTimer();
         long castleTimer = castleHelper.getCastleInfo(userId).getTimer();
-        FarmVO farmVO = new FarmVO(farmTimer);
-        CastleVO castleVO = new CastleVO(castleTimer);
+        FarmForLoginVO farmVO = new FarmForLoginVO(farmTimer);
+        CastleForLoginVO castleVO = new CastleForLoginVO(castleTimer);
 
         UserStatusCO userStatusCO = userStatusHelper.getUserStatus(userId);
         SlgData slgData = SlgData.getData()

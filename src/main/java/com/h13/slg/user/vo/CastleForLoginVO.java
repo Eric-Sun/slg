@@ -3,21 +3,15 @@ package com.h13.slg.user.vo;
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
- * Date: 14-2-18
- * Time: 下午2:20
+ * Date: 14-4-2
+ * Time: 下午7:06
  * To change this template use File | Settings | File Templates.
  */
-public class CastleVO {
-
+public class CastleForLoginVO {
     private long timer;
-    private int gold;
 
-    public int getGold() {
-        return gold;
-    }
-
-    public void setGold(int gold) {
-        this.gold = gold;
+    public CastleForLoginVO(long timer) {
+        this.timer = timer;
     }
 
     public long getTimer() {

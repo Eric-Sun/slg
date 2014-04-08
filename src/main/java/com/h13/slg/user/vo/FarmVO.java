@@ -10,9 +10,14 @@ package com.h13.slg.user.vo;
 public class FarmVO {
 
     private long timer;
+    private long food;
 
-    public FarmVO(long timer) {
-        this.timer = timer;
+    public long getFood() {
+        return food;
+    }
+
+    public void setFood(long food) {
+        this.food = food;
     }
 
     public long getTimer() {
