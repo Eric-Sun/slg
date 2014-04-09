@@ -15,6 +15,9 @@ import com.h13.slg.role.dao.UserRoleDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
@@ -41,21 +44,21 @@ public class UserRoleHelper {
      */
     public long addRoleForRegister(long uid) {
         long rid = 48;
-        RoleCO roleCO = roleCache.get(rid + "");
-        int fightForce = roleCO.getFightForce();
-        int attack = roleCO.getAttack();
-        int defence = roleCO.getDefence();
-        int health = roleCO.getHealth();
-        long urid = userRoleDAO.insert(rid, uid,
-                RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID,
-                RoleConstants.NO_EQUIP_ID, 1, fightForce,
-                attack, defence, health);
-        SlgLogger.info(
-                SlgLoggerEntity.p("userRole", "addRoleForRegister", uid, "ok")
-        );
-        return urid;
+//        RoleCO roleCO = roleCache.get(rid + "");
+//        int fightForce = roleCO.getFightForce();
+//        int attack = roleCO.getAttack();
+//        int defence = roleCO.getDefence();
+//        int health = roleCO.getHealth();
+//        int soldier = roleCO.getSoldier();
+//        long urid = userRoleDAO.insert(rid, uid,
+//                RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID,
+//                RoleConstants.NO_EQUIP_ID, 1, fightForce,
+//                attack, defence, health, soldier);
+//        SlgLogger.info(
+//                SlgLoggerEntity.p("userRole", "addRoleForRegister", uid, "ok")
+//        );
+        return add(uid, rid).getId();
     }
-
 
     /**
      * 更新数据库中战斗力
@@ -79,24 +82,53 @@ public class UserRoleHelper {
 
     public void updateUserRole(UserRoleCO userRoleCO) {
         userRoleDAO.update(userRoleCO.getId(), userRoleCO.getWeapon(), userRoleCO.getArmor(),
-                userRoleCO.getAccessory(), userRoleCO.getFightForce(), userRoleCO.getLevel());
+                userRoleCO.getAccessory(),
+                userRoleCO.getFightForce(),
+                userRoleCO.getLevel(),
+                userRoleCO.getCurSkill(),
+                userRoleCO.getSkillLevels());
     }
 
-    public long add(long uid, long rId) {
+    public UserRoleCO add(long uid, long rId) {
+        UserRoleCO userRoleCO = new UserRoleCO();
         RoleCO roleCO = roleCache.get(rId + "");
         int fightForce = roleCO.getFightForce();
         int attack = roleCO.getAttack();
         int defence = roleCO.getDefence();
         int health = roleCO.getHealth();
+        int soldier = roleCO.getSoldier();
+        int curSkill = RoleConstants.NO_SKILL_SELECTED;
+        Map<Integer, Integer> skillLevels = new HashMap<Integer, Integer>() {{
+            // 5个技能
+            put(1, 1);
+            put(2, 1);
+            put(3, 1);
+            put(4, 1);
+            put(5, 1);
+        }};
+
         // 检查是否在招贤馆中
         long urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID,
                 RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, 1, fightForce,
-                attack, defence, health);
+                attack, defence, health, soldier, curSkill, skillLevels);
         SlgLogger.info(SlgLoggerEntity.p("userRole", "add new Role", uid, "ok")
                 .addParam("rId", rId)
                 .addParam("urId", urid)
         );
-        return urid;
+        userRoleCO.setSkillLevels(skillLevels);
+        userRoleCO.setCurSkill(curSkill);
+        userRoleCO.setSoldier(soldier);
+        userRoleCO.setDefence(defence);
+        userRoleCO.setAccessory(RoleConstants.NO_EQUIP_ID);
+        userRoleCO.setAttack(attack);
+        userRoleCO.setArmor(RoleConstants.NO_EQUIP_ID);
+        userRoleCO.setWeapon(RoleConstants.NO_EQUIP_ID);
+        userRoleCO.setHealth(health);
+        userRoleCO.setId(urid);
+        userRoleCO.setUid(uid);
+        userRoleCO.setLevel(1);
+        userRoleCO.setRoleId(rId);
+        return userRoleCO;
     }
 
 

@@ -9,6 +9,7 @@ import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.TavernConfigFetcher;
 import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.tavern.TavernConstants;
 import com.h13.slg.tavern.co.TavernCO;
@@ -16,12 +17,16 @@ import com.h13.slg.tavern.co.TavernRoleCO;
 import com.h13.slg.tavern.dao.TavernDAO;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
+import com.h13.slg.tavern.vo.EnrollUserRoleVO;
 import com.h13.slg.tavern.vo.InviteTavernVO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -214,13 +219,21 @@ public class TavernHelper {
     }
 
 
-    public void enroll(long uid, int pos) {
-        // enroll
-        TavernCO tavernCO = get(uid);
-        TavernRoleCO tavernRoleCO = tavernCO.getRoleList().get(pos);
-        long roleId = tavernRoleCO.getId();
-        RoleCO roleCO = roleConfigFetcher.get(roleId + "");
-        userRoleHelper.add(uid,roleCO.getId());
+    public EnrollUserRoleVO enroll(long uid, int pos) throws RequestErrorException {
+        EnrollUserRoleVO vo = new EnrollUserRoleVO();
+        try {
+            // enroll
+            TavernCO tavernCO = get(uid);
+            TavernRoleCO tavernRoleCO = tavernCO.getRoleList().get(pos);
+            long roleId = tavernRoleCO.getId();
+            RoleCO roleCO = roleConfigFetcher.get(roleId + "");
+            UserRoleCO userRoleCO = userRoleHelper.add(uid, roleCO.getId());
+
+            BeanUtils.copyProperties(vo, userRoleCO);
+            return vo;
+        } catch (Exception e) {
+            throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "", e);
+        }
 
     }
 

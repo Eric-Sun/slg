@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class TavernConfigCache extends BasicCache<TavernConfigCO> {
+public class TavernCache extends BasicCache<TavernConfigCO> {
 
     private static final String KEY = "slg:sys:tavernConfig:";
 

@@ -13,6 +13,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class UserTeamCO {
+
     private long id;
     private List<Long> data;
 
@@ -31,4 +32,5 @@ public class UserTeamCO {
     public void setData(List<Long> data) {
         this.data = data;
     }
+
 }

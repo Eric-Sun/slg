@@ -16,7 +16,7 @@ import java.util.Map;
 public class TavernServiceTest {
 
     @Test
-    public void invite(){
+    public void invite() {
         HttpClientUtil http = new HttpClientUtil();
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod", "tavern");
@@ -31,7 +31,7 @@ public class TavernServiceTest {
     }
 
     @Test
-    public void leave(){
+    public void leave() {
         HttpClientUtil http = new HttpClientUtil();
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod", "tavern");
@@ -46,7 +46,18 @@ public class TavernServiceTest {
     }
 
 
-    public void enroll(){
-
+    @Test
+    public void enroll() {
+        HttpClientUtil http = new HttpClientUtil();
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("mod", "tavern");
+        map.put("act", "enroll");
+        map.put("uid", "1");
+        map.put("auth_key", "fdsafdsa");
+        map.put("auth_time", "24321431");
+        map.put("args", "{pos:1}");
+        map.put("seq", "1");
+        String s = http.post("http://localhost:8080/", map);
+        System.out.println(s);
     }
 }

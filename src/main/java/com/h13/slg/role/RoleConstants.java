@@ -10,6 +10,7 @@ package com.h13.slg.role;
 public class RoleConstants {
 
     public static long NO_EQUIP_ID = 0;
+    public static int NO_SKILL_SELECTED = 0;
 
 
     static class Soldier {

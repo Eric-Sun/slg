@@ -171,7 +171,24 @@
           p:valueSerializer-ref="shopSerializer">
     </bean>
 
+    <!-- skillTemplate -->
+    <bean id="skillCO"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.SkillConfigCO"/>
+    </bean>
+    <bean id="skillTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="skillCO">
+    </bean>
 
-
+    <!-- skilleffectTemplate -->
+    <bean id="skilleffectCO"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.SkilleffectConfigCO"/>
+    </bean>
+    <bean id="skilleffectTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="skilleffectCO">
+    </bean>
 
 </beans>

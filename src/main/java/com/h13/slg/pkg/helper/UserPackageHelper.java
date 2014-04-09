@@ -94,6 +94,55 @@ public class UserPackageHelper {
 
 
     /**
+     * 检查某个material是否够
+     *
+     * @param uid
+     * @param materialId
+     * @param materialNum
+     * @return true为够，false为不够
+     */
+    public boolean checkMaterialEnough(long uid, long materialId, int materialNum) {
+        UserPackageCO userPackageCO = get(uid);
+        if (!userPackageCO.getMaterial().containsKey(materialId + ""))
+            return false;
+        int packageMCount = userPackageCO.getMaterial().get(materialId + "");
+        if (packageMCount < materialNum) {
+            SlgLogger.error(SlgLoggerEntity.p("skill", "update", uid, "material is not enough")
+                    .addParam("uid", uid)
+                    .addParam("materialId", materialId)
+                    .addParam("needNum", materialNum)
+                    .addParam("haveNum", packageMCount));
+            return false;
+        }
+        return true;
+
+    }
+
+
+    /**
+     * 从material背包中减去对应的material
+     *
+     * @param uid
+     * @param materialId
+     * @param materialNum
+     * @return
+     */
+    public boolean subtractMaterial(long uid, long materialId, int materialNum) {
+        UserPackageCO userPackageCO = get(uid);
+        int packageMCount = userPackageCO.getMaterial().get(materialId + "");
+        int newCount = packageMCount - materialNum;
+        userPackageCO.getMaterial().put(materialId + "", newCount);
+        updateMaterial(userPackageCO);
+        SlgLogger.info(SlgLoggerEntity.p("package", "subtract material", uid, "ok")
+                .addParam("uid", uid)
+                .addParam("materialId", materialId)
+                .addParam("materialNum", materialNum)
+                .addParam("finalNum", newCount));
+        return true;
+    }
+
+
+    /**
      * 向材料包裹内加入新的物品
      *
      * @param uid

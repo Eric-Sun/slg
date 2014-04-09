@@ -3,7 +3,9 @@ package com.h13.slg.tavern.service;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.tavern.helper.TavernHelper;
+import com.h13.slg.tavern.vo.EnrollUserRoleVO;
 import com.h13.slg.tavern.vo.InviteTavernVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +38,9 @@ public class TavernServiceImpl implements TavernService {
 
     @Override
     public SlgData enroll(SlgRequestDTO request) throws RequestErrorException {
-
-        return null;
+        long uid = request.getUid();
+        int pos = new Integer(request.getArgs().get("pos") + "");
+        EnrollUserRoleVO vo = tavernHelper.enroll(uid, pos);
+        return SlgData.getData().add("role", vo);
     }
 }

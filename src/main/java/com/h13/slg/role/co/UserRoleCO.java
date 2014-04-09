@@ -1,5 +1,7 @@
 package com.h13.slg.role.co;
 
+import java.util.Map;
+
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
@@ -19,6 +21,33 @@ public class UserRoleCO {
     private int attack;
     private int defence;
     private int health;
+    private int soldier;
+    private int curSkill;
+    private Map<Integer, Integer> skillLevels;
+
+    public int getCurSkill() {
+        return curSkill;
+    }
+
+    public void setCurSkill(int curSkill) {
+        this.curSkill = curSkill;
+    }
+
+    public Map<Integer, Integer> getSkillLevels() {
+        return skillLevels;
+    }
+
+    public void setSkillLevels(Map<Integer, Integer> skillLevels) {
+        this.skillLevels = skillLevels;
+    }
+
+    public int getSoldier() {
+        return soldier;
+    }
+
+    public void setSoldier(int soldier) {
+        this.soldier = soldier;
+    }
 
     public int getAttack() {
         return attack;
