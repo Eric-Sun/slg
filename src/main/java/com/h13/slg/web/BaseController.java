@@ -1,6 +1,7 @@
 package com.h13.slg.web;
 
 import com.alibaba.fastjson.JSON;
+import com.h13.slg.auth.helper.AuthHelper;
 import com.h13.slg.core.SlgResponseDTO;
 import com.h13.slg.core.SlgDispatcher;
 import com.h13.slg.core.log.SlgLogger;
@@ -28,6 +29,8 @@ public class BaseController {
 
     @Autowired
     SlgDispatcher slg;
+    @Autowired
+    AuthHelper authHelper;
 
     @RequestMapping("/")
     @ResponseBody
@@ -35,17 +38,22 @@ public class BaseController {
         try {
             String mod = request.getParameter("mod");
             String act = request.getParameter("act");
-            long uid = new Long(request.getParameter("uid"));
+            long uid = 0;
+            if (request.getParameter("uid") != null) {
+                uid = new Long(request.getParameter("uid"));
+            }
             String args = request.getParameter("args");
             String authKey = request.getParameter("auth_key");
             long authTime = new Long(request.getParameter("auth_time"));
             int seq = new Integer(request.getParameter("seq"));
-            SlgLogger.info(SlgLoggerEntity.r(mod, act, uid, "r")
+            SlgLogger.info(SlgLoggerEntity.r(mod, act, uid, "request")
                     .addParam("seq", seq)
                     .addParam("args", args)
                     .addParam("authKey", authKey)
                     .addParam("authTime", authTime));
             SlgResponseDTO resp = slg.handle(mod, act, uid, seq, args, authTime, authKey);
+            SlgLogger.info(SlgLoggerEntity.r(mod, act, uid, "response")
+                    .addParam("resp", resp));
             return JSON.toJSONString(resp);
         } catch (Exception e) {
             SlgLogger.error(SlgLoggerEntity.r("", "", -1, ""), e);

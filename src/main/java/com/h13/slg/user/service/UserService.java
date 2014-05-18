@@ -28,4 +28,16 @@ public interface UserService {
     public SlgData register(SlgRequestDTO request) throws RequestErrorException;
 
 
+    /**
+     * 登陆之后获得用户信息，用于显示
+     * @param request
+     * @return
+     * @throws RequestErrorException
+     */
+    public SlgData getInfo(SlgRequestDTO request) throws RequestErrorException;
+
+
+
+
+
 }

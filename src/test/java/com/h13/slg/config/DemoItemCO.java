@@ -5,7 +5,7 @@ import org.apache.commons.digester3.annotations.rules.ObjectCreate;
 
 /**
  * Created with IntelliJ IDEA.
- * User: sunbo
+ * UserServiceTest: sunbo
  * Date: 14-2-11
  * Time: 上午12:01
  * To change this template use File | Settings | File Templates.

@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
- * User: sunbo
+ * UserServiceTest: sunbo
  * Date: 14-2-18
  * Time: 上午2:21
  * To change this template use File | Settings | File Templates.

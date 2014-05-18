@@ -1,5 +1,7 @@
 package com.h13.slg.user.service;
 
+import com.h13.slg.auth.co.AuthCO;
+import com.h13.slg.auth.helper.AuthHelper;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
@@ -14,11 +16,13 @@ import com.h13.slg.tavern.helper.TavernHelper;
 import com.h13.slg.user.RequestKeyConstants;
 import com.h13.slg.user.ResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
+import com.h13.slg.user.co.UserInfoCO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.UserDAO;
 import com.h13.slg.user.dao.UserStatusDAO;
 import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.FarmHelper;
+import com.h13.slg.user.hepler.UserHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import com.h13.slg.user.vo.CastleForLoginVO;
 import com.h13.slg.user.vo.CastleVO;
@@ -71,6 +75,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     TeamHelper teamHelper;
 
+    @Autowired
+    UserHelper userHelper;
+    @Autowired
+    AuthHelper authHelper;
+
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
         String name = (String) request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
@@ -82,18 +91,16 @@ public class UserServiceImpl implements UserService {
             // 登陆失败,用户密码错误
             throw new RequestErrorException(ErrorCodeConstants.User.NAME_OR_PASSWORD_ERROR, "");
         }
+        UserInfoCO userInfoCO = userHelper.getInfo(userId);
 
-        // 获得farm,castle 的上一次收获的时间
-        long farmTimer = farmHelper.getFarmInfo(userId).getTimer();
-        long castleTimer = castleHelper.getCastleInfo(userId).getTimer();
-        FarmForLoginVO farmVO = new FarmForLoginVO(farmTimer);
-        CastleForLoginVO castleVO = new CastleForLoginVO(castleTimer);
+        AuthCO authCO = authHelper.createAuth(userId);
 
-        UserStatusCO userStatusCO = userStatusHelper.getUserStatus(userId);
         SlgData slgData = SlgData.getData()
-                .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userStatusCO)
-                .add(ResponseKeyConstants.RESPONSE_USER_FARM, farmVO)
-                .add(ResponseKeyConstants.RESPONSE_USER_CASTLE, castleVO);
+                .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userInfoCO.getUserStatus())
+                .add(ResponseKeyConstants.RESPONSE_USER_FARM, userInfoCO.getFarm())
+                .add(ResponseKeyConstants.RESPONSE_USER_CASTLE, userInfoCO.getCastle())
+                .add("authTime", authCO.getAuthTime())
+                .add("authKey", authCO.getAuthKey());
         return slgData;
 
     }
@@ -145,6 +152,18 @@ public class UserServiceImpl implements UserService {
         SlgLogger.info(SlgLoggerEntity.p(MOD, "register", -1, "name not exists").addParam("name", name));
         SlgData slgData = SlgData.getData()
                 .add(ResponseKeyConstants.RESPONSE_ID, userId);
+        return slgData;
+    }
+
+    @Override
+    public SlgData getInfo(SlgRequestDTO request) throws RequestErrorException {
+        long userId = request.getUid();
+        UserInfoCO userInfoCO = userHelper.getInfo(userId);
+
+        SlgData slgData = SlgData.getData()
+                .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userInfoCO.getUserStatus())
+                .add(ResponseKeyConstants.RESPONSE_USER_FARM, userInfoCO.getFarm())
+                .add(ResponseKeyConstants.RESPONSE_USER_CASTLE, userInfoCO.getCastle());
         return slgData;
     }
 

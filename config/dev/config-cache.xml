@@ -14,6 +14,16 @@
           p:valueSerializer-ref="levelSerializer">
     </bean>
 
+    <!-- authTemplate -->
+    <bean id="authSerializer"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.auth.co.AuthCO"/>
+    </bean>
+    <bean id="authTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="authSerializer">
+    </bean>
+
     <!-- tavernConfigTemplate -->
     <bean id="tavernConfigSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">

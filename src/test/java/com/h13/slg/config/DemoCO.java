@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
- * User: sunbo
+ * UserServiceTest: sunbo
  * Date: 14-2-10
  * Time: 上午12:19
  * To change this template use File | Settings | File Templates.

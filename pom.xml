@@ -143,7 +143,7 @@
                 <version>6.1.22</version>
                 <configuration>
                     <scanIntervalSeconds>10000000</scanIntervalSeconds>
-                    <contextPath>/</contextPath>
+                    <contextPath>/slg</contextPath>
                     <stopKey>stopapp</stopKey>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">

@@ -1,12 +1,14 @@
 package com.h13.slg.core;
 
 import com.alibaba.fastjson.JSON;
+import com.h13.slg.auth.helper.AuthHelper;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.event.service.EventService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,8 @@ import java.util.Map;
 @Service
 public class SlgDispatcher implements ApplicationContextAware {
 
+    @Autowired
+    AuthHelper authHelper;
 
     private ApplicationContext applicationContext;
     private final static String SUFFIX = "Service";
@@ -46,6 +50,15 @@ public class SlgDispatcher implements ApplicationContextAware {
         try {
             Method m = clazz.getMethod(act, new Class[]{SlgRequestDTO.class});
             req = new SlgRequestDTO(mod, act, uid, seq, map);
+
+            if (!act.equals("login")) {
+                // 检测auth
+                if (!authHelper.check(uid, authKey, authTime)) {
+                    // 返回失败
+                    resp = new SlgResponseDTO(req, Constants.ResponseStatus.AUTH_ERROR, null);
+                    return resp;
+                }
+            }
             SlgData r = (SlgData) m.invoke(beanObj, new Object[]{req});
             // 触发事件
             triggerEvents(req, r);

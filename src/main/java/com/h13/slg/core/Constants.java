@@ -11,6 +11,8 @@ public class Constants {
          * 请求失败
          */
         public static int FAILURE = 1;
+
+        public static int AUTH_ERROR = 2;
     }
 
 

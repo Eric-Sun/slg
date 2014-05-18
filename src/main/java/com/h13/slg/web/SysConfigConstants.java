@@ -10,4 +10,5 @@ package com.h13.slg.web;
 public class SysConfigConstants {
 
     public static final String CONFIGS_PATH = "configs.path";
+    public static final String AUTH_CACHE_MS ="auth.cache.ms";
 }

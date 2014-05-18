@@ -4,7 +4,7 @@ import org.junit.Test;
 
 /**
  * Created with IntelliJ IDEA.
- * User: sunbo
+ * UserServiceTest: sunbo
  * Date: 14-2-10
  * Time: 上午12:18
  * To change this template use File | Settings | File Templates.
