@@ -22,11 +22,11 @@ public class RoleServiceTest {
         map.put("mod","role");
         map.put("act","wear");
         map.put("uid","1");
-        map.put("auth_key","fdsafdsa");
-        map.put("auth_time","24321431") ;
+        map.put("auth_key","c4ca4238a0b923820dcc509a6f75849b");
+        map.put("auth_time","1401882863762") ;
         map.put("args","{ueid:4,urid:1}");
         map.put("seq","1");
-        String s = http.post("http://localhost:8080/", map);
+        String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);
     }
 
@@ -37,11 +37,11 @@ public class RoleServiceTest {
         map.put("mod","role");
         map.put("act","takeOff");
         map.put("uid","1");
-        map.put("auth_key","fdsafdsa");
-        map.put("auth_time","24321431") ;
+        map.put("auth_key","c4ca4238a0b923820dcc509a6f75849b");
+        map.put("auth_time","1401882863762") ;
         map.put("args","{ueid:4,urid:1}");
         map.put("seq","1");
-        String s = http.post("http://localhost:8080/", map);
+        String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);
     }
 }

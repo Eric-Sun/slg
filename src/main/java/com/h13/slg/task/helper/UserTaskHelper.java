@@ -114,7 +114,7 @@ public class UserTaskHelper implements ApplicationContextAware {
 
 
         UserTaskCO userTaskCO = getTask(uid);
-        TaskCO taskCO = taskConfigFetcher.get(userTaskCO.getId() + "");
+        TaskCO taskCO = taskConfigFetcher.get(userTaskCO.getTaskId() + "");
         String serviceName = null;
         // 需要把是任务的信息
         UserSmallTaskCO t1 = new UserSmallTaskCO();
