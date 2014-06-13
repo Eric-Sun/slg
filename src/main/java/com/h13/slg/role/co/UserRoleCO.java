@@ -23,7 +23,16 @@ public class UserRoleCO {
     private int health;
     private int soldier;
     private int curSkill;
-    private Map<Integer, Integer> skillLevels;
+    private String roleName;
+    private Map<String, Integer> skillLevels;
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 
     public int getCurSkill() {
         return curSkill;
@@ -33,11 +42,11 @@ public class UserRoleCO {
         this.curSkill = curSkill;
     }
 
-    public Map<Integer, Integer> getSkillLevels() {
+    public Map<String, Integer> getSkillLevels() {
         return skillLevels;
     }
 
-    public void setSkillLevels(Map<Integer, Integer> skillLevels) {
+    public void setSkillLevels(Map<String, Integer> skillLevels) {
         this.skillLevels = skillLevels;
     }
 

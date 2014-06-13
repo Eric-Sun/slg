@@ -87,7 +87,7 @@ public class FightHelper {
             long urid = new Long(teamData.get(i) + "");
             if (urid == 0)
                 continue;
-            UserRoleCO userRoleCO = userRoleHelper.getUserRole(urid);
+            UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
             FightPosition fightPosition = new FightPosition();
             fightPosition.setAttack(userRoleCO.getAttack());
             fightPosition.setDefence(userRoleCO.getDefence());

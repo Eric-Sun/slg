@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -66,8 +67,8 @@ public class UserRoleHelper {
      * @param urId
      * @param fightForce
      */
-    public void updateFightForce(long urId, int fightForce) {
-        UserRoleCO userRoleCO = getUserRole(urId);
+    public void updateFightForce(long uid, long urId, int fightForce) {
+        UserRoleCO userRoleCO = getUserRole(uid, urId);
         userRoleCO.setFightForce(fightForce);
         updateUserRole(userRoleCO);
         SlgLogger.info(SlgLoggerEntity.p("userRole", "updateFightForce", userRoleCO.getUid(), "ok")
@@ -76,8 +77,8 @@ public class UserRoleHelper {
         );
     }
 
-    public UserRoleCO getUserRole(long urid) {
-        return userRoleDAO.get(urid);
+    public UserRoleCO getUserRole(long uid, long urid) {
+        return userRoleDAO.get(uid, urid);
     }
 
     public void updateUserRole(UserRoleCO userRoleCO) {
@@ -98,13 +99,13 @@ public class UserRoleHelper {
         int health = roleCO.getHealth();
         int soldier = roleCO.getSoldier();
         int curSkill = RoleConstants.NO_SKILL_SELECTED;
-        Map<Integer, Integer> skillLevels = new HashMap<Integer, Integer>() {{
+        Map<String, Integer> skillLevels = new HashMap<String, Integer>() {{
             // 5个技能
-            put(1, 1);
-            put(2, 1);
-            put(3, 1);
-            put(4, 1);
-            put(5, 1);
+            put("1", 1);
+            put("2", 1);
+            put("3", 1);
+            put("4", 1);
+            put("5", 1);
         }};
 
         // 检查是否在招贤馆中
@@ -141,7 +142,7 @@ public class UserRoleHelper {
      * @throws RequestErrorException
      */
     public void wear(long uid, long urid, long ueid) throws RequestErrorException {
-        UserRoleCO ur = getUserRole(urid);
+        UserRoleCO ur = getUserRole(uid, urid);
         UserEquipCO ue = userEquipHelper.getUserEquip(ueid);
         if (ue.getUid() != uid) {
             SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "ue's uid is not target uid.")
@@ -183,7 +184,7 @@ public class UserRoleHelper {
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));
 
-        fightForceHelper.updateUserRoleFightForce(urid);
+        fightForceHelper.updateUserRoleFightForce(uid, urid);
     }
 
 
@@ -196,7 +197,7 @@ public class UserRoleHelper {
      * @throws RequestErrorException
      */
     public void takeOff(long uid, long urid, long ueid) throws RequestErrorException {
-        UserRoleCO ur = getUserRole(urid);
+        UserRoleCO ur = getUserRole(uid, urid);
         UserEquipCO ue = userEquipHelper.getUserEquip(ueid);
         if (ue.getUid() != uid) {
             SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "ue's uid is not target uid.")
@@ -234,16 +235,16 @@ public class UserRoleHelper {
         }
         updateUserRole(ur);
 
-        fightForceHelper.updateUserRoleFightForce(ue.getUrid());
+        fightForceHelper.updateUserRoleFightForce(uid, ue.getUrid());
         SlgLogger.info(SlgLoggerEntity.p("role", "takeOff", uid, "ok")
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));
-        fightForceHelper.updateUserRoleFightForce(urid);
+        fightForceHelper.updateUserRoleFightForce(uid, urid);
     }
 
 
-    public void updateAttackDefenceHealth(long urid, int finalAttack, int finalDefence, int finalHealth) {
-        UserRoleCO userRoleCO = getUserRole(urid);
+    public void updateAttackDefenceHealth(long uid, long urid, int finalAttack, int finalDefence, int finalHealth) {
+        UserRoleCO userRoleCO = getUserRole(uid, urid);
         userRoleCO.setAttack(finalAttack);
         userRoleCO.setDefence(finalDefence);
         userRoleCO.setHealth(finalHealth);
@@ -254,5 +255,29 @@ public class UserRoleHelper {
                 .addParam("finalDefence", finalDefence)
                 .addParam("finalHealth", finalHealth)
         );
+    }
+
+
+    public List<UserRoleCO> getRoleList(long uid) {
+        List<UserRoleCO> userRoleList = userRoleDAO.getRoleList(uid);
+        for (UserRoleCO ur : userRoleList) {
+            long roleId = ur.getRoleId();
+            RoleCO roleCO = roleCache.get(roleId + "");
+            ur.setRoleName(roleCO.getName());
+        }
+        return userRoleList;
+
+    }
+
+
+    public UserRoleCO getRole(long uid, long urid) {
+
+
+        UserRoleCO userRoleCO = userRoleDAO.get(uid, urid);
+        long roleId = userRoleCO.getRoleId();
+        RoleCO roleCO = roleCache.get(roleId + "");
+        userRoleCO.setRoleName(roleCO.getName());
+
+        return userRoleCO;
     }
 }

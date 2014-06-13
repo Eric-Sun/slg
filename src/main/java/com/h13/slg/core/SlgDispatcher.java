@@ -51,7 +51,7 @@ public class SlgDispatcher implements ApplicationContextAware {
             Method m = clazz.getMethod(act, new Class[]{SlgRequestDTO.class});
             req = new SlgRequestDTO(mod, act, uid, seq, map);
 
-            if (!act.equals("login")) {
+            if (!act.equals("login") && !act.equals("register")) {
                 // 检测auth
                 if (!authHelper.check(uid, authKey, authTime)) {
                     // 返回失败

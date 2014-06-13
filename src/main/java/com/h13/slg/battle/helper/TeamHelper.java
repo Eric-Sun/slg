@@ -64,7 +64,7 @@ public class TeamHelper {
         final Map teamDataMap = JSON.parseObject(team, Map.class);
         List<Long> teamDataList = new LinkedList<Long>() {{
             for (int i = 0; i < 9; i++) {
-                add(new Long(teamDataMap.get(i + "")+""));
+                add(new Long(teamDataMap.get(i + "") + ""));
             }
         }};
 
@@ -74,7 +74,7 @@ public class TeamHelper {
         for (Long urid : teamDataList) {
             if (urid == 0)
                 continue;
-            UserRoleCO userRoleCO = userRoleHelper.getUserRole(urid);
+            UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
             if (userRoleCO.getUid() != uid) {
                 SlgLogger.error(SlgLoggerEntity.p("team", "saveTeam", uid, "urid is not yours")
                         .addParam("urid", urid)

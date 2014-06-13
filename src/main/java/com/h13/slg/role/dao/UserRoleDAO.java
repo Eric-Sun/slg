@@ -15,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,7 +36,7 @@ public class UserRoleDAO {
                        final long armor, final long accessory,
                        final int level, final int fightForce,
                        final int attack, final int defence, final int health, final int soldier,
-                       final int curSkill, final Map<Integer, Integer> skillLevels) {
+                       final int curSkill, final Map<String, Integer> skillLevels) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_role " +
                 "(role_id,uid,weapon,armor,accessory,level,fight_force," +
@@ -64,10 +65,37 @@ public class UserRoleDAO {
         return holder.getKey().longValue();
     }
 
-    public UserRoleCO get(long urId) {
+    public UserRoleCO get(long uid, long urId) {
         String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
-                ",soldier,cur_skill,skill_levels from user_role where id=?";
-        return j.queryForObject(sql, new Object[]{urId}, new RowMapper<UserRoleCO>() {
+                ",soldier,cur_skill,skill_levels from user_role where id=? and uid=?";
+        return j.queryForObject(sql, new Object[]{urId, uid}, new RowMapper<UserRoleCO>() {
+            @Override
+            public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
+                UserRoleCO userRoleCO = new UserRoleCO();
+                userRoleCO.setId(rs.getLong(1));
+                userRoleCO.setRoleId(rs.getLong(2));
+                userRoleCO.setUid(rs.getLong(3));
+                userRoleCO.setWeapon(rs.getInt(4));
+                userRoleCO.setArmor(rs.getInt(5));
+                userRoleCO.setAccessory(rs.getInt(6));
+                userRoleCO.setLevel(rs.getInt(7));
+                userRoleCO.setFightForce(rs.getInt(8));
+                userRoleCO.setAttack(rs.getInt(9));
+                userRoleCO.setDefence(rs.getInt(10));
+                userRoleCO.setHealth(rs.getInt(11));
+                userRoleCO.setSoldier(rs.getInt(12));
+                userRoleCO.setCurSkill(rs.getInt(13));
+                userRoleCO.setSkillLevels(JSON.parseObject(rs.getString(14), Map.class));
+                return userRoleCO;
+            }
+        });
+    }
+
+
+    public List<UserRoleCO> getRoleList(long uid) {
+        String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
+                ",soldier,cur_skill,skill_levels from user_role where uid=?";
+        return j.query(sql, new Object[]{uid}, new RowMapper<UserRoleCO>() {
             @Override
             public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
                 UserRoleCO userRoleCO = new UserRoleCO();
@@ -92,7 +120,7 @@ public class UserRoleDAO {
 
 
     public void update(long urId, long weapon, long armor, long accessory, int fightForce, int level,
-                       int curSkill, Map<Integer, Integer> skillLevels) {
+                       int curSkill, Map<String, Integer> skillLevels) {
         String sql = "update user_role set weapon=?,armor=?,accessory=?,fight_force=?,level=?,cur_skill=?,skill_levels=? " +
                 "where id=?";
         j.update(sql, new Object[]{weapon, armor, accessory, fightForce, level,

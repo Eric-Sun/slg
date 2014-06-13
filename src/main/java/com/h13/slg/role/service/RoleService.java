@@ -17,7 +17,8 @@ public interface RoleService {
     /**
      * {"code":0,"desc":"","mod":"role","act":"wear",
      * "args":{"rid":6,"isskill":0,"id":10},"data":{},"serverTime":1394009707}
-     *                r
+     * r
+     *
      * @param requestDTO
      * @return
      */
@@ -27,9 +28,16 @@ public interface RoleService {
     /**
      * {"code":0,"desc":"","mod":"role","act":"take_off",
      * "args":{"erid":6,"id":10},"data":{},"serverTime":1394009742}
+     *
      * @param requestDTO
      * @return
      */
     public SlgData takeOff(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+
+    public SlgData roleList(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+
+    public SlgData role(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 }

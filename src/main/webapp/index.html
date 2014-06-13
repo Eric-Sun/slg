@@ -2,8 +2,75 @@
 <html>
 <head>
     <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script src="/slg/static/js/jquery.js" type="text/javascript"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="/slg/static/js/slg.js" type="text/javascript"></script>
+    <script src="/slg/static/js/underscore.js" type="text/javascript"></script>
+
 </head>
 <body>
-         fdsafdsa
+<div class="row">
+    <div class="col-xs-1">用户id：</div>
+    <div id="uid" class="col-xs-11"></div>
+</div>
+<div class="row">
+    <div class="col-xs-1">名称：</div>
+    <div id="name" class="col-xs-11"></div>
+</div>
+<div class="row">
+    <div class="col-xs-1">金币：</div>
+    <div id="gold" class="col-xs-11"></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-1">粮食：</div>
+    <div id="food" class="col-xs-11"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-1">元宝：</div>
+    <div id="cash" class="col-xs-11"></div>
+</div>
+<div class="row">
+    <div class="col-xs-1">荣誉：</div>
+    <div id="honor" class="col-xs-11"></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-1">等级：</div>
+    <div id="level" class="col-xs-11"></div>
+</div>
+<div class="row">
+    <div class="col-xs-1">当前经验：</div>
+    <div id="xp" class="col-xs-11"></div>
+</div>
+<div class="row">
+    <div class="col-xs-1">魂魄：</div>
+    <div id="soul" class="col-xs-11"></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-1">战斗力：</div>
+    <div id="fightForce" class="col-xs-11"></div>
+</div>
+
+<div class="row">
+    <button id="btnHarvestFood" class="col-xs-1">收获粮食</button>
+    <button id="btnHarvestGold" class="col-xs-1">收获金币</button>
+</div>
+<div class="row">
+    <button id="navRoleList" class="col-xs-1">我的将领</button>
+</div>
+
 </body>
 </html>
+
+
+<script type="text/javascript">
+    $(loader.index());
+</script>

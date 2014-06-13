@@ -1,5 +1,7 @@
 package com.h13.slg.user.dao;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -22,6 +24,7 @@ import java.sql.SQLException;
  */
 @Service
 public class UserDAO {
+    private final static Logger LOG = LoggerFactory.getLogger(UserDAO.class);
 
     @Autowired
     JdbcTemplate j;
@@ -54,7 +57,7 @@ public class UserDAO {
             final String sql = "select id from user where name=? and password=?";
             return j.queryForInt(sql, new Object[]{name, passwordAfterMd5});
         } catch (Exception e) {
-
+            LOG.error("", e);
             return -1;
         }
     }

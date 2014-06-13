@@ -52,13 +52,12 @@ public class FightForceHelper {
     UserStatusHelper userStatusHelper;
 
 
-    public int updateUserRoleFightForce(long urid) throws RequestErrorException {
+    public int updateUserRoleFightForce(long uid, long urid) throws RequestErrorException {
 
         if (urid == EquipConstants.NO_USER_ROLE)
             return 0;
-        UserRoleCO userRoleCO = userRoleHelper.getUserRole(urid);
+        UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
         int oldFightForce = userRoleCO.getFightForce();
-        long uid = userRoleCO.getUid();
 
         // 重新计算新的
 
@@ -104,7 +103,7 @@ public class FightForceHelper {
             armorDefence = getArmorDefence(armor);
             armorFightForce = calFightForceByDefence(armorDefence);
         }
-        if( ueAccessoryId!=RoleConstants.NO_EQUIP_ID){
+        if (ueAccessoryId != RoleConstants.NO_EQUIP_ID) {
             UserEquipCO accessory = userEquipHelper.getUserEquip(ueAccessoryId);
             accessoryHealth = getAccessoryHealth(accessory);
             accessoryFightForce = calFightForceByHealth(accessoryHealth);
@@ -130,8 +129,8 @@ public class FightForceHelper {
         int finalDefence = finalUserRoleDefence + armorDefence;
         int finalHealth = finalUserRoleHealth + accessoryHealth;
 
-        userRoleHelper.updateAttackDefenceHealth(urid, finalAttack, finalDefence, finalHealth);
-        userRoleHelper.updateFightForce(urid, finalFightForce);
+        userRoleHelper.updateAttackDefenceHealth(uid, urid, finalAttack, finalDefence, finalHealth);
+        userRoleHelper.updateFightForce(uid, urid, finalFightForce);
 
         userStatusHelper.updateFightForce(uid, oldFightForce, finalFightForce);
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,8 +34,9 @@ public class BaseController {
     AuthHelper authHelper;
 
     @RequestMapping("/")
-    @ResponseBody
     public String dispatch(HttpServletRequest request, HttpServletResponse response) {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         try {
             String mod = request.getParameter("mod");
             String act = request.getParameter("act");
@@ -54,7 +56,9 @@ public class BaseController {
             SlgResponseDTO resp = slg.handle(mod, act, uid, seq, args, authTime, authKey);
             SlgLogger.info(SlgLoggerEntity.r(mod, act, uid, "response")
                     .addParam("resp", resp));
-            return JSON.toJSONString(resp);
+            response.getWriter().write(JSON.toJSONString(resp));
+            response.flushBuffer();
+            return null;
         } catch (Exception e) {
             SlgLogger.error(SlgLoggerEntity.r("", "", -1, ""), e);
             return null;

@@ -5,9 +5,12 @@ import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
 import com.h13.slg.event.EventType;
 import com.h13.slg.event.helper.UserEventHelper;
+import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,4 +47,27 @@ public class RoleServiceImpl implements RoleService {
         userRoleHelper.takeOff(uid, urid, ueid);
         return SlgData.getData();
     }
+
+
+    @Override
+    public SlgData roleList(SlgRequestDTO requestDTO) throws RequestErrorException {
+        long uid = requestDTO.getUid();
+        List<UserRoleCO> roleList = userRoleHelper.getRoleList(uid);
+        return SlgData.getData().add("list", roleList);
+    }
+
+    @Override
+    public SlgData role(SlgRequestDTO requestDTO) throws RequestErrorException {
+
+        long uid = requestDTO.getUid();
+        long urid = new Long(requestDTO.getArgs().get("urid").toString());
+
+
+        UserRoleCO userRoleCO = userRoleHelper.getRole(uid, urid);
+
+
+        return SlgData.getData().add("role", userRoleCO);
+    }
+
+
 }

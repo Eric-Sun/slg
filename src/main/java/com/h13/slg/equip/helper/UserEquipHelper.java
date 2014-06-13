@@ -119,7 +119,7 @@ public class UserEquipHelper {
 
         long urid = ue.getUrid();
         // 更新fightforce
-        fightForceHelper.updateUserRoleFightForce(urid);
+        fightForceHelper.updateUserRoleFightForce(uid, urid);
         return vo;
     }
 
@@ -177,7 +177,7 @@ public class UserEquipHelper {
         map.put(materialId2 + "", materialCount2 * -1);
         vo.setMap(map);
 
-        fightForceHelper.updateUserRoleFightForce(ue.getUrid());
+        fightForceHelper.updateUserRoleFightForce(uid, ue.getUrid());
         return vo;
     }
 

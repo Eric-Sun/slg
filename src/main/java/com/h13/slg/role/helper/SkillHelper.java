@@ -42,10 +42,10 @@ public class SkillHelper {
      */
     public int upgrade(long uid, long urid, int skill) throws RequestErrorException {
         try {
-            UserRoleCO userRoleCO = userRoleHelper.getUserRole(urid);
+            UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
             int soldier = userRoleCO.getSoldier();
             SkillConfigCO skillConfigCO = skillConfigFetcher.get(soldier, skill);
-            Map<Integer, Integer> skillLevels = userRoleCO.getSkillLevels();
+            Map<String, Integer> skillLevels = userRoleCO.getSkillLevels();
             if (!skillLevels.containsKey(skill)) {
                 // 这个技能没有被开启
                 SlgLogger.error(SlgLoggerEntity.p("skill", "update", uid, "skill not exists")
@@ -71,7 +71,7 @@ public class SkillHelper {
                 throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "material is not enough");
             // 减掉这些资源来进行升级
             userPackageHelper.subtractMaterial(uid, materialId, materialNum);
-            skillLevels.put(skill, nextSkillLevel);
+            skillLevels.put(skill + "", nextSkillLevel);
             userRoleHelper.updateUserRole(userRoleCO);
             return nextSkillLevel;
         } catch (Exception e) {
