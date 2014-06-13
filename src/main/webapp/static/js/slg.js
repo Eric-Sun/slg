@@ -71,7 +71,7 @@ var loader =
         Constants.authTime = $.getUrlParam("authTime");
     },
 
-    index: function indexLoader() {
+    index: function () {
         var c = new Command("user", "login",
             {
                 name: 'ssss',
@@ -80,41 +80,84 @@ var loader =
 
         CommonUtil.doPost(c, function (msg) {
 
+            var UserInfo = Backbone.Model.extend({
+                default: {
+                    name: "",
+                    uid: "",
+                    gold: "",
+                    food: "",
+                    cash: "",
+                    honor: "",
+                    level: "",
+                    xp: "",
+                    soul: "",
+                    fightForce: ""
+                }
+            });
+
+            var UserInfoView = Backbone.View.extend({
+                el: "#body",
+                template: $("#userInfoTemplate").html(),
+                events: {
+                    "click #btnHarvestFood": "harvestFood",
+                    "click #btnHarvestGold": "harvestGold",
+                    "click #navRoleList": "navRoleList"
+                },
+                render: function () {
+                    var t = _.template(this.template, {
+                        name: userInfo.get("name"),
+                        uid: userInfo.get("uid"),
+                        gold: userInfo.get("gold"),
+                        food: userInfo.get("food"),
+                        cash: userInfo.get("cash"),
+                        honor: userInfo.get("honor"),
+                        level: userInfo.get("level"),
+                        xp: userInfo.get("xp"),
+                        soul: userInfo.get("soul"),
+                        fightForce: userInfo.get("fightForce")
+                    });
+                    $(this.el).html(t);
+                },
+                harvestFood: function () {
+                    var c = new Command("farm", "harvest", {});
+                    CommonUtil.doPost(c, function (msg) {
+                        var lastFood = parseInt($("#food").html());
+                        $('#food').html(lastFood + msg.data.food);
+                    });
+                },
+                harvestGold: function () {
+                    var c = new Command("castle", "harvest", {});
+                    CommonUtil.doPost(c, function (msg) {
+                        var lastGold = parseInt($("#gold").html());
+                        $('#gold').html(lastGold + msg.data.gold);
+                    });
+                },
+                navRoleList: function () {
+                    CommonUtil.nav2Url("roleList.html", {
+                    });
+                }
+
+            });
+
+            var userInfo = new UserInfo();
+            userInfo.set("name", msg.data.userStatus.name);
+            userInfo.set("uid", msg.data.userStatus.id);
+            userInfo.set("gold", msg.data.userStatus.gold);
+            userInfo.set("food", msg.data.userStatus.food);
+            userInfo.set("cash", msg.data.userStatus.cash);
+            userInfo.set("honor", msg.data.userStatus.honor);
+            userInfo.set("level", msg.data.userStatus.level);
+            userInfo.set("xp", msg.data.userStatus.xp);
+            userInfo.set("soul", msg.data.userStatus.soul);
+            userInfo.set("fightForce", msg.data.userStatus.fightForce);
+
+
             Constants.authKey = msg.data.authKey;
             Constants.authTime = msg.data.authTime;
             Constants.uid = msg.data.userStatus.id;
 
-            $("#name").html(msg.data.userStatus.name);
-            $('#uid').html(msg.data.userStatus.id);
-            $('#gold').html(msg.data.userStatus.gold);
-            $('#food').html(msg.data.userStatus.food);
-            $('#cash').html(msg.data.userStatus.cash);
-            $('#honor').html(msg.data.userStatus.honor);
-            $('#level').html(msg.data.userStatus.level);
-            $('#xp').html(msg.data.userStatus.xp);
-            $('#soul').html(msg.data.userStatus.soul);
-            $('#fightForce').html(msg.data.userStatus.fightForce);
-
-            $('#btnHarvestFood').click(function () {
-                var c = new Command("farm", "harvest", {});
-                CommonUtil.doPost(c, function (msg) {
-                    var lastFood = parseInt($("#food").html());
-                    $('#food').html(lastFood + msg.data.food);
-                });
-            });
-
-            $('#btnHarvestGold').click(function () {
-                var c = new Command("castle", "harvest", {});
-                CommonUtil.doPost(c, function (msg) {
-                    var lastGold = parseInt($("#gold").html());
-                    $('#gold').html(lastGold + msg.data.gold);
-                });
-            });
-
-            $('#navRoleList').click(function () {
-                CommonUtil.nav2Url("roleList.html", {
-                });
-            });
+            var view = new UserInfoView
+            view.render();
 
         })
     },
