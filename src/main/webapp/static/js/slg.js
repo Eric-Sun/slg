@@ -140,14 +140,23 @@ var loader =
                     var roleDetailHtml = $("#roleDetailTemplate").html();
 
                     var c = new Command("role", "role", {urid: role.id});
-                    CommonUtil.doPost(c, function () {
+                    CommonUtil.doPost(c, function (msg) {
+                        var role = msg.data.role;
                         var t = _.template(roleDetailHtml, {
-
-
-
+                            roleName: role.roleName,
+                            fightForce: role.fightForce,
+                            attack: role.attack,
+                            defence: role.defence,
+                            health: role.health,
+                            level: role.level,
+                            id: role.id
                         });
+                        $("#roleDetail").html(t);
                     });
                 });
+                if (index == 0) {
+                    $("#showRoleDetail" + role.id).click();
+                }
             });
 
 
