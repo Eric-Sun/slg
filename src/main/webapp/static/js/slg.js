@@ -97,26 +97,16 @@ var loader =
 
             var UserInfoView = Backbone.View.extend({
                 el: "#body",
-                template: $("#userInfoTemplate").html(),
+                template: _.template($("#userInfoTemplate").html()),
                 events: {
                     "click #btnHarvestFood": "harvestFood",
                     "click #btnHarvestGold": "harvestGold",
                     "click #navRoleList": "navRoleList"
                 },
                 render: function () {
-                    var t = _.template(this.template, {
-                        name: userInfo.get("name"),
-                        uid: userInfo.get("uid"),
-                        gold: userInfo.get("gold"),
-                        food: userInfo.get("food"),
-                        cash: userInfo.get("cash"),
-                        honor: userInfo.get("honor"),
-                        level: userInfo.get("level"),
-                        xp: userInfo.get("xp"),
-                        soul: userInfo.get("soul"),
-                        fightForce: userInfo.get("fightForce")
-                    });
+                    var t = this.template(this.model.toJSON());
                     $(this.el).html(t);
+                    return this;
                 },
                 harvestFood: function () {
                     var c = new Command("farm", "harvest", {});
@@ -156,7 +146,7 @@ var loader =
             Constants.authTime = msg.data.authTime;
             Constants.uid = msg.data.userStatus.id;
 
-            var view = new UserInfoView
+            var view = new UserInfoView({model: userInfo})
             view.render();
 
         })
