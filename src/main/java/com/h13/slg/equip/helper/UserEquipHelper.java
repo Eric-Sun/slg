@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -202,6 +203,19 @@ public class UserEquipHelper {
         long ueid = userEquipDAO.insert(uid, type, eid, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE);
         userPackageHelper.addEquipItem(uid, eid, ueid);
         return ueid;
+    }
+
+
+    /**
+     * 获取某个uid，某个urid下，某种类型的装备的信息
+     * @param uid
+     * @param urid
+     * @param type  EquipConstants.EquipType下面的类型
+     * @return
+     */
+    public UserEquipCO getUserEquip(long uid, long urid, String type) {
+        UserEquipCO co = userEquipDAO.getUserEquips(uid, urid, type);
+        return co;
     }
 
 }

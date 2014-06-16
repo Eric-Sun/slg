@@ -77,10 +77,6 @@ public class UserRoleHelper {
         );
     }
 
-    public UserRoleCO getUserRole(long uid, long urid) {
-        return userRoleDAO.get(uid, urid);
-    }
-
     public void updateUserRole(UserRoleCO userRoleCO) {
         userRoleDAO.update(userRoleCO.getId(), userRoleCO.getWeapon(), userRoleCO.getArmor(),
                 userRoleCO.getAccessory(),
@@ -258,25 +254,17 @@ public class UserRoleHelper {
     }
 
 
-    public List<UserRoleCO> getRoleList(long uid) {
+    public List<UserRoleCO> getUserRoleList(long uid) {
         List<UserRoleCO> userRoleList = userRoleDAO.getRoleList(uid);
-        for (UserRoleCO ur : userRoleList) {
-            long roleId = ur.getRoleId();
-            RoleCO roleCO = roleCache.get(roleId + "");
-            ur.setRoleName(roleCO.getName());
-        }
         return userRoleList;
 
     }
 
 
-    public UserRoleCO getRole(long uid, long urid) {
+    public UserRoleCO getUserRole(long uid, long urid) {
 
 
         UserRoleCO userRoleCO = userRoleDAO.get(uid, urid);
-        long roleId = userRoleCO.getRoleId();
-        RoleCO roleCO = roleCache.get(roleId + "");
-        userRoleCO.setRoleName(roleCO.getName());
 
         return userRoleCO;
     }

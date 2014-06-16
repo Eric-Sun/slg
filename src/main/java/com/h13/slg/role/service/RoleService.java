@@ -35,9 +35,9 @@ public interface RoleService {
     public SlgData takeOff(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 
-    public SlgData roleList(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData userRoleList(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 
-    public SlgData role(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData userRole(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 }

@@ -1,5 +1,9 @@
 package com.h13.slg.role.co;
 
+import com.h13.slg.role.vo.UserRoleAccessoryVO;
+import com.h13.slg.role.vo.UserRoleArmorVO;
+import com.h13.slg.role.vo.UserRoleWeaponVO;
+
 import java.util.Map;
 
 /**
@@ -24,7 +28,34 @@ public class UserRoleCO {
     private int soldier;
     private int curSkill;
     private String roleName;
+    private UserRoleWeaponVO weaponInfo;
+    private UserRoleAccessoryVO accessoryInfo;
+    private UserRoleArmorVO armorInfo;
     private Map<String, Integer> skillLevels;
+
+    public UserRoleWeaponVO getWeaponInfo() {
+        return weaponInfo;
+    }
+
+    public void setWeaponInfo(UserRoleWeaponVO weaponInfo) {
+        this.weaponInfo = weaponInfo;
+    }
+
+    public UserRoleAccessoryVO getAccessoryInfo() {
+        return accessoryInfo;
+    }
+
+    public void setAccessoryInfo(UserRoleAccessoryVO accessoryInfo) {
+        this.accessoryInfo = accessoryInfo;
+    }
+
+    public UserRoleArmorVO getArmorInfo() {
+        return armorInfo;
+    }
+
+    public void setArmorInfo(UserRoleArmorVO armorInfo) {
+        this.armorInfo = armorInfo;
+    }
 
     public String getRoleName() {
         return roleName;

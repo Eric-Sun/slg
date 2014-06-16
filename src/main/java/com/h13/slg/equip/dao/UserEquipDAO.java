@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,7 +32,7 @@ public class UserEquipDAO {
     public long insert(final long uid,
                        final String type, final int level, final String gems,
                        final int strength, final int fail, final int refine,
-                       final int star,final long urid) {
+                       final int star, final long urid) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_equip(uid," +
                 "type,level,gems,strength,fail,refine,star,urid,createtime) " +
@@ -49,7 +50,7 @@ public class UserEquipDAO {
                 pstmt.setInt(6, fail);
                 pstmt.setInt(7, refine);
                 pstmt.setInt(8, star);
-                pstmt.setLong(9,urid);
+                pstmt.setLong(9, urid);
                 return pstmt;
             }
         }, holder);
@@ -64,5 +65,13 @@ public class UserEquipDAO {
     public UserEquipCO get(long id) {
         String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
+    }
+
+    public UserEquipCO getUserEquips(long uid, long urid, String type) {
+        String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime " +
+                "from user_equip where uid=? and urid=? and type=?";
+        return j.queryForObject(sql, new Object[]{uid, urid, type},
+                new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
+
     }
 }

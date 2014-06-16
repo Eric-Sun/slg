@@ -152,7 +152,7 @@ var loader =
     },
     userRoleList: function () {
         this.beforeLoad();
-        var c = new Command("role", "roleList", {});
+        var c = new Command("role", "userRoleList", {});
 
         CommonUtil.doPost(c, function (msg) {
             var simpleRoleCollection = new Backbone.Collection;
