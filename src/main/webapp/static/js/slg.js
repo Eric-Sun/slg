@@ -46,6 +46,11 @@ var CommonUtil = {
         url += "?" + p;
         window.location.href = url;
 
+    },
+    beforeLoad: function () {
+        Constants.uid = $.getUrlParam("uid");
+        Constants.authKey = $.getUrlParam("authKey");
+        Constants.authTime = $.getUrlParam("authTime");
     }
 };
 
@@ -64,11 +69,7 @@ var Command = function (mod, act, args) {
 
 var loader =
 {
-    beforeLoad: function () {
-        Constants.uid = $.getUrlParam("uid");
-        Constants.authKey = $.getUrlParam("authKey");
-        Constants.authTime = $.getUrlParam("authTime");
-    },
+
 
     index: function () {
         var c = new Command("user", "login",
@@ -149,64 +150,6 @@ var loader =
             view.render();
 
         })
-    },
-    userRoleList: function () {
-        this.beforeLoad();
-        var c = new Command("role", "userRoleList", {});
-
-        CommonUtil.doPost(c, function (msg) {
-            var simpleRoleCollection = new Backbone.Collection;
-            // 加载数据到collection中
-            _.each(msg.data.list, function (userRole, index, list) {
-                var simpleRoleModel = new Backbone.Model({
-                    roleName: userRole.roleName,
-                    fightForce: userRole.fightForce,
-                    attack: userRole.attack,
-                    defence: userRole.defence,
-                    health: userRole.health,
-                    level: userRole.level,
-                    id: userRole.id,
-                    aromrId: userRole.armor,
-                    accessoryId: ueerRole.accessoryId,
-                    weapon: userRole.weapon
-                });
-                simpleRoleCollection.add(simpleRoleModel);
-
-            });
-
-            var RoleListView = Backbone.View.extend({
-                el: "#roleList",
-                template: _.template($("#roleRowTemplate").html()),
-                render: function () {
-                    for (var m  in this.model) {
-                        this.eachModel(this.model[m]);
-                    }
-                    this.showRoleDetail({data: {role: this.model[0].toJSON()}});
-
-                },
-                eachModel: function (data) {
-                    $(this.el).append(this.template(data.toJSON()));
-                    $("#showRoleDetail" + data.toJSON().id).on("click", {role: data.toJSON()}, this.showRoleDetail);
-                },
-                showRoleDetail: function (event) {
-                    var role = event.data.role;
-                    var roleDetailHtml = $("#roleDetailTemplate").html();
-                    var t = _.template(roleDetailHtml, {
-                        roleName: role.roleName,
-                        fightForce: role.fightForce,
-                        attack: role.attack,
-                        defence: role.defence,
-                        health: role.health,
-                        level: role.level,
-                        id: role.id
-                    });
-                    $("#roleDetail").html(t);
-                }
-            });
-
-            var roleListView = new RoleListView({model: simpleRoleCollection.models});
-            roleListView.render();
-        });
     }
 
 }

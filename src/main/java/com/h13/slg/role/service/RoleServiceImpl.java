@@ -88,6 +88,8 @@ public class RoleServiceImpl implements RoleService {
                 EquipCO equipCO = equipConfigFetcher.get(weaponCO.getLevel() + "");
                 userRoleWeaponVO.setName(equipCO.getWeaponName());
                 ur.setWeaponInfo(userRoleWeaponVO);
+            } else {
+                ur.setWeaponInfo(null);
             }
             // 饰品
             if (ur.getAccessory() != RoleConstants.NO_EQUIP_ID) {
@@ -98,6 +100,8 @@ public class RoleServiceImpl implements RoleService {
                 EquipCO equipCO = equipConfigFetcher.get(accessoryCO.getLevel() + "");
                 userRoleAccessoryVO.setName(equipCO.getAccessoryName());
                 ur.setAccessoryInfo(userRoleAccessoryVO);
+            } else {
+                ur.setAccessoryInfo(null);
             }
             // 头盔
             if (ur.getArmor() != RoleConstants.NO_EQUIP_ID) {
@@ -108,7 +112,10 @@ public class RoleServiceImpl implements RoleService {
                 EquipCO equipCO = equipConfigFetcher.get(armorCO.getLevel() + "");
                 userRoleArmorVO.setName(equipCO.getArmorName());
                 ur.setArmorInfo(userRoleArmorVO);
+            } else {
+                ur.setArmorInfo(null);
             }
+
         }
 
         return SlgData.getData().add("list", userRoleList);
