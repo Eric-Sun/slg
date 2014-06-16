@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script src="/slg/static/js/jquery.js" type="text/javascript"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="/slg/static/js/slg.js" type="text/javascript"></script>
+    <script src="/slg/static/js/underscore.js" type="text/javascript"></script>
+    <script src="/slg/static/js/backbone.js" type="text/javascript"></script>
+    <script src="/slg/static/js/userRoleList.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="roleList">
+</div>
+<div class="row"></div>
+<div id="roleDetail">
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(userRoleListLoader());
+</script>
+
+<script id="roleRowTemplate" type="text/template">
+
+    <div class="row">
+        <button id="showRoleDetail<%- id %>" class="col-xs-1">
+            <%- roleName %>
+        </button>
+    </div>
+</script>
+
+<script id="roleDetailTemplate" type="text/template">
+    <div class="row">
+        姓名:<%- roleName %>
+    </div>
+    <div class="row">
+        战斗力:<%- fightForce %>
+    </div>
+    <div class="row">
+        攻击力:<%- attack %>
+    </div>
+    <div class="row">
+        防御力:<%- defence %>
+    </div>
+    <div class="row">
+        士兵数:<%- health %>
+    </div>
+    <button class="row" id="weapon">
+        武器；<%- weapon != 0 ? "有武器" : NO_WEAPON %>
+    </button>
+    <br>
+    <button class="row" id="armor">
+        防具；<%- weapon != 0 ? "有防具" : NO_ARMOR %>
+    </button>
+    <br>
+    <button class="row" id="accessory">
+        饰品；<%- weapon != 0 ? "有饰品" : NO_ACCESSORY %>
+    </button>
+    <br>
+</script>
