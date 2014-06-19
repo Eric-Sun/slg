@@ -9,7 +9,6 @@ import java.util.Map;
  */
 public class UserEquipCO {
     private long id;
-    private int eid;
     private long uid;
     private long urid;
     private String type;
@@ -20,20 +19,22 @@ public class UserEquipCO {
     private int refine;
     private int star;
 
+    private String equipName;
+
+    public String getEquipName() {
+        return equipName;
+    }
+
+    public void setEquipName(String equipName) {
+        this.equipName = equipName;
+    }
+
     public long getUrid() {
         return urid;
     }
 
     public void setUrid(long urid) {
         this.urid = urid;
-    }
-
-    public int getEid() {
-        return eid;
-    }
-
-    public void setEid(int eid) {
-        this.eid = eid;
     }
 
     public long getUid() {

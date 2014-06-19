@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script src="/slg/static/js/jquery.js" type="text/javascript"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="/slg/static/js/slg.js" type="text/javascript"></script>
+    <script src="/slg/static/js/underscore.js" type="text/javascript"></script>
+    <script src="/slg/static/js/backbone.js" type="text/javascript"></script>
+    <script src="/slg/static/js/wearEquip.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="equipList">
+</div>
+<div class="row"></div>
+<div id="roleDetail">
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(wearEquip());
+</script>
+
+<script id="userEquipListView" type="text/template">
+    <div class="row">
+        <div class="col-xs-2">
+            <%- equipName %>
+        </div>
+        <button id="doWear<%- id %>" class="col-xs-1">
+            装备
+        </button>
+    </div>
+</script>

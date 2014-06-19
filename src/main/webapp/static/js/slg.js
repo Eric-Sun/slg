@@ -17,13 +17,14 @@ var Constants = {
 
 var CommonUtil = {
     doPost: function (command, successFunc) {
+        console.log("Reqeust: " + JSON.stringify(command));
         $.ajax({
             type: "POST",
             url: "/slg/",
             data: command,
             dataType: "json",
             success: function (msg) {
-                console.log(JSON.stringify(msg));
+                console.log("Response: " + JSON.stringify(msg));
                 successFunc(msg);
             },
             error: function (a, b, c) {
@@ -81,18 +82,6 @@ var loader =
         CommonUtil.doPost(c, function (msg) {
 
             var UserInfo = Backbone.Model.extend({
-//                default: {
-//                    name: "",
-//                    uid: "",
-//                    gold: "",
-//                    food: "",
-//                    cash: "",
-//                    honor: "",
-//                    level: "",
-//                    xp: "",
-//                    soul: "",
-//                    fightForce: ""
-//                }
             });
 
             var UserInfoView = Backbone.View.extend({
@@ -101,7 +90,8 @@ var loader =
                 events: {
                     "click #btnHarvestFood": "harvestFood",
                     "click #btnHarvestGold": "harvestGold",
-                    "click #navRoleList": "navRoleList"
+                    "click #navRoleList": "navRoleList",
+                    "click #navShop": "navShop"
                 },
                 render: function () {
                     var t = this.template(this.model.toJSON());
@@ -124,6 +114,10 @@ var loader =
                 },
                 navRoleList: function () {
                     CommonUtil.nav2Url("roleList.html", {
+                    });
+                },
+                navShop: function () {
+                    CommonUtil.nav2Url("shopList.html", {
                     });
                 }
 

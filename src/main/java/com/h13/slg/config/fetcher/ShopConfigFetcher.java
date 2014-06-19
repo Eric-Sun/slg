@@ -8,6 +8,8 @@ import com.h13.slg.config.co.ShopCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  *
  */
@@ -22,4 +24,7 @@ public class ShopConfigFetcher implements BasicFetcher<ShopCO> {
         return cache.get(key);
     }
 
+    public List<ShopCO> getAll() {
+        return cache.getAll();
+    }
 }

@@ -139,7 +139,7 @@ public class UserRoleHelper {
      */
     public void wear(long uid, long urid, long ueid) throws RequestErrorException {
         UserRoleCO ur = getUserRole(uid, urid);
-        UserEquipCO ue = userEquipHelper.getUserEquip(ueid);
+        UserEquipCO ue = userEquipHelper.getUserEquip(uid, ueid);
         if (ue.getUid() != uid) {
             SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "ue's uid is not target uid.")
                     .addParam("ue-uid", ue.getUid())
@@ -175,14 +175,15 @@ public class UserRoleHelper {
             }
             ur.setWeapon(ue.getId());
         }
+        ue.setUrid(ur.getId());
         updateUserRole(ur);
+        userEquipHelper.updateUserEquip(ue);
         SlgLogger.info(SlgLoggerEntity.p("role", "wear", uid, "ok")
                 .addParam("urid", urid)
                 .addParam("ueid", ueid));
 
         fightForceHelper.updateUserRoleFightForce(uid, urid);
     }
-
 
     /**
      * 脱下装备
@@ -194,7 +195,7 @@ public class UserRoleHelper {
      */
     public void takeOff(long uid, long urid, long ueid) throws RequestErrorException {
         UserRoleCO ur = getUserRole(uid, urid);
-        UserEquipCO ue = userEquipHelper.getUserEquip(ueid);
+        UserEquipCO ue = userEquipHelper.getUserEquip(uid, ueid);
         if (ue.getUid() != uid) {
             SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "ue's uid is not target uid.")
                     .addParam("ue-uid", ue.getUid())
@@ -230,7 +231,8 @@ public class UserRoleHelper {
             ur.setWeapon(RoleConstants.NO_EQUIP_ID);
         }
         updateUserRole(ur);
-
+        ue.setUrid(0);
+        userEquipHelper.updateUserEquip(ue);
         fightForceHelper.updateUserRoleFightForce(uid, ue.getUrid());
         SlgLogger.info(SlgLoggerEntity.p("role", "takeOff", uid, "ok")
                 .addParam("urid", urid)

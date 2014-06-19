@@ -20,5 +20,4 @@ public interface InventoryService {
      */
     public SlgData buy(SlgRequestDTO request) throws RequestErrorException;
 
-
 }

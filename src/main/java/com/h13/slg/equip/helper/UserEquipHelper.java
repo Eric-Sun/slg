@@ -59,8 +59,8 @@ public class UserEquipHelper {
      * @param ueId 用户装备id
      * @return
      */
-    public UserEquipCO getUserEquip(long ueId) {
-        return userEquipDAO.get(ueId);
+    public UserEquipCO getUserEquip(long uid, long ueId) {
+        return userEquipDAO.get(uid, ueId);
     }
 
     /**
@@ -86,7 +86,7 @@ public class UserEquipHelper {
     public EquipStrengthenVO strengthen(long uid, long ueId) throws RequestErrorException {
         EquipStrengthenVO vo = new EquipStrengthenVO();
         // 获得当前的强化等级
-        UserEquipCO ue = getUserEquip(ueId);
+        UserEquipCO ue = getUserEquip(uid, ueId);
         int curStrength = ue.getStrength();
         String type = ue.getType();
 
@@ -131,7 +131,7 @@ public class UserEquipHelper {
     public EquipMakeVO make(long uid, int lucky, long ueId) throws RequestErrorException {
         EquipMakeVO vo = new EquipMakeVO();
         // 获得当前的装备等级
-        UserEquipCO ue = getUserEquip(ueId);
+        UserEquipCO ue = getUserEquip(uid, ueId);
         int curLevel = ue.getLevel();
         int nextLevel = curLevel++;
         // 获得升级需要的资源数量
@@ -208,9 +208,10 @@ public class UserEquipHelper {
 
     /**
      * 获取某个uid，某个urid下，某种类型的装备的信息
+     *
      * @param uid
      * @param urid
-     * @param type  EquipConstants.EquipType下面的类型
+     * @param type EquipConstants.EquipType下面的类型
      * @return
      */
     public UserEquipCO getUserEquip(long uid, long urid, String type) {
@@ -218,4 +219,10 @@ public class UserEquipHelper {
         return co;
     }
 
+    public List<UserEquipCO> equipList(long uid, String type) {
+
+        List<UserEquipCO> equipList = userEquipDAO.equipList(uid, type);
+
+        return equipList;
+    }
 }

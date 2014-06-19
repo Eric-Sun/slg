@@ -58,13 +58,14 @@ public class UserEquipDAO {
     }
 
     public void update(long id, int level, Map<String, String> gems, int strength, int fail, int refine, int star, long urid) {
-        String sql = "update user_equip set type=?,level=?,gems=?,strength=?,fail=?,refine=?,star=?,e_id=?,urid=? where id=?";
+        String sql = "update user_equip set level=?,gems=?,strength=?,fail=?,refine=?,star=?,urid=? where id=?";
         j.update(sql, new Object[]{level, JSON.toJSONString(gems), strength, fail, refine, star, urid, id});
     }
 
-    public UserEquipCO get(long id) {
-        String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?";
-        return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
+    public UserEquipCO get(long uid,long ueid) {
+        String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime from user_equip where id=?" +
+                " and uid=?";
+        return j.queryForObject(sql, new Object[]{ueid,uid}, new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 
     public UserEquipCO getUserEquips(long uid, long urid, String type) {
@@ -73,5 +74,13 @@ public class UserEquipDAO {
         return j.queryForObject(sql, new Object[]{uid, urid, type},
                 new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
 
+    }
+
+    public List<UserEquipCO> equipList(long uid, String type) {
+
+        String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime " +
+                "from user_equip where uid=? and type=?";
+        return j.query(sql, new Object[]{uid, type},
+                new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 }

@@ -1,5 +1,6 @@
 package com.h13.slg.config.cache;
 
+import com.google.common.collect.Lists;
 import com.h13.slg.config.BasicCache;
 import com.h13.slg.config.ConfigParseException;
 import com.h13.slg.config.XmlParser;
@@ -11,6 +12,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,7 +25,7 @@ import javax.annotation.Resource;
 @Service
 public class ShopCache extends BasicCache<ShopCO> {
 
-    private static final String KEY = "slg:sys:armor:";
+    private static final String KEY = "slg:sys:shop";
 
     @Resource(name = "shopTemplate")
     private RedisTemplate<String, ShopCO> shopTemplate;
@@ -33,13 +36,18 @@ public class ShopCache extends BasicCache<ShopCO> {
                 filename);
         ShopXMLCO obj = parser.parse();
         for (String id : obj.getMap().keySet()) {
-            shopTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
+            shopTemplate.opsForList().leftPush(KEY, obj.getMap().get(id));
         }
     }
 
-
     @Override
     public ShopCO get(String id) {
-        return shopTemplate.opsForValue().get(KEY + id);
+        return null;
     }
+
+
+    public List<ShopCO> getAll() {
+        return shopTemplate.opsForList().range(KEY, 0, shopTemplate.opsForList().size(KEY));
+    }
+
 }

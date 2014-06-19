@@ -94,17 +94,17 @@ public class FightForceHelper {
         int accessoryHealth = 0;
         int accessoryFightForce = 0;
         if (ueWeaponId != RoleConstants.NO_EQUIP_ID) {
-            UserEquipCO weapon = userEquipHelper.getUserEquip(ueWeaponId);
+            UserEquipCO weapon = userEquipHelper.getUserEquip(uid, ueWeaponId);
             weaponAttack = getWeaponAttack(weapon);
             weaponFightForce = calFightForceByAttack(weaponAttack);
         }
         if (ueArmorId != RoleConstants.NO_EQUIP_ID) {
-            UserEquipCO armor = userEquipHelper.getUserEquip(ueArmorId);
+            UserEquipCO armor = userEquipHelper.getUserEquip(uid, ueArmorId);
             armorDefence = getArmorDefence(armor);
             armorFightForce = calFightForceByDefence(armorDefence);
         }
         if (ueAccessoryId != RoleConstants.NO_EQUIP_ID) {
-            UserEquipCO accessory = userEquipHelper.getUserEquip(ueAccessoryId);
+            UserEquipCO accessory = userEquipHelper.getUserEquip(uid, ueAccessoryId);
             accessoryHealth = getAccessoryHealth(accessory);
             accessoryFightForce = calFightForceByHealth(accessoryHealth);
         }

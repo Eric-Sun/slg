@@ -10,77 +10,77 @@ import org.apache.commons.digester3.annotations.rules.ObjectCreate;
  * Time: 下午4:25
  * To change this template use File | Settings | File Templates.
  */
-@ObjectCreate(pattern = "equipList/role")
+@ObjectCreate(pattern = "equipList/equip")
 public class EquipCO {
-    @BeanPropertySetter(pattern = "equipList/role/level")
+    @BeanPropertySetter(pattern = "equipList/equip/level")
     private int level;
-    @BeanPropertySetter(pattern = "equipList/role/weaponMaterial1")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponMaterial1")
     private int weaponMaterial1;
-    @BeanPropertySetter(pattern = "equipList/role/weaponMaterialType1")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponMaterialType1")
     private int weaponMaterialType1;
-    @BeanPropertySetter(pattern = "equipList/role/weaponMaterial2")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponMaterial2")
     private int weaponMaterial2;
-    @BeanPropertySetter(pattern = "equipList/role/weaponMaterialType2")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponMaterialType2")
     private int weaponMaterialType2;
-    @BeanPropertySetter(pattern = "equipList/role/weaponGold")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponGold")
     private int weaponGold;
-    @BeanPropertySetter(pattern = "equipList/role/weaponSuccess")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponSuccess")
     private int weaponSuccess;
-    @BeanPropertySetter(pattern = "equipList/role/armorMaterial1")
+    @BeanPropertySetter(pattern = "equipList/equip/armorMaterial1")
     private int armorMaterial1;
-    @BeanPropertySetter(pattern = "equipList/role/armorMaterialType1")
+    @BeanPropertySetter(pattern = "equipList/equip/armorMaterialType1")
     private int armorMaterialType1;
-    @BeanPropertySetter(pattern = "equipList/role/armorMaterial2")
+    @BeanPropertySetter(pattern = "equipList/equip/armorMaterial2")
     private int armorMaterial2;
-    @BeanPropertySetter(pattern = "equipList/role/armorMaterialType2")
+    @BeanPropertySetter(pattern = "equipList/equip/armorMaterialType2")
     private int armorMaterialType2;
-    @BeanPropertySetter(pattern = "equipList/role/armorGold")
+    @BeanPropertySetter(pattern = "equipList/equip/armorGold")
     private int armorGold;
-    @BeanPropertySetter(pattern = "equipList/role/armorSuccess")
+    @BeanPropertySetter(pattern = "equipList/equip/armorSuccess")
     private int armorSuccess;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryMaterial1")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryMaterial1")
     private int accessoryMaterial1;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryMaterialType1")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryMaterialType1")
     private int accessoryMaterialType1;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryMaterial2")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryMaterial2")
     private int accessoryMaterial2;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryMaterialType2")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryMaterialType2")
     private int accessoryMaterialType2;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryGold")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryGold")
     private int accessoryGold;
-    @BeanPropertySetter(pattern = "equipList/role/accessorySuccess")
+    @BeanPropertySetter(pattern = "equipList/equip/accessorySuccess")
     private int accessorySuccess;
-    @BeanPropertySetter(pattern = "equipList/role/weaponUrl")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponUrl")
     private String weaponUrl;
-    @BeanPropertySetter(pattern = "equipList/role/weaponName")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponName")
     private String weaponName;
-    @BeanPropertySetter(pattern = "equipList/role/weaponDesc")
+    @BeanPropertySetter(pattern = "equipList/equip/weaponDesc")
     private String weaponDesc;
-    @BeanPropertySetter(pattern = "equipList/role/magicUrl")
+    @BeanPropertySetter(pattern = "equipList/equip/magicUrl")
     private String magicUrl;
-    @BeanPropertySetter(pattern = "equipList/role/magicName")
+    @BeanPropertySetter(pattern = "equipList/equip/magicName")
     private String magicName;
-    @BeanPropertySetter(pattern = "equipList/role/magicDesc")
+    @BeanPropertySetter(pattern = "equipList/equip/magicDesc")
     private String magicDesc;
-    @BeanPropertySetter(pattern = "equipList/role/armorUrl")
+    @BeanPropertySetter(pattern = "equipList/equip/armorUrl")
     private String armorUrl;
-    @BeanPropertySetter(pattern = "equipList/role/armorName")
+    @BeanPropertySetter(pattern = "equipList/equip/armorName")
     private String armorName;
-    @BeanPropertySetter(pattern = "equipList/role/armorDesc")
+    @BeanPropertySetter(pattern = "equipList/equip/armorDesc")
     private String armorDesc;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryUrl")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryUrl")
     private String accessoryUrl;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryName")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryName")
     private String accessoryName;
-    @BeanPropertySetter(pattern = "equipList/role/accessoryDesc")
+    @BeanPropertySetter(pattern = "equipList/equip/accessoryDesc")
     private String accessoryDesc;
-    @BeanPropertySetter(pattern = "equipList/role/sell")
+    @BeanPropertySetter(pattern = "equipList/equip/sell")
     private int sell;
-    @BeanPropertySetter(pattern = "equipList/role/buyable")
+    @BeanPropertySetter(pattern = "equipList/equip/buyable")
     private int buyable;
-    @BeanPropertySetter(pattern = "equipList/role/equipAddSuccByFail")
+    @BeanPropertySetter(pattern = "equipList/equip/equipAddSuccByFail")
     private int equipAddSuccByFail;
-    @BeanPropertySetter(pattern = "equipList/role/attributeLimit")
+    @BeanPropertySetter(pattern = "equipList/equip/attributeLimit")
     private int attributeLimit;
 
     public int getLevel() {

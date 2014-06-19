@@ -72,21 +72,23 @@ var userRoleListLoader = function () {
 
                     });
                     $("#roleDetail").html(t);
-                    $("#weapon").on("click", {id: role.weapon, type: "weapon"}, this.nav2EquipDetail);
-                    $("#accessory").on("click", {id: role.weapon, type: "accessory"}, this.nav2EquipDetail);
-                    $("#armor").on("click", {id: role.weapon, type: "armor"}, this.nav2EquipDetail);
+                    $("#weapon").on("click", {id: role.weapon, urId: role.id, type: "weapon"}, this.nav2EquipDetail);
+                    $("#accessory").on("click", {id: role.accessory, urId: role.id, type: "accessory"}, this.nav2EquipDetail);
+                    $("#armor").on("click", {id: role.armor, urId: role.id, type: "armor"}, this.nav2EquipDetail);
 
                 },
                 nav2EquipDetail: function (event) {
                     if (event.data.id == 0) {
                         CommonUtil.nav2Url("wearEquip.html", {
-                            eId: event.data.id,
-                            type: event.data.type
+                            ueId: event.data.id,
+                            type: event.data.type,
+                            urId: event.data.urId
                         });
                     } else {
                         CommonUtil.nav2Url("equipDetail.html", {
-                            eId: event.data.id,
-                            type: event.data.type
+                            ueId: event.data.id,
+                            type: event.data.type,
+                            urId: event.data.urId
                         });
                     }
 
