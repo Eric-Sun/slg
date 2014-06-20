@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,7 +26,7 @@ import java.util.List;
 @Service
 public class ShopCache extends BasicCache<ShopCO> {
 
-    private static final String KEY = "slg:sys:shop";
+    private static final String KEY = "slg:sys:shop:";
 
     @Resource(name = "shopTemplate")
     private RedisTemplate<String, ShopCO> shopTemplate;
@@ -35,19 +36,21 @@ public class ShopCache extends BasicCache<ShopCO> {
         XmlParser<ShopXMLCO> parser = new XmlParser<ShopXMLCO>(ShopXMLCO.class,
                 filename);
         ShopXMLCO obj = parser.parse();
+        shopTemplate.opsForList().getOperations().delete(KEY);
         for (String id : obj.getMap().keySet()) {
-            shopTemplate.opsForList().leftPush(KEY, obj.getMap().get(id));
+            shopTemplate.opsForValue().set(KEY, obj.getMap().get(id));
         }
     }
 
     @Override
     public ShopCO get(String id) {
-        return null;
+        return shopTemplate.opsForValue().get(KEY + id);
     }
 
 
     public List<ShopCO> getAll() {
-        return shopTemplate.opsForList().range(KEY, 0, shopTemplate.opsForList().size(KEY));
+        Set<String> set = shopTemplate.opsForValue().getOperations().keys(KEY + "*");
+        return shopTemplate.opsForValue().multiGet(set);
     }
 
 }

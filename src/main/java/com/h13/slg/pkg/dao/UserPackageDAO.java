@@ -50,7 +50,7 @@ public class UserPackageDAO {
                 UserPackageCO userPackageCO = new UserPackageCO();
                 userPackageCO.setId(resultSet.getInt(1));
                 userPackageCO.setRoleCard(JSON.parseObject(resultSet.getString(2), Map.class));
-                userPackageCO.setEquip(JSON.parseObject(resultSet.getString(3), Map.class));
+                userPackageCO.setEquip(JSON.parseObject(resultSet.getString(3), List.class));
                 userPackageCO.setGem(JSON.parseObject(resultSet.getString(4), Map.class));
                 userPackageCO.setMaterial(JSON.parseObject(resultSet.getString(5), Map.class));
                 return userPackageCO;
@@ -64,7 +64,7 @@ public class UserPackageDAO {
         j.update(sql, new Object[]{JSON.toJSONString(roleCard), id});
     }
 
-    public void updateEquip(long id, Map<String, List<Long>> equip) {
+    public void updateEquip(long id, List<Integer> equip) {
         String sql = "update user_package set equip=? where id=?";
         j.update(sql, new Object[]{JSON.toJSONString(equip), id});
     }

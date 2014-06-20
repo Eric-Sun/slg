@@ -193,8 +193,8 @@ public class UserPackageHelper {
      */
     public void addEquipItem(long uid, long itemId, long id) {
         UserPackageCO userPackageCO = get(uid);
-        Map data = userPackageCO.getEquip();
-        MapUtil.appendItem(data, itemId + "", id);
+        List data = userPackageCO.getEquip();
+        data.add(id);
         updateEquip(userPackageCO);
     }
 

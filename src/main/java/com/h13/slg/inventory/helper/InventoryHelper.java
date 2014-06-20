@@ -66,7 +66,7 @@ public class InventoryHelper {
             if (currentHonor < allPrice) {
                 throw new RequestErrorException(ErrorCodeConstants.Role.RESOURCE_IS_NOT_ENOUGH, "");
             }
-            userStatusCO.setCash(currentHonor - allPrice);
+            userStatusCO.setHonor(currentHonor - allPrice);
         } else {
             throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "buy use " + currency);
         }
@@ -74,10 +74,6 @@ public class InventoryHelper {
         userStatusHelper.updateUserStatus(userStatusCO);
 
         // 添加到背包中
-        if (!type.equals(PackageConstants.PACKAGE.GEM_SPACE) ||
-                !type.equals(PackageConstants.PACKAGE.MATERIAL_SPACE)) {
-            type = PackageConstants.PACKAGE.EQUIP_SPACE;
-        }
 
         if (type.equals(PackageConstants.PACKAGE.MATERIAL_SPACE)) {
             userPackageHelper.addMaterialItem(uid, id, num);

@@ -31,7 +31,23 @@ public class ShopServiceTest {
         String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);
 
+    }
 
+
+    @Test
+    public void buy(){
+
+        HttpClientUtil http = new HttpClientUtil();
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("mod", "inventory");
+        map.put("act", "buy");
+        map.put("uid", "2");
+        map.put("auth_key", "c81e728d9d4c2f636f067f89cc14862c");
+        map.put("auth_time", "1403171968236");
+        map.put("args", "{num:1,id:50}");
+        map.put("seq", "1");
+        String s = http.post("http://localhost:8080/slg/", map);
+        System.out.println(s);
 
     }
 

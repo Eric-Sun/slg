@@ -15,8 +15,11 @@ import java.util.Map;
 public class UserPackageCO {
     private int id;
     private Map<String, Integer> roleCard;
-    private Map<String, List<Long>> equip;
+    // 用户装备的id
+    private List<Integer> equip;
+    // 宝石的id--》宝石的数量
     private Map<String, Integer> gem;
+    // 材料的id--》材料的数量
     private Map<String, Integer> material;
 
     public int getId() {
@@ -35,11 +38,11 @@ public class UserPackageCO {
         this.roleCard = roleCard;
     }
 
-    public Map<String, List<Long>> getEquip() {
+    public List<Integer> getEquip() {
         return equip;
     }
 
-    public void setEquip(Map<String, List<Long>> equip) {
+    public void setEquip(List<Integer> equip) {
         this.equip = equip;
     }
 

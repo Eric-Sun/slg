@@ -3,6 +3,7 @@ package com.h13.slg.equip.helper;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.equip.EquipConstants;
+import com.h13.slg.equip.vo.EquipInfoVO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.StrengthenCO;
@@ -224,5 +225,20 @@ public class UserEquipHelper {
         List<UserEquipCO> equipList = userEquipDAO.equipList(uid, type);
 
         return equipList;
+    }
+
+    public EquipInfoVO getEquipInfo(UserEquipCO userEquipCO) {
+
+        EquipInfoVO equipInfoVO = new EquipInfoVO();
+        EquipCO equipCO = equipConfigFetcher.get(userEquipCO.getLevel() + "");
+        if (userEquipCO.getType().equals("weapon")) {
+            equipInfoVO.setName(equipCO.getWeaponName());
+        } else if (userEquipCO.getType().equals("accessory")) {
+            equipInfoVO.setName(equipCO.getAccessoryName());
+        } else {
+            equipInfoVO.setName(equipCO.getArmorName());
+        }
+
+        return equipInfoVO;
     }
 }

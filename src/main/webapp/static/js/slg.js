@@ -91,7 +91,11 @@ var loader =
                     "click #btnHarvestFood": "harvestFood",
                     "click #btnHarvestGold": "harvestGold",
                     "click #navRoleList": "navRoleList",
-                    "click #navShop": "navShop"
+                    "click #btnShop": "navShop",
+                    "click #btnPackage": "btnPackage"
+                },
+                btnPackage: function () {
+                    CommonUtil.nav2Url("package.html", {});
                 },
                 render: function () {
                     var t = this.template(this.model.toJSON());

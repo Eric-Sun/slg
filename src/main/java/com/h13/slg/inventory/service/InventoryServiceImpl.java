@@ -28,7 +28,7 @@ public class InventoryServiceImpl implements InventoryService {
         int num = new Integer(request.getArgs().get("num").toString());
         int id = new Integer(request.getArgs().get("id").toString());
 
-        InventoryBuyVO inventoryBuyVO = inventoryHelper.buy(uid, num, id);
+        InventoryBuyVO inventoryBuyVO = inventoryHelper.buy(uid, id,num );
         //{"cost_type":"honor","cost_num":-1000,"awards":[["material",13,10]]}
         return SlgData.getData().add("cost_type", inventoryBuyVO.getCostType())
                 .add("cost_num", inventoryBuyVO.getCostNum())
