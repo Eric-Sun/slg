@@ -15,7 +15,7 @@ import java.util.Map;
 public class UserTeamCO {
 
     private long id;
-    private List<Long> data;
+    private List<Integer> data;
 
     public long getId() {
         return id;
@@ -25,11 +25,11 @@ public class UserTeamCO {
         this.id = id;
     }
 
-    public List<Long> getData() {
+    public List<Integer> getData() {
         return data;
     }
 
-    public void setData(List<Long> data) {
+    public void setData(List<Integer> data) {
         this.data = data;
     }
 

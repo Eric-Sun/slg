@@ -92,7 +92,7 @@ public class UserEquipHelper {
         String type = ue.getType();
 
         // 查看下一级强化需要的金币数目
-        int nextStrength = curStrength+1;
+        int nextStrength = curStrength + 1;
         StrengthenCO strengthenCO = strengthenConfigFetcher.get(nextStrength + "");
         if (strengthenCO == null)
             throw new RequestErrorException(ErrorCodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP, "");
@@ -134,7 +134,7 @@ public class UserEquipHelper {
         // 获得当前的装备等级
         UserEquipCO ue = getUserEquip(uid, ueId);
         int curLevel = ue.getLevel();
-        int nextLevel = curLevel++;
+        int nextLevel = curLevel + 1;
         // 获得升级需要的资源数量
         EquipCO equipCO = equipConfigFetcher.get(curLevel + "");
         int materialId1 = 0;
@@ -161,8 +161,8 @@ public class UserEquipHelper {
 
         // 查看背包中是否有这些资源
         UserPackageCO userPackageCO = userPackageHelper.get(uid);
-        int packageMCount1 = userPackageCO.getMaterial().get(materialId1 + "");
-        int packageMCount2 = userPackageCO.getMaterial().get(materialId2 + "");
+        int packageMCount1 = userPackageHelper.getMaterialCount(uid, materialId1);
+        int packageMCount2 = userPackageHelper.getMaterialCount(uid, materialId2);
 
         if (packageMCount1 < materialCount1 || packageMCount2 < materialCount2) {
             // 资源不够
@@ -172,6 +172,8 @@ public class UserEquipHelper {
         d1.put(materialId1 + "", packageMCount1 - materialCount1);
         d1.put(materialId2 + "", packageMCount2 - materialCount2);
         userPackageHelper.updateMaterial(userPackageCO);
+        ue.setLevel(nextLevel);
+        updateUserEquip(ue);
 
         vo.setLevel(nextLevel);
         Map<String, Integer> map = new HashMap<String, Integer>();

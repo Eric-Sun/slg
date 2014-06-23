@@ -68,7 +68,8 @@ public class EquipServiceImpl implements EquipService {
 
         long uid = request.getUid();
         long ueId = new Long(request.getArgs().get(RoleRequestKeyConstants.UEID).toString());
-        int lucky = new Integer(request.getArgs().get(RoleRequestKeyConstants.LUCKY).toString());
+//        int lucky = new Integer(request.getArgs().get(RoleRequestKeyConstants.LUCKY).toString());
+        int lucky = 0;
         EquipMakeVO vo = userEquipHelper.make(uid, lucky, ueId);
 
         return SlgData.getData().add(RoleResponseKeyConstants.LEVEL, vo.getLevel())
@@ -143,8 +144,8 @@ public class EquipServiceImpl implements EquipService {
             userEquipVO.setMaterialType2NeedCount(equipCO.getArmorMaterial2());
         }
 
-        userEquipVO.setMaterialType1Name(materialConfigFetcher.get(userEquipVO.getMaterialType1Id()+"").getName());
-        userEquipVO.setMaterialType2Name(materialConfigFetcher.get(userEquipVO.getMaterialType2Id()+"").getName());
+        userEquipVO.setMaterialType1Name(materialConfigFetcher.get(userEquipVO.getMaterialType1Id() + "").getName());
+        userEquipVO.setMaterialType2Name(materialConfigFetcher.get(userEquipVO.getMaterialType2Id() + "").getName());
 
 
         userEquipVO.setMaterialType1CurrentCount(

@@ -8,5 +8,5 @@ package com.h13.slg.battle;
  * To change this template use File | Settings | File Templates.
  */
 public class TeamConstants {
-    public final static long NO_ROLE_IN_TEAM = 0;
+    public final static int NO_ROLE_IN_TEAM = 0;
 }

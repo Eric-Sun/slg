@@ -12,6 +12,11 @@ public class RequestErrorException extends Exception {
     private String desc;
 
 
+    public RequestErrorException(Throwable t) {
+        this(ErrorCodeConstants.COMMON_ERROR, "", t);
+
+    }
+
     public RequestErrorException(int code, String desc) {
         super(code + ":" + desc);
         this.code = code;

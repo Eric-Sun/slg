@@ -26,12 +26,12 @@ public class UserTeamDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(long id, List<Long> data) {
+    public void insert(long id, List<Integer> data) {
         String sql = "insert into user_team (id,data,createtime) values (?,?,now())";
         j.update(sql, new Object[]{id, JSON.toJSONString(data)});
     }
 
-    public void update(long id, List<Long> data) {
+    public void update(long id, List<Integer> data) {
         String sql = "update user_team set data=? where id=?";
         j.update(sql, new Object[]{JSON.toJSONString(data), id});
     }

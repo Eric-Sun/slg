@@ -46,7 +46,7 @@ public class TeamHelper {
 
 
     public void createANewTeam(long uid) {
-        userTeamDAO.insert(uid, new LinkedList<Long>() {{
+        userTeamDAO.insert(uid, new LinkedList<Integer>() {{
             for (int i = 0; i < 9; i++) {
                 add(TeamConstants.NO_ROLE_IN_TEAM);
             }
@@ -62,16 +62,16 @@ public class TeamHelper {
     public void saveTeam(long uid, String team) throws RequestErrorException {
 
         final Map teamDataMap = JSON.parseObject(team, Map.class);
-        List<Long> teamDataList = new LinkedList<Long>() {{
+        List<Integer> teamDataList = new LinkedList<Integer>() {{
             for (int i = 0; i < 9; i++) {
-                add(new Long(teamDataMap.get(i + "") + ""));
+                add(new Integer(teamDataMap.get(i + "") + ""));
             }
         }};
 
         UserTeamCO userTeamCO = new UserTeamCO();
         userTeamCO.setData(teamDataList);
         userTeamCO.setId(uid);
-        for (Long urid : teamDataList) {
+        for (Integer urid : teamDataList) {
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
@@ -88,4 +88,32 @@ public class TeamHelper {
     }
 
 
+    public void updatePos(long uid, int pos, int urid) throws RequestErrorException {
+        // 检查urid是否是你自己的
+        boolean b = userRoleHelper.checkUserRole(uid, urid);
+        if (!b)
+            throw new RequestErrorException(ErrorCodeConstants.Role.DONT_HAVE_THIS_USER_ROLE, "");
+        UserTeamCO userTeamCO = get(uid);
+        // 已经存在在team中
+        if (userTeamCO.getData().contains(urid)) {
+            throw new RequestErrorException(ErrorCodeConstants.Team.USER_ROLE_HAVE_IN_TEAM, "");
+        }
+        // 对应的位置已经有userrole
+        if (userTeamCO.getData().get(pos) != TeamConstants.NO_ROLE_IN_TEAM) {
+            throw new RequestErrorException(ErrorCodeConstants.Team.POS_HAVE_USER_ROLE, "");
+        }
+
+        userTeamCO.getData().add(pos, urid);
+        updateTeam(userTeamCO);
+    }
+
+    public void deletePos(long uid, int pos) throws RequestErrorException {
+        UserTeamCO userTeamCO = get(uid);
+        // 对应的位置已经有userrole
+        if (userTeamCO.getData().get(pos) == TeamConstants.NO_ROLE_IN_TEAM) {
+            throw new RequestErrorException(ErrorCodeConstants.Team.POST_IS_NO_USER_ROLE, "");
+        }
+        userTeamCO.getData().set(pos, TeamConstants.NO_ROLE_IN_TEAM);
+        updateTeam(userTeamCO);
+    }
 }

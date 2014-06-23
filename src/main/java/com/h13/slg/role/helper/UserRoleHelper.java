@@ -270,4 +270,16 @@ public class UserRoleHelper {
 
         return userRoleCO;
     }
+
+    /**
+     * 判断这个UserRole是不是这个用户的
+     * 如果是返回true
+     *
+     * @param uid
+     * @param urid
+     * @return
+     */
+    public boolean checkUserRole(long uid, int urid) {
+        return userRoleDAO.check(uid, urid);
+    }
 }

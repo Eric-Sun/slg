@@ -92,7 +92,11 @@ var loader =
                     "click #btnHarvestGold": "harvestGold",
                     "click #navRoleList": "navRoleList",
                     "click #btnShop": "navShop",
-                    "click #btnPackage": "btnPackage"
+                    "click #btnPackage": "btnPackage",
+                    "click #btnTeam": "navTeam"
+                },
+                navTeam: function () {
+                    CommonUtil.nav2Url("team.html", {});
                 },
                 btnPackage: function () {
                     CommonUtil.nav2Url("package.html", {});

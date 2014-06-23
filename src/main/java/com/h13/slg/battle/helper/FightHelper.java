@@ -82,7 +82,7 @@ public class FightHelper {
         // my team
         FightUnit attackFightUnit = new FightUnit();
         UserTeamCO userTeamCO = teamHelper.get(uid);
-        List<Long> teamData = userTeamCO.getData();
+        List<Integer> teamData = userTeamCO.getData();
         for (int i = 0; i < teamData.size(); i++) {
             long urid = new Long(teamData.get(i) + "");
             if (urid == 0)

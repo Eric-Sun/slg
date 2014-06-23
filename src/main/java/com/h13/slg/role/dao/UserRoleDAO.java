@@ -128,4 +128,12 @@ public class UserRoleDAO {
     }
 
 
+    public boolean check(long uid, int urid) {
+        String sql = "select count(1) from user_role where id=? and uid=?";
+        int count = j.queryForInt(sql, new Object[]{urid, uid});
+        if (count == 1)
+            return true;
+        else
+            return false;
+    }
 }

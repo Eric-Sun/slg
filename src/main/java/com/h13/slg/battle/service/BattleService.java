@@ -17,4 +17,13 @@ public interface BattleService {
 
 
     public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+
+    public SlgData getTeam(SlgRequestDTO request) throws RequestErrorException;
+
+
+    public SlgData getUserRoleList(SlgRequestDTO request) throws RequestErrorException;
+
+    public SlgData updatePos(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData deletePos(SlgRequestDTO request) throws RequestErrorException;
 }
