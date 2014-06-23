@@ -221,4 +221,13 @@ public class UserPackageHelper {
                     .addParam("armor", ueid2));
         }
     }
+
+
+    public int getMaterialCount(long uid, int materialId) {
+        UserPackageCO userPackageCO = get(uid);
+        if (userPackageCO.getMaterial().get(materialId + "") == null)
+            return 0;
+        else
+            return userPackageCO.getMaterial().get(materialId + "");
+    }
 }

@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 @Service
 public class StrengthenCache extends BasicCache<StrengthenCO> {
 
-    private static final String KEY = "slg:sys:accessory:";
+    private static final String KEY = "slg:sys:strengthen:";
 
     @Resource(name = "strengthenTemplate")
     private RedisTemplate<String, StrengthenCO> strengthenTemplate;

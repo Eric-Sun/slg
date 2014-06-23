@@ -10,18 +10,18 @@ import org.apache.commons.digester3.annotations.rules.ObjectCreate;
  * Time: 下午6:15
  * To change this template use File | Settings | File Templates.
  */
-@ObjectCreate(pattern = "strengthList/strength")
+@ObjectCreate(pattern = "strengthenList/strengthen")
 public class StrengthenCO {
 
-    @BeanPropertySetter(pattern = "strengthList/strength/strength")
+    @BeanPropertySetter(pattern = "strengthenList/strengthen/strength")
     private int strength;
-    @BeanPropertySetter(pattern = "strengthList/strength/level")
+    @BeanPropertySetter(pattern = "strengthenList/strengthen/level")
     private int level;
-    @BeanPropertySetter(pattern = "strengthList/strength/weaponCost")
+    @BeanPropertySetter(pattern = "strengthenList/strengthen/weaponCost")
     private int weaponCost;
-    @BeanPropertySetter(pattern = "strengthList/strength/armorCost")
+    @BeanPropertySetter(pattern = "strengthenList/strengthen/armorCost")
     private int armorCost;
-    @BeanPropertySetter(pattern = "strengthList/strength/AccessoryCost")
+    @BeanPropertySetter(pattern = "strengthenList`/strengthen/accessoryCost")
     private int AccessoryCost;
 
     public int getStrength() {

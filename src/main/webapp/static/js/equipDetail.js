@@ -21,7 +21,18 @@ var equipDetail = function () {
                 el: "#userEquip",
                 template: _.template($("#userEquipTemplate").html()),
                 events: {
-                    "click #btnTakeOff": "doTakeOff"
+                    "click #btnTakeOff": "doTakeOff",
+                    "click #btnStrengthen": "doStrengthen"
+                },
+                doStrengthen: function () {
+                    var cmd = new Command("equip", "strengthen", {
+                        ueid: equipDetailParams.ueId
+                    });
+                    CommonUtil.doPost(cmd, function (msg) {
+                        CommonUtil.nav2Url("equipDetail.html", equipDetailParams);
+                    });
+
+
                 },
                 doTakeOff: function () {
                     var cmd = new Command("role", "takeOff",

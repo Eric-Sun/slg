@@ -92,7 +92,7 @@ public class UserEquipHelper {
         String type = ue.getType();
 
         // 查看下一级强化需要的金币数目
-        int nextStrength = curStrength++;
+        int nextStrength = curStrength+1;
         StrengthenCO strengthenCO = strengthenConfigFetcher.get(nextStrength + "");
         if (strengthenCO == null)
             throw new RequestErrorException(ErrorCodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP, "");
@@ -113,7 +113,7 @@ public class UserEquipHelper {
         userStatusHelper.updateUserStatus(userStatusCO);
 
         // 增加强化等级
-        ue.setLevel(nextStrength);
+        ue.setStrength(nextStrength);
         updateUserEquip(ue);
 
         vo.setGold(cost);
