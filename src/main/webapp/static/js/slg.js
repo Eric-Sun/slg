@@ -93,7 +93,11 @@ var loader =
                     "click #navRoleList": "navRoleList",
                     "click #btnShop": "navShop",
                     "click #btnPackage": "btnPackage",
-                    "click #btnTeam": "navTeam"
+                    "click #btnTeam": "navTeam",
+                    "click #btnTavern": "btnTavern"
+                },
+                btnTavern: function () {
+                    CommonUtil.nav2Url("tavern.html", {});
                 },
                 navTeam: function () {
                     CommonUtil.nav2Url("team.html", {});
