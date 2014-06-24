@@ -4,7 +4,7 @@ var saveTeamParams = {
 
 var saveTeamLoader = function () {
     CommonUtil.beforeLoad();
-    var cmd = new Command("battle", "getUserRoleList", {});
+    var cmd = new Command("team", "getUserRoleList", {});
     CommonUtil.doPost(cmd, function (msg) {
         var UserRole = Backbone.Model;
         var userRoleCollection = new Backbone.Collection;
@@ -20,7 +20,7 @@ var saveTeamLoader = function () {
                 "click #btnDown": "doDown"
             },
             doDown: function () {
-                var cmd = new Command("battle", "deletePos", {
+                var cmd = new Command("team", "deletePos", {
                     pos: saveTeamParams.pos
                 });
                 CommonUtil.doPost(cmd, function (msg) {
@@ -36,7 +36,7 @@ var saveTeamLoader = function () {
                 var html = this.template(info.toJSON());
                 $(this.el).append(html);
                 $("#updatePos" + info.id).click(function () {
-                    var cmd = new Command("battle", "updatePos", {
+                    var cmd = new Command("team", "updatePos", {
                         pos: saveTeamParams.pos,
                         urid: info.id
                     })
