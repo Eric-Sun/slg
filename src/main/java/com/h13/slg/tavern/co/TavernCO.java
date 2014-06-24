@@ -1,5 +1,7 @@
 package com.h13.slg.tavern.co;
 
+import com.h13.slg.tavern.vo.TavernRoleVO;
+
 import java.util.List;
 
 /**

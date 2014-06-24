@@ -1,5 +1,7 @@
 package com.h13.slg.tavern.vo;
 
+import com.h13.slg.tavern.co.TavernRoleCO;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,13 +13,13 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class InviteTavernVO {
-    private List<List<Object>> data ;
+    private List<TavernRoleVO> data;
 
-    public List<List<Object>> getData() {
+    public List<TavernRoleVO> getData() {
         return data;
     }
 
-    public void setData(List<List<Object>> data) {
+    public void setData(List<TavernRoleVO> data) {
         this.data = data;
     }
 }

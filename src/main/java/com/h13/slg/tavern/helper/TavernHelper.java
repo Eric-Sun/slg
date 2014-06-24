@@ -19,6 +19,7 @@ import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.tavern.vo.EnrollUserRoleVO;
 import com.h13.slg.tavern.vo.InviteTavernVO;
+import com.h13.slg.tavern.vo.TavernRoleVO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.apache.commons.beanutils.BeanUtils;
@@ -144,7 +145,7 @@ public class TavernHelper {
         int cost = 0;
         InviteTavernVO vo = new InviteTavernVO();
         List<TavernRoleCO> tList = new LinkedList<TavernRoleCO>();
-        List<List<Object>> list = new LinkedList<List<Object>>();
+        List<TavernRoleVO> list = new LinkedList<TavernRoleVO>();
         // 一共邀请10个人
         int level = 1;
         for (int i = 0; i < 10; i++) {
@@ -156,10 +157,14 @@ public class TavernHelper {
             level = randomNextLevel(level, tavernConfigCO);
             long size = roleConfigFetcher.getZhaoxianSize(quality);
             long roleId = roleConfigFetcher.getFromZhaoxian(randomId(size), quality);
-            person.add(gold * -1);
-            person.add(level);
-            person.add(roleId);
-            list.add(person);
+            String roleName = roleConfigFetcher.get(roleId + "").getName();
+
+            TavernRoleVO tavernRoleVO = new TavernRoleVO();
+            tavernRoleVO.setGold(gold);
+            tavernRoleVO.setId(roleId);
+            tavernRoleVO.setRoleName(roleName);
+
+            list.add(tavernRoleVO);
             TavernRoleCO tco = new TavernRoleCO();
             tco.setId(roleId);
             tco.setStatus(TavernConstants.DEFAULT);
@@ -225,6 +230,8 @@ public class TavernHelper {
             // enroll
             TavernCO tavernCO = get(uid);
             TavernRoleCO tavernRoleCO = tavernCO.getRoleList().get(pos);
+            tavernRoleCO.setStatus(1);
+            update(tavernCO);
             long roleId = tavernRoleCO.getId();
             RoleCO roleCO = roleConfigFetcher.get(roleId + "");
             UserRoleCO userRoleCO = userRoleHelper.add(uid, roleCO.getId());
