@@ -77,7 +77,7 @@ public class FightHandler {
             int defence = defencePosition.getDefence();
             int damage = 0;
             if (attack > defence)
-                damage = (attack - defence) / 2;
+                damage = attack;
             else
                 damage = 10;
 

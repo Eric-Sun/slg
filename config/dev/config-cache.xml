@@ -44,6 +44,12 @@
           p:valueSerializer-ref="battleSerializer">
     </bean>
 
+    <!-- battleTemplate2 -->
+    <bean id="battleTemplate2" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="redisStringRedisSerializer">
+    </bean>
+
     <!-- equipTemplate -->
     <bean id="equipSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">

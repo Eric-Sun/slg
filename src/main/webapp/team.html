@@ -18,9 +18,7 @@
 </body>
 </html>
 
-<script type="text/javascript">
-    $(teamLoader());
-</script>
+
 
 
 <script id="teamTemplate" type="text/template">
@@ -39,4 +37,8 @@
         <button id="pos7" class="col-xs-1"><%- data[7].toJSON().name=='' ? '无将领' : data[7].toJSON().name %></button>
         <button id="pos8" class="col-xs-1"><%- data[8].toJSON().name=='' ? '无将领' : data[8].toJSON().name %></button>
     </div>
+</script>
+
+<script type="text/javascript">
+    $(teamLoader());
 </script>

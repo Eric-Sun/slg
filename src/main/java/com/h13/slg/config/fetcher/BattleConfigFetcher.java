@@ -8,6 +8,9 @@ import com.h13.slg.config.co.BattleCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  */
@@ -22,4 +25,7 @@ public class BattleConfigFetcher implements BasicFetcher<BattleCO> {
         return cache.get(key);
     }
 
+    public Map<String, Map<String, List<Integer>>> getMap() {
+        return cache.getMap();
+    }
 }
