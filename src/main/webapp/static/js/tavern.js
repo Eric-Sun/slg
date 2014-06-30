@@ -34,14 +34,12 @@ var tavernLoader = function () {
                 },
 
                 doEnroll: function (event) {
-                    alert(event.data.data.id);
                     var cmd = new Command("tavern", "enroll", {pos: event.data.index});
                     CommonUtil.doPost(cmd, function (msg) {
                         tavernView.updateRoleStatus(msg.data.role.roleId);
                     });
                 },
                 updateRoleStatus: function (roleId) {
-                    alert(roleId);
                     $("#enroll" + roleId).html("已经招募");
                     $("#enroll" + roleId).unbind();
                 },

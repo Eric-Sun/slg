@@ -1,18 +1,25 @@
 package com.h13.slg.battle.service;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.h13.slg.battle.fight.FightResult;
 import com.h13.slg.battle.helper.FightHelper;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.battle.vo.BattleCastleInfoVO;
 import com.h13.slg.battle.vo.BattleRoleInfoVO;
+import com.h13.slg.battle.vo.PVERoleInTeamVO;
+import com.h13.slg.battle.vo.PVETeamVO;
+import com.h13.slg.config.co.BattleCO;
 import com.h13.slg.config.fetcher.BattleConfigFetcher;
+import com.h13.slg.config.fetcher.MonsterConfigFetcher;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.role.helper.UserRoleHelper;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +44,8 @@ public class BattleServiceImpl implements BattleService {
     RoleConfigFetcher roleConfigFetcher;
     @Autowired
     BattleConfigFetcher battleConfigFetcher;
+    @Autowired
+    MonsterConfigFetcher monsterConfigFetcher;
 
     @Override
     public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestErrorException {
@@ -120,5 +129,29 @@ public class BattleServiceImpl implements BattleService {
         return SlgData.getData().add("castleList", list);
     }
 
+    @Override
+    public SlgData pveTeam(SlgRequestDTO request) throws RequestErrorException {
+        int battleId = new Integer(request.getArgs().get("battleId").toString());
+        PVETeamVO pveTeamVO = new PVETeamVO();
+        List<PVERoleInTeamVO> roleList = Lists.newLinkedList();
+        BattleCO battleCO = battleConfigFetcher.get(battleId + "");
+        for (int i = 0; i < 9; i++) {
+            PVERoleInTeamVO pveRoleInTeamVO = null;
+            String p = SlgBeanUtils.getProperty(battleCO, "pos" + i);
+            if (Strings.isNullOrEmpty(p)) {
+                pveRoleInTeamVO = PVERoleInTeamVO.EmptyObject();
+            } else {
+                pveRoleInTeamVO = new PVERoleInTeamVO();
+                pveRoleInTeamVO.setRid(new Integer(p));
+                String name = monsterConfigFetcher.get(p).getName();
+                pveRoleInTeamVO.setName(name);
+            }
+            roleList.add(pveRoleInTeamVO);
+        }
+        pveTeamVO.setData(roleList);
+        return SlgData.getData().add("pveTeam", pveTeamVO);
+    }
+
 
 }
+

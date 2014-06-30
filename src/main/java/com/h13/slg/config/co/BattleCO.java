@@ -37,23 +37,23 @@ public class BattleCO {
     @BeanPropertySetter(pattern = "battleList/battle/petSkillLevels")
     private int petSkillLevels;
     @BeanPropertySetter(pattern = "battleList/battle/pos0")
-    private int pos0;
+    private String pos0;
     @BeanPropertySetter(pattern = "battleList/battle/pos1")
-    private int pos1;
+    private String pos1;
     @BeanPropertySetter(pattern = "battleList/battle/pos2")
-    private int pos2;
+    private String pos2;
     @BeanPropertySetter(pattern = "battleList/battle/pos3")
-    private int pos3;
+    private String pos3;
     @BeanPropertySetter(pattern = "battleList/battle/pos4")
-    private int pos4;
+    private String pos4;
     @BeanPropertySetter(pattern = "battleList/battle/pos5")
-    private int pos5;
+    private String pos5;
     @BeanPropertySetter(pattern = "battleList/battle/pos6")
-    private int pos6;
+    private String pos6;
     @BeanPropertySetter(pattern = "battleList/battle/pos7")
-    private int pos7;
+    private String pos7;
     @BeanPropertySetter(pattern = "battleList/battle/pos8")
-    private int pos8;
+    private String pos8;
     @BeanPropertySetter(pattern = "battleList/battle/honor")
     private int honor;
     @BeanPropertySetter(pattern = "battleList/battle/gold")
@@ -160,75 +160,75 @@ public class BattleCO {
         this.petSkillLevels = petSkillLevels;
     }
 
-    public int getPos0() {
+    public String getPos0() {
         return pos0;
     }
 
-    public void setPos0(int pos0) {
+    public void setPos0(String pos0) {
         this.pos0 = pos0;
     }
 
-    public int getPos1() {
+    public String getPos1() {
         return pos1;
     }
 
-    public void setPos1(int pos1) {
+    public void setPos1(String pos1) {
         this.pos1 = pos1;
     }
 
-    public int getPos2() {
+    public String getPos2() {
         return pos2;
     }
 
-    public void setPos2(int pos2) {
+    public void setPos2(String pos2) {
         this.pos2 = pos2;
     }
 
-    public int getPos3() {
+    public String getPos3() {
         return pos3;
     }
 
-    public void setPos3(int pos3) {
+    public void setPos3(String pos3) {
         this.pos3 = pos3;
     }
 
-    public int getPos4() {
+    public String getPos4() {
         return pos4;
     }
 
-    public void setPos4(int pos4) {
+    public void setPos4(String pos4) {
         this.pos4 = pos4;
     }
 
-    public int getPos5() {
+    public String getPos5() {
         return pos5;
     }
 
-    public void setPos5(int pos5) {
+    public void setPos5(String pos5) {
         this.pos5 = pos5;
     }
 
-    public int getPos6() {
+    public String getPos6() {
         return pos6;
     }
 
-    public void setPos6(int pos6) {
+    public void setPos6(String pos6) {
         this.pos6 = pos6;
     }
 
-    public int getPos7() {
+    public String getPos7() {
         return pos7;
     }
 
-    public void setPos7(int pos7) {
+    public void setPos7(String pos7) {
         this.pos7 = pos7;
     }
 
-    public int getPos8() {
+    public String getPos8() {
         return pos8;
     }
 
-    public void setPos8(int pos8) {
+    public void setPos8(String pos8) {
         this.pos8 = pos8;
     }
 

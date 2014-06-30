@@ -29,7 +29,7 @@ var CommonUtil = {
                 successFunc(msg);
             },
             error: function (a, b, c) {
-                alert(b);
+                alert(c);
             }
         });
         Constants.seq++;

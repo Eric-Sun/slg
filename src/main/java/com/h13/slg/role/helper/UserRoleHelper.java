@@ -83,12 +83,13 @@ public class UserRoleHelper {
                 userRoleCO.getFightForce(),
                 userRoleCO.getLevel(),
                 userRoleCO.getCurSkill(),
-                userRoleCO.getSkillLevels());
+                userRoleCO.getSkillLevels(), userRoleCO.getRoleName());
     }
 
     public UserRoleCO add(long uid, long rId) {
         UserRoleCO userRoleCO = new UserRoleCO();
         RoleCO roleCO = roleCache.get(rId + "");
+        String name = roleCO.getName();
         int fightForce = roleCO.getFightForce();
         int attack = roleCO.getAttack();
         int defence = roleCO.getDefence();
@@ -107,7 +108,8 @@ public class UserRoleHelper {
         // 检查是否在招贤馆中
         long urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID,
                 RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, 1, fightForce,
-                attack, defence, health, soldier, curSkill, skillLevels);
+                attack, defence, health, soldier, curSkill,
+                skillLevels, name);
         SlgLogger.info(SlgLoggerEntity.p("userRole", "add new Role", uid, "ok")
                 .addParam("rId", rId)
                 .addParam("urId", urid)
@@ -124,6 +126,7 @@ public class UserRoleHelper {
         userRoleCO.setId(urid);
         userRoleCO.setUid(uid);
         userRoleCO.setLevel(1);
+        userRoleCO.setRoleName(name);
         userRoleCO.setRoleId(rId);
         return userRoleCO;
     }

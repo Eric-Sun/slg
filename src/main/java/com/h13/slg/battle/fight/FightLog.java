@@ -1,6 +1,7 @@
 package com.h13.slg.battle.fight;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 /**
@@ -12,10 +13,10 @@ import java.util.Map;
  */
 public class FightLog {
     private int attack;
-    private int attackPos;
-    private int[] defencePos;
-    private Map<Integer, Integer[]> attackStatus = new HashMap<Integer, Integer[]>();
-    private Map<Integer, Integer[]> defenceStatus = new HashMap<Integer, Integer[]>();
+    private PosInfo attackPos;
+    private LinkedList<PosInfo> defencePos;
+    private FightStatus attackStatus = new FightStatus();
+    private FightStatus defenceStatus = new FightStatus();
 
     public int getAttack() {
         return attack;
@@ -25,35 +26,35 @@ public class FightLog {
         this.attack = attack;
     }
 
-    public int getAttackPos() {
+    public PosInfo getAttackPos() {
         return attackPos;
     }
 
-    public void setAttackPos(int attackPos) {
+    public void setAttackPos(PosInfo attackPos) {
         this.attackPos = attackPos;
     }
 
-    public int[] getDefencePos() {
+    public LinkedList<PosInfo> getDefencePos() {
         return defencePos;
     }
 
-    public void setDefencePos(int[] defencePos) {
+    public void setDefencePos(LinkedList<PosInfo> defencePos) {
         this.defencePos = defencePos;
     }
 
-    public Map<Integer, Integer[]> getAttackStatus() {
+    public FightStatus getAttackStatus() {
         return attackStatus;
     }
 
-    public void setAttackStatus(Map<Integer, Integer[]> attackStatus) {
+    public void setAttackStatus(FightStatus attackStatus) {
         this.attackStatus = attackStatus;
     }
 
-    public Map<Integer, Integer[]> getDefenceStatus() {
+    public FightStatus getDefenceStatus() {
         return defenceStatus;
     }
 
-    public void setDefenceStatus(Map<Integer, Integer[]> defenceStatus) {
+    public void setDefenceStatus(FightStatus defenceStatus) {
         this.defenceStatus = defenceStatus;
     }
 }

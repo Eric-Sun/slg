@@ -1,5 +1,6 @@
 package com.h13.slg.battle.helper;
 
+import com.google.common.base.Strings;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.fight.*;
 import com.h13.slg.config.cache.MonsterCache;
@@ -51,7 +52,7 @@ public class FightHelper {
         for (int i = 0; i < 9; i++) {
             try {
                 String monsterId = BeanUtils.getSimpleProperty(battleCO, "pos" + i);
-                if (monsterId.equals("0"))
+                if (Strings.isNullOrEmpty(monsterId))
                     continue;
                 MonsterCO monsterCO = monsterConfigFetcher.get(monsterId);
                 int attack = monsterCO.getAttack();
@@ -63,7 +64,8 @@ public class FightHelper {
                 fightPosition.setDefence(defence);
                 fightPosition.setHealth(health);
                 fightPosition.setType(FightPosition.MONSTER);
-                fightPosition.setId(new Long(monsterId));
+                fightPosition.setId(new Integer(monsterId));
+                fightPosition.setName(monsterCO.getName());
 
                 defenceFightUnit.add(i, fightPosition);
             } catch (Exception e) {
@@ -84,7 +86,7 @@ public class FightHelper {
         UserTeamCO userTeamCO = teamHelper.get(uid);
         List<Integer> teamData = userTeamCO.getData();
         for (int i = 0; i < teamData.size(); i++) {
-            long urid = new Long(teamData.get(i) + "");
+            int urid = new Integer(teamData.get(i) + "");
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
@@ -93,6 +95,7 @@ public class FightHelper {
             fightPosition.setDefence(userRoleCO.getDefence());
             fightPosition.setHealth(userRoleCO.getHealth());
             fightPosition.setId(urid);
+            fightPosition.setName(userRoleCO.getRoleName());
             fightPosition.setType(FightPosition.ROLE);
             attackFightUnit.add(i, fightPosition);
         }

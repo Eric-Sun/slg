@@ -10,7 +10,7 @@ public class FightResult {
 
     private int status;
 
-    private Map<Integer, List<FightLog>> rounds = new HashMap<Integer, List<FightLog>>();
+    private List<List<FightLog>> rounds = new LinkedList<List<FightLog>>();
 
     public int getStatus() {
         return status;
@@ -21,18 +21,22 @@ public class FightResult {
     }
 
     public void addLog(int round, FightLog log) {
-        List<FightLog> list = rounds.get(round);
-        if (list == null)
+        List<FightLog> list = null;
+        if (rounds.size() <= round - 1) {
             list = new LinkedList<FightLog>();
+            rounds.add(list);
+        } else {
+            list = rounds.get(round - 1);
+        }
         list.add(log);
-        rounds.put(round, list);
+
     }
 
-    public Map<Integer, List<FightLog>> getRounds() {
+    public List<List<FightLog>> getRounds() {
         return rounds;
     }
 
-    public void setRounds(Map<Integer, List<FightLog>> rounds) {
+    public void setRounds(List<List<FightLog>> rounds) {
         this.rounds = rounds;
     }
 }

@@ -8,12 +8,28 @@ public class FightPosition {
     public final static int MONSTER = 1;
 
     // 对应的对方的将领或者是怪物
-    private long id;
+    private int id;
     private int attack;
     private int defence;
     private int health;
     private int type;
+    private String name;
 
+    public static int getRole() {
+        return ROLE;
+    }
+
+    public static int getMonster() {
+        return MONSTER;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getType() {
         return type;
@@ -23,11 +39,11 @@ public class FightPosition {
         this.type = type;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
