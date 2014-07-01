@@ -51,8 +51,19 @@
 </script>
 
 
-<script id="fightLogTemplate"  type="text/template">
+<script id="fightLogTemplate" type="text/template">
     <div class="row">
+        <div class="col-xs-12">
+            <%- attack==0?'攻击方进攻':'防守方进攻' %>:<%- attackPos.name %>攻击<%- defencePos[0].name %>造成<%-
+            -1*defenceStatus.status[1] %>名士兵阵亡，<%- defencePos.name %>剩余<%- defenceStatus.status[0] %>士兵
+        </div>
+    </div>
+</script>
+<script id="fightResultTemplate" type="text/template">
+    <div class="row">
+        <div class="col-xs-1">
+            <%- status==0?'进攻方胜利':'防守方胜利' %>
+        </div>
     </div>
 </script>
 
