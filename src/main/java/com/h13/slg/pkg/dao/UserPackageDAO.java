@@ -26,7 +26,7 @@ public class UserPackageDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(long id, Map<String, Integer> roleCard, Map<String, List<Long>> equip,
+    public void insert(long id, Map<String, Integer> roleCard, List<Integer> equip,
                        Map<String, Integer> gem,
                        Map<String, Integer> material) {
 

@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +41,7 @@ public class UserPackageHelper {
     public void create(long id) {
         userPackageDAO.insert(id,
                 new HashMap<String, Integer>(),
-                new HashMap<String, List<Long>>(),
+                new LinkedList<Integer>(),
                 new HashMap<String, Integer>(),
                 new HashMap<String, Integer>());
         LOG.info("create new package. uid=" + id);

@@ -71,17 +71,26 @@ var Command = function (mod, act, args) {
 
 }
 
+var indexParams = {
+    name: $.getUrlParam("name"),
+    password: $.getUrlParam("password")
+};
 
 var loader = function () {
     var c = new Command("user", "login",
-        {
-            name: 'ssss',
-            password: 'bbbb'
-        });
+            {
+                name: indexParams.name,
+                password: indexParams.password
+            }
+        )
+        ;
     var UserInfo = Backbone.Model.extend({
     });
     var userInfo = new UserInfo();
     CommonUtil.doPost(c, function (msg) {
+        if (msg.code == 1001) {
+            CommonUtil.nav2Url("login.html", {});
+        }
 
         userInfo.set("name", msg.data.userStatus.name);
         userInfo.set("uid", msg.data.userStatus.id);
