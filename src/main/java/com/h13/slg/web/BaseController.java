@@ -40,9 +40,9 @@ public class BaseController {
         try {
             String mod = request.getParameter("mod");
             String act = request.getParameter("act");
-            long uid = 0;
+            int uid = 0;
             if (request.getParameter("uid") != null) {
-                uid = new Long(request.getParameter("uid"));
+                uid = new Integer(request.getParameter("uid"));
             }
             String args = request.getParameter("args");
             String authKey = request.getParameter("auth_key");

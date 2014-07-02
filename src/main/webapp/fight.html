@@ -14,7 +14,15 @@
 
 </head>
 <body>
+<div class="row">
+    <button onclick="javascript:CommonUtil.nav2Url('index.html',{});" class="col-xs-1">
+        返回
+    </button>
+</div>
 <div id="fightView">
+    <div id="awardView">
+
+    </div>
     <div id="pveTeamView">
     </div>
     <div class="row">
@@ -30,6 +38,60 @@
 
 </body>
 </html>
+
+<script id="awardTemplate" type="text/template">
+    <div class="row">
+        <div class="col-xs-1">
+            战斗消耗
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-1">
+            粮食
+        </div>
+        <div class="col-xs-1">
+            100
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            战胜奖励：
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-1">
+            金币：
+        </div>
+        <div class="col-xs-1">
+            <%- gold %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-1">
+            城市经验：
+        </div>
+        <div class="col-xs-1">
+            <%- xp %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-1">
+            武将经验：
+        </div>
+        <div class="col-xs-1">
+            <%- heroXp %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-1">
+            荣誉值：
+        </div>
+        <div class="col-xs-1">
+            <%- honor %>
+        </div>
+    </div>
+
+</script>
 
 
 <script id="pveTeamTemplate" type="text/template">

@@ -6,22 +6,30 @@ var fightLoader = function () {
     CommonUtil.beforeLoad();
     var cmd = new Command("battle", "pveTeam", {battleId: fightParams.battleId});
     var teamInfo;
+    var awardInfo;
     CommonUtil.doPost(cmd, function (msg) {
         teamInfo = new Backbone.Model(msg.data.pveTeam);
+        awardInfo = new Backbone.Model(msg.data.award);
     });
 
     var FightView = Backbone.View.extend({
         el: "#fightView",
         template: _.template($("#pveTeamTemplate").html()),
+        awardTemplate: _.template($("#awardTemplate").html()),
         events: {
             "click #btnDoFight": "doFight",
             "click #btnCancel": "cancel"
         },
         initialize: function () {
+            this.showAwardInfo();
             this.showTeamInfo();
         },
+        showAwardInfo: function () {
+            var html = this.awardTemplate(this.model.award);
+            $("#awardView").html(html);
+        },
         showTeamInfo: function () {
-            var html = this.template(this.model);
+            var html = this.template(this.model.pveTeam);
             $("#pveTeamView").html(html);
             return this;
         },
@@ -62,7 +70,7 @@ var fightLoader = function () {
                     $(this.el).append(html);
                 },
                 showResult: function (status) {
-                    var html = this.template2(status);
+                    var html = this.template2({status: status});
                     $(this.el).append(html);
                 }
 
@@ -71,7 +79,7 @@ var fightLoader = function () {
         ;
 
 
-    var fightView = new FightView({model: teamInfo.toJSON()});
+    var fightView = new FightView({model: {pveTeam: teamInfo.toJSON(), award: awardInfo.toJSON()}});
     var fightLogView = new FightLogView();
 
 }

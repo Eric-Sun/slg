@@ -37,12 +37,12 @@ public class UserRoleDAO {
                        final int level, final int fightForce,
                        final int attack, final int defence, final int health, final int soldier,
                        final int curSkill, final Map<String, Integer> skillLevels,
-                       final String roleName) {
+                       final String roleName, final int xp) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_role " +
                 "(role_id,uid,weapon,armor,accessory,level,fight_force," +
-                "attack,defence,health,createtime,soldier,cur_skill,skill_levels,role_name) " +
-                "values (?,?,?,?,?,?,?,?,?,?,now(),?,?,?,?)";
+                "attack,defence,health,createtime,soldier,cur_skill,skill_levels,role_name,xp) " +
+                "values (?,?,?,?,?,?,?,?,?,?,now(),?,?,?,?,?)";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
@@ -61,6 +61,7 @@ public class UserRoleDAO {
                 pstmt.setInt(12, curSkill);
                 pstmt.setString(13, JSON.toJSONString(skillLevels));
                 pstmt.setString(14, roleName);
+                pstmt.setInt(15, xp);
                 return pstmt;
             }
         }, holder);
@@ -69,7 +70,7 @@ public class UserRoleDAO {
 
     public UserRoleCO get(long uid, long urId) {
         String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
-                ",soldier,cur_skill,skill_levels,role_name from user_role where id=? and uid=?";
+                ",soldier,cur_skill,skill_levels,role_name,xp from user_role where id=? and uid=?";
         return j.queryForObject(sql, new Object[]{urId, uid}, new RowMapper<UserRoleCO>() {
             @Override
             public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
@@ -89,6 +90,7 @@ public class UserRoleDAO {
                 userRoleCO.setCurSkill(rs.getInt(13));
                 userRoleCO.setSkillLevels(JSON.parseObject(rs.getString(14), Map.class));
                 userRoleCO.setRoleName(rs.getString(15));
+                userRoleCO.setXp(rs.getInt(16));
                 return userRoleCO;
             }
         });
@@ -97,7 +99,7 @@ public class UserRoleDAO {
 
     public List<UserRoleCO> getRoleList(long uid) {
         String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
-                ",soldier,cur_skill,skill_levels,role_name from user_role where uid=?";
+                ",soldier,cur_skill,skill_levels,role_name,xp from user_role where uid=?";
         return j.query(sql, new Object[]{uid}, new RowMapper<UserRoleCO>() {
             @Override
             public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
@@ -117,6 +119,7 @@ public class UserRoleDAO {
                 userRoleCO.setCurSkill(rs.getInt(13));
                 userRoleCO.setSkillLevels(JSON.parseObject(rs.getString(14), Map.class));
                 userRoleCO.setRoleName(rs.getString(15));
+                userRoleCO.setXp(rs.getInt(16));
                 return userRoleCO;
             }
         });
@@ -124,11 +127,12 @@ public class UserRoleDAO {
 
 
     public void update(long urId, long weapon, long armor, long accessory, int fightForce, int level,
-                       int curSkill, Map<String, Integer> skillLevels, String roleName) {
-        String sql = "update user_role set weapon=?,armor=?,accessory=?,fight_force=?,level=?,cur_skill=?,skill_levels=?,role_name=? " +
+                       int curSkill, Map<String, Integer> skillLevels, String roleName, int xp) {
+        String sql = "update user_role set weapon=?,armor=?,accessory=?,fight_force=?,level=?," +
+                "cur_skill=?,skill_levels=?,role_name=?,xp=? " +
                 "where id=?";
         j.update(sql, new Object[]{weapon, armor, accessory, fightForce, level,
-                curSkill, JSON.toJSONString(skillLevels), urId, roleName});
+                curSkill, JSON.toJSONString(skillLevels), roleName, xp, urId});
     }
 
 

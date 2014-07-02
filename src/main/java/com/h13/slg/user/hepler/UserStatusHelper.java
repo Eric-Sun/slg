@@ -67,14 +67,10 @@ public class UserStatusHelper {
     public void addFood(long uid, int food) {
         UserStatusCO userStatusCO = getUserStatus(uid);
 
-        LevelCO level = levelHelper.getLevelInfo(userStatusCO.getLevel());
-        int maxGold = level.getGoldMax();
-        int curGold = userStatusCO.getGold();
-        int finalGold = ResourceCalUtil.calResource4SimpleAdd(curGold, food, maxGold);
-        if (finalGold != 0) {
-            userStatusCO.setGold(finalGold);
-            updateUserStatus(userStatusCO);
-        }
+        int curFood = userStatusCO.getFood();
+        int finalFood = curFood + food;
+        userStatusCO.setGold(finalFood);
+        updateUserStatus(userStatusCO);
     }
 
     /**
@@ -86,19 +82,34 @@ public class UserStatusHelper {
     public void addGold(long uid, int gold) {
         UserStatusCO userStatusCO = getUserStatus(uid);
 
-        LevelCO level = levelHelper.getLevelInfo(userStatusCO.getLevel());
-        int maxGold = level.getGoldMax();
         int curGold = userStatusCO.getGold();
-        int finalGold = ResourceCalUtil.calResource4SimpleAdd(curGold, gold, maxGold);
-        if (finalGold != 0) {
-            userStatusCO.setGold(finalGold);
-            updateUserStatus(userStatusCO);
-        }
+        int finalGold = gold + curGold;
+        userStatusCO.setGold(finalGold);
+        updateUserStatus(userStatusCO);
+
         SlgLogger.info(SlgLoggerEntity.p("user", "addGold", uid, "")
                 .addParam("gold", gold)
                 .addParam("curGold", curGold)
-                .addParam("finalGold", finalGold));
+                .addParam("finalGold", finalGold)
+
+        );
     }
+
+    /**
+     * 添加荣誉值
+     *
+     * @param uid
+     * @param honor
+     */
+    public void addHonor(int uid, int honor) {
+        UserStatusCO userStatusCO = getUserStatus(uid);
+        int finalHonor = userStatusCO.getHonor() + honor;
+        SlgLogger.info(SlgLoggerEntity.p("user", "addHonor", uid, "")
+                .addParam("honor", honor)
+                .addParam("curHonor", userStatusCO.getHonor())
+                .addParam("finalHonor", finalHonor));
+    }
+
 
     /**
      * 减少food
@@ -153,11 +164,7 @@ public class UserStatusHelper {
             userStatusCO.setXp(finalXp);
         } else {
             finalXp = curXp + xp;
-            while ((finalXp = finalXp - maxXP) >= 0) {
-                curLevel++;
-                maxXP = levelHelper.getLevelInfo(userStatusCO.getLevel()).getXp();
-            }
-            finalXp = finalXp + maxXP;
+            curLevel++;
             userStatusCO.setXp(finalXp);
             userStatusCO.setLevel(curLevel);
         }
@@ -195,12 +202,11 @@ public class UserStatusHelper {
 
     public void updateFightForce(long uid, int oldFightForce, int finalFightForce) {
         UserStatusCO userStatusCO = getUserStatus(uid);
-        userStatusCO.setFightForce(userStatusCO.getFightForce()-oldFightForce+finalFightForce);
+        userStatusCO.setFightForce(userStatusCO.getFightForce() - oldFightForce + finalFightForce);
         SlgLogger.info(SlgLoggerEntity.p("user", "updateFightForce", uid, "")
                 .addParam("oldFightForce", oldFightForce)
                 .addParam("finalFightForce", finalFightForce));
     }
-
 
 
 }

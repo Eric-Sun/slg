@@ -28,10 +28,19 @@ public class UserRoleCO {
     private int soldier;
     private int curSkill;
     private String roleName;
+    private int xp;
     private UserRoleWeaponVO weaponInfo;
     private UserRoleAccessoryVO accessoryInfo;
     private UserRoleArmorVO armorInfo;
     private Map<String, Integer> skillLevels;
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
 
     public UserRoleWeaponVO getWeaponInfo() {
         return weaponInfo;

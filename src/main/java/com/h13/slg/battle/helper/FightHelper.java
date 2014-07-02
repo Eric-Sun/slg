@@ -12,6 +12,7 @@ import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
+import com.h13.slg.user.hepler.UserStatusHelper;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,12 +41,15 @@ public class FightHelper {
     @Autowired
     UserRoleHelper userRoleHelper;
 
+    @Autowired
+    UserStatusHelper userStatusHelper;
+
     /**
      * pve
      *
      * @param battleId 战斗对象id
      */
-    public FightResult pve(long uid, long battleId) throws RequestErrorException {
+    public FightResult pve(int uid, long battleId) throws RequestErrorException {
 
         BattleCO battleCO = battleConfigFetcher.get(battleId + "");
         FightUnit defenceFightUnit = new FightUnit();
@@ -100,6 +104,27 @@ public class FightHelper {
             attackFightUnit.add(i, fightPosition);
         }
         FightResult fightResult = fightHandler.fight(attackFightUnit, defenceFightUnit);
+
+
+        // reward
+        if (fightResult.getStatus() == FightResult.WIN) {
+            userStatusHelper.addGold(uid, fightReward.getGold());
+            userStatusHelper.addXp(uid, fightReward.getXp());
+            userStatusHelper.addHonor(uid, fightReward.getHonor());
+
+
+            // 所有的将领增加武将经验
+            for (FightPosition fightPosition : attackFightUnit.getAllPos()) {
+                if (fightPosition == null)
+                    continue;
+                int urid = fightPosition.getId();
+                userRoleHelper.addXp(uid, urid, fightReward.getHeroXp());
+            }
+
+        }
+
+        // 扣掉粮食
+        userStatusHelper.subtractFood(uid, 100);
         return fightResult;
     }
 

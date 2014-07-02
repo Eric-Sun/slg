@@ -144,7 +144,7 @@
     </bean>
     <bean id="roleLevelTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="levelSerializer">
+          p:valueSerializer-ref="roleLevelSerializer">
     </bean>
 
     <!-- weaponTemplate -->

@@ -36,9 +36,9 @@ public class ShopCache extends BasicCache<ShopCO> {
         XmlParser<ShopXMLCO> parser = new XmlParser<ShopXMLCO>(ShopXMLCO.class,
                 filename);
         ShopXMLCO obj = parser.parse();
-        shopTemplate.opsForList().getOperations().delete(KEY);
+        shopTemplate.opsForList().getOperations().delete(KEY + "*");
         for (String id : obj.getMap().keySet()) {
-            shopTemplate.opsForValue().set(KEY, obj.getMap().get(id));
+            shopTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
         }
     }
 

@@ -6,10 +6,7 @@ import com.google.common.collect.Lists;
 import com.h13.slg.battle.fight.FightResult;
 import com.h13.slg.battle.helper.FightHelper;
 import com.h13.slg.battle.helper.TeamHelper;
-import com.h13.slg.battle.vo.BattleCastleInfoVO;
-import com.h13.slg.battle.vo.BattleRoleInfoVO;
-import com.h13.slg.battle.vo.PVERoleInTeamVO;
-import com.h13.slg.battle.vo.PVETeamVO;
+import com.h13.slg.battle.vo.*;
 import com.h13.slg.config.co.BattleCO;
 import com.h13.slg.config.fetcher.BattleConfigFetcher;
 import com.h13.slg.config.fetcher.MonsterConfigFetcher;
@@ -58,7 +55,7 @@ public class BattleServiceImpl implements BattleService {
 
     @Override
     public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException {
-        long uid = requestDTO.getUid();
+        int uid = requestDTO.getUid();
         long battleId = new Long(requestDTO.getArgs().get("battleId") + "");
         FightResult fightResult = fightHelper.pve(uid, battleId);
         return SlgData.getData().add("battle", fightResult);
@@ -149,7 +146,12 @@ public class BattleServiceImpl implements BattleService {
             roleList.add(pveRoleInTeamVO);
         }
         pveTeamVO.setData(roleList);
-        return SlgData.getData().add("pveTeam", pveTeamVO);
+
+        // 需要获得award
+        BattleAwardVO battleAwardVO = new BattleAwardVO();
+        SlgBeanUtils.copyProperties(battleAwardVO, battleCO);
+
+        return SlgData.getData().add("pveTeam", pveTeamVO).add("award", battleAwardVO);
     }
 
 
