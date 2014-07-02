@@ -1,3 +1,9 @@
+var roleListParams = {
+    NO_WEAPON: "没有装备武器",
+    NO_ACCESSORY: "没有装备饰品",
+    NO_ARMOR: "没有装备防具"
+}
+
 var userRoleListLoader = function () {
 
 
@@ -35,12 +41,7 @@ var userRoleListLoader = function () {
                 el: "#roleList",
                 template: _.template($("#roleRowTemplate").html()),
 
-                Constants: {
-                    NO_WEAPON: "没有装备武器",
-                    NO_ACCESSORY: "没有装备饰品",
-                    NO_ARMOR: "没有装备防具"
 
-                },
                 render: function () {
                     for (var m  in this.model) {
                         this.eachModel(this.model[m]);
@@ -66,9 +67,9 @@ var userRoleListLoader = function () {
                         weapon: role.weapon,
                         accessory: role.accessory,
                         armor: role.armor,
-                        NO_WEAPON: this.Constants.NO_WEAPON,
-                        NO_ACCESSORY: this.Constants.NO_ACCESSORY,
-                        NO_ARMOR: this.Constants.NO_ARMOR
+                        NO_WEAPON: roleListParams.NO_WEAPON,
+                        NO_ACCESSORY: roleListParams.NO_ACCESSORY,
+                        NO_ARMOR: roleListParams.NO_ARMOR
 
                     });
                     $("#roleDetail").html(t);

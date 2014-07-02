@@ -38,30 +38,46 @@
 
 <script id="roleDetailTemplate" type="text/template">
     <div class="row">
-        姓名:<%- roleName %>
+        <div class="col-xs-1">
+            姓名:<%- roleName %>
+        </div>
     </div>
     <div class="row">
-        战斗力:<%- fightForce %>
+        <div class="col-xs-1">
+            战斗力:<%- fightForce %>
+        </div>
     </div>
     <div class="row">
-        攻击力:<%- attack %>
+        <div class="col-xs-1">
+            攻击力:<%- attack %>
+        </div>
     </div>
     <div class="row">
-        防御力:<%- defence %>
+        <div class="col-xs-1">
+            防御力:<%- defence %>
+        </div>
     </div>
     <div class="row">
-        士兵数:<%- health %>
+        <div class="col-xs-1">
+            士兵数:<%- health %>
+        </div>
     </div>
     <button class="row" id="weapon">
-        武器；<%- weapon != 0 ? "有武器" : NO_WEAPON %>
+        <div class="col-xs-12">
+            武器；<%- weapon != 0 ? "有武器" : NO_WEAPON %>
+        </div>
     </button>
     <br>
     <button class="row" id="armor">
-        防具；<%- armor != 0 ? "有防具" : NO_ARMOR %>
+        <div class="col-xs-12">
+            防具；<%- armor != 0 ? "有防具" : NO_ARMOR %>
+        </div>
     </button>
     <br>
     <button class="row" id="accessory">
-        饰品；<%- accessory != 0 ? "有饰品" : NO_ACCESSORY %>
+        <div class="col-xs-12">
+            饰品；<%- accessory != 0 ? "有饰品" : NO_ACCESSORY %>
+        </div>
     </button>
     <br>
 </script>
