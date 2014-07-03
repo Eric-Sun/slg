@@ -8,6 +8,26 @@ package com.h13.slg.user.vo;
  * To change this template use File | Settings | File Templates.
  */
 public class UserStatusVO {
+    private int uid;
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
     /**
      * 元宝
      */
@@ -44,6 +64,25 @@ public class UserStatusVO {
      * 经验
      */
     private int xp;
+
+    private long castleTimer;
+    private long farmTimer;
+
+    public long getCastleTimer() {
+        return castleTimer;
+    }
+
+    public void setCastleTimer(long castleTimer) {
+        this.castleTimer = castleTimer;
+    }
+
+    public long getFarmTimer() {
+        return farmTimer;
+    }
+
+    public void setFarmTimer(long farmTimer) {
+        this.farmTimer = farmTimer;
+    }
 
     public int getCash() {
         return cash;

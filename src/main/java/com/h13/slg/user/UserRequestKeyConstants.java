@@ -7,7 +7,7 @@ package com.h13.slg.user;
  * Time: 下午2:54
  * To change this template use File | Settings | File Templates.
  */
-public class RequestKeyConstants {
+public class UserRequestKeyConstants {
     public static String REQUEST_NAME = "name";
     public static String REQEUST_PASSWORD = "password";
 }

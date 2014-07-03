@@ -13,7 +13,7 @@ public class RequestErrorException extends Exception {
 
 
     public RequestErrorException(Throwable t) {
-        this(ErrorCodeConstants.COMMON_ERROR, "", t);
+        this(CodeConstants.SYSTEM.COMMON_ERROR, "", t);
 
     }
 

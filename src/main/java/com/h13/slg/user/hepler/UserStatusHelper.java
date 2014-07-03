@@ -1,14 +1,13 @@
 package com.h13.slg.user.hepler;
 
-import com.h13.slg.config.co.LevelCO;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.config.GlobalKeyConstants;
+import com.h13.slg.config.fetcher.GlobalConfigFetcher;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.core.util.ResourceCalUtil;
 import com.h13.slg.user.cache.UserStatusCache;
 import com.h13.slg.user.co.UserStatusCO;
-import com.h13.slg.user.dao.CastleDAO;
 import com.h13.slg.user.dao.UserStatusDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +32,9 @@ public class UserStatusHelper {
 
     @Autowired
     LevelHelper levelHelper;
+
+    @Autowired
+    GlobalConfigFetcher globalConfigFetcher;
 
     /**
      * 获得用户状态数据
@@ -123,7 +125,7 @@ public class UserStatusHelper {
         int curFood = userStatusCO.getFood();
 
         if (curFood < food)
-            throw new RequestErrorException(ErrorCodeConstants.User.DONT_HAVE_ENOUGH_FOOD, "");
+            throw new RequestErrorException(CodeConstants.User.DONT_HAVE_ENOUGH_FOOD, "");
 
         userStatusCO.setFood(curFood - food);
         updateUserStatus(userStatusCO);
@@ -142,7 +144,7 @@ public class UserStatusHelper {
         int curGold = userStatusCO.getGold();
 
         if (curGold < gold)
-            throw new RequestErrorException(ErrorCodeConstants.User.DONT_HAVE_ENOUGH_GOLD, "");
+            throw new RequestErrorException(CodeConstants.User.DONT_HAVE_ENOUGH_GOLD, "");
 
         userStatusCO.setGold(curGold - gold);
         updateUserStatus(userStatusCO);
@@ -208,5 +210,34 @@ public class UserStatusHelper {
                 .addParam("finalFightForce", finalFightForce));
     }
 
+
+    /**
+     * 创建新用户的时候初始化用户信息
+     *
+     * @param userId
+     * @param name
+     * @return
+     */
+    public UserStatusCO initUserStatus(long userId, String name) {
+
+        UserStatusCO userStatusCO = new UserStatusCO();
+        userStatusCO.setName(name);
+        userStatusCO.setCash(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_CASH));
+        userStatusCO.setFood(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_FOOD));
+        userStatusCO.setGold(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_GOLD));
+        userStatusCO.setHonor(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_HORNOR));
+        userStatusCO.setLevel(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_LEVEL));
+
+        userStatusCO.setFood(500000);
+        userStatusCO.setGold(50000000);
+        userStatusCO.setHonor(500000);
+        userStatusCO.setCash(50000);
+
+        userStatusCO.setId(userId);
+        userStatusCO.setXp(0);
+        userStatusCO.setSoul(0);
+        userStatusCO.setFightForce(0);
+        return userStatusCO;
+    }
 
 }

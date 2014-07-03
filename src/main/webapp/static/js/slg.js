@@ -26,7 +26,7 @@ var CommonUtil = {
             dataType: "json",
             success: function (msg) {
                 console.log("Response: " + JSON.stringify(msg));
-                if (msg.code == 2) {
+                if (msg.code == 1001) {
                     CommonUtil.nav2Url("index.html", {});
                 }
                 successFunc(msg);
@@ -68,106 +68,5 @@ var Command = function (mod, act, args) {
     this.auth_time = Constants.authTime;
     this.args = JSON.stringify(args);
     this.seq = Constants.seq;
-
-}
-
-var indexParams = {
-    name: $.getUrlParam("name"),
-    password: $.getUrlParam("password")
-};
-
-var loader = function () {
-    var c = new Command("user", "login",
-            {
-                name: indexParams.name,
-                password: indexParams.password
-            }
-        )
-        ;
-    var UserInfo = Backbone.Model.extend({
-    });
-    var userInfo = new UserInfo();
-    CommonUtil.doPost(c, function (msg) {
-        if (msg.code == 1001) {
-            CommonUtil.nav2Url("login.html", {});
-        }
-
-        userInfo.set("name", msg.data.userStatus.name);
-        userInfo.set("uid", msg.data.userStatus.id);
-        userInfo.set("gold", msg.data.userStatus.gold);
-        userInfo.set("food", msg.data.userStatus.food);
-        userInfo.set("cash", msg.data.userStatus.cash);
-        userInfo.set("honor", msg.data.userStatus.honor);
-        userInfo.set("level", msg.data.userStatus.level);
-        userInfo.set("xp", msg.data.userStatus.xp);
-        userInfo.set("soul", msg.data.userStatus.soul);
-        userInfo.set("fightForce", msg.data.userStatus.fightForce);
-
-
-        Constants.authKey = msg.data.authKey;
-        Constants.authTime = msg.data.authTime;
-        Constants.uid = msg.data.userStatus.id;
-
-
-    });
-
-    var UserInfoView = Backbone.View.extend({
-        el: "#body",
-        template: _.template($("#userInfoTemplate").html()),
-        events: {
-            "click #btnHarvestFood": "harvestFood",
-            "click #btnHarvestGold": "harvestGold",
-            "click #navRoleList": "navRoleList",
-            "click #btnShop": "navShop",
-            "click #btnPackage": "btnPackage",
-            "click #btnTeam": "navTeam",
-            "click #btnTavern": "btnTavern",
-            "click #btnBattleList": "btnBattleList"
-        },
-        btnBattleList: function () {
-            CommonUtil.nav2Url("battleList.html", {});
-        },
-        btnTavern: function () {
-            CommonUtil.nav2Url("tavern.html", {});
-        },
-        navTeam: function () {
-            CommonUtil.nav2Url("team.html", {});
-        },
-        btnPackage: function () {
-            CommonUtil.nav2Url("package.html", {});
-        },
-        render: function () {
-            var t = this.template(this.model.toJSON());
-            $(this.el).html(t);
-            return this;
-        },
-        harvestFood: function () {
-            var c = new Command("farm", "harvest", {});
-            CommonUtil.doPost(c, function (msg) {
-                var lastFood = parseInt($("#food").html());
-                $('#food').html(lastFood + msg.data.food);
-            });
-        },
-        harvestGold: function () {
-            var c = new Command("castle", "harvest", {});
-            CommonUtil.doPost(c, function (msg) {
-                var lastGold = parseInt($("#gold").html());
-                $('#gold').html(lastGold + msg.data.gold);
-            });
-        },
-        navRoleList: function () {
-            CommonUtil.nav2Url("roleList.html", {
-            });
-        },
-        navShop: function () {
-            CommonUtil.nav2Url("shopList.html", {
-            });
-        }
-
-    });
-
-
-    var view = new UserInfoView({model: userInfo});
-    view.render();
 
 }

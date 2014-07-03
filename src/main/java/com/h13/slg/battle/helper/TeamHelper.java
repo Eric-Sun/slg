@@ -4,8 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.h13.slg.battle.TeamConstants;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.dao.UserTeamDAO;
-import com.h13.slg.config.co.BattleCO;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
@@ -14,7 +13,6 @@ import com.h13.slg.role.helper.UserRoleHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -80,7 +78,7 @@ public class TeamHelper {
                 SlgLogger.error(SlgLoggerEntity.p("team", "saveTeam", uid, "urid is not yours")
                         .addParam("urid", urid)
                         .addParam("urid-uid", userRoleCO.getUid()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
         }
         updateTeam(userTeamCO);
@@ -93,15 +91,15 @@ public class TeamHelper {
         // 检查urid是否是你自己的
         boolean b = userRoleHelper.checkUserRole(uid, urid);
         if (!b)
-            throw new RequestErrorException(ErrorCodeConstants.Role.DONT_HAVE_THIS_USER_ROLE, "");
+            throw new RequestErrorException(CodeConstants.Role.DONT_HAVE_THIS_USER_ROLE, "");
         UserTeamCO userTeamCO = get(uid);
         // 已经存在在team中
         if (userTeamCO.getData().contains(urid)) {
-            throw new RequestErrorException(ErrorCodeConstants.Team.USER_ROLE_HAVE_IN_TEAM, "");
+            throw new RequestErrorException(CodeConstants.Team.USER_ROLE_HAVE_IN_TEAM, "");
         }
         // 对应的位置已经有userrole
         if (userTeamCO.getData().get(pos) != TeamConstants.NO_ROLE_IN_TEAM) {
-            throw new RequestErrorException(ErrorCodeConstants.Team.POS_HAVE_USER_ROLE, "");
+            throw new RequestErrorException(CodeConstants.Team.POS_HAVE_USER_ROLE, "");
         }
 
         userTeamCO.getData().add(pos, urid);
@@ -112,7 +110,7 @@ public class TeamHelper {
         UserTeamCO userTeamCO = get(uid);
         // 对应的位置已经有userrole
         if (userTeamCO.getData().get(pos) == TeamConstants.NO_ROLE_IN_TEAM) {
-            throw new RequestErrorException(ErrorCodeConstants.Team.POST_IS_NO_USER_ROLE, "");
+            throw new RequestErrorException(CodeConstants.Team.POST_IS_NO_USER_ROLE, "");
         }
         userTeamCO.getData().set(pos, TeamConstants.NO_ROLE_IN_TEAM);
         updateTeam(userTeamCO);

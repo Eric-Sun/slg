@@ -1,21 +1,22 @@
 package com.h13.slg.core;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-2-17
- * Time: 上午12:45
- * To change this template use File | Settings | File Templates.
+ * 跟前端交互的code，对应前端的不同的文字等
  */
-public class ErrorCodeConstants {
+public class CodeConstants {
 
-    public static int COMMON_ERROR = 0001;
+    public static class SYSTEM {
+        public static int SUCCESS = 0;
+        public static int COMMON_ERROR = 1001;
+        public static int TOKEN_INVALID = 1002;
+    }
+
 
     public static class User {
-        public static int NAME_OR_PASSWORD_ERROR = 1001;
-        public static int NAME_EXISTS = 1002;
-        public static int DONT_HAVE_ENOUGH_FOOD = 1003;
-        public static int DONT_HAVE_ENOUGH_GOLD = 1004;
+        public static int NAME_OR_PASSWORD_ERROR = 2001;
+        public static int NAME_EXISTS = 2002;
+        public static int DONT_HAVE_ENOUGH_FOOD = 2003;
+        public static int DONT_HAVE_ENOUGH_GOLD = 2004;
     }
 
     public static class Role {

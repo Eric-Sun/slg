@@ -9,12 +9,13 @@ import com.h13.slg.core.*;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.MD5Util;
+import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
 import com.h13.slg.tavern.helper.TavernHelper;
-import com.h13.slg.user.RequestKeyConstants;
-import com.h13.slg.user.ResponseKeyConstants;
+import com.h13.slg.user.UserRequestKeyConstants;
+import com.h13.slg.user.UserResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
 import com.h13.slg.user.co.UserInfoCO;
 import com.h13.slg.user.co.UserStatusCO;
@@ -24,16 +25,9 @@ import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.FarmHelper;
 import com.h13.slg.user.hepler.UserHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
-import com.h13.slg.user.vo.CastleForLoginVO;
-import com.h13.slg.user.vo.CastleVO;
-import com.h13.slg.user.vo.FarmForLoginVO;
-import com.h13.slg.user.vo.FarmVO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.h13.slg.user.vo.UserStatusVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -53,10 +47,6 @@ public class UserServiceImpl implements UserService {
     private UserStatusDAO userStatusDAO;
     @Autowired
     private UserStatusCache userStatusCache;
-    @Autowired
-    private UserRoleHelper userRoleHelper;
-    @Autowired
-    private TavernHelper tavernHelper;
 
     @Autowired
     FarmHelper farmHelper;
@@ -82,25 +72,29 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
-        String name = (String) request.getArgs().get(RequestKeyConstants.REQUEST_NAME);
-        String password = (String) request.getArgs().get(RequestKeyConstants.REQEUST_PASSWORD);
+        String name = (String) request.getArgs().get(UserRequestKeyConstants.REQUEST_NAME);
+        String password = (String) request.getArgs().get(UserRequestKeyConstants.REQEUST_PASSWORD);
 
-        int userId = userDAO.login(name, MD5Util.getMD5String(password));
+        // 尝试登陆
+        int uid = userHelper.login(name, password);
 
-        if (userId == -1) {
-            // 登陆失败,用户密码错误
-            throw new RequestErrorException(ErrorCodeConstants.User.NAME_OR_PASSWORD_ERROR, "");
-        }
-        UserInfoCO userInfoCO = userHelper.getInfo(userId);
+        // 获取用户的相关信息
+        UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
+        AuthCO authCO = authHelper.createAuth(uid);
+        long farmTimer = farmHelper.getFarmInfo(uid).getTimer();
+        long castleTimer = castleHelper.getCastleInfo(uid).getTimer();
 
-        AuthCO authCO = authHelper.createAuth(userId);
+        UserStatusVO userStatusVO = new UserStatusVO();
+        SlgBeanUtils.copyProperties(userStatusVO, userStatusCO);
+        userStatusVO.setCastleTimer(castleTimer);
+        userStatusVO.setFarmTimer(farmTimer);
+        userStatusVO.setUid(uid);
+        userStatusVO.setName(name);
 
         SlgData slgData = SlgData.getData()
-                .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userInfoCO.getUserStatus())
-                .add(ResponseKeyConstants.RESPONSE_USER_FARM, userInfoCO.getFarm())
-                .add(ResponseKeyConstants.RESPONSE_USER_CASTLE, userInfoCO.getCastle())
-                .add("authTime", authCO.getAuthTime())
-                .add("authKey", authCO.getAuthKey());
+                .add(UserResponseKeyConstants.USER_STATUS, userStatusVO)
+                .add(UserResponseKeyConstants.AUTH_TIME, authCO.getAuthTime())
+                .add(UserResponseKeyConstants.AUTH_KEY, authCO.getAuthKey());
         return slgData;
 
     }
@@ -108,85 +102,34 @@ public class UserServiceImpl implements UserService {
     @Override
     public SlgData register(SlgRequestDTO request) throws RequestErrorException {
 
-        String name = request.getArgs().get(RequestKeyConstants.REQUEST_NAME).toString();
-        String password = request.getArgs().get(RequestKeyConstants.REQEUST_PASSWORD).toString();
+        String name = request.getArgs().get(UserRequestKeyConstants.REQUEST_NAME).toString();
+        String password = request.getArgs().get(UserRequestKeyConstants.REQEUST_PASSWORD).toString();
 
-        // check name exists?
-        if (!userDAO.check(name)) {
-            SlgLogger.info(SlgLoggerEntity.p(MOD, "register", -1, "name exists").addParam("name", name));
-            throw new RequestErrorException(ErrorCodeConstants.User.NAME_EXISTS, "");
-        }
+        int uid = userHelper.register(name, password);
 
-
-        // register user
-        int userId = userDAO.insert(name, MD5Util.getMD5String(password));
-        UserStatusCO userStatusCO = initUserStatus(userId, name);
-        userStatusDAO.insert(
-                userStatusCO.getId(),
-                userStatusCO.getName(),
-                userStatusCO.getGold(),
-                userStatusCO.getFood(),
-                userStatusCO.getCash(),
-                userStatusCO.getHonor(),
-                userStatusCO.getLevel(),
-                userStatusCO.getXp(),
-                userStatusCO.getSoul(),
-                userStatusCO.getFightForce());
-
-        // init farm castle timer
-        farmHelper.create(userId);
-        castleHelper.create(userId);
-        userPackageHelper.create(userId);
-        // 初始化任务数据
-        userTaskHelper.create(userId);
-        // 创建第一个人物
-        userRoleHelper.addRoleForRegister(userId);
-        // 在包裹中放入一些基础的物品
-        userPackageHelper.addSomeEquipForRegister(userId);
-        // 创建tavern
-        tavernHelper.create(userId);
-        // 创建新的team
-        teamHelper.createANewTeam(userId);
-
-        userStatusCache.set(userStatusCO);
-        SlgLogger.info(SlgLoggerEntity.p(MOD, "register", -1, "name not exists").addParam("name", name));
         SlgData slgData = SlgData.getData()
-                .add(ResponseKeyConstants.RESPONSE_ID, userId);
+                .add(UserResponseKeyConstants.ID, uid);
         return slgData;
     }
 
     @Override
     public SlgData getInfo(SlgRequestDTO request) throws RequestErrorException {
-        long userId = request.getUid();
-        UserInfoCO userInfoCO = userHelper.getInfo(userId);
+        long uid = request.getUid();
+        UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
+        long farmTimer = farmHelper.getFarmInfo(uid).getTimer();
+        long castleTimer = castleHelper.getCastleInfo(uid).getTimer();
+
+
+        UserStatusVO userStatusVO = new UserStatusVO();
+        SlgBeanUtils.copyProperties(userStatusVO, userStatusCO);
+        userStatusVO.setCastleTimer(castleTimer);
+        userStatusVO.setFarmTimer(farmTimer);
+
 
         SlgData slgData = SlgData.getData()
-                .add(ResponseKeyConstants.RESPONSE_USER_STATUS, userInfoCO.getUserStatus())
-                .add(ResponseKeyConstants.RESPONSE_USER_FARM, userInfoCO.getFarm())
-                .add(ResponseKeyConstants.RESPONSE_USER_CASTLE, userInfoCO.getCastle());
+                .add(UserResponseKeyConstants.USER_STATUS, userStatusVO);
         return slgData;
     }
 
 
-    private UserStatusCO initUserStatus(long userId, String name) {
-
-        UserStatusCO userStatusCO = new UserStatusCO();
-        userStatusCO.setName(name);
-        userStatusCO.setCash(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_CASH));
-        userStatusCO.setFood(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_FOOD));
-        userStatusCO.setGold(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_GOLD));
-        userStatusCO.setHonor(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_HORNOR));
-        userStatusCO.setLevel(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_LEVEL));
-
-        userStatusCO.setFood(500000);
-        userStatusCO.setGold(50000000);
-        userStatusCO.setHonor(500000);
-        userStatusCO.setCash(50000);
-
-        userStatusCO.setId(userId);
-        userStatusCO.setXp(0);
-        userStatusCO.setSoul(0);
-        userStatusCO.setFightForce(0);
-        return userStatusCO;
-    }
 }

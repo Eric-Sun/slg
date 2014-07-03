@@ -8,7 +8,7 @@ import java.util.Map;
 public class SlgResponseDTO {
     private String act;
     private Map<String, Object> args;
-    private int code = Constants.ResponseStatus.SUCCESS;
+    private int code = CodeConstants.SYSTEM.SUCCESS;
     private Map<String, Object> data;
     private String desc;
     private String mod;

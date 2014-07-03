@@ -55,7 +55,7 @@ public class SlgDispatcher implements ApplicationContextAware {
                 // 检测auth
                 if (!authHelper.check(uid, authKey, authTime)) {
                     // 返回失败
-                    resp = new SlgResponseDTO(req, Constants.ResponseStatus.AUTH_ERROR, null);
+                    resp = new SlgResponseDTO(req, CodeConstants.SYSTEM.TOKEN_INVALID, null);
                     return resp;
                 }
             }

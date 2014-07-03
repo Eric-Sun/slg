@@ -1,5 +1,6 @@
 package com.h13.slg.equip.helper;
 
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.equip.EquipConstants;
@@ -9,7 +10,6 @@ import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.StrengthenCO;
 import com.h13.slg.config.fetcher.EquipConfigFetcher;
 import com.h13.slg.config.fetcher.StrengthenConfigFetcher;
-import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.pkg.co.UserPackageCO;
@@ -95,7 +95,7 @@ public class UserEquipHelper {
         int nextStrength = curStrength + 1;
         StrengthenCO strengthenCO = strengthenConfigFetcher.get(nextStrength + "");
         if (strengthenCO == null)
-            throw new RequestErrorException(ErrorCodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP, "");
+            throw new RequestErrorException(CodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP, "");
         int cost = 0;
         if (type.equals(EquipConstants.EquipType.WEAPON)) {
             cost = strengthenCO.getWeaponCost();
@@ -166,7 +166,7 @@ public class UserEquipHelper {
 
         if (packageMCount1 < materialCount1 || packageMCount2 < materialCount2) {
             // 资源不够
-            throw new RequestErrorException(ErrorCodeConstants.Role.RESOURCE_IS_NOT_ENOUGH, "");
+            throw new RequestErrorException(CodeConstants.Role.RESOURCE_IS_NOT_ENOUGH, "");
         }
         Map d1 = userPackageCO.getMaterial();
         d1.put(materialId1 + "", packageMCount1 - materialCount1);
@@ -201,7 +201,7 @@ public class UserEquipHelper {
                 !EquipConstants.EquipType.WEAPON.equals(type)) {
             SlgLogger.error(SlgLoggerEntity.p("userequip", "getANewUserEquip", uid, "type is error.")
                     .addParam("eid", eid).addParam("type", type));
-            throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "type is error");
+            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "type is error");
         }
         long ueid = userEquipDAO.insert(uid, type, eid, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE);
         userPackageHelper.addEquipItem(uid, eid, ueid);

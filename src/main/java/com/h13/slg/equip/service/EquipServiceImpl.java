@@ -5,7 +5,7 @@ import com.h13.slg.config.co.StrengthenCO;
 import com.h13.slg.config.fetcher.EquipConfigFetcher;
 import com.h13.slg.config.fetcher.MaterialConfigFetcher;
 import com.h13.slg.config.fetcher.StrengthenConfigFetcher;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
@@ -14,7 +14,6 @@ import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.equip.helper.UserEquipHelper;
 import com.h13.slg.equip.vo.EquipInfoVO;
 import com.h13.slg.equip.vo.UserEquipVO;
-import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.role.RoleRequestKeyConstants;
 import com.h13.slg.role.RoleResponseKeyConstants;
@@ -26,7 +25,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 /**
@@ -120,7 +118,7 @@ public class EquipServiceImpl implements EquipService {
         try {
             BeanUtils.copyProperties(userEquipVO, userEquipCO);
         } catch (Exception e) {
-            throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "", e);
+            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "", e);
         }
         EquipInfoVO equipInfoVO = userEquipHelper.getEquipInfo(userEquipCO);
         userEquipVO.setEquipInfo(equipInfoVO);

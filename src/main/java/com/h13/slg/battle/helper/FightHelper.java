@@ -3,12 +3,11 @@ package com.h13.slg.battle.helper;
 import com.google.common.base.Strings;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.fight.*;
-import com.h13.slg.config.cache.MonsterCache;
 import com.h13.slg.config.co.BattleCO;
 import com.h13.slg.config.co.MonsterCO;
 import com.h13.slg.config.fetcher.BattleConfigFetcher;
 import com.h13.slg.config.fetcher.MonsterConfigFetcher;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
@@ -17,7 +16,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 /**
@@ -73,7 +71,7 @@ public class FightHelper {
 
                 defenceFightUnit.add(i, fightPosition);
             } catch (Exception e) {
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
         }
 

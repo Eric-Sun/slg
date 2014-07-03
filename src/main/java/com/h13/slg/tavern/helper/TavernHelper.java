@@ -1,13 +1,11 @@
 package com.h13.slg.tavern.helper;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.h13.slg.config.co.RoleCO;
 import com.h13.slg.config.co.TavernConfigCO;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.TavernConfigFetcher;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
@@ -20,14 +18,11 @@ import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.tavern.vo.EnrollUserRoleVO;
 import com.h13.slg.tavern.vo.InviteTavernVO;
 import com.h13.slg.tavern.vo.TavernRoleVO;
-import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -110,7 +105,7 @@ public class TavernHelper {
         TavernCO co = get(uid);
         if (co.getRoleList().size() == 0) {
             SlgLogger.error(SlgLoggerEntity.p("tavern", "invite", uid, "tavern is empty"));
-            throw new RequestErrorException(ErrorCodeConstants.Tavern.TAVERN_IS_EMPTY, "");
+            throw new RequestErrorException(CodeConstants.Tavern.TAVERN_IS_EMPTY, "");
         }
         int soul = 0;
         List<TavernRoleCO> list = co.getRoleList();
@@ -139,7 +134,7 @@ public class TavernHelper {
         if (!checkTavernIsReady(uid)) {
             SlgLogger.error(SlgLoggerEntity.p("tavern", "invite", uid, "tavern is full")
             );
-            throw new RequestErrorException(ErrorCodeConstants.Tavern.TAVERN_IS_FULL, "");
+            throw new RequestErrorException(CodeConstants.Tavern.TAVERN_IS_FULL, "");
         }
 
         int cost = 0;
@@ -239,7 +234,7 @@ public class TavernHelper {
             BeanUtils.copyProperties(vo, userRoleCO);
             return vo;
         } catch (Exception e) {
-            throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "", e);
+            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "", e);
         }
 
     }

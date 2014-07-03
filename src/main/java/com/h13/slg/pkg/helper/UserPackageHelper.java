@@ -1,14 +1,11 @@
 package com.h13.slg.pkg.helper;
 
-import com.h13.slg.core.ErrorCodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.MapUtil;
 import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.equip.helper.UserEquipHelper;
-import com.h13.slg.pkg.PackageConstants;
-import com.h13.slg.role.RoleConstants;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.dao.UserPackageDAO;
 import org.slf4j.Logger;

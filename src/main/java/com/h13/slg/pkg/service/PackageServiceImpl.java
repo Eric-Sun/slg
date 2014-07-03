@@ -1,14 +1,12 @@
 package com.h13.slg.pkg.service;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.GemCO;
 import com.h13.slg.config.co.MaterialCO;
 import com.h13.slg.config.fetcher.EquipConfigFetcher;
 import com.h13.slg.config.fetcher.GemConfigFetcher;
 import com.h13.slg.config.fetcher.MaterialConfigFetcher;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
@@ -24,7 +22,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -65,7 +62,7 @@ public class PackageServiceImpl implements PackageService {
             try {
                 BeanUtils.copyProperties(userEquipVO, userEquipCO);
             } catch (Exception e) {
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "", e);
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "", e);
             }
 
             EquipInfoVO equipInfoVO = userEquipHelper.getEquipInfo(userEquipCO);

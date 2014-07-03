@@ -4,7 +4,7 @@ import com.h13.slg.config.cache.RoleCache;
 import com.h13.slg.config.co.RoleCO;
 import com.h13.slg.config.co.RoleLevelCO;
 import com.h13.slg.config.fetcher.RoleLevelConfigFetcher;
-import com.h13.slg.core.ErrorCodeConstants;
+import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
@@ -152,7 +152,7 @@ public class UserRoleHelper {
             SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "ue's uid is not target uid.")
                     .addParam("ue-uid", ue.getUid())
                     .addParam("uid", uid));
-            throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
         }
         if (ue.getType().equals(EquipConstants.EquipType.ACCESSORY)) {
             if (ur.getAccessory() != RoleConstants.NO_EQUIP_ID) {
@@ -160,7 +160,7 @@ public class UserRoleHelper {
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentAccessory", ur.getAccessory()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
 
             ur.setAccessory(ue.getId());
@@ -170,7 +170,7 @@ public class UserRoleHelper {
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentArmor", ur.getArmor()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
             ur.setArmor(ue.getId());
         } else {
@@ -179,7 +179,7 @@ public class UserRoleHelper {
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentWeapon", ur.getWeapon()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
             ur.setWeapon(ue.getId());
         }
@@ -208,7 +208,7 @@ public class UserRoleHelper {
             SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "ue's uid is not target uid.")
                     .addParam("ue-uid", ue.getUid())
                     .addParam("uid", uid));
-            throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
         }
         if (ue.getType().equals(EquipConstants.EquipType.ACCESSORY)) {
             if (ur.getAccessory() == RoleConstants.NO_EQUIP_ID) {
@@ -216,7 +216,7 @@ public class UserRoleHelper {
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentAccessory", ur.getAccessory()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
             ur.setAccessory(RoleConstants.NO_EQUIP_ID);
         } else if (ue.getType().equals(EquipConstants.EquipType.ARMOR)) {
@@ -225,7 +225,7 @@ public class UserRoleHelper {
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentArmor", ur.getArmor()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
             ur.setArmor(RoleConstants.NO_EQUIP_ID);
         } else {
@@ -234,7 +234,7 @@ public class UserRoleHelper {
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentWeapon", ur.getWeapon()));
-                throw new RequestErrorException(ErrorCodeConstants.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
             ur.setWeapon(RoleConstants.NO_EQUIP_ID);
         }
