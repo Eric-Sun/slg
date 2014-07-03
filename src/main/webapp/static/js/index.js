@@ -21,7 +21,7 @@ var indexLoader = function () {
 
         Constants.authKey = msg.data.authKey;
         Constants.authTime = msg.data.authTime;
-        Constants.uid = msg.data.userStatus.id;
+        Constants.uid = msg.data.userStatus.uid;
 
 
     });
