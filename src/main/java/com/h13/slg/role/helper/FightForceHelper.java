@@ -137,7 +137,7 @@ public class FightForceHelper {
         try {
             int strength = ue.getStrength();
             WeaponCO weaponCO = weaponCache.get(strength + "");
-            String tmpValue = BeanUtils.getSimpleProperty(weaponCO, "purple" + ue.getId());
+            String tmpValue = BeanUtils.getSimpleProperty(weaponCO, "purple" + ue.getLevel());
             int value = Integer.parseInt(tmpValue);
             return value;
         } catch (Exception e) {
@@ -150,7 +150,7 @@ public class FightForceHelper {
         try {
             int strength = ue.getStrength();
             ArmorCO armorCO = armorCache.get(strength + "");
-            String tmpValue = BeanUtils.getSimpleProperty(armorCO, "purple" + ue.getId());
+            String tmpValue = BeanUtils.getSimpleProperty(armorCO, "purple" + ue.getLevel());
             int value = Integer.parseInt(tmpValue);
             return value;
         } catch (Exception e) {
@@ -162,7 +162,7 @@ public class FightForceHelper {
         try {
             int strength = ue.getStrength();
             AccessoryCO accessoryCO = accessoryCache.get(strength + "");
-            String tmpValue = BeanUtils.getSimpleProperty(accessoryCO, "purple" + ue.getId());
+            String tmpValue = BeanUtils.getSimpleProperty(accessoryCO, "purple" + ue.getLevel());
             int value = Integer.parseInt(tmpValue);
             return value;
         } catch (Exception e) {

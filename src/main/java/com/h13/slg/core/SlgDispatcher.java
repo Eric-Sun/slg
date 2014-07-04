@@ -64,13 +64,14 @@ public class SlgDispatcher implements ApplicationContextAware {
             triggerEvents(req, r);
             resp = new SlgResponseDTO(req, r);
         } catch (Exception e) {
+            SlgLogger.error(SlgLoggerEntity.p(mod, act, uid, "error"), e);
             if (e instanceof InvocationTargetException) {
                 if (((InvocationTargetException) e).getTargetException() instanceof RequestErrorException) {
                     RequestErrorException reqError = (RequestErrorException) ((InvocationTargetException) e).getTargetException();
                     return new SlgResponseDTO(req, reqError.getCode(), reqError.getDesc());
                 }
             }
-            SlgLogger.error(SlgLoggerEntity.p(mod, act, uid, "error"), e);
+
         }
         return resp;
     }
