@@ -58,9 +58,10 @@ public class UserEquipDAO {
         return holder.getKey().longValue();
     }
 
-    public void update(long id, int level, Map<String, String> gems, int strength, int fail, int refine, int star, long urid) {
-        String sql = "update user_equip set level=?,gems=?,strength=?,fail=?,refine=?,star=?,urid=? where id=?";
-        j.update(sql, new Object[]{level, JSON.toJSONString(gems), strength, fail, refine, star, urid, id});
+    public void update(long id, int level, Map<String, String> gems, int strength, int fail, int refine, int star, long urid,
+                       String name) {
+        String sql = "update user_equip set level=?,gems=?,strength=?,fail=?,refine=?,star=?,urid=?,name=? where id=?";
+        j.update(sql, new Object[]{level, JSON.toJSONString(gems), strength, fail, refine, star, urid, name, id});
     }
 
     public UserEquipCO get(long uid, long ueid) {

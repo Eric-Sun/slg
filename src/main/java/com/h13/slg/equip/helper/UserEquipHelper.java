@@ -74,7 +74,7 @@ public class UserEquipHelper {
      */
     public void updateUserEquip(UserEquipCO ue) {
         userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getGemsMap(), ue.getStrength(),
-                ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid());
+                ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid(),ue.getName());
     }
 
 
@@ -173,6 +173,7 @@ public class UserEquipHelper {
         d1.put(materialId2 + "", packageMCount2 - materialCount2);
         userPackageHelper.updateMaterial(userPackageCO);
         ue.setLevel(nextLevel);
+        ue.setName(getEquipNameFromConfig(type, nextLevel));
         updateUserEquip(ue);
 
         vo.setLevel(nextLevel);
@@ -251,6 +252,26 @@ public class UserEquipHelper {
         }
 
         return equipInfoVO;
+    }
+
+
+    /**
+     * 通过type和level，读取配置文件，获得对应的name
+     *
+     * @param type
+     * @param level
+     * @return
+     */
+    public String getEquipNameFromConfig(String type, int level) {
+        EquipCO equipCO = equipConfigFetcher.get(level + "");
+
+        if (type.equals(EquipConstants.EquipType.WEAPON)) {
+            return equipCO.getWeaponName();
+        } else if (type.equals(EquipConstants.EquipType.ACCESSORY)) {
+            return equipCO.getAccessoryName();
+        } else {
+            return equipCO.getArmorName();
+        }
     }
 
     public List<UserEquipCO> noUsedEquipList(long uid, String type) {
