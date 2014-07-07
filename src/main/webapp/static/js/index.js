@@ -9,14 +9,11 @@ var indexLoader = function () {
         ;
     var userInfo;
     CommonUtil.doPost(c, function (msg) {
-        if (msg.code == 1001) {
-            CommonUtil.nav2Url("login.html", {});
-        }
         userInfo = new Backbone.Model(msg.data.userStatus);
     });
 
     var UserInfoView = Backbone.View.extend({
-        el: "#body",
+        el: "#indexView",
         template: _.template($("#userInfoTemplate").html()),
         events: {
             "click #btnHarvestFood": "harvestFood",

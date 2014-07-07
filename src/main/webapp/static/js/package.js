@@ -3,13 +3,13 @@ var packageLoader = function () {
 
     var cmd = new Command("package", "get", {});
 
+    var userEquipCollection = new Backbone.Collection;
+    var materialCollection = new Backbone.Collection;
+    var gemCollection = new Backbone.Collection;
     CommonUtil.doPost(cmd, function (msg) {
         var UserEquip = Backbone.Model;
-        var userEquipCollection = new Backbone.Collection;
         var MaterialInfo = Backbone.Model;
-        var materialCollection = new Backbone.Collection;
         var GemInfo = Backbone.Model;
-        var gemCollection = new Backbone.Collection;
         _.each(msg.data.equip, function (info, inde, list) {
             var userEquip = new UserEquip(info);
             userEquipCollection.add(userEquip);

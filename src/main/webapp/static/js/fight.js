@@ -36,7 +36,6 @@ var fightLoader = function () {
         doFight: function () {
             var cmd = new Command("battle", "pve", {battleId: fightParams.battleId});
             CommonUtil.doPost(cmd, function (msg) {
-//                fightView.renderFightLog(msg.data.battle);
                 fightLogView.model = msg.data.battle.rounds;
                 fightLogView.render();
                 fightLogView.showResult(msg.data.battle.status);

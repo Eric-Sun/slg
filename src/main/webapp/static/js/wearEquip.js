@@ -42,7 +42,7 @@ var wearEquip = function () {
             console.log("urid=" + wearEquipParams.urId);
             var cmd = new Command("role", "wear", {urid: wearEquipParams.urId, ueid: eId});
             CommonUtil.doPost(cmd, function () {
-                CommonUtil.nav2Url("roleList.html", {
+                CommonUtil.nav2Url("roleList.html", {curUrid: wearEquipParams.urId
                 });
             });
 

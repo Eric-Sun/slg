@@ -50,7 +50,7 @@ var equipDetail = function () {
                             ueid: equipDetailParams.ueId
                         });
                     CommonUtil.doPost(cmd, function () {
-                        CommonUtil.nav2Url("roleList.html", {});
+                        CommonUtil.nav2Url("roleList.html", {curUrid: equipDetailParams.urId});
                     });
 
                 },

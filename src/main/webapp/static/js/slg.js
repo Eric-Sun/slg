@@ -26,8 +26,11 @@ var CommonUtil = {
             dataType: "json",
             success: function (msg) {
                 console.log("Response: " + JSON.stringify(msg));
+                if (msg.code == 1002) {
+                    CommonUtil.nav2Url("login.html", {});
+                }
                 if (msg.code == 1001) {
-                    CommonUtil.nav2Url("index.html", {});
+                    alert("error");
                 }
                 successFunc(msg);
             },

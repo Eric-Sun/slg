@@ -10,7 +10,7 @@
     <script src="/slg/static/js/slg.js" type="text/javascript"></script>
     <script src="/slg/static/js/underscore.js" type="text/javascript"></script>
     <script src="/slg/static/js/backbone.js" type="text/javascript"></script>
-    <script src="/slg/static/js/userRoleList.js" type="text/javascript"></script>
+    <script src="/slg/static/js/roleList.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="row">
@@ -64,19 +64,19 @@
     </div>
     <button class="row" id="weapon<%- id %>">
         <div class="col-xs-12">
-            武器；<%- weapon != 0 ? "有武器" : NO_WEAPON %>
+            武器；<%- weapon != 0 ? "有武器" : "没有装备武器" %>
         </div>
     </button>
     <br>
     <button class="row" id="armor<%- id %>">
         <div class="col-xs-12">
-            防具；<%- armor != 0 ? "有防具" : NO_ARMOR %>
+            防具；<%- armor != 0 ? "有防具" : "没有装备防具" %>
         </div>
     </button>
     <br>
     <button class="row" id="accessory<%- id %>">
         <div class="col-xs-12">
-            饰品；<%- accessory != 0 ? "有饰品" : NO_ACCESSORY %>
+            饰品；<%- accessory != 0 ? "有饰品" : "没有装备饰品" %>
         </div>
     </button>
     <br>

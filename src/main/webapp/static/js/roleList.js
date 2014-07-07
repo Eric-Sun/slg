@@ -1,7 +1,5 @@
 var roleListParams = {
-    NO_WEAPON: "没有装备武器",
-    NO_ACCESSORY: "没有装备饰品",
-    NO_ARMOR: "没有装备防具"
+    curUrid: $.getUrlParam("curUrid")
 }
 
 var userRoleListLoader = function () {
@@ -13,21 +11,7 @@ var userRoleListLoader = function () {
 
         // 加载数据到collection中
         _.each(msg.data.list, function (userRole, index, list) {
-            var simpleRoleModel = new Backbone.Model({
-                roleName: userRole.roleName,
-                fightForce: userRole.fightForce,
-                attack: userRole.attack,
-                defence: userRole.defence,
-                health: userRole.health,
-                level: userRole.level,
-                id: userRole.id,
-                armor: userRole.armor,
-                accessory: userRole.accessory,
-                weapon: userRole.weapon,
-                armorInfo: userRole.weaponInfo,
-                accessoryInfo: userRole.accessoryInfo,
-                weaponInfo: userRole.weaponInfo
-            });
+            var simpleRoleModel = new Backbone.Model(userRole);
             simpleRoleCollection.add(simpleRoleModel);
 
         });
@@ -40,10 +24,19 @@ var userRoleListLoader = function () {
 
 
         render: function () {
+            var curIndex = 0;
             for (var m  in this.model) {
+                if (roleListParams.curUrid != undefined && this.model[m].id == roleListParams.curUrid) {
+                    curIndex = m;
+                }
                 this.eachModel(this.model[m]);
             }
-            this.showRoleDetail({data: {role: this.model[0].toJSON()}});
+            if (roleListParams.curUrid == undefined) {
+                this.showRoleDetail({data: {role: this.model[0].toJSON()}});
+            } else {
+                this.showRoleDetail({data: {role: this.model[curIndex].toJSON()}});
+            }
+
             return this;
         },
         eachModel: function (data) {
@@ -56,22 +49,7 @@ var userRoleListLoader = function () {
         showRoleDetail: function (event) {
             $("#roleDetail").html("");
             var role = event.data.role;
-            var t = this.template2({
-                roleName: role.roleName,
-                fightForce: role.fightForce,
-                attack: role.attack,
-                defence: role.defence,
-                health: role.health,
-                level: role.level,
-                id: role.id,
-                weapon: role.weapon,
-                accessory: role.accessory,
-                armor: role.armor,
-                NO_WEAPON: roleListParams.NO_WEAPON,
-                NO_ACCESSORY: roleListParams.NO_ACCESSORY,
-                NO_ARMOR: roleListParams.NO_ARMOR
-
-            });
+            var t = this.template2(role);
             $("#roleDetail").html(t);
             $("#weapon" + role.id).on("click", {id: role.weapon, urId: role.id, type: "weapon"}, this.nav2EquipDetail);
             $("#accessory" + role.id).on("click", {id: role.accessory, urId: role.id, type: "accessory"}, this.nav2EquipDetail);
