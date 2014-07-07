@@ -38,7 +38,7 @@ public class EventServiceImpl implements EventService {
             return;
         List<FinishedPerTaskVO> list = new LinkedList<FinishedPerTaskVO>();
         boolean finished = false;
-        while ((finished = userTaskHelper.handleEvents(uid, evtList, slgData, list)) != true) {
+        while ((finished = userTaskHelper.handleEvents(uid, evtList, slgData, list)) == true) {
 
         }
     }

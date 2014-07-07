@@ -28,60 +28,57 @@ var packageLoader = function () {
             materialInfo.set({count: count});
             materialCollection.add(materialInfo);
         });
+    });
 
-        var PackageView = Backbone.View.extend({
-            el: "#packageView",
-            template: _.template($("#packageItemTemplate").html()),
-            equipTemplate: _.template($("#equipItemTemplate").html()),
-            events: {
-                "click #btnEquipList": "btnEquipList",
-                "click #btnGemList": "btnGemList",
-                "click #btnMaterialList": "btnMaterialList"
+    var PackageView = Backbone.View.extend({
+        el: "#packageView",
+        template: _.template($("#packageItemTemplate").html()),
+        equipTemplate: _.template($("#equipItemTemplate").html()),
+        events: {
+            "click #btnEquipList": "btnEquipList",
+            "click #btnGemList": "btnGemList",
+            "click #btnMaterialList": "btnMaterialList"
 
-            },
-            initialize: function () {
-                this.userEquipList = this.model[0];
-                this.gemList = this.model[1];
-                this.materialList = this.model[2];
-                this.btnEquipList();
-            },
-            btnEquipList: function () {
-                $("#packageList").html("");
-                for (var index in this.userEquipList) {
-                    this.showEquipItem(this.userEquipList[index]);
-                }
-            },
-            btnGemList: function () {
-                $("#packageList").html("");
-                for (var index in this.gemList) {
-                    this.showItem(this.gemList[index]);
-                }
-            },
-            btnMaterialList: function () {
-                $("#packageList").html("");
-                for (var index in this.materialList) {
-                    this.showItem(this.materialList[index]);
-                }
-            },
-
-
-            showItem: function (item) {
-                var html = this.template(item.toJSON());
-                $("#packageList").append(html);
-            },
-
-            showEquipItem: function (item) {
-                var html = this.equipTemplate(item.toJSON());
-                $("#packageList").append(html);
+        },
+        initialize: function () {
+            this.userEquipList = this.model[0];
+            this.gemList = this.model[1];
+            this.materialList = this.model[2];
+            this.btnEquipList();
+        },
+        btnEquipList: function () {
+            $("#packageList").html("");
+            for (var index in this.userEquipList) {
+                this.showEquipItem(this.userEquipList[index]);
             }
+        },
+        btnGemList: function () {
+            $("#packageList").html("");
+            for (var index in this.gemList) {
+                this.showItem(this.gemList[index]);
+            }
+        },
+        btnMaterialList: function () {
+            $("#packageList").html("");
+            for (var index in this.materialList) {
+                this.showItem(this.materialList[index]);
+            }
+        },
 
-        });
 
-        var array = [userEquipCollection.models, gemCollection.models, materialCollection.models];
-        var packageView = new PackageView({model: array});
+        showItem: function (item) {
+            var html = this.template(item.toJSON());
+            $("#packageList").append(html);
+        },
 
+        showEquipItem: function (item) {
+            var html = this.equipTemplate(item.toJSON());
+            $("#packageList").append(html);
+        }
 
     });
 
+    var array = [userEquipCollection.models, gemCollection.models, materialCollection.models];
+    var packageView = new PackageView({model: array});
 
 }
