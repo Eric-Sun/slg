@@ -18,6 +18,7 @@ import com.h13.slg.equip.vo.MaterialInfoVO;
 import com.h13.slg.equip.vo.UserEquipVO;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
+import com.h13.slg.pkg.vo.UserPackageEquipVO;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,20 +56,14 @@ public class PackageServiceImpl implements PackageService {
         UserPackageCO userPackageCO = userPackageHelper.get(uid);
         // equip
         List<Integer> ueIdSet = userPackageCO.getEquip();
-        List<UserEquipVO> userEquipList = Lists.newArrayList();
+        List<UserPackageEquipVO> userEquipList = Lists.newArrayList();
         for (Integer ueId : ueIdSet) {
             UserEquipCO userEquipCO = userEquipHelper.getUserEquip(uid, ueId);
-            UserEquipVO userEquipVO = new UserEquipVO();
-            try {
-                BeanUtils.copyProperties(userEquipVO, userEquipCO);
-            } catch (Exception e) {
-                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "", e);
-            }
+            UserPackageEquipVO userPackageEquipVO = new UserPackageEquipVO();
 
-            EquipInfoVO equipInfoVO = userEquipHelper.getEquipInfo(userEquipCO);
-
-            userEquipVO.setEquipInfo(equipInfoVO);
-            userEquipList.add(userEquipVO);
+            userPackageEquipVO.setId(userEquipCO.getId());
+            userPackageEquipVO.setName(userEquipCO.getName());
+            userEquipList.add(userPackageEquipVO);
         }
 
         //gem

@@ -62,7 +62,7 @@ public interface EquipService {
      * @return
      * @throws RequestErrorException
      */
-    public SlgData equipList(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData noUsedEquipList(SlgRequestDTO request) throws RequestErrorException;
 
 
     public SlgData equip(SlgRequestDTO reqeust) throws RequestErrorException;

@@ -114,7 +114,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public SlgData getInfo(SlgRequestDTO request) throws RequestErrorException {
-        long uid = request.getUid();
+        int uid = request.getUid();
         UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
         long farmTimer = farmHelper.getFarmInfo(uid).getTimer();
         long castleTimer = castleHelper.getCastleInfo(uid).getTimer();
@@ -124,7 +124,7 @@ public class UserServiceImpl implements UserService {
         SlgBeanUtils.copyProperties(userStatusVO, userStatusCO);
         userStatusVO.setCastleTimer(castleTimer);
         userStatusVO.setFarmTimer(farmTimer);
-
+        userStatusVO.setUid(uid);
 
         SlgData slgData = SlgData.getData()
                 .add(UserResponseKeyConstants.USER_STATUS, userStatusVO);

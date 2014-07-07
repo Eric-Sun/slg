@@ -18,6 +18,15 @@ public class UserEquipCO {
     private int fail;
     private int refine;
     private int star;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     private String equipName;
 

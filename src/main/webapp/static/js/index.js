@@ -4,26 +4,15 @@ var indexParams = {
 };
 
 var indexLoader = function () {
-    var c = new Command("user", "login",
-            {
-                name: indexParams.name,
-                password: indexParams.password
-            }
-        )
+    CommonUtil.beforeLoad();
+    var c = new Command("user", "getInfo", {})
         ;
     var userInfo;
     CommonUtil.doPost(c, function (msg) {
         if (msg.code == 1001) {
             CommonUtil.nav2Url("login.html", {});
         }
-
         userInfo = new Backbone.Model(msg.data.userStatus);
-
-        Constants.authKey = msg.data.authKey;
-        Constants.authTime = msg.data.authTime;
-        Constants.uid = msg.data.userStatus.uid;
-
-
     });
 
     var UserInfoView = Backbone.View.extend({

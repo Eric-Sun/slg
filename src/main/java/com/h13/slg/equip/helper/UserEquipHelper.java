@@ -203,7 +203,16 @@ public class UserEquipHelper {
                     .addParam("eid", eid).addParam("type", type));
             throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "type is error");
         }
-        long ueid = userEquipDAO.insert(uid, type, eid, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE);
+        String name = null;
+        if (type.equals(EquipConstants.EquipType.ACCESSORY)) {
+            name = equipConfigFetcher.get(eid + "").getAccessoryName();
+        } else if (type.equals(EquipConstants.EquipType.ARMOR)) {
+            name = equipConfigFetcher.get(eid + "").getArmorName();
+        } else {
+            name = equipConfigFetcher.get(eid + "").getWeaponName();
+        }
+
+        long ueid = userEquipDAO.insert(uid, type, eid, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE, name);
         userPackageHelper.addEquipItem(uid, eid, ueid);
         return ueid;
     }
@@ -242,5 +251,10 @@ public class UserEquipHelper {
         }
 
         return equipInfoVO;
+    }
+
+    public List<UserEquipCO> noUsedEquipList(long uid, String type) {
+        List<UserEquipCO> list = userEquipDAO.noUsedEquipList(uid, type);
+        return list;
     }
 }

@@ -10,7 +10,7 @@ var wearEquip = function () {
     CommonUtil.beforeLoad();
 
 
-    var cmd = new Command("equip", "equipList", {type: wearEquipParams.type});
+    var cmd = new Command("equip", "noUsedEquipList", {type: wearEquipParams.type});
 
     CommonUtil.doPost(cmd, function (msg) {
         var UserEquip = Backbone.Model;

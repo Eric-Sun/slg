@@ -1,5 +1,6 @@
 package com.h13.slg.equip.service;
 
+import com.google.common.collect.Lists;
 import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.StrengthenCO;
 import com.h13.slg.config.fetcher.EquipConfigFetcher;
@@ -75,10 +76,10 @@ public class EquipServiceImpl implements EquipService {
     }
 
     @Override
-    public SlgData equipList(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData noUsedEquipList(SlgRequestDTO request) throws RequestErrorException {
         long uid = request.getUid();
         String type = request.getArgs().get("type").toString();
-        List<UserEquipCO> userEquipList = userEquipHelper.equipList(uid, type);
+        List<UserEquipCO> userEquipList = userEquipHelper.noUsedEquipList(uid, type);
         for (UserEquipCO userEquipCO : userEquipList) {
             EquipCO equipCO = equipConfigFetcher.get(userEquipCO.getLevel() + "");
             if (type.equals(EquipConstants.EquipType.ARMOR)) {

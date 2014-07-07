@@ -6,11 +6,6 @@ var roleListParams = {
 
 var userRoleListLoader = function () {
 
-
-    var UserRole = Backbone.Model.extend({
-    });
-
-
     CommonUtil.beforeLoad();
     var c = new Command("role", "userRoleList", {});
     var simpleRoleCollection = new Backbone.Collection;
