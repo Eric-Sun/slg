@@ -62,19 +62,19 @@
             士兵数:<%- health %>
         </div>
     </div>
-    <button class="row" id="weapon">
+    <button class="row" id="weapon<%- id %>">
         <div class="col-xs-12">
             武器；<%- weapon != 0 ? "有武器" : NO_WEAPON %>
         </div>
     </button>
     <br>
-    <button class="row" id="armor">
+    <button class="row" id="armor<%- id %>">
         <div class="col-xs-12">
             防具；<%- armor != 0 ? "有防具" : NO_ARMOR %>
         </div>
     </button>
     <br>
-    <button class="row" id="accessory">
+    <button class="row" id="accessory<%- id %>">
         <div class="col-xs-12">
             饰品；<%- accessory != 0 ? "有饰品" : NO_ACCESSORY %>
         </div>
