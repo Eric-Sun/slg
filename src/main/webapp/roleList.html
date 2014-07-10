@@ -3,7 +3,7 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/slg/static/css/bootstrap.min.css">
     <script src="/slg/static/js/jquery.js" type="text/javascript"></script>
     <script src="/slg/static/js/bootstrap.min.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="row">
-    <button onclick="javascript:CommonUtil.nav2Url('index.html',{});" class="col-xs-1">
+    <button onclick="javascript:CommonUtil.nav2Url('index.html',{});" class="col-xs-4">
         返回
     </button>
 </div>
@@ -30,7 +30,7 @@
 <script id="roleRowTemplate" type="text/template">
 
     <div class="row">
-        <button id="showRoleDetail<%- id %>" class="col-xs-1">
+        <button id="showRoleDetail<%- id %>" class="col-xs-4">
             <%- roleName %>
         </button>
     </div>
@@ -38,27 +38,27 @@
 
 <script id="roleDetailTemplate" type="text/template">
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-4">
             姓名:<%- roleName %>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-4">
             战斗力:<%- fightForce %>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-4">
             攻击力:<%- attack %>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-4">
             防御力:<%- defence %>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-4">
             士兵数:<%- health %>
         </div>
     </div>

@@ -1,11 +1,9 @@
 var tavernLoader = function () {
     CommonUtil.beforeLoad();
     var cmd = new Command("tavern", "get", {})
-
+    var userRoleCollection = new Backbone.Collection;
     CommonUtil.doPost(cmd, function (msg) {
         var UserRole = Backbone.Model;
-
-        var userRoleCollection = new Backbone.Collection;
         _.each(msg.data.list, function (info, index, list) {
             var userRole = new UserRole(info);
             userRoleCollection.add(userRole);

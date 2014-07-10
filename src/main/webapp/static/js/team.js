@@ -2,9 +2,9 @@ var teamLoader = function () {
     CommonUtil.beforeLoad();
 
     var cmd = new Command("team", "getTeam", {});
+    var userRoleCollection = new Backbone.Collection;
     CommonUtil.doPost(cmd, function (msg) {
         var UserRole = Backbone.Model;
-        var userRoleCollection = new Backbone.Collection;
         _.each(msg.data.userTeam.data, function (info, index, list) {
             var userRole = new UserRole(info);
             userRoleCollection.add(userRole);
