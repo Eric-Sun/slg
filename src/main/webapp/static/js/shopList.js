@@ -2,12 +2,14 @@ var shopListLoader = function () {
     CommonUtil.beforeLoad();
 
     var cmd = new Command("shop", "shopList", {});
+
+    var shopItemIMCollection = new Backbone.Collection;
+    var shopItemIGColleciton = new Backbone.Collection;
+    var shopItemECollection = new Backbone.Collection;
+    var models = new Array(shopItemIMCollection, shopItemIGColleciton, shopItemECollection);
     CommonUtil.doPost(cmd, function (msg) {
 
-        var shopItemIMCollection = new Backbone.Collection;
-        var shopItemIGColleciton = new Backbone.Collection;
-        var shopItemECollection = new Backbone.Collection;
-        var models = new Array(shopItemIMCollection, shopItemIGColleciton, shopItemECollection);
+
 
         _.each(msg.data.shopList, function (item, index, list) {
             var shopItem = new Backbone.Model(item);
