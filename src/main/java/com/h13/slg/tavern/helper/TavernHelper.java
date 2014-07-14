@@ -130,6 +130,12 @@ public class TavernHelper {
         return soul;
     }
 
+    /**
+     * 招贤
+     * @param uid
+     * @return
+     * @throws RequestErrorException
+     */
     public InviteTavernVO invite(long uid) throws RequestErrorException {
         if (!checkTavernIsReady(uid)) {
             SlgLogger.error(SlgLoggerEntity.p("tavern", "invite", uid, "tavern is full")
@@ -219,6 +225,13 @@ public class TavernHelper {
     }
 
 
+    /**
+     * 雇佣
+     * @param uid
+     * @param pos
+     * @return
+     * @throws RequestErrorException
+     */
     public EnrollUserRoleVO enroll(long uid, int pos) throws RequestErrorException {
         EnrollUserRoleVO vo = new EnrollUserRoleVO();
         try {

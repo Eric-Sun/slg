@@ -8,8 +8,6 @@ import com.h13.slg.core.*;
 import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
-import com.h13.slg.user.UserRequestKeyConstants;
-import com.h13.slg.user.UserResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.UserDAO;
@@ -65,8 +63,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
-        String name = (String) request.getArgs().get(UserRequestKeyConstants.REQUEST_NAME);
-        String password = (String) request.getArgs().get(UserRequestKeyConstants.REQEUST_PASSWORD);
+        String name = (String) request.getArgs().get("name");
+        String password = (String) request.getArgs().get("password");
 
         // 尝试登陆
         int uid = userHelper.login(name, password);
@@ -85,9 +83,9 @@ public class UserServiceImpl implements UserService {
         userStatusVO.setName(name);
 
         SlgData slgData = SlgData.getData()
-                .add(UserResponseKeyConstants.USER_STATUS, userStatusVO)
-                .add(UserResponseKeyConstants.AUTH_TIME, authCO.getAuthTime())
-                .add(UserResponseKeyConstants.AUTH_KEY, authCO.getAuthKey());
+                .add("userStatus", userStatusVO)
+                .add("authTime", authCO.getAuthTime())
+                .add("authKey", authCO.getAuthKey());
         return slgData;
 
     }
@@ -95,13 +93,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public SlgData register(SlgRequestDTO request) throws RequestErrorException {
 
-        String name = request.getArgs().get(UserRequestKeyConstants.REQUEST_NAME).toString();
-        String password = request.getArgs().get(UserRequestKeyConstants.REQEUST_PASSWORD).toString();
+        String name = request.getArgs().get("name").toString();
+        String password = request.getArgs().get("password").toString();
 
         int uid = userHelper.register(name, password);
 
         SlgData slgData = SlgData.getData()
-                .add(UserResponseKeyConstants.ID, uid);
+                .add("id", uid);
         return slgData;
     }
 
@@ -120,7 +118,7 @@ public class UserServiceImpl implements UserService {
         userStatusVO.setUid(uid);
 
         SlgData slgData = SlgData.getData()
-                .add(UserResponseKeyConstants.USER_STATUS, userStatusVO);
+                .add("userStatus", userStatusVO);
         return slgData;
     }
 
