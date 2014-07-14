@@ -1,6 +1,7 @@
 package com.h13.slg.equip.dao;
 
 import com.alibaba.fastjson.JSON;
+import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.equip.co.UserEquipCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -70,7 +71,7 @@ public class UserEquipDAO {
         return j.queryForObject(sql, new Object[]{ueid, uid}, new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 
-    public UserEquipCO getUserEquips(long uid, long urid, String type) {
+    public UserEquipCO get(long uid, long urid, String type) {
         String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime,name " +
                 "from user_equip where uid=? and urid=? and type=?";
         return j.queryForObject(sql, new Object[]{uid, urid, type},
@@ -88,8 +89,8 @@ public class UserEquipDAO {
 
     public List<UserEquipCO> noUsedEquipList(long uid, String type) {
         String sql = "select id,uid,urid,type,level,gems,strength,fail,refine,star,createtime,name " +
-                "from user_equip where uid=? and  urid=0 and type=?";
-        return j.query(sql, new Object[]{uid, type},
+                "from user_equip where uid=? and  urid=? and type=?";
+        return j.query(sql, new Object[]{uid, EquipConstants.NO_USER_ROLE, type},
                 new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 }

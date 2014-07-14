@@ -28,16 +28,6 @@ public class UserEquipCO {
         this.name = name;
     }
 
-    private String equipName;
-
-    public String getEquipName() {
-        return equipName;
-    }
-
-    public void setEquipName(String equipName) {
-        this.equipName = equipName;
-    }
-
     public long getUrid() {
         return urid;
     }

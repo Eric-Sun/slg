@@ -1,23 +1,16 @@
 package com.h13.slg.user.service;
 
-import com.h13.slg.auth.co.AuthCO;
-import com.h13.slg.auth.helper.AuthHelper;
+import com.h13.slg.user.co.AuthCO;
+import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.battle.helper.TeamHelper;
-import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.core.*;
-import com.h13.slg.core.log.SlgLogger;
-import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.core.util.MD5Util;
 import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.pkg.helper.UserPackageHelper;
-import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
-import com.h13.slg.tavern.helper.TavernHelper;
 import com.h13.slg.user.UserRequestKeyConstants;
 import com.h13.slg.user.UserResponseKeyConstants;
 import com.h13.slg.user.cache.UserStatusCache;
-import com.h13.slg.user.co.UserInfoCO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.UserDAO;
 import com.h13.slg.user.dao.UserStatusDAO;

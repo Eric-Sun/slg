@@ -9,14 +9,10 @@ package com.h13.slg.role;
  */
 public class RoleConstants {
 
+    /**
+     * 用户将领没装备装备
+     */
     public static long NO_EQUIP_ID = 0;
     public static int NO_SKILL_SELECTED = 0;
-
-
-    static class Soldier {
-        public static int SPEARMAN = 0;
-        public static int CAVALRY = 1;
-        public static int BOWMAN = 2;
-    }
 
 }

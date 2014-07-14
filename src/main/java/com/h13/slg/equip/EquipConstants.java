@@ -16,4 +16,9 @@ public class EquipConstants {
     }
 
     public static long NO_USER_ROLE = 0;
+
+    /**
+     * 一个装备初始化之后默认的level
+     */
+    public static int USER_EQUIP_DEFAULT_LEVEL = 1;
 }

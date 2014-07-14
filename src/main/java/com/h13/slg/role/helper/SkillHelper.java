@@ -64,6 +64,7 @@ public class SkillHelper {
             int materialId = skillConfigCO.getMaterial();
             int materialNum = new Integer(BeanUtils.getSimpleProperty(skillConfigCO, "materialNum" + nextSkillLevel));
 
+
             // 查看背包中是否有这些资源
             if (!userPackageHelper.checkMaterialEnough(uid, materialId, materialNum))
                 throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "material is not enough");

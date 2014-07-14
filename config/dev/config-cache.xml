@@ -17,7 +17,7 @@
     <!-- authTemplate -->
     <bean id="authSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.auth.co.AuthCO"/>
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.user.co.AuthCO"/>
     </bean>
     <bean id="authTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"

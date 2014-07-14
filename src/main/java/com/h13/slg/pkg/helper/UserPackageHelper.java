@@ -35,7 +35,7 @@ public class UserPackageHelper {
      *
      * @param id
      */
-    public void create(long id) {
+    public void createDefaultPackage(long id) {
         userPackageDAO.insert(id,
                 new HashMap<String, Integer>(),
                 new LinkedList<Integer>(),
@@ -210,9 +210,9 @@ public class UserPackageHelper {
         long ueid2 = 0;
         long ueid3 = 0;
         for (int i = 0; i < 3; i++) {
-            ueid1 = userEquipHelper.getANewUserEquip(uid, 1, EquipConstants.EquipType.ACCESSORY);
-            ueid2 = userEquipHelper.getANewUserEquip(uid, 1, EquipConstants.EquipType.ARMOR);
-            ueid3 = userEquipHelper.getANewUserEquip(uid, 1, EquipConstants.EquipType.WEAPON);
+            ueid1 = userEquipHelper.addNewUserEquip(uid, EquipConstants.USER_EQUIP_DEFAULT_LEVEL, EquipConstants.EquipType.ACCESSORY);
+            ueid2 = userEquipHelper.addNewUserEquip(uid, EquipConstants.USER_EQUIP_DEFAULT_LEVEL, EquipConstants.EquipType.ARMOR);
+            ueid3 = userEquipHelper.addNewUserEquip(uid, EquipConstants.USER_EQUIP_DEFAULT_LEVEL, EquipConstants.EquipType.WEAPON);
             SlgLogger.info(SlgLoggerEntity.p("package", "addSomeEquipForRegister", uid, "ok")
                     .addParam("weapon", ueid3)
                     .addParam("accessory", ueid1)
@@ -221,6 +221,13 @@ public class UserPackageHelper {
     }
 
 
+    /**
+     * 获得当前包裹内某个材料的数量
+     *
+     * @param uid
+     * @param materialId
+     * @return
+     */
     public int getMaterialCount(long uid, int materialId) {
         UserPackageCO userPackageCO = get(uid);
         if (userPackageCO.getMaterial().get(materialId + "") == null)

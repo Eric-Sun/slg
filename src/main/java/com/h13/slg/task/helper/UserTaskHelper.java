@@ -223,7 +223,7 @@ public class UserTaskHelper implements ApplicationContextAware {
                 String tp2 = perAward.get(1);
                 int count = new Integer(perAward.get(3));
                 for (int i = 0; i < count; i++) {
-                    userEquipHelper.getANewUserEquip(uid, eid, tp2);
+                    userEquipHelper.addNewUserEquip(uid, eid, tp2);
                 }
             }
         }

@@ -1,12 +1,10 @@
 package com.h13.slg.core;
 
 import com.alibaba.fastjson.JSON;
-import com.h13.slg.auth.helper.AuthHelper;
+import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.event.service.EventService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -15,9 +13,6 @@ import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**

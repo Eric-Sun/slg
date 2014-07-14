@@ -49,20 +49,8 @@ public class UserRoleHelper {
      */
     public long addRoleForRegister(long uid) {
         long rid = 48;
-//        RoleCO roleCO = roleCache.get(rid + "");
-//        int fightForce = roleCO.getFightForce();
-//        int attack = roleCO.getAttack();
-//        int defence = roleCO.getDefence();
-//        int health = roleCO.getHealth();
-//        int soldier = roleCO.getSoldier();
-//        long urid = userRoleDAO.insert(rid, uid,
-//                RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID,
-//                RoleConstants.NO_EQUIP_ID, 1, fightForce,
-//                attack, defence, health, soldier);
-//        SlgLogger.info(
-//                SlgLoggerEntity.p("userRole", "addRoleForRegister", uid, "ok")
-//        );
-        return add(uid, rid).getId();
+        UserRoleCO userRoleCO = add(uid, rid);
+        return userRoleCO.getId();
     }
 
     /**
@@ -81,6 +69,11 @@ public class UserRoleHelper {
         );
     }
 
+    /**
+     * 更新用户将领对象
+     *
+     * @param userRoleCO
+     */
     public void updateUserRole(UserRoleCO userRoleCO) {
         userRoleDAO.update(userRoleCO.getId(), userRoleCO.getWeapon(), userRoleCO.getArmor(),
                 userRoleCO.getAccessory(),
@@ -90,6 +83,13 @@ public class UserRoleHelper {
                 userRoleCO.getSkillLevels(), userRoleCO.getRoleName(), userRoleCO.getXp());
     }
 
+    /**
+     * 添加一个新的用户将领
+     *
+     * @param uid
+     * @param rId
+     * @return
+     */
     public UserRoleCO add(long uid, long rId) {
         UserRoleCO userRoleCO = new UserRoleCO();
         RoleCO roleCO = roleCache.get(rId + "");
@@ -249,6 +249,7 @@ public class UserRoleHelper {
     }
 
 
+
     public void updateAttackDefenceHealth(long uid, long urid, int finalAttack, int finalDefence, int finalHealth) {
         UserRoleCO userRoleCO = getUserRole(uid, urid);
         userRoleCO.setAttack(finalAttack);
@@ -264,6 +265,12 @@ public class UserRoleHelper {
     }
 
 
+    /**
+     * 获得用户将领的列表
+     *
+     * @param uid
+     * @return
+     */
     public List<UserRoleCO> getUserRoleList(long uid) {
         List<UserRoleCO> userRoleList = userRoleDAO.getRoleList(uid);
         return userRoleList;
@@ -271,11 +278,15 @@ public class UserRoleHelper {
     }
 
 
+    /**
+     * 获得用户将领的详细信息
+     *
+     * @param uid
+     * @param urid
+     * @return
+     */
     public UserRoleCO getUserRole(long uid, long urid) {
-
-
         UserRoleCO userRoleCO = userRoleDAO.get(uid, urid);
-
         return userRoleCO;
     }
 
@@ -292,6 +303,13 @@ public class UserRoleHelper {
     }
 
 
+    /**
+     * 增加用户将领的经验，可能会升级武将
+     *
+     * @param uid
+     * @param urid
+     * @param xp
+     */
     public void addXp(int uid, int urid, int xp) {
         UserRoleCO userRoleCO = getUserRole(uid, urid);
         RoleLevelCO userLevelCO = roleLevelConfigFetcher.get(userRoleCO.getLevel() + "");

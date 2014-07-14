@@ -1,7 +1,6 @@
-package com.h13.slg.auth.cache;
+package com.h13.slg.user.cache;
 
-import com.h13.slg.auth.co.AuthCO;
-import com.h13.slg.task.co.UserTaskCO;
+import com.h13.slg.user.co.AuthCO;
 import com.h13.slg.web.SysConfig;
 import com.h13.slg.web.SysConfigConstants;
 import org.springframework.data.redis.core.RedisTemplate;

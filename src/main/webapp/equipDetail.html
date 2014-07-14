@@ -27,7 +27,7 @@
 <script id="userEquipTemplate" type="text/template">
     <div class="row">
         <div class="col-xs-4">
-            <%- equipInfo.name %>
+            <%- name %>
         </div>
     </div>
     <div class="row">
@@ -50,10 +50,12 @@
             升级
         </button>
         <div class="col-xs-4">
-            <%- materialType1Name %> : <%- materialType1CurrentCount %>/<%- materialType1NeedCount %>
+            <%- makeInfo.materialType1Name %> : <%- makeInfo.materialType1CurrentCount %>/<%-
+            makeInfo.materialType1NeedCount %>
         </div>
         <div class="col-xs-4">
-            <%- materialType2Name %> : <%- materialType2CurrentCount %>/<%- materialType2NeedCount %>
+            <%- makeInfo.materialType2Name %> : <%- makeInfo.materialType2CurrentCount %>/<%-
+            makeInfo.materialType2NeedCount %>
         </div>
     </div>
 
@@ -62,7 +64,7 @@
             强化
         </button>
         <div class="col-xs-10">
-            金币：<%- needGold %> : <%- curGold %>
+            金币：<%- strengthenInfo.needGold %> : <%- strengthenInfo.curGold %>
         </div>
     </div>
 </script>

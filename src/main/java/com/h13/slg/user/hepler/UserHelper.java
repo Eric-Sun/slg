@@ -1,6 +1,5 @@
 package com.h13.slg.user.hepler;
 
-import com.h13.slg.auth.helper.AuthHelper;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
@@ -12,12 +11,9 @@ import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
 import com.h13.slg.tavern.helper.TavernHelper;
 import com.h13.slg.user.cache.UserStatusCache;
-import com.h13.slg.user.co.UserInfoCO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.UserDAO;
 import com.h13.slg.user.dao.UserStatusDAO;
-import com.h13.slg.user.vo.CastleForLoginVO;
-import com.h13.slg.user.vo.FarmForLoginVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -112,7 +108,7 @@ public class UserHelper {
         // init farm castle timer
         farmHelper.create(uid);
         castleHelper.create(uid);
-        userPackageHelper.create(uid);
+        userPackageHelper.createDefaultPackage(uid);
         // 初始化任务数据
         userTaskHelper.create(uid);
         // 创建第一个人物

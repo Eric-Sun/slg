@@ -4,7 +4,6 @@ import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.equip.EquipConstants;
-import com.h13.slg.equip.vo.EquipInfoVO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.StrengthenCO;
@@ -14,8 +13,6 @@ import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.equip.dao.UserEquipDAO;
-import com.h13.slg.equip.vo.EquipMakeVO;
-import com.h13.slg.equip.vo.EquipStrengthenVO;
 import com.h13.slg.role.helper.FightForceHelper;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
@@ -74,7 +71,7 @@ public class UserEquipHelper {
      */
     public void updateUserEquip(UserEquipCO ue) {
         userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getGemsMap(), ue.getStrength(),
-                ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid(),ue.getName());
+                ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid(), ue.getName());
     }
 
 
@@ -82,10 +79,9 @@ public class UserEquipHelper {
      * 强化装备
      *
      * @param ueId
-     * @return EquipStrengthenVO
+     * @return int 下一个等级是多少
      */
-    public EquipStrengthenVO strengthen(long uid, long ueId) throws RequestErrorException {
-        EquipStrengthenVO vo = new EquipStrengthenVO();
+    public int strengthen(long uid, long ueId) throws RequestErrorException {
         // 获得当前的强化等级
         UserEquipCO ue = getUserEquip(uid, ueId);
         int curStrength = ue.getStrength();
@@ -116,21 +112,18 @@ public class UserEquipHelper {
         ue.setStrength(nextStrength);
         updateUserEquip(ue);
 
-        vo.setGold(cost);
-        vo.setStrength(nextStrength);
 
         long urid = ue.getUrid();
         // 更新fightforce
         fightForceHelper.updateUserRoleFightForce(uid, urid);
-        return vo;
+        return nextStrength;
     }
 
 
     /**
-     * 合成装备
+     * 合成装备 （升级）
      */
-    public EquipMakeVO make(long uid, int lucky, long ueId) throws RequestErrorException {
-        EquipMakeVO vo = new EquipMakeVO();
+    public int make(long uid, int lucky, long ueId) throws RequestErrorException {
         // 获得当前的装备等级
         UserEquipCO ue = getUserEquip(uid, ueId);
         int curLevel = ue.getLevel();
@@ -176,14 +169,8 @@ public class UserEquipHelper {
         ue.setName(getEquipNameFromConfig(type, nextLevel));
         updateUserEquip(ue);
 
-        vo.setLevel(nextLevel);
-        Map<String, Integer> map = new HashMap<String, Integer>();
-        map.put(materialId1 + "", materialCount1 * -1);
-        map.put(materialId2 + "", materialCount2 * -1);
-        vo.setMap(map);
-
         fightForceHelper.updateUserRoleFightForce(uid, ue.getUrid());
-        return vo;
+        return nextLevel;
     }
 
 
@@ -191,30 +178,24 @@ public class UserEquipHelper {
      * 获得一个新的装备，从商店通过军功购买，或者通过程序获得
      *
      * @param uid
-     * @param eid
+     * @param level
      * @param type EquipConstants.EquipType
      */
-    public long getANewUserEquip(long uid, int eid, String type) throws RequestErrorException {
+    public long addNewUserEquip(long uid, int level, String type) throws RequestErrorException {
         if (!EquipConstants.EquipType.ACCESSORY.equals(type)
                 &&
                 !EquipConstants.EquipType.ARMOR.equals(type)
                 &&
                 !EquipConstants.EquipType.WEAPON.equals(type)) {
             SlgLogger.error(SlgLoggerEntity.p("userequip", "getANewUserEquip", uid, "type is error.")
-                    .addParam("eid", eid).addParam("type", type));
+                    .addParam("level", level).addParam("type", type));
             throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "type is error");
         }
-        String name = null;
-        if (type.equals(EquipConstants.EquipType.ACCESSORY)) {
-            name = equipConfigFetcher.get(eid + "").getAccessoryName();
-        } else if (type.equals(EquipConstants.EquipType.ARMOR)) {
-            name = equipConfigFetcher.get(eid + "").getArmorName();
-        } else {
-            name = equipConfigFetcher.get(eid + "").getWeaponName();
-        }
+        String name = getEquipNameFromConfig(type, EquipConstants.USER_EQUIP_DEFAULT_LEVEL);
 
-        long ueid = userEquipDAO.insert(uid, type, eid, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE, name);
-        userPackageHelper.addEquipItem(uid, eid, ueid);
+
+        long ueid = userEquipDAO.insert(uid, type, level, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE, name);
+        userPackageHelper.addEquipItem(uid, level, ueid);
         return ueid;
     }
 
@@ -228,7 +209,7 @@ public class UserEquipHelper {
      * @return
      */
     public UserEquipCO getUserEquip(long uid, long urid, String type) {
-        UserEquipCO co = userEquipDAO.getUserEquips(uid, urid, type);
+        UserEquipCO co = userEquipDAO.get(uid, urid, type);
         return co;
     }
 
@@ -238,22 +219,6 @@ public class UserEquipHelper {
 
         return equipList;
     }
-
-    public EquipInfoVO getEquipInfo(UserEquipCO userEquipCO) {
-
-        EquipInfoVO equipInfoVO = new EquipInfoVO();
-        EquipCO equipCO = equipConfigFetcher.get(userEquipCO.getLevel() + "");
-        if (userEquipCO.getType().equals("weapon")) {
-            equipInfoVO.setName(equipCO.getWeaponName());
-        } else if (userEquipCO.getType().equals("accessory")) {
-            equipInfoVO.setName(equipCO.getAccessoryName());
-        } else {
-            equipInfoVO.setName(equipCO.getArmorName());
-        }
-
-        return equipInfoVO;
-    }
-
 
     /**
      * 通过type和level，读取配置文件，获得对应的name
@@ -274,6 +239,13 @@ public class UserEquipHelper {
         }
     }
 
+    /**
+     * 获得为使用的装备列表
+     *
+     * @param uid
+     * @param type
+     * @return
+     */
     public List<UserEquipCO> noUsedEquipList(long uid, String type) {
         List<UserEquipCO> list = userEquipDAO.noUsedEquipList(uid, type);
         return list;

@@ -1,7 +1,7 @@
 package com.h13.slg.web;
 
 import com.alibaba.fastjson.JSON;
-import com.h13.slg.auth.helper.AuthHelper;
+import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.core.SlgResponseDTO;
 import com.h13.slg.core.SlgDispatcher;
 import com.h13.slg.core.log.SlgLogger;
@@ -11,11 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.

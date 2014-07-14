@@ -11,4 +11,5 @@ public class FightConstants {
 
     public static final int ATTACK_ATTACK = 0;
     public static final int DEFENCE_ATTACK = 1;
+
 }

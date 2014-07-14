@@ -82,7 +82,7 @@ public class InventoryHelper {
             userPackageHelper.addRoleCodeItem(uid, id, num);
         } else {
             for (int i = 0; i < num; i++) {
-                userEquipHelper.getANewUserEquip(uid,id, type);
+                userEquipHelper.addNewUserEquip(uid,id, type);
             }
         }
 

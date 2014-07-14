@@ -1,4 +1,4 @@
-package com.h13.slg.auth.co;
+package com.h13.slg.user.co;
 
 /**
  * Created with IntelliJ IDEA.

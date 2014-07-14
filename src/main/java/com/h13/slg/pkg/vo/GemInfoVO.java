@@ -1,4 +1,4 @@
-package com.h13.slg.equip.vo;
+package com.h13.slg.pkg.vo;
 
 /**
  * Created with IntelliJ IDEA.
