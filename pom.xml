@@ -121,6 +121,9 @@
                 <directory>config/${config}</directory>
                 <filtering>true</filtering>
             </resource>
+            <resource>
+                <directory>src/main/resource</directory>
+            </resource>
         </resources>
         <plugins>
             <plugin>
