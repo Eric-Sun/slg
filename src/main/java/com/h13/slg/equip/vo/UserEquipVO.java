@@ -16,6 +16,15 @@ public class UserEquipVO {
     private int star;
     private EquipStrengthenInfoVO strengthenInfo;
     private EquipMakeInfoVO makeInfo;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getFail() {
         return fail;

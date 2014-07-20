@@ -17,13 +17,13 @@ var loginLoader = function () {
                 )
                 ;
             CommonUtil.doPost(c, function (msg) {
-                if (msg.code == 1001) {
+                if (msg.code != 0) {
                     CommonUtil.nav2Url("login.html", {});
                 }
 
                 Constants.authKey = msg.data.authKey;
                 Constants.authTime = msg.data.authTime;
-                Constants.uid = msg.data.userStatus.uid;
+                Constants.uid = msg.data.uid;
 
             });
 

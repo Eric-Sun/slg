@@ -221,6 +221,7 @@ public class UserEquipHelper {
     }
 
     /**
+     *
      * 通过type和level，读取配置文件，获得对应的name
      *
      * @param type

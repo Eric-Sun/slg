@@ -1,5 +1,13 @@
 package com.h13.slg.user.service;
 
+import com.google.common.collect.Lists;
+import com.h13.slg.battle.TeamConstants;
+import com.h13.slg.battle.co.UserTeamCO;
+import com.h13.slg.config.fetcher.LevelConfigFetcher;
+import com.h13.slg.config.fetcher.RoleConfigFetcher;
+import com.h13.slg.role.RoleConstants;
+import com.h13.slg.role.co.UserRoleCO;
+import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.user.co.AuthCO;
 import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.battle.helper.TeamHelper;
@@ -16,9 +24,12 @@ import com.h13.slg.user.hepler.CastleHelper;
 import com.h13.slg.user.hepler.FarmHelper;
 import com.h13.slg.user.hepler.UserHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
+import com.h13.slg.user.vo.UserRoleSimpleVO;
 import com.h13.slg.user.vo.UserStatusVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,15 +40,6 @@ import org.springframework.stereotype.Service;
  */
 @Service("UserService")
 public class UserServiceImpl implements UserService {
-
-    @Autowired
-    private GlobalConfigFetcher globalConfigFetcher;
-    @Autowired
-    private UserDAO userDAO;
-    @Autowired
-    private UserStatusDAO userStatusDAO;
-    @Autowired
-    private UserStatusCache userStatusCache;
 
     @Autowired
     FarmHelper farmHelper;
@@ -60,6 +62,13 @@ public class UserServiceImpl implements UserService {
     UserHelper userHelper;
     @Autowired
     AuthHelper authHelper;
+    @Autowired
+    UserRoleHelper userRoleHelper;
+    @Autowired
+    RoleConfigFetcher roleConfigFetcher;
+
+    @Autowired
+    LevelConfigFetcher levelConfigFetcher;
 
     @Override
     public SlgData login(SlgRequestDTO request) throws RequestErrorException {
@@ -68,24 +77,12 @@ public class UserServiceImpl implements UserService {
 
         // 尝试登陆
         int uid = userHelper.login(name, password);
-
-        // 获取用户的相关信息
-        UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
         AuthCO authCO = authHelper.createAuth(uid);
-        long farmTimer = farmHelper.getFarmInfo(uid).getTimer();
-        long castleTimer = castleHelper.getCastleInfo(uid).getTimer();
-
-        UserStatusVO userStatusVO = new UserStatusVO();
-        SlgBeanUtils.copyProperties(userStatusVO, userStatusCO);
-        userStatusVO.setCastleTimer(castleTimer);
-        userStatusVO.setFarmTimer(farmTimer);
-        userStatusVO.setUid(uid);
-        userStatusVO.setName(name);
 
         SlgData slgData = SlgData.getData()
-                .add("userStatus", userStatusVO)
                 .add("authTime", authCO.getAuthTime())
-                .add("authKey", authCO.getAuthKey());
+                .add("authKey", authCO.getAuthKey())
+                .add("uid", uid);
         return slgData;
 
     }
@@ -116,9 +113,22 @@ public class UserServiceImpl implements UserService {
         userStatusVO.setCastleTimer(castleTimer);
         userStatusVO.setFarmTimer(farmTimer);
         userStatusVO.setUid(uid);
+        userStatusVO.setLevelUpXp(levelConfigFetcher.get(userStatusCO.getLevel() + "").getXp());
+        UserTeamCO userTeamCO = teamHelper.get(uid);
+        List<UserRoleSimpleVO> teamRoleList = Lists.newLinkedList();
+        for (Integer urid : userTeamCO.getData()) {
+            if (urid == TeamConstants.NO_ROLE_IN_TEAM)
+                continue;
+            UserRoleSimpleVO vo = new UserRoleSimpleVO();
+            String roleName = userRoleHelper.getUserRole(uid, urid).getRoleName();
+            vo.setName(roleName);
+            vo.setId(urid);
+            teamRoleList.add(vo);
+        }
 
         SlgData slgData = SlgData.getData()
-                .add("userStatus", userStatusVO);
+                .add("userStatus", userStatusVO)
+                .add("teamRoleList", teamRoleList);
         return slgData;
     }
 

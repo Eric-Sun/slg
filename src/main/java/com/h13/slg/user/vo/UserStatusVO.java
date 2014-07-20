@@ -68,6 +68,16 @@ public class UserStatusVO {
     private long castleTimer;
     private long farmTimer;
 
+    private long levelUpXp;
+
+    public long getLevelUpXp() {
+        return levelUpXp;
+    }
+
+    public void setLevelUpXp(long levelUpXp) {
+        this.levelUpXp = levelUpXp;
+    }
+
     public long getCastleTimer() {
         return castleTimer;
     }
