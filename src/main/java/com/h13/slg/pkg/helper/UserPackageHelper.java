@@ -40,6 +40,7 @@ public class UserPackageHelper {
                 new HashMap<String, Integer>(),
                 new LinkedList<Integer>(),
                 new HashMap<String, Integer>(),
+                new HashMap<String, Integer>(),
                 new HashMap<String, Integer>());
         LOG.info("create new package. uid=" + id);
     }
@@ -79,6 +80,11 @@ public class UserPackageHelper {
     public void updateEquip(UserPackageCO userPackageCO) {
         userPackageDAO.updateEquip(userPackageCO.getId(), userPackageCO.getEquip());
     }
+
+    private void updateSkill(UserPackageCO userPackageCO) {
+        userPackageDAO.updateSkill(userPackageCO.getId(), userPackageCO.getSkill());
+    }
+
 
     /**
      * 获得用户的包裹
@@ -166,6 +172,21 @@ public class UserPackageHelper {
         Map data = userPackageCO.getGem();
         MapUtil.addItem(data, itemId + "", num);
         updateGem(userPackageCO);
+    }
+
+
+    /**
+     * 向宝石包裹内加入新的物品
+     *
+     * @param uid
+     * @param itemId
+     * @param num
+     */
+    public void addSkillItem(long uid, long itemId, int num) {
+        UserPackageCO userPackageCO = get(uid);
+        Map data = userPackageCO.getSkill();
+        MapUtil.addItem(data, itemId + "", num);
+        updateSkill(userPackageCO);
     }
 
     /**

@@ -3,9 +3,8 @@ package com.h13.slg.pkg.service;
 import com.google.common.collect.Lists;
 import com.h13.slg.config.co.GemCO;
 import com.h13.slg.config.co.MaterialCO;
-import com.h13.slg.config.fetcher.EquipConfigFetcher;
-import com.h13.slg.config.fetcher.GemConfigFetcher;
-import com.h13.slg.config.fetcher.MaterialConfigFetcher;
+import com.h13.slg.config.co.RoleSkillCO;
+import com.h13.slg.config.fetcher.*;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
@@ -15,6 +14,7 @@ import com.h13.slg.pkg.vo.GemInfoVO;
 import com.h13.slg.pkg.vo.MaterialInfoVO;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
+import com.h13.slg.pkg.vo.SkillInfoVO;
 import com.h13.slg.pkg.vo.UserPackageEquipVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +44,8 @@ public class PackageServiceImpl implements PackageService {
     GemConfigFetcher gemConfigFetcher;
     @Autowired
     MaterialConfigFetcher materialConfigFetcher;
+    @Autowired
+    RoleSkillConfigFetcher roleSkillConfigFetcher;
 
     @Override
     public SlgData get(SlgRequestDTO request) throws RequestErrorException {
@@ -85,7 +87,21 @@ public class PackageServiceImpl implements PackageService {
             MaterialInfoVO materialInfoVO = new MaterialInfoVO();
             materialInfoVO.setName(materialCO.getName());
             materialInfoVO.setId(materialCO.getId());
-            materialList.add(materialInfoVO) ;
+            materialList.add(materialInfoVO);
+        }
+
+
+        // skill
+        Map<String, Integer> skillMap = userPackageCO.getSkill();
+        List<SkillInfoVO> skillList = Lists.newLinkedList();
+
+        Set<String> skillIdSet = materialMap.keySet();
+        for (String skillId : skillIdSet) {
+            RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(skillId);
+            SkillInfoVO skillInfoVO = new SkillInfoVO();
+            skillInfoVO.setName(roleSkillCO.getName());
+            skillInfoVO.setId(roleSkillCO.getId());
+            skillList.add(skillInfoVO);
         }
 
 
@@ -93,6 +109,8 @@ public class PackageServiceImpl implements PackageService {
                 .add("gemMap", gemMap)
                 .add("gemList", gemList)
                 .add("materialMap", materialMap)
-                .add("materialList", materialList);
+                .add("materialList", materialList)
+                .add("skillMap", skillMap)
+                .add("skillList", skillList);
     }
 }

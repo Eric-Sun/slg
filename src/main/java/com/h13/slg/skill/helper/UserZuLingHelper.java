@@ -7,6 +7,8 @@ import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
 import com.h13.slg.config.fetcher.ZuLingConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.pkg.co.UserPackageCO;
+import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.skill.RoleSkillConstants;
 import com.h13.slg.skill.ZuLingConstants;
 import com.h13.slg.skill.co.UserZuLingCO;
@@ -36,6 +38,8 @@ public class UserZuLingHelper {
     ZuLingConfigFetcher zuLingConfigFetcher;
     @Autowired
     RoleSkillConfigFetcher roleSkillConfigFetcher;
+    @Autowired
+    UserPackageHelper userPackageHelper;
 
     public UserZuLingCO get(long uid) {
         return userZuLingDAO.get(uid);
@@ -120,6 +124,7 @@ public class UserZuLingHelper {
         int rsId = item.getRsId();
         RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(rsId + "");
 
+        userPackageHelper.addSkillItem(uid,rsId,1);
 
         return roleSkillCO;
 

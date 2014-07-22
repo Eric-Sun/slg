@@ -22,6 +22,16 @@ public class UserPackageCO {
     // 材料的id--》材料的数量
     private Map<String, Integer> material;
 
+    private Map<String,Integer> skill;
+
+    public Map<String, Integer> getSkill() {
+        return skill;
+    }
+
+    public void setSkill(Map<String, Integer> skill) {
+        this.skill = skill;
+    }
+
     public int getId() {
         return id;
     }
