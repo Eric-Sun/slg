@@ -1,0 +1,26 @@
+<roleSkillList>
+    <roleSkill>
+        <id>1</id>
+        <name>者级技能</name>
+        <type>putong</type>
+        <quality>zhe</quality>
+    </roleSkill>
+    <roleSkill>
+        <id>1</id>
+        <name>师级技能</name>
+        <type>putong</type>
+        <quality>shi</quality>
+    </roleSkill>
+    <roleSkill>
+        <id>1</id>
+        <name>王级技能</name>
+        <type>putong</type>
+        <quality>wang</quality>
+    </roleSkill>
+    <roleSkill>
+        <id>1</id>
+        <name>圣级技能</name>
+        <type>putong</type>
+        <quality>sheng</quality>
+    </roleSkill>
+</roleSkillList>

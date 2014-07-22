@@ -249,7 +249,6 @@ public class UserRoleHelper {
     }
 
 
-
     public void updateAttackDefenceHealth(long uid, long urid, int finalAttack, int finalDefence, int finalHealth) {
         UserRoleCO userRoleCO = getUserRole(uid, urid);
         userRoleCO.setAttack(finalAttack);
@@ -310,7 +309,7 @@ public class UserRoleHelper {
      * @param urid
      * @param xp
      */
-    public void addXp(int uid, int urid, int xp) {
+    public void addXp(int uid, int urid, int xp) throws RequestErrorException {
         UserRoleCO userRoleCO = getUserRole(uid, urid);
         RoleLevelCO userLevelCO = roleLevelConfigFetcher.get(userRoleCO.getLevel() + "");
         int curXp = userRoleCO.getXp();
@@ -324,6 +323,8 @@ public class UserRoleHelper {
             userRoleCO.setLevel(nextLevel);
             userRoleCO.setXp(finalXp);
             levelUp = true;
+            fightForceHelper.updateUserRoleFightForce(uid, urid);
+
         }
 
         updateUserRole(userRoleCO);

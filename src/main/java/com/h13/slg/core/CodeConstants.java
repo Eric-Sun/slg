@@ -35,4 +35,12 @@ public class CodeConstants {
         public static int USER_ROLE_HAVE_IN_TEAM = 4002;
         public static int POST_IS_NO_USER_ROLE = 4003;
     }
+
+    public static class ZuLing {
+        public static int ZULING_IS_FULL = 5001;
+        public static int SKILL_HAVE_GOT = 5002;
+        public static int ZULING_IS_EMPTY = 5003;
+
+    }
+
 }
