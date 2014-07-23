@@ -17,7 +17,7 @@ public class SkillConfigFetcher {
     @Autowired
     SkillCache cache;
 
-    public  get(int soldier, int skill) {
+    public SkillConfigCO get(int soldier, int skill) {
         return cache.get(soldier + "_" + skill);
     }
 

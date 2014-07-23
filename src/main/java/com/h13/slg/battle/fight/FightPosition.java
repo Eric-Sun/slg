@@ -1,5 +1,7 @@
 package com.h13.slg.battle.fight;
 
+import com.h13.slg.config.co.RoleSkillCO;
+
 /**
  * 战斗位
  */
@@ -14,6 +16,25 @@ public class FightPosition {
     private int health;
     private int type;
     private String name;
+    private int point;
+    private RoleSkillCO roleSkillCO;
+
+    public RoleSkillCO getRoleSkillCO() {
+        return roleSkillCO;
+    }
+
+    public void setRoleSkillCO(RoleSkillCO roleSkillCO) {
+        this.roleSkillCO = roleSkillCO;
+    }
+
+    public int getPoint() {
+        return point;
+    }
+
+    public void setPoint(int point) {
+        this.point = point;
+    }
+
 
     public static int getRole() {
         return ROLE;

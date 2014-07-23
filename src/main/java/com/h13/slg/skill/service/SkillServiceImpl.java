@@ -8,4 +8,8 @@ package com.h13.slg.skill.service;
  * To change this template use File | Settings | File Templates.
  */
 public class SkillServiceImpl implements SkillService {
+
+
+
+
 }
