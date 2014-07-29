@@ -57,7 +57,13 @@ var indexLoader = function () {
             "click #btnPackage": "btnPackage",
             "click #btnTeam": "navTeam",
             "click #btnTavern": "btnTavern",
-            "click #btnBattleList": "btnBattleList"
+            "click #btnBattleList": "btnBattleList",
+            "click #btnZuling": "btnZuling"
+
+        },
+        btnZuling: function () {
+            CommonUtil.nav2Url("zuling.html", {
+            });
         },
         harvestFood: function () {
             var c = new Command("farm", "harvest", {});

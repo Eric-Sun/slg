@@ -6,10 +6,12 @@ var packageLoader = function () {
     var userEquipCollection = new Backbone.Collection;
     var materialCollection = new Backbone.Collection;
     var gemCollection = new Backbone.Collection;
+    var roleSkillCollection = new Backbone.Collection;
     CommonUtil.doPost(cmd, function (msg) {
         var UserEquip = Backbone.Model;
         var MaterialInfo = Backbone.Model;
         var GemInfo = Backbone.Model;
+        var RoleSkillInfo = Backbone.Model;
         _.each(msg.data.equip, function (info, inde, list) {
             var userEquip = new UserEquip(info);
             userEquipCollection.add(userEquip);
@@ -28,6 +30,13 @@ var packageLoader = function () {
             materialInfo.set({count: count});
             materialCollection.add(materialInfo);
         });
+
+        _.each(msg.data.skillList, function (info, index, list) {
+            var roleSkillInfo = new RoleSkillInfo(info);
+            var count = msg.data.skillMap[roleSkillInfo.id];
+            roleSkillInfo.set({count: count});
+            roleSkillCollection.add(roleSkillInfo);
+        });
     });
 
     var PackageView = Backbone.View.extend({
@@ -37,13 +46,15 @@ var packageLoader = function () {
         events: {
             "click #btnEquipList": "btnEquipList",
             "click #btnGemList": "btnGemList",
-            "click #btnMaterialList": "btnMaterialList"
+            "click #btnMaterialList": "btnMaterialList",
+            "click #btnRoleSkillList": "btnRoleSkillList"
 
         },
         initialize: function () {
             this.userEquipList = this.model[0];
             this.gemList = this.model[1];
             this.materialList = this.model[2];
+            this.roleSkillList = this.model[3];
             this.btnEquipList();
         },
         btnEquipList: function () {
@@ -64,8 +75,12 @@ var packageLoader = function () {
                 this.showItem(this.materialList[index]);
             }
         },
-
-
+        btnRoleSkillList: function () {
+            $("#packageList").html("");
+            for (var index in this.roleSkillList) {
+                this.showItem(this.roleSkillList[index]);
+            }
+        },
         showItem: function (item) {
             var html = this.template(item.toJSON());
             $("#packageList").append(html);
@@ -78,7 +93,8 @@ var packageLoader = function () {
 
     });
 
-    var array = [userEquipCollection.models, gemCollection.models, materialCollection.models];
+    var array = [userEquipCollection.models, gemCollection.models, materialCollection.models,
+        roleSkillCollection.models];
     var packageView = new PackageView({model: array});
 
 }

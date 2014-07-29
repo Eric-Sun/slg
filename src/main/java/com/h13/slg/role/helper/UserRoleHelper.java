@@ -47,8 +47,8 @@ public class UserRoleHelper {
      *
      * @param uid
      */
-    public long addRoleForRegister(long uid) {
-        long rid = 48;
+    public long addRoleForRegister(int uid) {
+        int rid = 48;
         UserRoleCO userRoleCO = add(uid, rid);
         return userRoleCO.getId();
     }
@@ -90,7 +90,7 @@ public class UserRoleHelper {
      * @param rId
      * @return
      */
-    public UserRoleCO add(long uid, long rId) {
+    public UserRoleCO add(int uid, int rId) {
         UserRoleCO userRoleCO = new UserRoleCO();
         RoleCO roleCO = roleCache.get(rId + "");
         String name = roleCO.getName();
@@ -111,7 +111,7 @@ public class UserRoleHelper {
         int defaultXp = 0;
 
         // 检查是否在招贤馆中
-        long urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID,
+        int urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID,
                 RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, 1, fightForce,
                 attack, defence, health, soldier, curSkill,
                 skillLevels, name, defaultXp);
@@ -145,7 +145,7 @@ public class UserRoleHelper {
      * @param ueid
      * @throws RequestErrorException
      */
-    public void wear(long uid, long urid, long ueid) throws RequestErrorException {
+    public void wear(int uid, int urid, int ueid) throws RequestErrorException {
         UserRoleCO ur = getUserRole(uid, urid);
         UserEquipCO ue = userEquipHelper.getUserEquip(uid, ueid);
         if (ue.getUid() != uid) {

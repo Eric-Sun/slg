@@ -50,7 +50,7 @@ public class TavernServiceImpl implements TavernService {
 
     @Override
     public SlgData enroll(SlgRequestDTO request) throws RequestErrorException {
-        long uid = request.getUid();
+        int uid = request.getUid();
         int pos = new Integer(request.getArgs().get("pos") + "");
         EnrollUserRoleVO vo = tavernHelper.enroll(uid, pos);
         return SlgData.getData().add("role", vo);

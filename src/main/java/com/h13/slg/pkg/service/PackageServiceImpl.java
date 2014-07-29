@@ -95,7 +95,7 @@ public class PackageServiceImpl implements PackageService {
         Map<String, Integer> skillMap = userPackageCO.getSkill();
         List<SkillInfoVO> skillList = Lists.newLinkedList();
 
-        Set<String> skillIdSet = materialMap.keySet();
+        Set<String> skillIdSet = skillMap.keySet();
         for (String skillId : skillIdSet) {
             RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(skillId);
             SkillInfoVO skillInfoVO = new SkillInfoVO();

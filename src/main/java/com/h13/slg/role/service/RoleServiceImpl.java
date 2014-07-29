@@ -22,6 +22,10 @@ import com.h13.slg.role.vo.UserRoleAccessoryVO;
 import com.h13.slg.role.vo.UserRoleArmorVO;
 import com.h13.slg.role.vo.UserRoleVO;
 import com.h13.slg.role.vo.UserRoleWeaponVO;
+import com.h13.slg.skill.RoleSkillConstants;
+import com.h13.slg.skill.co.UserRoleSkillCO;
+import com.h13.slg.skill.helper.RoleSkillHelper;
+import com.h13.slg.skill.vo.UserRoleSkillVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,11 +51,13 @@ public class RoleServiceImpl implements RoleService {
     EquipConfigFetcher equipConfigFetcher;
     @Autowired
     UserEquipHelper userEquipHelper;
+    @Autowired
+    RoleSkillHelper roleSkillHelper;
 
 
     @Override
     public SlgData wear(SlgRequestDTO requestDTO) throws RequestErrorException {
-        long uid = requestDTO.getUid();
+        int uid = requestDTO.getUid();
         int ueid = new Integer(requestDTO.getArgs().get("ueid").toString());
         int urid = new Integer(requestDTO.getArgs().get("urid").toString());
 
@@ -74,7 +80,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public SlgData userRoleList(SlgRequestDTO requestDTO) throws RequestErrorException {
-        long uid = requestDTO.getUid();
+        int uid = requestDTO.getUid();
         List<UserRoleCO> userRoleList = userRoleHelper.getUserRoleList(uid);
         List<UserRoleVO> voList = Lists.newLinkedList();
         // 获得将领的名称
@@ -123,9 +129,24 @@ public class RoleServiceImpl implements RoleService {
                 userRoleVO.setArmorInfo(null);
             }
 
+            UserRoleSkillCO putongUserRoleSkillCO = roleSkillHelper.getPutong(uid, ur.getId());
+            UserRoleSkillCO tianfuUserRoleSkillCO = roleSkillHelper.getTianfu(uid, ur.getId());
+            UserRoleSkillVO putongVO = new UserRoleSkillVO();
+            UserRoleSkillVO tianfuVO = new UserRoleSkillVO();
+
+            if (putongUserRoleSkillCO != null) {
+                SlgBeanUtils.copyProperties(putongVO, putongUserRoleSkillCO);
+                userRoleVO.setPutongRoleSkill(putongVO);
+            }
+            if (tianfuUserRoleSkillCO != null) {
+                SlgBeanUtils.copyProperties(tianfuVO, tianfuUserRoleSkillCO);
+                userRoleVO.setTianfuRoleSkill(tianfuVO);
+            }
+
+            voList.add(userRoleVO);
         }
 
-        return SlgData.getData().add("list", userRoleList);
+        return SlgData.getData().add("list", voList);
     }
 
     @Override

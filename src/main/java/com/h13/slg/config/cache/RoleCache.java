@@ -32,7 +32,7 @@ public class RoleCache extends BasicCache<RoleCO> {
     private RedisTemplate<String, RoleCO> roleTemplate;
 
     @Resource(name = "rolePartitionTemplate")
-    private RedisTemplate<String, Long> rolePartitionTemplate;
+    private RedisTemplate<String, Integer> rolePartitionTemplate;
 
 
     @Override
@@ -74,19 +74,19 @@ public class RoleCache extends BasicCache<RoleCO> {
     }
 
 
-    public Long getFromZhaoxian(int index, String quality) {
+    public int getFromZhaoxian(int index, String quality) {
         return rolePartitionTemplate.opsForList().index(KEY_ZHAOXIAN + "_" + quality, index);
     }
 
-    public Long getFromFuben(int index, String quality) {
+    public int getFromFuben(int index, String quality) {
         return rolePartitionTemplate.opsForList().index(KEY_FUBEN + "_" + quality, index);
     }
 
-    public Long getFromHuodong(int index, String quality) {
+    public int getFromHuodong(int index, String quality) {
         return rolePartitionTemplate.opsForList().index(KEY_HUODONG + "_" + quality, index);
     }
 
-    public Long getFromDuihuan(int index, String quality) {
+    public int getFromDuihuan(int index, String quality) {
         return rolePartitionTemplate.opsForList().index(KEY_DUIHUAN + "_" + quality, index);
     }
 

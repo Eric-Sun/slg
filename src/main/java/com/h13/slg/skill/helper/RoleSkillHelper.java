@@ -36,6 +36,14 @@ public class RoleSkillHelper {
         return userRoleSkillDAO.get(uid, rid, ursid);
     }
 
+    public UserRoleSkillCO getTianfu(int uid, int rid) {
+        return userRoleSkillDAO.getTianfu(uid, rid);
+    }
+
+    public UserRoleSkillCO getPutong(int uid, int rid) {
+        return userRoleSkillDAO.getPutong(uid, rid);
+    }
+
     public void update(UserRoleSkillCO userRoleSkillCO) {
         userRoleSkillDAO.update(userRoleSkillCO);
     }

@@ -12,7 +12,7 @@ public class RoleConstants {
     /**
      * 用户将领没装备装备
      */
-    public static long NO_EQUIP_ID = 0;
+    public static int NO_EQUIP_ID = 0;
     public static int NO_SKILL_SELECTED = 0;
 
 }

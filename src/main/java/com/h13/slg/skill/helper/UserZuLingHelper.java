@@ -1,6 +1,7 @@
 package com.h13.slg.skill.helper;
 
 import com.google.common.collect.Lists;
+import com.h13.slg.config.cache.RoleSkillCache;
 import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.co.ZuLingCO;
 import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
@@ -11,6 +12,7 @@ import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.skill.RoleSkillConstants;
 import com.h13.slg.skill.ZuLingConstants;
+import com.h13.slg.skill.co.UserRoleSkillCO;
 import com.h13.slg.skill.co.UserZuLingCO;
 import com.h13.slg.skill.co.UserZuLingItemCO;
 import com.h13.slg.skill.dao.UserZuLingDAO;
@@ -79,11 +81,11 @@ public class UserZuLingHelper {
             list.add(item);
 
             RoleSkillVO vo = new RoleSkillVO();
-            vo.setId(roleSkillCO.getId());
+            vo.setRsid(roleSkillCO.getId());
             vo.setName(roleSkillCO.getName());
             vo.setQuality(roleSkillCO.getQuality());
             vo.setType(roleSkillCO.getType());
-
+            vo.setStatus(UserRoleSkillCO.COMMON);
             voList.add(vo);
         }
 
@@ -151,11 +153,11 @@ public class UserZuLingHelper {
 
 
             RoleSkillVO vo = new RoleSkillVO();
-            vo.setId(item.getRsId());
+            vo.setRsid(item.getRsId());
             vo.setName(roleSkillCO.getName());
             vo.setType(roleSkillCO.getType());
             vo.setQuality(roleSkillCO.getQuality());
-
+            vo.setStatus(item.getStatus());
             voList.add(vo);
         }
 

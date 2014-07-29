@@ -1,5 +1,7 @@
 package com.h13.slg.role.vo;
 
+import com.h13.slg.skill.vo.UserRoleSkillVO;
+
 import java.util.Map;
 
 /**
@@ -29,6 +31,25 @@ public class UserRoleVO {
     private UserRoleAccessoryVO accessoryInfo;
     private UserRoleArmorVO armorInfo;
     private Map<String, Integer> skillLevels;
+
+    private UserRoleSkillVO tianfuRoleSkill;
+    private UserRoleSkillVO putongRoleSkill;
+
+    public UserRoleSkillVO getTianfuRoleSkill() {
+        return tianfuRoleSkill;
+    }
+
+    public void setTianfuRoleSkill(UserRoleSkillVO tianfuRoleSkill) {
+        this.tianfuRoleSkill = tianfuRoleSkill;
+    }
+
+    public UserRoleSkillVO getPutongRoleSkill() {
+        return putongRoleSkill;
+    }
+
+    public void setPutongRoleSkill(UserRoleSkillVO putongRoleSkill) {
+        this.putongRoleSkill = putongRoleSkill;
+    }
 
     public int getXp() {
         return xp;

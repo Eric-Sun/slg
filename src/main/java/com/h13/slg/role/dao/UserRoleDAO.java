@@ -31,13 +31,13 @@ public class UserRoleDAO {
     @Autowired
     JdbcTemplate j;
 
-    public long insert(final long roleId, final long uid,
-                       final long weapon,
-                       final long armor, final long accessory,
-                       final int level, final int fightForce,
-                       final int attack, final int defence, final int health, final int soldier,
-                       final int curSkill, final Map<String, Integer> skillLevels,
-                       final String roleName, final int xp) {
+    public int insert(final long roleId, final long uid,
+                      final long weapon,
+                      final long armor, final long accessory,
+                      final int level, final int fightForce,
+                      final int attack, final int defence, final int health, final int soldier,
+                      final int curSkill, final Map<String, Integer> skillLevels,
+                      final String roleName, final int xp) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_role " +
                 "(role_id,uid,weapon,armor,accessory,level,fight_force," +
@@ -65,7 +65,7 @@ public class UserRoleDAO {
                 return pstmt;
             }
         }, holder);
-        return holder.getKey().longValue();
+        return new Long(holder.getKey().longValue()).intValue();
     }
 
     public UserRoleCO get(long uid, long urId) {
@@ -75,9 +75,9 @@ public class UserRoleDAO {
             @Override
             public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
                 UserRoleCO userRoleCO = new UserRoleCO();
-                userRoleCO.setId(rs.getLong(1));
-                userRoleCO.setRoleId(rs.getLong(2));
-                userRoleCO.setUid(rs.getLong(3));
+                userRoleCO.setId(rs.getInt(1));
+                userRoleCO.setRoleId(rs.getInt(2));
+                userRoleCO.setUid(rs.getInt(3));
                 userRoleCO.setWeapon(rs.getInt(4));
                 userRoleCO.setArmor(rs.getInt(5));
                 userRoleCO.setAccessory(rs.getInt(6));
@@ -104,9 +104,9 @@ public class UserRoleDAO {
             @Override
             public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
                 UserRoleCO userRoleCO = new UserRoleCO();
-                userRoleCO.setId(rs.getLong(1));
-                userRoleCO.setRoleId(rs.getLong(2));
-                userRoleCO.setUid(rs.getLong(3));
+                userRoleCO.setId(rs.getInt(1));
+                userRoleCO.setRoleId(rs.getInt(2));
+                userRoleCO.setUid(rs.getInt(3));
                 userRoleCO.setWeapon(rs.getInt(4));
                 userRoleCO.setArmor(rs.getInt(5));
                 userRoleCO.setAccessory(rs.getInt(6));

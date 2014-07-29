@@ -25,7 +25,39 @@
     </roleSkill>
     <roleSkill>
         <id>4</id>
-        <name>黄级技能</name>
+        <name>黄级技能1</name>
+        <type>putong</type>
+        <quality>huang</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
+    </roleSkill>
+    <roleSkill>
+        <id>5</id>
+        <name>黄级技能2</name>
+        <type>putong</type>
+        <quality>huang</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
+    </roleSkill>
+    <roleSkill>
+        <id>6</id>
+        <name>黄级技能3</name>
+        <type>putong</type>
+        <quality>huang</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
+    </roleSkill>
+    <roleSkill>
+        <id>7</id>
+        <name>黄级技能4</name>
+        <type>putong</type>
+        <quality>huang</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
+    </roleSkill>
+    <roleSkill>
+        <id>8</id>
+        <name>黄级技能5</name>
         <type>putong</type>
         <quality>huang</quality>
         <upgradeMetarial>19</upgradeMetarial>

@@ -13,7 +13,7 @@ import org.apache.commons.digester3.annotations.rules.ObjectCreate;
 @ObjectCreate(pattern = "roleList/role")
 public class RoleCO {
     @BeanPropertySetter(pattern = "roleList/role/id")
-    private long id;
+    private int id;
     @BeanPropertySetter(pattern = "roleList/role/name")
     private String name;
     @BeanPropertySetter(pattern = "roleList/role/quantity")
@@ -76,12 +76,12 @@ public class RoleCO {
     private int specialSkill;
 
 
-    public long getId() {
+    public int getId() {
 
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

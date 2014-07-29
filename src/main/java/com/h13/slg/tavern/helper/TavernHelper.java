@@ -232,7 +232,7 @@ public class TavernHelper {
      * @return
      * @throws RequestErrorException
      */
-    public EnrollUserRoleVO enroll(long uid, int pos) throws RequestErrorException {
+    public EnrollUserRoleVO enroll(int uid, int pos) throws RequestErrorException {
         EnrollUserRoleVO vo = new EnrollUserRoleVO();
         try {
             // enroll

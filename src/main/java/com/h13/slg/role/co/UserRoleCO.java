@@ -14,13 +14,13 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class UserRoleCO {
-    private long id;
-    private long roleId;
-    private long uid;
+    private int id;
+    private int roleId;
+    private int uid;
     private int level;
-    private long weapon;
-    private long armor;
-    private long accessory;
+    private int weapon;
+    private int armor;
+    private int accessory;
     private int fightForce;
     private int attack;
     private int defence;
@@ -31,76 +31,28 @@ public class UserRoleCO {
     private int xp;
     private Map<String, Integer> skillLevels;
 
-    public Map<String, Integer> getSkillLevels() {
-        return skillLevels;
-    }
-
-    public void setSkillLevels(Map<String, Integer> skillLevels) {
-        this.skillLevels = skillLevels;
-    }
-
-    public long getAccessory() {
-        return accessory;
-    }
-
-    public void setAccessory(long accessory) {
-        this.accessory = accessory;
-    }
-
-    public long getArmor() {
-        return armor;
-    }
-
-    public void setArmor(long armor) {
-        this.armor = armor;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-
-    public int getCurSkill() {
-        return curSkill;
-    }
-
-    public void setCurSkill(int curSkill) {
-        this.curSkill = curSkill;
-    }
-
-    public int getDefence() {
-        return defence;
-    }
-
-    public void setDefence(int defence) {
-        this.defence = defence;
-    }
-
-    public int getFightForce() {
-        return fightForce;
-    }
-
-    public void setFightForce(int fightForce) {
-        this.fightForce = fightForce;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     public int getLevel() {
@@ -111,20 +63,60 @@ public class UserRoleCO {
         this.level = level;
     }
 
-    public long getRoleId() {
-        return roleId;
+    public int getWeapon() {
+        return weapon;
     }
 
-    public void setRoleId(long roleId) {
-        this.roleId = roleId;
+    public void setWeapon(int weapon) {
+        this.weapon = weapon;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public int getArmor() {
+        return armor;
     }
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setArmor(int armor) {
+        this.armor = armor;
+    }
+
+    public int getAccessory() {
+        return accessory;
+    }
+
+    public void setAccessory(int accessory) {
+        this.accessory = accessory;
+    }
+
+    public int getFightForce() {
+        return fightForce;
+    }
+
+    public void setFightForce(int fightForce) {
+        this.fightForce = fightForce;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public int getDefence() {
+        return defence;
+    }
+
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getSoldier() {
@@ -135,20 +127,20 @@ public class UserRoleCO {
         this.soldier = soldier;
     }
 
-    public long getUid() {
-        return uid;
+    public int getCurSkill() {
+        return curSkill;
     }
 
-    public void setUid(long uid) {
-        this.uid = uid;
+    public void setCurSkill(int curSkill) {
+        this.curSkill = curSkill;
     }
 
-    public long getWeapon() {
-        return weapon;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setWeapon(long weapon) {
-        this.weapon = weapon;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
     public int getXp() {
@@ -157,5 +149,13 @@ public class UserRoleCO {
 
     public void setXp(int xp) {
         this.xp = xp;
+    }
+
+    public Map<String, Integer> getSkillLevels() {
+        return skillLevels;
+    }
+
+    public void setSkillLevels(Map<String, Integer> skillLevels) {
+        this.skillLevels = skillLevels;
     }
 }

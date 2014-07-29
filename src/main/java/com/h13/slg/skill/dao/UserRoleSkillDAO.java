@@ -2,6 +2,7 @@ package com.h13.slg.skill.dao;
 
 import com.h13.slg.skill.co.UserRoleSkillCO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -74,6 +75,24 @@ public class UserRoleSkillDAO {
     public int count(int uid, int rid, String type) {
         final String sql = "select count(1) from user_role_skill where uid=? and rid=? and `type`=? and `delete`=?";
         return j.queryForInt(sql, new Object[]{uid, rid, type, UserRoleSkillCO.COMMON});
+    }
+
+    public UserRoleSkillCO getTianfu(int uid, int rid) {
+        final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and rid=? and `delete`=0 and `type`='tianfu'";
+        try {
+            return j.queryForObject(sql, new Object[]{uid, rid}, new BeanPropertyRowMapper<UserRoleSkillCO>(UserRoleSkillCO.class));
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+    }
+
+    public UserRoleSkillCO getPutong(int uid, int rid) {
+        final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and rid=? and `delete`=0 and `type`='putong'";
+        try {
+            return j.queryForObject(sql, new Object[]{uid, rid}, new BeanPropertyRowMapper<UserRoleSkillCO>(UserRoleSkillCO.class));
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 
 }

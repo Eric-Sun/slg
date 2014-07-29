@@ -8,9 +8,9 @@ import java.util.Map;
  * 用户装备
  */
 public class UserEquipCO {
-    private long id;
-    private long uid;
-    private long urid;
+    private int id;
+    private int uid;
+    private int urid;
     private String type;
     private int level;
     private String gems;
@@ -20,36 +20,28 @@ public class UserEquipCO {
     private int star;
     private String name;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getUrid() {
-        return urid;
-    }
-
-    public void setUrid(long urid) {
-        this.urid = urid;
-    }
-
-    public long getUid() {
-        return uid;
-    }
-
-    public void setUid(long uid) {
-        this.uid = uid;
-    }
-
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public int getUrid() {
+        return urid;
+    }
+
+    public void setUrid(int urid) {
+        this.urid = urid;
     }
 
     public String getType() {
@@ -68,16 +60,8 @@ public class UserEquipCO {
         this.level = level;
     }
 
-    public Map<String, String> getGemsMap() {
-        return JSON.parseObject(gems, Map.class);
-    }
-
     public String getGems() {
         return gems;
-    }
-
-    public void setGemsMap(Map<String, String> data) {
-        this.gems = JSON.toJSONString(data);
     }
 
     public void setGems(String gems) {
@@ -114,5 +98,13 @@ public class UserEquipCO {
 
     public void setStar(int star) {
         this.star = star;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

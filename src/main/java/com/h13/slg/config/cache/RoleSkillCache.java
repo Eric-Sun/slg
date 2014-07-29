@@ -36,14 +36,14 @@ public class RoleSkillCache extends BasicCache<RoleSkillCO> {
         XmlParser<RoleSkillXMLCO> parser = new XmlParser<RoleSkillXMLCO>(RoleSkillXMLCO.class,
                 filename);
         RoleSkillXMLCO obj = parser.parse();
+
+        roleSkillTemplate.opsForList().getOperations().delete(HUANG);
+        roleSkillTemplate.opsForList().getOperations().delete(XUAN);
+        roleSkillTemplate.opsForList().getOperations().delete(DI);
+        roleSkillTemplate.opsForList().getOperations().delete(TIAN);
+
         for (String id : obj.getMap().keySet()) {
             roleSkillTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
-
-            roleSkillTemplate.opsForList().getOperations().delete(HUANG);
-            roleSkillTemplate.opsForList().getOperations().delete(XUAN);
-            roleSkillTemplate.opsForList().getOperations().delete(DI);
-            roleSkillTemplate.opsForList().getOperations().delete(TIAN);
-
 
             RoleSkillCO roleSkillCO = obj.getMap().get(id);
             if (roleSkillCO.getQuality().equals(RoleSkillConstants.HUANG)) {

@@ -8,11 +8,20 @@ package com.h13.slg.skill.vo;
  * To change this template use File | Settings | File Templates.
  */
 public class RoleSkillVO {
-    private int id;
+    private int rsid;
     private String name;
     private String type;
     private String quality;
     private int packageCount;
+    private int status;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public int getPackageCount() {
         return packageCount;
@@ -22,12 +31,12 @@ public class RoleSkillVO {
         this.packageCount = packageCount;
     }
 
-    public int getId() {
-        return id;
+    public int getRsid() {
+        return rsid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRsid(int rsid) {
+        this.rsid = rsid;
     }
 
     public String getName() {

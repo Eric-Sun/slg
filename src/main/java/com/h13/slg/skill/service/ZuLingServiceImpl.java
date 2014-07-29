@@ -72,6 +72,7 @@ public class ZuLingServiceImpl implements ZuLingService {
         RoleSkillCO roleSkillCO = userZuLingHelper.getSkill(uid, index);
         RoleSkillVO roleSkillVO = new RoleSkillVO();
         SlgBeanUtils.copyProperties(roleSkillVO, roleSkillCO);
+        roleSkillVO.setRsid(roleSkillCO.getId());
 
         return SlgData.getData().add("roleSkill", roleSkillVO);
     }
