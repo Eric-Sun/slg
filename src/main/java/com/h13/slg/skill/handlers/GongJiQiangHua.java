@@ -3,11 +3,8 @@ package com.h13.slg.skill.handlers;
 import com.h13.slg.battle.fight.FightPosition;
 import com.h13.slg.battle.fight.FightUnit;
 import com.h13.slg.config.co.RoleSkillCO;
-import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.skill.helper.BaseRoleSkillHandler;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -31,7 +28,7 @@ public class GongJiQiangHua extends BaseRoleSkillHandler {
     }
 
     @Override
-    public void beforeAttack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit, int attackPos) {
+    public void beforeAttack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit, int attackPos, int defencePos) {
         FightPosition attackPosition = attackFightUnit.getAllPos()[attackPos];
 
         int attack = attackPosition.getAttack();

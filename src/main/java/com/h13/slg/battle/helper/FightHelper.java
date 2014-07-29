@@ -99,9 +99,10 @@ public class FightHelper {
             fightPosition.setId(urid);
             fightPosition.setName(userRoleCO.getRoleName());
             fightPosition.setType(FightPosition.ROLE);
+
             attackFightUnit.add(i, fightPosition);
         }
-        FightResult fightResult = fightHandler.fight(attackFightUnit, defenceFightUnit);
+        FightResult fightResult = fightHandler.fight(uid, attackFightUnit, defenceFightUnit);
 
 
         // reward

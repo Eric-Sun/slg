@@ -1,5 +1,12 @@
 package com.h13.slg.skill.service;
 
+import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgData;
+import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.skill.vo.RoleSkillVO;
+
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
@@ -10,5 +17,12 @@ package com.h13.slg.skill.service;
 public interface SkillService {
 
 
+    public SlgData skillList(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+    public SlgData setSkill(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+    public SlgData resetSkill(SlgRequestDTO requestDTO) throws RequestErrorException;
+
+    public SlgData upgrade(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 }

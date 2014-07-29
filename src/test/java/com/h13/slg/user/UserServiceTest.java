@@ -61,7 +61,7 @@ public class UserServiceTest {
         map.put("act","login");
         map.put("auth_key","fdsafdsa");
         map.put("auth_time","24321431") ;
-        map.put("args","{name:'aaa',password:'bbb'}");
+        map.put("args","{name:'ssss',password:'bbbb'}");
         map.put("seq","1");
         String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);

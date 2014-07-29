@@ -2,7 +2,7 @@ package com.h13.slg.battle.fight;
 
 import com.google.common.collect.Lists;
 import com.h13.slg.battle.FightConstants;
-import com.h13.slg.skill.helper.BaseRoleSkillHandler;
+import com.h13.slg.skill.handlers.BaseRoleSkillHandler;
 import com.h13.slg.web.WebApplicationContentHolder;
 import org.springframework.stereotype.Service;
 
@@ -41,15 +41,14 @@ public class FightHandler {
         int round = 1;
         while (!finished) {
 
-            finished = attack(uid, attackFightUnit, defenceFightUnit, fightResult, round);
+            finished = attack(uid, attackFightUnit, defenceFightUnit, fightResult, round, true);
             if (finished) {
                 fightResult.setStatus(FightResult.WIN);
                 break;
             }
 
-            finished = attack(uid, defenceFightUnit, attackFightUnit, fightResult, round);
+            finished = attack(uid, defenceFightUnit, attackFightUnit, fightResult, round, false);
             if (finished) {
-
                 fightResult.setStatus(FightResult.LOSE);
                 break;
             }
@@ -109,7 +108,7 @@ public class FightHandler {
 
 
     public boolean attack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
-                          FightResult fightResult, int round) {
+                          FightResult fightResult, int round, boolean attackAttack) {
         // 每个回合从0开始到9，依次攻击
         for (int attackPos = 0; attackPos < 9; attackPos++) {
             if (attackFightUnit.getAllPos()[attackPos] == null)
@@ -143,7 +142,10 @@ public class FightHandler {
 
             FightLog fightLog = new FightLog();
             // 攻击方一定是人
-            fightLog.setAttack(FightConstants.ATTACK_ATTACK);
+            if (attackAttack)
+                fightLog.setAttack(FightConstants.ATTACK_ATTACK);
+            else
+                fightLog.setAttack(FightConstants.DEFENCE_ATTACK);
             PosInfo attackPosInfo = new PosInfo();
             attackPosInfo.setId(attackPosition.getId());
             attackPosInfo.setName(attackPosition.getName());

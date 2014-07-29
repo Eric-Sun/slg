@@ -22,10 +22,10 @@ import javax.annotation.Resource;
 public class RoleSkillCache extends BasicCache<RoleSkillCO> {
 
     private static final String KEY = "slg:sys:roleSkill:";
-    private static final String ZHE = "slg:sys:roleSkill:zhe";
-    private static final String SHI = "slg:sys:roleSkill:shi";
-    private static final String WANG = "slg:sys:roleSkill:wang";
-    private static final String SHENG = "slg:sys:roleSkill:sheng";
+    private static final String TIAN = "slg:sys:roleSkill:tian";
+    private static final String DI = "slg:sys:roleSkill:di";
+    private static final String XUAN = "slg:sys:roleSkill:xuan";
+    private static final String HUANG = "slg:sys:roleSkill:huang";
 
 
     @Resource(name = "roleSkillTemplate")
@@ -39,15 +39,21 @@ public class RoleSkillCache extends BasicCache<RoleSkillCO> {
         for (String id : obj.getMap().keySet()) {
             roleSkillTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
 
+            roleSkillTemplate.opsForList().getOperations().delete(HUANG);
+            roleSkillTemplate.opsForList().getOperations().delete(XUAN);
+            roleSkillTemplate.opsForList().getOperations().delete(DI);
+            roleSkillTemplate.opsForList().getOperations().delete(TIAN);
+
+
             RoleSkillCO roleSkillCO = obj.getMap().get(id);
-            if (roleSkillCO.getQuality().equals(RoleSkillConstants.ZHE)) {
-                roleSkillTemplate.opsForList().leftPush(ZHE, roleSkillCO);
-            } else if (roleSkillCO.getQuality().equals(RoleSkillConstants.SHI)) {
-                roleSkillTemplate.opsForList().leftPush(SHI, roleSkillCO);
-            } else if (roleSkillCO.getQuality().equals(RoleSkillConstants.WANG)) {
-                roleSkillTemplate.opsForList().leftPush(WANG, roleSkillCO);
+            if (roleSkillCO.getQuality().equals(RoleSkillConstants.HUANG)) {
+                roleSkillTemplate.opsForList().leftPush(HUANG, roleSkillCO);
+            } else if (roleSkillCO.getQuality().equals(RoleSkillConstants.XUAN)) {
+                roleSkillTemplate.opsForList().leftPush(XUAN, roleSkillCO);
+            } else if (roleSkillCO.getQuality().equals(RoleSkillConstants.DI)) {
+                roleSkillTemplate.opsForList().leftPush(DI, roleSkillCO);
             } else {
-                roleSkillTemplate.opsForList().leftPush(SHENG, roleSkillCO);
+                roleSkillTemplate.opsForList().leftPush(TIAN, roleSkillCO);
             }
 
         }
@@ -62,12 +68,29 @@ public class RoleSkillCache extends BasicCache<RoleSkillCO> {
 
 
     public long getSize(String key) {
-        return roleSkillTemplate.opsForList().size(key);
+        if (key.equals(RoleSkillConstants.HUANG)) {
+            return roleSkillTemplate.opsForList().size(HUANG);
+        } else if (key.equals(RoleSkillConstants.XUAN)) {
+            return roleSkillTemplate.opsForList().size(XUAN);
+        } else if (key.equals(RoleSkillConstants.DI)) {
+            return roleSkillTemplate.opsForList().size(DI);
+        } else {
+            return roleSkillTemplate.opsForList().size(TIAN);
+        }
     }
 
 
     public RoleSkillCO getInList(String key, long index) {
-        return roleSkillTemplate.opsForList().index(key, index);
+        if (key.equals(RoleSkillConstants.HUANG)) {
+            return roleSkillTemplate.opsForList().index(HUANG, index);
+        } else if (key.equals(RoleSkillConstants.XUAN)) {
+            return roleSkillTemplate.opsForList().index(XUAN, index);
+        } else if (key.equals(RoleSkillConstants.DI)) {
+            return roleSkillTemplate.opsForList().index(DI, index);
+        } else {
+            return roleSkillTemplate.opsForList().index(TIAN, index);
+        }
+
     }
 
 

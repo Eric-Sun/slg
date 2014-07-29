@@ -147,6 +147,29 @@ public class UserPackageHelper {
 
 
     /**
+     * 从skill背包中减去对应的skill
+     *
+     * @param uid
+     * @param rsId
+     * @param materialNum
+     * @return
+     */
+    public boolean subtractSkill(long uid, long rsId, int materialNum) {
+        UserPackageCO userPackageCO = get(uid);
+        int packageMCount = userPackageCO.getSkill().get(rsId + "");
+        int newCount = packageMCount - materialNum;
+        userPackageCO.getSkill().put(rsId + "", newCount);
+        updateSkill(userPackageCO);
+        SlgLogger.info(SlgLoggerEntity.p("package", "subtract skill", uid, "ok")
+                .addParam("uid", uid)
+                .addParam("rsId", rsId)
+                .addParam("materialNum", materialNum)
+                .addParam("finalNum", newCount));
+        return true;
+    }
+
+
+    /**
      * 向材料包裹内加入新的物品
      *
      * @param uid
@@ -255,5 +278,21 @@ public class UserPackageHelper {
             return 0;
         else
             return userPackageCO.getMaterial().get(materialId + "");
+    }
+
+
+    /**
+     * 检测技能包裹中制定将领技能的数量
+     *
+     * @param uid
+     * @param usid
+     * @return
+     */
+    public int getSkillCount(long uid, int usid) {
+        UserPackageCO userPackageCO = get(uid);
+        if (userPackageCO.getSkill().get(usid + "") == null)
+            return 0;
+        else
+            return userPackageCO.getSkill().get(usid + "");
     }
 }

@@ -1,5 +1,8 @@
 package com.h13.slg.config.co;
 
+import org.apache.commons.digester3.annotations.rules.BeanPropertySetter;
+import org.apache.commons.digester3.annotations.rules.ObjectCreate;
+
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
@@ -7,12 +10,18 @@ package com.h13.slg.config.co;
  * Time: 下午4:59
  * To change this template use File | Settings | File Templates.
  */
+@ObjectCreate(pattern = "zuLingList/zuLing")
 public class ZuLingCO {
+    @BeanPropertySetter(pattern = "zuLingList/zuLing/level")
     private int level;
-    private int zhe;
-    private int shi;
-    private int wang;
-    private int sheng;
+    @BeanPropertySetter(pattern = "zuLingList/zuLing/tian")
+    private int tian;
+    @BeanPropertySetter(pattern = "zuLingList/zuLing/di")
+    private int di;
+    @BeanPropertySetter(pattern = "zuLingList/zuLing/xuan")
+    private int xuan;
+    @BeanPropertySetter(pattern = "zuLingList/zuLing/huang")
+    private int huang;
 
     public int getLevel() {
         return level;
@@ -22,35 +31,35 @@ public class ZuLingCO {
         this.level = level;
     }
 
-    public int getZhe() {
-        return zhe;
+    public int getTian() {
+        return tian;
     }
 
-    public void setZhe(int zhe) {
-        this.zhe = zhe;
+    public void setTian(int tian) {
+        this.tian = tian;
     }
 
-    public int getShi() {
-        return shi;
+    public int getDi() {
+        return di;
     }
 
-    public void setShi(int shi) {
-        this.shi = shi;
+    public void setDi(int di) {
+        this.di = di;
     }
 
-    public int getWang() {
-        return wang;
+    public int getXuan() {
+        return xuan;
     }
 
-    public void setWang(int wang) {
-        this.wang = wang;
+    public void setXuan(int xuan) {
+        this.xuan = xuan;
     }
 
-    public int getSheng() {
-        return sheng;
+    public int getHuang() {
+        return huang;
     }
 
-    public void setSheng(int sheng) {
-        this.sheng = sheng;
+    public void setHuang(int huang) {
+        this.huang = huang;
     }
 }

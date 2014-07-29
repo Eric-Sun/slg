@@ -25,7 +25,7 @@ import java.util.List;
  * Time: 下午6:16
  * To change this template use File | Settings | File Templates.
  */
-@Service("zuLingService")
+@Service("ZulingService")
 public class ZuLingServiceImpl implements ZuLingService {
     @Autowired
     UserZuLingHelper userZuLingHelper;
@@ -37,7 +37,7 @@ public class ZuLingServiceImpl implements ZuLingService {
 
         int uid = request.getUid();
 
-        List<UserZuLingItemCO> list = userZuLingHelper.summon(uid);
+        List<RoleSkillVO> list = userZuLingHelper.summon(uid);
 
         return SlgData.getData().add("list", list);
     }
@@ -47,9 +47,10 @@ public class ZuLingServiceImpl implements ZuLingService {
 
         int uid = request.getUid();
 
-        UserZuLingCO userZuLingCO = userZuLingHelper.get(uid);
 
-        return SlgData.getData().add("list", userZuLingCO.getList());
+        List<RoleSkillVO> list = userZuLingHelper.load(uid);
+
+        return SlgData.getData().add("list", list);
     }
 
 

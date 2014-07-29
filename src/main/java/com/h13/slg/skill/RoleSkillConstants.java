@@ -9,12 +9,18 @@ package com.h13.slg.skill;
  */
 public class RoleSkillConstants {
 
-    public static final String ZHE = "zhe";
-    public static final String SHI = "shi";
-    public static final String WANG = "wang";
-    public static final String SHENG = "sheng";
+    public static final String TIAN = "tian";
+    public static final String DI= "di";
+    public static final String XUAN = "xuan";
+    public static final String HUANG = "huang";
 
 
     public static final int NOT_GOT = 0;
     public static final int GOT = 1;
+
+
+    public static class SkillType {
+        public static final String COMMON = "common";
+        public static final String TIANFU = "tianfu";
+    }
 }

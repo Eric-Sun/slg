@@ -17,11 +17,16 @@ public class RequestErrorException extends Exception {
 
     }
 
+
     public RequestErrorException(int code, String desc) {
         super(code + ":" + desc);
         this.code = code;
         this.desc = desc;
 
+    }
+
+    public RequestErrorException(int code) {
+        this(code, "");
     }
 
     public RequestErrorException(int code, String desc, Throwable t) {

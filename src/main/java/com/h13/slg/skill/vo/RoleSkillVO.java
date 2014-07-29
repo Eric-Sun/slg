@@ -12,6 +12,15 @@ public class RoleSkillVO {
     private String name;
     private String type;
     private String quality;
+    private int packageCount;
+
+    public int getPackageCount() {
+        return packageCount;
+    }
+
+    public void setPackageCount(int packageCount) {
+        this.packageCount = packageCount;
+    }
 
     public int getId() {
         return id;

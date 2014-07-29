@@ -14,6 +14,7 @@ import com.h13.slg.skill.ZuLingConstants;
 import com.h13.slg.skill.co.UserZuLingCO;
 import com.h13.slg.skill.co.UserZuLingItemCO;
 import com.h13.slg.skill.dao.UserZuLingDAO;
+import com.h13.slg.skill.vo.RoleSkillVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,8 +33,6 @@ public class UserZuLingHelper {
 
     @Autowired
     UserZuLingDAO userZuLingDAO;
-    @Autowired
-    UserZuLingHelper userZuLingHelper;
     @Autowired
     ZuLingConfigFetcher zuLingConfigFetcher;
     @Autowired
@@ -59,14 +58,17 @@ public class UserZuLingHelper {
     }
 
 
-    public List<UserZuLingItemCO> summon(int uid) throws RequestErrorException {
-        UserZuLingCO userZuLingCO = userZuLingHelper.get(uid);
+    public List<RoleSkillVO> summon(int uid) throws RequestErrorException {
+        UserZuLingCO userZuLingCO = get(uid);
 
-        if (userZuLingHelper.isFull(userZuLingCO)) {
+        if (isFull(userZuLingCO)) {
             throw new RequestErrorException(CodeConstants.ZuLing.ZULING_IS_FULL, "");
         }
 
         List<UserZuLingItemCO> list = Lists.newLinkedList();
+
+        List<RoleSkillVO> voList = Lists.newLinkedList();
+
         for (int i = 0; i < ZuLingConstants.SIZE; i++) {
 
             UserZuLingItemCO item = new UserZuLingItemCO();
@@ -75,11 +77,19 @@ public class UserZuLingHelper {
             item.setRsId(roleSkillCO.getId());
 
             list.add(item);
+
+            RoleSkillVO vo = new RoleSkillVO();
+            vo.setId(roleSkillCO.getId());
+            vo.setName(roleSkillCO.getName());
+            vo.setQuality(roleSkillCO.getQuality());
+            vo.setType(roleSkillCO.getType());
+
+            voList.add(vo);
         }
 
-        userZuLingDAO.insert(uid, list);
+        userZuLingDAO.update(uid, list);
 
-        return list;
+        return voList;
     }
 
     private String randomQuality() {
@@ -87,14 +97,14 @@ public class UserZuLingHelper {
         ZuLingCO zuLingCO = zuLingConfigFetcher.get("1");
         Random random = new Random();
         int result = random.nextInt(100);
-        if (result < zuLingCO.getSheng()) {
-            return RoleSkillConstants.SHENG;
-        } else if (result < zuLingCO.getSheng() + zuLingCO.getWang()) {
-            return RoleSkillConstants.WANG;
-        } else if (result < zuLingCO.getSheng() + zuLingCO.getWang() + zuLingCO.getShi()) {
-            return RoleSkillConstants.SHI;
+        if (result < zuLingCO.getHuang()) {
+            return RoleSkillConstants.HUANG;
+        } else if (result < zuLingCO.getHuang() + zuLingCO.getXuan()) {
+            return RoleSkillConstants.XUAN;
+        } else if (result < zuLingCO.getHuang() + zuLingCO.getXuan() + zuLingCO.getDi()) {
+            return RoleSkillConstants.DI;
         } else {
-            return RoleSkillConstants.ZHE;
+            return RoleSkillConstants.TIAN;
         }
     }
 
@@ -124,11 +134,31 @@ public class UserZuLingHelper {
         int rsId = item.getRsId();
         RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(rsId + "");
 
-        userPackageHelper.addSkillItem(uid,rsId,1);
+        userPackageHelper.addSkillItem(uid, rsId, 1);
 
         return roleSkillCO;
 
     }
 
 
+    public List<RoleSkillVO> load(int uid) {
+        UserZuLingCO userZuLingCO = get(uid);
+
+        List<RoleSkillVO> voList = Lists.newLinkedList();
+        for (UserZuLingItemCO item : userZuLingCO.getList()) {
+
+            RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(item.getRsId() + "");
+
+
+            RoleSkillVO vo = new RoleSkillVO();
+            vo.setId(item.getRsId());
+            vo.setName(roleSkillCO.getName());
+            vo.setType(roleSkillCO.getType());
+            vo.setQuality(roleSkillCO.getQuality());
+
+            voList.add(vo);
+        }
+
+        return voList;
+    }
 }

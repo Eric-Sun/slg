@@ -1,4 +1,4 @@
-package com.h13.slg.skill.helper;
+package com.h13.slg.skill.handlers;
 
 import com.h13.slg.battle.fight.FightUnit;
 import org.slf4j.Logger;

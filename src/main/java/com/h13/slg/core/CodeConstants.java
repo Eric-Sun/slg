@@ -43,4 +43,14 @@ public class CodeConstants {
 
     }
 
+    public static class RoleSkill {
+        public static int PACKAGE_DONT_HAVE_THIS_SKILL = 6001;
+        public static int ROLE_HAVE_ANOTHER_SKILL = 6002;
+    }
+
+    public static class Package {
+        public static int MATERIAL_IS_NOT_ENOUGH = 7001;
+    }
+
+
 }

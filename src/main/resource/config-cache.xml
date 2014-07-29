@@ -207,4 +207,25 @@
           p:valueSerializer-ref="skilleffectCO">
     </bean>
 
+    <!-- roleSkillTemplate -->
+    <bean id="roleSkillCO"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.RoleSkillCO"/>
+    </bean>
+    <bean id="roleSkillTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="roleSkillCO">
+    </bean>
+
+    <!-- zuLingTemplate -->
+    <bean id="zuLingCO"
+          class="com.h13.slg.core.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.ZuLingCO"/>
+    </bean>
+    <bean id="zuLingTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="zuLingCO">
+    </bean>
+
+
 </beans>

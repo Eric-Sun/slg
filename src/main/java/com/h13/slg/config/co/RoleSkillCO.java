@@ -1,5 +1,8 @@
 package com.h13.slg.config.co;
 
+import org.apache.commons.digester3.annotations.rules.BeanPropertySetter;
+import org.apache.commons.digester3.annotations.rules.ObjectCreate;
+
 /**
  * Created with IntelliJ IDEA.
  * User: sunbo
@@ -7,16 +10,45 @@ package com.h13.slg.config.co;
  * Time: 下午4:20
  * To change this template use File | Settings | File Templates.
  */
+@ObjectCreate(pattern = "roleSkillList/roleSkill")
 public class RoleSkillCO {
 
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/id")
     private int id;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/name")
     private String name;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/type")
     private String type;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/quality")
     private String quality;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/arg1")
     private String arg1;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/arg2")
     private String arg2;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/arg3")
     private String arg3;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/action")
     private String action;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/materialNum2")
+    private int materialNum2;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/material")
+    private int material;
+
+    public int getMaterialNum2() {
+        return materialNum2;
+    }
+
+    public void setMaterialNum2(int materialNum2) {
+        this.materialNum2 = materialNum2;
+    }
+
+    public int getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(int material) {
+        this.material = material;
+    }
 
     public String getAction() {
         return action;

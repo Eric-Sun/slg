@@ -1,26 +1,34 @@
 <roleSkillList>
     <roleSkill>
         <id>1</id>
-        <name>者级技能</name>
+        <name>天级技能</name>
         <type>putong</type>
-        <quality>zhe</quality>
+        <quality>tian</quality>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
     </roleSkill>
     <roleSkill>
-        <id>1</id>
-        <name>师级技能</name>
+        <id>2</id>
+        <name>地级技能</name>
         <type>putong</type>
-        <quality>shi</quality>
+        <quality>di</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
     </roleSkill>
     <roleSkill>
-        <id>1</id>
-        <name>王级技能</name>
+        <id>3</id>
+        <name>玄级技能</name>
         <type>putong</type>
-        <quality>wang</quality>
+        <quality>xuan</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
     </roleSkill>
     <roleSkill>
-        <id>1</id>
-        <name>圣级技能</name>
+        <id>4</id>
+        <name>黄级技能</name>
         <type>putong</type>
-        <quality>sheng</quality>
+        <quality>huang</quality>
+        <upgradeMetarial>19</upgradeMetarial>
+        <metarialNum2>10</metarialNum2>
     </roleSkill>
 </roleSkillList>
