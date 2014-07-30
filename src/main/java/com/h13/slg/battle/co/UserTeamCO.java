@@ -16,6 +16,15 @@ public class UserTeamCO {
 
     private long id;
     private List<Integer> data;
+    private int leader;
+
+    public int getLeader() {
+        return leader;
+    }
+
+    public void setLeader(int leader) {
+        this.leader = leader;
+    }
 
     public long getId() {
         return id;

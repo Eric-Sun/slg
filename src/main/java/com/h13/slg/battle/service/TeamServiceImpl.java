@@ -59,6 +59,7 @@ public class TeamServiceImpl implements TeamService {
             userRoleInTeamVO.setUrid(id);
             userTeamVO.getData().add(userRoleInTeamVO);
         }
+        userTeamVO.setLeader(userTeamCO.getLeader());
         return SlgData.getData().add("userTeam", userTeamVO);
     }
 
@@ -97,4 +98,13 @@ public class TeamServiceImpl implements TeamService {
         return SlgData.getData();
     }
 
+
+    @Override
+    public SlgData updateLeader(SlgRequestDTO request) throws RequestErrorException {
+
+        int uid = request.getUid();
+        int urid = new Integer(request.getArgs().get("urid") + "");
+        teamHelper.updateLeader(uid, urid);
+        return SlgData.getData();
+    }
 }

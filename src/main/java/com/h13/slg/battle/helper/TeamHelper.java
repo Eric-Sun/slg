@@ -117,4 +117,16 @@ public class TeamHelper {
     }
 
 
+    public void updateLeader(int uid, int urid) throws RequestErrorException {
+
+
+        boolean b = userRoleHelper.checkUserRole(uid, urid);
+        if (!b)
+            throw new RequestErrorException(CodeConstants.Role.DONT_HAVE_THIS_USER_ROLE);
+
+        UserTeamCO userTeamCO = get(uid);
+        userTeamCO.setLeader(urid);
+        updateTeam(userTeamCO);
+
+    }
 }

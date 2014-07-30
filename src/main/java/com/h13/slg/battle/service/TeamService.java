@@ -21,4 +21,9 @@ public interface TeamService {
     public SlgData updatePos(SlgRequestDTO request) throws RequestErrorException;
 
     public SlgData deletePos(SlgRequestDTO request) throws RequestErrorException;
+
+
+    public SlgData updateLeader(SlgRequestDTO request) throws RequestErrorException;
+
+
 }

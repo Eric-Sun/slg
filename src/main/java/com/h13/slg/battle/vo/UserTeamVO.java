@@ -14,6 +14,15 @@ import java.util.List;
 public class UserTeamVO {
     private long id;
     private List<UserRoleInTeamVO> data = Lists.newArrayList();
+    private int leader;
+
+    public int getLeader() {
+        return leader;
+    }
+
+    public void setLeader(int leader) {
+        this.leader = leader;
+    }
 
     public List<UserRoleInTeamVO> getData() {
         return data;
