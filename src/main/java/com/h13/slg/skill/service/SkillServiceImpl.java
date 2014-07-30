@@ -37,12 +37,18 @@ public class SkillServiceImpl implements SkillService {
     public SlgData skillList(SlgRequestDTO requestDTO) throws RequestErrorException {
 
         int uid = requestDTO.getUid();
+        String type = new String(requestDTO.getArgs().get("type") + "");
         Map<String, Integer> skillMap = userPackageHelper.get(uid).getSkill();
         List<RoleSkillVO> skillList = Lists.newLinkedList();
         for (String rsid : skillMap.keySet()) {
+            if (skillMap.get(rsid) == 0)
+                continue;
             RoleSkillVO vo = new RoleSkillVO();
             RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(rsid);
+            if (!roleSkillCO.getType().equals(type))
+                continue;
             SlgBeanUtils.copyProperties(vo, roleSkillCO);
+            vo.setRsid(roleSkillCO.getId());
             vo.setPackageCount(skillMap.get(rsid));
             skillList.add(vo);
         }
@@ -55,20 +61,8 @@ public class SkillServiceImpl implements SkillService {
         int uid = requestDTO.getUid();
         int urid = new Integer(requestDTO.getArgs().get("urid") + "");
         int rsid = new Integer(requestDTO.getArgs().get("rsid") + "");
-        roleSkillHelper.setRoleSkillToRole(uid, urid, rsid);
-
-        return SlgData.getData();
-    }
-
-    @Override
-    public SlgData resetSkill(SlgRequestDTO requestDTO) throws RequestErrorException {
-        int uid = requestDTO.getUid();
-        int urid = new Integer(requestDTO.getArgs().get("urid") + "");
-        int rsid = new Integer(requestDTO.getArgs().get("rsid") + "");
-        int oldursid = new Integer(requestDTO.getArgs().get("oldursid") + "");
-
-        roleSkillHelper.deleteUserRoleSkill(uid, urid, oldursid);
-        roleSkillHelper.setRoleSkillToRole(uid, urid, rsid);
+        String type = new String(requestDTO.getArgs().get("type") + "");
+        roleSkillHelper.setRoleSkillToRole(uid, urid, rsid, type);
 
         return SlgData.getData();
     }

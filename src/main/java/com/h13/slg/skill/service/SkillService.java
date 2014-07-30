@@ -21,8 +21,6 @@ public interface SkillService {
 
     public SlgData setSkill(SlgRequestDTO requestDTO) throws RequestErrorException;
 
-    public SlgData resetSkill(SlgRequestDTO requestDTO) throws RequestErrorException;
-
     public SlgData upgrade(SlgRequestDTO requestDTO) throws RequestErrorException;
 
 }

@@ -1,66 +1,82 @@
 <roleSkillList>
     <roleSkill>
         <id>1</id>
-        <name>天级技能</name>
-        <type>putong</type>
+        <name>天义勇军</name>
+        <type>tianfu</type>
         <quality>tian</quality>
         <upgradeMaterial>19</upgradeMaterial>
         <materialNum>10</materialNum>
+        <tips>天级天赋，所有的武将攻击力加5%</tips>
     </roleSkill>
+
     <roleSkill>
         <id>2</id>
-        <name>地级技能</name>
-        <type>putong</type>
+        <name>地义勇军</name>
+        <type>tianfu</type>
         <quality>di</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>地级天赋，所有的武将攻击力加3%</tips>
     </roleSkill>
+
     <roleSkill>
         <id>3</id>
-        <name>玄级技能</name>
-        <type>putong</type>
+        <name>玄义勇军</name>
+        <type>tianfu</type>
         <quality>xuan</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>玄级天赋，所有的武将攻击力加2%</tips>
     </roleSkill>
+
     <roleSkill>
         <id>4</id>
-        <name>黄级技能1</name>
-        <type>putong</type>
+        <name>黄义勇军</name>
+        <type>tianfu</type>
         <quality>huang</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>黄级天赋，所有的武将攻击力加1%</tips>
     </roleSkill>
+
+
     <roleSkill>
         <id>5</id>
-        <name>黄级技能2</name>
+        <name>天枪兵愤怒</name>
         <type>putong</type>
-        <quality>huang</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <quality>xuan</quality>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>天级技能，枪兵攻击力加5%</tips>
     </roleSkill>
+
     <roleSkill>
         <id>6</id>
-        <name>黄级技能3</name>
+        <name>地枪兵愤怒</name>
         <type>putong</type>
-        <quality>huang</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <quality>di</quality>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>地级技能，枪兵攻击力加3%</tips>
     </roleSkill>
+
     <roleSkill>
         <id>7</id>
-        <name>黄级技能4</name>
+        <name>玄枪兵愤怒</name>
         <type>putong</type>
-        <quality>huang</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <quality>xuan</quality>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>玄级技能，枪兵攻击力加2%</tips>
     </roleSkill>
+
     <roleSkill>
         <id>8</id>
-        <name>黄级技能5</name>
+        <name>黄枪兵愤怒</name>
         <type>putong</type>
         <quality>huang</quality>
-        <upgradeMetarial>19</upgradeMetarial>
-        <metarialNum2>10</metarialNum2>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum>10</materialNum>
+        <tips>黄级技能，枪兵攻击力加1%</tips>
     </roleSkill>
 </roleSkillList>

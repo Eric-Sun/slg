@@ -64,19 +64,6 @@ public class UserRoleSkillDAO {
     }
 
 
-    /**
-     * 检测某个将领是否有某种类型的技能已经存在，返回数量
-     *
-     * @param uid
-     * @param rid
-     * @param type
-     * @return
-     */
-    public int count(int uid, int rid, String type) {
-        final String sql = "select count(1) from user_role_skill where uid=? and rid=? and `type`=? and `delete`=?";
-        return j.queryForInt(sql, new Object[]{uid, rid, type, UserRoleSkillCO.COMMON});
-    }
-
     public UserRoleSkillCO getTianfu(int uid, int rid) {
         final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and rid=? and `delete`=0 and `type`='tianfu'";
         try {

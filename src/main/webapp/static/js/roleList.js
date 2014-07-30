@@ -49,12 +49,31 @@ var userRoleListLoader = function () {
         showRoleDetail: function (event) {
             $("#roleDetail").html("");
             var role = event.data.role;
+
+            if (role.putongRoleSkill == undefined) {
+                role["putongRoleSkill"] = "";
+            }
+            if (role.tianfuRoleSkill == undefined) {
+                role["tianfuRoleSkill"] = "";
+            }
             var t = this.template2(role);
             $("#roleDetail").html(t);
             $("#weapon" + role.id).on("click", {id: role.weapon, urId: role.id, type: "weapon"}, this.nav2EquipDetail);
             $("#accessory" + role.id).on("click", {id: role.accessory, urId: role.id, type: "accessory"}, this.nav2EquipDetail);
             $("#armor" + role.id).on("click", {id: role.armor, urId: role.id, type: "armor"}, this.nav2EquipDetail);
 
+
+            $("#putongRoleSkill").on("click", {urId: role.id, type: "putong"}, this.nav2SetSkill);
+            $("#tianfuRoleSkill").on("click", {urId: role.id, type: "tianfu"}, this.nav2SetSkill);
+
+        },
+        nav2SetSkill: function (event) {
+            var urId = event.data.urId;
+            var type = event.data.type;
+            CommonUtil.nav2Url("setSkill.html", {
+                urId: urId,
+                type: type
+            });
         },
         nav2EquipDetail: function (event) {
             if (event.data.id == 0) {

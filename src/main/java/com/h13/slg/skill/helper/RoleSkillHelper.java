@@ -7,6 +7,7 @@ import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.role.helper.UserRoleHelper;
+import com.h13.slg.skill.RoleSkillConstants;
 import com.h13.slg.skill.co.UserRoleSkillCO;
 import com.h13.slg.skill.dao.UserRoleSkillDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,12 +37,12 @@ public class RoleSkillHelper {
         return userRoleSkillDAO.get(uid, rid, ursid);
     }
 
-    public UserRoleSkillCO getTianfu(int uid, int rid) {
-        return userRoleSkillDAO.getTianfu(uid, rid);
+    public UserRoleSkillCO getTianfu(int uid, int urid) {
+        return userRoleSkillDAO.getTianfu(uid, urid);
     }
 
-    public UserRoleSkillCO getPutong(int uid, int rid) {
-        return userRoleSkillDAO.getPutong(uid, rid);
+    public UserRoleSkillCO getPutong(int uid, int urid) {
+        return userRoleSkillDAO.getPutong(uid, urid);
     }
 
     public void update(UserRoleSkillCO userRoleSkillCO) {
@@ -59,7 +60,7 @@ public class RoleSkillHelper {
      * @param urid
      * @param rsid
      */
-    public void setRoleSkillToRole(int uid, int urid, int rsid) throws RequestErrorException {
+    public void setRoleSkillToRole(int uid, int urid, int rsid, String type) throws RequestErrorException {
 
         // 检查这个role是不是你的
         boolean b = userRoleHelper.checkUserRole(uid, urid);
@@ -75,10 +76,15 @@ public class RoleSkillHelper {
         RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(rsid + "");
 
         // 检测当前 将领是否已经有技能
-        int skillCountInRole = userRoleSkillDAO.count(uid, urid, roleSkillCO.getType());
-        if (skillCountInRole > 0)
-            throw new RequestErrorException(CodeConstants.RoleSkill.ROLE_HAVE_ANOTHER_SKILL, "");
+        UserRoleSkillCO oldUserRoleSkillCO = null;
+        if (type.equals(RoleSkillConstants.SkillType.PUTONG))
+            oldUserRoleSkillCO = getPutong(uid, urid);
+        else
+            oldUserRoleSkillCO = getTianfu(uid, urid);
 
+        if (oldUserRoleSkillCO != null) {
+            deleteUserRoleSkill(uid, urid, oldUserRoleSkillCO.getId());
+        }
 
         UserRoleSkillCO userRoleSkillCO = new UserRoleSkillCO();
         userRoleSkillCO.setType(roleSkillCO.getType());
