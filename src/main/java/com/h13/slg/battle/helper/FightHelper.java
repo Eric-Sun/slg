@@ -61,15 +61,15 @@ public class FightHelper {
                 int defence = monsterCO.getDefence();
                 int health = monsterCO.getHealth();
 
-                FightPosition fightPosition = new FightPosition();
-                fightPosition.setAttack(attack);
-                fightPosition.setDefence(defence);
-                fightPosition.setHealth(health);
-                fightPosition.setType(FightPosition.MONSTER);
-                fightPosition.setId(new Integer(monsterId));
-                fightPosition.setName(monsterCO.getName());
+                Fighter fighter = new Fighter();
+                fighter.setAttack(attack);
+                fighter.setDefence(defence);
+                fighter.setHealth(health);
+                fighter.setType(Fighter.MONSTER);
+                fighter.setId(new Integer(monsterId));
+                fighter.setName(monsterCO.getName());
 
-                defenceFightUnit.add(i, fightPosition);
+                defenceFightUnit.add(i, fighter);
             } catch (Exception e) {
                 throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
@@ -92,15 +92,15 @@ public class FightHelper {
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
-            FightPosition fightPosition = new FightPosition();
-            fightPosition.setAttack(userRoleCO.getAttack());
-            fightPosition.setDefence(userRoleCO.getDefence());
-            fightPosition.setHealth(userRoleCO.getHealth());
-            fightPosition.setId(urid);
-            fightPosition.setName(userRoleCO.getRoleName());
-            fightPosition.setType(FightPosition.ROLE);
+            Fighter fighter = new Fighter();
+            fighter.setAttack(userRoleCO.getAttack());
+            fighter.setDefence(userRoleCO.getDefence());
+            fighter.setHealth(userRoleCO.getHealth());
+            fighter.setId(urid);
+            fighter.setName(userRoleCO.getRoleName());
+            fighter.setType(Fighter.ROLE);
 
-            attackFightUnit.add(i, fightPosition);
+            attackFightUnit.add(i, fighter);
         }
         FightResult fightResult = fightHandler.fight(uid, attackFightUnit, defenceFightUnit);
 
@@ -113,10 +113,10 @@ public class FightHelper {
 
 
             // 所有的将领增加武将经验
-            for (FightPosition fightPosition : attackFightUnit.getAllPos()) {
-                if (fightPosition == null)
+            for (Fighter fighter : attackFightUnit.getAllPos()) {
+                if (fighter == null)
                     continue;
-                int urid = fightPosition.getId();
+                int urid = fighter.getId();
                 userRoleHelper.addXp(uid, urid, fightReward.getHeroXp());
             }
 

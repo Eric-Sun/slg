@@ -3,9 +3,9 @@ package com.h13.slg.battle.fight;
 import com.h13.slg.config.co.RoleSkillCO;
 
 /**
- * 战斗位
+ * 战斗者，一般为将领，这些将领放在fightUnit当中
  */
-public class FightPosition {
+public class Fighter {
     public final static int ROLE = 0;
     public final static int MONSTER = 1;
 

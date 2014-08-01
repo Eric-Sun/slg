@@ -69,7 +69,7 @@ public class FightHandler {
      */
     private void triggerFight(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit, String type) {
 
-        for (FightPosition fightPOsition : attackFightUnit.getAllPos()) {
+        for (Fighter fightPOsition : attackFightUnit.getAllPos()) {
             String action = fightPOsition.getRoleSkillCO().getAction();
             Class clazz = null;
             try {
@@ -93,7 +93,7 @@ public class FightHandler {
     private void triggerAttack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
                                int attackPos, int defencePos) {
 
-        for (FightPosition fightPOsition : attackFightUnit.getAllPos()) {
+        for (Fighter fightPOsition : attackFightUnit.getAllPos()) {
             String action = fightPOsition.getRoleSkillCO().getAction();
             Class clazz = null;
             try {
@@ -123,8 +123,8 @@ public class FightHandler {
             triggerAttack(uid, attackFightUnit, defenceFightUnit, attackPos, defencePos);
 
             // 开始战斗
-            FightPosition attackPosition = attackFightUnit.getAllPos()[attackPos];
-            FightPosition defencePosition = defenceFightUnit.getAllPos()[defencePos];
+            Fighter attackPosition = attackFightUnit.getAllPos()[attackPos];
+            Fighter defencePosition = defenceFightUnit.getAllPos()[defencePos];
 
             // 开始计算伤害
             // Todo: 未来需要详细处理这块内容，现在就是简单的计算方法

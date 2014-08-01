@@ -5,17 +5,17 @@ package com.h13.slg.battle.fight;
  */
 public class FightUnit {
 
-    private FightPosition[] allPos = new FightPosition[9];
+    private Fighter[] allPos = new Fighter[9];
 
-    public FightPosition[] getAllPos() {
+    public Fighter[] getAllPos() {
         return allPos;
     }
 
-    public void setAllPos(FightPosition[] allPos) {
+    public void setAllPos(Fighter[] allPos) {
         this.allPos = allPos;
     }
 
-    public void add(int index, FightPosition fightPosition) {
-        allPos[index] = fightPosition;
+    public void add(int index, Fighter fighter) {
+        allPos[index] = fighter;
     }
 }
