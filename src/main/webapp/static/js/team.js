@@ -33,6 +33,18 @@ var teamLoader = function () {
             CommonUtil.nav2Url("saveTeam.html", {pos: event.data.id, urid: event.data.urid});
         }
     });
+
+
+    var SetLeaderView = Backbone.View.extend({
+        el: "#setLeader",
+        events: {
+            "click #btnSetLeader": "nav2SetLeader"
+        },
+        nav2SetLeader: function () {
+            CommonUtil.nav2Url("setLeader", {});
+        }
+
+    });
     new TeamView({model: userRoleCollection.models});
 
 

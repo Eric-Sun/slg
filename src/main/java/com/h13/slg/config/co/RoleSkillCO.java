@@ -21,66 +21,28 @@ public class RoleSkillCO {
     private String type;
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/quality")
     private String quality;
-    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/arg1")
-    private String arg1;
-    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/arg2")
-    private String arg2;
-    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/arg3")
-    private String arg3;
-    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/action")
-    private String action;
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/materialNum2")
     private int materialNum2;
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/material")
     private int material;
-
-    public int getMaterialNum2() {
-        return materialNum2;
-    }
-
-    public void setMaterialNum2(int materialNum2) {
-        this.materialNum2 = materialNum2;
-    }
-
-    public int getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(int material) {
-        this.material = material;
-    }
-
-    public String getAction() {
-        return action;
-    }
-
-    public void setAction(String action) {
-        this.action = action;
-    }
-
-    public String getArg1() {
-        return arg1;
-    }
-
-    public void setArg1(String arg1) {
-        this.arg1 = arg1;
-    }
-
-    public String getArg2() {
-        return arg2;
-    }
-
-    public void setArg2(String arg2) {
-        this.arg2 = arg2;
-    }
-
-    public String getArg3() {
-        return arg3;
-    }
-
-    public void setArg3(String arg3) {
-        this.arg3 = arg3;
-    }
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runStart")
+    private String runStart;        // 0为当场生效，1为下回合生效
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runTarget")
+    private String runTarget; // 0为自己，1为给对方
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runType")
+    private String runType;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runParamsAttack")
+    private String runParamsAttack;        // 全都是百分比，如果是减少的话，设置为负数
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runParamsDefence")
+    private String runParamsDefence;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runParamsHealth")
+    private String runParamsHealth;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runParamsHuanghu")
+    private String runParamsHuanghu;  // 0没有，1有
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runParamsDamage")
+    private String runParamsDamage; // 伤害
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runTime")
+    private String runRound;  // 0全局，>0的为回合数
 
     public int getId() {
         return id;
@@ -112,5 +74,93 @@ public class RoleSkillCO {
 
     public void setQuality(String quality) {
         this.quality = quality;
+    }
+
+    public int getMaterialNum2() {
+        return materialNum2;
+    }
+
+    public void setMaterialNum2(int materialNum2) {
+        this.materialNum2 = materialNum2;
+    }
+
+    public int getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(int material) {
+        this.material = material;
+    }
+
+    public String getRunStart() {
+        return runStart;
+    }
+
+    public void setRunStart(String runStart) {
+        this.runStart = runStart;
+    }
+
+    public String getRunTarget() {
+        return runTarget;
+    }
+
+    public void setRunTarget(String runTarget) {
+        this.runTarget = runTarget;
+    }
+
+    public String getRunType() {
+        return runType;
+    }
+
+    public void setRunType(String runType) {
+        this.runType = runType;
+    }
+
+    public String getRunParamsAttack() {
+        return runParamsAttack;
+    }
+
+    public void setRunParamsAttack(String runParamsAttack) {
+        this.runParamsAttack = runParamsAttack;
+    }
+
+    public String getRunParamsDefence() {
+        return runParamsDefence;
+    }
+
+    public void setRunParamsDefence(String runParamsDefence) {
+        this.runParamsDefence = runParamsDefence;
+    }
+
+    public String getRunParamsHealth() {
+        return runParamsHealth;
+    }
+
+    public void setRunParamsHealth(String runParamsHealth) {
+        this.runParamsHealth = runParamsHealth;
+    }
+
+    public String getRunParamsHuanghu() {
+        return runParamsHuanghu;
+    }
+
+    public void setRunParamsHuanghu(String runParamsHuanghu) {
+        this.runParamsHuanghu = runParamsHuanghu;
+    }
+
+    public String getRunParamsDamage() {
+        return runParamsDamage;
+    }
+
+    public void setRunParamsDamage(String runParamsDamage) {
+        this.runParamsDamage = runParamsDamage;
+    }
+
+    public String getRunRound() {
+        return runRound;
+    }
+
+    public void setRunRound(String runRound) {
+        this.runRound = runRound;
     }
 }

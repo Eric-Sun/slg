@@ -10,7 +10,7 @@ package com.h13.slg.skill;
 public class RoleSkillConstants {
 
     public static final String TIAN = "tian";
-    public static final String DI= "di";
+    public static final String DI = "di";
     public static final String XUAN = "xuan";
     public static final String HUANG = "huang";
 
@@ -23,4 +23,24 @@ public class RoleSkillConstants {
         public static final String PUTONG = "putong";
         public static final String TIANFU = "tianfu";
     }
+
+    public static class RunTime {
+        public static final String NOW = "0";
+        public static final String NEXT_ROUND = "1";
+    }
+
+    public static class RunTarget {
+        public static final String MATE = "0";
+        public static final String ENEMY = "1";
+    }
+
+    public static class RunType {
+        public static final String DANTI = "danti";
+        public static final String QIANG = "qiang";
+        public static final String GONG = "gong";
+        public static final String QI = "qi";
+        public static final String SHIZI = "shizi";
+        public static final String ALL = "all";
+    }
+
 }
