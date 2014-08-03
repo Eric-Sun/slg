@@ -3,13 +3,19 @@ var teamLoader = function () {
 
     var cmd = new Command("team", "getTeam", {});
     var userRoleCollection = new Backbone.Collection;
+    var leader = new Backbone.Model;
     CommonUtil.doPost(cmd, function (msg) {
         var UserRole = Backbone.Model;
+
+        var leaderId = msg.data.userTeam.leader;
+
         _.each(msg.data.userTeam.data, function (info, index, list) {
+            if (leaderId != 0 && leaderId == info.urid) {
+                leader = new UserRole(info);
+            }
             var userRole = new UserRole(info);
             userRoleCollection.add(userRole);
         });
-
     });
 
     var TeamView = Backbone.View.extend({
@@ -41,11 +47,23 @@ var teamLoader = function () {
             "click #btnSetLeader": "nav2SetLeader"
         },
         nav2SetLeader: function () {
-            CommonUtil.nav2Url("setLeader", {});
+            CommonUtil.nav2Url("setLeader.html", {});
         }
 
     });
+
+    var LeaderView = Backbone.View.extend({
+        el: "#leaderView",
+        template: _.template($("#leaderTemplate").html()),
+        initialize: function () {
+            $(this.el).html(this.template(this.model));
+        }
+
+
+    });
     new TeamView({model: userRoleCollection.models});
+    new SetLeaderView();
 
-
+    new LeaderView({model: leader.toJSON()});
+    var a = new Backbone.Model;
 }

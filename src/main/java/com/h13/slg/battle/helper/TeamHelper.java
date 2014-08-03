@@ -40,7 +40,7 @@ public class TeamHelper {
 
 
     public void updateTeam(UserTeamCO userTeamCO) {
-        userTeamDAO.update(userTeamCO.getId(), userTeamCO.getData());
+        userTeamDAO.update(userTeamCO.getId(), userTeamCO.getData(),userTeamCO.getLeader());
     }
 
 

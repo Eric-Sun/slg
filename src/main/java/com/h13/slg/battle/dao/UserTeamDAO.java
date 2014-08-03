@@ -27,24 +27,25 @@ public class UserTeamDAO {
     JdbcTemplate j;
 
     public void insert(long id, List<Integer> data) {
-        String sql = "insert into user_team (id,data,createtime) values (?,?,now())";
+        String sql = "insert into user_team (id,data,leader,createtime) values (?,?,now())";
         j.update(sql, new Object[]{id, JSON.toJSONString(data)});
     }
 
-    public void update(long id, List<Integer> data) {
-        String sql = "update user_team set data=? where id=?";
-        j.update(sql, new Object[]{JSON.toJSONString(data), id});
+    public void update(long id, List<Integer> data, int leader) {
+        String sql = "update user_team set data=? ,leader=? where id=?";
+        j.update(sql, new Object[]{JSON.toJSONString(data), leader, id});
     }
 
 
     public UserTeamCO get(long id) {
-        final String sql = "select id,data from user_team where id=?";
+        final String sql = "select id,data,leader from user_team where id=?";
         return j.queryForObject(sql, new Object[]{id}, new RowMapper<UserTeamCO>() {
             @Override
             public UserTeamCO mapRow(ResultSet resultSet, int i) throws SQLException {
                 UserTeamCO userTeamCO = new UserTeamCO();
                 userTeamCO.setId(resultSet.getInt(1));
                 userTeamCO.setData(JSON.parseObject(resultSet.getString(2), List.class));
+                userTeamCO.setLeader(resultSet.getInt(3));
                 return userTeamCO;
             }
         });

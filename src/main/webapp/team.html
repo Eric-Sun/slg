@@ -18,6 +18,8 @@
         返回
     </button>
 </div>
+<div id="leaderView">
+</div>
 <div id="teamView">
 </div>
 <div id="setLeader">
@@ -30,6 +32,13 @@
 </body>
 </html>
 
+<script id="leaderTemplate" type="text/template">
+    <div class="row">
+        <button class="col-xs-4">主将：<%- name==''?"无主将":name %></button>
+    </div>
+
+
+</script>
 
 <script id="teamTemplate" type="text/template">
     <div class="row">

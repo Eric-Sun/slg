@@ -2,7 +2,6 @@ package com.h13.slg.battle.fight;
 
 import com.google.common.collect.Lists;
 import com.h13.slg.battle.FightConstants;
-import com.h13.slg.skill.handlers.BaseRoleSkillHandler;
 import com.h13.slg.web.WebApplicationContentHolder;
 import org.springframework.stereotype.Service;
 
@@ -35,8 +34,6 @@ public class FightHandler {
 
         FightResult fightResult = new FightResult();
 
-        triggerFight(uid, attackFightUnit, defenceFightUnit, BaseRoleSkillHandler.BEFORE_FIGHT);
-
 
         int round = 1;
         while (!finished) {
@@ -57,54 +54,10 @@ public class FightHandler {
 
         }
 
-        triggerFight(uid, attackFightUnit, defenceFightUnit, BaseRoleSkillHandler.AFTER_FIGHT);
 
         return fightResult;
     }
 
-    /**
-     * 触发战斗前后的技能
-     *
-     * @param attackFightUnit
-     */
-    private void triggerFight(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit, String type) {
-
-        for (Fighter fightPOsition : attackFightUnit.getAllPos()) {
-            String action = fightPOsition.getRoleSkillCO().getAction();
-            Class clazz = null;
-            try {
-                clazz = Class.forName("com.h13.slg.skill.handlers." + action);
-                BaseRoleSkillHandler handler = (BaseRoleSkillHandler)
-                        WebApplicationContentHolder.getApplicationContext().getBean(clazz);
-                if (type.equals(BaseRoleSkillHandler.BEFORE_FIGHT))
-                    handler.beforeFight(uid, attackFightUnit, defenceFightUnit);
-                else
-                    handler.afterFight(uid, attackFightUnit, defenceFightUnit);
-            } catch (ClassNotFoundException e) {
-            }
-        }
-    }
-
-    /**
-     * 出发攻击相关技能
-     *
-     * @param attackFightUnit
-     */
-    private void triggerAttack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
-                               int attackPos, int defencePos) {
-
-        for (Fighter fightPOsition : attackFightUnit.getAllPos()) {
-            String action = fightPOsition.getRoleSkillCO().getAction();
-            Class clazz = null;
-            try {
-                clazz = Class.forName("com.h13.slg.skill.handlers." + action);
-                BaseRoleSkillHandler handler = (BaseRoleSkillHandler)
-                        WebApplicationContentHolder.getApplicationContext().getBean(clazz);
-                handler.beforeAttack(uid, attackFightUnit, defenceFightUnit, attackPos, defencePos);
-            } catch (ClassNotFoundException e) {
-            }
-        }
-    }
 
 
     public boolean attack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
@@ -120,7 +73,6 @@ public class FightHandler {
             if (defencePos == -1) {
                 return true;
             }
-            triggerAttack(uid, attackFightUnit, defenceFightUnit, attackPos, defencePos);
 
             // 开始战斗
             Fighter attackPosition = attackFightUnit.getAllPos()[attackPos];
