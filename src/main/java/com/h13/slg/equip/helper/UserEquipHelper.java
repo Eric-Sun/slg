@@ -70,7 +70,7 @@ public class UserEquipHelper {
      * @param ue
      */
     public void updateUserEquip(UserEquipCO ue) {
-        userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getGemsMap(), ue.getStrength(),
+        userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getStrength(),
                 ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid(), ue.getName());
     }
 
@@ -179,7 +179,7 @@ public class UserEquipHelper {
      *
      * @param uid
      * @param level
-     * @param type EquipConstants.EquipType
+     * @param type  EquipConstants.EquipType
      */
     public long addNewUserEquip(long uid, int level, String type) throws RequestErrorException {
         if (!EquipConstants.EquipType.ACCESSORY.equals(type)
@@ -194,7 +194,7 @@ public class UserEquipHelper {
         String name = getEquipNameFromConfig(type, EquipConstants.USER_EQUIP_DEFAULT_LEVEL);
 
 
-        long ueid = userEquipDAO.insert(uid, type, level, "{}", 1, 0, 0, 0, EquipConstants.NO_USER_ROLE, name);
+        long ueid = userEquipDAO.insert(uid, type, level, 1, 0, 0, 0, EquipConstants.NO_USER_ROLE, name);
         userPackageHelper.addEquipItem(uid, level, ueid);
         return ueid;
     }
@@ -221,7 +221,6 @@ public class UserEquipHelper {
     }
 
     /**
-     *
      * 通过type和level，读取配置文件，获得对应的name
      *
      * @param type

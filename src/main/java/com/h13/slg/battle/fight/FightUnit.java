@@ -1,21 +1,31 @@
 package com.h13.slg.battle.fight;
 
+import com.google.common.collect.Lists;
+
+import java.util.List;
+
 /**
  * 战斗单元
  */
 public class FightUnit {
 
-    private Fighter[] allPos = new Fighter[9];
+    private List<Fighter> allPos = Lists.newLinkedList();
 
-    public Fighter[] getAllPos() {
+    private Fighter leader = null;
+
+    public Fighter getLeader() {
+        return leader;
+    }
+
+    public void setLeader(Fighter leader) {
+        this.leader = leader;
+    }
+
+    public List<Fighter> getAllPos() {
         return allPos;
     }
 
-    public void setAllPos(Fighter[] allPos) {
+    public void setAllPos(List<Fighter> allPos) {
         this.allPos = allPos;
-    }
-
-    public void add(int index, Fighter fighter) {
-        allPos[index] = fighter;
     }
 }

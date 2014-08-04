@@ -13,6 +13,7 @@ import com.h13.slg.core.util.SlgStrings;
 import com.h13.slg.role.RoleConstants;
 import com.h13.slg.skill.helper.RoleSkillHelper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ import java.util.List;
  * <p/>
  * 主要功能为解析roleSkill，然后解析相关参数，给对方或者己方增加buff
  */
+@Service
 public class RoleSkillRunner {
 
     @Autowired
@@ -69,26 +71,40 @@ public class RoleSkillRunner {
 
         //
         if (runStart.equals(FightConstants.BuffStartTime.NOW)) {
-            for (Fighter f : fighterList) {
-                for (Buff buff : f.getBuffList()) {
-                    try {
-                        if (runRound.equals(FightConstants.Round.ROUND)) {
-                            buff.trigger(BuffEvent.BEFORE_ROUND, f);
-                        } else {
-                            buff.trigger(BuffEvent.BEFORE_FIGHT, f);
-                        }
-
-                    } catch (BuffStoppedException e) {
-                        // 去掉某个buff
-                        f.getBuffList().remove(buff);
-                    }
-                }
-
+            if (runRound.equals(FightConstants.Round.GLOBAL)) {
+                event(BuffEvent.BEFORE_FIGHT, fighterList);
+            } else {
+                event(BuffEvent.BEFORE_ROUND, fighterList);
             }
+
         }
 
 
     }
+
+    /**
+     * 触发事件
+     *
+     * @param buffEvent
+     * @param fights
+     */
+    public void event(BuffEvent buffEvent, List<Fighter> fights) {
+
+        for (Fighter f : fights) {
+            for (Buff buff : f.getBuffList()) {
+                try {
+                    buff.trigger(buffEvent, f);
+                } catch (BuffStoppedException e) {
+                    // 去掉某个buff
+                    f.getBuffList().remove(buff);
+                }
+            }
+
+        }
+
+
+    }
+
 
     private void addSanWeiBuff(List<Fighter> fighterList, SanWeiBuff sanWeiBuff) {
 

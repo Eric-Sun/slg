@@ -11,6 +11,8 @@ import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
+import com.h13.slg.skill.co.UserRoleSkillCO;
+import com.h13.slg.skill.helper.RoleSkillHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +40,8 @@ public class FightHelper {
     FightHandler fightHandler;
     @Autowired
     UserRoleHelper userRoleHelper;
-
+    @Autowired
+    RoleSkillHelper roleSkillHelper;
     @Autowired
     UserStatusHelper userStatusHelper;
 
@@ -69,7 +72,7 @@ public class FightHelper {
                 fighter.setId(new Integer(monsterId));
                 fighter.setName(monsterCO.getName());
 
-                defenceFightUnit.add(i, fighter);
+                defenceFightUnit.getAllPos().add(i, fighter);
             } catch (Exception e) {
                 throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
@@ -89,6 +92,8 @@ public class FightHelper {
         List<Integer> teamData = userTeamCO.getData();
         for (int i = 0; i < teamData.size(); i++) {
             int urid = new Integer(teamData.get(i) + "");
+            UserRoleSkillCO tianfu = roleSkillHelper.getTianfu(uid, urid);
+            UserRoleSkillCO jiangling = roleSkillHelper.getPutong(uid, urid);
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
@@ -97,10 +102,19 @@ public class FightHelper {
             fighter.setDefence(userRoleCO.getDefence());
             fighter.setHealth(userRoleCO.getHealth());
             fighter.setId(urid);
+
+            fighter.setTianfu(tianfu);
+            fighter.setJiangling(jiangling);
+
+
             fighter.setName(userRoleCO.getRoleName());
             fighter.setType(Fighter.ROLE);
 
-            attackFightUnit.add(i, fighter);
+            if (userTeamCO.getLeader() == urid) {
+                attackFightUnit.setLeader(fighter);
+            }
+
+            attackFightUnit.getAllPos().add(i, fighter);
         }
         FightResult fightResult = fightHandler.fight(uid, attackFightUnit, defenceFightUnit);
 

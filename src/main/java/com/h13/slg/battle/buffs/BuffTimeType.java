@@ -3,7 +3,7 @@ package com.h13.slg.battle.buffs;
 /**
  * buff持续时间的类型
  */
-class enum BuffTimeType {
+public enum BuffTimeType {
     /**
      * 全局
      */

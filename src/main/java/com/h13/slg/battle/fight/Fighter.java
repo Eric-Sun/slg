@@ -3,6 +3,7 @@ package com.h13.slg.battle.fight;
 import com.google.common.collect.Lists;
 import com.h13.slg.battle.buffs.Buff;
 import com.h13.slg.config.co.RoleSkillCO;
+import com.h13.slg.skill.co.UserRoleSkillCO;
 
 import java.util.List;
 
@@ -22,8 +23,17 @@ public class Fighter {
     private String soldierType ;
     private String name;
     private int point;
-    private RoleSkillCO roleSkillCO;
+    private UserRoleSkillCO tianfu;
+    private UserRoleSkillCO jiangling;
     private List<Buff> buffList = Lists.newLinkedList();
+
+    public UserRoleSkillCO getJiangling() {
+        return jiangling;
+    }
+
+    public void setJiangling(UserRoleSkillCO jiangling) {
+        this.jiangling = jiangling;
+    }
 
     public List<Buff> getBuffList() {
         return buffList;
@@ -41,12 +51,12 @@ public class Fighter {
         this.soldierType = soldierType;
     }
 
-    public RoleSkillCO getRoleSkillCO() {
-        return roleSkillCO;
+    public UserRoleSkillCO getTianfu() {
+        return tianfu;
     }
 
-    public void setRoleSkillCO(RoleSkillCO roleSkillCO) {
-        this.roleSkillCO = roleSkillCO;
+    public void setTianfu(UserRoleSkillCO tianfu) {
+        this.tianfu = tianfu;
     }
 
     public int getPoint() {

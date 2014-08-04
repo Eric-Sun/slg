@@ -2,7 +2,12 @@ package com.h13.slg.battle.fight;
 
 import com.google.common.collect.Lists;
 import com.h13.slg.battle.FightConstants;
+import com.h13.slg.battle.buffs.Buff;
+import com.h13.slg.battle.buffs.BuffEvent;
+import com.h13.slg.battle.buffs.BuffStoppedException;
+import com.h13.slg.event.EventType;
 import com.h13.slg.web.WebApplicationContentHolder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -21,6 +26,9 @@ public class FightHandler {
     private List<Integer> l2 = Arrays.asList(1, 4, 7);
     private List<Integer> l3 = Arrays.asList(2, 5, 8);
 
+    @Autowired
+    RoleSkillRunner roleSkillRunner;
+
     /**
      * 战斗方法
      *
@@ -31,12 +39,28 @@ public class FightHandler {
     public FightResult fight(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit) {
 
         boolean finished = false;
-
         FightResult fightResult = new FightResult();
 
+        if (attackFightUnit.getLeader() != null) {
+            roleSkillRunner.run(attackFightUnit.getLeader(),
+                    attackFightUnit.getLeader().getTianfu().getRsid(),
+                    attackFightUnit, defenceFightUnit
+            );
+        }
+        if (defenceFightUnit.getLeader() != null) {
+            roleSkillRunner.run(defenceFightUnit.getLeader(),
+                    defenceFightUnit.getLeader().getTianfu().getRsid(),
+                    defenceFightUnit, attackFightUnit);
+        }
+
+        roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, attackFightUnit.getAllPos());
+        roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, defenceFightUnit.getAllPos());
 
         int round = 1;
         while (!finished) {
+
+            roleSkillRunner.event(BuffEvent.BEFORE_ROUND, attackFightUnit.getAllPos());
+            roleSkillRunner.event(BuffEvent.BEFORE_ROUND, defenceFightUnit.getAllPos());
 
             finished = attack(uid, attackFightUnit, defenceFightUnit, fightResult, round, true);
             if (finished) {
@@ -51,20 +75,23 @@ public class FightHandler {
             }
 
             round++;
+            roleSkillRunner.event(BuffEvent.AFTER_ROUND, attackFightUnit.getAllPos());
+            roleSkillRunner.event(BuffEvent.AFTER_ROUND, defenceFightUnit.getAllPos());
 
         }
 
+        roleSkillRunner.event(BuffEvent.AFTER_FIGHT, attackFightUnit.getAllPos());
+        roleSkillRunner.event(BuffEvent.AFTER_FIGHT, defenceFightUnit.getAllPos());
 
         return fightResult;
     }
-
 
 
     public boolean attack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
                           FightResult fightResult, int round, boolean attackAttack) {
         // 每个回合从0开始到9，依次攻击
         for (int attackPos = 0; attackPos < 9; attackPos++) {
-            if (attackFightUnit.getAllPos()[attackPos] == null)
+            if (attackFightUnit.getAllPos().get(attackPos) == null)
                 continue;
 
             // Todo:确定这次攻击是否需要群体攻击
@@ -75,8 +102,8 @@ public class FightHandler {
             }
 
             // 开始战斗
-            Fighter attackPosition = attackFightUnit.getAllPos()[attackPos];
-            Fighter defencePosition = defenceFightUnit.getAllPos()[defencePos];
+            Fighter attackPosition = attackFightUnit.getAllPos().get(attackPos);
+            Fighter defencePosition = defenceFightUnit.getAllPos().get(defencePos);
 
             // 开始计算伤害
             // Todo: 未来需要详细处理这块内容，现在就是简单的计算方法
@@ -128,8 +155,8 @@ public class FightHandler {
         // 检查是否defence方是否都死了
         boolean allDead = true;
         for (int defencePos = 0; defencePos < 9; defencePos++) {
-            if (defenceFightUnit.getAllPos()[defencePos] != null
-                    && defenceFightUnit.getAllPos()[defencePos].getHealth() > 0) {
+            if (defenceFightUnit.getAllPos().get(defencePos) != null
+                    && defenceFightUnit.getAllPos().get(defencePos).getHealth() > 0) {
                 allDead = false;
                 break;
             }
@@ -155,43 +182,43 @@ public class FightHandler {
         if (l1.contains(attackPos)) {
             // 这一竖排是否有可以攻击的
             for (int i : l1) {
-                if (defenceFightUnit.getAllPos()[i] != null &&
-                        defenceFightUnit.getAllPos()[i].getHealth() > 0)
+                if (defenceFightUnit.getAllPos().get(i) != null &&
+                        defenceFightUnit.getAllPos().get(i).getHealth() > 0)
                     return i;
             }
         }
         if (l2.contains(attackPos)) {
             // 这一竖排是否有可以攻击的
             for (int i : l2) {
-                if (defenceFightUnit.getAllPos()[i] != null &&
-                        defenceFightUnit.getAllPos()[i].getHealth() > 0)
+                if (defenceFightUnit.getAllPos().get(i) != null &&
+                        defenceFightUnit.getAllPos().get(i).getHealth() > 0)
                     return i;
             }
         }
         if (l3.contains(attackPos)) {
             // 这一竖排是否有可以攻击的
             for (int i : l3) {
-                if (defenceFightUnit.getAllPos()[i] != null &&
-                        defenceFightUnit.getAllPos()[i].getHealth() > 0)
+                if (defenceFightUnit.getAllPos().get(i) != null &&
+                        defenceFightUnit.getAllPos().get(i).getHealth() > 0)
                     return i;
             }
         }
 
         // l1 ,l2 , l3 一次查看
         for (int i : l1) {
-            if (defenceFightUnit.getAllPos()[i] != null &&
-                    defenceFightUnit.getAllPos()[i].getHealth() > 0)
+            if (defenceFightUnit.getAllPos().get(i) != null &&
+                    defenceFightUnit.getAllPos().get(i).getHealth() > 0)
                 return i;
         }
         for (int i : l2) {
             if (
-                    defenceFightUnit.getAllPos()[i] != null &&
-                            defenceFightUnit.getAllPos()[i].getHealth() > 0)
+                    defenceFightUnit.getAllPos().get(i) != null &&
+                            defenceFightUnit.getAllPos().get(i).getHealth() > 0)
                 return i;
         }
         for (int i : l3) {
-            if (defenceFightUnit.getAllPos()[i] != null &&
-                    defenceFightUnit.getAllPos()[i].getHealth() > 0)
+            if (defenceFightUnit.getAllPos().get(i) != null &&
+                    defenceFightUnit.getAllPos().get(i).getHealth() > 0)
                 return i;
         }
 
