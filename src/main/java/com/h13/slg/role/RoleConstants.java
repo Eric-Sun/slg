@@ -15,4 +15,10 @@ public class RoleConstants {
     public static int NO_EQUIP_ID = 0;
     public static int NO_SKILL_SELECTED = 0;
 
+    public static class soldierType {
+        public static String QIANG = "0";
+        public static String QI = "1";
+        public static String GONG = "2";
+    }
+
 }

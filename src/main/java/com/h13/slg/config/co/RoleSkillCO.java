@@ -23,6 +23,8 @@ public class RoleSkillCO {
     private String quality;
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/materialNum2")
     private int materialNum2;
+    @BeanPropertySetter(pattern = "roleSkillList/roleSkill/tips")
+    private int tips;
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/material")
     private int material;
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runStart")
@@ -43,6 +45,15 @@ public class RoleSkillCO {
     private String runParamsDamage; // 伤害
     @BeanPropertySetter(pattern = "roleSkillList/roleSkill/runTime")
     private String runRound;  // 0全局，>0的为回合数
+
+
+    public int getTips() {
+        return tips;
+    }
+
+    public void setTips(int tips) {
+        this.tips = tips;
+    }
 
     public int getId() {
         return id;

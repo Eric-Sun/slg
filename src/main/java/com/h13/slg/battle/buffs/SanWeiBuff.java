@@ -26,12 +26,7 @@ public class SanWeiBuff extends Buff {
      * @param healthRate
      */
     public SanWeiBuff(int urid, int attackRate, int defenceRate, int healthRate) {
-
-        onwerUserRoleId = urid;
-        this.attackRate = attackRate;
-        this.defenceRate = defenceRate;
-        this.healthRate = healthRate;
-        buffTimeType = BuffTimeType.GLOBAL;
+        this(urid, attackRate, defenceRate, healthRate, 0);
     }
 
     /**
@@ -44,12 +39,17 @@ public class SanWeiBuff extends Buff {
      * @param roundCount
      */
     public SanWeiBuff(int urid, int attackRate, int defenceRate, int healthRate, int roundCount) {
+
         onwerUserRoleId = urid;
         this.attackRate = attackRate;
         this.defenceRate = defenceRate;
         this.healthRate = healthRate;
         this.roundCount = roundCount;
-        buffTimeType = BuffTimeType.ROUND;
+        if (roundCount != 0) {
+            buffTimeType = BuffTimeType.ROUND;
+        } else {
+            buffTimeType = BuffTimeType.GLOBAL;
+        }
     }
 
 

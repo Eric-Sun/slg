@@ -1,6 +1,10 @@
 package com.h13.slg.battle.fight;
 
+import com.google.common.collect.Lists;
+import com.h13.slg.battle.buffs.Buff;
 import com.h13.slg.config.co.RoleSkillCO;
+
+import java.util.List;
 
 /**
  * 战斗者，一般为将领，这些将领放在fightUnit当中
@@ -15,9 +19,27 @@ public class Fighter {
     private int defence;
     private int health;
     private int type;
+    private String soldierType ;
     private String name;
     private int point;
     private RoleSkillCO roleSkillCO;
+    private List<Buff> buffList = Lists.newLinkedList();
+
+    public List<Buff> getBuffList() {
+        return buffList;
+    }
+
+    public void setBuffList(List<Buff> buffList) {
+        this.buffList = buffList;
+    }
+
+    public String getSoldierType() {
+        return soldierType;
+    }
+
+    public void setSoldierType(String soldierType) {
+        this.soldierType = soldierType;
+    }
 
     public RoleSkillCO getRoleSkillCO() {
         return roleSkillCO;
