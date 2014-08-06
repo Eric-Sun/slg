@@ -15,13 +15,13 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			  <value>jdbc:mysql://42.62.29.102:3306/slg</value>
+			  <value>jdbc:mysql://localhost:3306/slg</value>
 		</property>
 		<property name="username">
-			<value>h13</value>
+			<value>root</value>
 		</property>
 		<property name="password">
-			<value>9O0)1a;3</value>
+			<value></value>
 		</property>
 	</bean>
 	
