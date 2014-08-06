@@ -117,3 +117,132 @@ material.xml
     + url：url
     + desc：材料的描述
 
+-------
+
+monster.xml
+-------
++ 怪物的配置文件（pve中的）
+    + id：id
+    + name：怪物名称
+    + level：等级，不用管
+    + soldier：士兵类型
+    + soldierLevel：不用管
+    + fightForce：战斗力
+    + attack：攻击力
+    + health：生命值
+    + defence：防御力
+    + magicDefence：不用管
+    + miss：不用管
+    + critdamage：不用管
+    + hit：不用管
+    + unblock：不用管
+    + block：不用管
+    + fortitude：不用管
+    + url：url
+    + god：不用管
+
+-----
+
+role.xml
+-------
++ 将领的xml
+    + id：id
+    + name：将领名称
+    + soldier：士兵类型
+    + health：生命值
+    + healthGrouth:生命值成长
+    + fightForce：战斗力
+    + attack：攻击力
+    + attackGrouth：攻击力成长
+    + defence：防御力
+    + defenceGrouth：防御力成长
+    + magicDefence：不用管
+    + magicDefenceGrouth：不用管
+    + block：不用管
+    + fortitude：不用管
+    + hit：不用管
+    + unblock：不用管
+    + critdamage：不用管
+    + miss：不用管
+    + grouth：不用管
+    + url：url
+    + camp：阵营（魏蜀吴群等）
+    + period： 不用管
+    + receiveMode：获取方式
+    + godUrl1：不用管
+    + godUrl2：不用管
+    + openDays1：开放天数，（不用管)
+    + openDays2：不用管
+    + mergeId：不用管
+    + mergeNum：不用管
+    + specialSkill：不用管
+
+rolelevel.xml
+----------
++ 将领的等级，由于我们只有枪兵，骑兵，弓兵，所以后期这个是要改的
+    + level:等级
+    + xp:升级到下一集需要的经验
+    + soldier1: 1号兵种的带兵数量
+    + soldier2：2号兵种的带兵数量
+    + soldier3：3号兵种的带兵数量
+    + 以下依次类推
+
+-------
+
+shop.xml
+---------
++ 商店的相关配置信息，商店中的类别是用来控制显示的层级的，这个后来也会变化
+    + id:商店中的物品id
+    + label1：忽略
+    + label2: 忽略
+    + category1:类别1
+    + category2：类别2
+    + category3：类别3
+    + currency：货币
+    + price:价格
+    + discount: 折扣
+    + restrictions：忽略
+    + openDays:忽略
+    + openLevel：忽略
+
+------------
+strengthen.xml
+--------
++ 强化相关配置文件
+    + strength:强化等级，强化是不能强化过人物的等级的
+    + level:忽略
+    + weaponCost：强化的装备如果是武器的话，花费的金币
+    + armorCost: 强化的装备如果是盔甲的话，花费的金币
+    + accessoryCost: 强化的装备如果是饰品的话，花费的金币
+
+-----
+
+task.xml
+------
++ 任务相关配置文件：
+    + 这个是会进行大范围修改的
+
+------
+
+
+tavern.xml
+------
++ 酒馆的配置文件，主要是酒馆这个功能模块的相关信息，这个也会进行修改
+    + level：快乐等级
+    + upRate：升级成下一个快乐等级的百分比，忽略
+    + white：随机到白色品质的武将的几率
+    + blue：随机到蓝色品质的武将的几率
+    + purple：随机到紫色品质的武将的几率
+    + orange：随机到橙色品质的武将的几率
+
+-----
+
+zuLing.xml
+--------
++ 祖灵地的相关配置文件，新功能
+    + level：快乐等级
+    + huang：黄级品质的技能的随机几率
+    + xuan： 玄级品质的技能的随机几率
+    + di    地级品质的技能的随机几率
+    + tian： 天级品质的技能的随机几率
+
