@@ -26,8 +26,6 @@ public class ShopServiceImpl implements ShopService {
     @Autowired
     MaterialConfigFetcher materialConfigFetcher;
     @Autowired
-    GemConfigFetcher gemConfigFetcher;
-    @Autowired
     EquipConfigFetcher equipConfigFetcher;
 
     @Override
@@ -37,9 +35,7 @@ public class ShopServiceImpl implements ShopService {
             String id = shop.getCategory3();
             if (shop.getCategory2().equals("material")) {
                 shop.setName(materialConfigFetcher.get(id).getName());
-            } else if (shop.getCategory2().equals("gem")) {
-                shop.setName(gemConfigFetcher.get(id).getName());
-            } else if (shop.getCategory2().equals("armor")) {
+            }  else if (shop.getCategory2().equals("armor")) {
                 shop.setName(equipConfigFetcher.get(id).getArmorName());
             } else if (shop.getCategory2().equals("accessory")) {
                 shop.setName(equipConfigFetcher.get(id).getAccessoryName());

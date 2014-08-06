@@ -17,8 +17,6 @@ public class UserPackageCO {
     private Map<String, Integer> roleCard;
     // 用户装备的id
     private List<Integer> equip;
-    // 宝石的id--》宝石的数量
-    private Map<String, Integer> gem;
     // 材料的id--》材料的数量
     private Map<String, Integer> material;
 
@@ -54,14 +52,6 @@ public class UserPackageCO {
 
     public void setEquip(List<Integer> equip) {
         this.equip = equip;
-    }
-
-    public Map<String, Integer> getGem() {
-        return gem;
-    }
-
-    public void setGem(Map<String, Integer> gem) {
-        this.gem = gem;
     }
 
     public Map<String, Integer> getMaterial() {

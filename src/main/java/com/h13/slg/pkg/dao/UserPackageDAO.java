@@ -27,25 +27,23 @@ public class UserPackageDAO {
     JdbcTemplate j;
 
     public void insert(long id, Map<String, Integer> roleCard, List<Integer> equip,
-                       Map<String, Integer> gem,
                        Map<String, Integer> material,
                        Map<String, Integer> skill) {
 
         String sql = "insert into user_package " +
-                "(id,role_card,equip,gem,material,skill,createtime) " +
+                "(id,role_card,equip,material,skill,createtime) " +
                 "values" +
                 "(?,?,?,?,?,?,now())";
         j.update(sql, new Object[]{id,
                 JSON.toJSONString(roleCard),
                 JSON.toJSONString(equip),
-                JSON.toJSONString(gem),
                 JSON.toJSONString(material),
                 JSON.toJSONString(skill)});
     }
 
 
     public UserPackageCO get(long id) {
-        String sql = "select id,role_card,equip,gem,material,skill,createtime from user_package where id=?";
+        String sql = "select id,role_card,equip,material,skill,createtime from user_package where id=?";
         return j.queryForObject(sql, new Object[]{id}, new RowMapper<UserPackageCO>() {
             @Override
             public UserPackageCO mapRow(ResultSet resultSet, int i) throws SQLException {
@@ -53,9 +51,8 @@ public class UserPackageDAO {
                 userPackageCO.setId(resultSet.getInt(1));
                 userPackageCO.setRoleCard(JSON.parseObject(resultSet.getString(2), Map.class));
                 userPackageCO.setEquip(JSON.parseObject(resultSet.getString(3), List.class));
-                userPackageCO.setGem(JSON.parseObject(resultSet.getString(4), Map.class));
-                userPackageCO.setMaterial(JSON.parseObject(resultSet.getString(5), Map.class));
-                userPackageCO.setSkill(JSON.parseObject(resultSet.getString(6), Map.class));
+                userPackageCO.setMaterial(JSON.parseObject(resultSet.getString(4), Map.class));
+                userPackageCO.setSkill(JSON.parseObject(resultSet.getString(5), Map.class));
                 return userPackageCO;
             }
         });
@@ -71,12 +68,6 @@ public class UserPackageDAO {
         String sql = "update user_package set equip=? where id=?";
         j.update(sql, new Object[]{JSON.toJSONString(equip), id});
     }
-
-    public void updateGem(long id, Map<String, Integer> gem) {
-        String sql = "update user_package set gem=? where id=?";
-        j.update(sql, new Object[]{JSON.toJSONString(gem), id});
-    }
-
 
     public void updateMaterial(long id, Map<String, Integer> material) {
         String sql = "update user_package set material=? where id=?";

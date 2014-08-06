@@ -40,8 +40,6 @@ public class PackageServiceImpl implements PackageService {
     @Autowired
     UserEquipHelper userEquipHelper;
     @Autowired
-    GemConfigFetcher gemConfigFetcher;
-    @Autowired
     MaterialConfigFetcher materialConfigFetcher;
     @Autowired
     RoleSkillConfigFetcher roleSkillConfigFetcher;
@@ -61,19 +59,6 @@ public class PackageServiceImpl implements PackageService {
             userPackageEquipVO.setId(userEquipCO.getId());
             userPackageEquipVO.setName(userEquipCO.getName());
             userEquipList.add(userPackageEquipVO);
-        }
-
-        //gem
-        Map<String, Integer> gemMap = userPackageCO.getGem();
-        List<GemInfoVO> gemList = Lists.newLinkedList();
-        // 获取gem相关信息
-        Set<String> gemIdSet = gemMap.keySet();
-        for (String gemId : gemIdSet) {
-            GemCO gemCO = gemConfigFetcher.get(gemId);
-            GemInfoVO gemInfoVO = new GemInfoVO();
-            gemInfoVO.setName(gemCO.getName());
-            gemInfoVO.setId(gemCO.getId());
-            gemList.add(gemInfoVO);
         }
 
         // material
@@ -105,8 +90,6 @@ public class PackageServiceImpl implements PackageService {
 
 
         return SlgData.getData().add("equip", userEquipList)
-                .add("gemMap", gemMap)
-                .add("gemList", gemList)
                 .add("materialMap", materialMap)
                 .add("materialList", materialList)
                 .add("skillMap", skillMap)

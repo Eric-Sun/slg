@@ -76,8 +76,6 @@ public class InventoryHelper {
 
         if (type.equals(PackageConstants.PACKAGE.MATERIAL_SPACE)) {
             userPackageHelper.addMaterialItem(uid, id, num);
-        } else if (type.equals(PackageConstants.PACKAGE.GEM_SPACE)) {
-            userPackageHelper.addGemItem(uid, id, num);
         } else if (type.equals(PackageConstants.PACKAGE.ROLE_CODE_SPACE)) {
             userPackageHelper.addRoleCodeItem(uid, id, num);
         } else {

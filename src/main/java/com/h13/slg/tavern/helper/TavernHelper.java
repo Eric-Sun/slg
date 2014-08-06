@@ -2,6 +2,7 @@ package com.h13.slg.tavern.helper;
 
 import com.h13.slg.config.co.RoleCO;
 import com.h13.slg.config.co.TavernConfigCO;
+import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.TavernConfigFetcher;
 import com.h13.slg.core.CodeConstants;

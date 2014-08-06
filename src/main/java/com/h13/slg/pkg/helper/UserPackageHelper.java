@@ -40,18 +40,8 @@ public class UserPackageHelper {
                 new HashMap<String, Integer>(),
                 new LinkedList<Integer>(),
                 new HashMap<String, Integer>(),
-                new HashMap<String, Integer>(),
                 new HashMap<String, Integer>());
         LOG.info("create new package. uid=" + id);
-    }
-
-    /**
-     * 更新宝石包裹
-     *
-     * @param userPackageCO
-     */
-    public void updateGem(UserPackageCO userPackageCO) {
-        userPackageDAO.updateGem(userPackageCO.getId(), userPackageCO.getGem());
     }
 
     /**
@@ -182,21 +172,6 @@ public class UserPackageHelper {
         MapUtil.addItem(data, itemId + "", num);
         updateMaterial(userPackageCO);
     }
-
-    /**
-     * 向宝石包裹内加入新的物品
-     *
-     * @param uid
-     * @param itemId
-     * @param num
-     */
-    public void addGemItem(long uid, long itemId, int num) {
-        UserPackageCO userPackageCO = get(uid);
-        Map data = userPackageCO.getGem();
-        MapUtil.addItem(data, itemId + "", num);
-        updateGem(userPackageCO);
-    }
-
 
     /**
      * 向宝石包裹内加入新的物品

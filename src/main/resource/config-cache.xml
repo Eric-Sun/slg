@@ -70,16 +70,6 @@
           p:valueSerializer-ref="armorSerializer">
     </bean>
 
-    <!-- gemTemplate -->
-    <bean id="gemSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.GemCO"/>
-    </bean>
-    <bean id="gemTemplate" class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="gemSerializer">
-    </bean>
-
     <!-- materialTemplate -->
     <bean id="materialSerializer"
           class="com.h13.slg.core.FastJsonRedisSerializer">
