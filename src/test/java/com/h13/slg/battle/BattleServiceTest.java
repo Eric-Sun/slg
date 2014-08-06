@@ -41,7 +41,7 @@ public class BattleServiceTest {
         map.put("act", "pve");
         map.put("uid", "2");
         map.put("auth_key", "c81e728d9d4c2f636f067f89cc14862c");
-        map.put("auth_time", "1403694137020");
+        map.put("auth_time", "1407169836728");
         map.put("args", "{\"battleId\":1}");
         map.put("seq", "1");
         String s = http.post("http://localhost:8080/slg/", map);

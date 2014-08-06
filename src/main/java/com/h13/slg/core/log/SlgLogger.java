@@ -14,25 +14,27 @@ public class SlgLogger {
 
 
     public static void info(SlgLoggerEntity obj) {
-        Logger log = LoggerFactory.getLogger("slg."+obj.getMod());
+        Logger log = LoggerFactory.getLogger("slg." + obj.getMod());
         log.info(obj.toString());
     }
 
-    public static void error(SlgLoggerEntity obj,Throwable t) {
-        Logger log = LoggerFactory.getLogger("slg."+obj.getMod());
-        log.error(obj.toString(),t);
+    public static void error(SlgLoggerEntity obj, Throwable t) {
+        Logger log = LoggerFactory.getLogger("slg." + obj.getMod());
+        log.error(obj.toString(), t);
     }
 
     public static void error(SlgLoggerEntity obj) {
-        Logger log = LoggerFactory.getLogger("slg."+obj.getMod());
+        Logger log = LoggerFactory.getLogger("slg." + obj.getMod());
         log.error(obj.toString());
     }
 
 
-
     public static void debug(SlgLoggerEntity obj) {
-        Logger log = LoggerFactory.getLogger("slg."+obj.getMod());
-        log.debug(obj.toString());
+        Logger log = LoggerFactory.getLogger("slg." + obj.getMod());
+        if (log.isDebugEnabled()) {
+            log.debug(obj.toString());
+        }
     }
+
 
 }

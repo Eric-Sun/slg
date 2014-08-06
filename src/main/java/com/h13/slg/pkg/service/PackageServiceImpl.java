@@ -1,7 +1,6 @@
 package com.h13.slg.pkg.service;
 
 import com.google.common.collect.Lists;
-import com.h13.slg.config.co.GemCO;
 import com.h13.slg.config.co.MaterialCO;
 import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.fetcher.*;

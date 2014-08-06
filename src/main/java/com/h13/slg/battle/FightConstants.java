@@ -28,8 +28,7 @@ public class FightConstants {
     }
 
     public class Round {
-        public static final String ROUND = "round";
-        public static final String GLOBAL = "global";
+        public static final String GLOBAL = "0";
     }
 
     public class Target {

@@ -5,8 +5,12 @@ import com.h13.slg.battle.FightConstants;
 import com.h13.slg.battle.buffs.Buff;
 import com.h13.slg.battle.buffs.BuffEvent;
 import com.h13.slg.battle.buffs.BuffStoppedException;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.event.EventType;
 import com.h13.slg.web.WebApplicationContentHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,23 +40,26 @@ public class FightHandler {
      * @param defenceFightUnit
      * @return
      */
-    public FightResult fight(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit) {
+    public FightResult fight(int uid, FightUnit attackFightUnit, FightUnit defenceFightUnit) {
 
         boolean finished = false;
         FightResult fightResult = new FightResult();
 
         if (attackFightUnit.getLeader() != null) {
-            roleSkillRunner.run(attackFightUnit.getLeader(),
+            roleSkillRunner.run(uid, attackFightUnit.getLeader(),
                     attackFightUnit.getLeader().getTianfu().getRsid(),
                     attackFightUnit, defenceFightUnit
             );
+            SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger attack leader skill "));
         }
         if (defenceFightUnit.getLeader() != null) {
-            roleSkillRunner.run(defenceFightUnit.getLeader(),
+            roleSkillRunner.run(uid, defenceFightUnit.getLeader(),
                     defenceFightUnit.getLeader().getTianfu().getRsid(),
                     defenceFightUnit, attackFightUnit);
+            SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger defence leader skill"));
         }
 
+        SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger BEFORE_FIGHT event"));
         roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, attackFightUnit.getAllPos());
         roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, defenceFightUnit.getAllPos());
 

@@ -1,7 +1,6 @@
 package com.h13.slg.user.hepler;
 
 import com.h13.slg.config.GlobalKeyConstants;
-import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.log.SlgLogger;
@@ -32,9 +31,6 @@ public class UserStatusHelper {
 
     @Autowired
     LevelHelper levelHelper;
-
-    @Autowired
-    GlobalConfigFetcher globalConfigFetcher;
 
     /**
      * 获得用户状态数据

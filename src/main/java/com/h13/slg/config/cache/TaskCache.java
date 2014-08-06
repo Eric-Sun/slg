@@ -3,8 +3,6 @@ package com.h13.slg.config.cache;
 import com.h13.slg.config.BasicCache;
 import com.h13.slg.config.ConfigParseException;
 import com.h13.slg.config.XmlParser;
-import com.h13.slg.config.co.GlobalCO;
-import com.h13.slg.config.co.GlobalXMLCO;
 import com.h13.slg.config.co.TaskCO;
 import com.h13.slg.config.co.TaskXMLCO;
 import org.springframework.data.redis.core.RedisTemplate;

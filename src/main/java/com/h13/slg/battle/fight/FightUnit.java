@@ -1,7 +1,10 @@
 package com.h13.slg.battle.fight;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,7 +12,17 @@ import java.util.List;
  */
 public class FightUnit {
 
-    private List<Fighter> allPos = Lists.newLinkedList();
+    private List<Fighter> allPos = new ArrayList<Fighter>(9){{
+        add(null);
+        add(null);
+        add(null);
+        add(null);
+        add(null);
+        add(null);
+        add(null);
+        add(null);
+        add(null);
+    }};
 
     private Fighter leader = null;
 

@@ -1,5 +1,6 @@
 package com.h13.slg.battle.fight;
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 import com.h13.slg.battle.FightConstants;
@@ -9,6 +10,8 @@ import com.h13.slg.battle.buffs.BuffStoppedException;
 import com.h13.slg.battle.buffs.SanWeiBuff;
 import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.SlgStrings;
 import com.h13.slg.role.RoleConstants;
 import com.h13.slg.skill.helper.RoleSkillHelper;
@@ -38,7 +41,7 @@ public class RoleSkillRunner {
      * @param attack            发动技能方
      * @param defence           被动方
      */
-    public void run(Fighter originFighter, int tianfuRoleSkillId, FightUnit attack, FightUnit defence) {
+    public void run(int uid, Fighter originFighter, int tianfuRoleSkillId, FightUnit attack, FightUnit defence) {
         RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(tianfuRoleSkillId + "");
 
         String runAttack = roleSkillCO.getRunParamsAttack();
@@ -53,6 +56,8 @@ public class RoleSkillRunner {
 
         // 获取buff释放对象
         List<Fighter> fighterList = getBuffTargetList(originFighter, runTarget, runType, attack, defence);
+        SlgLogger.debug(SlgLoggerEntity.p("battle", "fight", uid, "get buff target List")
+                .addParam("list", logFightList(fighterList)));
 
 
         // 如果三个其中有一个不为0的话
@@ -61,7 +66,7 @@ public class RoleSkillRunner {
                 || !SlgStrings.isZeroOrEmptyOrNull(runDefence)
                 || !SlgStrings.isZeroOrEmptyOrNull(runHealth)) {
 
-            addSanWeiBuff(fighterList, new SanWeiBuff(
+            addSanWeiBuff(uid, fighterList, new SanWeiBuff(
                     originFighter.getId(),
                     new Integer(runAttack), new Integer(runDefence), new Integer(runHealth),
                     new Integer(runRound)
@@ -91,25 +96,33 @@ public class RoleSkillRunner {
     public void event(BuffEvent buffEvent, List<Fighter> fights) {
 
         for (Fighter f : fights) {
+            if (f == null)
+                continue;
+            List<Buff> newBuffList = Lists.newLinkedList();
             for (Buff buff : f.getBuffList()) {
                 try {
                     buff.trigger(buffEvent, f);
                 } catch (BuffStoppedException e) {
                     // 去掉某个buff
-                    f.getBuffList().remove(buff);
                 }
+                newBuffList.add(buff);
             }
-
+            f.setBuffList(newBuffList);
         }
 
 
     }
 
 
-    private void addSanWeiBuff(List<Fighter> fighterList, SanWeiBuff sanWeiBuff) {
+    private void addSanWeiBuff(int uid, List<Fighter> fighterList, SanWeiBuff sanWeiBuff) {
 
         for (Fighter f : fighterList) {
+            if (f == null)
+                continue;
             f.getBuffList().add(sanWeiBuff);
+            SlgLogger.debug(SlgLoggerEntity.p("battle", "fight", uid, "add buff")
+                    .addParam("buffName", "sanwei")
+                    .addParam("fighter.id", f.getId()));
         }
 
     }
@@ -149,6 +162,17 @@ public class RoleSkillRunner {
             }
         }
         return fighters;
+    }
+
+
+    private String logFightList(List<Fighter> fighterList) {
+        List<Integer> ids = Lists.newLinkedList();
+        for (Fighter f : fighterList) {
+            ids.add(f.getId());
+        }
+        return Joiner.on(",").join(ids.iterator());
+
+
     }
 
 }

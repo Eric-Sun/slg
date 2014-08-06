@@ -72,9 +72,9 @@ public class FightHelper {
                 fighter.setId(new Integer(monsterId));
                 fighter.setName(monsterCO.getName());
 
-                defenceFightUnit.getAllPos().add(i, fighter);
+                defenceFightUnit.getAllPos().set(i, fighter);
             } catch (Exception e) {
-                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
+                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, e.getMessage());
             }
         }
 
@@ -114,7 +114,7 @@ public class FightHelper {
                 attackFightUnit.setLeader(fighter);
             }
 
-            attackFightUnit.getAllPos().add(i, fighter);
+            attackFightUnit.getAllPos().set(i, fighter);
         }
         FightResult fightResult = fightHandler.fight(uid, attackFightUnit, defenceFightUnit);
 

@@ -5,8 +5,6 @@ import com.h13.slg.config.ConfigParseException;
 import com.h13.slg.config.XmlParser;
 import com.h13.slg.config.co.ArmorCO;
 import com.h13.slg.config.co.ArmorXMLCO;
-import com.h13.slg.config.co.GlobalCO;
-import com.h13.slg.config.co.GlobalXMLCO;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,8 @@
 package com.h13.slg.battle.buffs;
 
 import com.h13.slg.battle.fight.Fighter;
+import com.h13.slg.core.log.SlgLogger;
+import com.h13.slg.core.log.SlgLoggerEntity;
 
 /**
  * 增加fighter三围类型技能
@@ -15,6 +17,7 @@ public class SanWeiBuff extends Buff {
     private int addAttack;
     private int addDefence;
     private int addHealth;
+    private int uid;
 
 
     /**
@@ -25,8 +28,8 @@ public class SanWeiBuff extends Buff {
      * @param defenceRate
      * @param healthRate
      */
-    public SanWeiBuff(int urid, int attackRate, int defenceRate, int healthRate) {
-        this(urid, attackRate, defenceRate, healthRate, 0);
+    public SanWeiBuff(int uid, int urid, int attackRate, int defenceRate, int healthRate) {
+        this(uid, urid, attackRate, defenceRate, healthRate, 0);
     }
 
     /**
@@ -38,8 +41,9 @@ public class SanWeiBuff extends Buff {
      * @param healthRate
      * @param roundCount
      */
-    public SanWeiBuff(int urid, int attackRate, int defenceRate, int healthRate, int roundCount) {
+    public SanWeiBuff(int uid, int urid, int attackRate, int defenceRate, int healthRate, int roundCount) {
 
+        this.uid = uid;
         onwerUserRoleId = urid;
         this.attackRate = attackRate;
         this.defenceRate = defenceRate;
@@ -58,8 +62,9 @@ public class SanWeiBuff extends Buff {
 
         switch (event) {
             case BEFORE_FIGHT:
-                if (!isGlobalTimeType())
+                if (!isGlobalTimeType()) {
                     break;
+                }
                 if (isInited())
                     break;
                 if (object instanceof Fighter) {
@@ -75,8 +80,14 @@ public class SanWeiBuff extends Buff {
                     fighter.setDefence(newDefence);
                     fighter.setHealth(newHealth);
                     curRoundCount++;
+                    SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger sanwei buff when BEFORE_FIGHT")
+                            .addParam("fighter.id", fighter.getId())
+                            .addParam("addAttack", this.addAttack)
+                            .addParam("addDefence", this.addDefence)
+                            .addParam("addHealth", this.addHealth));
                 }
                 inited = true;
+
                 break;
             case BEFORE_ROUND:
                 if (isGlobalTimeType())
@@ -96,6 +107,13 @@ public class SanWeiBuff extends Buff {
                     fighter.setDefence(newDefence);
                     fighter.setHealth(newHealth);
                     curRoundCount++;
+
+                    SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger sanwei buff when BEFORE_ROUND")
+                            .addParam("fighter.id", fighter.getId())
+                            .addParam("addAttack", this.addAttack)
+                            .addParam("addDefence", this.addDefence)
+                            .addParam("addHealth", this.addHealth)
+                            .addParam("curRoundCount", curRoundCount));
                 }
                 inited = true;
                 break;
@@ -108,7 +126,11 @@ public class SanWeiBuff extends Buff {
                         fighter.setAttack(fighter.getAttack() - addAttack);
                         fighter.setDefence(fighter.getDefence() - addDefence);
                         fighter.setHealth(fighter.getHealth() - addHealth);
+                        SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "release sanwei buff when AFTER_ROUND")
+                            .addParam("fighter.id",fighter.getId())
+                        );
                     }
+
                 }
                 throw new BuffStoppedException();
             case AFTER_FIGHT:
@@ -119,6 +141,9 @@ public class SanWeiBuff extends Buff {
                     fighter.setAttack(fighter.getAttack() - addAttack);
                     fighter.setDefence(fighter.getDefence() - addDefence);
                     fighter.setHealth(fighter.getHealth() - addHealth);
+                    SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "release sanwei buff when AFTER_FIGHT")
+                            .addParam("fighter.id",fighter.getId())
+                    );
                 }
                 throw new BuffStoppedException();
 

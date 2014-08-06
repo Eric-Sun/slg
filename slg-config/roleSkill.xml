@@ -7,12 +7,12 @@
         <upgradeMaterial>19</upgradeMaterial>
         <materialNum2>10</materialNum2>
         <tips>天级天赋，所有的武将攻击力加5%</tips>
-        <runStart>1</runStart>
-        <runTarget>0</runTarget>
-        <runType>danti</runType>
-        <runParamsAttack>5</runParamsAttack>
-        <runParamsDefence>0</runParamsDefence>
-        <runParamsHealth>0</runParamsHealth>
+        <runStart>now</runStart>
+        <runTarget>ziji</runTarget>
+        <runType>all</runType>
+        <runParamsAttack>50</runParamsAttack>
+        <runParamsDefence>100</runParamsDefence>
+        <runParamsHealth>100</runParamsHealth>
         <runParamsHuanghu>0</runParamsHuanghu>
         <runParamsDamage>0</runParamsDamage>
         <runTime>0</runTime>
