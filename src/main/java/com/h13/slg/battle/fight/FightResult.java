@@ -10,7 +10,7 @@ public class FightResult {
 
     private int status;
 
-    private List<List<FightLog>> rounds = new LinkedList<List<FightLog>>();
+    private List<List<Object>> rounds = new LinkedList<List<Object>>();
 
     public int getStatus() {
         return status;
@@ -20,10 +20,10 @@ public class FightResult {
         this.status = status;
     }
 
-    public void addLog(int round, FightLog log) {
-        List<FightLog> list = null;
+    public void addLog(int round, Object log) {
+        List<Object> list = null;
         if (rounds.size() <= round - 1) {
-            list = new LinkedList<FightLog>();
+            list = new LinkedList<Object>();
             rounds.add(list);
         } else {
             list = rounds.get(round - 1);
@@ -32,11 +32,11 @@ public class FightResult {
 
     }
 
-    public List<List<FightLog>> getRounds() {
+    public List<List<Object>> getRounds() {
         return rounds;
     }
 
-    public void setRounds(List<List<FightLog>> rounds) {
+    public void setRounds(List<List<Object>> rounds) {
         this.rounds = rounds;
     }
 }

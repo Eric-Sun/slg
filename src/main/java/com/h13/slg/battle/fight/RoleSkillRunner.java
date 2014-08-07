@@ -1,6 +1,7 @@
 package com.h13.slg.battle.fight;
 
 import com.google.common.base.Joiner;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 import com.h13.slg.battle.FightConstants;
@@ -18,6 +19,7 @@ import com.h13.slg.skill.helper.RoleSkillHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -41,12 +43,13 @@ public class RoleSkillRunner {
      * @param attack            发动技能方
      * @param defence           被动方
      */
-    public void run(int uid, Fighter originFighter, int tianfuRoleSkillId, FightUnit attack, FightUnit defence) {
+    public void run(int round, int uid, Fighter originFighter, int tianfuRoleSkillId, FightUnit attack, FightUnit defence,
+                    FightResult fightResult, String owner) {
         RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(tianfuRoleSkillId + "");
 
-        String runAttack = roleSkillCO.getRunParamsAttack();
-        String runDefence = roleSkillCO.getRunParamsDefence();
-        String runHealth = roleSkillCO.getRunParamsHealth();
+        final String runAttack = roleSkillCO.getRunParamsAttack();
+        final String runDefence = roleSkillCO.getRunParamsDefence();
+        final String runHealth = roleSkillCO.getRunParamsHealth();
         String runDamage = roleSkillCO.getRunParamsDamage();
         String runRound = roleSkillCO.getRunRound();
         String runType = roleSkillCO.getRunType();
@@ -72,6 +75,21 @@ public class RoleSkillRunner {
                     new Integer(runRound)
             ));
 
+            // 记录日志
+            FightSkillLog skillLog = new FightSkillLog();
+            skillLog.setName(roleSkillCO.getName());
+            skillLog.setOwner(owner);
+            skillLog.setPos(originFighter.getPos());
+            skillLog.setTarget(roleSkillCO.getRunTarget());
+            skillLog.setSkillType("sanwei");
+            skillLog.setType("startSkill");
+            skillLog.setStatus(new LinkedList<String>() {{
+                add(runAttack);
+                add(runDefence);
+                add(runHealth);
+            }});
+
+            fightResult.addLog(round, skillLog);
         }
 
         //

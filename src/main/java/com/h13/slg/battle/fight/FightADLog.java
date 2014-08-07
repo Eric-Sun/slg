@@ -5,13 +5,10 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sunbo
- * Date: 14-3-27
- * Time: 下午3:47
- * To change this template use File | Settings | File Templates.
+ * 攻击防御的相关日志
  */
-public class FightLog {
+public class FightADLog {
+    private String type="ad";
     private int attack;
     private PosInfo attackPos;
     private LinkedList<PosInfo> defencePos;

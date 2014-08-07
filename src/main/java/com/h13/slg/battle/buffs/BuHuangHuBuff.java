@@ -4,6 +4,7 @@ import com.h13.slg.battle.buffs.Buff;
 import com.h13.slg.battle.buffs.BuffEvent;
 import com.h13.slg.battle.buffs.BuffStoppedException;
 import com.h13.slg.battle.buffs.BuffTimeType;
+import com.h13.slg.battle.fight.FightResult;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,7 +28,7 @@ public class BuHuangHuBuff extends Buff {
 
 
     @Override
-    public void trigger(BuffEvent event, Object object) throws BuffStoppedException {
+    public void trigger(BuffEvent event, Object object, FightResult fightResult, int round) throws BuffStoppedException {
         switch (event) {
             case BEFORE_FIGHT:
                 if (!isGlobalTimeType())

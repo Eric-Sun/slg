@@ -1,5 +1,7 @@
 package com.h13.slg.battle.buffs;
 
+import com.h13.slg.battle.fight.FightResult;
+
 /**
  * buff基础类，每个将领都会有一个buff的hash，启动包括了buff的对象
  * buff类为基础的buff，每个skill可能会造成多个buff，和debuff
@@ -32,7 +34,7 @@ public abstract class Buff {
      * @param object
      * @throws BuffStoppedException
      */
-    public abstract void trigger(BuffEvent event, Object object) throws BuffStoppedException;
+    public abstract void trigger(BuffEvent event, Object object, FightResult fightResult, int round) throws BuffStoppedException;
 
 
     /**

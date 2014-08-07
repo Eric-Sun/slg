@@ -1,5 +1,6 @@
 package com.h13.slg.battle.buffs;
 
+import com.h13.slg.battle.fight.FightResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +19,7 @@ public class WuCeBuff extends Buff {
 
 
     @Override
-    public void trigger(BuffEvent event, Object object) throws BuffStoppedException {
+    public void trigger(BuffEvent event, Object object, FightResult fightResult, int round) throws BuffStoppedException {
         switch (event) {
             case BEFORE_ROUND:
                 curRoundCount++;

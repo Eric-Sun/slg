@@ -25,7 +25,25 @@ public class Fighter {
     private int point;
     private UserRoleSkillCO tianfu;
     private UserRoleSkillCO jiangling;
+    private int pos;
+    private String owner;
     private List<Buff> buffList = Lists.newLinkedList();
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public int getPos() {
+        return pos;
+    }
+
+    public void setPos(int pos) {
+        this.pos = pos;
+    }
 
     public UserRoleSkillCO getJiangling() {
         return jiangling;

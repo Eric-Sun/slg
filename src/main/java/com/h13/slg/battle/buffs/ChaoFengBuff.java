@@ -1,5 +1,7 @@
 package com.h13.slg.battle.buffs;
 
+import com.h13.slg.battle.fight.FightResult;
+
 /**
  * 嘲讽，让这个人始终攻击一个人，除非这个人死亡
  */
@@ -16,7 +18,7 @@ public class ChaoFengBuff extends Buff {
 
 
     @Override
-    public void trigger(BuffEvent event, Object object) throws BuffStoppedException {
+    public void trigger(BuffEvent event, Object object, FightResult fightResult, int round) throws BuffStoppedException {
         switch (event) {
             case BEFORE_ROUND:
                 if (isInited())

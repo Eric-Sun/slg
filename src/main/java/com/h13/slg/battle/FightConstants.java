@@ -36,4 +36,9 @@ public class FightConstants {
         public static final String DUIFANG = "duifang";
     }
 
+    public class Owner {
+        public static final String ATTACK = "attack";
+        public static final String DEFENCE = "defence";
+    }
+
 }

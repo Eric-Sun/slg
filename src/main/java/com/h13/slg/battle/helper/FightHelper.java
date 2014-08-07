@@ -1,6 +1,7 @@
 package com.h13.slg.battle.helper;
 
 import com.google.common.base.Strings;
+import com.h13.slg.battle.FightConstants;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.fight.*;
 import com.h13.slg.config.co.BattleCO;
@@ -71,6 +72,7 @@ public class FightHelper {
                 fighter.setType(Fighter.MONSTER);
                 fighter.setId(new Integer(monsterId));
                 fighter.setName(monsterCO.getName());
+                fighter.setOwner(FightConstants.Owner.DEFENCE);
 
                 defenceFightUnit.getAllPos().set(i, fighter);
             } catch (Exception e) {
@@ -102,10 +104,10 @@ public class FightHelper {
             fighter.setDefence(userRoleCO.getDefence());
             fighter.setHealth(userRoleCO.getHealth());
             fighter.setId(urid);
-
+            fighter.setPos(i);
             fighter.setTianfu(tianfu);
             fighter.setJiangling(jiangling);
-
+            fighter.setOwner(FightConstants.Owner.ATTACK);
 
             fighter.setName(userRoleCO.getRoleName());
             fighter.setType(Fighter.ROLE);
