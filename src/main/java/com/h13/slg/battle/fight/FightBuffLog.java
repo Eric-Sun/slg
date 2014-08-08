@@ -13,7 +13,16 @@ public class FightBuffLog {
     private String skillType;
     private int pos;
     private String owner;
+    private String roleName;
     private List<Object> status = Lists.newLinkedList();
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 
     public String getOwner() {
         return owner;

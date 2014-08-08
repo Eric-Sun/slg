@@ -49,8 +49,11 @@ var fightLoader = function () {
 
     var FightLogView = Backbone.View.extend({
                 el: "#fightLogView",
-                template: _.template($("#fightLogTemplate").html()),
+                adTemplate: _.template($("#adFightLogTemplate").html()),
+                sanwei: _.template($("#sanweiSkillFightLogTemplate").html()),
+                buff: _.template($("#buffFightLogTemplate").html()),
                 template2: _.template($("#fightResultTemplate").html()),
+
                 initialize: function () {
                 },
                 render: function () {
@@ -60,8 +63,15 @@ var fightLoader = function () {
                         // 每一个round，还是一个数组
                         for (var n in round) {
                             // 每个子项就是一条日志
-                            var attackDetail = round[n];
-                            this.appendHtml(this.template(attackDetail));
+                            var log = round[n];
+                            if (log.type == 'startSkill' && log.skillType == 'sanwei') {
+                                this.appendHtml(this.sanwei(log));
+                            } else if (log.type == 'ad') {
+                                this.appendHtml(this.adTemplate(log));
+                            } else {
+                                this.appendHtml(this.buff(log));
+                            }
+
                         }
                     }
                 },

@@ -169,6 +169,7 @@ public class SanWeiBuff extends Buff {
         buffLog.setOwner(fighter.getOwner());
         buffLog.setPos(fighter.getPos());
         buffLog.setType("startBuff");
+        buffLog.setRoleName(fighter.getName());
         List<Object> list = Lists.newLinkedList();
         buffLog.setStatus(list);
         Integer[] attack = new Integer[]{attackRate, addAttack, fighter.getAttack()};
@@ -187,6 +188,7 @@ public class SanWeiBuff extends Buff {
         buffLog.setOwner(fighter.getOwner());
         buffLog.setPos(fighter.getPos());
         buffLog.setType("stopBuff");
+        buffLog.setRoleName(fighter.getName());
         List<Object> list = Lists.newLinkedList();
         buffLog.setStatus(list);
         Integer[] attack = new Integer[]{attackRate, addAttack, fighter.getAttack()};

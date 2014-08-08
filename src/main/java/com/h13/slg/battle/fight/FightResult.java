@@ -22,11 +22,11 @@ public class FightResult {
 
     public void addLog(int round, Object log) {
         List<Object> list = null;
-        if (rounds.size() <= round - 1) {
+        if (rounds.size() <= round) {
             list = new LinkedList<Object>();
             rounds.add(list);
         } else {
-            list = rounds.get(round - 1);
+            list = rounds.get(round);
         }
         list.add(log);
 

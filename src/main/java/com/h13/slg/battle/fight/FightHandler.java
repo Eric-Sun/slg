@@ -43,8 +43,7 @@ public class FightHandler {
             roleSkillRunner.run(0, uid, attackFightUnit.getLeader(),
                     attackFightUnit.getLeader().getTianfu().getRsid(),
                     attackFightUnit, defenceFightUnit,
-                    fightResult, FightConstants.Owner.ATTACK
-            );
+                    fightResult, FightConstants.Owner.ATTACK);
             SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger attack leader skill "));
         }
         if (defenceFightUnit.getLeader() != null) {
@@ -56,14 +55,14 @@ public class FightHandler {
         }
 
         SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger BEFORE_FIGHT event"));
-        roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, attackFightUnit.getAllPos());
-        roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, defenceFightUnit.getAllPos());
+        roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, attackFightUnit.getAllPos(), fightResult, 0);
+        roleSkillRunner.event(BuffEvent.BEFORE_FIGHT, defenceFightUnit.getAllPos(), fightResult, 0);
 
         int round = 1;
         while (!finished) {
 
-            roleSkillRunner.event(BuffEvent.BEFORE_ROUND, attackFightUnit.getAllPos());
-            roleSkillRunner.event(BuffEvent.BEFORE_ROUND, defenceFightUnit.getAllPos());
+            roleSkillRunner.event(BuffEvent.BEFORE_ROUND, attackFightUnit.getAllPos(), fightResult, round);
+            roleSkillRunner.event(BuffEvent.BEFORE_ROUND, defenceFightUnit.getAllPos(), fightResult, round);
 
             finished = attack(uid, attackFightUnit, defenceFightUnit, fightResult, round, true);
             if (finished) {
@@ -78,13 +77,13 @@ public class FightHandler {
             }
 
             round++;
-            roleSkillRunner.event(BuffEvent.AFTER_ROUND, attackFightUnit.getAllPos());
-            roleSkillRunner.event(BuffEvent.AFTER_ROUND, defenceFightUnit.getAllPos());
+            roleSkillRunner.event(BuffEvent.AFTER_ROUND, attackFightUnit.getAllPos(), fightResult, round);
+            roleSkillRunner.event(BuffEvent.AFTER_ROUND, defenceFightUnit.getAllPos(), fightResult, round);
 
         }
 
-        roleSkillRunner.event(BuffEvent.AFTER_FIGHT, attackFightUnit.getAllPos());
-        roleSkillRunner.event(BuffEvent.AFTER_FIGHT, defenceFightUnit.getAllPos());
+        roleSkillRunner.event(BuffEvent.AFTER_FIGHT, attackFightUnit.getAllPos(), fightResult, round);
+        roleSkillRunner.event(BuffEvent.AFTER_FIGHT, defenceFightUnit.getAllPos(), fightResult, round);
 
         return fightResult;
     }

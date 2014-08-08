@@ -15,6 +15,14 @@ public class FightADLog {
     private FightStatus attackStatus = new FightStatus();
     private FightStatus defenceStatus = new FightStatus();
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public int getAttack() {
         return attack;
     }

@@ -113,14 +113,37 @@
 </script>
 
 
-<script id="fightLogTemplate" type="text/template">
+<script id="sanweiSkillFightLogTemplate" type="text/template">
     <div class="row">
         <div class="col-xs-12">
-            <%- attack==0?'攻击方进攻':'防守方进攻' %>:<%- attackPos.name %>攻击<%- defencePos[0].name %>造成<%-
-            -1*defenceStatus.status[1] %>名士兵阵亡，<%- defencePos.name %>剩余<%- defenceStatus.status[0] %>士兵
+            <%- roleName %>发动技能<%- name %>，对<%- target=='ziji'?'己方':'对方' %>的人员的攻击力增加<%- status[0] %>%，
+            防御力增加<%- status[1] %>%，士兵数增加<%- status[2] %>%
         </div>
     </div>
 </script>
+
+<script id="adFightLogTemplate" type="text/template">
+    <div class="row">
+        <div class="col-xs-12">
+            <%- attack==0?'攻击方进攻':'防御方进攻' %>,<%- attackPos.name %>对<%- defencePos[0].name %>发动攻击，
+            造成<%- defenceStatus.status[1
+            ]*-1 %>伤害，剩余士兵数为<%- defenceStatus.status[0] %>
+        </div>
+    </div>
+</script>
+
+<script id="buffFightLogTemplate" type="text/template">
+    <div class="row">
+        <div class="col-xs-12">
+            <%- owner=='attack'?'攻击方将领':'防御方将领' %><%- roleName %>，
+            <%- type=='startBuff'?'添加buff，':'buff消失' %>
+            <%- type=='startBuff'?'攻击力增加 '+status[0][0]+'%，':'' %>
+            <%- type=='startBuff'?'防御力增加 '+status[1][0]+'%，':'' %>
+            <%- type=='startBuff'?'防御力增加 '+status[2][0]+'%':'' %>
+        </div>
+    </div>
+</script>
+
 <script id="fightResultTemplate" type="text/template">
     <div class="row">
         <div class="col-xs-4">

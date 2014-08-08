@@ -12,10 +12,19 @@ public class FightSkillLog {
     private String type="triggerSkill";
     private int pos;
     private String name;
+    private String roleName;
     private String skillType;
     private String owner;
     private String target;
     private List<String> status = Lists.newLinkedList();
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 
     public String getName() {
         return name;
