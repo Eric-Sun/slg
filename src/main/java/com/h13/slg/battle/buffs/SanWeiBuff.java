@@ -76,9 +76,9 @@ public class SanWeiBuff extends Buff {
                 if (isInited())
                     break;
                 fighter = (Fighter) object;
-                newAttack = cul(fighter.getAttack(), attackRate);
-                newDefence = cul(fighter.getDefence(), defenceRate);
-                newHealth = cul(fighter.getHealth(), healthRate);
+                newAttack = cal(fighter.getAttack(), attackRate);
+                newDefence = cal(fighter.getDefence(), defenceRate);
+                newHealth = cal(fighter.getHealth(), healthRate);
                 this.addAttack = newAttack - fighter.getAttack();
                 this.addDefence = newDefence - fighter.getDefence();
                 this.addHealth = newHealth - fighter.getHealth();
@@ -102,9 +102,9 @@ public class SanWeiBuff extends Buff {
                 if (isInited())
                     break;
                 fighter = (Fighter) object;
-                newAttack = cul(fighter.getAttack(), attackRate);
-                newDefence = cul(fighter.getDefence(), defenceRate);
-                newHealth = cul(fighter.getHealth(), healthRate);
+                newAttack = cal(fighter.getAttack(), attackRate);
+                newDefence = cal(fighter.getDefence(), defenceRate);
+                newHealth = cal(fighter.getHealth(), healthRate);
                 this.addAttack = newAttack - fighter.getAttack();
                 this.addDefence = newDefence - fighter.getDefence();
                 this.addHealth = newHealth - fighter.getHealth();
@@ -158,7 +158,7 @@ public class SanWeiBuff extends Buff {
     }
 
 
-    private int cul(int old, int rate) {
+    private int cal(int old, int rate) {
         return (old * (100 + rate)) / 100;
     }
 

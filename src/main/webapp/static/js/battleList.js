@@ -1,7 +1,7 @@
 var battleListLoader = function () {
 
     CommonUtil.beforeLoad();
-    var cmd = new Command("battle", "battleList", {});
+    var cmd = new Command("battle", "chapterList", {});
     var battleListCollection = new Backbone.Collection;
     CommonUtil.doPost(cmd, function (msg) {
         _.each(msg.data.data, function (info, index, list) {
@@ -33,7 +33,7 @@ var battleListLoader = function () {
             },
             loadCastleList: function (event) {
                 var castleCollection = new Backbone.Collection;
-                var cmd = new Command("battle", "castleList", {battleId: event.data.index});
+                var cmd = new Command("battle", "castleList", {chapterId: event.data.index});
                 CommonUtil.doPost(cmd, function (msg) {
                     _.each(msg.data.castleList, function (info, index, list) {
                         var castleInfo = new Backbone.Model(info);

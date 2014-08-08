@@ -18,7 +18,7 @@ public interface BattleService {
 
     public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException;
 
-    public SlgData battleList(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData chapterList(SlgRequestDTO request) throws RequestErrorException;
 
 
     public SlgData castleList(SlgRequestDTO request) throws RequestErrorException;

@@ -32,8 +32,6 @@
     * password：用户密码   
 * 返回数据   
 	* id：用户注册后的uid  
-+ 样例   
-	{"act":"register","args":{"name":"aaab","password":"bbbb"},"code":0,"data":{"id":2},"mod":"user","serverTime":1396431197791} 
 ---
 
 登陆接口
@@ -71,9 +69,7 @@
     * teamRoleList
         * id    用户角色id
         * name  用户角色名称
-* 样例
-	*  {"act":"login","args":{"name":"c","password":"c"},"code":0,"data":{"authKey":"a87ff679a2f3e71d9181a67b7542122c","authTime":1404387017638,"userStatus":{"cash":50000,"castleTimer":1404301376521,"farmTimer":1404301376510,"fightForce":0,"food":500000,"gold":50000000,"honor":500000,"level":1,"name":"c","soul":0,"uid":4,"vip":0,"xp":0}},"mod":"user","serverTime":1404387017680} 
-	
+
 ---	
 
 城堡相关接口
@@ -86,8 +82,6 @@
 + 响应数据
 	* gold	金币数量
 	* timer	收获时间的时间戳
-* 样例
-	* {"act":"harvest","args":{},"code":0,"data":{"gold":88452,"timer":1404388219821},"mod":"castle","serverTime":1404388219825} 
 
 ----
 	
@@ -101,8 +95,6 @@
 + 响应数据
 	* food	粮食数量
 	* timer	收获时候的时间戳
-* 样例
-	*  {"act":"harvest","args":{},"code":0,"data":{"food":32,"timer":1404388218968},"mod":"farm","serverTime":1404388218975} 
 
 
 ---
@@ -119,8 +111,6 @@
 		* status: 0为没有被招募，1已经被招募
 		* id:对应的role的id
 		* roleName：角色的名字
-+ 样例
-	*  {"act":"invite","args":{},"code":0,"data":{"process":{"data":[{"gold":1500,"id":239,"roleName":"高干","status":0},{"gold":4000,"id":261,"roleName":"杜袭","status":0},{"gold":9000,"id":250,"roleName":"陈武","status":0},{"gold":12000,"id":228,"roleName":"蔡瑁","status":0},{"gold":9000,"id":125,"roleName":"管亥","status":0},{"gold":12000,"id":218,"roleName":"公孙渊","status":0},{"gold":25000,"id":122,"roleName":"甘夫人","status":0},{"gold":12000,"id":138,"roleName":"马忠","status":0},{"gold":9000,"id":239,"roleName":"高干","status":0},{"gold":4000,"id":223,"roleName":"黄皓","status":0}]}},"mod":"tavern","serverTime":1404472361820} 
 
 --------
 
@@ -141,8 +131,6 @@
 	* skillLevel	所有技能的等级
 	* soldier	兵种的类别
 	* uid	用户id
-+ 样例
-	* {"act":"enroll","args":{"pos":1},"code":0,"data":{"role":{"attack":33,"curSkill":0,"defence":0,"fightForce":0,"health":240,"id":2,"level":1,"roleId":189,"skillLevels":{1:1,2:1,3:1,4:1,5:1},"soldier":4,"uid":1}},"mod":"tavern","serverTime":1397057359924}
 
 ----
 
@@ -154,8 +142,6 @@
 	* act	leave
 + 响应数据
 	* soul	获得灵魂的数量
-+ 样例
-> {"act":"leave","args":{},"code":0,"data":{"soul":40},"mod":"tavern","serverTime":1397035271550}
 
 
 技能相关接口(todo)
@@ -172,8 +158,6 @@
 	
 + 响应数据
 	* nextSkillLevel	下一个技能的等级
-+ 样例
-> {"act":"upgrade","args":{"skill":1,"urid":1},"code":0,"data":{"nextSkillLevel":3},"mod":"skill","serverTime":1397032252691}
 
 
 将领接口
@@ -188,8 +172,6 @@
 		* ueid	用户装备id
 		* urid	用户角色id
 + 响应数据
-+ 样例
-	+ {"act":"wear","args":{"ueid":23,"urid":"14"},"code":0,"data":{"finished_task":[{"awards":[],"gold":1000,"id":1,"level":1,"xp":12}]},"mod":"role","serverTime":1404474138421}
 
 脱装备接口
 ------
@@ -201,9 +183,7 @@
 		* ueid	用户装备id
 		* urid	用户角色id
 + 响应数据
-+ 样例
-	+ {"act":"takeOff","args":{"ueid":"22","urid":"14"},"code":0,"data":{},"mod":"role","serverTime":1404652177392}
-	
+
 ------	
 	
 获得将领列表
@@ -229,9 +209,7 @@
 		+ level		等级
 		+ curSkill	当前开启的技能
 		+ skillLevels： 为一个hash，有1-6作为key，每个技能的value为等 
-+ 样例
-	+ {"act":"userRoleList","args":{},"code":0,"data":{"list":[{"accessory":21,"accessoryInfo":{"level":1,"name":"参将符","userEquipId":21},"armor":0,"attack":45,"curSkill":0,"defence":67,"fightForce":259,"health":400,"id":14,"level":1,"roleId":48,"roleName":"刘乐乐","skillLevels":{"1":1,"2":1,"3":1,"4":1,"5":1},"soldier":1,"uid":4,"weapon":0,"xp":0},{"accessory":0,"armor":0,"attack":33,"curSkill":0,"defence":17,"fightForce":58,"health":320,"id":17,"level":1,"roleId":239,"roleName":"高干","skillLevels":{"1":1,"2":1,"3":1,"4":1,"5":1},"soldier":2,"uid":4,"weapon":0,"xp":0}]},"mod":"role","serverTime":1404652177488}
-	
+
 ---------
 获得将领的详细信息(已经删除)
 ----------
@@ -256,8 +234,6 @@
 		+ level		等级
 		+ curSkill	当前开启的技能
 		+ skillLevels： 为一个hash，有1-6作为key，每个技能的value为等 
-+ 样例
->{"act":"role","args":{"urid":3},"code":0,"data":{"role":{"accessory":0,"armor":0,"attack":45,"curSkill":0,"defence":67,"fightForce":76,"health":400,"id":3,"level":1,"roleId":48,"roleName":"刘乐乐","skillLevels":{"1":1,"2":1,"3":1,"4":1,"5":1},"soldier":1,"uid":2,"weapon":0}},"mod":"role","serverTime":1402591295172}
 
 -------
 
@@ -282,8 +258,6 @@
 		+ type：weapon，accessory，armor
 		+ uid：用户id
 		+ urid：用户role的id		
-+ 样例
-	+ {"act":"equipList","args":{"type":"weapon"},"code":0,"data":{"equipList":[{"equipName":"雌雄双剑","fail":0,"gems":"{}","gemsMap":{},"id":23,"level":1,"refine":0,"star":0,"strength":1,"type":"weapon","uid":4,"urid":0},{"equipName":"雌雄双剑","fail":0,"gems":"{}","gemsMap":{},"id":26,"level":1,"refine":0,"star":0,"strength":1,"type":"weapon","uid":4,"urid":0},{"equipName":"雌雄双剑","fail":0,"gems":"{}","gemsMap":{},"id":29,"level":1,"refine":0,"star":0,"strength":1,"type":"weapon","uid":4,"urid":0}]},"mod":"equip","serverTime":1404652512866}
 
 -----
 
@@ -296,8 +270,6 @@
 + 返回数据
 	+ gold:使用的金币数
 	+ strength：强化后的等级
-+ 样例
-	+ {"act":"strengthen","args":{"ueid":"18"},"code":0,"data":{"gold":112,"strength":2},"mod":"equip","serverTime":1404720832442}
 
 ----
 	
@@ -310,8 +282,6 @@
 + 返回数据
 	+ level：升级后的等级
 	+ material：hash为一个id和他的数据
-+ 样例
-	+ {"act":"make","args":{"ueid":"12"},"code":0,"data":{"level":2,"material":{"1":-10,"27":-1}},"mod":"equip","serverTime":1404722099316}
 
 -----
 	
@@ -343,9 +313,7 @@
 	+ materialType2NeedCount：升级需要的材料2的数量
 	+ needGold：强化需要的金币
 	+ curGold：当前的拥有的金币数量
-+ 样例
-	+ {"act":"equip","args":{"ueid":"12"},"code":0,"data":{"userEquip":{"curGold":429481002,"equipInfo":{"name":"七星剑"},"fail":0,"gems":"{}","id":12,"level":2,"materialType1CurrentCount":990,"materialType1Id":1,"materialType1Name":"黑铁","materialType1NeedCount":15,"materialType2CurrentCount":4,"materialType2Id":28,"materialType2Name":"二级图纸","materialType2NeedCount":1,"needGold":100,"refine":0,"star":0,"strength":1,"type":"weapon","uid":2,"urid":12}
-	
+
 	
 商店相关接口
 =====
@@ -361,10 +329,7 @@
 	+ currency：购买需要的货币
 	+ id：商品id
 	+ price：价格
-+ 样例
-	+ 为数据，其中一个如下
-	+ {"category1":"inventory","category2":"material","category3":"17","currency":"honor","discount":0,"id":53,"label1":0,"label2":0,"name":"凤凰珠","openDays":0,"op	enLevel":47,"price":3000,"restrictions":0}
-	
+
 ------
 
 购买商品
@@ -377,8 +342,6 @@
 + 返回数据
 	+ cost_num：花费
 	+ cost_type：货币类型
-+ 样例
-	+ {"act":"buy","args":{"id":10,"num":1},"code":0,"data":{"adwards":[["material",4,1]],"cost_num":-18,"cost_type":"cash"},"mod":"inventory","serverTime":1404724775695}
 
 ----
 
@@ -402,8 +365,75 @@
         + value：现有的数量
     + materialList: 材料列表
     + materialMap: 材料hash
-+ 样例
-    +  {"act":"get","content":"response","mod":"package","params":{"resp":{"act":"get","args":{},"code":0,"data":{"equip":[{"id":10,"name":"a"},{"id":11,"name":"a"},{"id":12,"name":"a"},{"id":13,"name":"a"},{"id":14,"name":"a"},{"id":15,"name":"a"},{"id":16,"name":"a"},{"id":17,"name":"a"},{"id":18,"name":"a"},{"id":19,"name":"a"}],"gemList":[{"id":202,"name":"2级谋略石"}],"gemMap":{"202":1},"materialList":[{"id":9,"name":"钨钢"},{"id":1,"name":"黑铁"},{"id":14,"name":"大理石"},{"id":13,"name":"玛瑙"},{"id":19,"name":"技能书"},{"id":4,"name":"紫檀"},{"id":7,"name":"软皮"},{"id":10,"name":"银丝"},{"id":28,"name":"二级图纸"},{"id":27,"name":"一级图纸"},{"id":23,"name":"三级培养丹"}],"materialMap":{"1":990,"10":1,"13":75,"14":1,"19":1,"23":1,"27":8,"28":4,"4":1,"7":1,"9":1}},"mod":"package","serverTime":1404726240229}},"t":0,"type":"request","uid":2}
+
+--------
+
+战斗相关接口
+=========
+获得战斗的章节相关信息（此接口为章节、城堡、将领三级中的第一级）
+--------
++ 请求数据
+    + mod：battle
+    + act：chapterList
++ 返回数据
+    + string的列表，每个元素为章节的名称
+
+--------
+
+获得城堡的相关信息（第二级）
+---------
++ 请求数据
+    + mod：battle
+    + act：castleList
+    + chapterId：章节的id
++ 返回数据
+    + castleList:为一个数组，每个元素为一个castle中的将领的详细信息列表
+        + list：为一个数组，每个元素为将领的详细信息
+            + id：将领的id
+            + name：将领的名称
+--------
+
+
+获得将领的team信息
+-------
++ 请求数据
+    + mod:battle
+    + act:pveTeam
+    + battleId:
++ 返回数据
+    + award：奖励
+        + gold：金币
+        + heroXp：英雄经验
+        + honor：荣誉
+        + xp：用户经验
+    + pveTeam：
+        + id：battleid
+        + data:为数组，每个元素是相关将领数据
+            + name：将领的名称
+            + rid：将领的id
+-----
+
+战斗
+------
++ 请求数据
+    + mod：battle
+    + act：pve
+    + battleId
++ 返回数据
+    + 见战斗返回数据相关文档
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -62,7 +62,7 @@ public class BattleServiceImpl implements BattleService {
     }
 
     @Override
-    public SlgData battleList(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData chapterList(SlgRequestDTO request) throws RequestErrorException {
 
         long uid = request.getUid();
         List<String> list = Lists.newLinkedList();
@@ -82,16 +82,16 @@ public class BattleServiceImpl implements BattleService {
 
     @Override
     public SlgData castleList(SlgRequestDTO request) throws RequestErrorException {
-        int battleId = new Integer(request.getArgs().get("battleId") + "");
+        int chapterId = new Integer(request.getArgs().get("chapterId") + "");
 
         Map<String, Map<String, List<Integer>>> map = battleConfigFetcher.getMap();
-        Set<String> castleList = map.get(battleId + "").keySet();
+        Set<String> castleList = map.get(chapterId + "").keySet();
 
         List<BattleCastleInfoVO> list = Lists.newArrayList();
         for (String castle : castleList) {
             BattleCastleInfoVO battleCastleInfoVO = new BattleCastleInfoVO();
             battleCastleInfoVO.setName(castle);
-            List<Integer> idList = map.get(battleId + "").get(castle);
+            List<Integer> idList = map.get(chapterId + "").get(castle);
             List<BattleRoleInfoVO> roleList = Lists.newLinkedList();
             for (Integer id : idList) {
                 String name = battleConfigFetcher.get(id + "").getName();

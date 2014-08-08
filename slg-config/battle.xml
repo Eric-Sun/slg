@@ -2,11 +2,11 @@
 <battleList>
       <battle>
             <id>1</id>
-            <name>瑁村厓缁�</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>裴元绍</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>1001101</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -29,11 +29,11 @@
       </battle>
       <battle>
             <id>2</id>
-            <name>閭撹寕</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>邓茂</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>1001102</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -56,11 +56,11 @@
       </battle>
       <battle>
             <id>3</id>
-            <name>绋嬭繙蹇�</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>程远志</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>1001103</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -83,11 +83,11 @@
       </battle>
       <battle>
             <id>4</id>
-            <name>浼忓畬</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>伏完</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>1001104</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -110,11 +110,11 @@
       </battle>
       <battle>
             <id>5</id>
-            <name>鍛ㄤ粨</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>周仓</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>1001105</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -137,11 +137,11 @@
       </battle>
       <battle>
             <id>6</id>
-            <name>寮犵櫧楠�</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张白骑</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>1001106</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -164,11 +164,11 @@
       </battle>
       <battle>
             <id>7</id>
-            <name>鍒樼煶</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>刘石</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>1001107</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -191,11 +191,11 @@
       </battle>
       <battle>
             <id>8</id>
-            <name>娉㈡墠</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>波才</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>1001108</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -218,11 +218,11 @@
       </battle>
       <battle>
             <id>9</id>
-            <name>绗瀺</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>笮融</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>1001109</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -245,11 +245,11 @@
       </battle>
       <battle>
             <id>10</id>
-            <name>寮犳</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张梁</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>1001110</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -272,11 +272,11 @@
       </battle>
       <battle>
             <id>11</id>
-            <name>楂樺崌</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>高升</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>1001111</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -299,11 +299,11 @@
       </battle>
       <battle>
             <id>12</id>
-            <name>鏉庝箰</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>李乐</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>1001112</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -326,11 +326,11 @@
       </battle>
       <battle>
             <id>13</id>
-            <name>璧靛紭</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>赵弘</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>1001113</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -353,11 +353,11 @@
       </battle>
       <battle>
             <id>14</id>
-            <name>涔愬氨</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>乐就</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>1001114</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -380,11 +380,11 @@
       </battle>
       <battle>
             <id>15</id>
-            <name>寮犲疂</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张宝</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>1001115</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -407,11 +407,11 @@
       </battle>
       <battle>
             <id>16</id>
-            <name>鍗炲枩</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>卞喜</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>1001116</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -434,11 +434,11 @@
       </battle>
       <battle>
             <id>17</id>
-            <name>寮犵嚂</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张燕</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>1001117</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -461,11 +461,11 @@
       </battle>
       <battle>
             <id>18</id>
-            <name>寮犵墰瑙�</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张牛角</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>1001118</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -488,11 +488,11 @@
       </battle>
       <battle>
             <id>19</id>
-            <name>绠′亥</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>管亥</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>1001119</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -515,11 +515,11 @@
       </battle>
       <battle>
             <id>20</id>
-            <name>寮犺</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张角</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>1001120</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -542,11 +542,11 @@
       </battle>
       <battle>
             <id>10001</id>
-            <name>寮犺</name>
-            <chapter>榛勫肪涔嬩贡</chapter>
+            <name>张角</name>
+            <chapter>黄巾之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>1</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>1001120</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -568,15 +568,15 @@
             <heroXp>0</heroXp>
             <material>27</material>
             <materialNum>1</materialNum>
-            <desc>鍥藉唴闈炴硶浼犻攢缁勭粐澶寸洰锛屼汉閫佺话鍙封�滃紶鍠峰瓙鈥濓紝绌胯秺闄嶄复骞翠唬鏃╁垬涔愪箰20骞达紝鎴愪负涓滄眽鏈勾鈥滄壂榛勨�濋�氱級鐘��</desc>
+            <desc>国内非法传销组织头目，人送绰号“张喷子”，穿越降临年代早刘乐乐20年，成为东汉末年“扫黄”通缉犯。</desc>
       </battle>
       <battle>
             <id>21</id>
-            <name>闃庤</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>阎行</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>1002101</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -599,11 +599,11 @@
       </battle>
       <battle>
             <id>22</id>
-            <name>鍌呬渐</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>傅佥</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>1002102</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -626,11 +626,11 @@
       </battle>
       <battle>
             <id>23</id>
-            <name>琚佺啓</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>袁熙</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>1002103</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -653,11 +653,11 @@
       </battle>
       <battle>
             <id>24</id>
-            <name>闊╄惀瀛�</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>韩营子</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>1002104</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -680,11 +680,11 @@
       </battle>
       <battle>
             <id>25</id>
-            <name>棰滆壇</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>颜良</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>1002105</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -707,11 +707,11 @@
       </battle>
       <battle>
             <id>26</id>
-            <name>鐗垫嫑</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>牵招</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>1002106</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -734,11 +734,11 @@
       </battle>
       <battle>
             <id>27</id>
-            <name>琚佸皻</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>袁尚</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>1002107</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -761,11 +761,11 @@
       </battle>
       <battle>
             <id>28</id>
-            <name>椹欢</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>马延</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>1002108</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -788,11 +788,11 @@
       </battle>
       <battle>
             <id>29</id>
-            <name>楂樿</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>高览</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>1002109</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -815,11 +815,11 @@
       </battle>
       <battle>
             <id>30</id>
-            <name>鏂囦笐</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>文丑</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>1002110</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -842,11 +842,11 @@
       </battle>
       <battle>
             <id>31</id>
-            <name>娣充簬鐞�</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>淳于琼</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>1002111</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -869,11 +869,11 @@
       </battle>
       <battle>
             <id>32</id>
-            <name>楂樺共</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>高干</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>1002112</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -896,11 +896,11 @@
       </battle>
       <battle>
             <id>33</id>
-            <name>鏉滆</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>杜袭</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>1002113</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -923,11 +923,11 @@
       </battle>
       <battle>
             <id>34</id>
-            <name>楂樻亽</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>高恒</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>1002114</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -950,11 +950,11 @@
       </battle>
       <battle>
             <id>35</id>
-            <name>璁告敻</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>许攸</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>1002115</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -977,11 +977,11 @@
       </battle>
       <battle>
             <id>36</id>
-            <name>妯婄</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>樊稠</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>1002116</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -1004,11 +1004,11 @@
       </battle>
       <battle>
             <id>37</id>
-            <name>閮浘</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>郭图</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>1002117</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -1031,11 +1031,11 @@
       </battle>
       <battle>
             <id>38</id>
-            <name>閫㈢邯</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>逢纪</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>1002118</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -1058,11 +1058,11 @@
       </battle>
       <battle>
             <id>39</id>
-            <name>琚佽碍</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>袁谭</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>1002119</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -1085,11 +1085,11 @@
       </battle>
       <battle>
             <id>40</id>
-            <name>琚佺粛</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>袁绍</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>1002120</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -1112,11 +1112,11 @@
       </battle>
       <battle>
             <id>10002</id>
-            <name>琚佺粛</name>
-            <chapter>琚佺粛鎸ュ笀</chapter>
+            <name>袁绍</name>
+            <chapter>袁绍挥师</chapter>
             <levelLimit>1</levelLimit>
             <battle>2</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>1002120</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -1138,15 +1138,15 @@
             <heroXp>0</heroXp>
             <material>28</material>
             <materialNum>1</materialNum>
-            <desc>琚佺粛绌胯秺鍚庣敤zipo鎵撶伀鏈烘崲浜嗗骇鍩庢睜锛岀敤鎵嬬數绛掓崲浜嗕竴绁ㄩ獞鍏碉紝鑻﹀績缁忚惀20骞达紝鏈�缁堝嵈璐ョ粰鍒樹箰涔愩��</desc>
+            <desc>袁绍穿越后用zipo打火机换了座城池，用手电筒换了一票骑兵，苦心经营20年，最终却败给刘乐乐。</desc>
       </battle>
       <battle>
             <id>41</id>
-            <name>寮犵户</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>张继</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鐜夋睜鍏�</castle>
+            <castle>玉池关</castle>
             <boss>1003101</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1169,11 +1169,11 @@
       </battle>
       <battle>
             <id>42</id>
-            <name>鏉庤挋</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>李蒙</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鐜夋睜鍏�</castle>
+            <castle>玉池关</castle>
             <boss>1003102</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1196,11 +1196,11 @@
       </battle>
       <battle>
             <id>43</id>
-            <name>閭撳繝</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>邓忠</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鐜夋睜鍏�</castle>
+            <castle>玉池关</castle>
             <boss>1003103</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1223,11 +1223,11 @@
       </battle>
       <battle>
             <id>44</id>
-            <name>璐洪綈</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>贺齐</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鐜夋睜鍏�</castle>
+            <castle>玉池关</castle>
             <boss>1003104</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1250,11 +1250,11 @@
       </battle>
       <battle>
             <id>45</id>
-            <name>鍗庨泟</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>华雄</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鐜夋睜鍏�</castle>
+            <castle>玉池关</castle>
             <boss>1003105</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1277,11 +1277,11 @@
       </battle>
       <battle>
             <id>46</id>
-            <name>閮樊</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>郭淮</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鍑借胺鍏�</castle>
+            <castle>函谷关</castle>
             <boss>1003106</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1304,11 +1304,11 @@
       </battle>
       <battle>
             <id>47</id>
-            <name>妯婄</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>樊稠</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鍑借胺鍏�</castle>
+            <castle>函谷关</castle>
             <boss>1003107</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1331,11 +1331,11 @@
       </battle>
       <battle>
             <id>48</id>
-            <name>鐜嬫柟</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>王方</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鍑借胺鍏�</castle>
+            <castle>函谷关</castle>
             <boss>1003108</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1358,11 +1358,11 @@
       </battle>
       <battle>
             <id>49</id>
-            <name>寰愯崳</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>徐荣</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鍑借胺鍏�</castle>
+            <castle>函谷关</castle>
             <boss>1003109</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1385,11 +1385,11 @@
       </battle>
       <battle>
             <id>50</id>
-            <name>楂橀『</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>高顺</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鍑借胺鍏�</castle>
+            <castle>函谷关</castle>
             <boss>1003110</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1412,11 +1412,11 @@
       </battle>
       <battle>
             <id>51</id>
-            <name>鍖呮綃</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>包潋</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鏂板畨鍏�</castle>
+            <castle>新安关</castle>
             <boss>1003111</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1439,11 +1439,11 @@
       </battle>
       <battle>
             <id>52</id>
-            <name>鑳¤礁</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>胡轸</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鏂板畨鍏�</castle>
+            <castle>新安关</castle>
             <boss>1003112</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1466,11 +1466,11 @@
       </battle>
       <battle>
             <id>53</id>
-            <name>灞犵伩</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>屠灿</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鏂板畨鍏�</castle>
+            <castle>新安关</castle>
             <boss>1003113</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1493,11 +1493,11 @@
       </battle>
       <battle>
             <id>54</id>
-            <name>鏉庡偓</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>李催</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鏂板畨鍏�</castle>
+            <castle>新安关</castle>
             <boss>1003114</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1520,11 +1520,11 @@
       </battle>
       <battle>
             <id>55</id>
-            <name>鍚曞竷</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>吕布</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>鏂板畨鍏�</castle>
+            <castle>新安关</castle>
             <boss>1003115</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1547,11 +1547,11 @@
       </battle>
       <battle>
             <id>56</id>
-            <name>闄堝垪</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>陈列</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>铏庣墷鍏�</castle>
+            <castle>虎牢关</castle>
             <boss>1003116</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1574,11 +1574,11 @@
       </battle>
       <battle>
             <id>57</id>
-            <name>闊╁畾</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>韩定</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>铏庣墷鍏�</castle>
+            <castle>虎牢关</castle>
             <boss>1003117</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1601,11 +1601,11 @@
       </battle>
       <battle>
             <id>58</id>
-            <name>鏉庡矚</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>李岚</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>铏庣墷鍏�</castle>
+            <castle>虎牢关</castle>
             <boss>1003118</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1628,11 +1628,11 @@
       </battle>
       <battle>
             <id>59</id>
-            <name>閮睖</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>郭汜</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>铏庣墷鍏�</castle>
+            <castle>虎牢关</castle>
             <boss>1003119</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1655,11 +1655,11 @@
       </battle>
       <battle>
             <id>60</id>
-            <name>钁ｅ崜</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>董卓</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>铏庣墷鍏�</castle>
+            <castle>虎牢关</castle>
             <boss>1003120</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1682,11 +1682,11 @@
       </battle>
       <battle>
             <id>10003</id>
-            <name>钁ｅ崜</name>
-            <chapter>钁ｅ崜涔嬩贡</chapter>
+            <name>董卓</name>
+            <chapter>董卓之乱</chapter>
             <levelLimit>1</levelLimit>
             <battle>3</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>1003120</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -1708,15 +1708,15 @@
             <heroXp>0</heroXp>
             <material>29</material>
             <materialNum>1</materialNum>
-            <desc>钁ｅ崜鏈槸鏈�缁堢粺涓�澶╀笅鐨勪汉鐗╋紝浣嗙壒绉嶉儴闃熺殑鍚曞竷鍜岀涓�绌哄璨傝潐閮界┛瓒婂埌浜嗕笁鍥斤紝骞朵笖鑱氬湪浠栫殑韬竟锛屽氨娉ㄥ畾浠栨璺竴鏉°��</desc>
+            <desc>董卓本是最终统一天下的人物，但特种部队的吕布和第一空姐貂蝉都穿越到了三国，并且聚在他的身边，就注定他死路一条。</desc>
       </battle>
       <battle>
             <id>61</id>
-            <name>鐜嬪博</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>王岩</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鎵窞</castle>
+            <castle>扬州</castle>
             <boss>1004101</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1739,11 +1739,11 @@
       </battle>
       <battle>
             <id>62</id>
-            <name>浠婚</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>任飞</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鎵窞</castle>
+            <castle>扬州</castle>
             <boss>1004102</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1766,11 +1766,11 @@
       </battle>
       <battle>
             <id>63</id>
-            <name>鍒樻灚</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>刘枫</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鎵窞</castle>
+            <castle>扬州</castle>
             <boss>1004103</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1793,11 +1793,11 @@
       </battle>
       <battle>
             <id>64</id>
-            <name>寮犲媼</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>张勋</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鎵窞</castle>
+            <castle>扬州</castle>
             <boss>1004104</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1820,11 +1820,11 @@
       </battle>
       <battle>
             <id>65</id>
-            <name>鏉庝赴</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>李丰</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鎵窞</castle>
+            <castle>扬州</castle>
             <boss>1004105</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1847,11 +1847,11 @@
       </battle>
       <battle>
             <id>66</id>
-            <name>鏇逛腹</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>曹丹</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>寰愬窞</castle>
+            <castle>徐州</castle>
             <boss>1004106</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1874,11 +1874,11 @@
       </battle>
       <battle>
             <id>67</id>
-            <name>鍚戜紤</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>向休</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>寰愬窞</castle>
+            <castle>徐州</castle>
             <boss>1004107</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1901,11 +1901,11 @@
       </battle>
       <battle>
             <id>68</id>
-            <name>闄堢邯</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>陈纪</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>寰愬窞</castle>
+            <castle>徐州</castle>
             <boss>1004108</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1928,11 +1928,11 @@
       </battle>
       <battle>
             <id>69</id>
-            <name>闊╂旦</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>韩浩</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>寰愬窞</castle>
+            <castle>徐州</castle>
             <boss>1004109</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1955,11 +1955,11 @@
       </battle>
       <battle>
             <id>70</id>
-            <name>琚佹叮</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>袁涣</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>寰愬窞</castle>
+            <castle>徐州</castle>
             <boss>1004110</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -1982,11 +1982,11 @@
       </battle>
       <battle>
             <id>71</id>
-            <name>鏈遍『</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>朱顺</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鍏栧窞</castle>
+            <castle>兖州</castle>
             <boss>1004111</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2009,11 +2009,11 @@
       </battle>
       <battle>
             <id>72</id>
-            <name>鍚村悍</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>吴康</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鍏栧窞</castle>
+            <castle>兖州</castle>
             <boss>1004112</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2036,11 +2036,11 @@
       </battle>
       <battle>
             <id>73</id>
-            <name>闄堝叞</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>陈兰</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鍏栧窞</castle>
+            <castle>兖州</castle>
             <boss>1004113</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2063,11 +2063,11 @@
       </battle>
       <battle>
             <id>74</id>
-            <name>闆疯杽</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>雷薄</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鍏栧窞</castle>
+            <castle>兖州</castle>
             <boss>1004114</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2090,11 +2090,11 @@
       </battle>
       <battle>
             <id>75</id>
-            <name>绾伒</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>纪灵</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>鍏栧窞</castle>
+            <castle>兖州</castle>
             <boss>1004115</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2117,11 +2117,11 @@
       </battle>
       <battle>
             <id>76</id>
-            <name>榛勮嫞</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>黄苣</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>姹濆崡</castle>
+            <castle>汝南</castle>
             <boss>1004116</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2144,11 +2144,11 @@
       </battle>
       <battle>
             <id>77</id>
-            <name>瀛熺堪</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>孟翰</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>姹濆崡</castle>
+            <castle>汝南</castle>
             <boss>1004117</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2171,11 +2171,11 @@
       </battle>
       <battle>
             <id>78</id>
-            <name>琚佽��</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>袁耀</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>姹濆崡</castle>
+            <castle>汝南</castle>
             <boss>1004118</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2198,11 +2198,11 @@
       </battle>
       <battle>
             <id>79</id>
-            <name>鏉ㄥ紭</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>杨弘</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>姹濆崡</castle>
+            <castle>汝南</castle>
             <boss>1004119</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2225,11 +2225,11 @@
       </battle>
       <battle>
             <id>80</id>
-            <name>琚佹湳</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>袁术</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>姹濆崡</castle>
+            <castle>汝南</castle>
             <boss>1004120</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2252,11 +2252,11 @@
       </battle>
       <battle>
             <id>10004</id>
-            <name>琚佹湳</name>
-            <chapter>琚佹湳绉板笣</chapter>
+            <name>袁术</name>
+            <chapter>袁术称帝</chapter>
             <levelLimit>1</levelLimit>
             <battle>4</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>1004120</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -2278,15 +2278,15 @@
             <heroXp>0</heroXp>
             <material>30</material>
             <materialNum>1</materialNum>
-            <desc>璐┆鐨勫彜钁ｅ晢浜猴紝绌胯秺鍚庝緷闄勮缁嶅紑濮嬫悳鍒疂鐗╋紝鍦ㄢ�滈緳鐜衡�濅笂鍋剁劧鍙戠幇鍥炲埌鐜颁唬鐨勭嚎绱紝浣嗗洜鑻熶笖鍋风敓灏嗙瀵嗗憡璇夊垬涔愪箰銆�</desc>
+            <desc>贪婪的古董商人，穿越后依附袁绍开始搜刮宝物，在“龙玺”上偶然发现回到现代的线索，但因苟且偷生将秘密告诉刘乐乐。</desc>
       </battle>
       <battle>
             <id>81</id>
-            <name>寮犲紭</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>张弘</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>5014</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2309,11 +2309,11 @@
       </battle>
       <battle>
             <id>82</id>
-            <name>寮犳槶</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>张昭</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>5024</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2336,11 +2336,11 @@
       </battle>
       <battle>
             <id>83</id>
-            <name>钂嬮挦</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>蒋钦</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>5033</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2363,11 +2363,11 @@
       </battle>
       <battle>
             <id>84</id>
-            <name>榛勭洊</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>黄盖</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>5043</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2390,11 +2390,11 @@
       </battle>
       <battle>
             <id>85</id>
-            <name>闄嗛��</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>陆逊</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>5051</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2417,11 +2417,11 @@
       </battle>
       <battle>
             <id>86</id>
-            <name>瀛欐亽</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>孙恒</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>5064</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2444,11 +2444,11 @@
       </battle>
       <battle>
             <id>87</id>
-            <name>鏈辩劧</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>朱然</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>5072</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2471,11 +2471,11 @@
       </battle>
       <battle>
             <id>88</id>
-            <name>鍑岀粺</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>凌统</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>5082</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2498,11 +2498,11 @@
       </battle>
       <battle>
             <id>89</id>
-            <name>澶彶鎱�</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>太史慈</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>35</levelLimit>
             <battle>5</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>5092</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2525,11 +2525,11 @@
       </battle>
       <battle>
             <id>90</id>
-            <name>瀛欐潈</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>孙权</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>36</levelLimit>
             <battle>5</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>5101</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2552,11 +2552,11 @@
       </battle>
       <battle>
             <id>91</id>
-            <name>鍚曡挋</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>吕蒙</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>36</levelLimit>
             <battle>5</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>5113</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2579,11 +2579,11 @@
       </battle>
       <battle>
             <id>92</id>
-            <name>闄堟</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>陈武</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>37</levelLimit>
             <battle>5</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>5121</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2606,11 +2606,11 @@
       </battle>
       <battle>
             <id>93</id>
-            <name>闊╁綋</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>韩当</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>37</levelLimit>
             <battle>5</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>5133</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2633,11 +2633,11 @@
       </battle>
       <battle>
             <id>94</id>
-            <name>鐢樺畞</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>甘宁</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>37</levelLimit>
             <battle>5</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>5142</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2660,11 +2660,11 @@
       </battle>
       <battle>
             <id>95</id>
-            <name>椴佽們</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>鲁肃</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>38</levelLimit>
             <battle>5</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>5154</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2687,11 +2687,11 @@
       </battle>
       <battle>
             <id>96</id>
-            <name>璇歌憶鐟�</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>诸葛瑾</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>38</levelLimit>
             <battle>5</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>5164</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2714,11 +2714,11 @@
       </battle>
       <battle>
             <id>97</id>
-            <name>寰愮洓</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>徐盛</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>38</levelLimit>
             <battle>5</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>5171</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2741,11 +2741,11 @@
       </battle>
       <battle>
             <id>98</id>
-            <name>鏉ㄥ畾</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>杨定</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>39</levelLimit>
             <battle>5</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>5183</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2768,11 +2768,11 @@
       </battle>
       <battle>
             <id>99</id>
-            <name>鍛ㄦ嘲</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>周泰</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>39</levelLimit>
             <battle>5</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>5191</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2795,11 +2795,11 @@
       </battle>
       <battle>
             <id>100</id>
-            <name>鍛ㄧ憸</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>周瑜</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>39</levelLimit>
             <battle>5</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>5204</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2822,11 +2822,11 @@
       </battle>
       <battle>
             <id>10005</id>
-            <name>鍛ㄧ憸</name>
-            <chapter>涓滃惔闇镐富</chapter>
+            <name>周瑜</name>
+            <chapter>东吴霸主</chapter>
             <levelLimit>1</levelLimit>
             <battle>5</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>50001</boss>
             <chapterBackground>5</chapterBackground>
             <background>5</background>
@@ -2848,15 +2848,15 @@
             <heroXp>0</heroXp>
             <material>31</material>
             <materialNum>1</materialNum>
-            <desc>浣撹偛澶у楂樻潗鐢燂紝鍊嶅彈濂冲鍜岀敺Gay杩芥崸鐨勫鐢熶細涓诲腑锛岀┛瓒婂悗鑷獕鈥滄枃姝﹀弻鍏ㄢ�濓紝浣嗛櫎浜嗗悙琛�涓嶆鐨勬湰浜嬪锛屼篃娌″暐浜嗕笉璧枫��</desc>
+            <desc>体育大学高材生，倍受女孩和男Gay追捧的学生会主席，穿越后自誉“文武双全”，但除了吐血不死的本事外，也没啥了不起。</desc>
       </battle>
       <battle>
             <id>101</id>
-            <name>鐜嬪▉</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>王威</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>40</levelLimit>
             <battle>6</battle>
-            <castle>姹熷閮�</castle>
+            <castle>江夏郡</castle>
             <boss>6011</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -2879,11 +2879,11 @@
       </battle>
       <battle>
             <id>102</id>
-            <name>寮犺檸</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>张虎</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>40</levelLimit>
             <battle>6</battle>
-            <castle>姹熷閮�</castle>
+            <castle>江夏郡</castle>
             <boss>6021</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -2906,11 +2906,11 @@
       </battle>
       <battle>
             <id>103</id>
-            <name>鍌呮祹</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>傅济</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>40</levelLimit>
             <battle>6</battle>
-            <castle>姹熷閮�</castle>
+            <castle>江夏郡</castle>
             <boss>6033</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -2933,11 +2933,11 @@
       </battle>
       <battle>
             <id>104</id>
-            <name>榛勭</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>黄祖</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>40</levelLimit>
             <battle>6</battle>
-            <castle>姹熷閮�</castle>
+            <castle>江夏郡</castle>
             <boss>6041</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -2960,11 +2960,11 @@
       </battle>
       <battle>
             <id>105</id>
-            <name>钂秺</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蒯越</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>40</levelLimit>
             <battle>6</battle>
-            <castle>姹熷閮�</castle>
+            <castle>江夏郡</castle>
             <boss>6051</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -2987,11 +2987,11 @@
       </battle>
       <battle>
             <id>106</id>
-            <name>閭撳眻</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>邓屈</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>41</levelLimit>
             <battle>6</battle>
-            <castle>姝﹂櫟閮�</castle>
+            <castle>武陵郡</castle>
             <boss>6062</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3014,11 +3014,11 @@
       </battle>
       <battle>
             <id>107</id>
-            <name>钂壇</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蒯良</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>41</levelLimit>
             <battle>6</battle>
-            <castle>姝﹂櫟閮�</castle>
+            <castle>武陵郡</castle>
             <boss>6074</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3041,11 +3041,11 @@
       </battle>
       <battle>
             <id>108</id>
-            <name>钄″拰</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蔡和</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>41</levelLimit>
             <battle>6</battle>
-            <castle>姝﹂櫟閮�</castle>
+            <castle>武陵郡</castle>
             <boss>6082</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3068,11 +3068,11 @@
       </battle>
       <battle>
             <id>109</id>
-            <name>钄′腑</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蔡中</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>41</levelLimit>
             <battle>6</battle>
-            <castle>姝﹂櫟閮�</castle>
+            <castle>武陵郡</castle>
             <boss>6092</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3095,11 +3095,11 @@
       </battle>
       <battle>
             <id>110</id>
-            <name>钄＄憗</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蔡瑁</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>41</levelLimit>
             <battle>6</battle>
-            <castle>姝﹂櫟閮�</castle>
+            <castle>武陵郡</castle>
             <boss>6103</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3122,11 +3122,11 @@
       </battle>
       <battle>
             <id>111</id>
-            <name>榛勪俊</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>黄信</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>42</levelLimit>
             <battle>6</battle>
-            <castle>鍗楅槼閮�</castle>
+            <castle>南阳郡</castle>
             <boss>6111</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3149,11 +3149,11 @@
       </battle>
       <battle>
             <id>112</id>
-            <name>闄堝</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>陈奁</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>42</levelLimit>
             <battle>6</battle>
-            <castle>鍗楅槼閮�</castle>
+            <castle>南阳郡</castle>
             <boss>6122</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3176,11 +3176,11 @@
       </battle>
       <battle>
             <id>113</id>
-            <name>钂开</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蒯俪</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>42</levelLimit>
             <battle>6</battle>
-            <castle>鍗楅槼閮�</castle>
+            <castle>南阳郡</castle>
             <boss>6135</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3203,11 +3203,11 @@
       </battle>
       <battle>
             <id>114</id>
-            <name>寮犲厑</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>张允</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>42</levelLimit>
             <battle>6</battle>
-            <castle>鍗楅槼閮�</castle>
+            <castle>南阳郡</castle>
             <boss>6141</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3230,11 +3230,11 @@
       </battle>
       <battle>
             <id>115</id>
-            <name>鏂囪仒</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>文聘</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>42</levelLimit>
             <battle>6</battle>
-            <castle>鍗楅槼閮�</castle>
+            <castle>南阳郡</castle>
             <boss>6151</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3257,11 +3257,11 @@
       </battle>
       <battle>
             <id>116</id>
-            <name>閭瑰</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>邹寿</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>43</levelLimit>
             <battle>6</battle>
-            <castle>鑽嗗窞</castle>
+            <castle>荆州</castle>
             <boss>6162</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3284,11 +3284,11 @@
       </battle>
       <battle>
             <id>117</id>
-            <name>钄″か浜�</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>蔡夫人</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>43</levelLimit>
             <battle>6</battle>
-            <castle>鑽嗗窞</castle>
+            <castle>荆州</castle>
             <boss>6175</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3311,11 +3311,11 @@
       </battle>
       <battle>
             <id>118</id>
-            <name>鍒樼惍</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>刘琮</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>43</levelLimit>
             <battle>6</battle>
-            <castle>鑽嗗窞</castle>
+            <castle>荆州</castle>
             <boss>6181</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3338,11 +3338,11 @@
       </battle>
       <battle>
             <id>119</id>
-            <name>鍒樼惁</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>刘琦</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>43</levelLimit>
             <battle>6</battle>
-            <castle>鑽嗗窞</castle>
+            <castle>荆州</castle>
             <boss>6192</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3365,11 +3365,11 @@
       </battle>
       <battle>
             <id>120</id>
-            <name>鍒樿〃</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>刘表</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>43</levelLimit>
             <battle>6</battle>
-            <castle>鑽嗗窞</castle>
+            <castle>荆州</castle>
             <boss>6204</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3392,11 +3392,11 @@
       </battle>
       <battle>
             <id>10006</id>
-            <name>鍒樿〃</name>
-            <chapter>鑽嗗窞澶轰富</chapter>
+            <name>刘表</name>
+            <chapter>荆州夺主</chapter>
             <levelLimit>1</levelLimit>
             <battle>6</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>60001</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -3418,15 +3418,15 @@
             <heroXp>0</heroXp>
             <material>32</material>
             <materialNum>1</materialNum>
-            <desc>涓�蹇冩兂鎷夋嫝绌胯秺浜哄＋宸╁浐鑷繁涓�鏂硅渚殑鍦颁綅锛屾暣鏃ョ櫥宄拌鐪嬪ぉ璞★紝鍗翠笉灏忓績绌胯秺鍘讳簡鐜颁唬锛屽ǘ浜嗕竴涓笢鍖楁倣濡囧害杩囦綑鐢熴��</desc>
+            <desc>一心想拉拢穿越人士巩固自己一方诸侯的地位，整日登峰观看天象，却不小心穿越去了现代，娶了一个东北悍妇度过余生。</desc>
       </battle>
       <battle>
             <id>121</id>
-            <name>鍏�鍔涙垐</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>兀力戈</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>44</levelLimit>
             <battle>7</battle>
-            <castle>榛戞按</castle>
+            <castle>黑水</castle>
             <boss>7012</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3449,11 +3449,11 @@
       </battle>
       <battle>
             <id>122</id>
-            <name>钁ｉ摥鏈�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>董铭末</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>44</levelLimit>
             <battle>7</battle>
-            <castle>榛戞按</castle>
+            <castle>黑水</castle>
             <boss>7022</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3476,11 +3476,11 @@
       </battle>
       <battle>
             <id>123</id>
-            <name>蹇欑墮闀�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>忙牙长</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>44</levelLimit>
             <battle>7</battle>
-            <castle>榛戞按</castle>
+            <castle>黑水</castle>
             <boss>7033</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3503,11 +3503,11 @@
       </battle>
       <battle>
             <id>124</id>
-            <name>钁ｈ嵓閭�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>董荼那</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>44</levelLimit>
             <battle>7</battle>
-            <castle>榛戞按</castle>
+            <castle>黑水</castle>
             <boss>7041</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3530,11 +3530,11 @@
       </battle>
       <battle>
             <id>125</id>
-            <name>鍏�绐侀</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>兀突骨</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>44</levelLimit>
             <battle>7</battle>
-            <castle>榛戞按</castle>
+            <castle>黑水</castle>
             <boss>7052</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3557,11 +3557,11 @@
       </battle>
       <battle>
             <id>126</id>
-            <name>蹇欑瑳瀹�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>忙笛安</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>45</levelLimit>
             <battle>7</battle>
-            <castle>闈掑矖</castle>
+            <castle>青岗</castle>
             <boss>7064</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3584,11 +3584,11 @@
       </battle>
       <battle>
             <id>127</id>
-            <name>甯︽潵娲炰富</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>带来洞主</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>45</levelLimit>
             <battle>7</battle>
-            <castle>闈掑矖</castle>
+            <castle>青岗</castle>
             <boss>7073</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3611,11 +3611,11 @@
       </battle>
       <battle>
             <id>128</id>
-            <name>闃垮摍鍠�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>阿哙喃</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>45</levelLimit>
             <battle>7</battle>
-            <castle>闈掑矖</castle>
+            <castle>青岗</castle>
             <boss>7083</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3638,11 +3638,11 @@
       </battle>
       <battle>
             <id>129</id>
-            <name>绁濊瀺澶汉</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>祝融夫人</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>45</levelLimit>
             <battle>7</battle>
-            <castle>闈掑矖</castle>
+            <castle>青岗</castle>
             <boss>7095</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3665,11 +3665,11 @@
       </battle>
       <battle>
             <id>130</id>
-            <name>瀛熶紭</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>孟优</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>45</levelLimit>
             <battle>7</battle>
-            <castle>闈掑矖</castle>
+            <castle>青岗</castle>
             <boss>7101</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3692,11 +3692,11 @@
       </battle>
       <battle>
             <id>131</id>
-            <name>娌欏铏�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>沙季虎</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>46</levelLimit>
             <battle>7</battle>
-            <castle>璧ゅ箔</castle>
+            <castle>赤岭</castle>
             <boss>7113</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3719,11 +3719,11 @@
       </battle>
       <battle>
             <id>132</id>
-            <name>鏉ㄦ湹</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>杨朵</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>46</levelLimit>
             <battle>7</battle>
-            <castle>璧ゅ箔</castle>
+            <castle>赤岭</castle>
             <boss>7125</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3746,11 +3746,11 @@
       </battle>
       <battle>
             <id>133</id>
-            <name>鏉ㄩ攱</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>杨锋</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>46</levelLimit>
             <battle>7</battle>
-            <castle>璧ゅ箔</castle>
+            <castle>赤岭</castle>
             <boss>7133</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3773,11 +3773,11 @@
       </battle>
       <battle>
             <id>134</id>
-            <name>閲戠幆涓夌粨</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>金环三结</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>46</levelLimit>
             <battle>7</battle>
-            <castle>璧ゅ箔</castle>
+            <castle>赤岭</castle>
             <boss>7141</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3800,11 +3800,11 @@
       </battle>
       <battle>
             <id>135</id>
-            <name>娌欐懇鏌�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>沙摩柯</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>46</levelLimit>
             <battle>7</battle>
-            <castle>璧ゅ箔</castle>
+            <castle>赤岭</castle>
             <boss>7152</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3827,11 +3827,11 @@
       </battle>
       <battle>
             <id>136</id>
-            <name>绁濊兘</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>祝能</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>47</levelLimit>
             <battle>7</battle>
-            <castle>浜戝北</castle>
+            <castle>云山</castle>
             <boss>7163</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3854,11 +3854,11 @@
       </battle>
       <battle>
             <id>137</id>
-            <name>瀛熷</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>孟季</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>47</levelLimit>
             <battle>7</battle>
-            <castle>浜戝北</castle>
+            <castle>云山</castle>
             <boss>7174</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3881,11 +3881,11 @@
       </battle>
       <battle>
             <id>138</id>
-            <name>鏈垫�濆ぇ鐜�</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>朵思大王</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>47</levelLimit>
             <battle>7</battle>
-            <castle>浜戝北</castle>
+            <castle>云山</castle>
             <boss>7181</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3908,11 +3908,11 @@
       </battle>
       <battle>
             <id>139</id>
-            <name>鏈ㄩ箍澶х帇</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>木鹿大王</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>47</levelLimit>
             <battle>7</battle>
-            <castle>浜戝北</castle>
+            <castle>云山</castle>
             <boss>7191</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3935,11 +3935,11 @@
       </battle>
       <battle>
             <id>140</id>
-            <name>瀛熻幏</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>孟获</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>47</levelLimit>
             <battle>7</battle>
-            <castle>浜戝北</castle>
+            <castle>云山</castle>
             <boss>7201</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3962,11 +3962,11 @@
       </battle>
       <battle>
             <id>10007</id>
-            <name>瀛熻幏</name>
-            <chapter>鍗楄洰鍏ヤ镜</chapter>
+            <name>孟获</name>
+            <chapter>南蛮入侵</chapter>
             <levelLimit>1</levelLimit>
             <battle>7</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>70001</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -3988,15 +3988,15 @@
             <heroXp>0</heroXp>
             <material>33</material>
             <materialNum>1</materialNum>
-            <desc>琚钁涗寒褰撶尨瀛愯�嶈�屽嚭鍚嶇殑閲庝汉锛屽鏋滀粬鐭ラ亾璇歌憶浜湪绌胯秺鍓嶅凡缁忔槸涓ぉ鎵嶅効绔ョ殑璇濓紝缁濆浼氭蹇冨鍦扮殑绐濆湪灞遍噷姘镐笉鍑烘潵銆�</desc>
+            <desc>被诸葛亮当猴子耍而出名的野人，如果他知道诸葛亮在穿越前已经是个天才儿童的话，绝对会死心塌地的窝在山里永不出来。</desc>
       </battle>
       <battle>
             <id>141</id>
-            <name>鍐疯嫗</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>冷苞</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>48</levelLimit>
             <battle>8</battle>
-            <castle>铚�閮�</castle>
+            <castle>蜀郡</castle>
             <boss>8011</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4019,11 +4019,11 @@
       </battle>
       <battle>
             <id>142</id>
-            <name>鍒樺畨</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>刘安</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>48</levelLimit>
             <battle>8</battle>
-            <castle>铚�閮�</castle>
+            <castle>蜀郡</castle>
             <boss>8021</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4046,11 +4046,11 @@
       </battle>
       <battle>
             <id>143</id>
-            <name>钁ｅ厑</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>董允</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>48</levelLimit>
             <battle>8</battle>
-            <castle>铚�閮�</castle>
+            <castle>蜀郡</castle>
             <boss>8032</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4073,11 +4073,11 @@
       </battle>
       <battle>
             <id>144</id>
-            <name>钁ｅ拰</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>董和</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>48</levelLimit>
             <battle>8</battle>
-            <castle>铚�閮�</castle>
+            <castle>蜀郡</castle>
             <boss>8043</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4100,11 +4100,11 @@
       </battle>
       <battle>
             <id>145</id>
-            <name>寮犳澗</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>张松</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>48</levelLimit>
             <battle>8</battle>
-            <castle>铚�閮�</castle>
+            <castle>蜀郡</castle>
             <boss>8054</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4127,11 +4127,11 @@
       </battle>
       <battle>
             <id>146</id>
-            <name>閭撹搐</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>邓贤</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>49</levelLimit>
             <battle>8</battle>
-            <castle>宸撮儭</castle>
+            <castle>巴郡</castle>
             <boss>8064</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4154,11 +4154,11 @@
       </battle>
       <battle>
             <id>147</id>
-            <name>浠诲畨</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>任安</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>49</levelLimit>
             <battle>8</battle>
-            <castle>宸撮儭</castle>
+            <castle>巴郡</castle>
             <boss>8071</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4181,11 +4181,11 @@
       </battle>
       <battle>
             <id>148</id>
-            <name>闆疯杽</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>雷薄</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>49</levelLimit>
             <battle>8</battle>
-            <castle>宸撮儭</castle>
+            <castle>巴郡</castle>
             <boss>8082</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4208,11 +4208,11 @@
       </battle>
       <battle>
             <id>149</id>
-            <name>鍚存嚳</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>吴懿</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>49</levelLimit>
             <battle>8</battle>
-            <castle>宸撮儭</castle>
+            <castle>巴郡</castle>
             <boss>8093</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4235,11 +4235,11 @@
       </battle>
       <battle>
             <id>150</id>
-            <name>涓ラ</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>严颜</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>49</levelLimit>
             <battle>8</battle>
-            <castle>宸撮儭</castle>
+            <castle>巴郡</castle>
             <boss>8101</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4262,11 +4262,11 @@
       </battle>
       <battle>
             <id>151</id>
-            <name>鍒樺反</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>刘巴</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>50</levelLimit>
             <battle>8</battle>
-            <castle>姹変腑</castle>
+            <castle>汉中</castle>
             <boss>8114</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4289,11 +4289,11 @@
       </battle>
       <battle>
             <id>152</id>
-            <name>鏉ㄦ��</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>杨怀</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>50</levelLimit>
             <battle>8</battle>
-            <castle>姹変腑</castle>
+            <castle>汉中</castle>
             <boss>8124</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4316,11 +4316,11 @@
       </battle>
       <battle>
             <id>153</id>
-            <name>楂樻矝</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>高沛</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>50</levelLimit>
             <battle>8</battle>
-            <castle>姹変腑</castle>
+            <castle>汉中</castle>
             <boss>8133</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4343,11 +4343,11 @@
       </battle>
       <battle>
             <id>154</id>
-            <name>寮犺們</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>张肃</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>50</levelLimit>
             <battle>8</battle>
-            <castle>姹変腑</castle>
+            <castle>汉中</castle>
             <boss>8141</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4370,11 +4370,11 @@
       </battle>
       <battle>
             <id>155</id>
-            <name>鏉ㄤ华</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>杨仪</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>50</levelLimit>
             <battle>8</battle>
-            <castle>姹変腑</castle>
+            <castle>汉中</castle>
             <boss>8154</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4397,11 +4397,11 @@
       </battle>
       <battle>
             <id>156</id>
-            <name>榛勬潈</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>黄权</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>51</levelLimit>
             <battle>8</battle>
-            <castle>鐩婂窞</castle>
+            <castle>益州</castle>
             <boss>8163</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4424,11 +4424,11 @@
       </battle>
       <battle>
             <id>157</id>
-            <name>鏉庢仮</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>李恢</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>51</levelLimit>
             <battle>8</battle>
-            <castle>鐩婂窞</castle>
+            <castle>益州</castle>
             <boss>8172</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4451,11 +4451,11 @@
       </battle>
       <battle>
             <id>158</id>
-            <name>鐜嬪钩</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>王平</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>51</levelLimit>
             <battle>8</battle>
-            <castle>鐩婂窞</castle>
+            <castle>益州</castle>
             <boss>8181</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4478,11 +4478,11 @@
       </battle>
       <battle>
             <id>159</id>
-            <name>寮犱换</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>张任</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>51</levelLimit>
             <battle>8</battle>
-            <castle>鐩婂窞</castle>
+            <castle>益州</castle>
             <boss>8193</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4505,11 +4505,11 @@
       </battle>
       <battle>
             <id>160</id>
-            <name>鍒樼拫</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>刘璋</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>51</levelLimit>
             <battle>8</battle>
-            <castle>鐩婂窞</castle>
+            <castle>益州</castle>
             <boss>8204</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4532,11 +4532,11 @@
       </battle>
       <battle>
             <id>10008</id>
-            <name>鍒樼拫</name>
-            <chapter>铚�涓箣鐜�</chapter>
+            <name>刘璋</name>
+            <chapter>蜀中之王</chapter>
             <levelLimit>1</levelLimit>
             <battle>8</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>80001</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -4558,15 +4558,15 @@
             <heroXp>0</heroXp>
             <material>34</material>
             <materialNum>1</materialNum>
-            <desc>鍒樼拫姝ょ敓鏈�澶х殑蹇冩効灏辨槸鈥滃缁堟瀵濃�濓紝浣嗘槸涔变笘涔嬩腑锛屼竴甯┛瓒婄殑瀹朵紮涓嶄絾鎶婁粬鐨勬ⅵ鎯崇牳纰庯紝杩樿浠栨涓嶇瀾鐩��</desc>
+            <desc>刘璋此生最大的心愿就是“寿终正寝”，但是乱世之中，一帮穿越的家伙不但把他的梦想砸碎，还让他死不瞑目。</desc>
       </battle>
       <battle>
             <id>161</id>
-            <name>鑰垮畵</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>耿宓</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>52</levelLimit>
             <battle>9</battle>
-            <castle>绁為緳鑽夊満</castle>
+            <castle>神龙草场</castle>
             <boss>9013</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4589,11 +4589,11 @@
       </battle>
       <battle>
             <id>162</id>
-            <name>搴炶僵</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>庞轩</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>52</levelLimit>
             <battle>9</battle>
-            <castle>绁為緳鑽夊満</castle>
+            <castle>神龙草场</castle>
             <boss>9021</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4616,11 +4616,11 @@
       </battle>
       <battle>
             <id>163</id>
-            <name>鏉庡牚</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>李堪</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>52</levelLimit>
             <battle>9</battle>
-            <castle>绁為緳鑽夊満</castle>
+            <castle>神龙草场</castle>
             <boss>9033</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4643,11 +4643,11 @@
       </battle>
       <battle>
             <id>164</id>
-            <name>搴炰細</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>庞会</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>52</levelLimit>
             <battle>9</battle>
-            <castle>绁為緳鑽夊満</castle>
+            <castle>神龙草场</castle>
             <boss>9042</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4670,11 +4670,11 @@
       </battle>
       <battle>
             <id>165</id>
-            <name>椹吘</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>马腾</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>52</levelLimit>
             <battle>9</battle>
-            <castle>绁為緳鑽夊満</castle>
+            <castle>神龙草场</castle>
             <boss>9053</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4697,11 +4697,11 @@
       </battle>
       <battle>
             <id>166</id>
-            <name>鐜嬬彏</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>王珞</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>53</levelLimit>
             <battle>9</battle>
-            <castle>鐧介┈鍧�</castle>
+            <castle>白马坡</castle>
             <boss>9064</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4724,11 +4724,11 @@
       </battle>
       <battle>
             <id>167</id>
-            <name>鏉ㄧ</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>杨秋</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>53</levelLimit>
             <battle>9</battle>
-            <castle>鐧介┈鍧�</castle>
+            <castle>白马坡</castle>
             <boss>9071</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4751,11 +4751,11 @@
       </battle>
       <battle>
             <id>168</id>
-            <name>姊佸叴</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>梁兴</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>53</levelLimit>
             <battle>9</battle>
-            <castle>鐧介┈鍧�</castle>
+            <castle>白马坡</castle>
             <boss>9082</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4778,11 +4778,11 @@
       </battle>
       <battle>
             <id>169</id>
-            <name>搴炲痉</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>庞德</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>53</levelLimit>
             <battle>9</battle>
-            <castle>鐧介┈鍧�</castle>
+            <castle>白马坡</castle>
             <boss>9093</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4805,11 +4805,11 @@
       </battle>
       <battle>
             <id>170</id>
-            <name>闊╅亗</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>韩遂</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>53</levelLimit>
             <battle>9</battle>
-            <castle>鐧介┈鍧�</castle>
+            <castle>白马坡</castle>
             <boss>9104</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4832,11 +4832,11 @@
       </battle>
       <battle>
             <id>171</id>
-            <name>杈涜尐</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>辛茨</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>54</levelLimit>
             <battle>9</battle>
-            <castle>閲庣尓宀�</castle>
+            <castle>野猪岭</castle>
             <boss>9111</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4859,11 +4859,11 @@
       </battle>
       <battle>
             <id>172</id>
-            <name>浼忔煰</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>伏柯</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>54</levelLimit>
             <battle>9</battle>
-            <castle>閲庣尓宀�</castle>
+            <castle>野猪岭</castle>
             <boss>9122</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4886,11 +4886,11 @@
       </battle>
       <battle>
             <id>173</id>
-            <name>渚��</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>侯选</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>54</levelLimit>
             <battle>9</battle>
-            <castle>閲庣尓宀�</castle>
+            <castle>野猪岭</castle>
             <boss>9133</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4913,11 +4913,11 @@
       </battle>
       <battle>
             <id>174</id>
-            <name>鎴愬疁</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>成宜</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>54</levelLimit>
             <battle>9</battle>
-            <castle>閲庣尓宀�</castle>
+            <castle>野猪岭</castle>
             <boss>9143</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4940,11 +4940,11 @@
       </battle>
       <battle>
             <id>175</id>
-            <name>椹脖</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>马岱</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>54</levelLimit>
             <battle>9</battle>
-            <castle>閲庣尓宀�</castle>
+            <castle>野猪岭</castle>
             <boss>9151</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4967,11 +4967,11 @@
       </battle>
       <battle>
             <id>176</id>
-            <name>钂嬫槑</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>蒋明</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>55</levelLimit>
             <battle>9</battle>
-            <castle>缁濋緳璋�</castle>
+            <castle>绝龙谷</castle>
             <boss>9161</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -4994,11 +4994,11 @@
       </battle>
       <battle>
             <id>177</id>
-            <name>寮犳亽</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>张恒</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>55</levelLimit>
             <battle>9</battle>
-            <castle>缁濋緳璋�</castle>
+            <castle>绝龙谷</castle>
             <boss>9174</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -5021,11 +5021,11 @@
       </battle>
       <battle>
             <id>178</id>
-            <name>椹慨</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>马修</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>55</levelLimit>
             <battle>9</battle>
-            <castle>缁濋緳璋�</castle>
+            <castle>绝龙谷</castle>
             <boss>9182</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -5048,11 +5048,11 @@
       </battle>
       <battle>
             <id>179</id>
-            <name>椹搧</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>马铁</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>55</levelLimit>
             <battle>9</battle>
-            <castle>缁濋緳璋�</castle>
+            <castle>绝龙谷</castle>
             <boss>9193</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -5075,11 +5075,11 @@
       </battle>
       <battle>
             <id>180</id>
-            <name>椹秴</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>马超</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>55</levelLimit>
             <battle>9</battle>
-            <castle>缁濋緳璋�</castle>
+            <castle>绝龙谷</castle>
             <boss>9202</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -5102,11 +5102,11 @@
       </battle>
       <battle>
             <id>10009</id>
-            <name>椹秴</name>
-            <chapter>瑗垮噳閾侀獞</chapter>
+            <name>马超</name>
+            <chapter>西凉铁骑</chapter>
             <levelLimit>1</levelLimit>
             <battle>9</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>90001</boss>
             <chapterBackground>4</chapterBackground>
             <background>4</background>
@@ -5128,15 +5128,15 @@
             <heroXp>0</heroXp>
             <material>35</material>
             <materialNum>1</materialNum>
-            <desc>鑷粠涓�甯浜虹┛瓒婂埌涓夊浗鍚庯紝椹秴澶╀笅绗竴鐚涘皢鐨勬嫑鐗屼究琚嚮纰庯紝濂藉湪浠栨収鐪艰瘑鍚涙姇鍏ュ垬涔愪箰楹句笅锛屾櫄骞撮挀楸煎杺铏捐繕绠楀揩娲汇��</desc>
+            <desc>自从一帮奇人穿越到三国后，马超天下第一猛将的招牌便被击碎，好在他慧眼识君投入刘乐乐麾下，晚年钓鱼喂虾还算快活。</desc>
       </battle>
       <battle>
             <id>181</id>
-            <name>寮犵嚂</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>张燕</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>56</levelLimit>
             <battle>10</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>10014</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5159,11 +5159,11 @@
       </battle>
       <battle>
             <id>182</id>
-            <name>鍖烘槦</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>区星</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>56</levelLimit>
             <battle>10</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>10024</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5186,11 +5186,11 @@
       </battle>
       <battle>
             <id>183</id>
-            <name>鍦熷畨</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>土安</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>56</levelLimit>
             <battle>10</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>10034</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5213,11 +5213,11 @@
       </battle>
       <battle>
             <id>184</id>
-            <name>绉︾惇</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>秦琪</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>56</levelLimit>
             <battle>10</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>10044</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5240,11 +5240,11 @@
       </battle>
       <battle>
             <id>185</id>
-            <name>绌嗛『</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>穆顺</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>56</levelLimit>
             <battle>10</battle>
-            <castle>鏇查槼</castle>
+            <castle>曲阳</castle>
             <boss>10054</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5267,11 +5267,11 @@
       </battle>
       <battle>
             <id>186</id>
-            <name>鏉庨搧</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>李铁</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>57</levelLimit>
             <battle>10</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>10064</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5294,11 +5294,11 @@
       </battle>
       <battle>
             <id>187</id>
-            <name>璺槶</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>路昭</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>57</levelLimit>
             <battle>10</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>10074</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5321,11 +5321,11 @@
       </battle>
       <battle>
             <id>188</id>
-            <name>璧甸箯</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>赵鹏</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>57</levelLimit>
             <battle>10</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>10084</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5348,11 +5348,11 @@
       </battle>
       <battle>
             <id>189</id>
-            <name>璧佃緣</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>赵辉</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>57</levelLimit>
             <battle>10</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>10094</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5375,11 +5375,11 @@
       </battle>
       <battle>
             <id>190</id>
-            <name>鏌村簡</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>柴庆</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>57</levelLimit>
             <battle>10</battle>
-            <castle>骞垮畻</castle>
+            <castle>广宗</castle>
             <boss>10104</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5402,11 +5402,11 @@
       </battle>
       <battle>
             <id>191</id>
-            <name>瑭归槼</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>詹阳</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>58</levelLimit>
             <battle>10</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>10114</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5429,11 +5429,11 @@
       </battle>
       <battle>
             <id>192</id>
-            <name>瀛欓珮</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>孙高</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>58</levelLimit>
             <battle>10</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>10124</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5456,11 +5456,11 @@
       </battle>
       <battle>
             <id>193</id>
-            <name>榛勫叴</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>黄兴</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>58</levelLimit>
             <battle>10</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>10134</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5483,11 +5483,11 @@
       </battle>
       <battle>
             <id>194</id>
-            <name>鏉ㄨ秴</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>杨超</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>58</levelLimit>
             <battle>10</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>10144</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5510,11 +5510,11 @@
       </battle>
       <battle>
             <id>195</id>
-            <name>璧电</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>赵磊</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>58</levelLimit>
             <battle>10</battle>
-            <castle>宸ㄩ箍</castle>
+            <castle>巨鹿</castle>
             <boss>10154</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5537,11 +5537,11 @@
       </battle>
       <battle>
             <id>196</id>
-            <name>鏂规偊</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>方悦</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>59</levelLimit>
             <battle>10</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>10164</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5564,11 +5564,11 @@
       </battle>
       <battle>
             <id>197</id>
-            <name>钂嬮綈</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>蒋齐</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>59</levelLimit>
             <battle>10</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>10174</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5591,11 +5591,11 @@
       </battle>
       <battle>
             <id>198</id>
-            <name>濂氭偿</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>奚泥</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>59</levelLimit>
             <battle>10</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>10184</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5618,11 +5618,11 @@
       </battle>
       <battle>
             <id>199</id>
-            <name>瀛旂</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>孔秀</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>59</levelLimit>
             <battle>10</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>10194</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5645,11 +5645,11 @@
       </battle>
       <battle>
             <id>200</id>
-            <name>閮槈</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>郭嘉</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>59</levelLimit>
             <battle>10</battle>
-            <castle>婵槼</castle>
+            <castle>濮阳</castle>
             <boss>10204</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5672,11 +5672,11 @@
       </battle>
       <battle>
             <id>10010</id>
-            <name>閮槈</name>
-            <chapter>瀹涘煄涔嬫垬</chapter>
+            <name>郭嘉</name>
+            <chapter>宛城之战</chapter>
             <levelLimit>1</levelLimit>
             <battle>10</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>100001</boss>
             <chapterBackground>1</chapterBackground>
             <background>1</background>
@@ -5698,15 +5698,15 @@
             <heroXp>0</heroXp>
             <material>42</material>
             <materialNum>1</materialNum>
-            <desc>閮槈鍦ㄧ┛瓒婂墠宸茬粡琚瘖鏂负鐩告�濈梾鏅氭湡锛岃櫧鐒跺湪涓夊浗娌℃椿澶氫箙锛屼絾浠栫敤鏋侀珮鐨勬櫤鍟嗚瘉鏄庤嚜宸辩殑榄呭姏銆�</desc>
+            <desc>郭嘉在穿越前已经被诊断为相思病晚期，虽然在三国没活多久，但他用极高的智商证明自己的魅力。</desc>
       </battle>
       <battle>
             <id>201</id>
-            <name>铏炰俊</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>虞信</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>60</levelLimit>
             <battle>11</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>11014</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5729,11 +5729,11 @@
       </battle>
       <battle>
             <id>202</id>
-            <name>瀛欒幗</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>孙莽</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>60</levelLimit>
             <battle>11</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>11024</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5756,11 +5756,11 @@
       </battle>
       <battle>
             <id>203</id>
-            <name>鏉ㄥ啲</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>杨冬</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>60</levelLimit>
             <battle>11</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>11034</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5783,11 +5783,11 @@
       </battle>
       <battle>
             <id>204</id>
-            <name>鍐シ</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>冯楷</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>60</levelLimit>
             <battle>11</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>11044</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5810,11 +5810,11 @@
       </battle>
       <battle>
             <id>205</id>
-            <name>寮犲畞</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>张宁</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>60</levelLimit>
             <battle>11</battle>
-            <castle>涔屽发</castle>
+            <castle>乌巢</castle>
             <boss>11054</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5837,11 +5837,11 @@
       </battle>
       <battle>
             <id>206</id>
-            <name>闊╂睙</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>韩江</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>61</levelLimit>
             <battle>11</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>11064</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5864,11 +5864,11 @@
       </battle>
       <battle>
             <id>207</id>
-            <name>鏉庤秴</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>李超</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>61</levelLimit>
             <battle>11</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>11074</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5891,11 +5891,11 @@
       </battle>
       <battle>
             <id>208</id>
-            <name>寮犲厓</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>张元</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>61</levelLimit>
             <battle>11</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>11084</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5918,11 +5918,11 @@
       </battle>
       <battle>
             <id>209</id>
-            <name>鍒樺垰</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>刘刚</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>61</levelLimit>
             <battle>11</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>11094</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5945,11 +5945,11 @@
       </battle>
       <battle>
             <id>210</id>
-            <name>姊佸垰</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>梁刚</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>61</levelLimit>
             <battle>11</battle>
-            <castle>瀹樻浮</castle>
+            <castle>官渡</castle>
             <boss>11104</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5972,11 +5972,11 @@
       </battle>
       <battle>
             <id>211</id>
-            <name>寮犺</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>张让</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>62</levelLimit>
             <battle>11</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>11114</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -5999,11 +5999,11 @@
       </battle>
       <battle>
             <id>212</id>
-            <name>鏇规��</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>曹性</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>62</levelLimit>
             <battle>11</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>11124</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6026,11 +6026,11 @@
       </battle>
       <battle>
             <id>213</id>
-            <name>鍏瓩缁�</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>公孙续</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>62</levelLimit>
             <battle>11</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>11134</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6053,11 +6053,11 @@
       </battle>
       <battle>
             <id>214</id>
-            <name>鐜嬮</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>王飞</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>62</levelLimit>
             <battle>11</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>11144</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6080,11 +6080,11 @@
       </battle>
       <battle>
             <id>215</id>
-            <name>璧佃瘹</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>赵诚</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>62</levelLimit>
             <battle>11</battle>
-            <castle>澹跺叧</castle>
+            <castle>壶关</castle>
             <boss>11154</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6107,11 +6107,11 @@
       </battle>
       <battle>
             <id>216</id>
-            <name>鏉庡垰</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>李刚</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>63</levelLimit>
             <battle>11</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>11164</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6134,11 +6134,11 @@
       </battle>
       <battle>
             <id>217</id>
-            <name>濮滆秴</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>姜超</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>63</levelLimit>
             <battle>11</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>11174</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6161,11 +6161,11 @@
       </battle>
       <battle>
             <id>218</id>
-            <name>榛勭</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>黄磊</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>63</levelLimit>
             <battle>11</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>11184</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6188,11 +6188,11 @@
       </battle>
       <battle>
             <id>219</id>
-            <name>鏉庡吀</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>李典</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>63</levelLimit>
             <battle>11</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>11194</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6215,11 +6215,11 @@
       </battle>
       <battle>
             <id>220</id>
-            <name>棰滆壇</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>颜良</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>63</levelLimit>
             <battle>11</battle>
-            <castle>閭哄煄</castle>
+            <castle>邺城</castle>
             <boss>11203</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6242,11 +6242,11 @@
       </battle>
       <battle>
             <id>10011</id>
-            <name>棰滆壇</name>
-            <chapter>瀹樻浮涔嬫垬</chapter>
+            <name>颜良</name>
+            <chapter>官渡之战</chapter>
             <levelLimit>1</levelLimit>
             <battle>11</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>100002</boss>
             <chapterBackground>2</chapterBackground>
             <background>2</background>
@@ -6268,15 +6268,15 @@
             <heroXp>0</heroXp>
             <material>43</material>
             <materialNum>1</materialNum>
-            <desc>棰滆壇鏈槸涓墦閾佺殑锛屽洜鏀剁暀浜嗙┛瓒婅�呰缁嶏紝鎵�浠ヤ竴鐩村悆棣欏枬杈ｏ紝鍦ㄨ缁嶇殑鎾悎涓嬶紝浠栦笌鏂囦笐娣辨繁鐩哥埍銆�</desc>
+            <desc>颜良本是个打铁的，因收留了穿越者袁绍，所以一直吃香喝辣，在袁绍的撮合下，他与文丑深深相爱。</desc>
       </battle>
       <battle>
             <id>221</id>
-            <name>鍗㈡澃</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>卢杰</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>64</levelLimit>
             <battle>12</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>12014</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6299,11 +6299,11 @@
       </battle>
       <battle>
             <id>222</id>
-            <name>閮槼</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>郭阳</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>64</levelLimit>
             <battle>12</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>12024</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6326,11 +6326,11 @@
       </battle>
       <battle>
             <id>223</id>
-            <name>鍛ㄦ棴</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>周旭</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>64</levelLimit>
             <battle>12</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>12034</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6353,11 +6353,11 @@
       </battle>
       <battle>
             <id>224</id>
-            <name>鎴村憳</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>戴员</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>64</levelLimit>
             <battle>12</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>12044</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6380,11 +6380,11 @@
       </battle>
       <battle>
             <id>225</id>
-            <name>瀛欏嚡</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>孙凯</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>64</levelLimit>
             <battle>12</battle>
-            <castle>搴愰櫟閮�</castle>
+            <castle>庐陵郡</castle>
             <boss>12054</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6407,11 +6407,11 @@
       </battle>
       <battle>
             <id>226</id>
-            <name>闄嗗厓</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>陆元</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>65</levelLimit>
             <battle>12</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>12064</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6434,11 +6434,11 @@
       </battle>
       <battle>
             <id>227</id>
-            <name>鍒樿櫈</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>刘虞</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>65</levelLimit>
             <battle>12</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>12074</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6461,11 +6461,11 @@
       </battle>
       <battle>
             <id>228</id>
-            <name>鍊欐垚</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>候成</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>65</levelLimit>
             <battle>12</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>12084</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6488,11 +6488,11 @@
       </battle>
       <battle>
             <id>229</id>
-            <name>闊╃</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>韩福</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>65</levelLimit>
             <battle>12</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>12094</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6515,11 +6515,11 @@
       </battle>
       <battle>
             <id>230</id>
-            <name>鍏抽潠</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>关靖</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>65</levelLimit>
             <battle>12</battle>
-            <castle>褰辰閮�</castle>
+            <castle>彭泽郡</castle>
             <boss>12104</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6542,11 +6542,11 @@
       </battle>
       <battle>
             <id>231</id>
-            <name>闊╁痉</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>韩德</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>66</levelLimit>
             <battle>12</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>12114</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6569,11 +6569,11 @@
       </battle>
       <battle>
             <id>232</id>
-            <name>瀛欓拪</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>孙钊</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>66</levelLimit>
             <battle>12</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>12124</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6596,11 +6596,11 @@
       </battle>
       <battle>
             <id>233</id>
-            <name>璋㈡稕</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>谢涛</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>66</levelLimit>
             <battle>12</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>12134</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6623,11 +6623,11 @@
       </battle>
       <battle>
             <id>234</id>
-            <name>琚佸崥</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>袁博</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>66</levelLimit>
             <battle>12</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>12144</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6650,11 +6650,11 @@
       </battle>
       <battle>
             <id>235</id>
-            <name>鍚曟澃</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>吕杰</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>66</levelLimit>
             <battle>12</battle>
-            <castle>閯遍槼閮�</castle>
+            <castle>鄱阳郡</castle>
             <boss>12154</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6677,11 +6677,11 @@
       </battle>
       <battle>
             <id>236</id>
-            <name>闄嗘</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>陆楠</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>67</levelLimit>
             <battle>12</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>12164</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6704,11 +6704,11 @@
       </battle>
       <battle>
             <id>237</id>
-            <name>寮犳槶</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>张昭</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>67</levelLimit>
             <battle>12</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>12174</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6731,11 +6731,11 @@
       </battle>
       <battle>
             <id>238</id>
-            <name>鏈变匠</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>朱佳</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>67</levelLimit>
             <battle>12</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>12184</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6758,11 +6758,11 @@
       </battle>
       <battle>
             <id>239</id>
-            <name>浠绘枃娉�</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>任文波</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>67</levelLimit>
             <battle>12</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>12194</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6785,11 +6785,11 @@
       </battle>
       <battle>
             <id>240</id>
-            <name>澶彶鎱�</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>太史慈</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>67</levelLimit>
             <battle>12</battle>
-            <castle>寤轰笟</castle>
+            <castle>建业</castle>
             <boss>12202</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6812,11 +6812,11 @@
       </battle>
       <battle>
             <id>10012</id>
-            <name>澶彶鎱�</name>
-            <chapter>涓滃惔涔嬫垬</chapter>
+            <name>太史慈</name>
+            <chapter>东吴之战</chapter>
             <levelLimit>1</levelLimit>
             <battle>12</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>100003</boss>
             <chapterBackground>3</chapterBackground>
             <background>3</background>
@@ -6838,15 +6838,15 @@
             <heroXp>0</heroXp>
             <material>44</material>
             <materialNum>1</materialNum>
-            <desc>澶彶鎱堢殑姝﹁壓閮芥槸鍛ㄧ憸浼犳巿鐨勶紝鐢变簬浠栧鎾戞潌璺炽�佹爣鏋瓑浣撹偛椤圭洰鏋佹劅鍏磋叮锛屾墍浠ユ渶缁堟垚涓鸿垶鏋渶甯呯殑浜恒��</desc>
+            <desc>太史慈的武艺都是周瑜传授的，由于他对撑杆跳、标枪等体育项目极感兴趣，所以最终成为舞枪最帅的人。</desc>
       </battle>
       <battle>
             <id>241</id>
-            <name>澶忎警娓�</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>夏侯渊</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>80</levelLimit>
             <battle>13</battle>
-            <castle>澶╂捣</castle>
+            <castle>天海</castle>
             <boss>131135</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -6869,11 +6869,11 @@
       </battle>
       <battle>
             <id>242</id>
-            <name>寮犳槬鍗�</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>张春华</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>80</levelLimit>
             <battle>13</battle>
-            <castle>澶╂捣</castle>
+            <castle>天海</castle>
             <boss>131255</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -6896,11 +6896,11 @@
       </battle>
       <battle>
             <id>243</id>
-            <name>閮槈</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>郭嘉</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>80</levelLimit>
             <battle>13</battle>
-            <castle>澶╂捣</castle>
+            <castle>天海</castle>
             <boss>131343</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -6923,11 +6923,11 @@
       </battle>
       <battle>
             <id>244</id>
-            <name>鏇规椽</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>曹洪</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>80</levelLimit>
             <battle>13</battle>
-            <castle>澶╂捣</castle>
+            <castle>天海</castle>
             <boss>131445</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -6950,11 +6950,11 @@
       </battle>
       <battle>
             <id>245</id>
-            <name>鍒樿惫</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>刘豹</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>80</levelLimit>
             <battle>13</battle>
-            <castle>澶╂捣</castle>
+            <castle>天海</castle>
             <boss>131523</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -6977,11 +6977,11 @@
       </battle>
       <battle>
             <id>246</id>
-            <name>杈涘鑻�</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>辛宪英</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>81</levelLimit>
             <battle>13</battle>
-            <castle>涓囧窛</castle>
+            <castle>万川</castle>
             <boss>132153</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7004,11 +7004,11 @@
       </battle>
       <battle>
             <id>247</id>
-            <name>鍑屽姜</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>凌彪</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>81</levelLimit>
             <battle>13</battle>
-            <castle>涓囧窛</castle>
+            <castle>万川</castle>
             <boss>132213</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7031,11 +7031,11 @@
       </battle>
       <battle>
             <id>248</id>
-            <name>澶忎警闇�</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>夏侯霸</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>81</levelLimit>
             <battle>13</battle>
-            <castle>涓囧窛</castle>
+            <castle>万川</castle>
             <boss>132335</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7058,11 +7058,11 @@
       </battle>
       <battle>
             <id>249</id>
-            <name>鍒樿皩</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>刘谌</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>81</levelLimit>
             <battle>13</battle>
-            <castle>涓囧窛</castle>
+            <castle>万川</castle>
             <boss>132435</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7085,11 +7085,11 @@
       </battle>
       <battle>
             <id>250</id>
-            <name>寮犺窘</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>张辽</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>81</levelLimit>
             <battle>13</battle>
-            <castle>涓囧窛</castle>
+            <castle>万川</castle>
             <boss>132525</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7112,11 +7112,11 @@
       </battle>
       <battle>
             <id>251</id>
-            <name>涔愯繘</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>乐进</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>82</levelLimit>
             <battle>13</battle>
-            <castle>缁濆嘲</castle>
+            <castle>绝峰</castle>
             <boss>133115</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7139,11 +7139,11 @@
       </battle>
       <battle>
             <id>252</id>
-            <name>浜庣</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>于禁</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>82</levelLimit>
             <battle>13</battle>
-            <castle>缁濆嘲</castle>
+            <castle>绝峰</castle>
             <boss>133233</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7166,11 +7166,11 @@
       </battle>
       <battle>
             <id>253</id>
-            <name>铏炲ē</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>虞娥</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>82</levelLimit>
             <battle>13</battle>
-            <castle>缁濆嘲</castle>
+            <castle>绝峰</castle>
             <boss>133355</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7193,11 +7193,11 @@
       </battle>
       <battle>
             <id>254</id>
-            <name>閮濇槶</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>郝昭</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>82</levelLimit>
             <battle>13</battle>
-            <castle>缁濆嘲</castle>
+            <castle>绝峰</castle>
             <boss>133443</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7220,11 +7220,11 @@
       </battle>
       <battle>
             <id>255</id>
-            <name>鍒樻窓</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>刘淙</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>82</levelLimit>
             <battle>13</battle>
-            <castle>缁濆嘲</castle>
+            <castle>绝峰</castle>
             <boss>133535</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7247,11 +7247,11 @@
       </battle>
       <battle>
             <id>256</id>
-            <name>鐜嬪弻</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>王双</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>83</levelLimit>
             <battle>13</battle>
-            <castle>澶ч兘</castle>
+            <castle>大都</castle>
             <boss>134143</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7274,11 +7274,11 @@
       </battle>
       <battle>
             <id>257</id>
-            <name>璁歌</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>许诸</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>83</levelLimit>
             <battle>13</battle>
-            <castle>澶ч兘</castle>
+            <castle>大都</castle>
             <boss>134213</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7301,11 +7301,11 @@
       </battle>
       <battle>
             <id>258</id>
-            <name>鑽�褰�</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>荀彧</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>83</levelLimit>
             <battle>13</battle>
-            <castle>澶ч兘</castle>
+            <castle>大都</castle>
             <boss>134345</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7328,11 +7328,11 @@
       </battle>
       <battle>
             <id>259</id>
-            <name>椹厓涔�</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>马元义</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>83</levelLimit>
             <battle>13</battle>
-            <castle>澶ч兘</castle>
+            <castle>大都</castle>
             <boss>134425</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7355,11 +7355,11 @@
       </battle>
       <battle>
             <id>260</id>
-            <name>鏇逛笗</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>曹丕</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>83</levelLimit>
             <battle>13</battle>
-            <castle>澶ч兘</castle>
+            <castle>大都</castle>
             <boss>134543</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7382,11 +7382,11 @@
       </battle>
       <battle>
             <id>10013</id>
-            <name>鏇逛笗</name>
-            <chapter>鐑界伀涔嬫垬</chapter>
+            <name>曹丕</name>
+            <chapter>烽火之战</chapter>
             <levelLimit>1</levelLimit>
             <battle>13</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>100004</boss>
             <chapterBackground>6</chapterBackground>
             <background>6</background>
@@ -7408,15 +7408,15 @@
             <heroXp>0</heroXp>
             <material>174</material>
             <materialNum>1</materialNum>
-            <desc>鏇规搷鐨勫疂璐濆効瀛愶紝鏇规搷浠庡皬瀵逛粬杩涜浜嗙壒绉嶅叺寮忚缁冿紝浣垮緱鏇逛笗鐨勭骞村嚑涔庢槸鍦ㄨ娣嬫穻鐨勫幃鏉�涓垚闀跨殑銆備粬蹇犺瘹鍦板畧鎶ょ潃鐖朵翰鐨勪竴鍒囷紝鍦ㄤ笁鍥界殑涓�缁熷ぇ涓氫笂锛屾壆婕旂潃涓�涓棤鐣忕殑鎴樹簤鍌�鍎°��</desc>
+            <desc>曹操的宝贝儿子，曹操从小对他进行了特种兵式训练，使得曹丕的童年几乎是在血淋淋的厮杀中成长的。他忠诚地守护着父亲的一切，在三国的一统大业上，扮演着一个无畏的战争傀儡。</desc>
       </battle>
       <battle>
             <id>261</id>
-            <name>鐢勫</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>甄婉</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>84</levelLimit>
             <battle>14</battle>
-            <castle>骞冲箔</castle>
+            <castle>平岭</castle>
             <boss>141155</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7439,11 +7439,11 @@
       </battle>
       <battle>
             <id>262</id>
-            <name>鑽�鏀�</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>荀攸</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>84</levelLimit>
             <battle>14</battle>
-            <castle>骞冲箔</castle>
+            <castle>平岭</castle>
             <boss>141233</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7466,11 +7466,11 @@
       </battle>
       <battle>
             <id>263</id>
-            <name>璐捐</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>贾诩</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>84</levelLimit>
             <battle>14</battle>
-            <castle>骞冲箔</castle>
+            <castle>平岭</castle>
             <boss>141345</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7493,11 +7493,11 @@
       </battle>
       <battle>
             <id>264</id>
-            <name>鐧戒箰</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>白乐</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>84</levelLimit>
             <battle>14</battle>
-            <castle>骞冲箔</castle>
+            <castle>平岭</castle>
             <boss>141423</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7520,11 +7520,11 @@
       </battle>
       <battle>
             <id>265</id>
-            <name>鍗庢瓎 銆�銆�</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>华歆 　　</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>84</levelLimit>
             <battle>14</battle>
-            <castle>骞冲箔</castle>
+            <castle>平岭</castle>
             <boss>141543</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7547,11 +7547,11 @@
       </battle>
       <battle>
             <id>266</id>
-            <name>鐢樺か浜�</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>甘夫人</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>85</levelLimit>
             <battle>14</battle>
-            <castle>濂夊ぉ</castle>
+            <castle>奉天</castle>
             <boss>142155</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7574,11 +7574,11 @@
       </battle>
       <battle>
             <id>267</id>
-            <name>鐢颁簣</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>田予</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>85</levelLimit>
             <battle>14</battle>
-            <castle>濂夊ぉ</castle>
+            <castle>奉天</castle>
             <boss>142213</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7601,11 +7601,11 @@
       </battle>
       <battle>
             <id>268</id>
-            <name>鍒樺皝</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>刘封</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>85</levelLimit>
             <battle>14</battle>
-            <castle>濂夊ぉ</castle>
+            <castle>奉天</castle>
             <boss>142335</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7628,11 +7628,11 @@
       </battle>
       <battle>
             <id>269</id>
-            <name>鍏冲钩</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>关平</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>85</levelLimit>
             <battle>14</battle>
-            <castle>濂夊ぉ</castle>
+            <castle>奉天</castle>
             <boss>142425</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7655,11 +7655,11 @@
       </battle>
       <battle>
             <id>270</id>
-            <name>鍒樻晱</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>刘敏</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>85</levelLimit>
             <battle>14</battle>
-            <castle>濂夊ぉ</castle>
+            <castle>奉天</castle>
             <boss>142515</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7682,11 +7682,11 @@
       </battle>
       <battle>
             <id>271</id>
-            <name>鍏冲叴</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>关兴</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>86</levelLimit>
             <battle>14</battle>
-            <castle>榛戞辰</castle>
+            <castle>黑泽</castle>
             <boss>143145</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7709,11 +7709,11 @@
       </battle>
       <battle>
             <id>272</id>
-            <name>寮犺嫗</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>张苞</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>86</levelLimit>
             <battle>14</battle>
-            <castle>榛戞辰</castle>
+            <castle>黑泽</castle>
             <boss>143215</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7736,11 +7736,11 @@
       </battle>
       <battle>
             <id>273</id>
-            <name>寮犵考</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>张翼</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>86</levelLimit>
             <battle>14</battle>
-            <castle>榛戞辰</castle>
+            <castle>黑泽</castle>
             <boss>143345</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7763,11 +7763,11 @@
       </battle>
       <battle>
             <id>274</id>
-            <name>寮犲斗</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>张嶷</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>86</levelLimit>
             <battle>14</battle>
-            <castle>榛戞辰</castle>
+            <castle>黑泽</castle>
             <boss>143415</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7790,11 +7790,11 @@
       </battle>
       <battle>
             <id>275</id>
-            <name>椹繝</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>马忠</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>86</levelLimit>
             <battle>14</battle>
-            <castle>榛戞辰</castle>
+            <castle>黑泽</castle>
             <boss>143513</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7817,11 +7817,11 @@
       </battle>
       <battle>
             <id>276</id>
-            <name>鍚寸彮</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>吴班</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>87</levelLimit>
             <battle>14</battle>
-            <castle>涓村煄</castle>
+            <castle>临城</castle>
             <boss>144155</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7844,11 +7844,11 @@
       </battle>
       <battle>
             <id>277</id>
-            <name>鍒樺惊</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>刘循</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>87</levelLimit>
             <battle>14</battle>
-            <castle>涓村煄</castle>
+            <castle>临城</castle>
             <boss>144255</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7871,11 +7871,11 @@
       </battle>
       <battle>
             <id>278</id>
-            <name>璇歌憶鐬� 銆�銆�</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>诸葛瞻 　　</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>87</levelLimit>
             <battle>14</battle>
-            <castle>涓村煄</castle>
+            <castle>临城</castle>
             <boss>144355</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7898,11 +7898,11 @@
       </battle>
       <battle>
             <id>279</id>
-            <name>搴炵粺</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>庞统</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>87</levelLimit>
             <battle>14</battle>
-            <castle>涓村煄</castle>
+            <castle>临城</castle>
             <boss>144423</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7925,11 +7925,11 @@
       </battle>
       <battle>
             <id>280</id>
-            <name>寰愭檭</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>徐晃</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>87</levelLimit>
             <battle>14</battle>
-            <castle>涓村煄</castle>
+            <castle>临城</castle>
             <boss>144513</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7952,11 +7952,11 @@
       </battle>
       <battle>
             <id>10014</id>
-            <name>寰愭檭</name>
-            <chapter>鍐冲牑涔嬫垬</chapter>
+            <name>徐晃</name>
+            <chapter>决堤之战</chapter>
             <levelLimit>1</levelLimit>
             <battle>14</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>100005</boss>
             <chapterBackground>7</chapterBackground>
             <background>7</background>
@@ -7978,15 +7978,15 @@
             <heroXp>0</heroXp>
             <material>175</material>
             <materialNum>1</materialNum>
-            <desc>鏇归瓘澶у啗鐨勬枾澶村ぇ鐜嬶紝浠庡垰璁颁簨璧峰氨甯�佺埜缁欏湴涓诲妶鏌达紝鐮嶄簡鍗佸叚骞达紝鏈�鍚庢妸鍦颁富缁欑爫浜嗐�傚姞鍏ヤ簡鏇规搷楹句笅鍚庯紝寰楀埌浜嗚繛鏇逛笗銆佸渚厔寮熼兘鏈涘皹鑾強鐨勮祻璇嗭紝鍗冨彜鎵悕锛�</desc>
+            <desc>曹魏大军的斧头大王，从刚记事起就帮老爸给地主劈柴，砍了十六年，最后把地主给砍了。加入了曹操麾下后，得到了连曹丕、夏侯兄弟都望尘莫及的赏识，千古扬名！</desc>
       </battle>
       <battle>
             <id>281</id>
-            <name>娉曟</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>法正</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>88</levelLimit>
             <battle>15</battle>
-            <castle>榫欏箔</castle>
+            <castle>龙岭</castle>
             <boss>151145</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8009,11 +8009,11 @@
       </battle>
       <battle>
             <id>282</id>
-            <name>钂嬬惉</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>蒋琬</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>88</levelLimit>
             <battle>15</battle>
-            <castle>榫欏箔</castle>
+            <castle>龙岭</castle>
             <boss>151245</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8036,11 +8036,11 @@
       </battle>
       <battle>
             <id>283</id>
-            <name>璐硅</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>费袆</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>88</levelLimit>
             <battle>15</battle>
-            <castle>榫欏箔</castle>
+            <castle>龙岭</castle>
             <boss>151325</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8063,11 +8063,11 @@
       </battle>
       <battle>
             <id>284</id>
-            <name>濮滅淮</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>姜维</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>88</levelLimit>
             <battle>15</battle>
-            <castle>榫欏箔</castle>
+            <castle>龙岭</castle>
             <boss>151425</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8090,11 +8090,11 @@
       </battle>
       <battle>
             <id>285</id>
-            <name>鏉庝弗</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>李严</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>88</levelLimit>
             <battle>15</battle>
-            <castle>榫欏箔</castle>
+            <castle>龙岭</castle>
             <boss>151543</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8117,11 +8117,11 @@
       </battle>
       <battle>
             <id>286</id>
-            <name>璋懆銆�銆�</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>谯周　　</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>89</levelLimit>
             <battle>15</battle>
-            <castle>鍗冪</castle>
+            <castle>千竹</castle>
             <boss>152125</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8144,11 +8144,11 @@
       </battle>
       <battle>
             <id>287</id>
-            <name>闄堝崌</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>陈升</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>89</levelLimit>
             <battle>15</battle>
-            <castle>鍗冪</castle>
+            <castle>千竹</castle>
             <boss>152225</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8171,11 +8171,11 @@
       </battle>
       <battle>
             <id>288</id>
-            <name>椴嶄笁濞�</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>鲍三娘</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>89</levelLimit>
             <battle>15</battle>
-            <castle>鍗冪</castle>
+            <castle>千竹</castle>
             <boss>152353</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8198,11 +8198,11 @@
       </battle>
       <battle>
             <id>289</id>
-            <name>鏇逛紤</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>曹休</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>89</levelLimit>
             <battle>15</battle>
-            <castle>鍗冪</castle>
+            <castle>千竹</castle>
             <boss>152443</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8225,11 +8225,11 @@
       </battle>
       <battle>
             <id>290</id>
-            <name>闄嗘姉</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>陆抗</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>89</levelLimit>
             <battle>15</battle>
-            <castle>鍗冪</castle>
+            <castle>千竹</castle>
             <boss>152525</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8252,11 +8252,11 @@
       </battle>
       <battle>
             <id>291</id>
-            <name>寮犳硴</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>张泓</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>90</levelLimit>
             <battle>15</battle>
-            <castle>涔濆噳</castle>
+            <castle>九凉</castle>
             <boss>153115</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8279,11 +8279,11 @@
       </battle>
       <battle>
             <id>292</id>
-            <name>椤鹃泹</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>顾雍</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>90</levelLimit>
             <battle>15</battle>
-            <castle>涔濆噳</castle>
+            <castle>九凉</castle>
             <boss>153215</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8306,11 +8306,11 @@
       </battle>
       <battle>
             <id>293</id>
-            <name>椴佽們</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>鲁肃</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>90</levelLimit>
             <battle>15</battle>
-            <castle>涔濆噳</castle>
+            <castle>九凉</castle>
             <boss>153335</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8333,11 +8333,11 @@
       </battle>
       <battle>
             <id>294</id>
-            <name>鑹挴</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>良蒯</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>90</levelLimit>
             <battle>15</battle>
-            <castle>涔濆噳</castle>
+            <castle>九凉</castle>
             <boss>153455</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8360,11 +8360,11 @@
       </battle>
       <battle>
             <id>295</id>
-            <name>妤肩巹</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>楼玄</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>90</levelLimit>
             <battle>15</battle>
-            <castle>涔濆噳</castle>
+            <castle>九凉</castle>
             <boss>153533</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8387,11 +8387,11 @@
       </battle>
       <battle>
             <id>296</id>
-            <name>钂秺</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>蒯越</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>91</levelLimit>
             <battle>15</battle>
-            <castle>閾滈泙</castle>
+            <castle>铜雀</castle>
             <boss>154133</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8414,11 +8414,11 @@
       </battle>
       <battle>
             <id>297</id>
-            <name>铏炵炕</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>虞翻</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>91</levelLimit>
             <battle>15</battle>
-            <castle>閾滈泙</castle>
+            <castle>铜雀</castle>
             <boss>154233</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8441,11 +8441,11 @@
       </battle>
       <battle>
             <id>298</id>
-            <name>璺补</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>路粹</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>91</levelLimit>
             <battle>15</battle>
-            <castle>閾滈泙</castle>
+            <castle>铜雀</castle>
             <boss>154325</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8468,11 +8468,11 @@
       </battle>
       <battle>
             <id>299</id>
-            <name>绠�闆�</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>简雍</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>91</levelLimit>
             <battle>15</battle>
-            <castle>閾滈泙</castle>
+            <castle>铜雀</castle>
             <boss>154415</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8495,11 +8495,11 @@
       </battle>
       <battle>
             <id>300</id>
-            <name>鍏搁煢</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>典韦</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>91</levelLimit>
             <battle>15</battle>
-            <castle>閾滈泙</castle>
+            <castle>铜雀</castle>
             <boss>154523</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8522,11 +8522,11 @@
       </battle>
       <battle>
             <id>10015</id>
-            <name>鍏搁煢</name>
-            <chapter>閾滈泙涔嬫垬</chapter>
+            <name>典韦</name>
+            <chapter>铜雀之战</chapter>
             <levelLimit>1</levelLimit>
             <battle>15</battle>
-            <castle>绮捐嫳鍓湰</castle>
+            <castle>精英副本</castle>
             <boss>100006</boss>
             <chapterBackground>8</chapterBackground>
             <background>8</background>
@@ -8548,6 +8548,6 @@
             <heroXp>0</heroXp>
             <material>176</material>
             <materialNum>1</materialNum>
-            <desc>閲庡吔涓�鑸殑鐢蜂汉锛屽棞琛�鐙傛毚鐨勬�ф牸璁╂暣涓浌榄忓ぇ鍐涚殑鎮嶅皢浠剨姊佸彂瀵掞紝鏄浌鎿嶇殑鐜嬬墝鎵撴墜锛屼粠鏈柦灞曡繃姝﹁壓锛屽洜涓烘牴鏈笉闇�瑕併�傛姟璧烽搧閿ゅ悗锛�10绫充箣鍐呮棤浜烘暍浜庤繎韬�傚ぉ涓嬩粎鍚曞竷鍙笌涔嬪尮鏁屻��</desc>
+            <desc>野兽一般的男人，嗜血狂暴的性格让整个曹魏大军的悍将们脊梁发寒，是曹操的王牌打手，从未施展过武艺，因为根本不需要。抡起铁锤后，10米之内无人敢于近身。天下仅吕布可与之匹敌。</desc>
       </battle>
 </battleList>
