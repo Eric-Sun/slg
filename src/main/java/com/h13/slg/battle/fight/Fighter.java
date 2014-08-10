@@ -27,7 +27,16 @@ public class Fighter {
     private UserRoleSkillCO jiangling;
     private int pos;
     private String owner;
+    private int angry;
     private List<Buff> buffList = Lists.newLinkedList();
+
+    public int getAngry() {
+        return angry;
+    }
+
+    public void setAngry(int angry) {
+        this.angry = angry;
+    }
 
     public String getOwner() {
         return owner;

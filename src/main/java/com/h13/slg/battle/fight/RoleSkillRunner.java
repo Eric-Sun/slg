@@ -39,13 +39,13 @@ public class RoleSkillRunner {
     /**
      * 发送天赋技能的时候触发
      *
-     * @param tianfuRoleSkillId 天赋技能id
-     * @param attack            发动技能方
-     * @param defence           被动方
+     * @param roleSkillId 技能id
+     * @param attack      发动技能方
+     * @param defence     被动方
      */
-    public void run(int round, int uid, Fighter originFighter, int tianfuRoleSkillId, FightUnit attack, FightUnit defence,
+    public void run(int round, int uid, Fighter attackPosition, Fighter defencePosition, int roleSkillId, FightUnit attack, FightUnit defence,
                     FightResult fightResult, String owner) {
-        RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(tianfuRoleSkillId + "");
+        RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(roleSkillId + "");
 
         final String runAttack = roleSkillCO.getRunParamsAttack();
         final String runDefence = roleSkillCO.getRunParamsDefence();
@@ -58,7 +58,7 @@ public class RoleSkillRunner {
 
 
         // 获取buff释放对象
-        List<Fighter> fighterList = getBuffTargetList(originFighter, runTarget, runType, attack, defence);
+        List<Fighter> fighterList = getBuffTargetList(attackPosition, runTarget, runType, attack, defence);
         SlgLogger.debug(SlgLoggerEntity.p("battle", "fight", uid, "get buff target List")
                 .addParam("list", logFightList(fighterList)));
 
@@ -69,17 +69,17 @@ public class RoleSkillRunner {
                 || !SlgStrings.isZeroOrEmptyOrNull(runDefence)
                 || !SlgStrings.isZeroOrEmptyOrNull(runHealth)) {
 
-            addSanWeiBuff(uid, fighterList, originFighter, runAttack, runDefence, runHealth, runRound);
+            addSanWeiBuff(uid, fighterList, attackPosition, runAttack, runDefence, runHealth, runRound);
 
             // 记录日志
             FightSkillLog skillLog = new FightSkillLog();
             skillLog.setName(roleSkillCO.getName());
             skillLog.setOwner(owner);
-            skillLog.setPos(originFighter.getPos());
+            skillLog.setPos(attackPosition.getPos());
             skillLog.setTarget(roleSkillCO.getRunTarget());
             skillLog.setSkillType("sanwei");
             skillLog.setType("startSkill");
-            skillLog.setRoleName(originFighter.getName());
+            skillLog.setRoleName(attackPosition.getName());
             skillLog.setStatus(new LinkedList<String>() {{
                 add(runAttack);
                 add(runDefence);
@@ -144,7 +144,7 @@ public class RoleSkillRunner {
             );
             f.getBuffList().add(buff);
             SlgLogger.debug(SlgLoggerEntity.p("battle", "fight", uid, "add buff")
-                    .addParam("buffName",    "sanwei")
+                    .addParam("buffName", "sanwei")
                     .addParam("fighter.id", f.getId()));
         }
 

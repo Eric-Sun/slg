@@ -40,14 +40,14 @@ public class FightHandler {
         FightResult fightResult = new FightResult();
 
         if (attackFightUnit.getLeader() != null) {
-            roleSkillRunner.run(0, uid, attackFightUnit.getLeader(),
+            roleSkillRunner.run(0, uid, attackFightUnit.getLeader(), null,
                     attackFightUnit.getLeader().getTianfu().getRsid(),
                     attackFightUnit, defenceFightUnit,
                     fightResult, FightConstants.Owner.ATTACK);
             SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger attack leader skill "));
         }
         if (defenceFightUnit.getLeader() != null) {
-            roleSkillRunner.run(0, uid, defenceFightUnit.getLeader(),
+            roleSkillRunner.run(0, uid, defenceFightUnit.getLeader(), null,
                     defenceFightUnit.getLeader().getTianfu().getRsid(),
                     defenceFightUnit, attackFightUnit,
                     fightResult, FightConstants.Owner.DEFENCE);
@@ -70,6 +70,7 @@ public class FightHandler {
                 break;
             }
 
+
             finished = attack(uid, defenceFightUnit, attackFightUnit, fightResult, round, false);
             if (finished) {
                 fightResult.setStatus(FightResult.LOSE);
@@ -89,7 +90,7 @@ public class FightHandler {
     }
 
 
-    public boolean attack(long uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
+    public boolean attack(int uid, FightUnit attackFightUnit, FightUnit defenceFightUnit,
                           FightResult fightResult, int round, boolean attackAttack) {
         // 每个回合从0开始到9，依次攻击
         for (int attackPos = 0; attackPos < 9; attackPos++) {
@@ -151,6 +152,19 @@ public class FightHandler {
             fightADLog.setDefenceStatus(defenceStatus);
 
             fightResult.addLog(round, fightADLog);
+
+            attackPosition.setAngry(attackPosition.getAngry() + 100);
+            defencePosition.setAngry(defencePosition.getAngry() + 50);
+
+
+            // 尝试释放技能
+            // 攻击方
+            if (attackPosition.getAngry() > 200) {
+                roleSkillRunner.run(round, uid, attackPosition, defencePosition, attackPosition.getJiangling().getId()
+                        , attackFightUnit, defenceFightUnit, fightResult, FightConstants.Owner.ATTACK);
+
+
+            }
         }
 
 
