@@ -13,7 +13,7 @@ public enum BuffEvent {
      */
     BEFORE_FIGHT,
     /**
-     * 战斗结束后
+     * 战斗结束后,去掉所有的round和global的buff
      */
     AFTER_FIGHT,
     /**

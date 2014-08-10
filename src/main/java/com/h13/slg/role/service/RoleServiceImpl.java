@@ -129,7 +129,7 @@ public class RoleServiceImpl implements RoleService {
                 userRoleVO.setArmorInfo(null);
             }
 
-            UserRoleSkillCO putongUserRoleSkillCO = roleSkillHelper.getPutong(uid, ur.getId());
+            UserRoleSkillCO putongUserRoleSkillCO = roleSkillHelper.getJiangling(uid, ur.getId());
             UserRoleSkillCO tianfuUserRoleSkillCO = roleSkillHelper.getTianfu(uid, ur.getId());
             UserRoleSkillVO putongVO = new UserRoleSkillVO();
             UserRoleSkillVO tianfuVO = new UserRoleSkillVO();

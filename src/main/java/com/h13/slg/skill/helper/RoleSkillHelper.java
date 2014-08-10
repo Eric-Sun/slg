@@ -41,8 +41,8 @@ public class RoleSkillHelper {
         return userRoleSkillDAO.getTianfu(uid, urid);
     }
 
-    public UserRoleSkillCO getPutong(int uid, int urid) {
-        return userRoleSkillDAO.getPutong(uid, urid);
+    public UserRoleSkillCO getJiangling(int uid, int urid) {
+        return userRoleSkillDAO.getJiangling(uid, urid);
     }
 
     public void update(UserRoleSkillCO userRoleSkillCO) {
@@ -77,8 +77,8 @@ public class RoleSkillHelper {
 
         // 检测当前 将领是否已经有技能
         UserRoleSkillCO oldUserRoleSkillCO = null;
-        if (type.equals(RoleSkillConstants.SkillType.PUTONG))
-            oldUserRoleSkillCO = getPutong(uid, urid);
+        if (type.equals(RoleSkillConstants.SkillType.JIANGLING))
+            oldUserRoleSkillCO = getJiangling(uid, urid);
         else
             oldUserRoleSkillCO = getTianfu(uid, urid);
 

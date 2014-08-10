@@ -160,7 +160,7 @@ public class FightHandler {
             // 尝试释放技能
             // 攻击方
             if (attackPosition.getAngry() > 200) {
-                roleSkillRunner.run(round, uid, attackPosition, defencePosition, attackPosition.getJiangling().getId()
+                roleSkillRunner.run(round, uid, attackPosition, defencePosition, attackPosition.getJiangling().getRsid()
                         , attackFightUnit, defenceFightUnit, fightResult, FightConstants.Owner.ATTACK);
 
 

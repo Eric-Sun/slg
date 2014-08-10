@@ -20,12 +20,12 @@
     <roleSkill>
         <id>2</id>
         <name>振奋</name>
-        <type>putong</type>
+        <type>jiangling</type>
         <quality>tian</quality>
         <upgradeMaterial>19</upgradeMaterial>
         <materialNum2>10</materialNum2>
         <tips>天级技能，技能释放者攻击力加500%</tips>
-        <runStart>round</runStart>
+        <runStart>now</runStart>
         <runTarget>ziji</runTarget>
         <runType>danti</runType>
         <runParamsAttack>500</runParamsAttack>

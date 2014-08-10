@@ -95,7 +95,7 @@ public class FightHelper {
         for (int i = 0; i < teamData.size(); i++) {
             int urid = new Integer(teamData.get(i) + "");
             UserRoleSkillCO tianfu = roleSkillHelper.getTianfu(uid, urid);
-            UserRoleSkillCO jiangling = roleSkillHelper.getPutong(uid, urid);
+            UserRoleSkillCO jiangling = roleSkillHelper.getJiangling(uid, urid);
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);

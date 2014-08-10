@@ -20,7 +20,7 @@ public class RoleSkillConstants {
 
 
     public static class SkillType {
-        public static final String PUTONG = "putong";
+        public static final String JIANGLING = "jiangling";
         public static final String TIANFU = "tianfu";
     }
 

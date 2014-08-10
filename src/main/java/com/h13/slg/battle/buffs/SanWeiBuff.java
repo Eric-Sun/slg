@@ -140,8 +140,6 @@ public class SanWeiBuff extends Buff {
                 stopLog(round, fightResult, fighter);
                 throw new BuffStoppedException();
             case AFTER_FIGHT:
-                if (!isGlobalTimeType())
-                    break;
                 fighter = (Fighter) object;
                 fighter.setAttack(fighter.getAttack() - addAttack);
                 fighter.setDefence(fighter.getDefence() - addDefence);
