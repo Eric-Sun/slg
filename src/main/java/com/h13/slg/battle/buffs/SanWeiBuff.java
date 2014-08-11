@@ -134,7 +134,6 @@ public class SanWeiBuff extends Buff {
                     SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "release sanwei buff when AFTER_ROUND")
                             .addParam("fighter.id", fighter.getId())
                     );
-
                 }
                 fighter = (Fighter) object;
                 stopLog(round, fightResult, fighter);
