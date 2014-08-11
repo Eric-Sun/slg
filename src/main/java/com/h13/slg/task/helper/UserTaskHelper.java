@@ -136,6 +136,9 @@ public class UserTaskHelper implements ApplicationContextAware {
             t2.setTaskTarget(taskCO.getTaskTarget2());
             t2.setTaskType(taskCO.getTaskType2());
 
+            serviceName = t2.getTaskType() + "Handler";
+            evtHandler = (EventHandler) applicationContext.getBean(serviceName);
+
             for (UserEventCO evt : evtList) {
                 evtHandler.handleEvent(evt, t2);
             }

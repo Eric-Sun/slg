@@ -5,6 +5,7 @@ import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.ResourceCalUtil;
 import com.h13.slg.core.util.TimeUtil;
+import com.h13.slg.event.EventType;
 import com.h13.slg.event.helper.UserEventHelper;
 import com.h13.slg.user.co.FarmCO;
 import com.h13.slg.user.co.UserStatusCO;
@@ -34,7 +35,7 @@ public class FarmHelper {
      *
      * @param uid
      */
-    public FarmVO harvest(long uid) {
+    public FarmVO harvest(int uid) {
         FarmVO farmVO = new FarmVO();
         FarmCO farmCO = getFarmInfo(uid);
         long lastTimer = farmCO.getTimer();
@@ -58,6 +59,8 @@ public class FarmHelper {
                 .addParam("finalFood", finalFood));
         farmVO.setTimer(currentTimer);
         farmVO.setFood(finalFood - curFood);
+
+        userEventHelper.addEvent(uid, EventType.HarvestFood, null);
         return farmVO;
     }
 

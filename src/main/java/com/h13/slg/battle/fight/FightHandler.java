@@ -39,14 +39,16 @@ public class FightHandler {
         boolean finished = false;
         FightResult fightResult = new FightResult();
 
-        if (attackFightUnit.getLeader() != null) {
+        if (attackFightUnit.getLeader() != null &&
+                attackFightUnit.getLeader().getTianfu() != null) {
             roleSkillRunner.run(0, uid, attackFightUnit.getLeader(), null,
                     attackFightUnit.getLeader().getTianfu().getRsid(),
                     attackFightUnit, defenceFightUnit,
                     fightResult, FightConstants.Owner.ATTACK);
             SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger attack leader skill "));
         }
-        if (defenceFightUnit.getLeader() != null) {
+        if (defenceFightUnit.getLeader() != null &&
+                defenceFightUnit.getLeader().getTianfu() != null) {
             roleSkillRunner.run(0, uid, defenceFightUnit.getLeader(), null,
                     defenceFightUnit.getLeader().getTianfu().getRsid(),
                     defenceFightUnit, attackFightUnit,
@@ -160,8 +162,9 @@ public class FightHandler {
             // 尝试释放技能
             // 攻击方
             if (attackPosition.getAngry() > 200) {
-                roleSkillRunner.run(round, uid, attackPosition, defencePosition, attackPosition.getJiangling().getRsid()
-                        , attackFightUnit, defenceFightUnit, fightResult, FightConstants.Owner.ATTACK);
+                if (attackPosition.getJiangling() != null)
+                    roleSkillRunner.run(round, uid, attackPosition, defencePosition, attackPosition.getJiangling().getRsid()
+                            , attackFightUnit, defenceFightUnit, fightResult, FightConstants.Owner.ATTACK);
 
 
             }

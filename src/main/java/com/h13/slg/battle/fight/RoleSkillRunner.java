@@ -72,21 +72,21 @@ public class RoleSkillRunner {
             addSanWeiBuff(uid, fighterList, attackPosition, runAttack, runDefence, runHealth, runRound);
 
 //            // 记录日志
-//            FightSkillLog skillLog = new FightSkillLog();
-//            skillLog.setName(roleSkillCO.getName());
-//            skillLog.setOwner(owner);
-//            skillLog.setPos(attackPosition.getPos());
-//            skillLog.setTarget(roleSkillCO.getRunTarget());
-//            skillLog.setSkillType("sanwei");
-//            skillLog.setType("startSkill");
-//            skillLog.setRoleName(attackPosition.getName());
-//            skillLog.setStatus(new LinkedList<String>() {{
-//                add(runAttack);
-//                add(runDefence);
-//                add(runHealth);
-//            }});
-//
-//            fightResult.addLog(round, skillLog);
+            FightSkillLog skillLog = new FightSkillLog();
+            skillLog.setName(roleSkillCO.getName());
+            skillLog.setOwner(owner);
+            skillLog.setPos(attackPosition.getPos());
+            skillLog.setTarget(roleSkillCO.getRunTarget());
+            skillLog.setSkillType("sanwei");
+            skillLog.setType("startSkill");
+            skillLog.setRoleName(attackPosition.getName());
+            skillLog.setStatus(new LinkedList<String>() {{
+                add(runAttack);
+                add(runDefence);
+                add(runHealth);
+            }});
+
+            fightResult.addLog(round, skillLog);
         }
 
         //

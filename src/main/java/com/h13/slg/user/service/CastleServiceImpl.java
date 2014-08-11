@@ -33,7 +33,7 @@ public class CastleServiceImpl implements CastleService {
      */
     @Override
     public SlgData harvest(SlgRequestDTO request) {
-        long uid = request.getUid();
+        int uid = request.getUid();
 
         CastleVO castleVO = castleHelper.harvest(uid);
         return SlgData.getData().add("gold", castleVO.getGold())

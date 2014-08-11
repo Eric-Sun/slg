@@ -18,8 +18,8 @@ import org.springframework.stereotype.Service;
  * Time: 下午7:37
  * To change this template use File | Settings | File Templates.
  */
-@Service("HarvestGoldHandler")
-public class HarvestGoldHandler implements EventHandler {
+@Service("HarvestFoodHandler")
+public class HarvestFoodHandler implements EventHandler {
 
     @Autowired
     UserTaskHelper userTaskHelper;
@@ -28,7 +28,7 @@ public class HarvestGoldHandler implements EventHandler {
     public void handleEvent(UserEventCO evtData, Object smallTask) {
         int uid = evtData.getUid();
         UserSmallTaskCO task = (UserSmallTaskCO) smallTask;
-        if (evtData.getEventType() != EventType.HarvestGold) {
+        if (evtData.getEventType() != EventType.HarvestFood) {
             SlgLogger.debug(SlgLoggerEntity.p("task", "handler", uid, "evtType is not match. HandlerType=" + EventType.WearEquip + " userEventType=" + evtData.getEventType()));
             return;
         }

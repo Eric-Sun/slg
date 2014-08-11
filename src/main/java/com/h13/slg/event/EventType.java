@@ -32,7 +32,8 @@ public enum EventType {
     RadePVE,
     FightTowerTo,
     FightTower,
-    HaveRole
+    HaveRole,
+    HarvestFood
 
 
 }

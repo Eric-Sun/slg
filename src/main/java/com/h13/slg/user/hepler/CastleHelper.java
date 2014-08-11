@@ -5,6 +5,8 @@ import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.ResourceCalUtil;
 import com.h13.slg.core.util.TimeUtil;
+import com.h13.slg.event.EventType;
+import com.h13.slg.event.helper.UserEventHelper;
 import com.h13.slg.user.co.CastleCO;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.CastleDAO;
@@ -22,16 +24,17 @@ public class CastleHelper {
     UserStatusHelper userStatusHelper;
     @Autowired
     LevelHelper levelHelper;
-
     @Autowired
     CastleDAO castleDAO;
+    @Autowired
+    UserEventHelper userEventHelper;
 
     /**
      * 收获城堡中的金币
      *
      * @param uid
      */
-    public CastleVO harvest(long uid) {
+    public CastleVO harvest(int uid) {
         CastleVO castleVO = new CastleVO();
         CastleCO castleCO = getCastleInfo(uid);
         long lastTimer = castleCO.getTimer();
@@ -54,6 +57,9 @@ public class CastleHelper {
                 .addParam("curGold", curGold));
         castleVO.setGold(finalGold - curGold);
         castleVO.setTimer(currentTimer);
+
+        userEventHelper.addEvent(uid, EventType.HarvestGold, null);
+
         return castleVO;
     }
 

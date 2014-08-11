@@ -27,7 +27,7 @@ public class FarmServiceImpl implements FarmService {
 
     @Override
     public SlgData harvest(SlgRequestDTO request) {
-        long uid = request.getUid();
+        int uid = request.getUid();
 
         FarmVO farmVO = farmHelper.harvest(uid);
         return SlgData.getData().add("food", farmVO.getFood()).add("timer", farmVO.getTimer());

@@ -27,9 +27,6 @@ public class WearEquipHandler implements EventHandler {
     @Override
     public void handleEvent(UserEventCO evtData, Object smallTask) {
         if (evtData.getEventType() != EventType.WearEquip) {
-            if (LOG.isTraceEnabled()) {
-                LOG.trace("evtType is not match. HandlerType=" + EventType.WearEquip + " userEventType=" + evtData.getEventType());
-            }
             return;
         }
 
@@ -43,7 +40,8 @@ public class WearEquipHandler implements EventHandler {
         if (target == num) {
             return;
         } else {
-            progress.put(order + "", target);
+            num++;
+            progress.put(order + "", num);
         }
 
         userTaskHelper.updateProgress(userTaskCO);
