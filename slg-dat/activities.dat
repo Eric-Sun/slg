@@ -1,0 +1,52 @@
+活动编号	排序	活动名称	活动开始时间	活动结束时间	配置文件编号Id	限制条件值	不受时间限制	时间到后是否直接结束	延迟天数	Tab名称	Page名称	类名称	活动开放等级	活动描述	活动开放距离开服天数	活动开启时间 开服时间大于该时间时开启
+Key	Order	Name	StartTime	EndTime	ConfId	Condition1	NoLimit	IsOverTime	DelayDays	TabName	PageName	ClassName	OpenLevel	Desc	OpenDay	OpenTime
+seven	1	登录礼包					1	0				LoginGiftPanel	10		0	
+invest	2	开服投资	2014:1:17:0:0:0	2014:1:20:0:0:0			0	0		invest_tab	invest_panel	InvestPanel	10		0	
+forgelevel	3	神兵打造					0	1		forgelevel_tab	forgelevel_panel	ForgeLevelPanel	25		0	
+fiverole	4	五虎上将					0	1		fiverole_tab	fiverole_panel	FiveRolePanel	11		0	
+fightforce	5	战力比拼					0	1	1	fightforce_tab	fightforce_panel	FightForcePanel	30		0	
+levelrank	6	冲级大赛					0	1	1	levelrank_tab	levelrank_panel	LevelRankPanel	30		0	
+tower	7	勇闯重楼					0	1	1	tower_tab	tower_panel	TowerPanel	38		0	
+forge100	8	打造100%					0	1				BaseActivityPage	10		0	
+crazy	9	疯狂擂台					0	1		challenge_tab	challenge_panel	crazyrank.CrazyRankPanel	35		0	
+wheel	10	命运之轮			1		0	1		luckywheel_tab	luckywheel_panel	LuckyWheelPanel	35		0	
+surprise	11	步步惊喜	2014:1:17:0:0:0	2014:1:20:0:0:0	1		0	1		surprise_tab	surprise_panel	SurprisePanel	45		0	
+charge	12	充值特惠	2014:2:21:0:0:0	2014:2:26:0:0:0	1	172	0	1		charge_tab	charge_panel	ChargePanel	35		15	
+western	13	西域夺宝	2014:2:8:0:0:0	2014:2:12:0:0:0			0	1		western_tab	western_panel	western.WesternPanel	35		31	
+feed	14	回馈礼包					0	1		feed_tab	feed_panel	FeedPanel	10		0	
+groupon	15	百服团购					0	1				BaseActivityPage	35		0	
+hundred	16	百服活动					0	1				BaseActivityPage	10		0	
+limitbuy	17	限量宝箱					0	1		limitbuy_tab	limitbuy_panel	LimitBuyPanel	35		0	
+payrank	18	充值返利					0	1	1	payrank_tab	payrank_panel	payrank.PayRankPanel	35		0	
+wealth	19	迎接财神					0	1		wealth_tab	wealth_panel	wealth.WealthPanel	30		0	
+yellowdiamond	20	黄钻抽奖	2014:2:20:0:0:0	2014:2:28:0:0:0			0	1		yellow_tab	yellowdiamond_panel	YellowDiamondPanel	10		8	
+yellowcharge	21	黄钻特惠	2013:12:3:0:0:0	2013:12:8:0:0:0		71	0	1		yellowcharge_tab	yellowcharge_panel	YellowChargePanel	10		0	
+gentry	22	土豪勋章					0	1				BaseActivityPage	30		0	
+gembuy	23	宝石放送	2014:2:21:0:0:0	2014:2:26:0:0:0			0	1		gembuy_tab	gembuy_panel	GemBuyPanel	35		15	
+costgift	24	消费送礼	2014:1:24:0:0:0	2014:1:26:0:0:0	1		0	1		costgift_tab	costgift_panel	costgift.CostGiftPanel	10		31	
+chargefeed	25	充值回馈	2014:2:19:0:0:0	2014:2:24:0:0:0	1		0	1		chargefeed_tab	chargefeed_panel	ChargeFeedPanel	35	活动期间，每购买1元宝即可获得1积分，每兑换10次可祈愿1次。	15	
+newcharge	26	新服特惠			1		0	1		newcharge_tab	newcharge_panel	newcharge.NewChargePanel	35		0	
+mylimit	27	限量抢购	2014:2:17:0:0:0	2014:2:19:0:0:0			0	1		mylimit_tab	mylimit_panel	MyLimitPanel	35		31	
+dailypayrank	28	充值排行	2014:1:17:0:0:0	2014:1:20:0:0:0			0	1	1	dailypayrank_tab	dailypayrank_panel	dailypayrank.DailyPayRankPanel	35		8	
+rolesend	29	神将放送	2014:2:18:0:0:0	2014:2:21:0:0:0			0	1		rolesend_tab	rolesend_panel	RoleSendPanel	10		31	
+christmas	30	圣诞狂欢	2013:12:25:0:0:0	2013:12:28:0:0:0			0	1				BaseActivityPage	35		8	
+breakegg	31	节日福利	2014:1:11:0:0:0	2014:1:14:0:0:0	1		0	1				BaseActivityPage	10	新服福利	0	
+petgift	32	神兽进阶	2014:2:21:0:0:0	2014:2:26:0:0:0	1		0	1		petgift_tab	petgift_panel	PetGiftPanel	60		31	
+chargerole	33	充值送将					0	1				ChargeRolePanel	10		0	
+chargelimit	34	充值专享	2014:2:11:0:0:0	2014:2:14:0:0:0	1		0	1				BaseActivityPage	10		31	
+chargegod	35	全民觉醒	2014:2:18:0:0:0	2014:2:21:0:0:0	1		0	1		chargegod_tab	chargegod_panel	ChargeGodPanel	35		15	
+stargift	36	冲星福利	2014:1:14:0:0:0	2014:1:17:0:0:0			0	1		stargift_tab	stargift_panel	StarGiftPanel	65		8	
+serverpayrank	37	跨服充值	2014:2:21:0:0:0	2014:2:26:0:0:0			0	1	1			BaseActivityPage	10		15	
+diamondcard	38	钻石卡牌	2014:2:19:0:0:0	2014:2:24:0:0:0			0	1				BaseActivityPage	10		15	
+mysticshop	39	神秘商店	2014:2:19:0:0:0	2014:2:24:0:0:0			0	1				BaseActivityPage	35		31	
+newyearfirstpay	40	春节首充	2014:1:30:0:0:0	2014:2:6:0:0:0			0	1		newyearfirstpay_tab	newyearfirstpay_panel	NewYearFirstPayPanel	35	每天首次充值金额达到1000元宝则赠送1000元宝，超过1000元宝则按比例返回，小于1000元宝则无法获得赠送元宝。	31	
+yearboss	41	驱逐年兽	2014:1:30:0:0:0	2014:2:6:0:0:0			0	1				BaseActivityPage	10		0	
+redpacket	42	新年红包	2014:1:30:0:0:0	2014:2:6:0:0:0			0	1		redpacket_tab	redpacket_panel	RedPacketPanel	10		0	
+luckynumber	43	幸运号码	2014:1:30:0:0:0	2014:2:6:0:0:0			0	1		luckynumber_tab	luckynumber_panel	LuckyNumberPanel	10		0	
+richsend	44	土豪送礼	2014:2:17:0:0:0	2014:2:19:0:0:0			0	1	1			BaseActivityPage	10		31	
+newredpacket	45	新服红包					0	1		newredpacket_tab	newredpacket_panel	NewRedPacketPanel	10		0	
+supercard	46	超级卡牌					0	1				BaseActivityPage	30		0	
+logininvest	47	登录投资					0	0				logininvest.LoginInvestPanel	10		0	2014:2:19:0:0:0
+levelinvest	48	升级福利					0	0				levelinvest.LevelInvestPanel	10		0	2014:2:19:0:0:0
+cdkey	199	兑换奖励					1	0		cdkey_tab	cdkey_panel	CdKeyPanel	10		0	
+score	200	我爱评分					1	0		score_tab	score_panel	ScoreGiftPanel	30		0	
