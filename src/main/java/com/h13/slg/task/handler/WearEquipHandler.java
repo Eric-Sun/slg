@@ -25,12 +25,11 @@ public class WearEquipHandler implements EventHandler {
     UserTaskHelper userTaskHelper;
 
     @Override
-    public void handleEvent(UserEventCO evtData, Object smallTask) {
+    public void handleEvent(UserEventCO evtData, UserSmallTaskCO smallTaskCO) {
         if (evtData.getEventType() != EventType.WearEquip) {
             return;
         }
 
-        UserSmallTaskCO smallTaskCO = (UserSmallTaskCO) smallTask;
         int target = new Integer(smallTaskCO.getTaskTarget());
         long uid = evtData.getUid();
         UserTaskCO userTaskCO = userTaskHelper.getTask(uid);

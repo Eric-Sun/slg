@@ -25,9 +25,8 @@ public class HarvestGoldHandler implements EventHandler {
     UserTaskHelper userTaskHelper;
 
     @Override
-    public void handleEvent(UserEventCO evtData, Object smallTask) {
+    public void handleEvent(UserEventCO evtData,  UserSmallTaskCO task) {
         int uid = evtData.getUid();
-        UserSmallTaskCO task = (UserSmallTaskCO) smallTask;
         if (evtData.getEventType() != EventType.HarvestGold) {
             SlgLogger.debug(SlgLoggerEntity.p("task", "handler", uid, "evtType is not match. HandlerType=" + EventType.WearEquip + " userEventType=" + evtData.getEventType()));
             return;

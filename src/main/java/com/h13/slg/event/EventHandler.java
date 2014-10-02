@@ -15,5 +15,5 @@ public interface EventHandler {
 
      String TARGET = "target";
 
-    public void handleEvent(UserEventCO evtData, Object listenerData);
+    public void handleEvent(UserEventCO evtData, UserSmallTaskCO smallTaskCO);
 }
