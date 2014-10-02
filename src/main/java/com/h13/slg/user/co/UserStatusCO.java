@@ -10,11 +10,9 @@ public class UserStatusCO {
     private int gold;
     private int food;
     private int cash;
-    private int honor;
     private int level;
     private int xp;
     private String name ;
-    private int soul;
     private int fightForce;
 
     public int getFightForce() {
@@ -25,13 +23,6 @@ public class UserStatusCO {
         this.fightForce = fightForce;
     }
 
-    public int getSoul() {
-        return soul;
-    }
-
-    public void setSoul(int soul) {
-        this.soul = soul;
-    }
 
     public int getXp() {
         return xp;
@@ -79,14 +70,6 @@ public class UserStatusCO {
 
     public void setCash(int cash) {
         this.cash = cash;
-    }
-
-    public int getHonor() {
-        return honor;
-    }
-
-    public void setHonor(int honor) {
-        this.honor = honor;
     }
 
     public int getLevel() {

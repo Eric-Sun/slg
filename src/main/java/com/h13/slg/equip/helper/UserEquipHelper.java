@@ -1,9 +1,9 @@
 package com.h13.slg.equip.helper;
 
 import com.h13.slg.core.CodeConstants;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.StrengthenCO;
@@ -19,7 +19,6 @@ import com.h13.slg.user.hepler.UserStatusHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -71,7 +70,7 @@ public class UserEquipHelper {
      */
     public void updateUserEquip(UserEquipCO ue) {
         userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getStrength(),
-                ue.getFail(), ue.getRefine(), ue.getStar(), ue.getUrid(), ue.getName());
+                ue.getUrid(), ue.getName());
     }
 
 
@@ -93,9 +92,9 @@ public class UserEquipHelper {
         if (strengthenCO == null)
             throw new RequestErrorException(CodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP, "");
         int cost = 0;
-        if (type.equals(EquipConstants.EquipType.WEAPON)) {
+        if (type.equals(SlgConstants.Equip.EquipType.WEAPON)) {
             cost = strengthenCO.getWeaponCost();
-        } else if (type.equals(EquipConstants.EquipType.ARMOR)) {
+        } else if (type.equals(SlgConstants.Equip.EquipType.ARMOR)) {
             cost = strengthenCO.getArmorCost();
         } else {
             cost = strengthenCO.getAccessoryCost();
@@ -123,7 +122,7 @@ public class UserEquipHelper {
     /**
      * 合成装备 （升级）
      */
-    public int make(long uid, int lucky, long ueId) throws RequestErrorException {
+    public int make(long uid, long ueId) throws RequestErrorException {
         // 获得当前的装备等级
         UserEquipCO ue = getUserEquip(uid, ueId);
         int curLevel = ue.getLevel();
@@ -135,12 +134,12 @@ public class UserEquipHelper {
         int materialCount1 = 0;
         int materialCount2 = 0;
         String type = ue.getType();
-        if (type.equals(EquipConstants.EquipType.WEAPON)) {
+        if (type.equals(SlgConstants.Equip.EquipType.WEAPON)) {
             materialId1 = equipCO.getWeaponMaterialType1();
             materialId2 = equipCO.getWeaponMaterialType2();
             materialCount1 = equipCO.getWeaponMaterial1();
             materialCount2 = equipCO.getWeaponMaterial2();
-        } else if (type.equals(EquipConstants.EquipType.ARMOR)) {
+        } else if (type.equals(SlgConstants.Equip.EquipType.ARMOR)) {
             materialId1 = equipCO.getArmorMaterialType1();
             materialId2 = equipCO.getArmorMaterialType2();
             materialCount1 = equipCO.getArmorMaterial1();
@@ -181,22 +180,30 @@ public class UserEquipHelper {
      * @param level
      * @param type  EquipConstants.EquipType
      */
-    public long addNewUserEquip(long uid, int level, String type) throws RequestErrorException {
-        if (!EquipConstants.EquipType.ACCESSORY.equals(type)
+    public UserEquipCO addNewUserEquip(int uid, int level, String type) throws RequestErrorException {
+        if (!SlgConstants.Equip.EquipType.ACCESSORY.equals(type)
                 &&
-                !EquipConstants.EquipType.ARMOR.equals(type)
+                !SlgConstants.Equip.EquipType.ARMOR.equals(type)
                 &&
-                !EquipConstants.EquipType.WEAPON.equals(type)) {
+                !SlgConstants.Equip.EquipType.WEAPON.equals(type)) {
             SlgLogger.error(SlgLoggerEntity.p("userequip", "getANewUserEquip", uid, "type is error.")
                     .addParam("level", level).addParam("type", type));
             throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "type is error");
         }
-        String name = getEquipNameFromConfig(type, EquipConstants.USER_EQUIP_DEFAULT_LEVEL);
+        String name = getEquipNameFromConfig(type, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL);
+        UserEquipCO co = new UserEquipCO();
+        co.setLevel(level);
+        co.setType(type);
+        co.setUid(uid);
+        co.setName(name);
+        co.setStrength(1);
+        co.setUrid(SlgConstants.Role.NO_ROLE);
 
 
-        long ueid = userEquipDAO.insert(uid, type, level, 1, 0, 0, 0, EquipConstants.NO_USER_ROLE, name);
+        long ueid = userEquipDAO.insert(uid, type, level, 1, SlgConstants.Role.NO_ROLE, name);
+        co.setId(new Integer(ueid + ""));
         userPackageHelper.addEquipItem(uid, level, ueid);
-        return ueid;
+        return co;
     }
 
 
@@ -230,9 +237,9 @@ public class UserEquipHelper {
     public String getEquipNameFromConfig(String type, int level) {
         EquipCO equipCO = equipConfigFetcher.get(level + "");
 
-        if (type.equals(EquipConstants.EquipType.WEAPON)) {
+        if (type.equals(SlgConstants.Equip.EquipType.WEAPON)) {
             return equipCO.getWeaponName();
-        } else if (type.equals(EquipConstants.EquipType.ACCESSORY)) {
+        } else if (type.equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
             return equipCO.getAccessoryName();
         } else {
             return equipCO.getArmorName();
@@ -248,6 +255,19 @@ public class UserEquipHelper {
      */
     public List<UserEquipCO> noUsedEquipList(long uid, String type) {
         List<UserEquipCO> list = userEquipDAO.noUsedEquipList(uid, type);
+        return list;
+    }
+
+    /**
+     * 获得用户的所有装备，包括已经穿上的或者为穿上的
+     *
+     * @param uid
+     * @return
+     */
+    public List<UserEquipCO> getUserEquips(int uid) {
+
+        List<UserEquipCO> list = userEquipDAO.getUserEquips(uid);
+
         return list;
     }
 }

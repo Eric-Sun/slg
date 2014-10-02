@@ -1,6 +1,6 @@
 package com.h13.slg.skill.co;
 
-import com.h13.slg.skill.RoleSkillConstants;
+import com.h13.slg.core.SlgConstants;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,7 +11,7 @@ import com.h13.slg.skill.RoleSkillConstants;
  */
 public class UserZuLingItemCO {
     private int rsId;
-    private int status = RoleSkillConstants.NOT_GOT;
+    private int status = SlgConstants.RoleSkillConstants.NOT_GOT;
 
     public int getRsId() {
         return rsId;

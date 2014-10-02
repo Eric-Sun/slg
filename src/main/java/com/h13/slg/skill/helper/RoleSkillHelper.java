@@ -4,14 +4,16 @@ import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.role.helper.UserRoleHelper;
-import com.h13.slg.skill.RoleSkillConstants;
 import com.h13.slg.skill.co.UserRoleSkillCO;
 import com.h13.slg.skill.dao.UserRoleSkillDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,6 +37,10 @@ public class RoleSkillHelper {
 
     public UserRoleSkillCO get(int uid, int rid, int ursid) {
         return userRoleSkillDAO.get(uid, rid, ursid);
+    }
+
+    public List<UserRoleSkillCO> get(int uid) {
+        return userRoleSkillDAO.get(uid);
     }
 
     public UserRoleSkillCO getTianfu(int uid, int urid) {
@@ -77,7 +83,7 @@ public class RoleSkillHelper {
 
         // 检测当前 将领是否已经有技能
         UserRoleSkillCO oldUserRoleSkillCO = null;
-        if (type.equals(RoleSkillConstants.SkillType.JIANGLING))
+        if (type.equals(SlgConstants.RoleSkillConstants.SkillType.JIANGLING))
             oldUserRoleSkillCO = getJiangling(uid, urid);
         else
             oldUserRoleSkillCO = getTianfu(uid, urid);

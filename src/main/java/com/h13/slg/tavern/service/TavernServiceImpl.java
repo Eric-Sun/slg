@@ -36,14 +36,14 @@ public class TavernServiceImpl implements TavernService {
     @Override
     public SlgData leave(SlgRequestDTO request) throws RequestErrorException {
         long uid = request.getUid();
-        int soul = tavernHelper.leave(uid);
-        return SlgData.getData().add("soul", soul);
+        int gold = tavernHelper.leave(uid);
+        return SlgData.getData().add("gold", gold);
     }
 
     @Override
     public SlgData invite(SlgRequestDTO request) throws RequestErrorException {
         long uid = request.getUid();
-        InviteTavernVO vo = tavernHelper.invite(uid);
+        List<TavernRoleVO> vo = tavernHelper.invite(uid);
         return SlgData.getData().add("process", vo);
     }
 

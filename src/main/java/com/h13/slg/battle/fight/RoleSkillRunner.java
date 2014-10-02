@@ -1,21 +1,17 @@
 package com.h13.slg.battle.fight;
 
 import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.google.common.primitives.Ints;
-import com.h13.slg.battle.FightConstants;
 import com.h13.slg.battle.buffs.Buff;
 import com.h13.slg.battle.buffs.BuffEvent;
 import com.h13.slg.battle.buffs.BuffStoppedException;
 import com.h13.slg.battle.buffs.SanWeiBuff;
 import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.SlgStrings;
-import com.h13.slg.role.RoleConstants;
-import com.h13.slg.skill.helper.RoleSkillHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -90,8 +86,8 @@ public class RoleSkillRunner {
         }
 
         //
-        if (runStart.equals(FightConstants.BuffStartTime.NOW)) {
-            if (runRound.equals(FightConstants.Round.GLOBAL)) {
+        if (runStart.equals(SlgConstants.Fight.BuffStartTime.NOW)) {
+            if (runRound.equals(SlgConstants.Fight.Round.GLOBAL)) {
                 event(BuffEvent.BEFORE_FIGHT, fighterList, fightResult, round);
             } else {
                 event(BuffEvent.BEFORE_ROUND, fighterList, fightResult, round);
@@ -157,18 +153,18 @@ public class RoleSkillRunner {
                                             FightUnit defence) {
         List<Fighter> fighters = Lists.newLinkedList();
         FightUnit fightUnit = null;
-        if (runTarget.equals(FightConstants.Target.ZIJI)) {
+        if (runTarget.equals(SlgConstants.Fight.Target.ZIJI)) {
             fightUnit = attack;
         } else {
             fightUnit = defence;
         }
-        if (runType.equals(FightConstants.BuffType.DANTI)) {
+        if (runType.equals(SlgConstants.Fight.BuffType.DANTI)) {
             fighters.add(originFighter);
-        } else if (runType.equals(FightConstants.BuffType.GONG)
-                || runType.equals(FightConstants.BuffType.QI)
-                || runType.equals(FightConstants.BuffType.QIANG)) {
+        } else if (runType.equals(SlgConstants.Fight.BuffType.GONG)
+                || runType.equals(SlgConstants.Fight.BuffType.QI)
+                || runType.equals(SlgConstants.Fight.BuffType.QIANG)) {
             fighters = findXi(runType, fightUnit);
-        } else if (runType.equals(FightConstants.BuffType.ALL)) {
+        } else if (runType.equals(SlgConstants.Fight.BuffType.ALL)) {
             fighters = Lists.newArrayList(fightUnit.getAllPos());
         } else {
             // 十字

@@ -4,12 +4,11 @@ import com.h13.slg.config.cache.*;
 import com.h13.slg.config.co.*;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.equip.helper.UserEquipHelper;
-import com.h13.slg.role.RoleConstants;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.apache.commons.beanutils.BeanUtils;
@@ -42,7 +41,7 @@ public class FightForceHelper {
 
     public int updateUserRoleFightForce(long uid, long urid) throws RequestErrorException {
 
-        if (urid == EquipConstants.NO_USER_ROLE)
+        if (urid == SlgConstants.Role.NO_ROLE)
             return 0;
         UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
         int oldFightForce = userRoleCO.getFightForce();
@@ -81,17 +80,17 @@ public class FightForceHelper {
         int armorFightForce = 0;
         int accessoryHealth = 0;
         int accessoryFightForce = 0;
-        if (ueWeaponId != RoleConstants.NO_EQUIP_ID) {
+        if (ueWeaponId != SlgConstants.RoleConstants.NO_EQUIP_ID) {
             UserEquipCO weapon = userEquipHelper.getUserEquip(uid, ueWeaponId);
             weaponAttack = getWeaponAttack(weapon);
             weaponFightForce = calFightForceByAttack(weaponAttack);
         }
-        if (ueArmorId != RoleConstants.NO_EQUIP_ID) {
+        if (ueArmorId != SlgConstants.RoleConstants.NO_EQUIP_ID) {
             UserEquipCO armor = userEquipHelper.getUserEquip(uid, ueArmorId);
             armorDefence = getArmorDefence(armor);
             armorFightForce = calFightForceByDefence(armorDefence);
         }
-        if (ueAccessoryId != RoleConstants.NO_EQUIP_ID) {
+        if (ueAccessoryId != SlgConstants.RoleConstants.NO_EQUIP_ID) {
             UserEquipCO accessory = userEquipHelper.getUserEquip(uid, ueAccessoryId);
             accessoryHealth = getAccessoryHealth(accessory);
             accessoryFightForce = calFightForceByHealth(accessoryHealth);

@@ -2,6 +2,7 @@ package com.h13.slg.battle.fight;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,18 +11,10 @@ import java.util.Map;
 public class FightADLog {
     private String type="ad";
     private int attack;
-    private PosInfo attackPos;
-    private LinkedList<PosInfo> defencePos;
+    private int attackPos;
+    private List<Integer> defencePos;
     private FightStatus attackStatus = new FightStatus();
     private FightStatus defenceStatus = new FightStatus();
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 
     public int getAttack() {
         return attack;
@@ -31,20 +24,12 @@ public class FightADLog {
         this.attack = attack;
     }
 
-    public PosInfo getAttackPos() {
+    public int getAttackPos() {
         return attackPos;
     }
 
-    public void setAttackPos(PosInfo attackPos) {
+    public void setAttackPos(int attackPos) {
         this.attackPos = attackPos;
-    }
-
-    public LinkedList<PosInfo> getDefencePos() {
-        return defencePos;
-    }
-
-    public void setDefencePos(LinkedList<PosInfo> defencePos) {
-        this.defencePos = defencePos;
     }
 
     public FightStatus getAttackStatus() {
@@ -55,11 +40,27 @@ public class FightADLog {
         this.attackStatus = attackStatus;
     }
 
+    public List<Integer> getDefencePos() {
+        return defencePos;
+    }
+
+    public void setDefencePos(List<Integer> defencePos) {
+        this.defencePos = defencePos;
+    }
+
     public FightStatus getDefenceStatus() {
         return defenceStatus;
     }
 
     public void setDefenceStatus(FightStatus defenceStatus) {
         this.defenceStatus = defenceStatus;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

@@ -26,58 +26,10 @@ public class UserRoleCO {
     private int defence;
     private int health;
     private int soldier;
-    private int curSkill;
     private String roleName;
     private int xp;
-    private Map<String, Integer> skillLevels;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
-
-    public int getUid() {
-        return uid;
-    }
-
-    public void setUid(int uid) {
-        this.uid = uid;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public int getWeapon() {
-        return weapon;
-    }
-
-    public void setWeapon(int weapon) {
-        this.weapon = weapon;
-    }
-
-    public int getArmor() {
-        return armor;
-    }
-
-    public void setArmor(int armor) {
-        this.armor = armor;
-    }
+    private int putongSkillId;
+    private int tianfuSkillId;
 
     public int getAccessory() {
         return accessory;
@@ -87,12 +39,12 @@ public class UserRoleCO {
         this.accessory = accessory;
     }
 
-    public int getFightForce() {
-        return fightForce;
+    public int getArmor() {
+        return armor;
     }
 
-    public void setFightForce(int fightForce) {
-        this.fightForce = fightForce;
+    public void setArmor(int armor) {
+        this.armor = armor;
     }
 
     public int getAttack() {
@@ -111,6 +63,14 @@ public class UserRoleCO {
         this.defence = defence;
     }
 
+    public int getFightForce() {
+        return fightForce;
+    }
+
+    public void setFightForce(int fightForce) {
+        this.fightForce = fightForce;
+    }
+
     public int getHealth() {
         return health;
     }
@@ -119,20 +79,36 @@ public class UserRoleCO {
         this.health = health;
     }
 
-    public int getSoldier() {
-        return soldier;
+    public int getId() {
+        return id;
     }
 
-    public void setSoldier(int soldier) {
-        this.soldier = soldier;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getCurSkill() {
-        return curSkill;
+    public int getLevel() {
+        return level;
     }
 
-    public void setCurSkill(int curSkill) {
-        this.curSkill = curSkill;
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getPutongSkillId() {
+        return putongSkillId;
+    }
+
+    public void setPutongSkillId(int putongSkillId) {
+        this.putongSkillId = putongSkillId;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     public String getRoleName() {
@@ -143,19 +119,43 @@ public class UserRoleCO {
         this.roleName = roleName;
     }
 
+    public int getSoldier() {
+        return soldier;
+    }
+
+    public void setSoldier(int soldier) {
+        this.soldier = soldier;
+    }
+
+    public int getTianfuSkillId() {
+        return tianfuSkillId;
+    }
+
+    public void setTianfuSkillId(int tianfuSkillId) {
+        this.tianfuSkillId = tianfuSkillId;
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public int getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(int weapon) {
+        this.weapon = weapon;
+    }
+
     public int getXp() {
         return xp;
     }
 
     public void setXp(int xp) {
         this.xp = xp;
-    }
-
-    public Map<String, Integer> getSkillLevels() {
-        return skillLevels;
-    }
-
-    public void setSkillLevels(Map<String, Integer> skillLevels) {
-        this.skillLevels = skillLevels;
     }
 }

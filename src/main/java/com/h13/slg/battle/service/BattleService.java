@@ -15,14 +15,7 @@ public interface BattleService {
 
     public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestErrorException;
 
-
     public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException;
-
-    public SlgData chapterList(SlgRequestDTO request) throws RequestErrorException;
-
-
-    public SlgData castleList(SlgRequestDTO request) throws RequestErrorException;
-
 
     public SlgData pveTeam(SlgRequestDTO request) throws RequestErrorException;
 

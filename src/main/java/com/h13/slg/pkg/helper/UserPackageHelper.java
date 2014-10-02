@@ -1,10 +1,10 @@
 package com.h13.slg.pkg.helper;
 
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.MapUtil;
-import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.equip.helper.UserEquipHelper;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.dao.UserPackageDAO;
@@ -37,7 +37,6 @@ public class UserPackageHelper {
      */
     public void createDefaultPackage(long id) {
         userPackageDAO.insert(id,
-                new HashMap<String, Integer>(),
                 new LinkedList<Integer>(),
                 new HashMap<String, Integer>(),
                 new HashMap<String, Integer>());
@@ -51,15 +50,6 @@ public class UserPackageHelper {
      */
     public void updateMaterial(UserPackageCO userPackageCO) {
         userPackageDAO.updateMaterial(userPackageCO.getId(), userPackageCO.getMaterial());
-    }
-
-    /**
-     * 更新卡牌包裹
-     *
-     * @param userPackageCO
-     */
-    public void updateRoleCard(UserPackageCO userPackageCO) {
-        userPackageDAO.updateRoleCard(userPackageCO.getId(), userPackageCO.getRoleCard());
     }
 
     /**
@@ -187,19 +177,7 @@ public class UserPackageHelper {
         updateSkill(userPackageCO);
     }
 
-    /**
-     * 向卡牌包裹内加入新的物品
-     *
-     * @param uid
-     * @param itemId
-     * @param num
-     */
-    public void addRoleCodeItem(long uid, long itemId, int num) {
-        UserPackageCO userPackageCO = get(uid);
-        Map data = userPackageCO.getRoleCard();
-        MapUtil.addItem(data, itemId + "", num);
-        updateRoleCard(userPackageCO);
-    }
+
 
     /**
      * 向装备包裹内加入新的物品
@@ -224,14 +202,14 @@ public class UserPackageHelper {
      *
      * @param uid
      */
-    public void addSomeEquipForRegister(long uid) throws RequestErrorException {
-        long ueid1 = 0;
-        long ueid2 = 0;
-        long ueid3 = 0;
+    public void addSomeEquipForRegister(int uid) throws RequestErrorException {
+        int ueid1 = 0;
+        int ueid2 = 0;
+        int ueid3 = 0;
         for (int i = 0; i < 3; i++) {
-            ueid1 = userEquipHelper.addNewUserEquip(uid, EquipConstants.USER_EQUIP_DEFAULT_LEVEL, EquipConstants.EquipType.ACCESSORY);
-            ueid2 = userEquipHelper.addNewUserEquip(uid, EquipConstants.USER_EQUIP_DEFAULT_LEVEL, EquipConstants.EquipType.ARMOR);
-            ueid3 = userEquipHelper.addNewUserEquip(uid, EquipConstants.USER_EQUIP_DEFAULT_LEVEL, EquipConstants.EquipType.WEAPON);
+            ueid1 = userEquipHelper.addNewUserEquip(uid, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL, SlgConstants.Equip.EquipType.ACCESSORY).getId();
+            ueid2 = userEquipHelper.addNewUserEquip(uid, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL, SlgConstants.Equip.EquipType.ARMOR).getId();
+            ueid3 = userEquipHelper.addNewUserEquip(uid, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL, SlgConstants.Equip.EquipType.WEAPON).getId();
             SlgLogger.info(SlgLoggerEntity.p("package", "addSomeEquipForRegister", uid, "ok")
                     .addParam("weapon", ueid3)
                     .addParam("accessory", ueid1)

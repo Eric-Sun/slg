@@ -1,26 +1,19 @@
 package com.h13.slg.task.helper;
 
-import com.alibaba.fastjson.JSON;
 import com.h13.slg.config.co.TaskCO;
 import com.h13.slg.config.fetcher.TaskConfigFetcher;
 import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.equip.helper.UserEquipHelper;
 import com.h13.slg.event.EventHandler;
 import com.h13.slg.event.co.UserEventCO;
-import com.h13.slg.event.helper.UserEventHelper;
-import com.h13.slg.pkg.PackageConstants;
-import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.task.cache.UserTaskCache;
 import com.h13.slg.task.co.UserSmallTaskCO;
 import com.h13.slg.task.co.UserTaskCO;
 import com.h13.slg.task.dao.UserTaskDAO;
 import com.h13.slg.task.vo.FinishedPerTaskVO;
-import com.h13.slg.task.vo.FinishedTaskVO;
-import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -110,7 +103,7 @@ public class UserTaskHelper implements ApplicationContextAware {
      *
      * @param evtList
      */
-    public boolean handleEvents(long uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestErrorException {
+    public boolean handleEvents(int uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestErrorException {
 
 
         UserTaskCO userTaskCO = getTask(uid);
@@ -125,8 +118,13 @@ public class UserTaskHelper implements ApplicationContextAware {
         serviceName = t1.getTaskType() + "Handler";
         EventHandler evtHandler = (EventHandler) applicationContext.getBean(serviceName);
 
+
         for (UserEventCO evt : evtList) {
-            evtHandler.handleEvent(evt, t1);
+
+            UserTaskHolder holder = new UserTaskHolder();
+            holder.setSmallTask(t1);
+            holder.setHandler(evtHandler);
+            holder.doHandler(evt);
         }
 
         if (!taskCO.getTaskType2().equals("")) {
@@ -140,7 +138,10 @@ public class UserTaskHelper implements ApplicationContextAware {
             evtHandler = (EventHandler) applicationContext.getBean(serviceName);
 
             for (UserEventCO evt : evtList) {
-                evtHandler.handleEvent(evt, t2);
+                UserTaskHolder holder = new UserTaskHolder();
+                holder.setSmallTask(t2);
+                holder.setHandler(evtHandler);
+                holder.doHandler(evt);
             }
         }
         // 多次完成任务的情况
@@ -204,7 +205,7 @@ public class UserTaskHelper implements ApplicationContextAware {
         return finished;
     }
 
-    private void handleAwards(long uid, FinishedPerTaskVO perVO) throws RequestErrorException {
+    private void handleAwards(int uid, FinishedPerTaskVO perVO) throws RequestErrorException {
         int gold = perVO.getGold();
         int xp = perVO.getXp();
         List<List<String>> awards = perVO.getAwards();

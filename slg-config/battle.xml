@@ -7301,30 +7301,29 @@
       </battle>
       <battle>
             <id>258</id>
-            <name>荀彧</name>
-            <chapter>烽火之战</chapter>
-            <levelLimit>83</levelLimit>
-            <battle>13</battle>
-            <castle>大都</castle>
-            <boss>134345</boss>
+            <name>荀�烽火之战</name>
+            <chapter>83</chapter>
+            <levelLimit>13</levelLimit>
+            <battle>大都</battle>
+            <castle>134345</castle>
+            <boss>6</boss>
             <chapterBackground>6</chapterBackground>
-            <background>6</background>
-            <userLevel>59</userLevel>
-            <petLevel>1</petLevel>
-            <petSkillLevels />
-            <pos0>134335</pos0>
-            <pos1 />
-            <pos2>134345</pos2>
-            <pos3>134335</pos3>
-            <pos4>134333</pos4>
-            <pos5 />
-            <pos6>134343</pos6>
-            <pos7>134323</pos7>
-            <pos8>134343</pos8>
-            <honor>361</honor>
-            <gold>2865</gold>
+            <background>59</background>
+            <userLevel>1</userLevel>
+            <petLevel />
+            <petSkillLevels>134335</petSkillLevels>
+            <pos0 />
+            <pos1>134345</pos1>
+            <pos2>134335</pos2>
+            <pos3>134333</pos3>
+            <pos4 />
+            <pos5>134343</pos5>
+            <pos6>134323</pos6>
+            <pos7>134343</pos7>
+            <pos8>361</pos8>
+            <honor>2865</honor>
+            <gold>4026</gold>
             <xp>4026</xp>
-            <heroXp>4026</heroXp>
       </battle>
       <battle>
             <id>259</id>
@@ -8036,7 +8035,7 @@
       </battle>
       <battle>
             <id>283</id>
-            <name>费袆</name>
+            <name>费�</name>
             <chapter>铜雀之战</chapter>
             <levelLimit>88</levelLimit>
             <battle>15</battle>

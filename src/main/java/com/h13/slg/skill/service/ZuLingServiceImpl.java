@@ -8,7 +8,6 @@ import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.core.SlgData;
 import com.h13.slg.core.SlgRequestDTO;
 import com.h13.slg.core.util.SlgBeanUtils;
-import com.h13.slg.skill.ZuLingConstants;
 import com.h13.slg.skill.co.UserZuLingCO;
 import com.h13.slg.skill.co.UserZuLingItemCO;
 import com.h13.slg.skill.helper.UserZuLingHelper;

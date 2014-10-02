@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class UserPackageCO {
     private int id;
-    private Map<String, Integer> roleCard;
     // 用户装备的id
     private List<Integer> equip;
     // 材料的id--》材料的数量
@@ -36,14 +35,6 @@ public class UserPackageCO {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Map<String, Integer> getRoleCard() {
-        return roleCard;
-    }
-
-    public void setRoleCard(Map<String, Integer> roleCard) {
-        this.roleCard = roleCard;
     }
 
     public List<Integer> getEquip() {

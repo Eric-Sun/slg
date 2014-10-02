@@ -96,20 +96,6 @@ public class UserStatusHelper {
         );
     }
 
-    /**
-     * 添加荣誉值
-     *
-     * @param uid
-     * @param honor
-     */
-    public void addHonor(int uid, int honor) {
-        UserStatusCO userStatusCO = getUserStatus(uid);
-        int finalHonor = userStatusCO.getHonor() + honor;
-        SlgLogger.info(SlgLoggerEntity.p("user", "addHonor", uid, "")
-                .addParam("honor", honor)
-                .addParam("curHonor", userStatusCO.getHonor())
-                .addParam("finalHonor", finalHonor));
-    }
 
 
     /**
@@ -190,16 +176,7 @@ public class UserStatusHelper {
     }
 
 
-    public void addSoul(long uid, int soul) {
-        UserStatusCO userStatusCO = getUserStatus(uid);
-        int curSoul = userStatusCO.getSoul();
-        int finalSoul = curSoul + soul;
-        userStatusCO.setSoul(finalSoul);
-        updateUserStatus(userStatusCO);
-        SlgLogger.info(SlgLoggerEntity.p("user", "addSoul", uid, "")
-                .addParam("curSoul", curSoul)
-                .addParam("soul", soul).addParam("finalSoul", finalSoul));
-    }
+
 
     public void updateFightForce(long uid, int oldFightForce, int finalFightForce) {
         UserStatusCO userStatusCO = getUserStatus(uid);
@@ -224,17 +201,14 @@ public class UserStatusHelper {
         userStatusCO.setCash(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_CASH));
         userStatusCO.setFood(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_FOOD));
         userStatusCO.setGold(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_GOLD));
-        userStatusCO.setHonor(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_HORNOR));
         userStatusCO.setLevel(globalConfigFetcher.getIntValue(GlobalKeyConstants.DEFAULT_NEW_USER_LEVEL));
 
         userStatusCO.setFood(500000);
         userStatusCO.setGold(50000000);
-        userStatusCO.setHonor(500000);
         userStatusCO.setCash(50000);
 
         userStatusCO.setId(userId);
         userStatusCO.setXp(0);
-        userStatusCO.setSoul(0);
         userStatusCO.setFightForce(0);
         return userStatusCO;
     }

@@ -6,20 +6,17 @@ import com.h13.slg.config.co.RoleLevelCO;
 import com.h13.slg.config.fetcher.RoleLevelConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
-import com.h13.slg.equip.EquipConstants;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.equip.helper.UserEquipHelper;
-import com.h13.slg.role.RoleConstants;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.dao.UserRoleDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -79,8 +76,8 @@ public class UserRoleHelper {
                 userRoleCO.getAccessory(),
                 userRoleCO.getFightForce(),
                 userRoleCO.getLevel(),
-                userRoleCO.getCurSkill(),
-                userRoleCO.getSkillLevels(), userRoleCO.getRoleName(), userRoleCO.getXp());
+                userRoleCO.getRoleName(), userRoleCO.getXp(),
+                userRoleCO.getPutongSkillId(),userRoleCO.getTianfuSkillId());
     }
 
     /**
@@ -99,40 +96,33 @@ public class UserRoleHelper {
         int defence = roleCO.getDefence();
         int health = roleCO.getHealth();
         int soldier = roleCO.getSoldier();
-        int curSkill = RoleConstants.NO_SKILL_SELECTED;
-        Map<String, Integer> skillLevels = new HashMap<String, Integer>() {{
-            // 5个技能
-            put("1", 1);
-            put("2", 1);
-            put("3", 1);
-            put("4", 1);
-            put("5", 1);
-        }};
+        int putongskillId = SlgConstants.Role.NO_SKILL_SELECTED;
+        int tianfuSkillId = SlgConstants.Role.NO_SKILL_SELECTED;
         int defaultXp = 0;
 
         // 检查是否在招贤馆中
-        int urid = userRoleDAO.insert(rId, uid, RoleConstants.NO_EQUIP_ID,
-                RoleConstants.NO_EQUIP_ID, RoleConstants.NO_EQUIP_ID, 1, fightForce,
-                attack, defence, health, soldier, curSkill,
-                skillLevels, name, defaultXp);
+        int urid = userRoleDAO.insert(rId, uid, SlgConstants.RoleConstants.NO_EQUIP_ID,
+                SlgConstants.RoleConstants.NO_EQUIP_ID, SlgConstants.RoleConstants.NO_EQUIP_ID, 1, fightForce,
+                attack, defence, health, soldier,
+                name, defaultXp, putongskillId, tianfuSkillId);
         SlgLogger.info(SlgLoggerEntity.p("userRole", "add new Role", uid, "ok")
                 .addParam("rId", rId)
                 .addParam("urId", urid)
         );
-        userRoleCO.setSkillLevels(skillLevels);
-        userRoleCO.setCurSkill(curSkill);
         userRoleCO.setSoldier(soldier);
         userRoleCO.setDefence(defence);
-        userRoleCO.setAccessory(RoleConstants.NO_EQUIP_ID);
+        userRoleCO.setAccessory(SlgConstants.RoleConstants.NO_EQUIP_ID);
         userRoleCO.setAttack(attack);
-        userRoleCO.setArmor(RoleConstants.NO_EQUIP_ID);
-        userRoleCO.setWeapon(RoleConstants.NO_EQUIP_ID);
+        userRoleCO.setArmor(SlgConstants.RoleConstants.NO_EQUIP_ID);
+        userRoleCO.setWeapon(SlgConstants.RoleConstants.NO_EQUIP_ID);
         userRoleCO.setHealth(health);
         userRoleCO.setId(urid);
         userRoleCO.setUid(uid);
         userRoleCO.setLevel(1);
         userRoleCO.setRoleName(name);
         userRoleCO.setRoleId(rId);
+        userRoleCO.setPutongSkillId(putongskillId);
+        userRoleCO.setTianfuSkillId(tianfuSkillId);
         return userRoleCO;
     }
 
@@ -154,8 +144,8 @@ public class UserRoleHelper {
                     .addParam("uid", uid));
             throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
         }
-        if (ue.getType().equals(EquipConstants.EquipType.ACCESSORY)) {
-            if (ur.getAccessory() != RoleConstants.NO_EQUIP_ID) {
+        if (ue.getType().equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
+            if (ur.getAccessory() != SlgConstants.RoleConstants.NO_EQUIP_ID) {
                 SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "accessory is have one")
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
@@ -164,8 +154,8 @@ public class UserRoleHelper {
             }
 
             ur.setAccessory(ue.getId());
-        } else if (ue.getType().equals(EquipConstants.EquipType.ARMOR)) {
-            if (ur.getArmor() != RoleConstants.NO_EQUIP_ID) {
+        } else if (ue.getType().equals(SlgConstants.Equip.EquipType.ARMOR)) {
+            if (ur.getArmor() != SlgConstants.RoleConstants.NO_EQUIP_ID) {
                 SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "armor is have one")
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
@@ -174,7 +164,7 @@ public class UserRoleHelper {
             }
             ur.setArmor(ue.getId());
         } else {
-            if (ur.getWeapon() != RoleConstants.NO_EQUIP_ID) {
+            if (ur.getWeapon() != SlgConstants.RoleConstants.NO_EQUIP_ID) {
                 SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "weapon is have one")
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
@@ -210,33 +200,33 @@ public class UserRoleHelper {
                     .addParam("uid", uid));
             throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
         }
-        if (ue.getType().equals(EquipConstants.EquipType.ACCESSORY)) {
-            if (ur.getAccessory() == RoleConstants.NO_EQUIP_ID) {
+        if (ue.getType().equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
+            if (ur.getAccessory() == SlgConstants.RoleConstants.NO_EQUIP_ID) {
                 SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "accessory don't have one")
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentAccessory", ur.getAccessory()));
                 throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
-            ur.setAccessory(RoleConstants.NO_EQUIP_ID);
-        } else if (ue.getType().equals(EquipConstants.EquipType.ARMOR)) {
-            if (ur.getArmor() == RoleConstants.NO_EQUIP_ID) {
+            ur.setAccessory(SlgConstants.RoleConstants.NO_EQUIP_ID);
+        } else if (ue.getType().equals(SlgConstants.Equip.EquipType.ARMOR)) {
+            if (ur.getArmor() == SlgConstants.RoleConstants.NO_EQUIP_ID) {
                 SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "armor don't have one")
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentArmor", ur.getArmor()));
                 throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
-            ur.setArmor(RoleConstants.NO_EQUIP_ID);
+            ur.setArmor(SlgConstants.RoleConstants.NO_EQUIP_ID);
         } else {
-            if (ur.getWeapon() == RoleConstants.NO_EQUIP_ID) {
+            if (ur.getWeapon() == SlgConstants.RoleConstants.NO_EQUIP_ID) {
                 SlgLogger.error(SlgLoggerEntity.p("role", "wear", uid, "weapon don't have one")
                         .addParam("ue-uid", ue.getUid())
                         .addParam("uid", uid)
                         .addParam("currentWeapon", ur.getWeapon()));
                 throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
-            ur.setWeapon(RoleConstants.NO_EQUIP_ID);
+            ur.setWeapon(SlgConstants.RoleConstants.NO_EQUIP_ID);
         }
         updateUserRole(ur);
         ue.setUrid(0);

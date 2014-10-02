@@ -1,8 +1,8 @@
 package com.h13.slg.battle.fight;
 
 import com.google.common.collect.Lists;
-import com.h13.slg.battle.FightConstants;
 import com.h13.slg.battle.buffs.BuffEvent;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,7 @@ public class FightHandler {
             roleSkillRunner.run(0, uid, attackFightUnit.getLeader(), null,
                     attackFightUnit.getLeader().getTianfu().getRsid(),
                     attackFightUnit, defenceFightUnit,
-                    fightResult, FightConstants.Owner.ATTACK);
+                    fightResult, SlgConstants.Fight.Owner.ATTACK);
             SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger attack leader skill "));
         }
         if (defenceFightUnit.getLeader() != null &&
@@ -52,7 +52,7 @@ public class FightHandler {
             roleSkillRunner.run(0, uid, defenceFightUnit.getLeader(), null,
                     defenceFightUnit.getLeader().getTianfu().getRsid(),
                     defenceFightUnit, attackFightUnit,
-                    fightResult, FightConstants.Owner.DEFENCE);
+                    fightResult, SlgConstants.Fight.Owner.DEFENCE);
             SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger defence leader skill"));
         }
 
@@ -127,23 +127,16 @@ public class FightHandler {
             FightADLog fightADLog = new FightADLog();
             // 攻击方一定是人
             if (attackAttack)
-                fightADLog.setAttack(FightConstants.ATTACK_ATTACK);
+                fightADLog.setAttack(SlgConstants.Fight.ATTACK_ATTACK);
             else
-                fightADLog.setAttack(FightConstants.DEFENCE_ATTACK);
-            PosInfo attackPosInfo = new PosInfo();
-            attackPosInfo.setId(attackPosition.getId());
-            attackPosInfo.setName(attackPosition.getName());
-            attackPosInfo.setPos(attackPos);
-            fightADLog.setAttackPos(attackPosInfo);
+                fightADLog.setAttack(SlgConstants.Fight.DEFENCE_ATTACK);
 
+            fightADLog.setAttackPos(attackPosition.getPos());
 
-            PosInfo defencePosInfo = new PosInfo();
-            defencePosInfo.setId(defencePosition.getId());
-            defencePosInfo.setName(defencePosition.getName());
-            defencePosInfo.setPos(defencePos);
-            LinkedList<PosInfo> defencePosList = Lists.newLinkedList();
-            defencePosList.add(defencePosInfo);
+            List<Integer> defencePosList = Lists.newLinkedList();
+            defencePosList.add(defencePosition.getPos());
             fightADLog.setDefencePos(defencePosList);
+
             FightStatus attackStatus = new FightStatus();
             attackStatus.setPos(attackPos);
             attackStatus.setStatus(new Integer[]{attackPosition.getHealth(), 0});
@@ -164,7 +157,7 @@ public class FightHandler {
             if (attackPosition.getAngry() > 200) {
                 if (attackPosition.getJiangling() != null)
                     roleSkillRunner.run(round, uid, attackPosition, defencePosition, attackPosition.getJiangling().getRsid()
-                            , attackFightUnit, defenceFightUnit, fightResult, FightConstants.Owner.ATTACK);
+                            , attackFightUnit, defenceFightUnit, fightResult, SlgConstants.Fight.Owner.ATTACK);
 
 
             }

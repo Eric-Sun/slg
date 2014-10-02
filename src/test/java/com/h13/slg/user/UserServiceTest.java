@@ -74,10 +74,10 @@ public class UserServiceTest {
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod","user");
         map.put("act","getInfo");
-        map.put("uid","1");
-        map.put("auth_key","c4ca4238a0b923820dcc509a6f75849b");
-        map.put("auth_time","1400069582722") ;
-        map.put("args","{name:'aaa',password:'bbb'}");
+        map.put("uid","2");
+        map.put("auth_key","c81e728d9d4c2f636f067f89cc14862c");
+        map.put("auth_time","1410430719275") ;
+        map.put("args","{}");
         map.put("seq","1");
         String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);

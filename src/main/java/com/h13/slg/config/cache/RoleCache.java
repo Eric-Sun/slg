@@ -75,19 +75,19 @@ public class RoleCache extends BasicCache<RoleCO> {
 
 
     public int getFromZhaoxian(int index, String quality) {
-        return rolePartitionTemplate.opsForList().index(KEY_ZHAOXIAN + "_" + quality, index);
+        return Integer.parseInt(rolePartitionTemplate.opsForList().index(KEY_ZHAOXIAN + "_" + quality, index) + "");
     }
 
     public int getFromFuben(int index, String quality) {
-        return rolePartitionTemplate.opsForList().index(KEY_FUBEN + "_" + quality, index);
+        return Integer.parseInt(rolePartitionTemplate.opsForList().index(KEY_FUBEN + "_" + quality, index) + "");
     }
 
     public int getFromHuodong(int index, String quality) {
-        return rolePartitionTemplate.opsForList().index(KEY_HUODONG + "_" + quality, index);
+        return Integer.parseInt(rolePartitionTemplate.opsForList().index(KEY_HUODONG + "_" + quality, index) + "");
     }
 
     public int getFromDuihuan(int index, String quality) {
-        return rolePartitionTemplate.opsForList().index(KEY_DUIHUAN + "_" + quality, index);
+        return Integer.parseInt(rolePartitionTemplate.opsForList().index(KEY_DUIHUAN + "_" + quality, index) + "");
     }
 
 

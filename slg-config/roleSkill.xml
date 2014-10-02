@@ -1,12 +1,12 @@
 <roleSkillList>
     <roleSkill>
         <id>1</id>
-        <name>天义勇军</name>
+        <name>天义勇军1</name>
         <type>tianfu</type>
         <quality>tian</quality>
         <upgradeMaterial>19</upgradeMaterial>
         <materialNum2>10</materialNum2>
-        <tips>天级天赋，所有的武将攻击力加50%，防御加100%，士兵数加100%</tips>
+        <tips>天级天赋，所有的武将攻击力加5%</tips>
         <runStart>now</runStart>
         <runTarget>ziji</runTarget>
         <runType>all</runType>
@@ -17,23 +17,63 @@
         <runParamsDamage>0</runParamsDamage>
         <runTime>0</runTime>
     </roleSkill>
+
     <roleSkill>
         <id>2</id>
-        <name>振奋</name>
-        <type>jiangling</type>
-        <quality>tian</quality>
+        <name>天义勇军2</name>
+        <type>tianfu</type>
+        <quality>di</quality>
         <upgradeMaterial>19</upgradeMaterial>
         <materialNum2>10</materialNum2>
-        <tips>天级技能，技能释放者攻击力加500%</tips>
+        <tips>天级天赋，所有的武将攻击力加5%</tips>
         <runStart>now</runStart>
         <runTarget>ziji</runTarget>
-        <runType>danti</runType>
-        <runParamsAttack>500</runParamsAttack>
-        <runParamsDefence>0</runParamsDefence>
-        <runParamsHealth>0</runParamsHealth>
+        <runType>all</runType>
+        <runParamsAttack>50</runParamsAttack>
+        <runParamsDefence>100</runParamsDefence>
+        <runParamsHealth>100</runParamsHealth>
         <runParamsHuanghu>0</runParamsHuanghu>
         <runParamsDamage>0</runParamsDamage>
-        <runTime>2</runTime>
+        <runTime>0</runTime>
+    </roleSkill>
+
+
+    <roleSkill>
+        <id>3</id>
+        <name>天义勇军3</name>
+        <type>tianfu</type>
+        <quality>xuan</quality>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum2>10</materialNum2>
+        <tips>天级天赋，所有的武将攻击力加5%</tips>
+        <runStart>now</runStart>
+        <runTarget>ziji</runTarget>
+        <runType>all</runType>
+        <runParamsAttack>50</runParamsAttack>
+        <runParamsDefence>100</runParamsDefence>
+        <runParamsHealth>100</runParamsHealth>
+        <runParamsHuanghu>0</runParamsHuanghu>
+        <runParamsDamage>0</runParamsDamage>
+        <runTime>0</runTime>
+    </roleSkill>
+
+    <roleSkill>
+        <id>4</id>
+        <name>天义勇军4</name>
+        <type>tianfu</type>
+        <quality>huang</quality>
+        <upgradeMaterial>19</upgradeMaterial>
+        <materialNum2>10</materialNum2>
+        <tips>天级天赋，所有的武将攻击力加5%</tips>
+        <runStart>now</runStart>
+        <runTarget>ziji</runTarget>
+        <runType>all</runType>
+        <runParamsAttack>50</runParamsAttack>
+        <runParamsDefence>100</runParamsDefence>
+        <runParamsHealth>100</runParamsHealth>
+        <runParamsHuanghu>0</runParamsHuanghu>
+        <runParamsDamage>0</runParamsDamage>
+        <runTime>0</runTime>
     </roleSkill>
 
 </roleSkillList>

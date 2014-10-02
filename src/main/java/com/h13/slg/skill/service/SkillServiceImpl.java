@@ -34,28 +34,6 @@ public class SkillServiceImpl implements SkillService {
     RoleSkillConfigFetcher roleSkillConfigFetcher;
 
     @Override
-    public SlgData skillList(SlgRequestDTO requestDTO) throws RequestErrorException {
-
-        int uid = requestDTO.getUid();
-        String type = new String(requestDTO.getArgs().get("type") + "");
-        Map<String, Integer> skillMap = userPackageHelper.get(uid).getSkill();
-        List<RoleSkillVO> skillList = Lists.newLinkedList();
-        for (String rsid : skillMap.keySet()) {
-            if (skillMap.get(rsid) == 0)
-                continue;
-            RoleSkillVO vo = new RoleSkillVO();
-            RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(rsid);
-            if (!roleSkillCO.getType().equals(type))
-                continue;
-            SlgBeanUtils.copyProperties(vo, roleSkillCO);
-            vo.setRsid(roleSkillCO.getId());
-            vo.setPackageCount(skillMap.get(rsid));
-            skillList.add(vo);
-        }
-        return SlgData.getData().add("list", skillList);
-    }
-
-    @Override
     public SlgData setSkill(SlgRequestDTO requestDTO) throws RequestErrorException {
 
         int uid = requestDTO.getUid();

@@ -27,7 +27,7 @@
             <foodMax>2185</foodMax>
             <foodPerHour>182</foodPerHour>
             <trainingXp>38</trainingXp>
-            <mineOutputFactor>1.028</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>379</personOutPut>
             <prisonOutPut>4407</prisonOutPut>
             <equipScore>1</equipScore>
@@ -45,7 +45,7 @@
             <foodMax>2240</foodMax>
             <foodPerHour>187</foodPerHour>
             <trainingXp>60</trainingXp>
-            <mineOutputFactor>1.056</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>386</personOutPut>
             <prisonOutPut>4643</prisonOutPut>
             <equipScore>1</equipScore>
@@ -63,7 +63,7 @@
             <foodMax>2295</foodMax>
             <foodPerHour>191</foodPerHour>
             <trainingXp>86</trainingXp>
-            <mineOutputFactor>1.084</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>393</personOutPut>
             <prisonOutPut>4879</prisonOutPut>
             <equipScore>1</equipScore>
@@ -81,7 +81,7 @@
             <foodMax>2350</foodMax>
             <foodPerHour>196</foodPerHour>
             <trainingXp>116</trainingXp>
-            <mineOutputFactor>1.112</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>400</personOutPut>
             <prisonOutPut>5115</prisonOutPut>
             <equipScore>1</equipScore>
@@ -99,7 +99,7 @@
             <foodMax>2405</foodMax>
             <foodPerHour>200</foodPerHour>
             <trainingXp>150</trainingXp>
-            <mineOutputFactor>1.14</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>407</personOutPut>
             <prisonOutPut>5351</prisonOutPut>
             <equipScore>1</equipScore>
@@ -117,7 +117,7 @@
             <foodMax>2460</foodMax>
             <foodPerHour>205</foodPerHour>
             <trainingXp>195</trainingXp>
-            <mineOutputFactor>1.168</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>414</personOutPut>
             <prisonOutPut>5587</prisonOutPut>
             <equipScore>1</equipScore>
@@ -135,7 +135,7 @@
             <foodMax>2515</foodMax>
             <foodPerHour>210</foodPerHour>
             <trainingXp>252</trainingXp>
-            <mineOutputFactor>1.196</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>421</personOutPut>
             <prisonOutPut>5823</prisonOutPut>
             <equipScore>1</equipScore>
@@ -153,7 +153,7 @@
             <foodMax>2570</foodMax>
             <foodPerHour>214</foodPerHour>
             <trainingXp>326</trainingXp>
-            <mineOutputFactor>1.224</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>428</personOutPut>
             <prisonOutPut>6059</prisonOutPut>
             <equipScore>1</equipScore>
@@ -171,7 +171,7 @@
             <foodMax>2625</foodMax>
             <foodPerHour>219</foodPerHour>
             <trainingXp>420</trainingXp>
-            <mineOutputFactor>1.252</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>435</personOutPut>
             <prisonOutPut>6295</prisonOutPut>
             <equipScore>1</equipScore>
@@ -189,7 +189,7 @@
             <foodMax>2680</foodMax>
             <foodPerHour>223</foodPerHour>
             <trainingXp>542</trainingXp>
-            <mineOutputFactor>1.28</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>442</personOutPut>
             <prisonOutPut>6531</prisonOutPut>
             <equipScore>2</equipScore>
@@ -207,7 +207,7 @@
             <foodMax>2735</foodMax>
             <foodPerHour>228</foodPerHour>
             <trainingXp>699</trainingXp>
-            <mineOutputFactor>1.308</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>449</personOutPut>
             <prisonOutPut>6767</prisonOutPut>
             <equipScore>2</equipScore>
@@ -225,7 +225,7 @@
             <foodMax>2790</foodMax>
             <foodPerHour>233</foodPerHour>
             <trainingXp>896</trainingXp>
-            <mineOutputFactor>1.336</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>456</personOutPut>
             <prisonOutPut>7003</prisonOutPut>
             <equipScore>2</equipScore>
@@ -243,7 +243,7 @@
             <foodMax>2845</foodMax>
             <foodPerHour>237</foodPerHour>
             <trainingXp>1142</trainingXp>
-            <mineOutputFactor>1.364</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>463</personOutPut>
             <prisonOutPut>7239</prisonOutPut>
             <equipScore>2</equipScore>
@@ -261,7 +261,7 @@
             <foodMax>2900</foodMax>
             <foodPerHour>242</foodPerHour>
             <trainingXp>1445</trainingXp>
-            <mineOutputFactor>1.392</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>470</personOutPut>
             <prisonOutPut>7475</prisonOutPut>
             <equipScore>2</equipScore>
@@ -279,7 +279,7 @@
             <foodMax>2955</foodMax>
             <foodPerHour>246</foodPerHour>
             <trainingXp>1817</trainingXp>
-            <mineOutputFactor>1.42</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>477</personOutPut>
             <prisonOutPut>7711</prisonOutPut>
             <equipScore>2</equipScore>
@@ -297,7 +297,7 @@
             <foodMax>3010</foodMax>
             <foodPerHour>251</foodPerHour>
             <trainingXp>2265</trainingXp>
-            <mineOutputFactor>1.448</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>484</personOutPut>
             <prisonOutPut>7947</prisonOutPut>
             <equipScore>2</equipScore>
@@ -315,7 +315,7 @@
             <foodMax>3065</foodMax>
             <foodPerHour>255</foodPerHour>
             <trainingXp>2804</trainingXp>
-            <mineOutputFactor>1.476</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>491</personOutPut>
             <prisonOutPut>8183</prisonOutPut>
             <equipScore>2</equipScore>
@@ -333,7 +333,7 @@
             <foodMax>3120</foodMax>
             <foodPerHour>260</foodPerHour>
             <trainingXp>3441</trainingXp>
-            <mineOutputFactor>1.504</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>498</personOutPut>
             <prisonOutPut>8419</prisonOutPut>
             <equipScore>2</equipScore>
@@ -351,7 +351,7 @@
             <foodMax>3175</foodMax>
             <foodPerHour>265</foodPerHour>
             <trainingXp>4193</trainingXp>
-            <mineOutputFactor>1.532</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>505</personOutPut>
             <prisonOutPut>8655</prisonOutPut>
             <equipScore>2</equipScore>
@@ -369,7 +369,7 @@
             <foodMax>3230</foodMax>
             <foodPerHour>269</foodPerHour>
             <trainingXp>5069</trainingXp>
-            <mineOutputFactor>1.56</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>512</personOutPut>
             <prisonOutPut>8891</prisonOutPut>
             <equipScore>3</equipScore>
@@ -387,7 +387,7 @@
             <foodMax>3285</foodMax>
             <foodPerHour>274</foodPerHour>
             <trainingXp>6456</trainingXp>
-            <mineOutputFactor>1.588</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>519</personOutPut>
             <prisonOutPut>9127</prisonOutPut>
             <equipScore>3</equipScore>
@@ -405,7 +405,7 @@
             <foodMax>3340</foodMax>
             <foodPerHour>278</foodPerHour>
             <trainingXp>8526</trainingXp>
-            <mineOutputFactor>1.616</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>526</personOutPut>
             <prisonOutPut>9363</prisonOutPut>
             <equipScore>3</equipScore>
@@ -423,7 +423,7 @@
             <foodMax>3395</foodMax>
             <foodPerHour>283</foodPerHour>
             <trainingXp>10176</trainingXp>
-            <mineOutputFactor>1.644</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>533</personOutPut>
             <prisonOutPut>9599</prisonOutPut>
             <equipScore>3</equipScore>
@@ -441,7 +441,7 @@
             <foodMax>3450</foodMax>
             <foodPerHour>288</foodPerHour>
             <trainingXp>11718</trainingXp>
-            <mineOutputFactor>1.672</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>540</personOutPut>
             <prisonOutPut>9835</prisonOutPut>
             <equipScore>3</equipScore>
@@ -459,7 +459,7 @@
             <foodMax>3505</foodMax>
             <foodPerHour>292</foodPerHour>
             <trainingXp>13301</trainingXp>
-            <mineOutputFactor>1.7</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>547</personOutPut>
             <prisonOutPut>10071</prisonOutPut>
             <equipScore>3</equipScore>
@@ -477,7 +477,7 @@
             <foodMax>3560</foodMax>
             <foodPerHour>297</foodPerHour>
             <trainingXp>13548</trainingXp>
-            <mineOutputFactor>1.728</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>554</personOutPut>
             <prisonOutPut>10307</prisonOutPut>
             <equipScore>3</equipScore>
@@ -495,7 +495,7 @@
             <foodMax>3615</foodMax>
             <foodPerHour>301</foodPerHour>
             <trainingXp>13797</trainingXp>
-            <mineOutputFactor>1.756</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>561</personOutPut>
             <prisonOutPut>10543</prisonOutPut>
             <equipScore>3</equipScore>
@@ -513,7 +513,7 @@
             <foodMax>3670</foodMax>
             <foodPerHour>306</foodPerHour>
             <trainingXp>14045</trainingXp>
-            <mineOutputFactor>1.784</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>568</personOutPut>
             <prisonOutPut>10779</prisonOutPut>
             <equipScore>3</equipScore>
@@ -531,7 +531,7 @@
             <foodMax>3725</foodMax>
             <foodPerHour>310</foodPerHour>
             <trainingXp>14324</trainingXp>
-            <mineOutputFactor>1.812</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>575</personOutPut>
             <prisonOutPut>11015</prisonOutPut>
             <equipScore>3</equipScore>
@@ -549,7 +549,7 @@
             <foodMax>3780</foodMax>
             <foodPerHour>315</foodPerHour>
             <trainingXp>14372</trainingXp>
-            <mineOutputFactor>1.84</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>582</personOutPut>
             <prisonOutPut>11251</prisonOutPut>
             <equipScore>4</equipScore>
@@ -567,7 +567,7 @@
             <foodMax>3835</foodMax>
             <foodPerHour>320</foodPerHour>
             <trainingXp>14420</trainingXp>
-            <mineOutputFactor>1.868</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>589</personOutPut>
             <prisonOutPut>11487</prisonOutPut>
             <equipScore>4</equipScore>
@@ -585,7 +585,7 @@
             <foodMax>3890</foodMax>
             <foodPerHour>324</foodPerHour>
             <trainingXp>14469</trainingXp>
-            <mineOutputFactor>1.896</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>596</personOutPut>
             <prisonOutPut>11723</prisonOutPut>
             <equipScore>4</equipScore>
@@ -603,7 +603,7 @@
             <foodMax>3945</foodMax>
             <foodPerHour>329</foodPerHour>
             <trainingXp>14517</trainingXp>
-            <mineOutputFactor>1.924</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>603</personOutPut>
             <prisonOutPut>11959</prisonOutPut>
             <equipScore>4</equipScore>
@@ -621,7 +621,7 @@
             <foodMax>4000</foodMax>
             <foodPerHour>333</foodPerHour>
             <trainingXp>14565</trainingXp>
-            <mineOutputFactor>1.952</mineOutputFactor>
+            <mineOutputFactor>1</mineOutputFactor>
             <personOutPut>610</personOutPut>
             <prisonOutPut>12195</prisonOutPut>
             <equipScore>4</equipScore>
@@ -639,7 +639,7 @@
             <foodMax>4150</foodMax>
             <foodPerHour>346</foodPerHour>
             <trainingXp>14615</trainingXp>
-            <mineOutputFactor>2.049</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>640</personOutPut>
             <prisonOutPut>12805</prisonOutPut>
             <equipScore>5</equipScore>
@@ -657,7 +657,7 @@
             <foodMax>4300</foodMax>
             <foodPerHour>358</foodPerHour>
             <trainingXp>14663</trainingXp>
-            <mineOutputFactor>2.152</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>672</personOutPut>
             <prisonOutPut>13445</prisonOutPut>
             <equipScore>5</equipScore>
@@ -675,7 +675,7 @@
             <foodMax>4450</foodMax>
             <foodPerHour>371</foodPerHour>
             <trainingXp>14711</trainingXp>
-            <mineOutputFactor>2.259</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>706</personOutPut>
             <prisonOutPut>14117</prisonOutPut>
             <equipScore>5</equipScore>
@@ -693,7 +693,7 @@
             <foodMax>4600</foodMax>
             <foodPerHour>383</foodPerHour>
             <trainingXp>14759</trainingXp>
-            <mineOutputFactor>2.372</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>741</personOutPut>
             <prisonOutPut>14823</prisonOutPut>
             <equipScore>5</equipScore>
@@ -711,7 +711,7 @@
             <foodMax>4750</foodMax>
             <foodPerHour>396</foodPerHour>
             <trainingXp>14808</trainingXp>
-            <mineOutputFactor>2.491</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>778</personOutPut>
             <prisonOutPut>15564</prisonOutPut>
             <equipScore>5</equipScore>
@@ -729,7 +729,7 @@
             <foodMax>4900</foodMax>
             <foodPerHour>408</foodPerHour>
             <trainingXp>14856</trainingXp>
-            <mineOutputFactor>2.615</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>817</personOutPut>
             <prisonOutPut>16343</prisonOutPut>
             <equipScore>6</equipScore>
@@ -747,7 +747,7 @@
             <foodMax>5050</foodMax>
             <foodPerHour>421</foodPerHour>
             <trainingXp>14904</trainingXp>
-            <mineOutputFactor>2.746</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>858</personOutPut>
             <prisonOutPut>17160</prisonOutPut>
             <equipScore>6</equipScore>
@@ -765,7 +765,7 @@
             <foodMax>5200</foodMax>
             <foodPerHour>433</foodPerHour>
             <trainingXp>15171</trainingXp>
-            <mineOutputFactor>2.884</mineOutputFactor>
+            <mineOutputFactor>2</mineOutputFactor>
             <personOutPut>901</personOutPut>
             <prisonOutPut>18018</prisonOutPut>
             <equipScore>6</equipScore>
@@ -783,7 +783,7 @@
             <foodMax>5350</foodMax>
             <foodPerHour>446</foodPerHour>
             <trainingXp>15219</trainingXp>
-            <mineOutputFactor>3.028</mineOutputFactor>
+            <mineOutputFactor>3</mineOutputFactor>
             <personOutPut>946</personOutPut>
             <prisonOutPut>18919</prisonOutPut>
             <equipScore>6</equipScore>
@@ -801,7 +801,7 @@
             <foodMax>5500</foodMax>
             <foodPerHour>458</foodPerHour>
             <trainingXp>15267</trainingXp>
-            <mineOutputFactor>3.179</mineOutputFactor>
+            <mineOutputFactor>3</mineOutputFactor>
             <personOutPut>993</personOutPut>
             <prisonOutPut>19865</prisonOutPut>
             <equipScore>6</equipScore>
@@ -819,7 +819,7 @@
             <foodMax>5650</foodMax>
             <foodPerHour>471</foodPerHour>
             <trainingXp>15315</trainingXp>
-            <mineOutputFactor>3.338</mineOutputFactor>
+            <mineOutputFactor>3</mineOutputFactor>
             <personOutPut>1043</personOutPut>
             <prisonOutPut>20858</prisonOutPut>
             <equipScore>6</equipScore>
@@ -837,7 +837,7 @@
             <foodMax>5800</foodMax>
             <foodPerHour>483</foodPerHour>
             <trainingXp>15365</trainingXp>
-            <mineOutputFactor>3.505</mineOutputFactor>
+            <mineOutputFactor>3</mineOutputFactor>
             <personOutPut>1095</personOutPut>
             <prisonOutPut>21901</prisonOutPut>
             <equipScore>7</equipScore>
@@ -855,7 +855,7 @@
             <foodMax>5950</foodMax>
             <foodPerHour>496</foodPerHour>
             <trainingXp>15413</trainingXp>
-            <mineOutputFactor>3.68</mineOutputFactor>
+            <mineOutputFactor>3</mineOutputFactor>
             <personOutPut>1150</personOutPut>
             <prisonOutPut>22996</prisonOutPut>
             <equipScore>7</equipScore>
@@ -873,7 +873,7 @@
             <foodMax>6100</foodMax>
             <foodPerHour>508</foodPerHour>
             <trainingXp>15461</trainingXp>
-            <mineOutputFactor>3.864</mineOutputFactor>
+            <mineOutputFactor>3</mineOutputFactor>
             <personOutPut>1207</personOutPut>
             <prisonOutPut>24146</prisonOutPut>
             <equipScore>7</equipScore>
@@ -891,7 +891,7 @@
             <foodMax>6250</foodMax>
             <foodPerHour>521</foodPerHour>
             <trainingXp>40286</trainingXp>
-            <mineOutputFactor>4.057</mineOutputFactor>
+            <mineOutputFactor>4</mineOutputFactor>
             <personOutPut>1268</personOutPut>
             <prisonOutPut>25353</prisonOutPut>
             <equipScore>7</equipScore>
@@ -909,7 +909,7 @@
             <foodMax>6400</foodMax>
             <foodPerHour>533</foodPerHour>
             <trainingXp>40920</trainingXp>
-            <mineOutputFactor>4.26</mineOutputFactor>
+            <mineOutputFactor>4</mineOutputFactor>
             <personOutPut>1331</personOutPut>
             <prisonOutPut>26620</prisonOutPut>
             <equipScore>8</equipScore>
@@ -927,7 +927,7 @@
             <foodMax>6550</foodMax>
             <foodPerHour>546</foodPerHour>
             <trainingXp>41556</trainingXp>
-            <mineOutputFactor>4.473</mineOutputFactor>
+            <mineOutputFactor>4</mineOutputFactor>
             <personOutPut>1398</personOutPut>
             <prisonOutPut>27951</prisonOutPut>
             <equipScore>8</equipScore>
@@ -945,7 +945,7 @@
             <foodMax>6700</foodMax>
             <foodPerHour>558</foodPerHour>
             <trainingXp>42192</trainingXp>
-            <mineOutputFactor>4.697</mineOutputFactor>
+            <mineOutputFactor>4</mineOutputFactor>
             <personOutPut>1467</personOutPut>
             <prisonOutPut>29349</prisonOutPut>
             <equipScore>8</equipScore>
@@ -963,7 +963,7 @@
             <foodMax>6850</foodMax>
             <foodPerHour>571</foodPerHour>
             <trainingXp>42828</trainingXp>
-            <mineOutputFactor>4.932</mineOutputFactor>
+            <mineOutputFactor>4</mineOutputFactor>
             <personOutPut>1541</personOutPut>
             <prisonOutPut>30817</prisonOutPut>
             <equipScore>8</equipScore>
@@ -981,7 +981,7 @@
             <foodMax>7000</foodMax>
             <foodPerHour>583</foodPerHour>
             <trainingXp>43464</trainingXp>
-            <mineOutputFactor>5.179</mineOutputFactor>
+            <mineOutputFactor>5</mineOutputFactor>
             <personOutPut>1618</personOutPut>
             <prisonOutPut>32357</prisonOutPut>
             <equipScore>8</equipScore>
@@ -999,7 +999,7 @@
             <foodMax>7150</foodMax>
             <foodPerHour>596</foodPerHour>
             <trainingXp>44099</trainingXp>
-            <mineOutputFactor>5.437</mineOutputFactor>
+            <mineOutputFactor>5</mineOutputFactor>
             <personOutPut>1699</personOutPut>
             <prisonOutPut>33975</prisonOutPut>
             <equipScore>9</equipScore>
@@ -1017,7 +1017,7 @@
             <foodMax>7300</foodMax>
             <foodPerHour>608</foodPerHour>
             <trainingXp>44735</trainingXp>
-            <mineOutputFactor>5.709</mineOutputFactor>
+            <mineOutputFactor>5</mineOutputFactor>
             <personOutPut>1784</personOutPut>
             <prisonOutPut>35674</prisonOutPut>
             <equipScore>9</equipScore>
@@ -1035,7 +1035,7 @@
             <foodMax>7450</foodMax>
             <foodPerHour>621</foodPerHour>
             <trainingXp>45371</trainingXp>
-            <mineOutputFactor>5.995</mineOutputFactor>
+            <mineOutputFactor>5</mineOutputFactor>
             <personOutPut>1873</personOutPut>
             <prisonOutPut>37458</prisonOutPut>
             <equipScore>9</equipScore>
@@ -1053,7 +1053,7 @@
             <foodMax>7600</foodMax>
             <foodPerHour>633</foodPerHour>
             <trainingXp>46007</trainingXp>
-            <mineOutputFactor>6.295</mineOutputFactor>
+            <mineOutputFactor>6</mineOutputFactor>
             <personOutPut>1967</personOutPut>
             <prisonOutPut>39331</prisonOutPut>
             <equipScore>9</equipScore>
@@ -1071,7 +1071,7 @@
             <foodMax>7750</foodMax>
             <foodPerHour>646</foodPerHour>
             <trainingXp>46287</trainingXp>
-            <mineOutputFactor>6.609</mineOutputFactor>
+            <mineOutputFactor>6</mineOutputFactor>
             <personOutPut>2065</personOutPut>
             <prisonOutPut>41297</prisonOutPut>
             <equipScore>10</equipScore>
@@ -1089,7 +1089,7 @@
             <foodMax>7900</foodMax>
             <foodPerHour>658</foodPerHour>
             <trainingXp>93473</trainingXp>
-            <mineOutputFactor>6.94</mineOutputFactor>
+            <mineOutputFactor>6</mineOutputFactor>
             <personOutPut>2168</personOutPut>
             <prisonOutPut>43362</prisonOutPut>
             <equipScore>10</equipScore>
@@ -1107,7 +1107,7 @@
             <foodMax>8050</foodMax>
             <foodPerHour>671</foodPerHour>
             <trainingXp>98015</trainingXp>
-            <mineOutputFactor>7.287</mineOutputFactor>
+            <mineOutputFactor>7</mineOutputFactor>
             <personOutPut>2277</personOutPut>
             <prisonOutPut>45530</prisonOutPut>
             <equipScore>10</equipScore>
@@ -1125,7 +1125,7 @@
             <foodMax>8200</foodMax>
             <foodPerHour>683</foodPerHour>
             <trainingXp>102507</trainingXp>
-            <mineOutputFactor>7.651</mineOutputFactor>
+            <mineOutputFactor>7</mineOutputFactor>
             <personOutPut>2390</personOutPut>
             <prisonOutPut>47807</prisonOutPut>
             <equipScore>10</equipScore>
@@ -1143,7 +1143,7 @@
             <foodMax>8350</foodMax>
             <foodPerHour>696</foodPerHour>
             <trainingXp>106951</trainingXp>
-            <mineOutputFactor>8.034</mineOutputFactor>
+            <mineOutputFactor>8</mineOutputFactor>
             <personOutPut>2510</personOutPut>
             <prisonOutPut>50197</prisonOutPut>
             <equipScore>10</equipScore>
@@ -1161,7 +1161,7 @@
             <foodMax>8500</foodMax>
             <foodPerHour>708</foodPerHour>
             <trainingXp>111349</trainingXp>
-            <mineOutputFactor>8.435</mineOutputFactor>
+            <mineOutputFactor>8</mineOutputFactor>
             <personOutPut>2635</personOutPut>
             <prisonOutPut>52707</prisonOutPut>
             <equipScore>11</equipScore>
@@ -1179,7 +1179,7 @@
             <foodMax>8650</foodMax>
             <foodPerHour>721</foodPerHour>
             <trainingXp>115704</trainingXp>
-            <mineOutputFactor>8.857</mineOutputFactor>
+            <mineOutputFactor>8</mineOutputFactor>
             <personOutPut>2767</personOutPut>
             <prisonOutPut>55342</prisonOutPut>
             <equipScore>11</equipScore>
@@ -1197,7 +1197,7 @@
             <foodMax>8800</foodMax>
             <foodPerHour>733</foodPerHour>
             <trainingXp>120016</trainingXp>
-            <mineOutputFactor>9.3</mineOutputFactor>
+            <mineOutputFactor>9</mineOutputFactor>
             <personOutPut>2905</personOutPut>
             <prisonOutPut>58109</prisonOutPut>
             <equipScore>11</equipScore>
@@ -1215,7 +1215,7 @@
             <foodMax>8950</foodMax>
             <foodPerHour>746</foodPerHour>
             <trainingXp>124288</trainingXp>
-            <mineOutputFactor>9.765</mineOutputFactor>
+            <mineOutputFactor>9</mineOutputFactor>
             <personOutPut>3051</personOutPut>
             <prisonOutPut>61015</prisonOutPut>
             <equipScore>11</equipScore>
@@ -1233,7 +1233,7 @@
             <foodMax>9100</foodMax>
             <foodPerHour>758</foodPerHour>
             <trainingXp>128521</trainingXp>
-            <mineOutputFactor>10.253</mineOutputFactor>
+            <mineOutputFactor>10</mineOutputFactor>
             <personOutPut>3203</personOutPut>
             <prisonOutPut>64065</prisonOutPut>
             <equipScore>11</equipScore>
@@ -1251,7 +1251,7 @@
             <foodMax>9250</foodMax>
             <foodPerHour>771</foodPerHour>
             <trainingXp>128521</trainingXp>
-            <mineOutputFactor>10.766</mineOutputFactor>
+            <mineOutputFactor>10</mineOutputFactor>
             <personOutPut>3363</personOutPut>
             <prisonOutPut>67269</prisonOutPut>
             <equipScore>12</equipScore>
@@ -1269,7 +1269,7 @@
             <foodMax>9400</foodMax>
             <foodPerHour>783</foodPerHour>
             <trainingXp>131267</trainingXp>
-            <mineOutputFactor>11.304</mineOutputFactor>
+            <mineOutputFactor>11</mineOutputFactor>
             <personOutPut>3532</personOutPut>
             <prisonOutPut>70632</prisonOutPut>
             <equipScore>12</equipScore>
@@ -1287,7 +1287,7 @@
             <foodMax>9550</foodMax>
             <foodPerHour>796</foodPerHour>
             <trainingXp>133960</trainingXp>
-            <mineOutputFactor>11.869</mineOutputFactor>
+            <mineOutputFactor>11</mineOutputFactor>
             <personOutPut>3708</personOutPut>
             <prisonOutPut>74164</prisonOutPut>
             <equipScore>12</equipScore>
@@ -1305,7 +1305,7 @@
             <foodMax>9700</foodMax>
             <foodPerHour>808</foodPerHour>
             <trainingXp>136600</trainingXp>
-            <mineOutputFactor>12.463</mineOutputFactor>
+            <mineOutputFactor>12</mineOutputFactor>
             <personOutPut>3894</personOutPut>
             <prisonOutPut>77872</prisonOutPut>
             <equipScore>12</equipScore>
@@ -1323,7 +1323,7 @@
             <foodMax>9850</foodMax>
             <foodPerHour>821</foodPerHour>
             <trainingXp>139191</trainingXp>
-            <mineOutputFactor>13.086</mineOutputFactor>
+            <mineOutputFactor>13</mineOutputFactor>
             <personOutPut>4088</personOutPut>
             <prisonOutPut>81765</prisonOutPut>
             <equipScore>12</equipScore>
@@ -1341,7 +1341,7 @@
             <foodMax>10000</foodMax>
             <foodPerHour>833</foodPerHour>
             <trainingXp>141734</trainingXp>
-            <mineOutputFactor>13.74</mineOutputFactor>
+            <mineOutputFactor>13</mineOutputFactor>
             <personOutPut>4293</personOutPut>
             <prisonOutPut>85854</prisonOutPut>
             <equipScore>13</equipScore>
@@ -1359,7 +1359,7 @@
             <foodMax>10150</foodMax>
             <foodPerHour>846</foodPerHour>
             <trainingXp>144231</trainingXp>
-            <mineOutputFactor>14.427</mineOutputFactor>
+            <mineOutputFactor>14</mineOutputFactor>
             <personOutPut>4379</personOutPut>
             <prisonOutPut>87571</prisonOutPut>
             <equipScore>13</equipScore>
@@ -1377,7 +1377,7 @@
             <foodMax>10300</foodMax>
             <foodPerHour>858</foodPerHour>
             <trainingXp>152257</trainingXp>
-            <mineOutputFactor>15.148</mineOutputFactor>
+            <mineOutputFactor>15</mineOutputFactor>
             <personOutPut>4466</personOutPut>
             <prisonOutPut>89322</prisonOutPut>
             <equipScore>13</equipScore>
@@ -1395,7 +1395,7 @@
             <foodMax>10450</foodMax>
             <foodPerHour>871</foodPerHour>
             <trainingXp>154844</trainingXp>
-            <mineOutputFactor>15.906</mineOutputFactor>
+            <mineOutputFactor>15</mineOutputFactor>
             <personOutPut>4555</personOutPut>
             <prisonOutPut>91109</prisonOutPut>
             <equipScore>13</equipScore>
@@ -1413,7 +1413,7 @@
             <foodMax>10600</foodMax>
             <foodPerHour>883</foodPerHour>
             <trainingXp>157514</trainingXp>
-            <mineOutputFactor>16.701</mineOutputFactor>
+            <mineOutputFactor>16</mineOutputFactor>
             <personOutPut>4647</personOutPut>
             <prisonOutPut>92931</prisonOutPut>
             <equipScore>13</equipScore>
@@ -1431,7 +1431,7 @@
             <foodMax>10750</foodMax>
             <foodPerHour>896</foodPerHour>
             <trainingXp>159999</trainingXp>
-            <mineOutputFactor>17.536</mineOutputFactor>
+            <mineOutputFactor>17</mineOutputFactor>
             <personOutPut>4739</personOutPut>
             <prisonOutPut>94789</prisonOutPut>
             <equipScore>14</equipScore>
@@ -1449,7 +1449,7 @@
             <foodMax>10900</foodMax>
             <foodPerHour>908</foodPerHour>
             <trainingXp>162665</trainingXp>
-            <mineOutputFactor>18.413</mineOutputFactor>
+            <mineOutputFactor>18</mineOutputFactor>
             <personOutPut>4834</personOutPut>
             <prisonOutPut>96685</prisonOutPut>
             <equipScore>14</equipScore>
@@ -1467,7 +1467,7 @@
             <foodMax>11050</foodMax>
             <foodPerHour>921</foodPerHour>
             <trainingXp>165445</trainingXp>
-            <mineOutputFactor>19.334</mineOutputFactor>
+            <mineOutputFactor>19</mineOutputFactor>
             <personOutPut>4931</personOutPut>
             <prisonOutPut>98619</prisonOutPut>
             <equipScore>14</equipScore>
@@ -1485,7 +1485,7 @@
             <foodMax>11200</foodMax>
             <foodPerHour>933</foodPerHour>
             <trainingXp>168274</trainingXp>
-            <mineOutputFactor>20.3</mineOutputFactor>
+            <mineOutputFactor>20</mineOutputFactor>
             <personOutPut>5030</personOutPut>
             <prisonOutPut>100591</prisonOutPut>
             <equipScore>14</equipScore>
@@ -1503,7 +1503,7 @@
             <foodMax>11350</foodMax>
             <foodPerHour>946</foodPerHour>
             <trainingXp>170957</trainingXp>
-            <mineOutputFactor>21.315</mineOutputFactor>
+            <mineOutputFactor>21</mineOutputFactor>
             <personOutPut>5130</personOutPut>
             <prisonOutPut>102603</prisonOutPut>
             <equipScore>14</equipScore>
@@ -1521,7 +1521,7 @@
             <foodMax>11500</foodMax>
             <foodPerHour>958</foodPerHour>
             <trainingXp>173944</trainingXp>
-            <mineOutputFactor>22.381</mineOutputFactor>
+            <mineOutputFactor>22</mineOutputFactor>
             <personOutPut>5233</personOutPut>
             <prisonOutPut>104655</prisonOutPut>
             <equipScore>15</equipScore>
@@ -1539,7 +1539,7 @@
             <foodMax>11650</foodMax>
             <foodPerHour>971</foodPerHour>
             <trainingXp>176725</trainingXp>
-            <mineOutputFactor>23.5</mineOutputFactor>
+            <mineOutputFactor>23</mineOutputFactor>
             <personOutPut>5337</personOutPut>
             <prisonOutPut>106748</prisonOutPut>
             <equipScore>15</equipScore>
@@ -1557,7 +1557,7 @@
             <foodMax>11800</foodMax>
             <foodPerHour>983</foodPerHour>
             <trainingXp>179459</trainingXp>
-            <mineOutputFactor>24.675</mineOutputFactor>
+            <mineOutputFactor>24</mineOutputFactor>
             <personOutPut>5444</personOutPut>
             <prisonOutPut>108883</prisonOutPut>
             <equipScore>15</equipScore>
@@ -1575,7 +1575,7 @@
             <foodMax>11950</foodMax>
             <foodPerHour>996</foodPerHour>
             <trainingXp>182148</trainingXp>
-            <mineOutputFactor>25.909</mineOutputFactor>
+            <mineOutputFactor>25</mineOutputFactor>
             <personOutPut>5553</personOutPut>
             <prisonOutPut>111061</prisonOutPut>
             <equipScore>15</equipScore>
@@ -1593,7 +1593,7 @@
             <foodMax>12100</foodMax>
             <foodPerHour>1008</foodPerHour>
             <trainingXp>184884</trainingXp>
-            <mineOutputFactor>27.204</mineOutputFactor>
+            <mineOutputFactor>27</mineOutputFactor>
             <personOutPut>5664</personOutPut>
             <prisonOutPut>113282</prisonOutPut>
             <equipScore>15</equipScore>
@@ -1611,7 +1611,7 @@
             <foodMax>12250</foodMax>
             <foodPerHour>1021</foodPerHour>
             <trainingXp>187453</trainingXp>
-            <mineOutputFactor>28.565</mineOutputFactor>
+            <mineOutputFactor>28</mineOutputFactor>
             <personOutPut>5777</personOutPut>
             <prisonOutPut>115548</prisonOutPut>
             <equipScore>16</equipScore>
@@ -1629,7 +1629,7 @@
             <foodMax>12400</foodMax>
             <foodPerHour>1033</foodPerHour>
             <trainingXp>189825</trainingXp>
-            <mineOutputFactor>29.993</mineOutputFactor>
+            <mineOutputFactor>29</mineOutputFactor>
             <personOutPut>5893</personOutPut>
             <prisonOutPut>117859</prisonOutPut>
             <equipScore>16</equipScore>
@@ -1647,7 +1647,7 @@
             <foodMax>12550</foodMax>
             <foodPerHour>1046</foodPerHour>
             <trainingXp>192518</trainingXp>
-            <mineOutputFactor>31.493</mineOutputFactor>
+            <mineOutputFactor>31</mineOutputFactor>
             <personOutPut>6011</personOutPut>
             <prisonOutPut>120216</prisonOutPut>
             <equipScore>16</equipScore>
@@ -1665,7 +1665,7 @@
             <foodMax>12700</foodMax>
             <foodPerHour>1058</foodPerHour>
             <trainingXp>195018</trainingXp>
-            <mineOutputFactor>33.067</mineOutputFactor>
+            <mineOutputFactor>33</mineOutputFactor>
             <personOutPut>6131</personOutPut>
             <prisonOutPut>122620</prisonOutPut>
             <equipScore>16</equipScore>
@@ -1683,7 +1683,7 @@
             <foodMax>12850</foodMax>
             <foodPerHour>1071</foodPerHour>
             <trainingXp>197386</trainingXp>
-            <mineOutputFactor>34.721</mineOutputFactor>
+            <mineOutputFactor>34</mineOutputFactor>
             <personOutPut>6254</personOutPut>
             <prisonOutPut>125072</prisonOutPut>
             <equipScore>16</equipScore>
@@ -1701,7 +1701,7 @@
             <foodMax>13000</foodMax>
             <foodPerHour>1083</foodPerHour>
             <trainingXp>199713</trainingXp>
-            <mineOutputFactor>36.457</mineOutputFactor>
+            <mineOutputFactor>36</mineOutputFactor>
             <personOutPut>6379</personOutPut>
             <prisonOutPut>127574</prisonOutPut>
             <equipScore>17</equipScore>
@@ -1719,7 +1719,7 @@
             <foodMax>13150</foodMax>
             <foodPerHour>1096</foodPerHour>
             <trainingXp>202323</trainingXp>
-            <mineOutputFactor>38.279</mineOutputFactor>
+            <mineOutputFactor>38</mineOutputFactor>
             <personOutPut>6506</personOutPut>
             <prisonOutPut>130125</prisonOutPut>
             <equipScore>17</equipScore>
@@ -1737,7 +1737,7 @@
             <foodMax>13300</foodMax>
             <foodPerHour>1108</foodPerHour>
             <trainingXp>204864</trainingXp>
-            <mineOutputFactor>40.193</mineOutputFactor>
+            <mineOutputFactor>40</mineOutputFactor>
             <personOutPut>6636</personOutPut>
             <prisonOutPut>132728</prisonOutPut>
             <equipScore>17</equipScore>
@@ -1755,7 +1755,7 @@
             <foodMax>13450</foodMax>
             <foodPerHour>1121</foodPerHour>
             <trainingXp>207306</trainingXp>
-            <mineOutputFactor>42.203</mineOutputFactor>
+            <mineOutputFactor>42</mineOutputFactor>
             <personOutPut>6769</personOutPut>
             <prisonOutPut>135382</prisonOutPut>
             <equipScore>17</equipScore>
@@ -1773,7 +1773,7 @@
             <foodMax>13600</foodMax>
             <foodPerHour>1133</foodPerHour>
             <trainingXp>209766</trainingXp>
-            <mineOutputFactor>44.313</mineOutputFactor>
+            <mineOutputFactor>44</mineOutputFactor>
             <personOutPut>6905</personOutPut>
             <prisonOutPut>138090</prisonOutPut>
             <equipScore>17</equipScore>
@@ -1791,7 +1791,7 @@
             <foodMax>13750</foodMax>
             <foodPerHour>1146</foodPerHour>
             <trainingXp>212216</trainingXp>
-            <mineOutputFactor>46.423</mineOutputFactor>
+            <mineOutputFactor>46</mineOutputFactor>
             <personOutPut>7043</personOutPut>
             <prisonOutPut>140852</prisonOutPut>
             <equipScore>18</equipScore>
@@ -1809,7 +1809,7 @@
             <foodMax>13900</foodMax>
             <foodPerHour>1158</foodPerHour>
             <trainingXp>214798</trainingXp>
-            <mineOutputFactor>48.533</mineOutputFactor>
+            <mineOutputFactor>48</mineOutputFactor>
             <personOutPut>7183</personOutPut>
             <prisonOutPut>143669</prisonOutPut>
             <equipScore>18</equipScore>
@@ -1827,7 +1827,7 @@
             <foodMax>14050</foodMax>
             <foodPerHour>1171</foodPerHour>
             <trainingXp>217513</trainingXp>
-            <mineOutputFactor>50.643</mineOutputFactor>
+            <mineOutputFactor>50</mineOutputFactor>
             <personOutPut>7327</personOutPut>
             <prisonOutPut>146542</prisonOutPut>
             <equipScore>18</equipScore>
@@ -1845,7 +1845,7 @@
             <foodMax>14200</foodMax>
             <foodPerHour>1183</foodPerHour>
             <trainingXp>219598</trainingXp>
-            <mineOutputFactor>52.753</mineOutputFactor>
+            <mineOutputFactor>52</mineOutputFactor>
             <personOutPut>7474</personOutPut>
             <prisonOutPut>149473</prisonOutPut>
             <equipScore>18</equipScore>
@@ -1863,7 +1863,7 @@
             <foodMax>14350</foodMax>
             <foodPerHour>1196</foodPerHour>
             <trainingXp>222177</trainingXp>
-            <mineOutputFactor>54.863</mineOutputFactor>
+            <mineOutputFactor>54</mineOutputFactor>
             <personOutPut>7623</personOutPut>
             <prisonOutPut>152463</prisonOutPut>
             <equipScore>18</equipScore>
@@ -1881,7 +1881,7 @@
             <foodMax>14500</foodMax>
             <foodPerHour>1208</foodPerHour>
             <trainingXp>224330</trainingXp>
-            <mineOutputFactor>56.973</mineOutputFactor>
+            <mineOutputFactor>56</mineOutputFactor>
             <personOutPut>7776</personOutPut>
             <prisonOutPut>155512</prisonOutPut>
             <equipScore>19</equipScore>
@@ -1899,7 +1899,7 @@
             <foodMax>14650</foodMax>
             <foodPerHour>1221</foodPerHour>
             <trainingXp>226723</trainingXp>
-            <mineOutputFactor>59.083</mineOutputFactor>
+            <mineOutputFactor>59</mineOutputFactor>
             <personOutPut>7931</personOutPut>
             <prisonOutPut>158622</prisonOutPut>
             <equipScore>19</equipScore>
@@ -1917,7 +1917,7 @@
             <foodMax>14800</foodMax>
             <foodPerHour>1233</foodPerHour>
             <trainingXp>228970</trainingXp>
-            <mineOutputFactor>61.193</mineOutputFactor>
+            <mineOutputFactor>61</mineOutputFactor>
             <personOutPut>8090</personOutPut>
             <prisonOutPut>161795</prisonOutPut>
             <equipScore>19</equipScore>
@@ -1935,7 +1935,7 @@
             <foodMax>14950</foodMax>
             <foodPerHour>1246</foodPerHour>
             <trainingXp>231536</trainingXp>
-            <mineOutputFactor>63.303</mineOutputFactor>
+            <mineOutputFactor>63</mineOutputFactor>
             <personOutPut>8252</personOutPut>
             <prisonOutPut>165030</prisonOutPut>
             <equipScore>19</equipScore>
@@ -1953,7 +1953,7 @@
             <foodMax>15100</foodMax>
             <foodPerHour>1258</foodPerHour>
             <trainingXp>233822</trainingXp>
-            <mineOutputFactor>65.413</mineOutputFactor>
+            <mineOutputFactor>65</mineOutputFactor>
             <personOutPut>8417</personOutPut>
             <prisonOutPut>168331</prisonOutPut>
             <equipScore>19</equipScore>
@@ -1971,7 +1971,7 @@
             <foodMax>15250</foodMax>
             <foodPerHour>1271</foodPerHour>
             <trainingXp>289871</trainingXp>
-            <mineOutputFactor>67.523</mineOutputFactor>
+            <mineOutputFactor>67</mineOutputFactor>
             <personOutPut>8585</personOutPut>
             <prisonOutPut>171698</prisonOutPut>
             <equipScore>19</equipScore>
@@ -1989,7 +1989,7 @@
             <foodMax>15400</foodMax>
             <foodPerHour>1283</foodPerHour>
             <trainingXp>304560</trainingXp>
-            <mineOutputFactor>69.633</mineOutputFactor>
+            <mineOutputFactor>69</mineOutputFactor>
             <personOutPut>8757</personOutPut>
             <prisonOutPut>175132</prisonOutPut>
             <equipScore>19</equipScore>
@@ -2007,7 +2007,7 @@
             <foodMax>15550</foodMax>
             <foodPerHour>1296</foodPerHour>
             <trainingXp>320927</trainingXp>
-            <mineOutputFactor>71.743</mineOutputFactor>
+            <mineOutputFactor>71</mineOutputFactor>
             <personOutPut>8932</personOutPut>
             <prisonOutPut>178634</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2025,7 +2025,7 @@
             <foodMax>15700</foodMax>
             <foodPerHour>1308</foodPerHour>
             <trainingXp>339625</trainingXp>
-            <mineOutputFactor>73.853</mineOutputFactor>
+            <mineOutputFactor>73</mineOutputFactor>
             <personOutPut>9110</personOutPut>
             <prisonOutPut>182207</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2043,7 +2043,7 @@
             <foodMax>15850</foodMax>
             <foodPerHour>1321</foodPerHour>
             <trainingXp>360525</trainingXp>
-            <mineOutputFactor>75.963</mineOutputFactor>
+            <mineOutputFactor>75</mineOutputFactor>
             <personOutPut>9293</personOutPut>
             <prisonOutPut>185851</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2061,7 +2061,7 @@
             <foodMax>16000</foodMax>
             <foodPerHour>1333</foodPerHour>
             <trainingXp>384201</trainingXp>
-            <mineOutputFactor>78.073</mineOutputFactor>
+            <mineOutputFactor>78</mineOutputFactor>
             <personOutPut>9478</personOutPut>
             <prisonOutPut>189568</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2079,7 +2079,7 @@
             <foodMax>16150</foodMax>
             <foodPerHour>1346</foodPerHour>
             <trainingXp>411684</trainingXp>
-            <mineOutputFactor>80.183</mineOutputFactor>
+            <mineOutputFactor>80</mineOutputFactor>
             <personOutPut>9668</personOutPut>
             <prisonOutPut>193360</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2097,7 +2097,7 @@
             <foodMax>16300</foodMax>
             <foodPerHour>1358</foodPerHour>
             <trainingXp>464246</trainingXp>
-            <mineOutputFactor>82.293</mineOutputFactor>
+            <mineOutputFactor>82</mineOutputFactor>
             <personOutPut>9861</personOutPut>
             <prisonOutPut>197227</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2115,7 +2115,7 @@
             <foodMax>16450</foodMax>
             <foodPerHour>1371</foodPerHour>
             <trainingXp>526689</trainingXp>
-            <mineOutputFactor>84.403</mineOutputFactor>
+            <mineOutputFactor>84</mineOutputFactor>
             <personOutPut>10059</personOutPut>
             <prisonOutPut>201171</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2133,7 +2133,7 @@
             <foodMax>16600</foodMax>
             <foodPerHour>1383</foodPerHour>
             <trainingXp>602229</trainingXp>
-            <mineOutputFactor>86.513</mineOutputFactor>
+            <mineOutputFactor>86</mineOutputFactor>
             <personOutPut>10260</personOutPut>
             <prisonOutPut>205195</prisonOutPut>
             <equipScore>20</equipScore>
@@ -2151,7 +2151,7 @@
             <foodMax>16750</foodMax>
             <foodPerHour>1396</foodPerHour>
             <trainingXp>695679</trainingXp>
-            <mineOutputFactor>88.623</mineOutputFactor>
+            <mineOutputFactor>88</mineOutputFactor>
             <personOutPut>10465</personOutPut>
             <prisonOutPut>209299</prisonOutPut>
             <equipScore>20</equipScore>

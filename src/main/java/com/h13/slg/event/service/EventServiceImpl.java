@@ -32,7 +32,7 @@ public class EventServiceImpl implements EventService {
     FightForceHelper fightForceHelper;
 
 
-    public void triggerTasks(long uid, SlgData slgData) throws RequestErrorException {
+    public void triggerTasks(int uid, SlgData slgData) throws RequestErrorException {
         List<UserEventCO> evtList = userEventHelper.getAllEvents(uid);
         if (evtList.size() == 0)
             return;

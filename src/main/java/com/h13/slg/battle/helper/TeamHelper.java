@@ -1,11 +1,11 @@
 package com.h13.slg.battle.helper;
 
 import com.alibaba.fastjson.JSON;
-import com.h13.slg.battle.TeamConstants;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.dao.UserTeamDAO;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.role.co.UserRoleCO;
@@ -40,14 +40,14 @@ public class TeamHelper {
 
 
     public void updateTeam(UserTeamCO userTeamCO) {
-        userTeamDAO.update(userTeamCO.getId(), userTeamCO.getData(),userTeamCO.getLeader());
+        userTeamDAO.update(userTeamCO.getId(), userTeamCO.getData(), userTeamCO.getLeader());
     }
 
 
     public void createANewTeam(long uid) {
         userTeamDAO.insert(uid, new LinkedList<Integer>() {{
             for (int i = 0; i < 9; i++) {
-                add(TeamConstants.NO_ROLE_IN_TEAM);
+                add(SlgConstants.Role.NO_ROLE);
             }
         }});
     }
@@ -98,21 +98,21 @@ public class TeamHelper {
             throw new RequestErrorException(CodeConstants.Team.USER_ROLE_HAVE_IN_TEAM, "");
         }
         // 对应的位置已经有userrole
-        if (userTeamCO.getData().get(pos) != TeamConstants.NO_ROLE_IN_TEAM) {
+        if (userTeamCO.getData().get(pos) != SlgConstants.Role.NO_ROLE) {
             throw new RequestErrorException(CodeConstants.Team.POS_HAVE_USER_ROLE, "");
         }
 
-        userTeamCO.getData().add(pos, urid);
+        userTeamCO.getData().set(pos, urid);
         updateTeam(userTeamCO);
     }
 
     public void deletePos(long uid, int pos) throws RequestErrorException {
         UserTeamCO userTeamCO = get(uid);
         // 对应的位置已经有userrole
-        if (userTeamCO.getData().get(pos) == TeamConstants.NO_ROLE_IN_TEAM) {
+        if (userTeamCO.getData().get(pos) == SlgConstants.Role.NO_ROLE) {
             throw new RequestErrorException(CodeConstants.Team.POST_IS_NO_USER_ROLE, "");
         }
-        userTeamCO.getData().set(pos, TeamConstants.NO_ROLE_IN_TEAM);
+        userTeamCO.getData().set(pos, SlgConstants.Role.NO_ROLE);
         updateTeam(userTeamCO);
     }
 

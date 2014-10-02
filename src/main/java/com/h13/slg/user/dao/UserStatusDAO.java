@@ -30,10 +30,10 @@ public class UserStatusDAO {
 
     public void insert(final long id, final String name,
                        final int gold, final int food, final int cash,
-                       final int honor, final int level, final int xp, final int soul
+                       final int level, final int xp
             , final int fightForce) {
         final String sql = "insert into user_status " +
-                "(id,name,gold,food,cash,honor,level,xp,soul,fight_force,createtime) " +
+                "(id,name,gold,food,cash,level,xp,fight_force,createtime) " +
                 "values " +
                 "(?,?,?,?,?,?,?,?,?,?,now())";
         j.update(new PreparedStatementCreator() {
@@ -45,11 +45,9 @@ public class UserStatusDAO {
                 pstmt.setInt(3, gold);
                 pstmt.setInt(4, food);
                 pstmt.setInt(5, cash);
-                pstmt.setInt(6, honor);
-                pstmt.setInt(7, level);
-                pstmt.setInt(8, xp);
-                pstmt.setInt(9, soul);
-                pstmt.setInt(10, fightForce);
+                pstmt.setInt(6, level);
+                pstmt.setInt(7, xp);
+                pstmt.setInt(8, fightForce);
                 return pstmt;
             }
         });
@@ -58,7 +56,7 @@ public class UserStatusDAO {
 
     public UserStatusCO get(long id) {
         String sql = "select id,name,gold,food," +
-                "cash,honor,level,createtime,xp,soul,fight_force from user_status where id=?";
+                "cash,level,createtime,xp,fight_force from user_status where id=?";
         return j.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<UserStatusCO>(UserStatusCO.class));
     }
 
@@ -67,14 +65,12 @@ public class UserStatusDAO {
                 "food=?," +
                 "gold=?," +
                 "cash=?," +
-                "honor=?," +
                 "level=?," +
-                "soul=?," +
                 "xp=?," +
                 "fight_force=? where id=?";
         j.update(sql, new Object[]{userStatusCO.getFood(), userStatusCO.getGold(), userStatusCO.getCash(),
-                userStatusCO.getHonor(), userStatusCO.getLevel(),
-                userStatusCO.getSoul(), userStatusCO.getXp()
+                userStatusCO.getLevel(),
+                userStatusCO.getXp()
                 , userStatusCO.getFightForce(), userStatusCO.getId()});
     }
 }

@@ -13,11 +13,7 @@ public class UserEquipCO {
     private int urid;
     private String type;
     private int level;
-    private String gems;
     private int strength;
-    private int fail;
-    private int refine;
-    private int star;
     private String name;
 
     public int getId() {
@@ -26,6 +22,38 @@ public class UserEquipCO {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getUid() {
@@ -42,69 +70,5 @@ public class UserEquipCO {
 
     public void setUrid(int urid) {
         this.urid = urid;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public String getGems() {
-        return gems;
-    }
-
-    public void setGems(String gems) {
-        this.gems = gems;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public int getFail() {
-        return fail;
-    }
-
-    public void setFail(int fail) {
-        this.fail = fail;
-    }
-
-    public int getRefine() {
-        return refine;
-    }
-
-    public void setRefine(int refine) {
-        this.refine = refine;
-    }
-
-    public int getStar() {
-        return star;
-    }
-
-    public void setStar(int star) {
-        this.star = star;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

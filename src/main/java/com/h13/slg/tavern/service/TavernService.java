@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * Time: 上午12:07
  * To change this template use File | Settings | File Templates.
  */
-public interface TavernService {
+public interface    TavernService {
 
     /**
      * 送走招来的贤者

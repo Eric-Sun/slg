@@ -43,11 +43,14 @@
 	+ password：密码   
 + 返回数据
     * uid   uid
+    + authTime	认证时间
+    + authKey	认证key
 
 -----
 
 获得用户信息接口
 ------
++ 包括用户状态，用户将领，装备，背包信息等
 * 请求数据
     * mod   user
     * action getInfo
@@ -61,14 +64,44 @@
 		* level	等级
 		* xp	当前经验
 		* name	用户名称
-		* soul	魂魄数量
 		* levelUpXp 升级所需xp
 		* fightForce	战斗力
 		* castleTimer	上一次城堡收获的时间戳	
 		* farmCastle	上一次农场收获的时间戳
-    * teamRoleList
+    * userRoleList
         * id    用户角色id
         * name  用户角色名称
+        * role_id   原角色id
+        * level 当前等级
+        + xp    当前经验
+        + soldier   士兵的种类
+        + weapon    武器信息
+        + armor 护甲信息
+        + accessory 饰品信息
+        + fight_force    战斗力
+        + attack    攻击力
+        + defence   防御力
+        + health    生命值
+        + putongSkillId		普通技能id
+        + tianfuSkillId		天赋技能id
+    + userEquipList 装备列表
+        + id    id
+        + type      类型（武器，盔甲等）
+        + name  名字
+        + level 等级
+        + strength  强化等级
+    + userEqupPackkage
+        + id    用户装备id
+    + materialMapPackage
+        + id    材料id
+        + count 背包中此材料的数量
+    + skillMapPackage
+        + id    原技能id
+        + count 背包中此技能的id
+    + skillList
+    	+ 该用户的所有技能
+   	+ teamList(list)
+   		+ id	team中的用户将领id
 
 ---	
 
@@ -104,13 +137,14 @@
 邀请将领
 ------
 + 请求数据
+    + mod   tavern
+    + act   invite
 + 相应数据
 	* 相应数据为数组
-	* 每个数组对应的内容为
+	* 每个数组元素对应的内容为
 		* gold:消耗的金币
 		* status: 0为没有被招募，1已经被招募
 		* id:对应的role的id
-		* roleName：角色的名字
 
 --------
 
@@ -121,14 +155,12 @@
 	* act	enroll	
 + 响应数据
 	* attack	攻击力
-	* curSkill 	选择的主动技能
 	* defence	防御力
 	* fightForce	战斗力
 	* health	生命值
 	* id	邀请将领列表中的序号
 	* level	等级
 	* roleId	role的id
-	* skillLevel	所有技能的等级
 	* soldier	兵种的类别
 	* uid	用户id
 
@@ -141,23 +173,10 @@
 	* mod	tavern
 	* act	leave
 + 响应数据
-	* soul	获得灵魂的数量
+	* gold	获得金币的数量
 
 
-技能相关接口(todo)
-========
-升级技能
--------
-+ 请求数据
-	* 基本数据
-		* mod	skill
-		* act	upgrade
-	* 参数
-		* skill	技能序号
-		* urid	用户将领的id
-	
-+ 响应数据
-	* nextSkillLevel	下一个技能的等级
+------
 
 
 将领接口
@@ -185,80 +204,9 @@
 + 响应数据
 
 ------	
-	
-获得将领列表
--------
-+ 请求数据
-	+ 基本数据
-		+ mod	role
-		+ act	roleList
-	+ 参数
-		
-+ 响应数据
-	+ 数组
-		+ accessory	饰品
-		+ armor		头盔
-		+ weapon	武器
-		+ attack	攻击力
-		+ defence	防御力
-		+ health	士兵数
-		+ fightForce	战斗力
-		+ id		用户将领的id
-		+ roleId	将领id
-		+ roleName	将领名称
-		+ level		等级
-		+ curSkill	当前开启的技能
-		+ skillLevels： 为一个hash，有1-6作为key，每个技能的value为等 
-
----------
-获得将领的详细信息(已经删除)
-----------
-+ 请求数据
-	+ 基本数据
-		+ mod	role
-		+ act	role
-	+ 参数
-		+ urid	用户将领id
-+ 响应数据
-	+ role
-		+ accessory	饰品
-		+ armor		头盔
-		+ weapon	武器
-		+ attack	攻击力
-		+ defence	防御力
-		+ health	士兵数
-		+ fightForce	战斗力
-		+ id		用户将领的id
-		+ roleId	将领id
-		+ roleName	将领名称
-		+ level		等级
-		+ curSkill	当前开启的技能
-		+ skillLevels： 为一个hash，有1-6作为key，每个技能的value为等 
-
--------
 
 装备接口
 =======
-获得没有使用过的用户装备列表
--------
-+ 请求数据
-	+ mod:equip
-	+ act:noUsedEquipList
-	+ type:weapon,accessory,armor	
-+ 返回数据
-	+ 返回的数据是一个数据
-		+ equipName：装备名称
-		+ fail:失败次数
-		+ gems:宝石相关的数据
-		+ id：用户装备id
-		+ level：装备等级
-		+ refine：
-		+ star：
-		+ strength：强化等级		
-		+ type：weapon，accessory，armor
-		+ uid：用户id
-		+ urid：用户role的id		
-
 -----
 
 强化
@@ -284,49 +232,17 @@
 	+ material：hash为一个id和他的数据
 
 -----
-	
-装备详细信息
-------
-+ 请求数据
-	+ mod: equip
-	+ act:equip
-	+ ueid:用户装备id
-+ 返回数据
-	+ equipName：装备名称
-	+ fail:失败次数
-	+ gems:宝石相关的数据
-	+ id：用户装备id
-	+ level：装备等级
-	+ refine：
-	+ star：
-	+ strength：强化等级		
-	+ type：weapon，accessory，armor
-	+ uid：用户id
-	+ urid：用户role的id	
-	+ materialType1CurrentCount：现在拥有的升级材料1的数量
-	+ materialType1Id：升级材料1的类型
-	+ materialType1Name：升级材料1的名称
-	+ materialType1NeedCount：升级需要的材料1的数量
-	+ materialType2CurrentCount：现在拥有的升级材料2的数量
-	+ materialType2Id：升级材料2的类型
-	+ materialType2Name：升级材料2的名称
-	+ materialType2NeedCount：升级需要的材料2的数量
-	+ needGold：强化需要的金币
-	+ curGold：当前的拥有的金币数量
-
-	
+		
 商店相关接口
 =====
 商店信息
 -----
 + 请求数据
 	+ mod：shop
-	+ act：shopList
+	+ act：itemList
 + 返回数据：
-	+ category1：一级类别
-	+ category2：二级类别
-	+ category3：三级类别
-	+ currency：购买需要的货币
+	+ category：类别
+	+ currency：购买需要的货币 cash gold等
 	+ id：商品id
 	+ price：价格
 
@@ -335,7 +251,7 @@
 购买商品
 -----
 + 请求数据
-	+ mod:inventory
+	+ mod:shop
 	+ act:buy
 	+ num:数量
 	+ id：商品id
@@ -343,75 +259,11 @@
 	+ cost_num：花费
 	+ cost_type：货币类型
 
-----
-
-背包相关接口
-=====
-
-获取背包信息
-------
-+ 请求数据
-    + mod:package
-    + act:get
-+ 返回数据
-    + equip:为装备列表
-        + id：用户装备id
-        + name：装备名称
-    + gemList：宝石列表
-        + id：宝石材料的id
-        + name：宝石的名称
-    + gemMap: 宝石hash
-        + key：宝石的id
-        + value：现有的数量
-    + materialList: 材料列表
-    + materialMap: 材料hash
-
 --------
 
 战斗相关接口
 =========
-获得战斗的章节相关信息（此接口为章节、城堡、将领三级中的第一级）
 --------
-+ 请求数据
-    + mod：battle
-    + act：chapterList
-+ 返回数据
-    + string的列表，每个元素为章节的名称
-
---------
-
-获得城堡的相关信息（第二级）
----------
-+ 请求数据
-    + mod：battle
-    + act：castleList
-    + chapterId：章节的id
-+ 返回数据
-    + castleList:为一个数组，每个元素为一个castle中的将领的详细信息列表
-        + list：为一个数组，每个元素为将领的详细信息
-            + id：将领的id
-            + name：将领的名称
---------
-
-
-获得将领的team信息
--------
-+ 请求数据
-    + mod:battle
-    + act:pveTeam
-    + battleId:
-+ 返回数据
-    + award：奖励
-        + gold：金币
-        + heroXp：英雄经验
-        + honor：荣誉
-        + xp：用户经验
-    + pveTeam：
-        + id：battleid
-        + data:为数组，每个元素是相关将领数据
-            + name：将领的名称
-            + rid：将领的id
------
 
 战斗
 ------
@@ -422,6 +274,20 @@
 + 返回数据
     + 见战斗返回数据相关文档
 
+----
+
+技能相关接口
+=======
+设置技能
+-----
+
+
+升级技能
+-------
+
+
+祖灵相关接口
+=========
 
 
 

@@ -8,10 +8,9 @@ import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
 import com.h13.slg.config.fetcher.ZuLingConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
-import com.h13.slg.skill.RoleSkillConstants;
-import com.h13.slg.skill.ZuLingConstants;
 import com.h13.slg.skill.co.UserRoleSkillCO;
 import com.h13.slg.skill.co.UserZuLingCO;
 import com.h13.slg.skill.co.UserZuLingItemCO;
@@ -71,7 +70,7 @@ public class UserZuLingHelper {
 
         List<RoleSkillVO> voList = Lists.newLinkedList();
 
-        for (int i = 0; i < ZuLingConstants.SIZE; i++) {
+        for (int i = 0; i < SlgConstants.ZuLingConstants.SIZE; i++) {
 
             UserZuLingItemCO item = new UserZuLingItemCO();
             String key = randomQuality();
@@ -82,9 +81,6 @@ public class UserZuLingHelper {
 
             RoleSkillVO vo = new RoleSkillVO();
             vo.setRsid(roleSkillCO.getId());
-            vo.setName(roleSkillCO.getName());
-            vo.setQuality(roleSkillCO.getQuality());
-            vo.setType(roleSkillCO.getType());
             vo.setStatus(UserRoleSkillCO.COMMON);
             voList.add(vo);
         }
@@ -100,13 +96,13 @@ public class UserZuLingHelper {
         Random random = new Random();
         int result = random.nextInt(100);
         if (result < zuLingCO.getHuang()) {
-            return RoleSkillConstants.HUANG;
+            return SlgConstants.RoleSkillConstants.HUANG;
         } else if (result < zuLingCO.getHuang() + zuLingCO.getXuan()) {
-            return RoleSkillConstants.XUAN;
+            return SlgConstants.RoleSkillConstants.XUAN;
         } else if (result < zuLingCO.getHuang() + zuLingCO.getXuan() + zuLingCO.getDi()) {
-            return RoleSkillConstants.DI;
+            return SlgConstants.RoleSkillConstants.DI;
         } else {
-            return RoleSkillConstants.TIAN;
+            return SlgConstants.RoleSkillConstants.TIAN;
         }
     }
 
@@ -125,11 +121,11 @@ public class UserZuLingHelper {
         }
         UserZuLingItemCO item = userZuLingCO.getList().get(index);
 
-        if (item.getStatus() == RoleSkillConstants.GOT) {
+        if (item.getStatus() == SlgConstants.RoleSkillConstants.GOT) {
             throw new RequestErrorException(CodeConstants.ZuLing.SKILL_HAVE_GOT, "");
         }
 
-        item.setStatus(RoleSkillConstants.GOT);
+        item.setStatus(SlgConstants.RoleSkillConstants.GOT);
 
         userZuLingDAO.update(uid, userZuLingCO.getList());
 
@@ -154,9 +150,6 @@ public class UserZuLingHelper {
 
             RoleSkillVO vo = new RoleSkillVO();
             vo.setRsid(item.getRsId());
-            vo.setName(roleSkillCO.getName());
-            vo.setType(roleSkillCO.getType());
-            vo.setQuality(roleSkillCO.getQuality());
             vo.setStatus(item.getStatus());
             voList.add(vo);
         }

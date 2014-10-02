@@ -1,0 +1,97 @@
+
++ ArrangeTeam
+	+ 排兵布阵
+	+ 参数：all，固定参数
+	+ 目标：排兵布阵次数
++ EnrollRole
+	+ 招募武将
+	+ all
+	+ 招募武将次数
++ ExchangeMaterial
+	+ 购买材料
+	+ 材料id
+	+ 数量
++ FightPVETo
+	+ pve
+	+ battleId
+	+ 次数
++ FightRank(ignore)
+	+ 擂台战斗
+	+ all
+	+ 次数
++ FightTowerTo(ignore)
+	+ 勇闯重楼
+	+ all
+	+ 达到的层数
++ HarvestGold
+	+ 收获金币
+	+ all
+	+ 次数
++ HaveHonor
+	+ 拥有军功
+	+ all
+	+ 军功的数量
++ HaveMaterial
+	+ 拥有材料
+	+ 材料id
+	+ 数量
++ HaveRole
+	+ 获得某些品质的武将
+	+ 品质类别
+	+ 数量
++ HaveStrengthEquip
+	+ 拥有强化到x级别的装备
+	+ 级别
+	+ 拥有的数量
++ KillGeneral(ignore)
+	+ 过关斩将
+	+ all
+	+ 次数
++ KillGeneralTo(ignore)
+	+ 过关斩将到某一个将领
+	+ id
+	+ 次数
++ LevelUp
+	+ 升级达到某一等级
+	+ all
+	+ 等级
++ MakeAccessoryTo
+	+ 打造一个accessory
+	+ accessory等级
+	+ 数量
++ MakeArmorTo
+	+ 打造一个armor
+	+ armor等级
+	+ 数量
++ OccupyMine(ignore)
+	+ 争夺金矿
+	+ all
+	+ 次数
++ RadePVE(ignore)
+	+ 扫荡20次
+	+ battleId
+	+ 20次的次数
++ StrengthEquip
+	+ 强化装备
+	+ 强化等级
+	+ 件数
++ UpgradeFightForceTo
+	+ 战斗力提升
+	+ all
+	+ 战斗力值
++ UpgradeSkill
+	+ 武将技能升级
+	+ all
+	+ 升级次数
++ UpgradeTechTo(ignore)
+	+ 提升科技
+	+ 提升的等级
+	+ 提升的科技的数量
++ WearEquip
+	+ 穿戴装备
+	+ all
+	+ 次数
++ WinPVE
+	+ 战胜对手
+	+ battleId
+	+ 次数

@@ -3,6 +3,7 @@ package com.h13.slg.battle;
 import com.h13.slg.HttpClientUtil;
 import org.junit.Test;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,7 +35,7 @@ public class BattleServiceTest {
 
 
     @Test
-    public void pve(){
+    public void pve() {
         HttpClientUtil http = new HttpClientUtil();
         Map<String, String> map = new HashMap<String, String>();
         map.put("mod", "battle");
@@ -46,5 +47,11 @@ public class BattleServiceTest {
         map.put("seq", "1");
         String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);
+    }
+
+    @Test
+    public void fdsa() {
+        Date date = new Date(1411020160000L);
+        System.out.println(date);
     }
 }

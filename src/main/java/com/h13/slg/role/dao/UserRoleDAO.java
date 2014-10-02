@@ -36,12 +36,12 @@ public class UserRoleDAO {
                       final long armor, final long accessory,
                       final int level, final int fightForce,
                       final int attack, final int defence, final int health, final int soldier,
-                      final int curSkill, final Map<String, Integer> skillLevels,
-                      final String roleName, final int xp) {
+                      final String roleName, final int xp,
+                      final int putongSkillId, final int tianfuSkillId) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_role " +
                 "(role_id,uid,weapon,armor,accessory,level,fight_force," +
-                "attack,defence,health,createtime,soldier,cur_skill,skill_levels,role_name,xp) " +
+                "attack,defence,health,createtime,soldier,role_name,xp,putong_skill_id,tianfu_skill_id) " +
                 "values (?,?,?,?,?,?,?,?,?,?,now(),?,?,?,?,?)";
         j.update(new PreparedStatementCreator() {
             @Override
@@ -58,10 +58,10 @@ public class UserRoleDAO {
                 pstmt.setInt(9, defence);
                 pstmt.setInt(10, health);
                 pstmt.setInt(11, soldier);
-                pstmt.setInt(12, curSkill);
-                pstmt.setString(13, JSON.toJSONString(skillLevels));
-                pstmt.setString(14, roleName);
-                pstmt.setInt(15, xp);
+                pstmt.setString(12, roleName);
+                pstmt.setInt(13, xp);
+                pstmt.setInt(14, putongSkillId);
+                pstmt.setInt(15, tianfuSkillId);
                 return pstmt;
             }
         }, holder);
@@ -70,69 +70,26 @@ public class UserRoleDAO {
 
     public UserRoleCO get(long uid, long urId) {
         String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
-                ",soldier,cur_skill,skill_levels,role_name,xp from user_role where id=? and uid=?";
-        return j.queryForObject(sql, new Object[]{urId, uid}, new RowMapper<UserRoleCO>() {
-            @Override
-            public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
-                UserRoleCO userRoleCO = new UserRoleCO();
-                userRoleCO.setId(rs.getInt(1));
-                userRoleCO.setRoleId(rs.getInt(2));
-                userRoleCO.setUid(rs.getInt(3));
-                userRoleCO.setWeapon(rs.getInt(4));
-                userRoleCO.setArmor(rs.getInt(5));
-                userRoleCO.setAccessory(rs.getInt(6));
-                userRoleCO.setLevel(rs.getInt(7));
-                userRoleCO.setFightForce(rs.getInt(8));
-                userRoleCO.setAttack(rs.getInt(9));
-                userRoleCO.setDefence(rs.getInt(10));
-                userRoleCO.setHealth(rs.getInt(11));
-                userRoleCO.setSoldier(rs.getInt(12));
-                userRoleCO.setCurSkill(rs.getInt(13));
-                userRoleCO.setSkillLevels(JSON.parseObject(rs.getString(14), Map.class));
-                userRoleCO.setRoleName(rs.getString(15));
-                userRoleCO.setXp(rs.getInt(16));
-                return userRoleCO;
-            }
-        });
+                ",soldier,role_name,xp,putong_skill_id,tianfu_skill_id from user_role where id=? and uid=?";
+        return j.queryForObject(sql, new Object[]{urId, uid}, new BeanPropertyRowMapper<UserRoleCO>(UserRoleCO.class));
     }
 
 
     public List<UserRoleCO> getRoleList(long uid) {
         String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
-                ",soldier,cur_skill,skill_levels,role_name,xp from user_role where uid=?";
-        return j.query(sql, new Object[]{uid}, new RowMapper<UserRoleCO>() {
-            @Override
-            public UserRoleCO mapRow(ResultSet rs, int i) throws SQLException {
-                UserRoleCO userRoleCO = new UserRoleCO();
-                userRoleCO.setId(rs.getInt(1));
-                userRoleCO.setRoleId(rs.getInt(2));
-                userRoleCO.setUid(rs.getInt(3));
-                userRoleCO.setWeapon(rs.getInt(4));
-                userRoleCO.setArmor(rs.getInt(5));
-                userRoleCO.setAccessory(rs.getInt(6));
-                userRoleCO.setLevel(rs.getInt(7));
-                userRoleCO.setFightForce(rs.getInt(8));
-                userRoleCO.setAttack(rs.getInt(9));
-                userRoleCO.setDefence(rs.getInt(10));
-                userRoleCO.setHealth(rs.getInt(11));
-                userRoleCO.setSoldier(rs.getInt(12));
-                userRoleCO.setCurSkill(rs.getInt(13));
-                userRoleCO.setSkillLevels(JSON.parseObject(rs.getString(14), Map.class));
-                userRoleCO.setRoleName(rs.getString(15));
-                userRoleCO.setXp(rs.getInt(16));
-                return userRoleCO;
-            }
-        });
+                ",soldier,role_name,xp,putong_skill_id,tianfu_skill_id from user_role where uid=?";
+        return j.query(sql, new Object[]{uid}, new BeanPropertyRowMapper<UserRoleCO>(UserRoleCO.class));
     }
 
 
     public void update(long urId, long weapon, long armor, long accessory, int fightForce, int level,
-                       int curSkill, Map<String, Integer> skillLevels, String roleName, int xp) {
+                        String roleName, int xp,int putongSkillId,
+                       int tianfuSkillId) {
         String sql = "update user_role set weapon=?,armor=?,accessory=?,fight_force=?,level=?," +
-                "cur_skill=?,skill_levels=?,role_name=?,xp=? " +
+                "role_name=?,xp=?,putong_skill_id=?,tianfu_skill_id=? " +
                 "where id=?";
-        j.update(sql, new Object[]{weapon, armor, accessory, fightForce, level,
-                curSkill, JSON.toJSONString(skillLevels), roleName, xp, urId});
+        j.update(sql, new Object[]{weapon, armor, accessory, fightForce, level, roleName, xp, putongSkillId,tianfuSkillId,
+                urId});
     }
 
 

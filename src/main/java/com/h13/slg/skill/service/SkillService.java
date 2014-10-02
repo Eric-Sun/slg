@@ -17,8 +17,6 @@ import java.util.List;
 public interface SkillService {
 
 
-    public SlgData skillList(SlgRequestDTO requestDTO) throws RequestErrorException;
-
     public SlgData setSkill(SlgRequestDTO requestDTO) throws RequestErrorException;
 
     public SlgData upgrade(SlgRequestDTO requestDTO) throws RequestErrorException;

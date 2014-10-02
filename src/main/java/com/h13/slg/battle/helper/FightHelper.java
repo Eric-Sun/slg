@@ -1,7 +1,6 @@
 package com.h13.slg.battle.helper;
 
 import com.google.common.base.Strings;
-import com.h13.slg.battle.FightConstants;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.fight.*;
 import com.h13.slg.config.co.BattleCO;
@@ -10,6 +9,7 @@ import com.h13.slg.config.fetcher.BattleConfigFetcher;
 import com.h13.slg.config.fetcher.MonsterConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.skill.co.UserRoleSkillCO;
@@ -69,10 +69,11 @@ public class FightHelper {
                 fighter.setAttack(attack);
                 fighter.setDefence(defence);
                 fighter.setHealth(health);
+                fighter.setPos(i);
                 fighter.setType(Fighter.MONSTER);
                 fighter.setId(new Integer(monsterId));
                 fighter.setName(monsterCO.getName());
-                fighter.setOwner(FightConstants.Owner.DEFENCE);
+                fighter.setOwner(SlgConstants.Fight.Owner.DEFENCE);
 
                 defenceFightUnit.getAllPos().set(i, fighter);
             } catch (Exception e) {
@@ -107,7 +108,7 @@ public class FightHelper {
             fighter.setPos(i);
             fighter.setTianfu(tianfu);
             fighter.setJiangling(jiangling);
-            fighter.setOwner(FightConstants.Owner.ATTACK);
+            fighter.setOwner(SlgConstants.Fight.Owner.ATTACK);
 
             fighter.setName(userRoleCO.getRoleName());
             fighter.setType(Fighter.ROLE);
@@ -125,7 +126,6 @@ public class FightHelper {
         if (fightResult.getStatus() == FightResult.WIN) {
             userStatusHelper.addGold(uid, fightReward.getGold());
             userStatusHelper.addXp(uid, fightReward.getXp());
-            userStatusHelper.addHonor(uid, fightReward.getHonor());
 
 
             // 所有的将领增加武将经验

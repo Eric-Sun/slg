@@ -7,9 +7,9 @@ import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.TavernConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.SlgConstants;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
-import com.h13.slg.tavern.TavernConstants;
 import com.h13.slg.tavern.co.TavernCO;
 import com.h13.slg.tavern.co.TavernRoleCO;
 import com.h13.slg.tavern.dao.TavernDAO;
@@ -107,36 +107,38 @@ public class TavernHelper {
             SlgLogger.error(SlgLoggerEntity.p("tavern", "invite", uid, "tavern is empty"));
             throw new RequestErrorException(CodeConstants.Tavern.TAVERN_IS_EMPTY, "");
         }
-        int soul = 0;
+        int gold = 0;
         List<TavernRoleCO> list = co.getRoleList();
         for (TavernRoleCO tavernRoleCO : list) {
             long roleId = tavernRoleCO.getId();
             RoleCO roleCO = roleConfigFetcher.get(roleId + "");
             String quality = roleCO.getQuantity();
             if (quality.equals("orange")) {
-                soul += globalConfigFetcher.getIntValue("RoleToSoulorange");
+                gold += globalConfigFetcher.getIntValue("RoleToSoulorange");
             } else if (quality.equals("purple")) {
-                soul += globalConfigFetcher.getIntValue("RoleToSoulpurple");
+                gold += globalConfigFetcher.getIntValue("RoleToSoulpurple");
             } else if (quality.equals("blue")) {
-                soul += globalConfigFetcher.getIntValue("RoleToSoulblue");
+                gold += globalConfigFetcher.getIntValue("RoleToSoulblue");
             } else {
-                soul += globalConfigFetcher.getIntValue("RoleToSoulwhite");
+                gold += globalConfigFetcher.getIntValue("RoleToSoulwhite");
             }
         }
         co.setRoleList(new LinkedList<TavernRoleCO>());
         update(co);
+        // add gold
+        userStatusHelper.subtractGold(uid, gold);
 
-        userStatusHelper.addSoul(uid, soul);
-        return soul;
+        return gold;
     }
 
     /**
      * 招贤
+     *
      * @param uid
      * @return
      * @throws RequestErrorException
      */
-    public InviteTavernVO invite(long uid) throws RequestErrorException {
+    public List<TavernRoleVO> invite(long uid) throws RequestErrorException {
         if (!checkTavernIsReady(uid)) {
             SlgLogger.error(SlgLoggerEntity.p("tavern", "invite", uid, "tavern is full")
             );
@@ -157,7 +159,7 @@ public class TavernHelper {
             String quality = randomQuality(tavernConfigCO);
             level = randomNextLevel(level, tavernConfigCO);
             long size = roleConfigFetcher.getZhaoxianSize(quality);
-            long roleId = roleConfigFetcher.getFromZhaoxian(randomId(size), quality);
+            int roleId = roleConfigFetcher.getFromZhaoxian(randomId(size), quality);
             String roleName = roleConfigFetcher.get(roleId + "").getName();
 
             TavernRoleVO tavernRoleVO = new TavernRoleVO();
@@ -168,15 +170,14 @@ public class TavernHelper {
             list.add(tavernRoleVO);
             TavernRoleCO tco = new TavernRoleCO();
             tco.setId(roleId);
-            tco.setStatus(TavernConstants.DEFAULT);
+            tco.setStatus(SlgConstants.TavernConstants.DEFAULT);
             tList.add(tco);
         }
-        vo.setData(list);
         tavernDAO.update(uid, tList);
 
         // 减掉cost的金币
         userStatusHelper.subtractGold(uid, cost);
-        return vo;
+        return list;
     }
 
     private int inviteGold(TavernConfigCO tavernConfigCO) {
@@ -227,6 +228,7 @@ public class TavernHelper {
 
     /**
      * 雇佣
+     *
      * @param uid
      * @param pos
      * @return

@@ -99,10 +99,8 @@ public class UserHelper {
                 userStatusCO.getGold(),
                 userStatusCO.getFood(),
                 userStatusCO.getCash(),
-                userStatusCO.getHonor(),
                 userStatusCO.getLevel(),
                 userStatusCO.getXp(),
-                userStatusCO.getSoul(),
                 userStatusCO.getFightForce());
 
         // init farm castle timer

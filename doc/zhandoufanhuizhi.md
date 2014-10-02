@@ -10,7 +10,11 @@
 
 + 攻击、防守日志
     + type=ad
-    + attackPos：攻击方的pos
+    + attack 0为是攻击方发送，1为防守方发动
+    + attackPos：攻击方的pos信息
+        + id
+        + name
+        + pos
     + defencePos[]:为防守方的列表（有可能是群攻）
     + attackStatus：为攻击方的数组，数组中包含着攻击方的一些相关信息
         + [攻击之后生命值，攻击之后怒气]
@@ -18,7 +22,7 @@
         + [防守方之后的生命，造成的伤害，防守方的防守之后的怒气]
 
 + 三围技能触发日志
-    + type=triggerSkill
+    + type=startSkill
     + pos=触发技能的位置
     + name=技能名称
     + owner=attack/defence 哪一方触发的技能

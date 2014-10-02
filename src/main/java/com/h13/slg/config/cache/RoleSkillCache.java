@@ -5,7 +5,7 @@ import com.h13.slg.config.ConfigParseException;
 import com.h13.slg.config.XmlParser;
 import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.co.RoleSkillXMLCO;
-import com.h13.slg.skill.RoleSkillConstants;
+import com.h13.slg.core.SlgConstants;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -46,11 +46,11 @@ public class RoleSkillCache extends BasicCache<RoleSkillCO> {
             roleSkillTemplate.opsForValue().set(KEY + id, obj.getMap().get(id));
 
             RoleSkillCO roleSkillCO = obj.getMap().get(id);
-            if (roleSkillCO.getQuality().equals(RoleSkillConstants.HUANG)) {
+            if (roleSkillCO.getQuality().equals(SlgConstants.RoleSkillConstants.HUANG)) {
                 roleSkillTemplate.opsForList().leftPush(HUANG, roleSkillCO);
-            } else if (roleSkillCO.getQuality().equals(RoleSkillConstants.XUAN)) {
+            } else if (roleSkillCO.getQuality().equals(SlgConstants.RoleSkillConstants.XUAN)) {
                 roleSkillTemplate.opsForList().leftPush(XUAN, roleSkillCO);
-            } else if (roleSkillCO.getQuality().equals(RoleSkillConstants.DI)) {
+            } else if (roleSkillCO.getQuality().equals(SlgConstants.RoleSkillConstants.DI)) {
                 roleSkillTemplate.opsForList().leftPush(DI, roleSkillCO);
             } else {
                 roleSkillTemplate.opsForList().leftPush(TIAN, roleSkillCO);
@@ -68,11 +68,11 @@ public class RoleSkillCache extends BasicCache<RoleSkillCO> {
 
 
     public long getSize(String key) {
-        if (key.equals(RoleSkillConstants.HUANG)) {
+        if (key.equals(SlgConstants.RoleSkillConstants.HUANG)) {
             return roleSkillTemplate.opsForList().size(HUANG);
-        } else if (key.equals(RoleSkillConstants.XUAN)) {
+        } else if (key.equals(SlgConstants.RoleSkillConstants.XUAN)) {
             return roleSkillTemplate.opsForList().size(XUAN);
-        } else if (key.equals(RoleSkillConstants.DI)) {
+        } else if (key.equals(SlgConstants.RoleSkillConstants.DI)) {
             return roleSkillTemplate.opsForList().size(DI);
         } else {
             return roleSkillTemplate.opsForList().size(TIAN);
@@ -81,11 +81,11 @@ public class RoleSkillCache extends BasicCache<RoleSkillCO> {
 
 
     public RoleSkillCO getInList(String key, long index) {
-        if (key.equals(RoleSkillConstants.HUANG)) {
+        if (key.equals(SlgConstants.RoleSkillConstants.HUANG)) {
             return roleSkillTemplate.opsForList().index(HUANG, index);
-        } else if (key.equals(RoleSkillConstants.XUAN)) {
+        } else if (key.equals(SlgConstants.RoleSkillConstants.XUAN)) {
             return roleSkillTemplate.opsForList().index(XUAN, index);
-        } else if (key.equals(RoleSkillConstants.DI)) {
+        } else if (key.equals(SlgConstants.RoleSkillConstants.DI)) {
             return roleSkillTemplate.opsForList().index(DI, index);
         } else {
             return roleSkillTemplate.opsForList().index(TIAN, index);

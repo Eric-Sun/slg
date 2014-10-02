@@ -44,6 +44,8 @@ public class ConfigLoader {
     }
 
     private boolean checkIsConfigFile(String filename) {
+        if (filename.indexOf("fileList") >= 0)
+            return false;
         if (filename.indexOf(".xml") < 0) {
             SlgLogger.error(SlgLoggerEntity.p("base", "config load", -1, "found file is not config file.")
                     .addParam("filename", filename));

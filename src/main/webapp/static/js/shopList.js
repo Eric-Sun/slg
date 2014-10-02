@@ -13,9 +13,9 @@ var shopListLoader = function () {
 
         _.each(msg.data.shopList, function (item, index, list) {
             var shopItem = new Backbone.Model(item);
-            if (item.category1 == 'inventory' && item.category2 == 'material') {
+            if (item.category1 == 'shop' && item.category2 == 'material') {
                 shopItemIMCollection.add(shopItem);
-            } else if (item.category1 == 'inventory' && item.category2 == 'gem') {
+            } else if (item.category1 == 'shop' && item.category2 == 'gem') {
                 shopItemIGColleciton.add(shopItem);
             } else {
                 shopItemECollection.add(shopItem);
@@ -70,7 +70,7 @@ var shopListLoader = function () {
         },
         btnBuy: function (event) {
             var id = event.data.id;
-            var cmd = new Command("inventory", "buy", {
+            var cmd = new Command("shop", "buy", {
                 num: 1, id: id
             });
             CommonUtil.doPost(cmd, function (msg) {
