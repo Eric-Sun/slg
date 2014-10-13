@@ -15,6 +15,9 @@ public class UpgradeTechToHandler implements EventHandler {
 
     @Override
     public void handleEvent(UserEventCO evtData, UserSmallTaskCO smallTaskCO) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
+
+
+
     }
 }
