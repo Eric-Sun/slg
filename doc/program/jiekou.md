@@ -258,6 +258,11 @@
 + 返回数据
 	+ cost_num：花费
 	+ cost_type：货币类型
+	+ awards：获得的物品，为一个map
+	    + key=material，获得的为材料
+	    + value={id:xxx,count:yyyy}
+	    + key=equip
+	    + value=equipId的list
 
 --------
 

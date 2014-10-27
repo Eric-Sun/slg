@@ -1,6 +1,5 @@
 package com.h13.slg.event;
 
-import com.h13.slg.core.SlgData;
 import com.h13.slg.event.co.UserEventCO;
 import com.h13.slg.task.co.UserSmallTaskCO;
 

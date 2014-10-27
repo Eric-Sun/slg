@@ -2,7 +2,7 @@ package com.h13.slg.web;
 
 import com.alibaba.fastjson.JSON;
 import com.h13.slg.user.hepler.AuthHelper;
-import com.h13.slg.core.SlgResponseDTO;
+import com.h13.slg.core.transmission.SlgResponseDTO;
 import com.h13.slg.core.SlgDispatcher;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
@@ -58,7 +58,7 @@ public class BaseController {
             response.flushBuffer();
             return null;
         } catch (Exception e) {
-            SlgLogger.error(SlgLoggerEntity.r("", "", -1, ""), e);
+            SlgLogger.error(SlgLoggerEntity.e("", "", -1, "", e));
             return null;
         }
     }

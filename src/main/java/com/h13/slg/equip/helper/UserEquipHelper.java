@@ -1,19 +1,22 @@
 package com.h13.slg.equip.helper;
 
+import com.google.common.collect.Lists;
 import com.h13.slg.core.CodeConstants;
+import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.SlgConstants;
-import com.h13.slg.core.log.SlgLogger;
-import com.h13.slg.core.log.SlgLoggerEntity;
+import com.h13.slg.core.exception.RequestUnexpectedException;
+import com.h13.slg.equip.cache.UserEquipCache;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.config.co.EquipCO;
 import com.h13.slg.config.co.StrengthenCO;
 import com.h13.slg.config.fetcher.EquipConfigFetcher;
 import com.h13.slg.config.fetcher.StrengthenConfigFetcher;
-import com.h13.slg.core.RequestErrorException;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.equip.dao.UserEquipDAO;
+import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.FightForceHelper;
+import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,16 +39,19 @@ public class UserEquipHelper {
     UserEquipDAO userEquipDAO;
     @Autowired
     StrengthenConfigFetcher strengthenConfigFetcher;
-
+    @Autowired
+    UserRoleHelper userRoleHelper;
     @Autowired
     UserStatusHelper userStatusHelper;
     @Autowired
     EquipConfigFetcher equipConfigFetcher;
-
     @Autowired
     UserPackageHelper userPackageHelper;
     @Autowired
     FightForceHelper fightForceHelper;
+
+    @Autowired
+    UserEquipCache userEquipCache;
 
     /**
      * 获取用户装备
@@ -55,22 +61,95 @@ public class UserEquipHelper {
      *
      * @param ueId 用户装备id
      * @return
+     * @throws RequestUnexpectedException
      */
-    public UserEquipCO getUserEquip(long uid, long ueId) {
-        return userEquipDAO.get(uid, ueId);
+    public UserEquipCO getUserEquip(int uid, int ueId) throws RequestUnexpectedException {
+        UserEquipCO userEquipCO = userEquipCache.get(ueId);
+        if (userEquipCO == null) {
+            userEquipCO = userEquipDAO.get(uid, ueId);
+            userEquipCache.set(userEquipCO);
+            return userEquipCO;
+        } else {
+            if (userEquipCO.getUid() == uid) {
+                return userEquipCO;
+            } else {
+                throw new RequestUnexpectedException(CodeConstants.User.UID_EQUIPID_NOT_MATCHED,
+                        String.format("uid=%s,ueid=%s not match", uid, ueId));
+            }
+        }
     }
 
     /**
-     * 更新用户装备
-     * <p>
-     * 直接修改数据库，修改传入的对象中的所有的字段
-     * </p>
+     * 更新用户装备，并且更新cache
      *
      * @param ue
      */
     public void updateUserEquip(UserEquipCO ue) {
         userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getStrength(),
                 ue.getUrid(), ue.getName());
+        userEquipCache.set(ue);
+    }
+
+
+    /**
+     * 获得一个新的装备，从商店通过军功购买，或者通过程序获得
+     *
+     * @param uid
+     * @param type EquipConstants.EquipType
+     */
+    public UserEquipCO addUserEquip(int uid, String type) {
+
+        String name = getEquipNameFromConfig(type, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL);
+        UserEquipCO userEquipCO = new UserEquipCO();
+        userEquipCO.setLevel(SlgConstants.Equip.DEFAULT_LEVEL);
+        userEquipCO.setType(type);
+        userEquipCO.setUid(uid);
+        userEquipCO.setName(name);
+        userEquipCO.setUrid(SlgConstants.Role.NO_ROLE);
+        userEquipCO.setStrength(SlgConstants.Equip.DEFAULT_STRENGTHEN);
+        int ueid = userEquipDAO.insert(
+                userEquipCO.getUid(),
+                userEquipCO.getType(),
+                userEquipCO.getLevel(),
+                userEquipCO.getStrength(),
+                userEquipCO.getUrid(),
+                userEquipCO.getName());
+        userEquipCO.setId(ueid);
+        userEquipCache.set(userEquipCO);
+
+        userPackageHelper.addEquipItem(uid, ueid);
+
+        return userEquipCO;
+    }
+
+    /**
+     * 通过type和level，读取配置文件，获得对应的name
+     *
+     * @param type
+     * @param level
+     * @return
+     */
+    public String getEquipNameFromConfig(String type, int level) {
+        EquipCO equipCO = equipConfigFetcher.get(level + "");
+
+        if (type.equals(SlgConstants.Equip.EquipType.WEAPON)) {
+            return equipCO.getWeaponName();
+        } else if (type.equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
+            return equipCO.getAccessoryName();
+        } else {
+            return equipCO.getArmorName();
+        }
+    }
+
+    /**
+     * 获得用户的所有装备，包括已经穿上的或者未穿上的
+     *
+     * @param uid
+     * @return
+     */
+    public List<UserEquipCO> getUserEquips(int uid) {
+        List<UserEquipCO> list = userEquipDAO.getUserEquips(uid);
+        return list;
     }
 
 
@@ -80,7 +159,7 @@ public class UserEquipHelper {
      * @param ueId
      * @return int 下一个等级是多少
      */
-    public int strengthen(long uid, long ueId) throws RequestErrorException {
+    public int strengthen(int uid, int ueId) throws RequestUnexpectedException, RequestFatalException {
         // 获得当前的强化等级
         UserEquipCO ue = getUserEquip(uid, ueId);
         int curStrength = ue.getStrength();
@@ -90,7 +169,8 @@ public class UserEquipHelper {
         int nextStrength = curStrength + 1;
         StrengthenCO strengthenCO = strengthenConfigFetcher.get(nextStrength + "");
         if (strengthenCO == null)
-            throw new RequestErrorException(CodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP, "");
+            throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_STRENGTH_LEVEL_TO_TOP,
+                    String.format("uid=%s,ueid=%s,nextStrength=%s", uid, ueId, nextStrength));
         int cost = 0;
         if (type.equals(SlgConstants.Equip.EquipType.WEAPON)) {
             cost = strengthenCO.getWeaponCost();
@@ -104,6 +184,9 @@ public class UserEquipHelper {
         UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
         if (userStatusCO.getGold() >= cost) {
             userStatusCO.setGold(userStatusCO.getGold() - cost);
+        } else {
+            throw new RequestUnexpectedException(CodeConstants.Role.RESOURCE_IS_NOT_ENOUGH,
+                    String.format("gold is not enough. cost=%s, currentGold=%s", cost, userStatusCO.getGold()));
         }
         userStatusHelper.updateUserStatus(userStatusCO);
 
@@ -111,10 +194,10 @@ public class UserEquipHelper {
         ue.setStrength(nextStrength);
         updateUserEquip(ue);
 
-
-        long urid = ue.getUrid();
         // 更新fightforce
-        fightForceHelper.updateUserRoleFightForce(uid, urid);
+        int urid = ue.getUrid();
+        UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
+        fightForceHelper.updateUserRoleFightForce(userRoleCO);
         return nextStrength;
     }
 
@@ -122,7 +205,7 @@ public class UserEquipHelper {
     /**
      * 合成装备 （升级）
      */
-    public int make(long uid, long ueId) throws RequestErrorException {
+    public int make(int uid, int ueId) throws RequestFatalException, RequestUnexpectedException {
         // 获得当前的装备等级
         UserEquipCO ue = getUserEquip(uid, ueId);
         int curLevel = ue.getLevel();
@@ -158,7 +241,9 @@ public class UserEquipHelper {
 
         if (packageMCount1 < materialCount1 || packageMCount2 < materialCount2) {
             // 资源不够
-            throw new RequestErrorException(CodeConstants.Role.RESOURCE_IS_NOT_ENOUGH, "");
+            throw new RequestUnexpectedException(CodeConstants.Role.RESOURCE_IS_NOT_ENOUGH,
+                    String.format("packageMCount1=%s,materialCount1=%s  packageMCount2=%s,materialCount2=%s",
+                            packageMCount1, materialCount1, packageMCount2, materialCount2));
         }
         Map d1 = userPackageCO.getMaterial();
         d1.put(materialId1 + "", packageMCount1 - materialCount1);
@@ -168,106 +253,31 @@ public class UserEquipHelper {
         ue.setName(getEquipNameFromConfig(type, nextLevel));
         updateUserEquip(ue);
 
-        fightForceHelper.updateUserRoleFightForce(uid, ue.getUrid());
+        UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, ue.getUrid());
+        fightForceHelper.updateUserRoleFightForce(userRoleCO);
         return nextLevel;
     }
 
 
     /**
-     * 获得一个新的装备，从商店通过军功购买，或者通过程序获得
+     * 注册的时候用于给新用户添加一些基础装备
+     * 3 weapon
+     * 3 accessory
+     * 3 armor
      *
      * @param uid
-     * @param level
-     * @param type  EquipConstants.EquipType
      */
-    public UserEquipCO addNewUserEquip(int uid, int level, String type) throws RequestErrorException {
-        if (!SlgConstants.Equip.EquipType.ACCESSORY.equals(type)
-                &&
-                !SlgConstants.Equip.EquipType.ARMOR.equals(type)
-                &&
-                !SlgConstants.Equip.EquipType.WEAPON.equals(type)) {
-            SlgLogger.error(SlgLoggerEntity.p("userequip", "getANewUserEquip", uid, "type is error.")
-                    .addParam("level", level).addParam("type", type));
-            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "type is error");
+    public List<UserEquipCO> addUserEquipForRegister(int uid) throws RequestFatalException {
+        List<UserEquipCO> ueList = Lists.newLinkedList();
+        for (int i = 0; i < 3; i++) {
+            UserEquipCO ue1 = addUserEquip(uid, SlgConstants.Equip.EquipType.ACCESSORY);
+            UserEquipCO ue2 = addUserEquip(uid, SlgConstants.Equip.EquipType.ARMOR);
+            UserEquipCO ue3 = addUserEquip(uid, SlgConstants.Equip.EquipType.WEAPON);
+            ueList.add(ue1);
+            ueList.add(ue2);
+            ueList.add(ue3);
         }
-        String name = getEquipNameFromConfig(type, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL);
-        UserEquipCO co = new UserEquipCO();
-        co.setLevel(level);
-        co.setType(type);
-        co.setUid(uid);
-        co.setName(name);
-        co.setStrength(1);
-        co.setUrid(SlgConstants.Role.NO_ROLE);
-
-
-        long ueid = userEquipDAO.insert(uid, type, level, 1, SlgConstants.Role.NO_ROLE, name);
-        co.setId(new Integer(ueid + ""));
-        userPackageHelper.addEquipItem(uid, level, ueid);
-        return co;
+        return ueList;
     }
 
-
-    /**
-     * 获取某个uid，某个urid下，某种类型的装备的信息
-     *
-     * @param uid
-     * @param urid
-     * @param type EquipConstants.EquipType下面的类型
-     * @return
-     */
-    public UserEquipCO getUserEquip(long uid, long urid, String type) {
-        UserEquipCO co = userEquipDAO.get(uid, urid, type);
-        return co;
-    }
-
-    public List<UserEquipCO> equipList(long uid, String type) {
-
-        List<UserEquipCO> equipList = userEquipDAO.equipList(uid, type);
-
-        return equipList;
-    }
-
-    /**
-     * 通过type和level，读取配置文件，获得对应的name
-     *
-     * @param type
-     * @param level
-     * @return
-     */
-    public String getEquipNameFromConfig(String type, int level) {
-        EquipCO equipCO = equipConfigFetcher.get(level + "");
-
-        if (type.equals(SlgConstants.Equip.EquipType.WEAPON)) {
-            return equipCO.getWeaponName();
-        } else if (type.equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
-            return equipCO.getAccessoryName();
-        } else {
-            return equipCO.getArmorName();
-        }
-    }
-
-    /**
-     * 获得为使用的装备列表
-     *
-     * @param uid
-     * @param type
-     * @return
-     */
-    public List<UserEquipCO> noUsedEquipList(long uid, String type) {
-        List<UserEquipCO> list = userEquipDAO.noUsedEquipList(uid, type);
-        return list;
-    }
-
-    /**
-     * 获得用户的所有装备，包括已经穿上的或者为穿上的
-     *
-     * @param uid
-     * @return
-     */
-    public List<UserEquipCO> getUserEquips(int uid) {
-
-        List<UserEquipCO> list = userEquipDAO.getUserEquips(uid);
-
-        return list;
-    }
 }

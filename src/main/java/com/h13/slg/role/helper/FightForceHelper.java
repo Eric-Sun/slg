@@ -3,13 +3,15 @@ package com.h13.slg.role.helper;
 import com.h13.slg.config.cache.*;
 import com.h13.slg.config.co.*;
 import com.h13.slg.core.CodeConstants;
-import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.SlgConstants;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.equip.helper.UserEquipHelper;
 import com.h13.slg.role.co.UserRoleCO;
+import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,17 +41,13 @@ public class FightForceHelper {
     UserStatusHelper userStatusHelper;
 
 
-    public int updateUserRoleFightForce(long uid, long urid) throws RequestErrorException {
+    public int updateUserRoleFightForce(UserRoleCO userRoleCO) throws RequestFatalException, RequestUnexpectedException {
 
-        if (urid == SlgConstants.Role.NO_ROLE)
-            return 0;
-        UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
         int oldFightForce = userRoleCO.getFightForce();
-
-        // 重新计算新的
-
+        int uid = userRoleCO.getUid();
+        int urid = userRoleCO.getId();
         // 获得人物本身的fightforce
-        long roleId = userRoleCO.getRoleId();
+        int roleId = userRoleCO.getRoleId();
         RoleCO roleCO = roleCache.get(roleId + "");
         // 需要计算成长，然后算一个新的
         int roleFightForce = roleCO.getFightForce();
@@ -71,26 +69,26 @@ public class FightForceHelper {
                 calFightForceByHealth(finalUserRoleHealth);
 
         // 获得装备的fightforce
-        long ueWeaponId = userRoleCO.getWeapon();
-        long ueArmorId = userRoleCO.getArmor();
-        long ueAccessoryId = userRoleCO.getAccessory();
+        int ueWeaponId = userRoleCO.getWeapon();
+        int ueArmorId = userRoleCO.getArmor();
+        int ueAccessoryId = userRoleCO.getAccessory();
         int weaponAttack = 0;
         int weaponFightForce = 0;
         int armorDefence = 0;
         int armorFightForce = 0;
         int accessoryHealth = 0;
         int accessoryFightForce = 0;
-        if (ueWeaponId != SlgConstants.RoleConstants.NO_EQUIP_ID) {
+        if (ueWeaponId != SlgConstants.Role.NO_EQUIP_ID) {
             UserEquipCO weapon = userEquipHelper.getUserEquip(uid, ueWeaponId);
             weaponAttack = getWeaponAttack(weapon);
             weaponFightForce = calFightForceByAttack(weaponAttack);
         }
-        if (ueArmorId != SlgConstants.RoleConstants.NO_EQUIP_ID) {
+        if (ueArmorId != SlgConstants.Role.NO_EQUIP_ID) {
             UserEquipCO armor = userEquipHelper.getUserEquip(uid, ueArmorId);
             armorDefence = getArmorDefence(armor);
             armorFightForce = calFightForceByDefence(armorDefence);
         }
-        if (ueAccessoryId != SlgConstants.RoleConstants.NO_EQUIP_ID) {
+        if (ueAccessoryId != SlgConstants.Role.NO_EQUIP_ID) {
             UserEquipCO accessory = userEquipHelper.getUserEquip(uid, ueAccessoryId);
             accessoryHealth = getAccessoryHealth(accessory);
             accessoryFightForce = calFightForceByHealth(accessoryHealth);
@@ -116,10 +114,15 @@ public class FightForceHelper {
         int finalDefence = finalUserRoleDefence + armorDefence;
         int finalHealth = finalUserRoleHealth + accessoryHealth;
 
-        userRoleHelper.updateAttackDefenceHealth(uid, urid, finalAttack, finalDefence, finalHealth);
-        userRoleHelper.updateFightForce(uid, urid, finalFightForce);
+        userRoleCO.setAttack(finalAttack);
+        userRoleCO.setDefence(finalDefence);
+        userRoleCO.setHealth(finalHealth);
 
-        userStatusHelper.updateFightForce(uid, oldFightForce, finalFightForce);
+        userRoleHelper.updateUserRole(userRoleCO);
+
+        // 更新全局的战斗力
+        UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
+        userStatusHelper.updateUserStatus(userStatusCO);
 
         return finalFightForce;
 
@@ -132,7 +135,7 @@ public class FightForceHelper {
      * @param ue
      * @return
      */
-    private int getWeaponAttack(UserEquipCO ue) throws RequestErrorException {
+    private int getWeaponAttack(UserEquipCO ue) throws RequestFatalException {
         try {
             int strength = ue.getStrength();
             WeaponCO weaponCO = weaponCache.get(strength + "");
@@ -140,12 +143,12 @@ public class FightForceHelper {
             int value = Integer.parseInt(tmpValue);
             return value;
         } catch (Exception e) {
-            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "system error.", e);
+            throw new RequestFatalException(CodeConstants.SYSTEM.COMMON_ERROR, "system error.", e);
         }
     }
 
 
-    private int getArmorDefence(UserEquipCO ue) throws RequestErrorException {
+    private int getArmorDefence(UserEquipCO ue) throws RequestFatalException {
         try {
             int strength = ue.getStrength();
             ArmorCO armorCO = armorCache.get(strength + "");
@@ -153,11 +156,11 @@ public class FightForceHelper {
             int value = Integer.parseInt(tmpValue);
             return value;
         } catch (Exception e) {
-            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "system error.", e);
+            throw new RequestFatalException(CodeConstants.SYSTEM.COMMON_ERROR, "system error.", e);
         }
     }
 
-    private int getAccessoryHealth(UserEquipCO ue) throws RequestErrorException {
+    private int getAccessoryHealth(UserEquipCO ue) throws RequestFatalException {
         try {
             int strength = ue.getStrength();
             AccessoryCO accessoryCO = accessoryCache.get(strength + "");
@@ -165,7 +168,7 @@ public class FightForceHelper {
             int value = Integer.parseInt(tmpValue);
             return value;
         } catch (Exception e) {
-            throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "system error.", e);
+            throw new RequestFatalException(CodeConstants.SYSTEM.COMMON_ERROR, "system error.", e);
         }
     }
 

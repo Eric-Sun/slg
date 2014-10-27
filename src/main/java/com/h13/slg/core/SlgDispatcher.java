@@ -1,6 +1,11 @@
 package com.h13.slg.core;
 
 import com.alibaba.fastjson.JSON;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.exception.RequestUnexpectedException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.transmission.SlgResponseDTO;
 import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
@@ -59,11 +64,23 @@ public class SlgDispatcher implements ApplicationContextAware {
             triggerEvents(req, r);
             resp = new SlgResponseDTO(req, r);
         } catch (Exception e) {
-            SlgLogger.error(SlgLoggerEntity.p(mod, act, uid, "error"), e);
             if (e instanceof InvocationTargetException) {
-                if (((InvocationTargetException) e).getTargetException() instanceof RequestErrorException) {
-                    RequestErrorException reqError = (RequestErrorException) ((InvocationTargetException) e).getTargetException();
+                if (((InvocationTargetException) e).getTargetException() instanceof RequestFatalException) {
+                    // 程序bug处理
+                    RequestFatalException reqError = (RequestFatalException) ((InvocationTargetException) e).getTargetException();
+                    SlgLogger.error(SlgLoggerEntity.e(mod, act, uid, reqError.getDesc(), reqError));
                     return new SlgResponseDTO(req, reqError.getCode(), reqError.getDesc());
+                } else if (((InvocationTargetException) e).getTargetException() instanceof RequestUnexpectedException) {
+                    // 非期待异常
+                    RequestUnexpectedException err = (RequestUnexpectedException) ((InvocationTargetException) e).
+                            getTargetException();
+                    SlgLogger.warn(SlgLoggerEntity.p(mod, act, uid, err.getDesc()));
+                    return new SlgResponseDTO(req, err.getCode(), err.getDesc());
+                } else {
+                    // 其他异常，按照bug处理
+                    Throwable reqError = ((InvocationTargetException) e).getTargetException();
+                    SlgLogger.error(SlgLoggerEntity.e(mod, act, uid, reqError.getMessage(), reqError));
+                    return new SlgResponseDTO(req, CodeConstants.SYSTEM.COMMON_ERROR, "");
                 }
             }
 
@@ -71,7 +88,7 @@ public class SlgDispatcher implements ApplicationContextAware {
         return resp;
     }
 
-    private void triggerEvents(SlgRequestDTO req, SlgData r) throws RequestErrorException {
+    private void triggerEvents(SlgRequestDTO req, SlgData r) throws RequestFatalException {
         EventService eventService = (EventService) applicationContext.getBean("EventService");
         eventService.triggerTasks(req.getUid(), r);
     }

@@ -2,14 +2,23 @@ package com.h13.slg.user.service;
 
 import com.google.common.collect.Lists;
 import com.h13.slg.battle.co.UserTeamCO;
+import com.h13.slg.config.co.RoleSkillCO;
 import com.h13.slg.config.fetcher.LevelConfigFetcher;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
+import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.exception.RequestUnexpectedException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.equip.helper.UserEquipHelper;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.skill.co.UserRoleSkillCO;
+import com.h13.slg.skill.co.UserZuLingCO;
+import com.h13.slg.skill.co.UserZuLingItemCO;
 import com.h13.slg.skill.helper.RoleSkillHelper;
 import com.h13.slg.skill.helper.UserZuLingHelper;
 import com.h13.slg.skill.vo.RoleSkillVO;
@@ -22,7 +31,6 @@ import com.h13.slg.user.co.AuthCO;
 import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.core.*;
-import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
 import com.h13.slg.user.co.UserStatusCO;
@@ -37,6 +45,7 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
 
@@ -80,9 +89,11 @@ public class UserServiceImpl implements UserService {
     RoleSkillHelper roleSkillHelper;
     @Autowired
     UserZuLingHelper userZuLingHelper;
+    @Autowired
+    RoleSkillConfigFetcher roleSkillConfigFetcher;
 
     @Override
-    public SlgData login(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData login(SlgRequestDTO request) throws RequestFatalException {
         String name = (String) request.getArgs().get("name");
         String password = (String) request.getArgs().get("password");
 
@@ -99,7 +110,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public SlgData register(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData register(SlgRequestDTO request) throws RequestFatalException {
 
         String name = request.getArgs().get("name").toString();
         String password = request.getArgs().get("password").toString();
@@ -112,7 +123,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public SlgData getInfo(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData getInfo(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException, InvocationTargetException, IllegalAccessException {
         int uid = request.getUid();
         UserStatusCO userStatusCO = userStatusHelper.getUserStatus(uid);
         long farmTimer = farmHelper.getFarmInfo(uid).getTimer();
@@ -162,7 +173,7 @@ public class UserServiceImpl implements UserService {
         Map<String, Integer> skillMapPackage = userPackageCO.getSkill();
 
 
-        List<UserRoleSkillCO> roleSkillList = roleSkillHelper.get(uid);
+        List<UserRoleSkillCO> roleSkillList = roleSkillHelper.list(uid);
         List<UserRoleSkillVO> roleSkillVOList = Lists.newLinkedList();
         for (UserRoleSkillCO co : roleSkillList) {
             UserRoleSkillVO vo = new UserRoleSkillVO();
@@ -175,17 +186,26 @@ public class UserServiceImpl implements UserService {
         List<TavernRoleVO> list = Lists.newArrayList();
         for (TavernRoleCO tavernRoleCO : tavernCO.getRoleList()) {
             TavernRoleVO tavernRoleVO = new TavernRoleVO();
-            try {
-                BeanUtils.copyProperties(tavernRoleVO, tavernRoleCO);
-            } catch (Exception e) {
-                throw new RequestErrorException(e);
-            }
+            BeanUtils.copyProperties(tavernRoleVO, tavernRoleCO);
             tavernRoleVO.setRoleName(roleConfigFetcher.get(tavernRoleCO.getId() + "").getName());
             list.add(tavernRoleVO);
         }
 
         // zuling
-        List<RoleSkillVO> zulingRoleSkillList  = userZuLingHelper.load(uid);
+        List<RoleSkillVO> zulingRoleSkillList = Lists.newLinkedList();
+        UserZuLingCO userZuLingCO = userZuLingHelper.get(uid);
+        for (UserZuLingItemCO item : userZuLingCO.getList()) {
+            int rsid = item.getRsId();
+            RoleSkillCO roleSkillCO = roleSkillConfigFetcher.get(rsid + "");
+            RoleSkillVO vo = new RoleSkillVO();
+            vo.setName(roleSkillCO.getName());
+            vo.setQuality(roleSkillCO.getQuality());
+            vo.setRsid(roleSkillCO.getId());
+            vo.setStatus(item.getStatus());
+            vo.setType(roleSkillCO.getType());
+            zulingRoleSkillList.add(vo);
+        }
+
 
         SlgData slgData = SlgData.getData()
                 .add("userStatus", userStatusVO)
@@ -196,7 +216,7 @@ public class UserServiceImpl implements UserService {
                 .add("equipListPackage", equipListPackage)
                 .add("materialMapPackage", materialMapPackage)
                 .add("skillMapPackage", skillMapPackage)
-                .add("zulingRoleSkillList",zulingRoleSkillList)
+                .add("zulingRoleSkillList", zulingRoleSkillList)
                 .add("tavernList", list);
         return slgData;
     }

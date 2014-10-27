@@ -1,8 +1,9 @@
 package com.h13.slg.shop.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +15,5 @@ import com.h13.slg.core.SlgRequestDTO;
 public interface ShopService {
 
 
-    public SlgData shopList(SlgRequestDTO request);
-
-    public SlgData buy(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData buy(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException;
 }

@@ -1,8 +1,9 @@
 package com.h13.slg.equip.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,18 +19,18 @@ public interface EquipService {
      * 强化
      * @param request
      * @return
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public SlgData strengthen(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData strengthen(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException;
 
 
     /**
      * 升级
      * @param request
      * @return
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public SlgData make(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData make(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException;
 
 
 }

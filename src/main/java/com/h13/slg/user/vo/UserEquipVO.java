@@ -1,8 +1,5 @@
 package com.h13.slg.user.vo;
 
-import com.h13.slg.equip.vo.EquipMakeInfoVO;
-import com.h13.slg.equip.vo.EquipStrengthenInfoVO;
-
 /**
  * 用户装备vo
  */

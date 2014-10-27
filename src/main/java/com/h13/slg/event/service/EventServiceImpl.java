@@ -1,13 +1,12 @@
 package com.h13.slg.event.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
 import com.h13.slg.event.co.UserEventCO;
 import com.h13.slg.event.helper.UserEventHelper;
 import com.h13.slg.role.helper.FightForceHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
 import com.h13.slg.task.vo.FinishedPerTaskVO;
-import com.h13.slg.task.vo.FinishedTaskVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +31,7 @@ public class EventServiceImpl implements EventService {
     FightForceHelper fightForceHelper;
 
 
-    public void triggerTasks(int uid, SlgData slgData) throws RequestErrorException {
+    public void triggerTasks(int uid, SlgData slgData) throws RequestFatalException {
         List<UserEventCO> evtList = userEventHelper.getAllEvents(uid);
         if (evtList.size() == 0)
             return;

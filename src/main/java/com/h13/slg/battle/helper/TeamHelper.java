@@ -4,8 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.battle.dao.UserTeamDAO;
 import com.h13.slg.core.CodeConstants;
-import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.SlgConstants;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.role.co.UserRoleCO;
@@ -58,7 +59,7 @@ public class TeamHelper {
      * @param uid
      * @param team
      */
-    public void saveTeam(long uid, String team) throws RequestErrorException {
+    public void saveTeam(int uid, String team) throws RequestFatalException, RequestUnexpectedException {
 
         final Map teamDataMap = JSON.parseObject(team, Map.class);
         List<Integer> teamDataList = new LinkedList<Integer>() {{
@@ -78,7 +79,7 @@ public class TeamHelper {
                 SlgLogger.error(SlgLoggerEntity.p("team", "saveTeam", uid, "urid is not yours")
                         .addParam("urid", urid)
                         .addParam("urid-uid", userRoleCO.getUid()));
-                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, "");
+                throw new RequestFatalException(CodeConstants.SYSTEM.COMMON_ERROR, "");
             }
         }
         updateTeam(userTeamCO);
@@ -87,42 +88,43 @@ public class TeamHelper {
     }
 
 
-    public void updatePos(long uid, int pos, int urid) throws RequestErrorException {
+    public void updatePos(int uid, int pos, int urid) throws RequestFatalException {
         // 检查urid是否是你自己的
         boolean b = userRoleHelper.checkUserRole(uid, urid);
         if (!b)
-            throw new RequestErrorException(CodeConstants.Role.DONT_HAVE_THIS_USER_ROLE, "");
+            throw new RequestFatalException(CodeConstants.Role.DONT_HAVE_THIS_USER_ROLE, "");
         UserTeamCO userTeamCO = get(uid);
         // 已经存在在team中
         if (userTeamCO.getData().contains(urid)) {
-            throw new RequestErrorException(CodeConstants.Team.USER_ROLE_HAVE_IN_TEAM, "");
+            throw new RequestFatalException(CodeConstants.Team.USER_ROLE_HAVE_IN_TEAM, "");
         }
         // 对应的位置已经有userrole
         if (userTeamCO.getData().get(pos) != SlgConstants.Role.NO_ROLE) {
-            throw new RequestErrorException(CodeConstants.Team.POS_HAVE_USER_ROLE, "");
+            throw new RequestFatalException(CodeConstants.Team.POS_HAVE_USER_ROLE, "");
         }
 
         userTeamCO.getData().set(pos, urid);
         updateTeam(userTeamCO);
     }
 
-    public void deletePos(long uid, int pos) throws RequestErrorException {
+    public void deletePos(long uid, int pos) throws RequestFatalException {
         UserTeamCO userTeamCO = get(uid);
         // 对应的位置已经有userrole
         if (userTeamCO.getData().get(pos) == SlgConstants.Role.NO_ROLE) {
-            throw new RequestErrorException(CodeConstants.Team.POST_IS_NO_USER_ROLE, "");
+            throw new RequestFatalException(CodeConstants.Team.POST_IS_NO_USER_ROLE, "");
         }
         userTeamCO.getData().set(pos, SlgConstants.Role.NO_ROLE);
         updateTeam(userTeamCO);
     }
 
 
-    public void updateLeader(int uid, int urid) throws RequestErrorException {
+    public void updateLeader(int uid, int urid) throws RequestFatalException {
 
 
         boolean b = userRoleHelper.checkUserRole(uid, urid);
         if (!b)
-            throw new RequestErrorException(CodeConstants.Role.DONT_HAVE_THIS_USER_ROLE);
+            throw new RequestFatalException(CodeConstants.Role.DONT_HAVE_THIS_USER_ROLE,
+                    String.format("uid=%s,urid=%s", uid, urid));
 
         UserTeamCO userTeamCO = get(uid);
         userTeamCO.setLeader(urid);

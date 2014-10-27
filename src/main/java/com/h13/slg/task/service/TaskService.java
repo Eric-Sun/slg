@@ -1,8 +1,8 @@
 package com.h13.slg.task.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,6 +13,6 @@ import com.h13.slg.core.SlgRequestDTO;
  */
 public interface TaskService {
 
-    public SlgData get(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData get(SlgRequestDTO request) throws RequestFatalException;
 
 }

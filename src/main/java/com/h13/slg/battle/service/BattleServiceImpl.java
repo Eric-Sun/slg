@@ -11,12 +11,12 @@ import com.h13.slg.config.co.BattleCO;
 import com.h13.slg.config.fetcher.BattleConfigFetcher;
 import com.h13.slg.config.fetcher.MonsterConfigFetcher;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.role.helper.UserRoleHelper;
-import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,8 +45,8 @@ public class BattleServiceImpl implements BattleService {
     MonsterConfigFetcher monsterConfigFetcher;
 
     @Override
-    public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestErrorException {
-        long uid = requestDTO.getUid();
+    public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException {
+        int uid = requestDTO.getUid();
         String team = JSON.toJSONString(requestDTO.getArgs().get("team"));
         teamHelper.saveTeam(uid, team);
         return SlgData.getData();
@@ -54,7 +54,7 @@ public class BattleServiceImpl implements BattleService {
 
 
     @Override
-    public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException {
+    public SlgData pve(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException {
         int uid = requestDTO.getUid();
         long battleId = new Long(requestDTO.getArgs().get("battleId") + "");
         FightResult fightResult = fightHelper.pve(uid, battleId);
@@ -62,7 +62,7 @@ public class BattleServiceImpl implements BattleService {
     }
 
     @Override
-    public SlgData pveTeam(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData pveTeam(SlgRequestDTO request) throws RequestFatalException {
         int battleId = new Integer(request.getArgs().get("battleId").toString());
         PVETeamVO pveTeamVO = new PVETeamVO();
         List<PVERoleInTeamVO> roleList = Lists.newLinkedList();

@@ -1,11 +1,10 @@
 package com.h13.slg.pkg.helper;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.MapUtil;
 import com.h13.slg.equip.helper.UserEquipHelper;
+import com.h13.slg.pkg.cache.UserPackageCache;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.pkg.dao.UserPackageDAO;
 import org.slf4j.Logger;
@@ -29,18 +28,27 @@ public class UserPackageHelper {
     UserPackageDAO userPackageDAO;
     @Autowired
     UserEquipHelper userEquipHelper;
+    @Autowired
+    UserPackageCache userPackageCache;
 
     /**
      * 初始化用户的时候，创建一个默认的用户背包对象
      *
-     * @param id
+     * @param uid
      */
-    public void createDefaultPackage(long id) {
-        userPackageDAO.insert(id,
-                new LinkedList<Integer>(),
-                new HashMap<String, Integer>(),
-                new HashMap<String, Integer>());
-        LOG.info("create new package. uid=" + id);
+    public UserPackageCO createDefaultPackage(int uid) {
+        UserPackageCO userPackageCO = new UserPackageCO();
+        userPackageCO.setId(uid);
+        userPackageCO.setEquip(new LinkedList<Integer>());
+        userPackageCO.setMaterial(new HashMap<String, Integer>());
+        userPackageCO.setSkill(new HashMap<String, Integer>());
+        userPackageDAO.insert(userPackageCO.getId(),
+                userPackageCO.getEquip(),
+                userPackageCO.getMaterial(),
+                userPackageCO.getSkill());
+
+        userPackageCache.set(userPackageCO);
+        return userPackageCO;
     }
 
     /**
@@ -50,6 +58,7 @@ public class UserPackageHelper {
      */
     public void updateMaterial(UserPackageCO userPackageCO) {
         userPackageDAO.updateMaterial(userPackageCO.getId(), userPackageCO.getMaterial());
+        userPackageCache.set(userPackageCO);
     }
 
     /**
@@ -59,10 +68,17 @@ public class UserPackageHelper {
      */
     public void updateEquip(UserPackageCO userPackageCO) {
         userPackageDAO.updateEquip(userPackageCO.getId(), userPackageCO.getEquip());
+        userPackageCache.set(userPackageCO);
     }
 
+    /**
+     * 更新技能包裹
+     *
+     * @param userPackageCO
+     */
     private void updateSkill(UserPackageCO userPackageCO) {
         userPackageDAO.updateSkill(userPackageCO.getId(), userPackageCO.getSkill());
+        userPackageCache.set(userPackageCO);
     }
 
 
@@ -73,7 +89,15 @@ public class UserPackageHelper {
      * @return
      */
     public UserPackageCO get(long uid) {
-        return userPackageDAO.get(uid);
+        UserPackageCO userPackageCO = userPackageCache.get(uid);
+        if (userPackageCO == null) {
+            userPackageCO = userPackageDAO.get(uid);
+            userPackageCache.set(userPackageCO);
+            return userPackageCO;
+        } else {
+            return userPackageDAO.get(uid);
+        }
+
     }
 
 
@@ -91,11 +115,6 @@ public class UserPackageHelper {
             return false;
         int packageMCount = userPackageCO.getMaterial().get(materialId + "");
         if (packageMCount < materialNum) {
-            SlgLogger.error(SlgLoggerEntity.p("skill", "update", uid, "material is not enough")
-                    .addParam("uid", uid)
-                    .addParam("materialId", materialId)
-                    .addParam("needNum", materialNum)
-                    .addParam("haveNum", packageMCount));
             return false;
         }
         return true;
@@ -117,11 +136,6 @@ public class UserPackageHelper {
         int newCount = packageMCount - materialNum;
         userPackageCO.getMaterial().put(materialId + "", newCount);
         updateMaterial(userPackageCO);
-        SlgLogger.info(SlgLoggerEntity.p("package", "subtract material", uid, "ok")
-                .addParam("uid", uid)
-                .addParam("materialId", materialId)
-                .addParam("materialNum", materialNum)
-                .addParam("finalNum", newCount));
         return true;
     }
 
@@ -140,11 +154,6 @@ public class UserPackageHelper {
         int newCount = packageMCount - materialNum;
         userPackageCO.getSkill().put(rsId + "", newCount);
         updateSkill(userPackageCO);
-        SlgLogger.info(SlgLoggerEntity.p("package", "subtract skill", uid, "ok")
-                .addParam("uid", uid)
-                .addParam("rsId", rsId)
-                .addParam("materialNum", materialNum)
-                .addParam("finalNum", newCount));
         return true;
     }
 
@@ -178,43 +187,17 @@ public class UserPackageHelper {
     }
 
 
-
     /**
      * 向装备包裹内加入新的物品
      *
      * @param uid
-     * @param itemId
      * @param id
      */
-    public void addEquipItem(long uid, long itemId, long id) {
+    public void addEquipItem(long uid, long id) {
         UserPackageCO userPackageCO = get(uid);
         List data = userPackageCO.getEquip();
         data.add(id);
         updateEquip(userPackageCO);
-    }
-
-
-    /**
-     * 注册的时候用于给新用户添加一些基础装备
-     * 3 weapon
-     * 3 accessory
-     * 3 armor
-     *
-     * @param uid
-     */
-    public void addSomeEquipForRegister(int uid) throws RequestErrorException {
-        int ueid1 = 0;
-        int ueid2 = 0;
-        int ueid3 = 0;
-        for (int i = 0; i < 3; i++) {
-            ueid1 = userEquipHelper.addNewUserEquip(uid, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL, SlgConstants.Equip.EquipType.ACCESSORY).getId();
-            ueid2 = userEquipHelper.addNewUserEquip(uid, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL, SlgConstants.Equip.EquipType.ARMOR).getId();
-            ueid3 = userEquipHelper.addNewUserEquip(uid, SlgConstants.Equip.USER_EQUIP_DEFAULT_LEVEL, SlgConstants.Equip.EquipType.WEAPON).getId();
-            SlgLogger.info(SlgLoggerEntity.p("package", "addSomeEquipForRegister", uid, "ok")
-                    .addParam("weapon", ueid3)
-                    .addParam("accessory", ueid1)
-                    .addParam("armor", ueid2));
-        }
     }
 
 

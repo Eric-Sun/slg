@@ -8,9 +8,14 @@ import com.h13.slg.tavern.co.TavernCO;
 import com.h13.slg.tavern.co.TavernRoleCO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -29,9 +34,19 @@ public class UserZuLingDAO {
     JdbcTemplate j;
 
 
-    public void insert(long uid, List<UserZuLingItemCO> list) {
-        String sql = "insert into user_zuling (id,list,createtime) values (?,?,now())";
-        j.update(sql, new Object[]{uid, JSON.toJSONString(list)});
+    public int insert(final int uid, final List<UserZuLingItemCO> list) {
+        KeyHolder holder = new GeneratedKeyHolder();
+        final String sql = "insert into user_zuling (id,list,createtime) values (?,?,now())";
+        j.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+                PreparedStatement pstmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+                pstmt.setInt(1, uid);
+                pstmt.setString(2, JSON.toJSONString(list));
+                return pstmt;
+            }
+        }, holder);
+        return holder.getKey().intValue();
     }
 
     public void update(long uid, List<UserZuLingItemCO> list) {

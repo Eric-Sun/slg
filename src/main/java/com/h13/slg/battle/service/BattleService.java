@@ -1,8 +1,9 @@
 package com.h13.slg.battle.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,10 +14,10 @@ import com.h13.slg.core.SlgRequestDTO;
  */
 public interface BattleService {
 
-    public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException;
 
-    public SlgData pve(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData pve(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException;
 
-    public SlgData pveTeam(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData pveTeam(SlgRequestDTO request) throws RequestFatalException;
 
 }

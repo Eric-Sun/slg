@@ -8,9 +8,10 @@ import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.battle.vo.UserRoleInTeamVO;
 import com.h13.slg.battle.vo.UserTeamVO;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,8 @@ public class TeamServiceImpl implements TeamService {
 
 
     @Override
-    public SlgData getTeam(SlgRequestDTO request) throws RequestErrorException {
-        long uid = request.getUid();
+    public SlgData getTeam(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException {
+        int uid = request.getUid();
 
         UserTeamCO userTeamCO = teamHelper.get(uid);
         UserTeamVO userTeamVO = new UserTeamVO();
@@ -64,8 +65,8 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public SlgData getUserRoleList(SlgRequestDTO request) throws RequestErrorException {
-        long uid = request.getUid();
+    public SlgData getUserRoleList(SlgRequestDTO request) throws RequestFatalException {
+        int uid = request.getUid();
         UserTeamCO userTeamCO = teamHelper.get(uid);
         List<Integer> teamSet = Lists.newArrayList(userTeamCO.getData());
         List<UserRoleCO> roleList = userRoleHelper.getUserRoleList(uid);
@@ -81,9 +82,9 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public SlgData updatePos(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData updatePos(SlgRequestDTO request) throws RequestFatalException {
 
-        long uid = request.getUid();
+        int uid = request.getUid();
         int pos = new Integer(request.getArgs().get("pos").toString());
         int urid = new Integer(request.getArgs().get("urid").toString());
         teamHelper.updatePos(uid, pos, urid);
@@ -91,8 +92,8 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public SlgData deletePos(SlgRequestDTO request) throws RequestErrorException {
-        long uid = request.getUid();
+    public SlgData deletePos(SlgRequestDTO request) throws RequestFatalException {
+        int uid = request.getUid();
         int pos = new Integer(request.getArgs().get("pos").toString());
         teamHelper.deletePos(uid, pos);
         return SlgData.getData();
@@ -100,7 +101,7 @@ public class TeamServiceImpl implements TeamService {
 
 
     @Override
-    public SlgData updateLeader(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData updateLeader(SlgRequestDTO request) throws RequestFatalException {
 
         int uid = request.getUid();
         int urid = new Integer(request.getArgs().get("urid") + "");

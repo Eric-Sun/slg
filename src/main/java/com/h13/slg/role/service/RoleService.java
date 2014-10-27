@@ -1,8 +1,9 @@
 package com.h13.slg.role.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,8 +14,8 @@ import com.h13.slg.core.SlgRequestDTO;
  */
 public interface RoleService {
 
-    public SlgData wear(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData wear(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException;
 
-    public SlgData takeOff(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData takeOff(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException;
 
 }

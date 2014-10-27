@@ -17,12 +17,17 @@ public class CodeConstants {
         public static int NAME_EXISTS = 2002;
         public static int DONT_HAVE_ENOUGH_FOOD = 2003;
         public static int DONT_HAVE_ENOUGH_GOLD = 2004;
+        public static int UID_EQUIPID_NOT_MATCHED = 2005;
+        public static int UID_USERROLE_NOT_MATCHED = 2006;
+        public static int UID_USER_ROLE_SKILL_ID_NOT_MATCH = 2007;
     }
+
 
     public static class Role {
         public static int EQUIP_STRENGTH_LEVEL_TO_TOP = 2001;
         public static int RESOURCE_IS_NOT_ENOUGH = 2002;
         public static int DONT_HAVE_THIS_USER_ROLE = 2003;
+        public static int EQUIP_ID_SHOULD_BE_NO_EQUIP_ID = 2004;
     }
 
     public static class Tavern {

@@ -15,6 +15,16 @@ public class SlgConstants {
     public static class Role {
         public final static int NO_SKILL_SELECTED = 0;
         public final static int NO_ROLE = 0;
+        public final static int NO_EQUIP_ID = 0;
+        public final static int DEFAULT_LEVEL = 1;
+        public final static int DEFAULT_XP = 0;
+
+        public static class soldierType {
+            public static String QIANG = "0";
+            public static String QI = "1";
+            public static String GONG = "2";
+        }
+
     }
 
     public static class Equip {
@@ -28,6 +38,8 @@ public class SlgConstants {
          * 一个装备初始化之后默认的level
          */
         public static int USER_EQUIP_DEFAULT_LEVEL = 1;
+        public final static int DEFAULT_STRENGTHEN = 1;
+        public final static int DEFAULT_LEVEL = 1;
     }
 
     public static class Fight {
@@ -123,23 +135,6 @@ public class SlgConstants {
     public static class TavernConstants {
         public static int DEFAULT = 0;
         public static int GOT = 1;
-    }
-
-
-    public static class RoleConstants {
-
-        /**
-         * 用户将领没装备装备
-         */
-        public static int NO_EQUIP_ID = 0;
-
-
-        public static class soldierType {
-            public static String QIANG = "0";
-            public static String QI = "1";
-            public static String GONG = "2";
-        }
-
     }
 
 

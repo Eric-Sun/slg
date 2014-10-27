@@ -1,11 +1,9 @@
 package com.h13.slg.skill.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
-import com.h13.slg.skill.vo.RoleSkillVO;
-
-import java.util.List;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +15,8 @@ import java.util.List;
 public interface SkillService {
 
 
-    public SlgData setSkill(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData setSkill(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException;
 
-    public SlgData upgrade(SlgRequestDTO requestDTO) throws RequestErrorException;
+    public SlgData upgrade(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException;
 
 }

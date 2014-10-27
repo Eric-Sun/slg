@@ -2,8 +2,8 @@ package com.h13.slg.task.helper;
 
 import com.h13.slg.config.co.TaskCO;
 import com.h13.slg.config.fetcher.TaskConfigFetcher;
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.equip.helper.UserEquipHelper;
@@ -103,7 +103,7 @@ public class UserTaskHelper implements ApplicationContextAware {
      *
      * @param evtList
      */
-    public boolean handleEvents(int uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestErrorException {
+    public boolean handleEvents(int uid, List<UserEventCO> evtList, SlgData slgData, List<FinishedPerTaskVO> finishedTaskList) throws RequestFatalException {
 
 
         UserTaskCO userTaskCO = getTask(uid);
@@ -205,7 +205,7 @@ public class UserTaskHelper implements ApplicationContextAware {
         return finished;
     }
 
-    private void handleAwards(int uid, FinishedPerTaskVO perVO) throws RequestErrorException {
+    private void handleAwards(int uid, FinishedPerTaskVO perVO) throws RequestFatalException {
         int gold = perVO.getGold();
         int xp = perVO.getXp();
         List<List<String>> awards = perVO.getAwards();
@@ -227,7 +227,7 @@ public class UserTaskHelper implements ApplicationContextAware {
                 String tp2 = perAward.get(1);
                 int count = new Integer(perAward.get(3));
                 for (int i = 0; i < count; i++) {
-                    userEquipHelper.addNewUserEquip(uid, eid, tp2);
+                    userEquipHelper.addUserEquip(uid, tp2);
                 }
             }
         }

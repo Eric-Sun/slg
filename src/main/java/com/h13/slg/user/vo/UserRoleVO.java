@@ -1,8 +1,5 @@
 package com.h13.slg.user.vo;
 
-import com.h13.slg.role.vo.UserRoleAccessoryVO;
-import com.h13.slg.role.vo.UserRoleArmorVO;
-import com.h13.slg.role.vo.UserRoleWeaponVO;
 import com.h13.slg.skill.vo.UserRoleSkillVO;
 
 import java.util.Map;

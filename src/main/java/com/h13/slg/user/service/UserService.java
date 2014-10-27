@@ -1,9 +1,11 @@
 package com.h13.slg.user.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
-import com.h13.slg.core.SlgResponseDTO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * 用户模块接口
@@ -17,7 +19,7 @@ public interface UserService {
      *
      * @return
      */
-    public SlgData login(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData login(SlgRequestDTO request) throws RequestFatalException;
 
     /**
      * 注册
@@ -25,16 +27,16 @@ public interface UserService {
      * @param request
      * @return
      */
-    public SlgData register(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData register(SlgRequestDTO request) throws RequestFatalException;
 
 
     /**
      * 登陆之后获得用户信息，用于显示
      * @param request
      * @return
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public SlgData getInfo(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData getInfo(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException, InvocationTargetException, IllegalAccessException;
 
 
 

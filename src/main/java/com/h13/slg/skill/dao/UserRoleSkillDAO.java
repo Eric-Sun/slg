@@ -6,8 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -23,18 +29,27 @@ public class UserRoleSkillDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(UserRoleSkillCO userRoleSkillCO) {
-        String sql = "insert into user_role_skill (rid,uid,`type`,level,`delete`,createtime,rsid,name) values " +
+    public int insert(final UserRoleSkillCO userRoleSkillCO) {
+        KeyHolder holder = new GeneratedKeyHolder();
+        final String sql = "insert into user_role_skill " +
+                "(rid,uid,`type`,level,`delete`,createtime,rsid,name) values " +
                 "(?,?,?,?,?,now(),?,?)";
-        j.update(sql, new Object[]{
-                userRoleSkillCO.getRid(),
-                userRoleSkillCO.getUid(),
-                userRoleSkillCO.getType(),
-                userRoleSkillCO.getLevel(),
-                userRoleSkillCO.getDelete(),
-                userRoleSkillCO.getRsid(),
-                userRoleSkillCO.getName()
-        });
+        j.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+                PreparedStatement pstmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+                pstmt.setInt(1, userRoleSkillCO.getRid());
+                pstmt.setInt(2, userRoleSkillCO.getUid());
+                pstmt.setString(3, userRoleSkillCO.getType());
+                pstmt.setInt(4, userRoleSkillCO.getLevel());
+                pstmt.setInt(5, userRoleSkillCO.getDelete());
+                pstmt.setInt(6, userRoleSkillCO.getRsid());
+                pstmt.setString(7, userRoleSkillCO.getName());
+                return pstmt;
+            }
+        }, holder);
+        return holder.getKey().intValue();
+
     }
 
     public void update(UserRoleSkillCO userRoleSkillCO) {
@@ -85,9 +100,20 @@ public class UserRoleSkillDAO {
         }
     }
 
-    public List<UserRoleSkillCO> get(int uid) {
-        final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and `delete`=0";
-        return j.query(sql, new Object[]{uid}, new BeanPropertyRowMapper<UserRoleSkillCO>(UserRoleSkillCO.class));
+    /**
+     * 获取uid对应的所有的技能
+     *
+     * @param uid
+     * @return
+     */
+    public List<Integer> getAllIdListByUid(int uid) {
+        final String sql = "select id from user_role_skill where uid=? and `delete`=?";
+        return j.queryForList(sql, new Object[]{uid, UserRoleSkillCO.COMMON}, Integer.class);
+    }
 
+
+    public UserRoleSkillCO get(int uid, int ursid) {
+        final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and id=? and delete=0";
+        return j.queryForObject(sql, new Object[]{uid, ursid}, new BeanPropertyRowMapper<UserRoleSkillCO>(UserRoleSkillCO.class));
     }
 }

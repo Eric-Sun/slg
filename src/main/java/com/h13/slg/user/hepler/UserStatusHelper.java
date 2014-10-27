@@ -3,7 +3,8 @@ package com.h13.slg.user.hepler;
 import com.h13.slg.config.GlobalKeyConstants;
 import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.core.CodeConstants;
-import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.user.cache.UserStatusCache;
@@ -103,14 +104,14 @@ public class UserStatusHelper {
      *
      * @param uid
      * @param food
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public void subtractFood(long uid, int food) throws RequestErrorException {
+    public void subtractFood(long uid, int food) throws RequestUnexpectedException {
         UserStatusCO userStatusCO = getUserStatus(uid);
         int curFood = userStatusCO.getFood();
 
         if (curFood < food)
-            throw new RequestErrorException(CodeConstants.User.DONT_HAVE_ENOUGH_FOOD, "");
+            throw new RequestUnexpectedException(CodeConstants.User.DONT_HAVE_ENOUGH_FOOD, "");
 
         userStatusCO.setFood(curFood - food);
         updateUserStatus(userStatusCO);
@@ -122,14 +123,14 @@ public class UserStatusHelper {
      *
      * @param uid
      * @param gold
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public void subtractGold(long uid, int gold) throws RequestErrorException {
+    public void subtractGold(long uid, int gold) throws RequestUnexpectedException {
         UserStatusCO userStatusCO = getUserStatus(uid);
         int curGold = userStatusCO.getGold();
 
         if (curGold < gold)
-            throw new RequestErrorException(CodeConstants.User.DONT_HAVE_ENOUGH_GOLD, "");
+            throw new RequestUnexpectedException(CodeConstants.User.DONT_HAVE_ENOUGH_GOLD, "");
 
         userStatusCO.setGold(curGold - gold);
         updateUserStatus(userStatusCO);

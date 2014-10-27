@@ -1,26 +1,17 @@
 package com.h13.slg.equip.service;
 
-import com.google.common.collect.Lists;
-import com.h13.slg.config.co.EquipCO;
-import com.h13.slg.config.co.StrengthenCO;
 import com.h13.slg.config.fetcher.EquipConfigFetcher;
 import com.h13.slg.config.fetcher.MaterialConfigFetcher;
 import com.h13.slg.config.fetcher.StrengthenConfigFetcher;
-import com.h13.slg.core.*;
-import com.h13.slg.core.util.SlgBeanUtils;
-import com.h13.slg.equip.co.UserEquipCO;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.exception.RequestUnexpectedException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
 import com.h13.slg.equip.helper.UserEquipHelper;
-import com.h13.slg.equip.vo.EquipMakeInfoVO;
-import com.h13.slg.equip.vo.EquipStrengthenInfoVO;
-import com.h13.slg.user.vo.UserEquipVO;
 import com.h13.slg.pkg.helper.UserPackageHelper;
-import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.hepler.UserStatusHelper;
-import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -46,9 +37,9 @@ public class EquipServiceImpl implements EquipService {
     MaterialConfigFetcher materialConfigFetcher;
 
     @Override
-    public SlgData strengthen(SlgRequestDTO request) throws RequestErrorException {
-        long uid = request.getUid();
-        long ueId = new Long(request.getArgs().get("ueid") + "");
+    public SlgData strengthen(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException {
+        int uid = request.getUid();
+        int ueId = new Integer(request.getArgs().get("ueid") + "");
 
         int nextStrengthen = userEquipHelper.strengthen(uid, ueId);
         return SlgData.getData().add("strengthen", nextStrengthen);
@@ -56,10 +47,10 @@ public class EquipServiceImpl implements EquipService {
 
 
     @Override
-    public SlgData make(SlgRequestDTO request) throws RequestErrorException {
+    public SlgData make(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException {
 
-        long uid = request.getUid();
-        long ueId = new Long(request.getArgs().get("ueid").toString());
+        int uid = request.getUid();
+        int ueId = new Integer(request.getArgs().get("ueid").toString());
         int nextLevel = userEquipHelper.make(uid, ueId);
 
         return SlgData.getData().add("level", nextLevel);

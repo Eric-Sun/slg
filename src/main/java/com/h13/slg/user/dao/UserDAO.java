@@ -55,14 +55,8 @@ public class UserDAO {
      * @return
      */
     public int login(final String name, final String passwordAfterMd5) {
-        try {
-            final String sql = "select id from user where name=? and password=?";
-            return j.queryForInt(sql, new Object[]{name, passwordAfterMd5});
-        } catch (Exception e) {
-            SlgLogger.error(SlgLoggerEntity.p("user", "login", -1, "error")
-                    .addParam("name", name), e);
-            return -1;
-        }
+        final String sql = "select id from user where name=? and password=?";
+        return j.queryForInt(sql, new Object[]{name, passwordAfterMd5});
     }
 
 

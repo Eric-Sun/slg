@@ -28,7 +28,7 @@ public class UserEquipDAO {
     @Autowired
     JdbcTemplate j;
 
-    public long insert(final long uid,
+    public int insert(final long uid,
                        final String type, final int level,
                        final int strength, final long urid, final String name) {
         KeyHolder holder = new GeneratedKeyHolder();
@@ -49,7 +49,7 @@ public class UserEquipDAO {
                 return pstmt;
             }
         }, holder);
-        return holder.getKey().longValue();
+        return holder.getKey().intValue();
     }
 
     public void update(long id, int level, int strength, long urid,
@@ -70,21 +70,6 @@ public class UserEquipDAO {
         return j.queryForObject(sql, new Object[]{uid, urid, type},
                 new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
 
-    }
-
-    public List<UserEquipCO> equipList(long uid, String type) {
-
-        String sql = "select id,uid,urid,type,level,strength,createtime,name " +
-                "from user_equip where uid=? and type=?";
-        return j.query(sql, new Object[]{uid, type},
-                new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
-    }
-
-    public List<UserEquipCO> noUsedEquipList(long uid, String type) {
-        String sql = "select id,uid,urid,type,level,strength,createtime,name " +
-                "from user_equip where uid=? and  urid=? and type=?";
-        return j.query(sql, new Object[]{uid, SlgConstants.Role.NO_ROLE, type},
-                new BeanPropertyRowMapper<UserEquipCO>(UserEquipCO.class));
     }
 
     public List<UserEquipCO> getUserEquips(int uid) {

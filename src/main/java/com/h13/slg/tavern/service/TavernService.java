@@ -1,10 +1,9 @@
 package com.h13.slg.tavern.service;
 
-import com.h13.slg.core.RequestErrorException;
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,34 +18,27 @@ public interface    TavernService {
      * 送走招来的贤者
      * @param request
      * @return
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public SlgData leave(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData leave(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException;
 
 
     /**
      * 开始招贤
      * @param request
      * @return
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public SlgData invite(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData invite(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException;
 
 
     /**
      * 雇佣
      * @param request
      * @return
-     * @throws RequestErrorException
+     * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public SlgData enroll(SlgRequestDTO request) throws RequestErrorException;
+    public SlgData enroll(SlgRequestDTO request) throws RequestFatalException;
 
 
-    /**
-     * 获取上次的酒馆内容
-     * @param request
-     * @return
-     * @throws RequestErrorException
-     */
-    public SlgData get(SlgRequestDTO request) throws RequestErrorException;
 }

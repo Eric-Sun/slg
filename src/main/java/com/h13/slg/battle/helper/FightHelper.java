@@ -8,8 +8,9 @@ import com.h13.slg.config.co.MonsterCO;
 import com.h13.slg.config.fetcher.BattleConfigFetcher;
 import com.h13.slg.config.fetcher.MonsterConfigFetcher;
 import com.h13.slg.core.CodeConstants;
-import com.h13.slg.core.RequestErrorException;
+import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.SlgConstants;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.role.co.UserRoleCO;
 import com.h13.slg.role.helper.UserRoleHelper;
 import com.h13.slg.skill.co.UserRoleSkillCO;
@@ -51,7 +52,7 @@ public class FightHelper {
      *
      * @param battleId 战斗对象id
      */
-    public FightResult pve(int uid, long battleId) throws RequestErrorException {
+    public FightResult pve(int uid, long battleId) throws RequestFatalException, RequestUnexpectedException {
 
         BattleCO battleCO = battleConfigFetcher.get(battleId + "");
         FightUnit defenceFightUnit = new FightUnit();
@@ -77,7 +78,7 @@ public class FightHelper {
 
                 defenceFightUnit.getAllPos().set(i, fighter);
             } catch (Exception e) {
-                throw new RequestErrorException(CodeConstants.SYSTEM.COMMON_ERROR, e.getMessage());
+                throw new RequestFatalException(CodeConstants.SYSTEM.COMMON_ERROR, e.getMessage());
             }
         }
 
@@ -96,7 +97,7 @@ public class FightHelper {
         for (int i = 0; i < teamData.size(); i++) {
             int urid = new Integer(teamData.get(i) + "");
             UserRoleSkillCO tianfu = roleSkillHelper.getTianfu(uid, urid);
-            UserRoleSkillCO jiangling = roleSkillHelper.getJiangling(uid, urid);
+            UserRoleSkillCO jiangling = roleSkillHelper.getPutong(uid, urid);
             if (urid == 0)
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
@@ -133,7 +134,8 @@ public class FightHelper {
                 if (fighter == null)
                     continue;
                 int urid = fighter.getId();
-                userRoleHelper.addXp(uid, urid, fightReward.getHeroXp());
+                UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
+                userRoleHelper.addXp(userRoleCO, fightReward.getHeroXp());
             }
 
         }

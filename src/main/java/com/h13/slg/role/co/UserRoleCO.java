@@ -1,9 +1,5 @@
 package com.h13.slg.role.co;
 
-import com.h13.slg.role.vo.UserRoleAccessoryVO;
-import com.h13.slg.role.vo.UserRoleArmorVO;
-import com.h13.slg.role.vo.UserRoleWeaponVO;
-
 import java.util.Map;
 
 /**

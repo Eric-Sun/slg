@@ -38,7 +38,7 @@ public class ConfigLoader {
                 }
             }
         } catch (Exception e) {
-            SlgLogger.error(SlgLoggerEntity.p("base", "config load", -1, "ok"), e);
+            SlgLogger.error(SlgLoggerEntity.e("base", "config load", -1, "ok", e));
         }
 
     }

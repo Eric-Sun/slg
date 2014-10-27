@@ -1,8 +1,7 @@
 package com.h13.slg.user.service;
 
-import com.h13.slg.core.SlgData;
-import com.h13.slg.core.SlgRequestDTO;
-import com.h13.slg.user.hepler.CastleHelper;
+import com.h13.slg.core.transmission.SlgData;
+import com.h13.slg.core.transmission.SlgRequestDTO;
 import com.h13.slg.user.hepler.FarmHelper;
 import com.h13.slg.user.hepler.UserStatusHelper;
 import com.h13.slg.user.vo.FarmVO;
