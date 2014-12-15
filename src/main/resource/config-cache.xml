@@ -16,7 +16,7 @@
 
     <!-- authTemplate -->
     <bean id="authSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.user.co.AuthCO"/>
     </bean>
     <bean id="authTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -26,7 +26,7 @@
 
     <!-- tavernConfigTemplate -->
     <bean id="tavernConfigSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.TavernConfigCO"/>
     </bean>
     <bean id="tavernConfigTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -36,7 +36,7 @@
 
     <!-- battleTemplate -->
     <bean id="battleSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.BattleCO"/>
     </bean>
     <bean id="battleTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -52,7 +52,7 @@
 
     <!-- equipTemplate -->
     <bean id="equipSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.EquipCO"/>
     </bean>
     <bean id="equipTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -62,7 +62,7 @@
 
     <!-- armorTemplate -->
     <bean id="armorSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.ArmorCO"/>
     </bean>
     <bean id="armorTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -72,7 +72,7 @@
 
     <!-- materialTemplate -->
     <bean id="materialSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.MaterialCO"/>
     </bean>
     <bean id="materialTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -82,7 +82,7 @@
 
     <!-- monsterTemplate -->
     <bean id="monsterSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.MonsterCO"/>
     </bean>
     <bean id="monsterTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -92,7 +92,7 @@
 
     <!-- taskTemplate -->
     <bean id="taskSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.TaskCO"/>
     </bean>
     <bean id="taskTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -103,7 +103,7 @@
 
     <!-- globalTemplate -->
     <bean id="globalSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.GlobalCO"/>
     </bean>
     <bean id="globalTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -113,7 +113,7 @@
 
     <!-- roleTemplate -->
     <bean id="roleSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.RoleCO"/>
     </bean>
     <bean id="roleTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -129,7 +129,7 @@
 
     <!-- roleTemplate -->
     <bean id="roleLevelSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.RoleLevelCO"/>
     </bean>
     <bean id="roleLevelTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -139,7 +139,7 @@
 
     <!-- weaponTemplate -->
     <bean id="weaponSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.WeaponCO"/>
     </bean>
     <bean id="weaponTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -149,7 +149,7 @@
 
     <!-- accessoryTemplate -->
     <bean id="accessorySerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.AccessoryCO"/>
     </bean>
     <bean id="accessoryTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -159,7 +159,7 @@
 
     <!-- strengthenTemplate -->
     <bean id="strengthenSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.StrengthenCO"/>
     </bean>
     <bean id="strengthenTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -169,7 +169,7 @@
 
     <!-- shopTemplate -->
     <bean id="shopSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.ShopCO"/>
     </bean>
     <bean id="shopTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -179,7 +179,7 @@
 
     <!-- skillTemplate -->
     <bean id="skillCO"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.SkillConfigCO"/>
     </bean>
     <bean id="skillTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -189,7 +189,7 @@
 
     <!-- skilleffectTemplate -->
     <bean id="skilleffectCO"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.SkilleffectConfigCO"/>
     </bean>
     <bean id="skilleffectTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -199,7 +199,7 @@
 
     <!-- roleSkillTemplate -->
     <bean id="roleSkillCO"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.RoleSkillCO"/>
     </bean>
     <bean id="roleSkillTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -209,12 +209,33 @@
 
     <!-- zuLingTemplate -->
     <bean id="zuLingCO"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.ZuLingCO"/>
     </bean>
     <bean id="zuLingTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
           p:valueSerializer-ref="zuLingCO">
+    </bean>
+
+
+    <!-- gemTemplate -->
+    <bean id="gemCO"
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.GemCO"/>
+    </bean>
+    <bean id="gemTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="gemCO">
+    </bean>
+
+    <!-- businessTemplate -->
+    <bean id="businessCO"
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.config.co.BusinessCO"/>
+    </bean>
+    <bean id="businessTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="businessCO">
     </bean>
 
 

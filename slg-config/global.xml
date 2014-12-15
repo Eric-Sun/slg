@@ -45,4 +45,9 @@
             <value>1</value>
             <desc>默认新用户的等级</desc>
       </global>
+      <global>
+            <key>PassportCheckTokenUrl</key>
+            <value>http://localhost:8081/account/checkToken</value>
+            <desc>验证token地址</desc>
+      </global>
 </globalList>

@@ -26,9 +26,10 @@ public class UserPackageDAO {
     @Autowired
     JdbcTemplate j;
 
-    public void insert(long id,List<Integer> equip,
+    public void insert(int id, List<Integer> equip,
                        Map<String, Integer> material,
-                       Map<String, Integer> skill) {
+                       Map<String, Integer> skill,
+                       Map<String, Integer> gem) {
 
         String sql = "insert into user_package " +
                 "(id,equip,material,skill,createtime) " +
@@ -37,12 +38,14 @@ public class UserPackageDAO {
         j.update(sql, new Object[]{id,
                 JSON.toJSONString(equip),
                 JSON.toJSONString(material),
-                JSON.toJSONString(skill)});
+                JSON.toJSONString(skill),
+                JSON.toJSONString(gem)
+        });
     }
 
 
-    public UserPackageCO get(long id) {
-        String sql = "select id,equip,material,skill,createtime from user_package where id=?";
+    public UserPackageCO get(int id) {
+        String sql = "select id,equip,material,skill,gem,createtime from user_package where id=?";
         return j.queryForObject(sql, new Object[]{id}, new RowMapper<UserPackageCO>() {
             @Override
             public UserPackageCO mapRow(ResultSet resultSet, int i) throws SQLException {
@@ -51,25 +54,31 @@ public class UserPackageDAO {
                 userPackageCO.setEquip(JSON.parseObject(resultSet.getString(2), List.class));
                 userPackageCO.setMaterial(JSON.parseObject(resultSet.getString(3), Map.class));
                 userPackageCO.setSkill(JSON.parseObject(resultSet.getString(4), Map.class));
+                userPackageCO.setGem(JSON.parseObject(resultSet.getString(5), Map.class));
                 return userPackageCO;
             }
         });
     }
 
 
-    public void updateEquip(long id, List<Integer> equip) {
+    public void updateEquip(int id, List<Integer> equip) {
         String sql = "update user_package set equip=? where id=?";
         j.update(sql, new Object[]{JSON.toJSONString(equip), id});
     }
 
-    public void updateMaterial(long id, Map<String, Integer> material) {
+    public void updateMaterial(int id, Map<String, Integer> material) {
         String sql = "update user_package set material=? where id=?";
         j.update(sql, new Object[]{JSON.toJSONString(material), id});
     }
 
-    public void updateSkill(long id, Map<String, Integer> skill) {
+    public void updateSkill(int id, Map<String, Integer> skill) {
         String sql = "update user_package set skill=? where id=?";
         j.update(sql, new Object[]{JSON.toJSONString(skill), id});
+    }
+
+    public void updateGem(int id, Map<String, Integer> gem) {
+        String sql = "update user_package set gem=? where id=?";
+        j.update(sql, new Object[]{JSON.toJSONString(gem), id});
     }
 
 }

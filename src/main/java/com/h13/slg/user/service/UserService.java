@@ -19,7 +19,7 @@ public interface UserService {
      *
      * @return
      */
-    public SlgData login(SlgRequestDTO request) throws RequestFatalException;
+    public SlgData login(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException;
 
     /**
      * 注册

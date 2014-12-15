@@ -51,7 +51,7 @@ public class BaseController {
                     .addParam("args", args)
                     .addParam("authKey", authKey)
                     .addParam("authTime", authTime));
-            SlgResponseDTO resp = slg.handle(mod, act, uid, seq, args, authTime, authKey);
+            SlgResponseDTO resp = slg.handle(mod, act, uid, seq, args, authTime, authKey, request.getRemoteAddr());
             SlgLogger.info(SlgLoggerEntity.r(mod, act, uid, "response")
                     .addParam("resp", resp));
             response.getWriter().write(JSON.toJSONString(resp));

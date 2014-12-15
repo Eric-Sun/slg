@@ -1,6 +1,6 @@
 package com.h13.slg.battle.buffs;
 
-import com.h13.slg.battle.fight.FightResult;
+import com.h13.slg.battle.old_fight.FightResult;
 
 /**
  * buff基础类，每个将领都会有一个buff的hash，启动包括了buff的对象

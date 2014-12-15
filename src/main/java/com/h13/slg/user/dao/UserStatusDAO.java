@@ -73,4 +73,11 @@ public class UserStatusDAO {
                 userStatusCO.getXp()
                 , userStatusCO.getFightForce(), userStatusCO.getId()});
     }
+
+
+    public UserStatusCO getByName(String name) {
+        String sql = "select id,name,gold,food," +
+                "cash,level,createtime,xp,fight_force from user_status where name=?";
+        return j.queryForObject(sql, new Object[]{name}, new BeanPropertyRowMapper<UserStatusCO>(UserStatusCO.class));
+    }
 }

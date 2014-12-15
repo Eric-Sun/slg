@@ -3,6 +3,7 @@ package com.h13.slg.role.helper;
 import com.h13.slg.config.cache.RoleCache;
 import com.h13.slg.config.co.RoleCO;
 import com.h13.slg.config.co.RoleLevelCO;
+import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.RoleLevelConfigFetcher;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.exception.RequestFatalException;
@@ -37,7 +38,7 @@ public class UserRoleHelper {
     @Autowired
     FightForceHelper fightForceHelper;
     @Autowired
-    RoleCache roleCache;
+    RoleConfigFetcher roleConfigFetcher;
     @Autowired
     RoleLevelConfigFetcher roleLevelConfigFetcher;
     @Autowired
@@ -155,15 +156,12 @@ public class UserRoleHelper {
      */
     public UserRoleCO addUserRole(int uid, int rId) {
         UserRoleCO userRoleCO = new UserRoleCO();
-        RoleCO roleCO = roleCache.get(rId + "");
+        RoleCO roleCO = roleConfigFetcher.get(rId + "");
 
         userRoleCO.setSoldier(roleCO.getSoldier());
-        userRoleCO.setDefence(roleCO.getDefence());
         userRoleCO.setAccessory(SlgConstants.Role.NO_EQUIP_ID);
-        userRoleCO.setAttack(roleCO.getAttack());
         userRoleCO.setArmor(SlgConstants.Role.NO_EQUIP_ID);
         userRoleCO.setWeapon(SlgConstants.Role.NO_EQUIP_ID);
-        userRoleCO.setHealth(roleCO.getHealth());
         userRoleCO.setFightForce(roleCO.getFightForce());
         userRoleCO.setUid(uid);
         userRoleCO.setLevel(SlgConstants.Role.DEFAULT_LEVEL);
@@ -175,7 +173,7 @@ public class UserRoleHelper {
 
         int urid = userRoleDAO.insert(userRoleCO.getRoleId(), userRoleCO.getUid(), SlgConstants.Role.NO_EQUIP_ID,
                 SlgConstants.Role.NO_EQUIP_ID, SlgConstants.Role.NO_EQUIP_ID, SlgConstants.Role.DEFAULT_LEVEL,
-                userRoleCO.getFightForce(), userRoleCO.getAttack(), userRoleCO.getDefence(), userRoleCO.getHealth(),
+                userRoleCO.getFightForce(),
                 userRoleCO.getSoldier(), userRoleCO.getRoleName(), userRoleCO.getXp(), userRoleCO.getPutongSkillId(),
                 userRoleCO.getTianfuSkillId());
 
@@ -189,6 +187,7 @@ public class UserRoleHelper {
      * 穿戴装备
      *
      * @throws com.h13.slg.core.exception.RequestFatalException
+     *
      */
     public void wear(UserRoleCO userRoleCO, UserEquipCO userEquipCO) throws RequestFatalException, RequestUnexpectedException {
         if (userEquipCO.getUid() != userRoleCO.getUid()) {
@@ -227,6 +226,7 @@ public class UserRoleHelper {
      * 脱下装备
      *
      * @throws com.h13.slg.core.exception.RequestFatalException
+     *
      */
     public void takeOff(UserRoleCO userRoleCO, UserEquipCO userEquipCO) throws RequestFatalException, RequestUnexpectedException {
         if (userEquipCO.getUid() != userRoleCO.getUid()) {
@@ -258,6 +258,39 @@ public class UserRoleHelper {
         updateUserRole(userRoleCO);
         userEquipHelper.updateUserEquip(userEquipCO);
         fightForceHelper.updateUserRoleFightForce(userRoleCO);
+    }
+
+
+    /**
+     * get UserRole's final attack.
+     * <p/>
+     * Final Attack = Base Attack + AttackGrouth * current Level
+     * The same as Defence and Health
+     *
+     * @param uid
+     * @param urId
+     * @return
+     */
+    public int getAttack(int uid, int urId) throws RequestUnexpectedException {
+        UserRoleCO userRoleCO = getUserRole(uid, urId);
+        int currentLevel = userRoleCO.getLevel();
+        RoleCO roleCO = roleConfigFetcher.get(userRoleCO.getRoleId() + "");
+        return roleCO.getAttack() + currentLevel * roleCO.getAttackGrouth();
+    }
+
+
+    public int getDefence(int uid, int urId) throws RequestUnexpectedException {
+        UserRoleCO userRoleCO = getUserRole(uid, urId);
+        int currentLevel = userRoleCO.getLevel();
+        RoleCO roleCO = roleConfigFetcher.get(userRoleCO.getRoleId() + "");
+        return roleCO.getDefence() + currentLevel * roleCO.getDefenceGrouth();
+    }
+
+    public int getHealth(int uid, int urId) throws RequestUnexpectedException {
+        UserRoleCO userRoleCO = getUserRole(uid, urId);
+        int currentLevel = userRoleCO.getLevel();
+        RoleCO roleCO = roleConfigFetcher.get(userRoleCO.getRoleId() + "");
+        return roleCO.getHealth() + currentLevel * roleCO.getHealth();
     }
 
 

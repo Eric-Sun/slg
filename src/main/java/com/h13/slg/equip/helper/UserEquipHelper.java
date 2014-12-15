@@ -1,16 +1,15 @@
 package com.h13.slg.equip.helper;
 
 import com.google.common.collect.Lists;
+import com.h13.slg.config.co.*;
+import com.h13.slg.config.fetcher.*;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.SlgConstants;
 import com.h13.slg.core.exception.RequestUnexpectedException;
+import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.equip.cache.UserEquipCache;
 import com.h13.slg.pkg.helper.UserPackageHelper;
-import com.h13.slg.config.co.EquipCO;
-import com.h13.slg.config.co.StrengthenCO;
-import com.h13.slg.config.fetcher.EquipConfigFetcher;
-import com.h13.slg.config.fetcher.StrengthenConfigFetcher;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.pkg.co.UserPackageCO;
 import com.h13.slg.equip.dao.UserEquipDAO;
@@ -49,9 +48,14 @@ public class UserEquipHelper {
     UserPackageHelper userPackageHelper;
     @Autowired
     FightForceHelper fightForceHelper;
-
     @Autowired
     UserEquipCache userEquipCache;
+    @Autowired
+    WeaponConfigFetcher weaponConfigFetcher;
+    @Autowired
+    ArmorConfigFetcher armorConfigFetcher;
+    @Autowired
+    AccessoryConfigFetcher accessoryConfigFetcher;
 
     /**
      * 获取用户装备
@@ -86,7 +90,7 @@ public class UserEquipHelper {
      */
     public void updateUserEquip(UserEquipCO ue) {
         userEquipDAO.update(ue.getId(), ue.getLevel(), ue.getStrength(),
-                ue.getUrid(), ue.getName());
+                ue.getUrid(), ue.getName(), ue.getGemId());
         userEquipCache.set(ue);
     }
 
@@ -107,13 +111,15 @@ public class UserEquipHelper {
         userEquipCO.setName(name);
         userEquipCO.setUrid(SlgConstants.Role.NO_ROLE);
         userEquipCO.setStrength(SlgConstants.Equip.DEFAULT_STRENGTHEN);
+        userEquipCO.setGemId(SlgConstants.Equip.DEFAULT_GEM_ID);
         int ueid = userEquipDAO.insert(
                 userEquipCO.getUid(),
                 userEquipCO.getType(),
                 userEquipCO.getLevel(),
                 userEquipCO.getStrength(),
                 userEquipCO.getUrid(),
-                userEquipCO.getName());
+                userEquipCO.getName(),
+                userEquipCO.getGemId());
         userEquipCO.setId(ueid);
         userEquipCache.set(userEquipCO);
 
@@ -278,6 +284,75 @@ public class UserEquipHelper {
             ueList.add(ue3);
         }
         return ueList;
+    }
+
+
+    /**
+     * Get weapon final attack.
+     *
+     * @param uid
+     * @param urid
+     * @param ueid
+     * @return
+     * @throws RequestUnexpectedException
+     * @throws RequestFatalException
+     */
+    public int getWeaponAttack(int uid, int urid, int ueid) throws RequestUnexpectedException, RequestFatalException {
+        UserEquipCO userEquipCO = getUserEquip(uid, ueid);
+        if (!userEquipCO.getType().equals(SlgConstants.Equip.EquipType.WEAPON))
+            throw new RequestUnexpectedException(CodeConstants.Equip.EQUIP_TYPE_IS_NOT_CORRECT,
+                    String.format("urid=%s,ueid=%s,type=%s,needType=%s",
+                            urid, ueid, userEquipCO.getType(), SlgConstants.Equip.EquipType.WEAPON));
+        WeaponCO weaponCO = weaponConfigFetcher.get(userEquipCO.getStrength() + "");
+        int level = userEquipCO.getLevel();
+        int attack = new Integer(SlgBeanUtils.getProperty(weaponCO, "purple" + level));
+        return attack;
+    }
+
+
+    /**
+     * Get armor final defence.
+     *
+     * @param uid
+     * @param urid
+     * @param ueid
+     * @return
+     * @throws RequestUnexpectedException
+     * @throws RequestFatalException
+     */
+    public int getArmorDefence(int uid, int urid, int ueid) throws RequestUnexpectedException, RequestFatalException {
+        UserEquipCO userEquipCO = getUserEquip(uid, ueid);
+        if (!userEquipCO.getType().equals(SlgConstants.Equip.EquipType.ARMOR))
+            throw new RequestUnexpectedException(CodeConstants.Equip.EQUIP_TYPE_IS_NOT_CORRECT,
+                    String.format("urid=%s,ueid=%s,type=%s,needType=%s",
+                            urid, ueid, userEquipCO.getType(), SlgConstants.Equip.EquipType.ARMOR));
+        ArmorCO armorCO = armorConfigFetcher.get(userEquipCO.getStrength() + "");
+        int level = userEquipCO.getLevel();
+        int defence = new Integer(SlgBeanUtils.getProperty(armorCO, "purple" + level));
+        return defence;
+    }
+
+
+    /**
+     * Get accessory final health.
+     *
+     * @param uid
+     * @param urid
+     * @param ueid
+     * @return
+     * @throws RequestUnexpectedException
+     * @throws RequestFatalException
+     */
+    public int getAccessoryHealth(int uid, int urid, int ueid) throws RequestUnexpectedException, RequestFatalException {
+        UserEquipCO userEquipCO = getUserEquip(uid, ueid);
+        if (!userEquipCO.getType().equals(SlgConstants.Equip.EquipType.ACCESSORY))
+            throw new RequestUnexpectedException(CodeConstants.Equip.EQUIP_TYPE_IS_NOT_CORRECT,
+                    String.format("urid=%s,ueid=%s,type=%s,needType=%s",
+                            urid, ueid, userEquipCO.getType(), SlgConstants.Equip.EquipType.ACCESSORY));
+        AccessoryCO accessoryCO = accessoryConfigFetcher.get(userEquipCO.getStrength() + "");
+        int level = userEquipCO.getLevel();
+        int health = new Integer(SlgBeanUtils.getProperty(accessoryCO, "purple" + level));
+        return health;
     }
 
 }

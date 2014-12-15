@@ -30,6 +30,24 @@ public class EquipServiceTest {
         System.out.println(s);
     }
 
+
+    @Test
+    public void setGem() {
+        HttpClientUtil http = new HttpClientUtil();
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("mod", "equip");
+        map.put("act", "setGem");
+        map.put("uid", "2");
+        map.put("auth_key", "aaaa");
+        map.put("auth_time", "12345");
+        map.put("args", "{gemId:'103',ueId:'16'}");
+        map.put("seq", "1");
+        String s = http.post("http://localhost:8080/slg/", map);
+        System.out.println(s);
+    }
+
+
+
     @Test
     public void equip() {
         HttpClientUtil http = new HttpClientUtil();
@@ -40,6 +58,22 @@ public class EquipServiceTest {
         map.put("auth_key", "c81e728d9d4c2f636f067f89cc14862c");
         map.put("auth_time", "1403017602502");
         map.put("args", "{ueid:12}");
+        map.put("seq", "1");
+        String s = http.post("http://localhost:8080/slg/", map);
+        System.out.println(s);
+    }
+
+
+    @Test
+    public void unsetGem() {
+        HttpClientUtil http = new HttpClientUtil();
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("mod", "equip");
+        map.put("act", "unsetGem");
+        map.put("uid", "2");
+        map.put("auth_key", "aaaa");
+        map.put("auth_time", "12345");
+        map.put("args", "{ueId:'16'}");
         map.put("seq", "1");
         String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);

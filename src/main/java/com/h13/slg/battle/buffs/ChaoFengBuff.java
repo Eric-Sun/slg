@@ -1,6 +1,6 @@
 package com.h13.slg.battle.buffs;
 
-import com.h13.slg.battle.fight.FightResult;
+import com.h13.slg.battle.old_fight.FightResult;
 
 /**
  * 嘲讽，让这个人始终攻击一个人，除非这个人死亡

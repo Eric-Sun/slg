@@ -35,14 +35,14 @@ public class UserRoleDAO {
                       final long weapon,
                       final long armor, final long accessory,
                       final int level, final int fightForce,
-                      final int attack, final int defence, final int health, final int soldier,
+                      final int soldier,
                       final String roleName, final int xp,
                       final int putongSkillId, final int tianfuSkillId) {
         KeyHolder holder = new GeneratedKeyHolder();
         final String sql = "insert into user_role " +
                 "(role_id,uid,weapon,armor,accessory,level,fight_force," +
-                "attack,defence,health,createtime,soldier,role_name,xp,putong_skill_id,tianfu_skill_id) " +
-                "values (?,?,?,?,?,?,?,?,?,?,now(),?,?,?,?,?)";
+                "createtime,soldier,role_name,xp,putong_skill_id,tianfu_skill_id) " +
+                "values (?,?,?,?,?,?,?,now(),?,?,?,?,?)";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
@@ -54,14 +54,11 @@ public class UserRoleDAO {
                 pstmt.setLong(5, accessory);
                 pstmt.setInt(6, level);
                 pstmt.setInt(7, fightForce);
-                pstmt.setInt(8, attack);
-                pstmt.setInt(9, defence);
-                pstmt.setInt(10, health);
-                pstmt.setInt(11, soldier);
-                pstmt.setString(12, roleName);
-                pstmt.setInt(13, xp);
-                pstmt.setInt(14, putongSkillId);
-                pstmt.setInt(15, tianfuSkillId);
+                pstmt.setInt(8, soldier);
+                pstmt.setString(9, roleName);
+                pstmt.setInt(10, xp);
+                pstmt.setInt(11, putongSkillId);
+                pstmt.setInt(12, tianfuSkillId);
                 return pstmt;
             }
         }, holder);
@@ -69,26 +66,26 @@ public class UserRoleDAO {
     }
 
     public UserRoleCO get(long uid, long urId) {
-        String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
+        String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force" +
                 ",soldier,role_name,xp,putong_skill_id,tianfu_skill_id from user_role where id=? and uid=?";
         return j.queryForObject(sql, new Object[]{urId, uid}, new BeanPropertyRowMapper<UserRoleCO>(UserRoleCO.class));
     }
 
 
     public List<UserRoleCO> getRoleList(long uid) {
-        String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force,attack,defence,health" +
+        String sql = "select id,role_id,uid,weapon,armor,accessory,level,fight_force" +
                 ",soldier,role_name,xp,putong_skill_id,tianfu_skill_id from user_role where uid=?";
         return j.query(sql, new Object[]{uid}, new BeanPropertyRowMapper<UserRoleCO>(UserRoleCO.class));
     }
 
 
     public void update(long urId, long weapon, long armor, long accessory, int fightForce, int level,
-                        String roleName, int xp,int putongSkillId,
+                       String roleName, int xp, int putongSkillId,
                        int tianfuSkillId) {
         String sql = "update user_role set weapon=?,armor=?,accessory=?,fight_force=?,level=?," +
                 "role_name=?,xp=?,putong_skill_id=?,tianfu_skill_id=? " +
                 "where id=?";
-        j.update(sql, new Object[]{weapon, armor, accessory, fightForce, level, roleName, xp, putongSkillId,tianfuSkillId,
+        j.update(sql, new Object[]{weapon, armor, accessory, fightForce, level, roleName, xp, putongSkillId, tianfuSkillId,
                 urId});
     }
 

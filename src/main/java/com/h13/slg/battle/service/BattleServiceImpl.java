@@ -3,7 +3,7 @@ package com.h13.slg.battle.service;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
-import com.h13.slg.battle.fight.FightResult;
+import com.h13.slg.battle.old_fight.FightResult;
 import com.h13.slg.battle.helper.FightHelper;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.battle.vo.*;

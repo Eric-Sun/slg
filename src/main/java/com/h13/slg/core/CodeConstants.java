@@ -9,6 +9,8 @@ public class CodeConstants {
         public static int SUCCESS = 0;
         public static int COMMON_ERROR = 1001;
         public static int TOKEN_INVALID = 1002;
+        public static int SHOULD_REGISTER_FIRST = 1003;
+        public static int CANNOT_USE_ADMIN_INTERFACE = 1004;
     }
 
 
@@ -28,6 +30,8 @@ public class CodeConstants {
         public static int RESOURCE_IS_NOT_ENOUGH = 2002;
         public static int DONT_HAVE_THIS_USER_ROLE = 2003;
         public static int EQUIP_ID_SHOULD_BE_NO_EQUIP_ID = 2004;
+        public static int EQUIP_GEM_IS_SET = 2005;
+        public static int EQUIP_GEM_IS_NOT_SET = 2006;
     }
 
     public static class Tavern {
@@ -57,5 +61,22 @@ public class CodeConstants {
         public static int MATERIAL_IS_NOT_ENOUGH = 7001;
     }
 
+
+    public static class Gem {
+        public static int DONT_HAVE_ENOUTH_GEM = 8001;
+        public static int GEM_QUALITY_IS_TOP = 8002;
+    }
+
+    public static class Business {
+        public static int HAVE_GOT_TOP_STEP = 9001;
+        public static int STEP_IS_NOT_CORRECT = 9002;
+        public static int CAN_NOT_PASS = 9003;
+        public static int GOLD_IS_NOT_ENOUGH = 9004;
+    }
+
+
+    public static class Equip {
+        public static int EQUIP_TYPE_IS_NOT_CORRECT = 10001;
+    }
 
 }

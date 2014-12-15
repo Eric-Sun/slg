@@ -1,7 +1,7 @@
 package com.h13.slg.user.cache;
 
+import com.h13.slg.config.PropertiesConfiguration;
 import com.h13.slg.user.co.AuthCO;
-import com.h13.slg.web.SysConfig;
 import com.h13.slg.web.SysConfigConstants;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -31,7 +31,7 @@ public class AuthCache {
     }
 
     public void set(long uid, AuthCO authCO) {
-        long ms = new Long(SysConfig.get(SysConfigConstants.AUTH_CACHE_MS));
+        long ms = new Long(PropertiesConfiguration.getInstance().getIntValue(SysConfigConstants.AUTH_CACHE_MS));
         authTemplate.opsForValue().set(KEY + uid, authCO, ms, TimeUnit.MILLISECONDS);
     }
 

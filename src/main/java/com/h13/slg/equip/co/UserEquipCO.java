@@ -15,6 +15,15 @@ public class UserEquipCO {
     private int level;
     private int strength;
     private String name;
+    private int gemId;
+
+    public int getGemId() {
+        return gemId;
+    }
+
+    public void setGemId(int gemId) {
+        this.gemId = gemId;
+    }
 
     public int getId() {
         return id;

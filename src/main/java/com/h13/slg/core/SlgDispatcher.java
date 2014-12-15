@@ -1,6 +1,10 @@
 package com.h13.slg.core;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
+import com.h13.slg.config.PropertiesConfiguration;
+import com.h13.slg.core.exception.RequestException;
 import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.transmission.SlgData;
@@ -10,6 +14,7 @@ import com.h13.slg.user.hepler.AuthHelper;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.event.service.EventService;
+import com.h13.slg.web.SysConfigConstants;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -18,6 +23,7 @@ import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,25 +39,40 @@ public class SlgDispatcher implements ApplicationContextAware {
     @Autowired
     AuthHelper authHelper;
 
+    List<String> whiteList = Lists.newArrayList();
+
     private ApplicationContext applicationContext;
     private final static String SUFFIX = "Service";
 
-    public SlgResponseDTO handle(String mod, String act, int uid, int seq, String args, long authTime, String authKey) {
+    public SlgResponseDTO handle(String mod, String act, int uid, int seq, String args, long authTime, String authKey, String remoteIp) {
         StringBuilder sb = new StringBuilder();
         sb.append(mod.substring(0, 1).toUpperCase());
-        sb.append(mod.substring(1).toLowerCase());
+        sb.append(mod.substring(1));
         sb.append(SUFFIX);
+        if (whiteList.size() == 0) {
+            String str = PropertiesConfiguration.getInstance().getStringValue(SysConfigConstants.ADMIN_IP_WHITELIST);
+            whiteList = Splitter.on(",").splitToList(str);
+            SlgLogger.info(SlgLoggerEntity.p("config", "adminWhiteList", uid, "set ok"));
+        }
 
         Map<String, Object> map = JSON.parseObject(args, Map.class);
         Object beanObj = applicationContext.getBean(sb.toString());
-        Class clazz = applicationContext.getBean(sb.toString()).getClass();
+        Class clazz = beanObj.getClass();
         SlgResponseDTO resp = null;
         SlgRequestDTO req = null;
         try {
             Method m = clazz.getMethod(act, new Class[]{SlgRequestDTO.class});
             req = new SlgRequestDTO(mod, act, uid, seq, map);
+            // admin的话需要ip白名单
+            if (mod.indexOf("admin") > 0 && !whiteList.contains(remoteIp)) {
+                SlgLogger.warn(SlgLoggerEntity.p("request", "checkIp", uid, "ip is " + remoteIp));
+                resp = new SlgResponseDTO(req, CodeConstants.SYSTEM.CANNOT_USE_ADMIN_INTERFACE, null);
+                return resp;
+            }
 
-            if (!act.equals("login") && !act.equals("register")) {
+
+            if (!act.equals("login") && !act.equals("register")
+                    && mod.indexOf("admin") < 0) {
                 // 检测auth
                 if (!authHelper.check(uid, authKey, authTime)) {
                     // 返回失败
@@ -65,17 +86,9 @@ public class SlgDispatcher implements ApplicationContextAware {
             resp = new SlgResponseDTO(req, r);
         } catch (Exception e) {
             if (e instanceof InvocationTargetException) {
-                if (((InvocationTargetException) e).getTargetException() instanceof RequestFatalException) {
-                    // 程序bug处理
-                    RequestFatalException reqError = (RequestFatalException) ((InvocationTargetException) e).getTargetException();
-                    SlgLogger.error(SlgLoggerEntity.e(mod, act, uid, reqError.getDesc(), reqError));
+                if (((InvocationTargetException) e).getTargetException() instanceof RequestException) {
+                    RequestException reqError = (RequestException) ((InvocationTargetException) e).getTargetException();
                     return new SlgResponseDTO(req, reqError.getCode(), reqError.getDesc());
-                } else if (((InvocationTargetException) e).getTargetException() instanceof RequestUnexpectedException) {
-                    // 非期待异常
-                    RequestUnexpectedException err = (RequestUnexpectedException) ((InvocationTargetException) e).
-                            getTargetException();
-                    SlgLogger.warn(SlgLoggerEntity.p(mod, act, uid, err.getDesc()));
-                    return new SlgResponseDTO(req, err.getCode(), err.getDesc());
                 } else {
                     // 其他异常，按照bug处理
                     Throwable reqError = ((InvocationTargetException) e).getTargetException();

@@ -2,7 +2,7 @@ package com.h13.slg.battle.helper;
 
 import com.google.common.base.Strings;
 import com.h13.slg.battle.co.UserTeamCO;
-import com.h13.slg.battle.fight.*;
+import com.h13.slg.battle.old_fight.*;
 import com.h13.slg.config.co.BattleCO;
 import com.h13.slg.config.co.MonsterCO;
 import com.h13.slg.config.fetcher.BattleConfigFetcher;

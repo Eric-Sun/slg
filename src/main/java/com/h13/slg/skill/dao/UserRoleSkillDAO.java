@@ -113,7 +113,7 @@ public class UserRoleSkillDAO {
 
 
     public UserRoleSkillCO get(int uid, int ursid) {
-        final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and id=? and delete=0";
+        final String sql = "select id,rid,uid,`type`,level,`delete`,rsid,name from user_role_skill where uid=? and id=? and `delete`=0";
         return j.queryForObject(sql, new Object[]{uid, ursid}, new BeanPropertyRowMapper<UserRoleSkillCO>(UserRoleSkillCO.class));
     }
 }

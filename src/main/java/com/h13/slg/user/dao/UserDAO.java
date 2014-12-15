@@ -31,33 +31,21 @@ public class UserDAO {
     @Autowired
     JdbcTemplate j;
 
-    public int insert(final String name, final String passwordAfterMd5) {
+    public int insert(final int aid, final String name) {
         KeyHolder holder = new GeneratedKeyHolder();
-        final String sql = "insert into user (name,password,createtime) values (?,?,now())";
+        final String sql = "insert into user (name,aid,createtime) values (?,?,now())";
         j.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
                 PreparedStatement pstmt = connection.prepareStatement(sql);
                 pstmt.setString(1, name);
-                pstmt.setString(2, passwordAfterMd5);
+                pstmt.setInt(2, aid);
                 return pstmt;
             }
         }, holder);
         return holder.getKey().intValue();
     }
 
-
-    /**
-     * if result is -1 . user not exists
-     *
-     * @param name
-     * @param passwordAfterMd5
-     * @return
-     */
-    public int login(final String name, final String passwordAfterMd5) {
-        final String sql = "select id from user where name=? and password=?";
-        return j.queryForInt(sql, new Object[]{name, passwordAfterMd5});
-    }
 
 
     public boolean check(String name) {
@@ -69,5 +57,10 @@ public class UserDAO {
         else
             return false;
 
+    }
+
+    public int getInfoByAid(int aid) {
+        final String sql = "select uid from user where aid=? ";
+        return j.queryForInt(sql, new Object[]{aid});
     }
 }

@@ -1,8 +1,11 @@
 package com.h13.slg.user.service;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.h13.slg.battle.co.UserTeamCO;
 import com.h13.slg.config.co.RoleSkillCO;
+import com.h13.slg.config.fetcher.GlobalConfigFetcher;
 import com.h13.slg.config.fetcher.LevelConfigFetcher;
 import com.h13.slg.config.fetcher.RoleConfigFetcher;
 import com.h13.slg.config.fetcher.RoleSkillConfigFetcher;
@@ -10,6 +13,7 @@ import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.transmission.SlgData;
 import com.h13.slg.core.transmission.SlgRequestDTO;
+import com.h13.slg.core.util.HttpClientUtil;
 import com.h13.slg.core.util.SlgBeanUtils;
 import com.h13.slg.equip.co.UserEquipCO;
 import com.h13.slg.equip.helper.UserEquipHelper;
@@ -28,16 +32,12 @@ import com.h13.slg.tavern.co.TavernRoleCO;
 import com.h13.slg.tavern.helper.TavernHelper;
 import com.h13.slg.tavern.vo.TavernRoleVO;
 import com.h13.slg.user.co.AuthCO;
-import com.h13.slg.user.hepler.AuthHelper;
+import com.h13.slg.user.hepler.*;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.core.*;
 import com.h13.slg.pkg.helper.UserPackageHelper;
 import com.h13.slg.task.helper.UserTaskHelper;
 import com.h13.slg.user.co.UserStatusCO;
-import com.h13.slg.user.hepler.CastleHelper;
-import com.h13.slg.user.hepler.FarmHelper;
-import com.h13.slg.user.hepler.UserHelper;
-import com.h13.slg.user.hepler.UserStatusHelper;
 import com.h13.slg.user.vo.UserEquipVO;
 import com.h13.slg.user.vo.UserRoleVO;
 import com.h13.slg.user.vo.UserStatusVO;
@@ -91,14 +91,30 @@ public class UserServiceImpl implements UserService {
     UserZuLingHelper userZuLingHelper;
     @Autowired
     RoleSkillConfigFetcher roleSkillConfigFetcher;
+    @Autowired
+    GlobalConfigFetcher globalConfigFetcher;
 
     @Override
-    public SlgData login(SlgRequestDTO request) throws RequestFatalException {
-        String name = (String) request.getArgs().get("name");
-        String password = (String) request.getArgs().get("password");
+    public SlgData login(SlgRequestDTO request) throws RequestFatalException, RequestUnexpectedException {
+        String token = request.getArgs().get("token").toString();
+        int aid = new Integer(request.getArgs().get("aid").toString());
 
         // 尝试登陆
-        int uid = userHelper.login(name, password);
+//        int uid = userHelper.login(name, password);
+        HttpClientUtil util = new HttpClientUtil();
+        Map<String, String> data = Maps.newHashMap();
+        data.put("token", token);
+        String url = globalConfigFetcher.get("PassportCheckTokenUrl").getValue();
+        String response = util.post(url, data);
+        PassportResponse resp = JSON.parseObject(response, PassportResponse.class);
+        if (resp.getCode() != 0) {
+            throw new RequestUnexpectedException(CodeConstants.SYSTEM.TOKEN_INVALID);
+        }
+        if (new Integer(resp.getData().get("result").toString()) != 0) {
+            throw new RequestUnexpectedException(CodeConstants.SYSTEM.TOKEN_INVALID);
+        }
+        int uid = userHelper.getInfoByAid(aid);
+
         AuthCO authCO = authHelper.createAuth(uid);
 
         SlgData slgData = SlgData.getData()
@@ -109,13 +125,13 @@ public class UserServiceImpl implements UserService {
 
     }
 
+
     @Override
     public SlgData register(SlgRequestDTO request) throws RequestFatalException {
 
         String name = request.getArgs().get("name").toString();
-        String password = request.getArgs().get("password").toString();
-
-        int uid = userHelper.register(name, password);
+        int aid = new Integer(request.getArgs().get("aid").toString());
+        int uid = userHelper.register(aid, name);
 
         SlgData slgData = SlgData.getData()
                 .add("id", uid);

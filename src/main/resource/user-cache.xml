@@ -6,7 +6,7 @@
 
     <!-- userStatusTemplate -->
     <bean id="userStatusSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.user.co.UserStatusCO"/>
     </bean>
     <bean id="userStatusTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -16,17 +16,7 @@
 
     <!-- userEquipTemplate -->
     <bean id="userEquipSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.equip.co.UserEquipCO"/>
-    </bean>
-    <bean id="userEquipTemplate" class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
-          p:valueSerializer-ref="userEquipSerializer">
-    </bean>
-
-    <!-- userEquipTemplate -->
-    <bean id="userEquipSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.equip.co.UserEquipCO"/>
     </bean>
     <bean id="userEquipTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -36,8 +26,8 @@
 
     <!-- userPackageTemplate -->
     <bean id="userPackageSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.equip.co.UserEquipCO"/>
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.pkg.co.UserPackageCO"/>
     </bean>
     <bean id="userPackageTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
@@ -46,8 +36,8 @@
 
     <!-- userTavernTemplate -->
     <bean id="userTavernSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
-        <constructor-arg type="java.lang.Class" value="com.h13.slg.equip.co.UserEquipCO"/>
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.tavern.co.TavernCO"/>
     </bean>
     <bean id="userTavernTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
@@ -57,7 +47,7 @@
 
     <!-- userRoleTemplate -->
     <bean id="userRoleSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.role.co.UserRoleCO"/>
     </bean>
     <bean id="userRoleTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -68,7 +58,7 @@
 
     <!-- userRoleSkillTemplate -->
     <bean id="userRoleSkillSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.skill.co.UserRoleSkillCO"/>
     </bean>
     <bean id="userRoleSkillTemplate" class="org.springframework.data.redis.core.RedisTemplate"
@@ -79,12 +69,44 @@
 
     <!-- userZuLingTemplate -->
     <bean id="userZuLingSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.skill.co.UserZuLingCO"/>
     </bean>
     <bean id="userZuLingTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
           p:valueSerializer-ref="userZuLingSerializer">
+    </bean>
+
+
+    <!-- mailTemplate -->
+    <bean id="mailSerializer"
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.mail.co.MailCO"/>
+    </bean>
+    <bean id="mailTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="mailSerializer">
+    </bean>
+
+
+    <!-- userChatTemplate -->
+    <bean id="userChatSerializer"
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.chat.co.UserChatCO"/>
+    </bean>
+    <bean id="userChatTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="userChatSerializer">
+    </bean>
+
+    <!-- userBusinessTemplate -->
+    <bean id="userBusinessSerializer"
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="com.h13.slg.business.co.UserBusinessCO"/>
+    </bean>
+    <bean id="userBusinessTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="redisStringRedisSerializer"
+          p:valueSerializer-ref="userBusinessSerializer">
     </bean>
 
 

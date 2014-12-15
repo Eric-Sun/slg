@@ -68,7 +68,7 @@ var battleListLoader = function () {
             },
             nav2FightPage: function (event) {
                 var roleInfo = event.data.data;
-                CommonUtil.nav2Url("fight.html",{battleId:roleInfo.id});
+                CommonUtil.nav2Url("old_fight.html",{battleId:roleInfo.id});
 
             }
 

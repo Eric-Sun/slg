@@ -40,6 +40,7 @@ public class SlgConstants {
         public static int USER_EQUIP_DEFAULT_LEVEL = 1;
         public final static int DEFAULT_STRENGTHEN = 1;
         public final static int DEFAULT_LEVEL = 1;
+        public final static int DEFAULT_GEM_ID = 0;
     }
 
     public static class Fight {
@@ -148,5 +149,26 @@ public class SlgConstants {
 
     }
 
+
+    public static class Mail {
+        public static int NOT_GOT = 0;
+        public static int GOT = 1;
+
+        public static int SYSTEM_ID = -1;
+        public static int MAX_SIZE = 10;
+    }
+
+
+    public static class Gem {
+        public static int TOP_QUALITY = 10;
+    }
+
+    public static class Business {
+        public static int PASS_CARD = -1;
+        public static int TOP_STEP = 10;
+        public static int DEFAULT_CARD = 0;
+        public static int NOT_PASS_STATUS = 0;
+        public static int PASS_STATUS = 1;
+    }
 
 }

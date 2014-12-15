@@ -42,10 +42,12 @@ public class UserPackageHelper {
         userPackageCO.setEquip(new LinkedList<Integer>());
         userPackageCO.setMaterial(new HashMap<String, Integer>());
         userPackageCO.setSkill(new HashMap<String, Integer>());
+        userPackageCO.setGem(new HashMap<String, Integer>());
         userPackageDAO.insert(userPackageCO.getId(),
                 userPackageCO.getEquip(),
                 userPackageCO.getMaterial(),
-                userPackageCO.getSkill());
+                userPackageCO.getSkill(),
+                userPackageCO.getGem());
 
         userPackageCache.set(userPackageCO);
         return userPackageCO;
@@ -88,7 +90,7 @@ public class UserPackageHelper {
      * @param uid
      * @return
      */
-    public UserPackageCO get(long uid) {
+    public UserPackageCO get(int uid) {
         UserPackageCO userPackageCO = userPackageCache.get(uid);
         if (userPackageCO == null) {
             userPackageCO = userPackageDAO.get(uid);
@@ -109,7 +111,7 @@ public class UserPackageHelper {
      * @param materialNum
      * @return true为够，false为不够
      */
-    public boolean checkMaterialEnough(long uid, long materialId, int materialNum) {
+    public boolean checkMaterialEnough(int uid, long materialId, int materialNum) {
         UserPackageCO userPackageCO = get(uid);
         if (!userPackageCO.getMaterial().containsKey(materialId + ""))
             return false;
@@ -130,7 +132,7 @@ public class UserPackageHelper {
      * @param materialNum
      * @return
      */
-    public boolean subtractMaterial(long uid, long materialId, int materialNum) {
+    public boolean subtractMaterial(int uid, long materialId, int materialNum) {
         UserPackageCO userPackageCO = get(uid);
         int packageMCount = userPackageCO.getMaterial().get(materialId + "");
         int newCount = packageMCount - materialNum;
@@ -148,7 +150,7 @@ public class UserPackageHelper {
      * @param materialNum
      * @return
      */
-    public boolean subtractSkill(long uid, long rsId, int materialNum) {
+    public boolean subtractSkill(int uid, long rsId, int materialNum) {
         UserPackageCO userPackageCO = get(uid);
         int packageMCount = userPackageCO.getSkill().get(rsId + "");
         int newCount = packageMCount - materialNum;
@@ -165,7 +167,7 @@ public class UserPackageHelper {
      * @param itemId
      * @param num
      */
-    public void addMaterialItem(long uid, long itemId, int num) {
+    public void addMaterialItem(int uid, long itemId, int num) {
         UserPackageCO userPackageCO = get(uid);
         Map<String, Integer> data = userPackageCO.getMaterial();
         MapUtil.addItem(data, itemId + "", num);
@@ -179,7 +181,7 @@ public class UserPackageHelper {
      * @param itemId
      * @param num
      */
-    public void addSkillItem(long uid, long itemId, int num) {
+    public void addSkillItem(int uid, long itemId, int num) {
         UserPackageCO userPackageCO = get(uid);
         Map data = userPackageCO.getSkill();
         MapUtil.addItem(data, itemId + "", num);
@@ -193,7 +195,7 @@ public class UserPackageHelper {
      * @param uid
      * @param id
      */
-    public void addEquipItem(long uid, long id) {
+    public void addEquipItem(int uid, long id) {
         UserPackageCO userPackageCO = get(uid);
         List data = userPackageCO.getEquip();
         data.add(id);
@@ -208,7 +210,7 @@ public class UserPackageHelper {
      * @param materialId
      * @return
      */
-    public int getMaterialCount(long uid, int materialId) {
+    public int getMaterialCount(int uid, int materialId) {
         UserPackageCO userPackageCO = get(uid);
         if (userPackageCO.getMaterial().get(materialId + "") == null)
             return 0;
@@ -224,11 +226,49 @@ public class UserPackageHelper {
      * @param usid
      * @return
      */
-    public int getSkillCount(long uid, int usid) {
+    public int getSkillCount(int uid, int usid) {
         UserPackageCO userPackageCO = get(uid);
         if (userPackageCO.getSkill().get(usid + "") == null)
             return 0;
         else
             return userPackageCO.getSkill().get(usid + "");
     }
+
+    public void subtractGem(int uid, int gemId, int gemCount) {
+        UserPackageCO userPackageCO = get(uid);
+        int packageGCount = userPackageCO.getGem().get(gemId + "");
+        int newCount = packageGCount - gemCount;
+        userPackageCO.getGem().put(gemId + "", newCount);
+        updateGem(userPackageCO);
+    }
+
+    private void updateGem(UserPackageCO userPackageCO) {
+        userPackageDAO.updateGem(userPackageCO.getId(), userPackageCO.getGem());
+    }
+
+    public void addGem(int uid, int gemId, int count) {
+        UserPackageCO userPackageCO = get(uid);
+        Map data = userPackageCO.getGem();
+        MapUtil.addItem(data, gemId + "", count);
+        updateGem(userPackageCO);
+    }
+
+
+    /**
+     * 检查某个gem是否够
+     *
+     * @return true为够，false为不够
+     */
+    public boolean checkGemEnough(int uid, long gemId, int gemCount) {
+        UserPackageCO userPackageCO = get(uid);
+        if (!userPackageCO.getGem().containsKey(gemId + ""))
+            return false;
+        int packageMCount = userPackageCO.getGem().get(gemId + "");
+        if (packageMCount < gemCount) {
+            return false;
+        }
+        return true;
+
+    }
+
 }

@@ -21,6 +21,16 @@ public class UserPackageCO {
 
     private Map<String,Integer> skill;
 
+    private Map<String,Integer> gem;
+
+    public Map<String, Integer> getGem() {
+        return gem;
+    }
+
+    public void setGem(Map<String, Integer> gem) {
+        this.gem = gem;
+    }
+
     public Map<String, Integer> getSkill() {
         return skill;
     }

@@ -483,7 +483,7 @@
             <category1>equip</category1>
             <category2>weapon</category2>
             <category3>1</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -497,7 +497,7 @@
             <category1>equip</category1>
             <category2>magic</category2>
             <category3>1</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -511,7 +511,7 @@
             <category1>equip</category1>
             <category2>armor</category2>
             <category3>1</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -525,7 +525,7 @@
             <category1>equip</category1>
             <category2>accessory</category2>
             <category3>1</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -539,7 +539,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>1</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -553,7 +553,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>7</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -567,7 +567,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>13</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>100</price>
             <discount />
             <restrictions />
@@ -581,7 +581,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>2</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>300</price>
             <discount />
             <restrictions />
@@ -595,7 +595,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>8</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>300</price>
             <discount />
             <restrictions />
@@ -609,7 +609,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>14</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>300</price>
             <discount />
             <restrictions />
@@ -623,7 +623,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>3</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>1000</price>
             <discount />
             <restrictions />
@@ -637,7 +637,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>9</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>1000</price>
             <discount />
             <restrictions />
@@ -651,7 +651,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>15</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>1000</price>
             <discount />
             <restrictions />
@@ -665,7 +665,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>4</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>2000</price>
             <discount />
             <restrictions />
@@ -679,7 +679,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>10</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>2000</price>
             <discount />
             <restrictions />
@@ -693,7 +693,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>16</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>2000</price>
             <discount />
             <restrictions />
@@ -707,7 +707,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>5</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>3000</price>
             <discount />
             <restrictions />
@@ -721,7 +721,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>11</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>3000</price>
             <discount />
             <restrictions />
@@ -735,7 +735,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>17</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>3000</price>
             <discount />
             <restrictions />
@@ -749,7 +749,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>6</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>5000</price>
             <discount />
             <restrictions />
@@ -763,7 +763,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>12</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>5000</price>
             <discount />
             <restrictions />
@@ -777,7 +777,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>18</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>5000</price>
             <discount />
             <restrictions />
@@ -791,7 +791,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>19</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>200</price>
             <discount />
             <restrictions />
@@ -805,7 +805,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>26</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>2500</price>
             <discount />
             <restrictions />
@@ -819,7 +819,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>37</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>20000</price>
             <discount />
             <restrictions />
@@ -833,7 +833,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>41</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>8000</price>
             <discount />
             <restrictions />
@@ -987,7 +987,7 @@
             <category1>inventory</category1>
             <category2>material</category2>
             <category3>177</category3>
-            <currency>cash</currency>
+            <currency>honor</currency>
             <price>15000</price>
             <discount />
             <restrictions />

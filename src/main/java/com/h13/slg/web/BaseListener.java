@@ -1,6 +1,8 @@
 package com.h13.slg.web;
 
 import com.h13.slg.config.ConfigLoader;
+import com.h13.slg.config.PropertiesConfiguration;
+import com.h13.slg.core.exception.RequestFatalException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import org.apache.commons.logging.Log;
@@ -21,11 +23,16 @@ public class BaseListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         WebApplicationContentHolder.setServletContext(sce.getServletContext());
 
-        ConfigLoader loader = new ConfigLoader(SysConfig.get(SysConfigConstants.CONFIGS_PATH),
-                WebApplicationContentHolder.getApplicationContext());
 
+        try {
+            PropertiesConfiguration.getInstance().addResource("/slg.properties");
+        } catch (RequestFatalException e) {
+            e.printStackTrace();
+        }
+        ConfigLoader loader = new ConfigLoader(PropertiesConfiguration.getInstance().getStringValue(SysConfigConstants.CONFIGS_PATH),
+                WebApplicationContentHolder.getApplicationContext());
         loader.load();
-        SlgLogger.info(SlgLoggerEntity.p("base","config load",-1,"ok"));
+        SlgLogger.info(SlgLoggerEntity.p("base", "config load", -1, "ok"));
     }
 
     @Override

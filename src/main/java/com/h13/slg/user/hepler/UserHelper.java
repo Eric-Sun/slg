@@ -3,6 +3,7 @@ package com.h13.slg.user.hepler;
 import com.h13.slg.battle.helper.TeamHelper;
 import com.h13.slg.core.CodeConstants;
 import com.h13.slg.core.exception.RequestFatalException;
+import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 import com.h13.slg.core.util.MD5Util;
@@ -16,6 +17,7 @@ import com.h13.slg.user.co.UserStatusCO;
 import com.h13.slg.user.dao.UserDAO;
 import com.h13.slg.user.dao.UserStatusDAO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 /**
@@ -60,33 +62,15 @@ public class UserHelper {
     @Autowired
     AuthHelper authHelper;
 
-    /**
-     * 登陆接口
-     *
-     * @param name
-     * @param password
-     * @return 如果返回-1，则为登陆失败，如果成功的话，返回正常的uid
-     * @throws com.h13.slg.core.exception.RequestFatalException 用户密码错误
-     */
-    public int login(String name, String password) throws RequestFatalException {
-        int userId = userDAO.login(name, MD5Util.getMD5String(password));
-        if (userId == -1) {
-            // 登陆失败,用户密码错误
-            throw new RequestFatalException(CodeConstants.User.NAME_OR_PASSWORD_ERROR, "");
-        }
-        return userId;
-    }
 
 
     /**
      * 注册，如果成功的话返回uid
      *
-     * @param name
-     * @param password
      * @return
      * @throws com.h13.slg.core.exception.RequestFatalException
      */
-    public int register(String name, String password) throws RequestFatalException {
+    public int register(int aid, String name) throws RequestFatalException {
         // check name exists?
         if (!userDAO.check(name)) {
             SlgLogger.info(SlgLoggerEntity.p("user", "register", -1, "name exists").addParam("name", name));
@@ -94,7 +78,7 @@ public class UserHelper {
         }
 
         // register user
-        int uid = userDAO.insert(name, MD5Util.getMD5String(password));
+        int uid = userDAO.insert(aid, name);
         UserStatusCO userStatusCO = userStatusHelper.initUserStatus(uid, name);
         userStatusDAO.insert(
                 userStatusCO.getId(),
@@ -126,4 +110,12 @@ public class UserHelper {
         return uid;
     }
 
+    public int getInfoByAid(int aid) throws RequestUnexpectedException {
+        try {
+            return userDAO.getInfoByAid(aid);
+        } catch (DataAccessException e) {
+            throw new RequestUnexpectedException(CodeConstants.SYSTEM.SHOULD_REGISTER_FIRST);
+        }
+
+    }
 }

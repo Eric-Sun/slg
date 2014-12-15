@@ -6,7 +6,7 @@
 
     <!-- userEventTemplate -->
     <bean id="userEventSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="com.h13.slg.event.co.UserEventCO"/>
     </bean>
     <bean id="userEventTemplate" class="org.springframework.data.redis.core.RedisTemplate"

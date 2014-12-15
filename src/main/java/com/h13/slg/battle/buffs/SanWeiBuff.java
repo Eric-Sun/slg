@@ -1,13 +1,12 @@
 package com.h13.slg.battle.buffs;
 
 import com.google.common.collect.Lists;
-import com.h13.slg.battle.fight.FightBuffLog;
-import com.h13.slg.battle.fight.FightResult;
-import com.h13.slg.battle.fight.Fighter;
+import com.h13.slg.battle.old_fight.FightBuffLog;
+import com.h13.slg.battle.old_fight.FightResult;
+import com.h13.slg.battle.old_fight.Fighter;
 import com.h13.slg.core.log.SlgLogger;
 import com.h13.slg.core.log.SlgLoggerEntity;
 
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -87,7 +86,7 @@ public class SanWeiBuff extends Buff {
                 fighter.setDefence(newDefence);
                 fighter.setHealth(newHealth);
                 curRoundCount++;
-                SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger sanwei buff when BEFORE_FIGHT")
+                SlgLogger.info(SlgLoggerEntity.p("battle", "old_fight", uid, "trigger sanwei buff when BEFORE_FIGHT")
                         .addParam("fighter.id", fighter.getId())
                         .addParam("addAttack", this.addAttack)
                         .addParam("addDefence", this.addDefence)
@@ -114,7 +113,7 @@ public class SanWeiBuff extends Buff {
                 fighter.setHealth(newHealth);
                 curRoundCount++;
 
-                SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "trigger sanwei buff when BEFORE_ROUND")
+                SlgLogger.info(SlgLoggerEntity.p("battle", "old_fight", uid, "trigger sanwei buff when BEFORE_ROUND")
                         .addParam("fighter.id", fighter.getId())
                         .addParam("addAttack", this.addAttack)
                         .addParam("addDefence", this.addDefence)
@@ -131,7 +130,7 @@ public class SanWeiBuff extends Buff {
                     fighter.setAttack(fighter.getAttack() - addAttack);
                     fighter.setDefence(fighter.getDefence() - addDefence);
                     fighter.setHealth(fighter.getHealth() - addHealth);
-                    SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "release sanwei buff when AFTER_ROUND")
+                    SlgLogger.info(SlgLoggerEntity.p("battle", "old_fight", uid, "release sanwei buff when AFTER_ROUND")
                             .addParam("fighter.id", fighter.getId())
                     );
                 }
@@ -143,7 +142,7 @@ public class SanWeiBuff extends Buff {
                 fighter.setAttack(fighter.getAttack() - addAttack);
                 fighter.setDefence(fighter.getDefence() - addDefence);
                 fighter.setHealth(fighter.getHealth() - addHealth);
-                SlgLogger.info(SlgLoggerEntity.p("battle", "fight", uid, "release sanwei buff when AFTER_FIGHT")
+                SlgLogger.info(SlgLoggerEntity.p("battle", "old_fight", uid, "release sanwei buff when AFTER_FIGHT")
                         .addParam("fighter.id", fighter.getId())
                 );
                 stopLog(round, fightResult, fighter);

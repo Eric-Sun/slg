@@ -300,6 +300,7 @@
             <defence>51</defence>
             <magicDefence>51</magicDefence>
             <miss>0</miss>
+            <critdamage>0</critdamage>
             <hit>100</hit>
             <unblock>0</unblock>
             <block>0</block>

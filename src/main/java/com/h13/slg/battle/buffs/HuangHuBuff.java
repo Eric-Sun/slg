@@ -1,6 +1,6 @@
 package com.h13.slg.battle.buffs;
 
-import com.h13.slg.battle.fight.FightResult;
+import com.h13.slg.battle.old_fight.FightResult;
 
 /**
  * Created with IntelliJ IDEA.

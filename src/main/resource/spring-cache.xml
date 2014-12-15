@@ -9,14 +9,18 @@
           p:host-name="${redis.ip}" p:port="${redis.port}" p:use-pool="true"/>
 
     <bean id="redisStringRedisSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="java.lang.String"/>
     </bean>
 
     <bean id="redisLongRedisSerializer"
-          class="com.h13.slg.core.FastJsonRedisSerializer">
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
         <constructor-arg type="java.lang.Class" value="java.lang.Long"/>
     </bean>
 
+    <bean id="redisIntegerRedisSerializer"
+          class="com.h13.slg.core.util.FastJsonRedisSerializer">
+        <constructor-arg type="java.lang.Class" value="java.lang.Integer"/>
+    </bean>
 
 </beans>
