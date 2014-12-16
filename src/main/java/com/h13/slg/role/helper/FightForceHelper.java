@@ -78,17 +78,17 @@ public class FightForceHelper {
         int armorFightForce = 0;
         int accessoryHealth = 0;
         int accessoryFightForce = 0;
-        if (ueWeaponId != SlgConstants.Role.NO_EQUIP_ID) {
+        if (ueWeaponId != SlgConstants.Equip.NO_EQUIP_ID) {
             UserEquipCO weapon = userEquipHelper.getUserEquip(uid, ueWeaponId);
             weaponAttack = getWeaponAttack(weapon);
             weaponFightForce = calFightForceByAttack(weaponAttack);
         }
-        if (ueArmorId != SlgConstants.Role.NO_EQUIP_ID) {
+        if (ueArmorId != SlgConstants.Equip.NO_EQUIP_ID) {
             UserEquipCO armor = userEquipHelper.getUserEquip(uid, ueArmorId);
             armorDefence = getArmorDefence(armor);
             armorFightForce = calFightForceByDefence(armorDefence);
         }
-        if (ueAccessoryId != SlgConstants.Role.NO_EQUIP_ID) {
+        if (ueAccessoryId != SlgConstants.Equip.NO_EQUIP_ID) {
             UserEquipCO accessory = userEquipHelper.getUserEquip(uid, ueAccessoryId);
             accessoryHealth = getAccessoryHealth(accessory);
             accessoryFightForce = calFightForceByHealth(accessoryHealth);
@@ -114,9 +114,9 @@ public class FightForceHelper {
         int finalDefence = finalUserRoleDefence + armorDefence;
         int finalHealth = finalUserRoleHealth + accessoryHealth;
 
-        userRoleCO.setAttack(finalAttack);
-        userRoleCO.setDefence(finalDefence);
-        userRoleCO.setHealth(finalHealth);
+//        userRoleCO.setAttack(finalAttack);
+//        userRoleCO.setDefence(finalDefence);
+//        userRoleCO.setHealth(finalHealth);
 
         userRoleHelper.updateUserRole(userRoleCO);
 

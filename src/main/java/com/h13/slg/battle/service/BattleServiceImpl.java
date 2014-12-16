@@ -16,6 +16,10 @@ import com.h13.slg.core.transmission.SlgData;
 import com.h13.slg.core.transmission.SlgRequestDTO;
 import com.h13.slg.core.exception.RequestUnexpectedException;
 import com.h13.slg.core.util.SlgBeanUtils;
+import com.h13.slg.fight.FRequest;
+import com.h13.slg.fight.FResponse;
+import com.h13.slg.fight.FightConstants;
+import com.h13.slg.fight.FightRunner;
 import com.h13.slg.role.helper.UserRoleHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +48,9 @@ public class BattleServiceImpl implements BattleService {
     @Autowired
     MonsterConfigFetcher monsterConfigFetcher;
 
+    @Autowired
+    FightRunner fightRunner;
+
     @Override
     public SlgData saveTeam(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException {
         int uid = requestDTO.getUid();
@@ -56,9 +63,16 @@ public class BattleServiceImpl implements BattleService {
     @Override
     public SlgData pve(SlgRequestDTO requestDTO) throws RequestFatalException, RequestUnexpectedException {
         int uid = requestDTO.getUid();
-        long battleId = new Long(requestDTO.getArgs().get("battleId") + "");
-        FightResult fightResult = fightHelper.pve(uid, battleId);
-        return SlgData.getData().add("battle", fightResult);
+        int battleId = new Integer(requestDTO.getArgs().get("battleId") + "");
+
+        FRequest fRequest = new FRequest();
+        fRequest.setAttackUserId(uid);
+        fRequest.setDefenceId(battleId);
+        fRequest.setFightType(FightConstants.FightType.PVE);
+
+        FResponse fResponse = fightRunner.doFight(uid, fRequest);
+
+        return SlgData.getData().add("battle", fResponse);
     }
 
     @Override

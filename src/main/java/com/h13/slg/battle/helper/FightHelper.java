@@ -102,9 +102,9 @@ public class FightHelper {
                 continue;
             UserRoleCO userRoleCO = userRoleHelper.getUserRole(uid, urid);
             Fighter fighter = new Fighter();
-            fighter.setAttack(userRoleCO.getAttack());
-            fighter.setDefence(userRoleCO.getDefence());
-            fighter.setHealth(userRoleCO.getHealth());
+//            fighter.setAttack(userRoleCO.getAttack());
+//            fighter.setDefence(userRoleCO.getDefence());
+//            fighter.setHealth(userRoleCO.getHealth());
             fighter.setId(urid);
             fighter.setPos(i);
             fighter.setTianfu(tianfu);

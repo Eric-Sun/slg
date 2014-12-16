@@ -21,7 +21,7 @@ public abstract class BaseBuff implements Buff {
     }
 
     @Override
-    public void trigger(BuffTriggerTime currentTriggerTime, FContext fContext) {
+    public void trigger(String currentTriggerTime, FContext fContext) {
         // check
         if (currentTriggerTime.equals(getCurrentTriggerTime())) {
             doTrigger(fContext);

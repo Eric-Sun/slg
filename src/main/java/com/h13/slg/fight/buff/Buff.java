@@ -13,5 +13,5 @@ public interface Buff {
 
     public void setArgs(String[] args);
 
-    public void trigger(BuffTriggerTime triggerTime, FContext fContext);
+    public void trigger(String triggerTime, FContext fContext);
 }

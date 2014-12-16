@@ -41,17 +41,11 @@ public class BattleServiceTest {
         map.put("mod", "battle");
         map.put("act", "pve");
         map.put("uid", "2");
-        map.put("auth_key", "c81e728d9d4c2f636f067f89cc14862c");
-        map.put("auth_time", "1407469149308");
+        map.put("auth_key", "aaaa");
+        map.put("auth_time", "12345");
         map.put("args", "{\"battleId\":1}");
         map.put("seq", "1");
         String s = http.post("http://localhost:8080/slg/", map);
         System.out.println(s);
-    }
-
-    @Test
-    public void fdsa() {
-        Date date = new Date(1411020160000L);
-        System.out.println(date);
     }
 }

@@ -15,7 +15,6 @@ public class SlgConstants {
     public static class Role {
         public final static int NO_SKILL_SELECTED = 0;
         public final static int NO_ROLE = 0;
-        public final static int NO_EQUIP_ID = 0;
         public final static int DEFAULT_LEVEL = 1;
         public final static int DEFAULT_XP = 0;
 
@@ -41,6 +40,7 @@ public class SlgConstants {
         public final static int DEFAULT_STRENGTHEN = 1;
         public final static int DEFAULT_LEVEL = 1;
         public final static int DEFAULT_GEM_ID = 0;
+        public final static int NO_EQUIP_ID = 0;
     }
 
     public static class Fight {

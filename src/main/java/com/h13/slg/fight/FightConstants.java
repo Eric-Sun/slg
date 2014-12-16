@@ -39,4 +39,28 @@ public class FightConstants {
     }
 
 
+    public class Win {
+        public static final String ATTACK = "attack";
+        public static final String DEFENCE = "defence";
+    }
+
+
+    public class Parameter {
+        /**
+         * 特殊攻击第一次的增加伤害的百分比
+         */
+        public static final float SPECIAL_ATTACK_FIRST_RATE = 0.5F;
+        /**
+         * 当武力大于90的时候发动第二次特殊攻击的攻击力增加百分比
+         */
+        public static final float SPECIAL_ATTACK_SECOEND_RATE = 0.15F;
+
+        /**
+         * 攻击力大于多少的时候触发第二次特殊攻击
+         */
+        public static final float ENHANCE_SPECIAL_ATTACK_ATTACK=90;
+
+
+    }
+
 }

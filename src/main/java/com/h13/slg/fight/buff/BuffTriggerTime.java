@@ -11,5 +11,17 @@ public class BuffTriggerTime {
 
     public final static String BEFORE_FIGHT = "before_fight";
 
+    public final static String AFTER_FIGHT = "after_fight";
+
+    /**
+     * 每回合战斗前的一些行为
+     */
+    public final static String BEFORE_ROUND = "before_round";
+
+    /**
+     * bbbb之后，再发动技能等
+     */
+    public final static String AFTER_ROUND = "after_round";
+
 
 }

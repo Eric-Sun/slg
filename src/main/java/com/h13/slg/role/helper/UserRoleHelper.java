@@ -159,9 +159,9 @@ public class UserRoleHelper {
         RoleCO roleCO = roleConfigFetcher.get(rId + "");
 
         userRoleCO.setSoldier(roleCO.getSoldier());
-        userRoleCO.setAccessory(SlgConstants.Role.NO_EQUIP_ID);
-        userRoleCO.setArmor(SlgConstants.Role.NO_EQUIP_ID);
-        userRoleCO.setWeapon(SlgConstants.Role.NO_EQUIP_ID);
+        userRoleCO.setAccessory(SlgConstants.Equip.NO_EQUIP_ID);
+        userRoleCO.setArmor(SlgConstants.Equip.NO_EQUIP_ID);
+        userRoleCO.setWeapon(SlgConstants.Equip.NO_EQUIP_ID);
         userRoleCO.setFightForce(roleCO.getFightForce());
         userRoleCO.setUid(uid);
         userRoleCO.setLevel(SlgConstants.Role.DEFAULT_LEVEL);
@@ -171,8 +171,8 @@ public class UserRoleHelper {
         userRoleCO.setPutongSkillId(SlgConstants.Role.NO_SKILL_SELECTED);
         userRoleCO.setTianfuSkillId(SlgConstants.Role.NO_SKILL_SELECTED);
 
-        int urid = userRoleDAO.insert(userRoleCO.getRoleId(), userRoleCO.getUid(), SlgConstants.Role.NO_EQUIP_ID,
-                SlgConstants.Role.NO_EQUIP_ID, SlgConstants.Role.NO_EQUIP_ID, SlgConstants.Role.DEFAULT_LEVEL,
+        int urid = userRoleDAO.insert(userRoleCO.getRoleId(), userRoleCO.getUid(), SlgConstants.Equip.NO_EQUIP_ID,
+                SlgConstants.Equip.NO_EQUIP_ID, SlgConstants.Equip.NO_EQUIP_ID, SlgConstants.Role.DEFAULT_LEVEL,
                 userRoleCO.getFightForce(),
                 userRoleCO.getSoldier(), userRoleCO.getRoleName(), userRoleCO.getXp(), userRoleCO.getPutongSkillId(),
                 userRoleCO.getTianfuSkillId());
@@ -195,21 +195,21 @@ public class UserRoleHelper {
                     String.format("ue's uid=%s,ur's uid=%", userEquipCO.getUid(), userRoleCO.getUid()));
         }
         if (userEquipCO.getType().equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
-            if (userRoleCO.getAccessory() != SlgConstants.Role.NO_EQUIP_ID) {
+            if (userRoleCO.getAccessory() != SlgConstants.Equip.NO_EQUIP_ID) {
                 throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_ID_SHOULD_BE_NO_EQUIP_ID,
                         String.format("accessory should be no_equip_id. urid=%s,ueid=%s", userRoleCO.getId(), userEquipCO.getId())
                 );
             }
             userRoleCO.setAccessory(userEquipCO.getId());
         } else if (userEquipCO.getType().equals(SlgConstants.Equip.EquipType.ARMOR)) {
-            if (userRoleCO.getArmor() != SlgConstants.Role.NO_EQUIP_ID) {
+            if (userRoleCO.getArmor() != SlgConstants.Equip.NO_EQUIP_ID) {
                 throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_ID_SHOULD_BE_NO_EQUIP_ID,
                         String.format("armor should be no_equip_id. urid=%s,ueid=%s", userRoleCO.getId(), userEquipCO.getId())
                 );
             }
             userRoleCO.setArmor(userEquipCO.getId());
         } else {
-            if (userRoleCO.getWeapon() != SlgConstants.Role.NO_EQUIP_ID) {
+            if (userRoleCO.getWeapon() != SlgConstants.Equip.NO_EQUIP_ID) {
                 throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_ID_SHOULD_BE_NO_EQUIP_ID,
                         String.format("weapon should be no_equip_id. urid=%s,ueid=%s", userRoleCO.getId(), userEquipCO.getId())
                 );
@@ -234,25 +234,25 @@ public class UserRoleHelper {
                     String.format("ue's uid=%s,ur's uid=%", userEquipCO.getUid(), userRoleCO.getUid()));
         }
         if (userEquipCO.getType().equals(SlgConstants.Equip.EquipType.ACCESSORY)) {
-            if (userRoleCO.getAccessory() == SlgConstants.Role.NO_EQUIP_ID) {
+            if (userRoleCO.getAccessory() == SlgConstants.Equip.NO_EQUIP_ID) {
                 throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_ID_SHOULD_BE_NO_EQUIP_ID,
                         String.format("accessory should be no_equip_id. urid=%s,ueid=%s", userRoleCO.getId(), userEquipCO.getId()
                         ));
             }
-            userRoleCO.setAccessory(SlgConstants.Role.NO_EQUIP_ID);
+            userRoleCO.setAccessory(SlgConstants.Equip.NO_EQUIP_ID);
         } else if (userEquipCO.getType().equals(SlgConstants.Equip.EquipType.ARMOR)) {
-            if (userRoleCO.getArmor() == SlgConstants.Role.NO_EQUIP_ID) {
+            if (userRoleCO.getArmor() == SlgConstants.Equip.NO_EQUIP_ID) {
                 throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_ID_SHOULD_BE_NO_EQUIP_ID,
                         String.format("armor should be no_equip_id. urid=%s,ueid=%s", userRoleCO.getId(), userEquipCO.getId())
                 );
             }
-            userRoleCO.setArmor(SlgConstants.Role.NO_EQUIP_ID);
+            userRoleCO.setArmor(SlgConstants.Equip.NO_EQUIP_ID);
         } else {
-            if (userRoleCO.getWeapon() == SlgConstants.Role.NO_EQUIP_ID) {
+            if (userRoleCO.getWeapon() == SlgConstants.Equip.NO_EQUIP_ID) {
                 throw new RequestUnexpectedException(CodeConstants.Role.EQUIP_ID_SHOULD_BE_NO_EQUIP_ID,
                         String.format("weapon should be no_equip_id. urid=%s,ueid=%s", userRoleCO.getId(), userEquipCO.getId()));
             }
-            userRoleCO.setWeapon(SlgConstants.Role.NO_EQUIP_ID);
+            userRoleCO.setWeapon(SlgConstants.Equip.NO_EQUIP_ID);
         }
         userEquipCO.setUrid(0);
         updateUserRole(userRoleCO);

@@ -14,8 +14,13 @@ public class FUserRole {
     private int urId;
 
     private UserRoleCO userRoleCO;
+    private int pos;
 
     private List<Buff> buffList = Lists.newLinkedList();
+
+    private int attack = 0;
+    private int defence = 0;
+    private int health = 0;
 
     private int baseAttack;
     private int baseDefence;
@@ -25,6 +30,65 @@ public class FUserRole {
     private int addedAttack;
     private int addedDefence;
     private int addedHealth;
+
+    /**
+     * 兵种类型，0克制
+     */
+    private int soldier;
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public int getDefence() {
+        return defence;
+    }
+
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getSoldier() {
+        return soldier;
+    }
+
+    public void setSoldier(int soldier) {
+        this.soldier = soldier;
+    }
+
+    private int subedHealth = 0;
+
+    public int getPos() {
+        return pos;
+    }
+
+    public void setPos(int pos) {
+        this.pos = pos;
+    }
+
+    public void setSubedHealth(int subedHealth) {
+        this.subedHealth = subedHealth;
+    }
+
+    public int getSubedHealth() {
+        return subedHealth;
+    }
+
+    public void addSubedHealth(int newSubedHealth) {
+        this.subedHealth = subedHealth + newSubedHealth;
+    }
 
     public int getAddedAttack() {
         return addedAttack;
@@ -97,4 +161,17 @@ public class FUserRole {
     public void setUrId(int urId) {
         this.urId = urId;
     }
+
+    public int getFinalAttack() {
+        return baseAttack + addedAttack;
+    }
+
+    public int getFinalDefence() {
+        return baseDefence + addedDefence;
+    }
+
+    public int getFinalHealth() {
+        return baseHealth + addedHealth - subedHealth;
+    }
+
 }

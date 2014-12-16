@@ -14,7 +14,7 @@ public class FUser {
 
     private FUserRole leader;
 
-    private List<FUserRole> userRoleList;
+    private List<FUserRole> userRoleList = Lists.newLinkedList();
 
     private List<Buff> globalBuffList = Lists.newLinkedList();
 
@@ -49,4 +49,6 @@ public class FUser {
     public void setGlobalBuffList(List<Buff> globalBuffList) {
         this.globalBuffList = globalBuffList;
     }
+
+
 }
